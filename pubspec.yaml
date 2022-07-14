@@ -1,7 +1,8 @@
 name: terra_dart_rest_apis
 version: 1.0.0
 description: Dart API client for Terra LCD and FCD Rest APIs
-homepage: homepage
+repository: https://github.com/josh-burton/terra-dart-rest-apis
+homepage: https://github.com/josh-burton/terra-dart-rest-apis
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
