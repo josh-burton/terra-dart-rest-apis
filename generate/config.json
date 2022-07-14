@@ -1,0 +1,5 @@
+{
+  "pubName": "terra_dart_rest_apis",
+  "clientName": "TerraRestApi",
+  "pubDescription": "Dart API client for Terra LCD and FCD Rest APIs"
+}

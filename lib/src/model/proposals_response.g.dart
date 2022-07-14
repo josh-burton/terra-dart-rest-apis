@@ -1,0 +1,119 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'proposals_response.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+class _$ProposalsResponse extends ProposalsResponse {
+  @override
+  final BuiltList<CosmosGovV1beta1Proposal>? proposals;
+  @override
+  final Pagination? pagination;
+
+  factory _$ProposalsResponse(
+          [void Function(ProposalsResponseBuilder)? updates]) =>
+      (new ProposalsResponseBuilder()..update(updates))._build();
+
+  _$ProposalsResponse._({this.proposals, this.pagination}) : super._();
+
+  @override
+  ProposalsResponse rebuild(void Function(ProposalsResponseBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  ProposalsResponseBuilder toBuilder() =>
+      new ProposalsResponseBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is ProposalsResponse &&
+        proposals == other.proposals &&
+        pagination == other.pagination;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, proposals.hashCode), pagination.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'ProposalsResponse')
+          ..add('proposals', proposals)
+          ..add('pagination', pagination))
+        .toString();
+  }
+}
+
+class ProposalsResponseBuilder
+    implements Builder<ProposalsResponse, ProposalsResponseBuilder> {
+  _$ProposalsResponse? _$v;
+
+  ListBuilder<CosmosGovV1beta1Proposal>? _proposals;
+  ListBuilder<CosmosGovV1beta1Proposal> get proposals =>
+      _$this._proposals ??= new ListBuilder<CosmosGovV1beta1Proposal>();
+  set proposals(ListBuilder<CosmosGovV1beta1Proposal>? proposals) =>
+      _$this._proposals = proposals;
+
+  PaginationBuilder? _pagination;
+  PaginationBuilder get pagination =>
+      _$this._pagination ??= new PaginationBuilder();
+  set pagination(PaginationBuilder? pagination) =>
+      _$this._pagination = pagination;
+
+  ProposalsResponseBuilder() {
+    ProposalsResponse._defaults(this);
+  }
+
+  ProposalsResponseBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _proposals = $v.proposals?.toBuilder();
+      _pagination = $v.pagination?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(ProposalsResponse other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$ProposalsResponse;
+  }
+
+  @override
+  void update(void Function(ProposalsResponseBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  ProposalsResponse build() => _build();
+
+  _$ProposalsResponse _build() {
+    _$ProposalsResponse _$result;
+    try {
+      _$result = _$v ??
+          new _$ProposalsResponse._(
+              proposals: _proposals?.build(), pagination: _pagination?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'proposals';
+        _proposals?.build();
+        _$failedField = 'pagination';
+        _pagination?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'ProposalsResponse', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

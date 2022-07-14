@@ -1,0 +1,163 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_staking_for_account_result_validators_commission_info.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+class _$GetStakingForAccountResultValidatorsCommissionInfo
+    extends GetStakingForAccountResultValidatorsCommissionInfo {
+  @override
+  final String rate;
+  @override
+  final String maxRate;
+  @override
+  final String maxChangeRate;
+  @override
+  final String updateTime;
+
+  factory _$GetStakingForAccountResultValidatorsCommissionInfo(
+          [void Function(
+                  GetStakingForAccountResultValidatorsCommissionInfoBuilder)?
+              updates]) =>
+      (new GetStakingForAccountResultValidatorsCommissionInfoBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GetStakingForAccountResultValidatorsCommissionInfo._(
+      {required this.rate,
+      required this.maxRate,
+      required this.maxChangeRate,
+      required this.updateTime})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        rate, r'GetStakingForAccountResultValidatorsCommissionInfo', 'rate');
+    BuiltValueNullFieldError.checkNotNull(maxRate,
+        r'GetStakingForAccountResultValidatorsCommissionInfo', 'maxRate');
+    BuiltValueNullFieldError.checkNotNull(maxChangeRate,
+        r'GetStakingForAccountResultValidatorsCommissionInfo', 'maxChangeRate');
+    BuiltValueNullFieldError.checkNotNull(updateTime,
+        r'GetStakingForAccountResultValidatorsCommissionInfo', 'updateTime');
+  }
+
+  @override
+  GetStakingForAccountResultValidatorsCommissionInfo rebuild(
+          void Function(
+                  GetStakingForAccountResultValidatorsCommissionInfoBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GetStakingForAccountResultValidatorsCommissionInfoBuilder toBuilder() =>
+      new GetStakingForAccountResultValidatorsCommissionInfoBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GetStakingForAccountResultValidatorsCommissionInfo &&
+        rate == other.rate &&
+        maxRate == other.maxRate &&
+        maxChangeRate == other.maxChangeRate &&
+        updateTime == other.updateTime;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, rate.hashCode), maxRate.hashCode),
+            maxChangeRate.hashCode),
+        updateTime.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GetStakingForAccountResultValidatorsCommissionInfo')
+          ..add('rate', rate)
+          ..add('maxRate', maxRate)
+          ..add('maxChangeRate', maxChangeRate)
+          ..add('updateTime', updateTime))
+        .toString();
+  }
+}
+
+class GetStakingForAccountResultValidatorsCommissionInfoBuilder
+    implements
+        Builder<GetStakingForAccountResultValidatorsCommissionInfo,
+            GetStakingForAccountResultValidatorsCommissionInfoBuilder> {
+  _$GetStakingForAccountResultValidatorsCommissionInfo? _$v;
+
+  String? _rate;
+  String? get rate => _$this._rate;
+  set rate(String? rate) => _$this._rate = rate;
+
+  String? _maxRate;
+  String? get maxRate => _$this._maxRate;
+  set maxRate(String? maxRate) => _$this._maxRate = maxRate;
+
+  String? _maxChangeRate;
+  String? get maxChangeRate => _$this._maxChangeRate;
+  set maxChangeRate(String? maxChangeRate) =>
+      _$this._maxChangeRate = maxChangeRate;
+
+  String? _updateTime;
+  String? get updateTime => _$this._updateTime;
+  set updateTime(String? updateTime) => _$this._updateTime = updateTime;
+
+  GetStakingForAccountResultValidatorsCommissionInfoBuilder() {
+    GetStakingForAccountResultValidatorsCommissionInfo._defaults(this);
+  }
+
+  GetStakingForAccountResultValidatorsCommissionInfoBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _rate = $v.rate;
+      _maxRate = $v.maxRate;
+      _maxChangeRate = $v.maxChangeRate;
+      _updateTime = $v.updateTime;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GetStakingForAccountResultValidatorsCommissionInfo other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GetStakingForAccountResultValidatorsCommissionInfo;
+  }
+
+  @override
+  void update(
+      void Function(GetStakingForAccountResultValidatorsCommissionInfoBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GetStakingForAccountResultValidatorsCommissionInfo build() => _build();
+
+  _$GetStakingForAccountResultValidatorsCommissionInfo _build() {
+    final _$result = _$v ??
+        new _$GetStakingForAccountResultValidatorsCommissionInfo._(
+            rate: BuiltValueNullFieldError.checkNotNull(rate,
+                r'GetStakingForAccountResultValidatorsCommissionInfo', 'rate'),
+            maxRate: BuiltValueNullFieldError.checkNotNull(
+                maxRate,
+                r'GetStakingForAccountResultValidatorsCommissionInfo',
+                'maxRate'),
+            maxChangeRate: BuiltValueNullFieldError.checkNotNull(
+                maxChangeRate,
+                r'GetStakingForAccountResultValidatorsCommissionInfo',
+                'maxChangeRate'),
+            updateTime: BuiltValueNullFieldError.checkNotNull(
+                updateTime,
+                r'GetStakingForAccountResultValidatorsCommissionInfo',
+                'updateTime'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

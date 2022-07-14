@@ -1,0 +1,16 @@
+# terra_dart_rest_apis.model.TxsTxValueSignatures
+
+## Load the model package
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**signature** | **String** |  | 
+**pubKey** | [**TxsTxValueSignaturesPubKey**](TxsTxValueSignaturesPubKey.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
