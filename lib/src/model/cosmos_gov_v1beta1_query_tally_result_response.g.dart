@@ -9,7 +9,7 @@ part of 'cosmos_gov_v1beta1_query_tally_result_response.dart';
 class _$CosmosGovV1beta1QueryTallyResultResponse
     extends CosmosGovV1beta1QueryTallyResultResponse {
   @override
-  final CosmosGovV1beta1ProposalFinalTallyResult? tally;
+  final Proposals200ResponseProposalsInnerFinalTallyResult? tally;
 
   factory _$CosmosGovV1beta1QueryTallyResultResponse(
           [void Function(CosmosGovV1beta1QueryTallyResultResponseBuilder)?
@@ -56,10 +56,11 @@ class CosmosGovV1beta1QueryTallyResultResponseBuilder
             CosmosGovV1beta1QueryTallyResultResponseBuilder> {
   _$CosmosGovV1beta1QueryTallyResultResponse? _$v;
 
-  CosmosGovV1beta1ProposalFinalTallyResultBuilder? _tally;
-  CosmosGovV1beta1ProposalFinalTallyResultBuilder get tally =>
-      _$this._tally ??= new CosmosGovV1beta1ProposalFinalTallyResultBuilder();
-  set tally(CosmosGovV1beta1ProposalFinalTallyResultBuilder? tally) =>
+  Proposals200ResponseProposalsInnerFinalTallyResultBuilder? _tally;
+  Proposals200ResponseProposalsInnerFinalTallyResultBuilder get tally =>
+      _$this._tally ??=
+          new Proposals200ResponseProposalsInnerFinalTallyResultBuilder();
+  set tally(Proposals200ResponseProposalsInnerFinalTallyResultBuilder? tally) =>
       _$this._tally = tally;
 
   CosmosGovV1beta1QueryTallyResultResponseBuilder() {

@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_proposal.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/proposals200_response_proposals_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,15 +13,14 @@ part 'cosmos_gov_v1beta1_query_proposals_response.g.dart';
 /// QueryProposalsResponse is the response type for the Query/Proposals RPC method.
 ///
 /// Properties:
-/// * [proposals] - 
+/// * [proposals] 
 /// * [pagination] 
 abstract class CosmosGovV1beta1QueryProposalsResponse implements Built<CosmosGovV1beta1QueryProposalsResponse, CosmosGovV1beta1QueryProposalsResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'proposals')
-    BuiltList<CosmosGovV1beta1Proposal>? get proposals;
+    BuiltList<Proposals200ResponseProposalsInner>? get proposals;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosGovV1beta1QueryProposalsResponse._();
 
@@ -49,13 +48,13 @@ class _$CosmosGovV1beta1QueryProposalsResponseSerializer implements StructuredSe
             result
                 ..add(r'proposals')
                 ..add(serializers.serialize(object.proposals,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Proposal)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Proposals200ResponseProposalsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$CosmosGovV1beta1QueryProposalsResponseSerializer implements StructuredSe
             switch (key) {
                 case r'proposals':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Proposal)])) as BuiltList<CosmosGovV1beta1Proposal>;
+                        specifiedType: const FullType(BuiltList, [FullType(Proposals200ResponseProposalsInner)])) as BuiltList<Proposals200ResponseProposalsInner>;
                     result.proposals.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

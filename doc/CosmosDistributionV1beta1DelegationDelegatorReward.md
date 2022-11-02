@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **validatorAddress** | **String** |  | [optional] 
-**reward** | [**BuiltList&lt;CosmosBaseV1beta1DecCoin&gt;**](CosmosBaseV1beta1DecCoin.md) |  | [optional] 
+**reward** | [**BuiltList&lt;CommunityPool200ResponsePoolInner&gt;**](CommunityPool200ResponsePoolInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,10 +8,9 @@ part of 'cosmos_tx_v1beta1_mode_info.dart';
 
 class _$CosmosTxV1beta1ModeInfo extends CosmosTxV1beta1ModeInfo {
   @override
-  final SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture?
-      single;
+  final SingleRepresentsASingleSigner? single;
   @override
-  final Multiisthemodeinfoforamultisigpublickey? multi;
+  final CosmosTxV1beta1ModeInfoMulti? multi;
 
   factory _$CosmosTxV1beta1ModeInfo(
           [void Function(CosmosTxV1beta1ModeInfoBuilder)? updates]) =>
@@ -55,20 +54,16 @@ class CosmosTxV1beta1ModeInfoBuilder
         Builder<CosmosTxV1beta1ModeInfo, CosmosTxV1beta1ModeInfoBuilder> {
   _$CosmosTxV1beta1ModeInfo? _$v;
 
-  SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefutureBuilder?
-      _single;
-  SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefutureBuilder
-      get single => _$this._single ??=
-          new SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefutureBuilder();
-  set single(
-          SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefutureBuilder?
-              single) =>
+  SingleRepresentsASingleSignerBuilder? _single;
+  SingleRepresentsASingleSignerBuilder get single =>
+      _$this._single ??= new SingleRepresentsASingleSignerBuilder();
+  set single(SingleRepresentsASingleSignerBuilder? single) =>
       _$this._single = single;
 
-  MultiisthemodeinfoforamultisigpublickeyBuilder? _multi;
-  MultiisthemodeinfoforamultisigpublickeyBuilder get multi =>
-      _$this._multi ??= new MultiisthemodeinfoforamultisigpublickeyBuilder();
-  set multi(MultiisthemodeinfoforamultisigpublickeyBuilder? multi) =>
+  CosmosTxV1beta1ModeInfoMultiBuilder? _multi;
+  CosmosTxV1beta1ModeInfoMultiBuilder get multi =>
+      _$this._multi ??= new CosmosTxV1beta1ModeInfoMultiBuilder();
+  set multi(CosmosTxV1beta1ModeInfoMultiBuilder? multi) =>
       _$this._multi = multi;
 
   CosmosTxV1beta1ModeInfoBuilder() {

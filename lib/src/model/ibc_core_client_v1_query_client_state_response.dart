@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
-import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
+import 'package:terra_dart_rest_apis/src/model/height_at_which_the_proof_was_retrieved.dart';
+import 'package:terra_dart_rest_apis/src/model/client_state_associated_with_the_request_identifier.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,13 +17,13 @@ part 'ibc_core_client_v1_query_client_state_response.g.dart';
 /// * [proofHeight] 
 abstract class IbcCoreClientV1QueryClientStateResponse implements Built<IbcCoreClientV1QueryClientStateResponse, IbcCoreClientV1QueryClientStateResponseBuilder> {
     @BuiltValueField(wireName: r'client_state')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get clientState;
+    ClientStateAssociatedWithTheRequestIdentifier? get clientState;
 
     @BuiltValueField(wireName: r'proof')
     String? get proof;
 
     @BuiltValueField(wireName: r'proof_height')
-    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get proofHeight;
+    HeightAtWhichTheProofWasRetrieved? get proofHeight;
 
     IbcCoreClientV1QueryClientStateResponse._();
 
@@ -51,7 +51,7 @@ class _$IbcCoreClientV1QueryClientStateResponseSerializer implements StructuredS
             result
                 ..add(r'client_state')
                 ..add(serializers.serialize(object.clientState,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(ClientStateAssociatedWithTheRequestIdentifier)));
         }
         if (object.proof != null) {
             result
@@ -63,7 +63,7 @@ class _$IbcCoreClientV1QueryClientStateResponseSerializer implements StructuredS
             result
                 ..add(r'proof_height')
                 ..add(serializers.serialize(object.proofHeight,
-                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
+                    specifiedType: const FullType(HeightAtWhichTheProofWasRetrieved)));
         }
         return result;
     }
@@ -82,7 +82,7 @@ class _$IbcCoreClientV1QueryClientStateResponseSerializer implements StructuredS
             switch (key) {
                 case r'client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(ClientStateAssociatedWithTheRequestIdentifier)) as ClientStateAssociatedWithTheRequestIdentifier;
                     result.clientState.replace(valueDes);
                     break;
                 case r'proof':
@@ -92,7 +92,7 @@ class _$IbcCoreClientV1QueryClientStateResponseSerializer implements StructuredS
                     break;
                 case r'proof_height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
+                        specifiedType: const FullType(HeightAtWhichTheProofWasRetrieved)) as HeightAtWhichTheProofWasRetrieved;
                     result.proofHeight.replace(valueDes);
                     break;
             }

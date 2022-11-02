@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checkTx** | [**CheckTxResult**](CheckTxResult.md) |  | [optional] 
-**deliverTx** | [**CheckTxResult**](CheckTxResult.md) |  | [optional] 
+**checkTx** | [**TxsGet200Response1CheckTx**](TxsGet200Response1CheckTx.md) |  | [optional] 
+**deliverTx** | [**TxsGet200Response1DeliverTx**](TxsGet200Response1DeliverTx.md) |  | [optional] 
 **hash** | **String** |  | [optional] 
 **height** | **int** |  | [optional] 
 

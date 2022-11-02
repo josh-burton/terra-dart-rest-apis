@@ -10,7 +10,7 @@ class _$LazyGradedVestingAccount extends LazyGradedVestingAccount {
   @override
   final String? type;
   @override
-  final BaseLazyGradedVestingAccount? value;
+  final AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue? value;
 
   factory _$LazyGradedVestingAccount(
           [void Function(LazyGradedVestingAccountBuilder)? updates]) =>
@@ -58,10 +58,13 @@ class LazyGradedVestingAccountBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  BaseLazyGradedVestingAccountBuilder? _value;
-  BaseLazyGradedVestingAccountBuilder get value =>
-      _$this._value ??= new BaseLazyGradedVestingAccountBuilder();
-  set value(BaseLazyGradedVestingAccountBuilder? value) =>
+  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBuilder? _value;
+  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBuilder
+      get value => _$this._value ??=
+          new AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBuilder();
+  set value(
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBuilder?
+              value) =>
       _$this._value = value;
 
   LazyGradedVestingAccountBuilder() {

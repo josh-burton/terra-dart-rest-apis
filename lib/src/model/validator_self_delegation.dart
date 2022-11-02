@@ -10,12 +10,14 @@ part 'validator_self_delegation.g.dart';
 /// ValidatorSelfDelegation
 ///
 /// Properties:
-/// * [amount] 
-/// * [weight] 
+/// * [amount] - 
+/// * [weight] - 
 abstract class ValidatorSelfDelegation implements Built<ValidatorSelfDelegation, ValidatorSelfDelegationBuilder> {
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 
+    /// 
     @BuiltValueField(wireName: r'weight')
     String get weight;
 

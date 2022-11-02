@@ -6,10 +6,98 @@ part of 'cosmos_gov_v1beta1_weighted_vote_option.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_UNSPECIFIED =
+    const CosmosGovV1beta1WeightedVoteOptionOptionEnum._('UNSPECIFIED');
+const CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_YES =
+    const CosmosGovV1beta1WeightedVoteOptionOptionEnum._('YES');
+const CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_ABSTAIN =
+    const CosmosGovV1beta1WeightedVoteOptionOptionEnum._('ABSTAIN');
+const CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO =
+    const CosmosGovV1beta1WeightedVoteOptionOptionEnum._('NO');
+const CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO_WITH_VETO =
+    const CosmosGovV1beta1WeightedVoteOptionOptionEnum._('NO_WITH_VETO');
+
+CosmosGovV1beta1WeightedVoteOptionOptionEnum
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnumValueOf(String name) {
+  switch (name) {
+    case 'UNSPECIFIED':
+      return _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_UNSPECIFIED;
+    case 'YES':
+      return _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_YES;
+    case 'ABSTAIN':
+      return _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_ABSTAIN;
+    case 'NO':
+      return _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO;
+    case 'NO_WITH_VETO':
+      return _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO_WITH_VETO;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<CosmosGovV1beta1WeightedVoteOptionOptionEnum>
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnumValues =
+    new BuiltSet<CosmosGovV1beta1WeightedVoteOptionOptionEnum>(const <
+        CosmosGovV1beta1WeightedVoteOptionOptionEnum>[
+  _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_UNSPECIFIED,
+  _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_YES,
+  _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_ABSTAIN,
+  _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO,
+  _$cosmosGovV1beta1WeightedVoteOptionOptionEnum_NO_WITH_VETO,
+]);
+
+Serializer<CosmosGovV1beta1WeightedVoteOptionOptionEnum>
+    _$cosmosGovV1beta1WeightedVoteOptionOptionEnumSerializer =
+    new _$CosmosGovV1beta1WeightedVoteOptionOptionEnumSerializer();
+
+class _$CosmosGovV1beta1WeightedVoteOptionOptionEnumSerializer
+    implements
+        PrimitiveSerializer<CosmosGovV1beta1WeightedVoteOptionOptionEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNSPECIFIED': 'VOTE_OPTION_UNSPECIFIED',
+    'YES': 'VOTE_OPTION_YES',
+    'ABSTAIN': 'VOTE_OPTION_ABSTAIN',
+    'NO': 'VOTE_OPTION_NO',
+    'NO_WITH_VETO': 'VOTE_OPTION_NO_WITH_VETO',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'VOTE_OPTION_UNSPECIFIED': 'UNSPECIFIED',
+    'VOTE_OPTION_YES': 'YES',
+    'VOTE_OPTION_ABSTAIN': 'ABSTAIN',
+    'VOTE_OPTION_NO': 'NO',
+    'VOTE_OPTION_NO_WITH_VETO': 'NO_WITH_VETO',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    CosmosGovV1beta1WeightedVoteOptionOptionEnum
+  ];
+  @override
+  final String wireName = 'CosmosGovV1beta1WeightedVoteOptionOptionEnum';
+
+  @override
+  Object serialize(Serializers serializers,
+          CosmosGovV1beta1WeightedVoteOptionOptionEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  CosmosGovV1beta1WeightedVoteOptionOptionEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      CosmosGovV1beta1WeightedVoteOptionOptionEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$CosmosGovV1beta1WeightedVoteOption
     extends CosmosGovV1beta1WeightedVoteOption {
   @override
-  final CosmosGovV1beta1VoteOption? option;
+  final CosmosGovV1beta1WeightedVoteOptionOptionEnum? option;
   @override
   final String? weight;
 
@@ -59,9 +147,10 @@ class CosmosGovV1beta1WeightedVoteOptionBuilder
             CosmosGovV1beta1WeightedVoteOptionBuilder> {
   _$CosmosGovV1beta1WeightedVoteOption? _$v;
 
-  CosmosGovV1beta1VoteOption? _option;
-  CosmosGovV1beta1VoteOption? get option => _$this._option;
-  set option(CosmosGovV1beta1VoteOption? option) => _$this._option = option;
+  CosmosGovV1beta1WeightedVoteOptionOptionEnum? _option;
+  CosmosGovV1beta1WeightedVoteOptionOptionEnum? get option => _$this._option;
+  set option(CosmosGovV1beta1WeightedVoteOptionOptionEnum? option) =>
+      _$this._option = option;
 
   String? _weight;
   String? get weight => _$this._weight;

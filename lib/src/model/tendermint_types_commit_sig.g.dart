@@ -6,9 +6,88 @@ part of 'tendermint_types_commit_sig.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const TendermintTypesCommitSigBlockIdFlagEnum
+    _$tendermintTypesCommitSigBlockIdFlagEnum_UNKNOWN =
+    const TendermintTypesCommitSigBlockIdFlagEnum._('UNKNOWN');
+const TendermintTypesCommitSigBlockIdFlagEnum
+    _$tendermintTypesCommitSigBlockIdFlagEnum_ABSENT =
+    const TendermintTypesCommitSigBlockIdFlagEnum._('ABSENT');
+const TendermintTypesCommitSigBlockIdFlagEnum
+    _$tendermintTypesCommitSigBlockIdFlagEnum_COMMIT =
+    const TendermintTypesCommitSigBlockIdFlagEnum._('COMMIT');
+const TendermintTypesCommitSigBlockIdFlagEnum
+    _$tendermintTypesCommitSigBlockIdFlagEnum_NIL =
+    const TendermintTypesCommitSigBlockIdFlagEnum._('NIL');
+
+TendermintTypesCommitSigBlockIdFlagEnum
+    _$tendermintTypesCommitSigBlockIdFlagEnumValueOf(String name) {
+  switch (name) {
+    case 'UNKNOWN':
+      return _$tendermintTypesCommitSigBlockIdFlagEnum_UNKNOWN;
+    case 'ABSENT':
+      return _$tendermintTypesCommitSigBlockIdFlagEnum_ABSENT;
+    case 'COMMIT':
+      return _$tendermintTypesCommitSigBlockIdFlagEnum_COMMIT;
+    case 'NIL':
+      return _$tendermintTypesCommitSigBlockIdFlagEnum_NIL;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<TendermintTypesCommitSigBlockIdFlagEnum>
+    _$tendermintTypesCommitSigBlockIdFlagEnumValues =
+    new BuiltSet<TendermintTypesCommitSigBlockIdFlagEnum>(const <
+        TendermintTypesCommitSigBlockIdFlagEnum>[
+  _$tendermintTypesCommitSigBlockIdFlagEnum_UNKNOWN,
+  _$tendermintTypesCommitSigBlockIdFlagEnum_ABSENT,
+  _$tendermintTypesCommitSigBlockIdFlagEnum_COMMIT,
+  _$tendermintTypesCommitSigBlockIdFlagEnum_NIL,
+]);
+
+Serializer<TendermintTypesCommitSigBlockIdFlagEnum>
+    _$tendermintTypesCommitSigBlockIdFlagEnumSerializer =
+    new _$TendermintTypesCommitSigBlockIdFlagEnumSerializer();
+
+class _$TendermintTypesCommitSigBlockIdFlagEnumSerializer
+    implements PrimitiveSerializer<TendermintTypesCommitSigBlockIdFlagEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNKNOWN': 'BLOCK_ID_FLAG_UNKNOWN',
+    'ABSENT': 'BLOCK_ID_FLAG_ABSENT',
+    'COMMIT': 'BLOCK_ID_FLAG_COMMIT',
+    'NIL': 'BLOCK_ID_FLAG_NIL',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'BLOCK_ID_FLAG_UNKNOWN': 'UNKNOWN',
+    'BLOCK_ID_FLAG_ABSENT': 'ABSENT',
+    'BLOCK_ID_FLAG_COMMIT': 'COMMIT',
+    'BLOCK_ID_FLAG_NIL': 'NIL',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    TendermintTypesCommitSigBlockIdFlagEnum
+  ];
+  @override
+  final String wireName = 'TendermintTypesCommitSigBlockIdFlagEnum';
+
+  @override
+  Object serialize(Serializers serializers,
+          TendermintTypesCommitSigBlockIdFlagEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  TendermintTypesCommitSigBlockIdFlagEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      TendermintTypesCommitSigBlockIdFlagEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$TendermintTypesCommitSig extends TendermintTypesCommitSig {
   @override
-  final BlockIdFlagindicateswhichBlcokIDthesignatureisfor? blockIdFlag;
+  final TendermintTypesCommitSigBlockIdFlagEnum? blockIdFlag;
   @override
   final String? validatorAddress;
   @override
@@ -67,11 +146,10 @@ class TendermintTypesCommitSigBuilder
         Builder<TendermintTypesCommitSig, TendermintTypesCommitSigBuilder> {
   _$TendermintTypesCommitSig? _$v;
 
-  BlockIdFlagindicateswhichBlcokIDthesignatureisfor? _blockIdFlag;
-  BlockIdFlagindicateswhichBlcokIDthesignatureisfor? get blockIdFlag =>
+  TendermintTypesCommitSigBlockIdFlagEnum? _blockIdFlag;
+  TendermintTypesCommitSigBlockIdFlagEnum? get blockIdFlag =>
       _$this._blockIdFlag;
-  set blockIdFlag(
-          BlockIdFlagindicateswhichBlcokIDthesignatureisfor? blockIdFlag) =>
+  set blockIdFlag(TendermintTypesCommitSigBlockIdFlagEnum? blockIdFlag) =>
       _$this._blockIdFlag = blockIdFlag;
 
   String? _validatorAddress;

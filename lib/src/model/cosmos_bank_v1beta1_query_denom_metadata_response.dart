@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_denom_metadata_response_metadata.dart';
+import 'package:terra_dart_rest_apis/src/model/denoms_metadata200_response_metadatas_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_bank_v1beta1_query_denom_metadata_response.g.dart';
 /// * [metadata] 
 abstract class CosmosBankV1beta1QueryDenomMetadataResponse implements Built<CosmosBankV1beta1QueryDenomMetadataResponse, CosmosBankV1beta1QueryDenomMetadataResponseBuilder> {
     @BuiltValueField(wireName: r'metadata')
-    CosmosBankV1beta1QueryDenomMetadataResponseMetadata? get metadata;
+    DenomsMetadata200ResponseMetadatasInner? get metadata;
 
     CosmosBankV1beta1QueryDenomMetadataResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosBankV1beta1QueryDenomMetadataResponseSerializer implements Structu
             result
                 ..add(r'metadata')
                 ..add(serializers.serialize(object.metadata,
-                    specifiedType: const FullType(CosmosBankV1beta1QueryDenomMetadataResponseMetadata)));
+                    specifiedType: const FullType(DenomsMetadata200ResponseMetadatasInner)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosBankV1beta1QueryDenomMetadataResponseSerializer implements Structu
             switch (key) {
                 case r'metadata':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBankV1beta1QueryDenomMetadataResponseMetadata)) as CosmosBankV1beta1QueryDenomMetadataResponseMetadata;
+                        specifiedType: const FullType(DenomsMetadata200ResponseMetadatasInner)) as DenomsMetadata200ResponseMetadatasInner;
                     result.metadata.replace(valueDes);
                     break;
             }

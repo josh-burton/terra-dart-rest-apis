@@ -10,7 +10,7 @@ class _$Account extends Account {
   @override
   final String? type;
   @override
-  final BaseAccount? value;
+  final AuthAccountsAddressGet200ResponseAccountValue? value;
 
   factory _$Account([void Function(AccountBuilder)? updates]) =>
       (new AccountBuilder()..update(updates))._build();
@@ -51,9 +51,12 @@ class AccountBuilder implements Builder<Account, AccountBuilder> {
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  BaseAccountBuilder? _value;
-  BaseAccountBuilder get value => _$this._value ??= new BaseAccountBuilder();
-  set value(BaseAccountBuilder? value) => _$this._value = value;
+  AuthAccountsAddressGet200ResponseAccountValueBuilder? _value;
+  AuthAccountsAddressGet200ResponseAccountValueBuilder get value =>
+      _$this._value ??=
+          new AuthAccountsAddressGet200ResponseAccountValueBuilder();
+  set value(AuthAccountsAddressGet200ResponseAccountValueBuilder? value) =>
+      _$this._value = value;
 
   AccountBuilder() {
     Account._defaults(this);

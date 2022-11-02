@@ -8,9 +8,9 @@ part of 'execute_contract_req.dart';
 
 class _$ExecuteContractReq extends ExecuteContractReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
-  final BuiltList<Coin>? coins;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? coins;
   @override
   final String? execMsg;
 
@@ -58,13 +58,18 @@ class ExecuteContractReqBuilder
     implements Builder<ExecuteContractReq, ExecuteContractReqBuilder> {
   _$ExecuteContractReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
-  ListBuilder<Coin>? _coins;
-  ListBuilder<Coin> get coins => _$this._coins ??= new ListBuilder<Coin>();
-  set coins(ListBuilder<Coin>? coins) => _$this._coins = coins;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _coins;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get coins =>
+      _$this._coins ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set coins(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? coins) =>
+      _$this._coins = coins;
 
   String? _execMsg;
   String? get execMsg => _$this._execMsg;

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **voteThreshold** | **String** |  | [optional] 
 **rewardBand** | **String** |  | [optional] 
 **rewardDistributionWindow** | **String** |  | [optional] 
-**whitelist** | [**BuiltList&lt;DenomTheobjecttoholdconfigurationsofeachdenom&gt;**](DenomTheobjecttoholdconfigurationsofeachdenom.md) |  | [optional] 
+**whitelist** | [**BuiltList&lt;DenomTheObjectToHoldConfigurationsOfEachDenom&gt;**](DenomTheObjectToHoldConfigurationsOfEachDenom.md) |  | [optional] 
 **slashFraction** | **String** |  | [optional] 
 **slashWindow** | **String** |  | [optional] 
 **minValidPerWindow** | **String** |  | [optional] 

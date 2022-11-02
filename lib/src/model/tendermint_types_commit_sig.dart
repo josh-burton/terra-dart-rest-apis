@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/block_id_flagindicateswhich_blcok_i_dthesignatureisfor.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'tendermint_types_commit_sig.g.dart';
 /// * [signature] 
 abstract class TendermintTypesCommitSig implements Built<TendermintTypesCommitSig, TendermintTypesCommitSigBuilder> {
     @BuiltValueField(wireName: r'block_id_flag')
-    BlockIdFlagindicateswhichBlcokIDthesignatureisfor? get blockIdFlag;
+    TendermintTypesCommitSigBlockIdFlagEnum? get blockIdFlag;
     // enum blockIdFlagEnum {  BLOCK_ID_FLAG_UNKNOWN,  BLOCK_ID_FLAG_ABSENT,  BLOCK_ID_FLAG_COMMIT,  BLOCK_ID_FLAG_NIL,  };
 
     @BuiltValueField(wireName: r'validator_address')
@@ -32,7 +32,8 @@ abstract class TendermintTypesCommitSig implements Built<TendermintTypesCommitSi
     TendermintTypesCommitSig._();
 
     @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(TendermintTypesCommitSigBuilder b) => b;
+    static void _defaults(TendermintTypesCommitSigBuilder b) => b
+        ..blockIdFlag = const TendermintTypesCommitSigBlockIdFlagEnum._('BLOCK_ID_FLAG_UNKNOWN');
 
     factory TendermintTypesCommitSig([void updates(TendermintTypesCommitSigBuilder b)]) = _$TendermintTypesCommitSig;
 
@@ -55,7 +56,7 @@ class _$TendermintTypesCommitSigSerializer implements StructuredSerializer<Tende
             result
                 ..add(r'block_id_flag')
                 ..add(serializers.serialize(object.blockIdFlag,
-                    specifiedType: const FullType(BlockIdFlagindicateswhichBlcokIDthesignatureisfor)));
+                    specifiedType: const FullType(TendermintTypesCommitSigBlockIdFlagEnum)));
         }
         if (object.validatorAddress != null) {
             result
@@ -92,7 +93,7 @@ class _$TendermintTypesCommitSigSerializer implements StructuredSerializer<Tende
             switch (key) {
                 case r'block_id_flag':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockIdFlagindicateswhichBlcokIDthesignatureisfor)) as BlockIdFlagindicateswhichBlcokIDthesignatureisfor;
+                        specifiedType: const FullType(TendermintTypesCommitSigBlockIdFlagEnum)) as TendermintTypesCommitSigBlockIdFlagEnum;
                     result.blockIdFlag = valueDes;
                     break;
                 case r'validator_address':
@@ -114,5 +115,24 @@ class _$TendermintTypesCommitSigSerializer implements StructuredSerializer<Tende
         }
         return result.build();
     }
+}
+
+class TendermintTypesCommitSigBlockIdFlagEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'BLOCK_ID_FLAG_UNKNOWN')
+  static const TendermintTypesCommitSigBlockIdFlagEnum UNKNOWN = _$tendermintTypesCommitSigBlockIdFlagEnum_UNKNOWN;
+  @BuiltValueEnumConst(wireName: r'BLOCK_ID_FLAG_ABSENT')
+  static const TendermintTypesCommitSigBlockIdFlagEnum ABSENT = _$tendermintTypesCommitSigBlockIdFlagEnum_ABSENT;
+  @BuiltValueEnumConst(wireName: r'BLOCK_ID_FLAG_COMMIT')
+  static const TendermintTypesCommitSigBlockIdFlagEnum COMMIT = _$tendermintTypesCommitSigBlockIdFlagEnum_COMMIT;
+  @BuiltValueEnumConst(wireName: r'BLOCK_ID_FLAG_NIL')
+  static const TendermintTypesCommitSigBlockIdFlagEnum NIL = _$tendermintTypesCommitSigBlockIdFlagEnum_NIL;
+
+  static Serializer<TendermintTypesCommitSigBlockIdFlagEnum> get serializer => _$tendermintTypesCommitSigBlockIdFlagEnumSerializer;
+
+  const TendermintTypesCommitSigBlockIdFlagEnum._(String name): super(name);
+
+  static BuiltSet<TendermintTypesCommitSigBlockIdFlagEnum> get values => _$tendermintTypesCommitSigBlockIdFlagEnumValues;
+  static TendermintTypesCommitSigBlockIdFlagEnum valueOf(String name) => _$tendermintTypesCommitSigBlockIdFlagEnumValueOf(name);
 }
 

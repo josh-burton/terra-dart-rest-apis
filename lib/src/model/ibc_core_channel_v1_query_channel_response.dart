@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/ibc_core_channel_v1_query_channel_response_channel.dart';
-import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
+import 'package:terra_dart_rest_apis/src/model/height_at_which_the_proof_was_retrieved.dart';
+import 'package:terra_dart_rest_apis/src/model/channel_associated_with_the_request_identifiers.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,13 +17,13 @@ part 'ibc_core_channel_v1_query_channel_response.g.dart';
 /// * [proofHeight] 
 abstract class IbcCoreChannelV1QueryChannelResponse implements Built<IbcCoreChannelV1QueryChannelResponse, IbcCoreChannelV1QueryChannelResponseBuilder> {
     @BuiltValueField(wireName: r'channel')
-    IbcCoreChannelV1QueryChannelResponseChannel? get channel;
+    ChannelAssociatedWithTheRequestIdentifiers? get channel;
 
     @BuiltValueField(wireName: r'proof')
     String? get proof;
 
     @BuiltValueField(wireName: r'proof_height')
-    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get proofHeight;
+    HeightAtWhichTheProofWasRetrieved? get proofHeight;
 
     IbcCoreChannelV1QueryChannelResponse._();
 
@@ -51,7 +51,7 @@ class _$IbcCoreChannelV1QueryChannelResponseSerializer implements StructuredSeri
             result
                 ..add(r'channel')
                 ..add(serializers.serialize(object.channel,
-                    specifiedType: const FullType(IbcCoreChannelV1QueryChannelResponseChannel)));
+                    specifiedType: const FullType(ChannelAssociatedWithTheRequestIdentifiers)));
         }
         if (object.proof != null) {
             result
@@ -63,7 +63,7 @@ class _$IbcCoreChannelV1QueryChannelResponseSerializer implements StructuredSeri
             result
                 ..add(r'proof_height')
                 ..add(serializers.serialize(object.proofHeight,
-                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
+                    specifiedType: const FullType(HeightAtWhichTheProofWasRetrieved)));
         }
         return result;
     }
@@ -82,7 +82,7 @@ class _$IbcCoreChannelV1QueryChannelResponseSerializer implements StructuredSeri
             switch (key) {
                 case r'channel':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreChannelV1QueryChannelResponseChannel)) as IbcCoreChannelV1QueryChannelResponseChannel;
+                        specifiedType: const FullType(ChannelAssociatedWithTheRequestIdentifiers)) as ChannelAssociatedWithTheRequestIdentifiers;
                     result.channel.replace(valueDes);
                     break;
                 case r'proof':
@@ -92,7 +92,7 @@ class _$IbcCoreChannelV1QueryChannelResponseSerializer implements StructuredSeri
                     break;
                 case r'proof_height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
+                        specifiedType: const FullType(HeightAtWhichTheProofWasRetrieved)) as HeightAtWhichTheProofWasRetrieved;
                     result.proofHeight.replace(valueDes);
                     break;
             }

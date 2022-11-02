@@ -9,7 +9,7 @@ part of 'terra_wasm_v1beta1_query_contract_info_response.dart';
 class _$TerraWasmV1beta1QueryContractInfoResponse
     extends TerraWasmV1beta1QueryContractInfoResponse {
   @override
-  final ContractInfostoresaWASMcontractinstance? contractInfo;
+  final ContractInfoStoresAWASMContractInstance? contractInfo;
 
   factory _$TerraWasmV1beta1QueryContractInfoResponse(
           [void Function(TerraWasmV1beta1QueryContractInfoResponseBuilder)?
@@ -57,12 +57,12 @@ class TerraWasmV1beta1QueryContractInfoResponseBuilder
             TerraWasmV1beta1QueryContractInfoResponseBuilder> {
   _$TerraWasmV1beta1QueryContractInfoResponse? _$v;
 
-  ContractInfostoresaWASMcontractinstanceBuilder? _contractInfo;
-  ContractInfostoresaWASMcontractinstanceBuilder get contractInfo =>
+  ContractInfoStoresAWASMContractInstanceBuilder? _contractInfo;
+  ContractInfoStoresAWASMContractInstanceBuilder get contractInfo =>
       _$this._contractInfo ??=
-          new ContractInfostoresaWASMcontractinstanceBuilder();
+          new ContractInfoStoresAWASMContractInstanceBuilder();
   set contractInfo(
-          ContractInfostoresaWASMcontractinstanceBuilder? contractInfo) =>
+          ContractInfoStoresAWASMContractInstanceBuilder? contractInfo) =>
       _$this._contractInfo = contractInfo;
 
   TerraWasmV1beta1QueryContractInfoResponseBuilder() {

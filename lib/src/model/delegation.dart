@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/delegation1.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegators_delegator_addr_delegations_get200_response_inner_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'delegation.g.dart';
 /// * [balance] 
 abstract class Delegation implements Built<Delegation, DelegationBuilder> {
     @BuiltValueField(wireName: r'delegation')
-    Delegation1? get delegation;
+    StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation? get delegation;
 
     @BuiltValueField(wireName: r'balance')
-    Coin? get balance;
+    TxsHashGet200ResponseTxFeeAmountInner? get balance;
 
     Delegation._();
 
@@ -47,13 +47,13 @@ class _$DelegationSerializer implements StructuredSerializer<Delegation> {
             result
                 ..add(r'delegation')
                 ..add(serializers.serialize(object.delegation,
-                    specifiedType: const FullType(Delegation1)));
+                    specifiedType: const FullType(StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation)));
         }
         if (object.balance != null) {
             result
                 ..add(r'balance')
                 ..add(serializers.serialize(object.balance,
-                    specifiedType: const FullType(Coin)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$DelegationSerializer implements StructuredSerializer<Delegation> {
             switch (key) {
                 case r'delegation':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Delegation1)) as Delegation1;
+                        specifiedType: const FullType(StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation)) as StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation;
                     result.delegation.replace(valueDes);
                     break;
                 case r'balance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Coin)) as Coin;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)) as TxsHashGet200ResponseTxFeeAmountInner;
                     result.balance.replace(valueDes);
                     break;
             }

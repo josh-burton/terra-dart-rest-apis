@@ -12,9 +12,10 @@ part 'get_proposal_list_result_proposals_deposit.g.dart';
 /// GetProposalListResultProposalsDeposit
 ///
 /// Properties:
-/// * [depositEndTime] 
+/// * [depositEndTime] - 
 /// * [totalDeposit] - 
 abstract class GetProposalListResultProposalsDeposit implements Built<GetProposalListResultProposalsDeposit, GetProposalListResultProposalsDepositBuilder> {
+    /// 
     @BuiltValueField(wireName: r'depositEndTime')
     String get depositEndTime;
 

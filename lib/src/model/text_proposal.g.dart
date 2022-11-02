@@ -10,13 +10,13 @@ class _$TextProposal extends TextProposal {
   @override
   final String? id;
   @override
-  final Content? content;
+  final GovProposalsGet200ResponseInnerContent? content;
   @override
   final num? status;
   @override
-  final TallyResult? finalTallyResult;
+  final GovProposalsGet200ResponseInnerFinalTallyResult? finalTallyResult;
   @override
-  final BuiltList<Coin>? totalDeposit;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? totalDeposit;
   @override
   final String? submitTime;
   @override
@@ -105,24 +105,31 @@ class TextProposalBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  ContentBuilder? _content;
-  ContentBuilder get content => _$this._content ??= new ContentBuilder();
-  set content(ContentBuilder? content) => _$this._content = content;
+  GovProposalsGet200ResponseInnerContentBuilder? _content;
+  GovProposalsGet200ResponseInnerContentBuilder get content =>
+      _$this._content ??= new GovProposalsGet200ResponseInnerContentBuilder();
+  set content(GovProposalsGet200ResponseInnerContentBuilder? content) =>
+      _$this._content = content;
 
   num? _status;
   num? get status => _$this._status;
   set status(num? status) => _$this._status = status;
 
-  TallyResultBuilder? _finalTallyResult;
-  TallyResultBuilder get finalTallyResult =>
-      _$this._finalTallyResult ??= new TallyResultBuilder();
-  set finalTallyResult(TallyResultBuilder? finalTallyResult) =>
+  GovProposalsGet200ResponseInnerFinalTallyResultBuilder? _finalTallyResult;
+  GovProposalsGet200ResponseInnerFinalTallyResultBuilder get finalTallyResult =>
+      _$this._finalTallyResult ??=
+          new GovProposalsGet200ResponseInnerFinalTallyResultBuilder();
+  set finalTallyResult(
+          GovProposalsGet200ResponseInnerFinalTallyResultBuilder?
+              finalTallyResult) =>
       _$this._finalTallyResult = finalTallyResult;
 
-  ListBuilder<Coin>? _totalDeposit;
-  ListBuilder<Coin> get totalDeposit =>
-      _$this._totalDeposit ??= new ListBuilder<Coin>();
-  set totalDeposit(ListBuilder<Coin>? totalDeposit) =>
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _totalDeposit;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get totalDeposit =>
+      _$this._totalDeposit ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set totalDeposit(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? totalDeposit) =>
       _$this._totalDeposit = totalDeposit;
 
   String? _submitTime;

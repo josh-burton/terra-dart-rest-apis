@@ -10,7 +10,9 @@ class _$VestingSchedule extends VestingSchedule {
   @override
   final String? denom;
   @override
-  final BuiltList<Schedule>? lazySchedules;
+  final BuiltList<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>?
+      lazySchedules;
 
   factory _$VestingSchedule([void Function(VestingScheduleBuilder)? updates]) =>
       (new VestingScheduleBuilder()..update(updates))._build();
@@ -55,10 +57,17 @@ class VestingScheduleBuilder
   String? get denom => _$this._denom;
   set denom(String? denom) => _$this._denom = denom;
 
-  ListBuilder<Schedule>? _lazySchedules;
-  ListBuilder<Schedule> get lazySchedules =>
-      _$this._lazySchedules ??= new ListBuilder<Schedule>();
-  set lazySchedules(ListBuilder<Schedule>? lazySchedules) =>
+  ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>?
+      _lazySchedules;
+  ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>
+      get lazySchedules => _$this._lazySchedules ??= new ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>();
+  set lazySchedules(
+          ListBuilder<
+                  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>?
+              lazySchedules) =>
       _$this._lazySchedules = lazySchedules;
 
   VestingScheduleBuilder() {

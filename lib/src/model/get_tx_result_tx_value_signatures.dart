@@ -13,12 +13,13 @@ part 'get_tx_result_tx_value_signatures.g.dart';
 ///
 /// Properties:
 /// * [pubKey] - 
-/// * [signature] 
+/// * [signature] - 
 abstract class GetTxResultTxValueSignatures implements Built<GetTxResultTxValueSignatures, GetTxResultTxValueSignaturesBuilder> {
     /// 
     @BuiltValueField(wireName: r'pubKey')
     BuiltList<GetTxResultTxValueSignaturesPubKey> get pubKey;
 
+    /// 
     @BuiltValueField(wireName: r'signature')
     String get signature;
 

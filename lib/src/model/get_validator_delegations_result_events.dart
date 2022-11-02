@@ -12,15 +12,17 @@ part 'get_validator_delegations_result_events.g.dart';
 /// GetValidatorDelegationsResultEvents
 ///
 /// Properties:
-/// * [chainId] 
-/// * [txhash] 
+/// * [chainId] - 
+/// * [txhash] - 
 /// * [type] - Event type
 /// * [amount] - 
-/// * [timestamp] 
+/// * [timestamp] - 
 abstract class GetValidatorDelegationsResultEvents implements Built<GetValidatorDelegationsResultEvents, GetValidatorDelegationsResultEventsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'chainId')
     String get chainId;
 
+    /// 
     @BuiltValueField(wireName: r'txhash')
     String get txhash;
 
@@ -32,6 +34,7 @@ abstract class GetValidatorDelegationsResultEvents implements Built<GetValidator
     @BuiltValueField(wireName: r'amount')
     BuiltList<GetValidatorDelegationsResultEventsAmount> get amount;
 
+    /// 
     @BuiltValueField(wireName: r'timestamp')
     String get timestamp;
 

@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**delegation** | [**Delegation1**](Delegation1.md) |  | [optional] 
-**balance** | [**Coin**](Coin.md) |  | [optional] 
+**delegation** | [**StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation**](StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation.md) |  | [optional] 
+**balance** | [**TxsHashGet200ResponseTxFeeAmountInner**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

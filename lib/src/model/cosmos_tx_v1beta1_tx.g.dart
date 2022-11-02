@@ -8,9 +8,9 @@ part of 'cosmos_tx_v1beta1_tx.dart';
 
 class _$CosmosTxV1beta1Tx extends CosmosTxV1beta1Tx {
   @override
-  final CosmosTxV1beta1TxBody? body;
+  final BodyIsTheProcessableContentOfTheTransaction? body;
   @override
-  final CosmosTxV1beta1TxAuthInfo? authInfo;
+  final CosmosTxV1beta1AuthInfo? authInfo;
   @override
   final BuiltList<String>? signatures;
 
@@ -58,15 +58,16 @@ class CosmosTxV1beta1TxBuilder
     implements Builder<CosmosTxV1beta1Tx, CosmosTxV1beta1TxBuilder> {
   _$CosmosTxV1beta1Tx? _$v;
 
-  CosmosTxV1beta1TxBodyBuilder? _body;
-  CosmosTxV1beta1TxBodyBuilder get body =>
-      _$this._body ??= new CosmosTxV1beta1TxBodyBuilder();
-  set body(CosmosTxV1beta1TxBodyBuilder? body) => _$this._body = body;
+  BodyIsTheProcessableContentOfTheTransactionBuilder? _body;
+  BodyIsTheProcessableContentOfTheTransactionBuilder get body =>
+      _$this._body ??= new BodyIsTheProcessableContentOfTheTransactionBuilder();
+  set body(BodyIsTheProcessableContentOfTheTransactionBuilder? body) =>
+      _$this._body = body;
 
-  CosmosTxV1beta1TxAuthInfoBuilder? _authInfo;
-  CosmosTxV1beta1TxAuthInfoBuilder get authInfo =>
-      _$this._authInfo ??= new CosmosTxV1beta1TxAuthInfoBuilder();
-  set authInfo(CosmosTxV1beta1TxAuthInfoBuilder? authInfo) =>
+  CosmosTxV1beta1AuthInfoBuilder? _authInfo;
+  CosmosTxV1beta1AuthInfoBuilder get authInfo =>
+      _$this._authInfo ??= new CosmosTxV1beta1AuthInfoBuilder();
+  set authInfo(CosmosTxV1beta1AuthInfoBuilder? authInfo) =>
       _$this._authInfo = authInfo;
 
   ListBuilder<String>? _signatures;

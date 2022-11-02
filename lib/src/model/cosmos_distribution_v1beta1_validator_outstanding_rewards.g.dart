@@ -9,7 +9,7 @@ part of 'cosmos_distribution_v1beta1_validator_outstanding_rewards.dart';
 class _$CosmosDistributionV1beta1ValidatorOutstandingRewards
     extends CosmosDistributionV1beta1ValidatorOutstandingRewards {
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? rewards;
+  final BuiltList<CommunityPool200ResponsePoolInner>? rewards;
 
   factory _$CosmosDistributionV1beta1ValidatorOutstandingRewards(
           [void Function(
@@ -61,10 +61,10 @@ class CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder
             CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder> {
   _$CosmosDistributionV1beta1ValidatorOutstandingRewards? _$v;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _rewards;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get rewards =>
-      _$this._rewards ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set rewards(ListBuilder<CosmosBaseV1beta1DecCoin>? rewards) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _rewards;
+  ListBuilder<CommunityPool200ResponsePoolInner> get rewards =>
+      _$this._rewards ??= new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set rewards(ListBuilder<CommunityPool200ResponsePoolInner>? rewards) =>
       _$this._rewards = rewards;
 
   CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder() {

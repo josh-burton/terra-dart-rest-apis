@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_validator_set_validators_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,16 +12,15 @@ part 'tendermint_types_validator_set.g.dart';
 /// TendermintTypesValidatorSet
 ///
 /// Properties:
-/// * [validators] - 
+/// * [validators] 
 /// * [proposer] 
 /// * [totalVotingPower] 
 abstract class TendermintTypesValidatorSet implements Built<TendermintTypesValidatorSet, TendermintTypesValidatorSetBuilder> {
-    /// 
     @BuiltValueField(wireName: r'validators')
-    BuiltList<TendermintTypesValidator>? get validators;
+    BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>? get validators;
 
     @BuiltValueField(wireName: r'proposer')
-    TendermintTypesValidator? get proposer;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner? get proposer;
 
     @BuiltValueField(wireName: r'total_voting_power')
     String? get totalVotingPower;
@@ -52,13 +51,13 @@ class _$TendermintTypesValidatorSetSerializer implements StructuredSerializer<Te
             result
                 ..add(r'validators')
                 ..add(serializers.serialize(object.validators,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintTypesValidator)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)])));
         }
         if (object.proposer != null) {
             result
                 ..add(r'proposer')
                 ..add(serializers.serialize(object.proposer,
-                    specifiedType: const FullType(TendermintTypesValidator)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)));
         }
         if (object.totalVotingPower != null) {
             result
@@ -83,12 +82,12 @@ class _$TendermintTypesValidatorSetSerializer implements StructuredSerializer<Te
             switch (key) {
                 case r'validators':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintTypesValidator)])) as BuiltList<TendermintTypesValidator>;
+                        specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)])) as BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>;
                     result.validators.replace(valueDes);
                     break;
                 case r'proposer':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesValidator)) as TendermintTypesValidator;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner;
                     result.proposer.replace(valueDes);
                     break;
                 case r'total_voting_power':

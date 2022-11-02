@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,15 +13,14 @@ part 'cosmos_auth_v1beta1_query_accounts_response.g.dart';
 /// QueryAccountsResponse is the response type for the Query/Accounts RPC method.  Since: cosmos-sdk 0.43
 ///
 /// Properties:
-/// * [accounts] - 
+/// * [accounts] 
 /// * [pagination] 
 abstract class CosmosAuthV1beta1QueryAccountsResponse implements Built<CosmosAuthV1beta1QueryAccountsResponse, CosmosAuthV1beta1QueryAccountsResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'accounts')
-    BuiltList<GoogleProtobufAny>? get accounts;
+    BuiltList<AccountsAreTheExistingAccountsInner>? get accounts;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosAuthV1beta1QueryAccountsResponse._();
 
@@ -49,13 +48,13 @@ class _$CosmosAuthV1beta1QueryAccountsResponseSerializer implements StructuredSe
             result
                 ..add(r'accounts')
                 ..add(serializers.serialize(object.accounts,
-                    specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$CosmosAuthV1beta1QueryAccountsResponseSerializer implements StructuredSe
             switch (key) {
                 case r'accounts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])) as BuiltList<GoogleProtobufAny>;
+                        specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])) as BuiltList<AccountsAreTheExistingAccountsInner>;
                     result.accounts.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

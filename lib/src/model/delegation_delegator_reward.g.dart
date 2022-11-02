@@ -10,7 +10,7 @@ class _$DelegationDelegatorReward extends DelegationDelegatorReward {
   @override
   final String? validatorAddress;
   @override
-  final BuiltList<Coin>? reward;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? reward;
 
   factory _$DelegationDelegatorReward(
           [void Function(DelegationDelegatorRewardBuilder)? updates]) =>
@@ -60,9 +60,12 @@ class DelegationDelegatorRewardBuilder
   set validatorAddress(String? validatorAddress) =>
       _$this._validatorAddress = validatorAddress;
 
-  ListBuilder<Coin>? _reward;
-  ListBuilder<Coin> get reward => _$this._reward ??= new ListBuilder<Coin>();
-  set reward(ListBuilder<Coin>? reward) => _$this._reward = reward;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _reward;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get reward =>
+      _$this._reward ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set reward(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? reward) =>
+      _$this._reward = reward;
 
   DelegationDelegatorRewardBuilder() {
     DelegationDelegatorReward._defaults(this);

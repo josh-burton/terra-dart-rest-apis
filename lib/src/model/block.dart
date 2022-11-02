@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/block_header.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_last_commit.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/last_commit.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_meta_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,23 +14,21 @@ part 'block.g.dart';
 ///
 /// Properties:
 /// * [header] 
-/// * [txs] - 
-/// * [evidence] - 
+/// * [txs] 
+/// * [evidence] 
 /// * [lastCommit] 
 abstract class Block implements Built<Block, BlockBuilder> {
     @BuiltValueField(wireName: r'header')
-    BlockHeader? get header;
+    BlocksLatestGet200ResponseBlockMetaHeader? get header;
 
-    /// 
     @BuiltValueField(wireName: r'txs')
     BuiltList<String>? get txs;
 
-    /// 
     @BuiltValueField(wireName: r'evidence')
     BuiltList<String>? get evidence;
 
     @BuiltValueField(wireName: r'last_commit')
-    LastCommit? get lastCommit;
+    BlocksLatestGet200ResponseBlockLastCommit? get lastCommit;
 
     Block._();
 
@@ -58,7 +56,7 @@ class _$BlockSerializer implements StructuredSerializer<Block> {
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(BlockHeader)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeader)));
         }
         if (object.txs != null) {
             result
@@ -76,7 +74,7 @@ class _$BlockSerializer implements StructuredSerializer<Block> {
             result
                 ..add(r'last_commit')
                 ..add(serializers.serialize(object.lastCommit,
-                    specifiedType: const FullType(LastCommit)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockLastCommit)));
         }
         return result;
     }
@@ -95,7 +93,7 @@ class _$BlockSerializer implements StructuredSerializer<Block> {
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockHeader)) as BlockHeader;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeader)) as BlocksLatestGet200ResponseBlockMetaHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'txs':
@@ -110,7 +108,7 @@ class _$BlockSerializer implements StructuredSerializer<Block> {
                     break;
                 case r'last_commit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(LastCommit)) as LastCommit;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockLastCommit)) as BlocksLatestGet200ResponseBlockLastCommit;
                     result.lastCommit.replace(valueDes);
                     break;
             }

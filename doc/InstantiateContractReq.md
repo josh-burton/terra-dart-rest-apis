@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseReq** | [**BaseReq**](BaseReq.md) |  | [optional] 
-**initCoins** | [**BuiltList&lt;Coin&gt;**](Coin.md) |  | [optional] 
+**baseReq** | [**TxsEstimateFeePostRequestBaseReq**](TxsEstimateFeePostRequestBaseReq.md) |  | [optional] 
+**initCoins** | [**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | [optional] 
 **initMsg** | **String** | json formatted string | [optional] 
 **admin** | **String** | bech32 encoded address | [optional] 
 

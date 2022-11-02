@@ -16,7 +16,7 @@ class _$WasmParams extends WasmParams {
   @override
   final num? maxContractDataSize;
   @override
-  final EventParams? eventParams;
+  final WasmParametersGet200ResponseEventParams? eventParams;
 
   factory _$WasmParams([void Function(WasmParamsBuilder)? updates]) =>
       (new WasmParamsBuilder()..update(updates))._build();
@@ -92,10 +92,12 @@ class WasmParamsBuilder implements Builder<WasmParams, WasmParamsBuilder> {
   set maxContractDataSize(num? maxContractDataSize) =>
       _$this._maxContractDataSize = maxContractDataSize;
 
-  EventParamsBuilder? _eventParams;
-  EventParamsBuilder get eventParams =>
-      _$this._eventParams ??= new EventParamsBuilder();
-  set eventParams(EventParamsBuilder? eventParams) =>
+  WasmParametersGet200ResponseEventParamsBuilder? _eventParams;
+  WasmParametersGet200ResponseEventParamsBuilder get eventParams =>
+      _$this._eventParams ??=
+          new WasmParametersGet200ResponseEventParamsBuilder();
+  set eventParams(
+          WasmParametersGet200ResponseEventParamsBuilder? eventParams) =>
       _$this._eventParams = eventParams;
 
   WasmParamsBuilder() {

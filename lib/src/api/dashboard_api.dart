@@ -30,7 +30,6 @@ class DashboardApi {
   /// Get account growth history
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -40,8 +39,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetAccountGrowthResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetAccountGrowthResult>> getaccountgrowthhistory({ 
-    required String contentType,
+  Future<Response<GetAccountGrowthResult>> v1DashboardAccountGrowthGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -53,7 +51,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -105,7 +102,6 @@ class DashboardApi {
   /// Get active accounts count history
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -115,8 +111,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetActiveAccountsResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetActiveAccountsResult>> getactiveaccountscounthistory({ 
-    required String contentType,
+  Future<Response<GetActiveAccountsResult>> v1DashboardActiveAccountsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -128,7 +123,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -180,7 +174,6 @@ class DashboardApi {
   /// Get block reward history
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -190,8 +183,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetBlockRewardResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetBlockRewardResult>> getblockrewardhistory({ 
-    required String contentType,
+  Future<Response<GetBlockRewardResult>> v1DashboardBlockRewardsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -203,7 +195,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -255,7 +246,6 @@ class DashboardApi {
   /// Get information to be used on the dashboard
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -265,8 +255,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetDashboardResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetDashboardResult>> getinformationtobeusedonthedashboard({ 
-    required String contentType,
+  Future<Response<GetDashboardResult>> v1DashboardGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -278,7 +267,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -326,11 +314,82 @@ class DashboardApi {
     );
   }
 
+  /// v1DashboardLastHourOpsTxsCountGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetLastHourTxAndOpsCountResult] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<GetLastHourTxAndOpsCountResult>> v1DashboardLastHourOpsTxsCountGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/dashboard/last_hour_ops_txs_count';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    GetLastHourTxAndOpsCountResult _responseData;
+
+    try {
+      const _responseType = FullType(GetLastHourTxAndOpsCountResult);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as GetLastHourTxAndOpsCountResult;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<GetLastHourTxAndOpsCountResult>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// Get registered accounts count history
   /// Get registered accounts count history
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -340,8 +399,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetRegisteredAccountsResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetRegisteredAccountsResult>> getregisteredaccountscounthistory({ 
-    required String contentType,
+  Future<Response<GetRegisteredAccountsResult>> v1DashboardRegisteredAccountsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -353,7 +411,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -401,11 +458,10 @@ class DashboardApi {
     );
   }
 
-  /// Get staking return history
-  /// Get staking return history
+  /// Get the amount of seigniorage in the start of the day
+  /// Get the amount of seigniorage in the start of the day
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -415,83 +471,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Seigniorage>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Seigniorage>>> getstakingreturnhistory({ 
-    required String contentType,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/v1/dashboard/staking_return';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        r'Content-Type': contentType,
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<Seigniorage> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(Seigniorage)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<Seigniorage>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<Seigniorage>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the amount of seigniorage in the start of the day
-  /// Get the amount of seigniorage in the start of the day
-  ///
-  /// Parameters:
-  /// * [contentType] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Seigniorage>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Seigniorage>>> gettheamountofseigniorageinthestartoftheday({ 
-    required String contentType,
+  Future<Response<BuiltList<Seigniorage>>> v1DashboardSeigniorageProceedsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -503,7 +483,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -555,7 +534,6 @@ class DashboardApi {
   /// Get the historical staking ratio
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -565,8 +543,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<StakingHistory>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<StakingHistory>>> getthehistoricalstakingratio({ 
-    required String contentType,
+  Future<Response<BuiltList<StakingHistory>>> v1DashboardStakingRatioGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -578,7 +555,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -626,11 +602,82 @@ class DashboardApi {
     );
   }
 
+  /// Get staking return history
+  /// Get staking return history
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Seigniorage>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Seigniorage>>> v1DashboardStakingReturnGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/dashboard/staking_return';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<Seigniorage> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(Seigniorage)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<Seigniorage>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<Seigniorage>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// Get tx volume history
   /// Get tx volume history
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -640,8 +687,7 @@ class DashboardApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetTxVolumeResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetTxVolumeResult>> gettxvolumehistory({ 
-    required String contentType,
+  Future<Response<GetTxVolumeResult>> v1DashboardTxVolumeGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -653,7 +699,6 @@ class DashboardApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -690,81 +735,6 @@ class DashboardApi {
     }
 
     return Response<GetTxVolumeResult>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// V1DashboardLastHourOpsTxsCount_GET
-  /// 
-  ///
-  /// Parameters:
-  /// * [contentType] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetLastHourTxAndOpsCountResult] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetLastHourTxAndOpsCountResult>> v1DashboardLastHourOpsTxsCountGET({ 
-    required String contentType,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/v1/dashboard/last_hour_ops_txs_count';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        r'Content-Type': contentType,
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetLastHourTxAndOpsCountResult _responseData;
-
-    try {
-      const _responseType = FullType(GetLastHourTxAndOpsCountResult);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetLastHourTxAndOpsCountResult;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetLastHourTxAndOpsCountResult>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

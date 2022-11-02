@@ -20,7 +20,7 @@ class _$CheckTxResult extends CheckTxResult {
   @override
   final String? log;
   @override
-  final BuiltList<KVPair>? tags;
+  final BuiltList<TxsHashGet200ResponseResultTagsInner>? tags;
 
   factory _$CheckTxResult([void Function(CheckTxResultBuilder)? updates]) =>
       (new CheckTxResultBuilder()..update(updates))._build();
@@ -111,9 +111,11 @@ class CheckTxResultBuilder
   String? get log => _$this._log;
   set log(String? log) => _$this._log = log;
 
-  ListBuilder<KVPair>? _tags;
-  ListBuilder<KVPair> get tags => _$this._tags ??= new ListBuilder<KVPair>();
-  set tags(ListBuilder<KVPair>? tags) => _$this._tags = tags;
+  ListBuilder<TxsHashGet200ResponseResultTagsInner>? _tags;
+  ListBuilder<TxsHashGet200ResponseResultTagsInner> get tags =>
+      _$this._tags ??= new ListBuilder<TxsHashGet200ResponseResultTagsInner>();
+  set tags(ListBuilder<TxsHashGet200ResponseResultTagsInner>? tags) =>
+      _$this._tags = tags;
 
   CheckTxResultBuilder() {
     CheckTxResult._defaults(this);

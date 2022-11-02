@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,18 +18,18 @@ part 'policy_constraints.g.dart';
 abstract class PolicyConstraints implements Built<PolicyConstraints, PolicyConstraintsBuilder> {
     /// 0.05%
     @BuiltValueField(wireName: r'rate_min')
-    num? get rateMin;
+    double? get rateMin;
 
     /// 1%
     @BuiltValueField(wireName: r'rate_max')
-    num? get rateMax;
+    double? get rateMax;
 
     @BuiltValueField(wireName: r'cap')
-    Coin? get cap;
+    TxsHashGet200ResponseTxFeeAmountInner? get cap;
 
     /// 0.025%
     @BuiltValueField(wireName: r'change_max')
-    num? get changeMax;
+    double? get changeMax;
 
     PolicyConstraints._();
 
@@ -57,25 +57,25 @@ class _$PolicyConstraintsSerializer implements StructuredSerializer<PolicyConstr
             result
                 ..add(r'rate_min')
                 ..add(serializers.serialize(object.rateMin,
-                    specifiedType: const FullType(num)));
+                    specifiedType: const FullType(double)));
         }
         if (object.rateMax != null) {
             result
                 ..add(r'rate_max')
                 ..add(serializers.serialize(object.rateMax,
-                    specifiedType: const FullType(num)));
+                    specifiedType: const FullType(double)));
         }
         if (object.cap != null) {
             result
                 ..add(r'cap')
                 ..add(serializers.serialize(object.cap,
-                    specifiedType: const FullType(Coin)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)));
         }
         if (object.changeMax != null) {
             result
                 ..add(r'change_max')
                 ..add(serializers.serialize(object.changeMax,
-                    specifiedType: const FullType(num)));
+                    specifiedType: const FullType(double)));
         }
         return result;
     }
@@ -94,22 +94,22 @@ class _$PolicyConstraintsSerializer implements StructuredSerializer<PolicyConstr
             switch (key) {
                 case r'rate_min':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(num)) as num;
+                        specifiedType: const FullType(double)) as double;
                     result.rateMin = valueDes;
                     break;
                 case r'rate_max':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(num)) as num;
+                        specifiedType: const FullType(double)) as double;
                     result.rateMax = valueDes;
                     break;
                 case r'cap':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Coin)) as Coin;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)) as TxsHashGet200ResponseTxFeeAmountInner;
                     result.cap.replace(valueDes);
                     break;
                 case r'change_max':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(num)) as num;
+                        specifiedType: const FullType(double)) as double;
                     result.changeMax = valueDes;
                     break;
             }

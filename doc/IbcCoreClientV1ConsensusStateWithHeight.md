@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**height** | [**QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight**](QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight.md) |  | [optional] 
-**consensusState** | [**CosmosAuthV1beta1QueryAccountResponseAccount**](CosmosAuthV1beta1QueryAccountResponseAccount.md) |  | [optional] 
+**height** | [**ConsensusStateHeight**](ConsensusStateHeight.md) |  | [optional] 
+**consensusState** | [**ConsensusState**](ConsensusState.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

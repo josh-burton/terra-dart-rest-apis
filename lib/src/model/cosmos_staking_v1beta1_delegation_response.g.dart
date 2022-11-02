@@ -9,9 +9,10 @@ part of 'cosmos_staking_v1beta1_delegation_response.dart';
 class _$CosmosStakingV1beta1DelegationResponse
     extends CosmosStakingV1beta1DelegationResponse {
   @override
-  final CosmosStakingV1beta1DelegationResponseDelegation? delegation;
+  final DelegatorDelegations200ResponseDelegationResponsesInnerDelegation?
+      delegation;
   @override
-  final CosmosBankV1beta1QueryBalanceResponseBalance? balance;
+  final AllBalances200ResponseBalancesInner? balance;
 
   factory _$CosmosStakingV1beta1DelegationResponse(
           [void Function(CosmosStakingV1beta1DelegationResponseBuilder)?
@@ -61,20 +62,20 @@ class CosmosStakingV1beta1DelegationResponseBuilder
             CosmosStakingV1beta1DelegationResponseBuilder> {
   _$CosmosStakingV1beta1DelegationResponse? _$v;
 
-  CosmosStakingV1beta1DelegationResponseDelegationBuilder? _delegation;
-  CosmosStakingV1beta1DelegationResponseDelegationBuilder get delegation =>
-      _$this._delegation ??=
-          new CosmosStakingV1beta1DelegationResponseDelegationBuilder();
+  DelegatorDelegations200ResponseDelegationResponsesInnerDelegationBuilder?
+      _delegation;
+  DelegatorDelegations200ResponseDelegationResponsesInnerDelegationBuilder
+      get delegation => _$this._delegation ??=
+          new DelegatorDelegations200ResponseDelegationResponsesInnerDelegationBuilder();
   set delegation(
-          CosmosStakingV1beta1DelegationResponseDelegationBuilder?
+          DelegatorDelegations200ResponseDelegationResponsesInnerDelegationBuilder?
               delegation) =>
       _$this._delegation = delegation;
 
-  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? _balance;
-  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder get balance =>
-      _$this._balance ??=
-          new CosmosBankV1beta1QueryBalanceResponseBalanceBuilder();
-  set balance(CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? balance) =>
+  AllBalances200ResponseBalancesInnerBuilder? _balance;
+  AllBalances200ResponseBalancesInnerBuilder get balance =>
+      _$this._balance ??= new AllBalances200ResponseBalancesInnerBuilder();
+  set balance(AllBalances200ResponseBalancesInnerBuilder? balance) =>
       _$this._balance = balance;
 
   CosmosStakingV1beta1DelegationResponseBuilder() {

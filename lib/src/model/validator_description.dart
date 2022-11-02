@@ -10,24 +10,29 @@ part 'validator_description.g.dart';
 /// ValidatorDescription
 ///
 /// Properties:
-/// * [moniker] 
-/// * [identity] 
-/// * [website] 
-/// * [details] 
-/// * [profileIcon] 
+/// * [moniker] - 
+/// * [identity] - 
+/// * [website] - 
+/// * [details] - 
+/// * [profileIcon] - 
 abstract class ValidatorDescription implements Built<ValidatorDescription, ValidatorDescriptionBuilder> {
+    /// 
     @BuiltValueField(wireName: r'moniker')
     String get moniker;
 
+    /// 
     @BuiltValueField(wireName: r'identity')
     String get identity;
 
+    /// 
     @BuiltValueField(wireName: r'website')
     String get website;
 
+    /// 
     @BuiltValueField(wireName: r'details')
     String get details;
 
+    /// 
     @BuiltValueField(wireName: r'profileIcon')
     String get profileIcon;
 

@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_light_block.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_validator_set_validators_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,19 +15,18 @@ part 'tendermint_types_light_client_attack_evidence.g.dart';
 /// Properties:
 /// * [conflictingBlock] 
 /// * [commonHeight] 
-/// * [byzantineValidators] - 
+/// * [byzantineValidators] 
 /// * [totalVotingPower] 
 /// * [timestamp] 
 abstract class TendermintTypesLightClientAttackEvidence implements Built<TendermintTypesLightClientAttackEvidence, TendermintTypesLightClientAttackEvidenceBuilder> {
     @BuiltValueField(wireName: r'conflicting_block')
-    TendermintTypesLightBlock? get conflictingBlock;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock? get conflictingBlock;
 
     @BuiltValueField(wireName: r'common_height')
     String? get commonHeight;
 
-    /// 
     @BuiltValueField(wireName: r'byzantine_validators')
-    BuiltList<TendermintTypesValidator>? get byzantineValidators;
+    BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>? get byzantineValidators;
 
     @BuiltValueField(wireName: r'total_voting_power')
     String? get totalVotingPower;
@@ -61,7 +60,7 @@ class _$TendermintTypesLightClientAttackEvidenceSerializer implements Structured
             result
                 ..add(r'conflicting_block')
                 ..add(serializers.serialize(object.conflictingBlock,
-                    specifiedType: const FullType(TendermintTypesLightBlock)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock)));
         }
         if (object.commonHeight != null) {
             result
@@ -73,7 +72,7 @@ class _$TendermintTypesLightClientAttackEvidenceSerializer implements Structured
             result
                 ..add(r'byzantine_validators')
                 ..add(serializers.serialize(object.byzantineValidators,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintTypesValidator)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)])));
         }
         if (object.totalVotingPower != null) {
             result
@@ -104,7 +103,7 @@ class _$TendermintTypesLightClientAttackEvidenceSerializer implements Structured
             switch (key) {
                 case r'conflicting_block':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesLightBlock)) as TendermintTypesLightBlock;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock;
                     result.conflictingBlock.replace(valueDes);
                     break;
                 case r'common_height':
@@ -114,7 +113,7 @@ class _$TendermintTypesLightClientAttackEvidenceSerializer implements Structured
                     break;
                 case r'byzantine_validators':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintTypesValidator)])) as BuiltList<TendermintTypesValidator>;
+                        specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner)])) as BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>;
                     result.byzantineValidators.replace(valueDes);
                     break;
                 case r'total_voting_power':

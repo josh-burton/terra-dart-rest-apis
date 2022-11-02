@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**params** | [**CosmosStakingV1beta1QueryParamsResponseParams**](CosmosStakingV1beta1QueryParamsResponseParams.md) |  | [optional] 
+**params** | [**StakingParams200ResponseParams**](StakingParams200ResponseParams.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

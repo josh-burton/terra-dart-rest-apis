@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_commission_commission_rates.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegator_validators200_response_validators_inner_commission_commission_rates.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'cosmos_staking_v1beta1_commission.g.dart';
 /// * [updateTime] - update_time is the last time the commission rate was changed.
 abstract class CosmosStakingV1beta1Commission implements Built<CosmosStakingV1beta1Commission, CosmosStakingV1beta1CommissionBuilder> {
     @BuiltValueField(wireName: r'commission_rates')
-    CosmosStakingV1beta1CommissionCommissionRates? get commissionRates;
+    StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRates? get commissionRates;
 
     /// update_time is the last time the commission rate was changed.
     @BuiltValueField(wireName: r'update_time')
@@ -47,7 +47,7 @@ class _$CosmosStakingV1beta1CommissionSerializer implements StructuredSerializer
             result
                 ..add(r'commission_rates')
                 ..add(serializers.serialize(object.commissionRates,
-                    specifiedType: const FullType(CosmosStakingV1beta1CommissionCommissionRates)));
+                    specifiedType: const FullType(StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRates)));
         }
         if (object.updateTime != null) {
             result
@@ -72,7 +72,7 @@ class _$CosmosStakingV1beta1CommissionSerializer implements StructuredSerializer
             switch (key) {
                 case r'commission_rates':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1CommissionCommissionRates)) as CosmosStakingV1beta1CommissionCommissionRates;
+                        specifiedType: const FullType(StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRates)) as StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRates;
                     result.commissionRates.replace(valueDes);
                     break;
                 case r'update_time':

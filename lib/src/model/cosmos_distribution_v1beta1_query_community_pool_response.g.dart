@@ -9,7 +9,7 @@ part of 'cosmos_distribution_v1beta1_query_community_pool_response.dart';
 class _$CosmosDistributionV1beta1QueryCommunityPoolResponse
     extends CosmosDistributionV1beta1QueryCommunityPoolResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? pool;
+  final BuiltList<CommunityPool200ResponsePoolInner>? pool;
 
   factory _$CosmosDistributionV1beta1QueryCommunityPoolResponse(
           [void Function(
@@ -61,10 +61,11 @@ class CosmosDistributionV1beta1QueryCommunityPoolResponseBuilder
             CosmosDistributionV1beta1QueryCommunityPoolResponseBuilder> {
   _$CosmosDistributionV1beta1QueryCommunityPoolResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _pool;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get pool =>
-      _$this._pool ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set pool(ListBuilder<CosmosBaseV1beta1DecCoin>? pool) => _$this._pool = pool;
+  ListBuilder<CommunityPool200ResponsePoolInner>? _pool;
+  ListBuilder<CommunityPool200ResponsePoolInner> get pool =>
+      _$this._pool ??= new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set pool(ListBuilder<CommunityPool200ResponsePoolInner>? pool) =>
+      _$this._pool = pool;
 
   CosmosDistributionV1beta1QueryCommunityPoolResponseBuilder() {
     CosmosDistributionV1beta1QueryCommunityPoolResponse._defaults(this);

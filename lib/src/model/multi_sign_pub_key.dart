@@ -12,12 +12,11 @@ part 'multi_sign_pub_key.g.dart';
 ///
 /// Properties:
 /// * [threshold] 
-/// * [pubkeys] - 
+/// * [pubkeys] 
 abstract class MultiSignPubKey implements Built<MultiSignPubKey, MultiSignPubKeyBuilder> {
     @BuiltValueField(wireName: r'threshold')
     num? get threshold;
 
-    /// 
     @BuiltValueField(wireName: r'pubkeys')
     BuiltList<String>? get pubkeys;
 

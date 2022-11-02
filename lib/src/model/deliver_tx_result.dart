@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/kv_pair.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_result_tags_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'deliver_tx_result.g.dart';
 /// * [gasWanted] 
 /// * [info] 
 /// * [log] 
-/// * [tags] - 
+/// * [tags] 
 abstract class DeliverTxResult implements Built<DeliverTxResult, DeliverTxResultBuilder> {
     @BuiltValueField(wireName: r'code')
     int? get code;
@@ -38,9 +38,8 @@ abstract class DeliverTxResult implements Built<DeliverTxResult, DeliverTxResult
     @BuiltValueField(wireName: r'log')
     String? get log;
 
-    /// 
     @BuiltValueField(wireName: r'tags')
-    BuiltList<KVPair>? get tags;
+    BuiltList<TxsHashGet200ResponseResultTagsInner>? get tags;
 
     DeliverTxResult._();
 
@@ -104,7 +103,7 @@ class _$DeliverTxResultSerializer implements StructuredSerializer<DeliverTxResul
             result
                 ..add(r'tags')
                 ..add(serializers.serialize(object.tags,
-                    specifiedType: const FullType(BuiltList, [FullType(KVPair)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseResultTagsInner)])));
         }
         return result;
     }
@@ -153,7 +152,7 @@ class _$DeliverTxResultSerializer implements StructuredSerializer<DeliverTxResul
                     break;
                 case r'tags':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(KVPair)])) as BuiltList<KVPair>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseResultTagsInner)])) as BuiltList<TxsHashGet200ResponseResultTagsInner>;
                     result.tags.replace(valueDes);
                     break;
             }

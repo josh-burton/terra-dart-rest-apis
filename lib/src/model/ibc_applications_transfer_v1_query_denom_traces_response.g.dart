@@ -9,9 +9,9 @@ part of 'ibc_applications_transfer_v1_query_denom_traces_response.dart';
 class _$IbcApplicationsTransferV1QueryDenomTracesResponse
     extends IbcApplicationsTransferV1QueryDenomTracesResponse {
   @override
-  final BuiltList<IbcApplicationsTransferV1DenomTrace>? denomTraces;
+  final BuiltList<DenomTraces200ResponseDenomTracesInner>? denomTraces;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$IbcApplicationsTransferV1QueryDenomTracesResponse(
           [void Function(
@@ -66,21 +66,18 @@ class IbcApplicationsTransferV1QueryDenomTracesResponseBuilder
             IbcApplicationsTransferV1QueryDenomTracesResponseBuilder> {
   _$IbcApplicationsTransferV1QueryDenomTracesResponse? _$v;
 
-  ListBuilder<IbcApplicationsTransferV1DenomTrace>? _denomTraces;
-  ListBuilder<IbcApplicationsTransferV1DenomTrace> get denomTraces =>
+  ListBuilder<DenomTraces200ResponseDenomTracesInner>? _denomTraces;
+  ListBuilder<DenomTraces200ResponseDenomTracesInner> get denomTraces =>
       _$this._denomTraces ??=
-          new ListBuilder<IbcApplicationsTransferV1DenomTrace>();
+          new ListBuilder<DenomTraces200ResponseDenomTracesInner>();
   set denomTraces(
-          ListBuilder<IbcApplicationsTransferV1DenomTrace>? denomTraces) =>
+          ListBuilder<DenomTraces200ResponseDenomTracesInner>? denomTraces) =>
       _$this._denomTraces = denomTraces;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   IbcApplicationsTransferV1QueryDenomTracesResponseBuilder() {

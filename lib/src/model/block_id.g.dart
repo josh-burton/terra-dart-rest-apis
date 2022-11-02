@@ -10,7 +10,7 @@ class _$BlockID extends BlockID {
   @override
   final String? hash;
   @override
-  final Parts? parts;
+  final BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdParts? parts;
 
   factory _$BlockID([void Function(BlockIDBuilder)? updates]) =>
       (new BlockIDBuilder()..update(updates))._build();
@@ -51,9 +51,14 @@ class BlockIDBuilder implements Builder<BlockID, BlockIDBuilder> {
   String? get hash => _$this._hash;
   set hash(String? hash) => _$this._hash = hash;
 
-  PartsBuilder? _parts;
-  PartsBuilder get parts => _$this._parts ??= new PartsBuilder();
-  set parts(PartsBuilder? parts) => _$this._parts = parts;
+  BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdPartsBuilder? _parts;
+  BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdPartsBuilder get parts =>
+      _$this._parts ??=
+          new BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdPartsBuilder();
+  set parts(
+          BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdPartsBuilder?
+              parts) =>
+      _$this._parts = parts;
 
   BlockIDBuilder() {
     BlockID._defaults(this);

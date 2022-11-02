@@ -9,7 +9,7 @@ part of 'terra_oracle_v1beta1_query_aggregate_vote_response.dart';
 class _$TerraOracleV1beta1QueryAggregateVoteResponse
     extends TerraOracleV1beta1QueryAggregateVoteResponse {
   @override
-  final TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote?
+  final AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriod?
       aggregateVote;
 
   factory _$TerraOracleV1beta1QueryAggregateVoteResponse(
@@ -59,13 +59,13 @@ class TerraOracleV1beta1QueryAggregateVoteResponseBuilder
             TerraOracleV1beta1QueryAggregateVoteResponseBuilder> {
   _$TerraOracleV1beta1QueryAggregateVoteResponse? _$v;
 
-  TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder?
+  AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriodBuilder?
       _aggregateVote;
-  TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder
+  AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriodBuilder
       get aggregateVote => _$this._aggregateVote ??=
-          new TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder();
+          new AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriodBuilder();
   set aggregateVote(
-          TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder?
+          AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriodBuilder?
               aggregateVote) =>
       _$this._aggregateVote = aggregateVote;
 

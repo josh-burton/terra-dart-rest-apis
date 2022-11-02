@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:terra_dart_rest_apis/src/model/thepropertiesoftheconnectednode_response.dart';
+import 'package:terra_dart_rest_apis/src/model/node_info_get200_response.dart';
 
 class TerraRESTApi {
 
@@ -28,9 +28,9 @@ class TerraRESTApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ThepropertiesoftheconnectednodeResponse] as data
+  /// Returns a [Future] containing a [Response] with a [NodeInfoGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<ThepropertiesoftheconnectednodeResponse>> thepropertiesoftheconnectednode({ 
+  Future<Response<NodeInfoGet200Response>> nodeInfoGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -59,14 +59,14 @@ class TerraRESTApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ThepropertiesoftheconnectednodeResponse _responseData;
+    NodeInfoGet200Response _responseData;
 
     try {
-      const _responseType = FullType(ThepropertiesoftheconnectednodeResponse);
+      const _responseType = FullType(NodeInfoGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ThepropertiesoftheconnectednodeResponse;
+      ) as NodeInfoGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -77,7 +77,7 @@ class TerraRESTApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<ThepropertiesoftheconnectednodeResponse>(
+    return Response<NodeInfoGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

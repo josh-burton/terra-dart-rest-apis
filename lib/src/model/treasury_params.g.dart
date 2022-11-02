@@ -8,13 +8,13 @@ part of 'treasury_params.dart';
 
 class _$TreasuryParams extends TreasuryParams {
   @override
-  final PolicyConstraints? taxPolicy;
+  final TreasuryParametersGet200ResponseTaxPolicy? taxPolicy;
   @override
-  final PolicyConstraints? rewardPolicy;
+  final TreasuryParametersGet200ResponseTaxPolicy? rewardPolicy;
   @override
-  final num? seigniorageBurdenTarget;
+  final double? seigniorageBurdenTarget;
   @override
-  final num? miningIncrement;
+  final double? miningIncrement;
   @override
   final int? windowShort;
   @override
@@ -88,26 +88,29 @@ class TreasuryParamsBuilder
     implements Builder<TreasuryParams, TreasuryParamsBuilder> {
   _$TreasuryParams? _$v;
 
-  PolicyConstraintsBuilder? _taxPolicy;
-  PolicyConstraintsBuilder get taxPolicy =>
-      _$this._taxPolicy ??= new PolicyConstraintsBuilder();
-  set taxPolicy(PolicyConstraintsBuilder? taxPolicy) =>
+  TreasuryParametersGet200ResponseTaxPolicyBuilder? _taxPolicy;
+  TreasuryParametersGet200ResponseTaxPolicyBuilder get taxPolicy =>
+      _$this._taxPolicy ??=
+          new TreasuryParametersGet200ResponseTaxPolicyBuilder();
+  set taxPolicy(TreasuryParametersGet200ResponseTaxPolicyBuilder? taxPolicy) =>
       _$this._taxPolicy = taxPolicy;
 
-  PolicyConstraintsBuilder? _rewardPolicy;
-  PolicyConstraintsBuilder get rewardPolicy =>
-      _$this._rewardPolicy ??= new PolicyConstraintsBuilder();
-  set rewardPolicy(PolicyConstraintsBuilder? rewardPolicy) =>
+  TreasuryParametersGet200ResponseTaxPolicyBuilder? _rewardPolicy;
+  TreasuryParametersGet200ResponseTaxPolicyBuilder get rewardPolicy =>
+      _$this._rewardPolicy ??=
+          new TreasuryParametersGet200ResponseTaxPolicyBuilder();
+  set rewardPolicy(
+          TreasuryParametersGet200ResponseTaxPolicyBuilder? rewardPolicy) =>
       _$this._rewardPolicy = rewardPolicy;
 
-  num? _seigniorageBurdenTarget;
-  num? get seigniorageBurdenTarget => _$this._seigniorageBurdenTarget;
-  set seigniorageBurdenTarget(num? seigniorageBurdenTarget) =>
+  double? _seigniorageBurdenTarget;
+  double? get seigniorageBurdenTarget => _$this._seigniorageBurdenTarget;
+  set seigniorageBurdenTarget(double? seigniorageBurdenTarget) =>
       _$this._seigniorageBurdenTarget = seigniorageBurdenTarget;
 
-  num? _miningIncrement;
-  num? get miningIncrement => _$this._miningIncrement;
-  set miningIncrement(num? miningIncrement) =>
+  double? _miningIncrement;
+  double? get miningIncrement => _$this._miningIncrement;
+  set miningIncrement(double? miningIncrement) =>
       _$this._miningIncrement = miningIncrement;
 
   int? _windowShort;

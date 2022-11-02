@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_denom_unit.dart';
+import 'package:terra_dart_rest_apis/src/model/denom_units_represents_the_list_of_denom_unit_s_for_a_given_coin_inner.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -13,7 +13,7 @@ part 'cosmos_bank_v1beta1_metadata.g.dart';
 ///
 /// Properties:
 /// * [description] 
-/// * [denomUnits] - 
+/// * [denomUnits] 
 /// * [base] - base represents the base denom (should be the DenomUnit with exponent = 0).
 /// * [display] - display indicates the suggested denom that should be displayed in clients.
 /// * [name] - Since: cosmos-sdk 0.43
@@ -22,9 +22,8 @@ abstract class CosmosBankV1beta1Metadata implements Built<CosmosBankV1beta1Metad
     @BuiltValueField(wireName: r'description')
     String? get description;
 
-    /// 
     @BuiltValueField(wireName: r'denom_units')
-    BuiltList<CosmosBankV1beta1DenomUnit>? get denomUnits;
+    BuiltList<DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>? get denomUnits;
 
     /// base represents the base denom (should be the DenomUnit with exponent = 0).
     @BuiltValueField(wireName: r'base')
@@ -74,7 +73,7 @@ class _$CosmosBankV1beta1MetadataSerializer implements StructuredSerializer<Cosm
             result
                 ..add(r'denom_units')
                 ..add(serializers.serialize(object.denomUnits,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1DenomUnit)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner)])));
         }
         if (object.base != null) {
             result
@@ -122,7 +121,7 @@ class _$CosmosBankV1beta1MetadataSerializer implements StructuredSerializer<Cosm
                     break;
                 case r'denom_units':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1DenomUnit)])) as BuiltList<CosmosBankV1beta1DenomUnit>;
+                        specifiedType: const FullType(BuiltList, [FullType(DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner)])) as BuiltList<DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>;
                     result.denomUnits.replace(valueDes);
                     break;
                 case r'base':

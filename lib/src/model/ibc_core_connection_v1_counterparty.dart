@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_counterparty_prefix.dart';
+import 'package:terra_dart_rest_apis/src/model/merkle_prefix_is_merkle_path_prefixed_to_the_key_the_constructed_key_from_the_path_and_the_key_will_be_append_path_key_path_append_path_key_prefix_key.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class IbcCoreConnectionV1Counterparty implements Built<IbcCoreConnectio
     String? get connectionId;
 
     @BuiltValueField(wireName: r'prefix')
-    IbcCoreConnectionV1CounterpartyPrefix? get prefix;
+    MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey? get prefix;
 
     IbcCoreConnectionV1Counterparty._();
 
@@ -64,7 +64,7 @@ class _$IbcCoreConnectionV1CounterpartySerializer implements StructuredSerialize
             result
                 ..add(r'prefix')
                 ..add(serializers.serialize(object.prefix,
-                    specifiedType: const FullType(IbcCoreConnectionV1CounterpartyPrefix)));
+                    specifiedType: const FullType(MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey)));
         }
         return result;
     }
@@ -93,7 +93,7 @@ class _$IbcCoreConnectionV1CounterpartySerializer implements StructuredSerialize
                     break;
                 case r'prefix':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreConnectionV1CounterpartyPrefix)) as IbcCoreConnectionV1CounterpartyPrefix;
+                        specifiedType: const FullType(MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey)) as MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey;
                     result.prefix.replace(valueDes);
                     break;
             }

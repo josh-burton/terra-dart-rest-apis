@@ -15,7 +15,9 @@ class _$CosmosStakingV1beta1Redelegation
   @override
   final String? validatorDstAddress;
   @override
-  final BuiltList<CosmosStakingV1beta1RedelegationEntry>? entries;
+  final BuiltList<
+          Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>?
+      entries;
 
   factory _$CosmosStakingV1beta1Redelegation(
           [void Function(CosmosStakingV1beta1RedelegationBuilder)? updates]) =>
@@ -89,11 +91,17 @@ class CosmosStakingV1beta1RedelegationBuilder
   set validatorDstAddress(String? validatorDstAddress) =>
       _$this._validatorDstAddress = validatorDstAddress;
 
-  ListBuilder<CosmosStakingV1beta1RedelegationEntry>? _entries;
-  ListBuilder<CosmosStakingV1beta1RedelegationEntry> get entries =>
-      _$this._entries ??=
-          new ListBuilder<CosmosStakingV1beta1RedelegationEntry>();
-  set entries(ListBuilder<CosmosStakingV1beta1RedelegationEntry>? entries) =>
+  ListBuilder<
+          Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>?
+      _entries;
+  ListBuilder<
+          Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>
+      get entries => _$this._entries ??= new ListBuilder<
+          Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>();
+  set entries(
+          ListBuilder<
+                  Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>?
+              entries) =>
       _$this._entries = entries;
 
   CosmosStakingV1beta1RedelegationBuilder() {

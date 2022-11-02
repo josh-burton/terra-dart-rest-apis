@@ -10,16 +10,19 @@ part 'get_proposal_votes_result_votes_voter.g.dart';
 /// GetProposalVotesResultVotesVoter
 ///
 /// Properties:
-/// * [accountAddress] 
-/// * [operatorAddress] 
-/// * [moniker] 
+/// * [accountAddress] - 
+/// * [operatorAddress] - 
+/// * [moniker] - 
 abstract class GetProposalVotesResultVotesVoter implements Built<GetProposalVotesResultVotesVoter, GetProposalVotesResultVotesVoterBuilder> {
+    /// 
     @BuiltValueField(wireName: r'accountAddress')
     String get accountAddress;
 
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'moniker')
     String get moniker;
 

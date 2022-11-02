@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/val_commission.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_validators_validator_addr_get200_response_val_commission.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,19 +14,18 @@ part 'validator_dist_info.g.dart';
 ///
 /// Properties:
 /// * [operatorAddress] - bech32 encoded address
-/// * [selfBondRewards] - 
+/// * [selfBondRewards] 
 /// * [valCommission] 
 abstract class ValidatorDistInfo implements Built<ValidatorDistInfo, ValidatorDistInfoBuilder> {
     /// bech32 encoded address
     @BuiltValueField(wireName: r'operator_address')
     String? get operatorAddress;
 
-    /// 
     @BuiltValueField(wireName: r'self_bond_rewards')
-    BuiltList<Coin>? get selfBondRewards;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get selfBondRewards;
 
     @BuiltValueField(wireName: r'val_commission')
-    ValCommission? get valCommission;
+    DistributionValidatorsValidatorAddrGet200ResponseValCommission? get valCommission;
 
     ValidatorDistInfo._();
 
@@ -60,13 +59,13 @@ class _$ValidatorDistInfoSerializer implements StructuredSerializer<ValidatorDis
             result
                 ..add(r'self_bond_rewards')
                 ..add(serializers.serialize(object.selfBondRewards,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         if (object.valCommission != null) {
             result
                 ..add(r'val_commission')
                 ..add(serializers.serialize(object.valCommission,
-                    specifiedType: const FullType(ValCommission)));
+                    specifiedType: const FullType(DistributionValidatorsValidatorAddrGet200ResponseValCommission)));
         }
         return result;
     }
@@ -90,12 +89,12 @@ class _$ValidatorDistInfoSerializer implements StructuredSerializer<ValidatorDis
                     break;
                 case r'self_bond_rewards':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.selfBondRewards.replace(valueDes);
                     break;
                 case r'val_commission':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(ValCommission)) as ValCommission;
+                        specifiedType: const FullType(DistributionValidatorsValidatorAddrGet200ResponseValCommission)) as DistributionValidatorsValidatorAddrGet200ResponseValCommission;
                     result.valCommission.replace(valueDes);
                     break;
             }

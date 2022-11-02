@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **gitCommit** | **String** |  | [optional] 
 **buildTags** | **String** |  | [optional] 
 **goVersion** | **String** |  | [optional] 
-**buildDeps** | [**BuiltList&lt;ModuleisthetypeforVersionInfo&gt;**](ModuleisthetypeforVersionInfo.md) |  | [optional] 
+**buildDeps** | [**BuiltList&lt;ModuleIsTheTypeForVersionInfo&gt;**](ModuleIsTheTypeForVersionInfo.md) |  | [optional] 
 **cosmosSdkVersion** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

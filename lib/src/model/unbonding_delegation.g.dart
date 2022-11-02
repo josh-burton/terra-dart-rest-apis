@@ -12,7 +12,9 @@ class _$UnbondingDelegation extends UnbondingDelegation {
   @override
   final String? validatorAddress;
   @override
-  final BuiltList<UnbondingEntry>? entries;
+  final BuiltList<
+          StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>?
+      entries;
 
   factory _$UnbondingDelegation(
           [void Function(UnbondingDelegationBuilder)? updates]) =>
@@ -71,10 +73,17 @@ class UnbondingDelegationBuilder
   set validatorAddress(String? validatorAddress) =>
       _$this._validatorAddress = validatorAddress;
 
-  ListBuilder<UnbondingEntry>? _entries;
-  ListBuilder<UnbondingEntry> get entries =>
-      _$this._entries ??= new ListBuilder<UnbondingEntry>();
-  set entries(ListBuilder<UnbondingEntry>? entries) =>
+  ListBuilder<
+          StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>?
+      _entries;
+  ListBuilder<
+          StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>
+      get entries => _$this._entries ??= new ListBuilder<
+          StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>();
+  set entries(
+          ListBuilder<
+                  StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>?
+              entries) =>
       _$this._entries = entries;
 
   UnbondingDelegationBuilder() {

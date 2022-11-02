@@ -9,7 +9,9 @@ part of 'terra_oracle_v1beta1_query_aggregate_votes_response.dart';
 class _$TerraOracleV1beta1QueryAggregateVotesResponse
     extends TerraOracleV1beta1QueryAggregateVotesResponse {
   @override
-  final BuiltList<TerraOracleV1beta1AggregateExchangeRateVote>? aggregateVotes;
+  final BuiltList<
+          AggregateVotesDefinesAllOracleAggregateVotesSubmittedInTheCurrentVotePeriodInner>?
+      aggregateVotes;
 
   factory _$TerraOracleV1beta1QueryAggregateVotesResponse(
           [void Function(TerraOracleV1beta1QueryAggregateVotesResponseBuilder)?
@@ -58,12 +60,16 @@ class TerraOracleV1beta1QueryAggregateVotesResponseBuilder
             TerraOracleV1beta1QueryAggregateVotesResponseBuilder> {
   _$TerraOracleV1beta1QueryAggregateVotesResponse? _$v;
 
-  ListBuilder<TerraOracleV1beta1AggregateExchangeRateVote>? _aggregateVotes;
-  ListBuilder<TerraOracleV1beta1AggregateExchangeRateVote> get aggregateVotes =>
-      _$this._aggregateVotes ??=
-          new ListBuilder<TerraOracleV1beta1AggregateExchangeRateVote>();
+  ListBuilder<
+          AggregateVotesDefinesAllOracleAggregateVotesSubmittedInTheCurrentVotePeriodInner>?
+      _aggregateVotes;
+  ListBuilder<
+          AggregateVotesDefinesAllOracleAggregateVotesSubmittedInTheCurrentVotePeriodInner>
+      get aggregateVotes => _$this._aggregateVotes ??= new ListBuilder<
+          AggregateVotesDefinesAllOracleAggregateVotesSubmittedInTheCurrentVotePeriodInner>();
   set aggregateVotes(
-          ListBuilder<TerraOracleV1beta1AggregateExchangeRateVote>?
+          ListBuilder<
+                  AggregateVotesDefinesAllOracleAggregateVotesSubmittedInTheCurrentVotePeriodInner>?
               aggregateVotes) =>
       _$this._aggregateVotes = aggregateVotes;
 

@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore
+# terra_dart_rest_apis.model.ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore
 
 ## Load the model package
 ```dart

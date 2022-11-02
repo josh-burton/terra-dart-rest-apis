@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegation_response_delegation_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_delegations200_response_delegation_responses_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_staking_v1beta1_query_delegation_response.g.dart';
 /// * [delegationResponse] 
 abstract class CosmosStakingV1beta1QueryDelegationResponse implements Built<CosmosStakingV1beta1QueryDelegationResponse, CosmosStakingV1beta1QueryDelegationResponseBuilder> {
     @BuiltValueField(wireName: r'delegation_response')
-    CosmosStakingV1beta1QueryDelegationResponseDelegationResponse? get delegationResponse;
+    DelegatorDelegations200ResponseDelegationResponsesInner? get delegationResponse;
 
     CosmosStakingV1beta1QueryDelegationResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosStakingV1beta1QueryDelegationResponseSerializer implements Structu
             result
                 ..add(r'delegation_response')
                 ..add(serializers.serialize(object.delegationResponse,
-                    specifiedType: const FullType(CosmosStakingV1beta1QueryDelegationResponseDelegationResponse)));
+                    specifiedType: const FullType(DelegatorDelegations200ResponseDelegationResponsesInner)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosStakingV1beta1QueryDelegationResponseSerializer implements Structu
             switch (key) {
                 case r'delegation_response':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1QueryDelegationResponseDelegationResponse)) as CosmosStakingV1beta1QueryDelegationResponseDelegationResponse;
+                        specifiedType: const FullType(DelegatorDelegations200ResponseDelegationResponsesInner)) as DelegatorDelegations200ResponseDelegationResponsesInner;
                     result.delegationResponse.replace(valueDes);
                     break;
             }

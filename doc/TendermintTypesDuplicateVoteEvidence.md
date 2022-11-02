@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**voteA** | [**TendermintTypesDuplicateVoteEvidenceVoteA**](TendermintTypesDuplicateVoteEvidenceVoteA.md) |  | [optional] 
-**voteB** | [**TendermintTypesDuplicateVoteEvidenceVoteA**](TendermintTypesDuplicateVoteEvidenceVoteA.md) |  | [optional] 
+**voteA** | [**GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA**](GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA.md) |  | [optional] 
+**voteB** | [**GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA**](GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA.md) |  | [optional] 
 **totalVotingPower** | **String** |  | [optional] 
 **validatorPower** | **String** |  | [optional] 
 **timestamp** | [**DateTime**](DateTime.md) |  | [optional] 

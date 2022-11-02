@@ -5,21 +5,19 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getablockatacertainheight**](TendermintRPCApi.md#getablockatacertainheight) | **GET** /blocks/{height} | Get a block at a certain height
-[**getavalidatorsetacertainheight**](TendermintRPCApi.md#getavalidatorsetacertainheight) | **GET** /validatorsets/{height} | Get a validator set a certain height
-[**getthelatestblock**](TendermintRPCApi.md#getthelatestblock) | **GET** /blocks/latest | Get the latest block
-[**getthelatestvalidatorset**](TendermintRPCApi.md#getthelatestvalidatorset) | **GET** /validatorsets/latest | Get the latest validator set
-[**syncingstateofnode**](TendermintRPCApi.md#syncingstateofnode) | **GET** /syncing | Syncing state of node
+[**blocksHeightGet**](TendermintRPCApi.md#blocksheightget) | **GET** /blocks/{height} | Get a block at a certain height
+[**blocksLatestGet**](TendermintRPCApi.md#blockslatestget) | **GET** /blocks/latest | Get the latest block
+[**syncingGet**](TendermintRPCApi.md#syncingget) | **GET** /syncing | Syncing state of node
+[**validatorsetsHeightGet**](TendermintRPCApi.md#validatorsetsheightget) | **GET** /validatorsets/{height} | Get a validator set a certain height
+[**validatorsetsLatestGet**](TendermintRPCApi.md#validatorsetslatestget) | **GET** /validatorsets/latest | Get the latest validator set
 
 
-# **getablockatacertainheight**
-> BlockQuery getablockatacertainheight(height)
-
-Get a block at a certain height
+# **blocksHeightGet**
+> BlocksLatestGet200Response blocksHeightGet(height)
 
 Get a block at a certain height
 
@@ -28,13 +26,13 @@ Get a block at a certain height
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTendermintRPCApi();
-final double height = 1; // double | Block height
+final num height = 1; // num | Block height
 
 try {
-    final response = api.getablockatacertainheight(height);
+    final response = api.blocksHeightGet(height);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TendermintRPCApi->getablockatacertainheight: $e\n');
+    print('Exception when calling TendermintRPCApi->blocksHeightGet: $e\n');
 }
 ```
 
@@ -42,11 +40,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **height** | **double**| Block height | 
+ **height** | **num**| Block height | 
 
 ### Return type
 
-[**BlockQuery**](BlockQuery.md)
+[**BlocksLatestGet200Response**](BlocksLatestGet200Response.md)
 
 ### Authorization
 
@@ -59,53 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getavalidatorsetacertainheight**
-> GetavalidatorsetacertainheightResponse getavalidatorsetacertainheight(height)
-
-Get a validator set a certain height
-
-Get a validator set a certain height
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTendermintRPCApi();
-final double height = 1; // double | Block height
-
-try {
-    final response = api.getavalidatorsetacertainheight(height);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TendermintRPCApi->getavalidatorsetacertainheight: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **height** | **double**| Block height | 
-
-### Return type
-
-[**GetavalidatorsetacertainheightResponse**](GetavalidatorsetacertainheightResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getthelatestblock**
-> BlockQuery getthelatestblock()
-
-Get the latest block
+# **blocksLatestGet**
+> BlocksLatestGet200Response blocksLatestGet()
 
 Get the latest block
 
@@ -116,10 +69,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTendermintRPCApi();
 
 try {
-    final response = api.getthelatestblock();
+    final response = api.blocksLatestGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TendermintRPCApi->getthelatestblock: $e\n');
+    print('Exception when calling TendermintRPCApi->blocksLatestGet: $e\n');
 }
 ```
 
@@ -128,7 +81,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BlockQuery**](BlockQuery.md)
+[**BlocksLatestGet200Response**](BlocksLatestGet200Response.md)
 
 ### Authorization
 
@@ -141,47 +94,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getthelatestvalidatorset**
-> GetthelatestvalidatorsetResponse getthelatestvalidatorset()
-
-Get the latest validator set
-
-Get the latest validator set
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTendermintRPCApi();
-
-try {
-    final response = api.getthelatestvalidatorset();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TendermintRPCApi->getthelatestvalidatorset: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetthelatestvalidatorsetResponse**](GetthelatestvalidatorsetResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **syncingstateofnode**
-> SyncingstateofnodeResponse syncingstateofnode()
+# **syncingGet**
+> SyncingGet200Response syncingGet()
 
 Syncing state of node
 
@@ -194,10 +108,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTendermintRPCApi();
 
 try {
-    final response = api.syncingstateofnode();
+    final response = api.syncingGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TendermintRPCApi->syncingstateofnode: $e\n');
+    print('Exception when calling TendermintRPCApi->syncingGet: $e\n');
 }
 ```
 
@@ -206,7 +120,85 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SyncingstateofnodeResponse**](SyncingstateofnodeResponse.md)
+[**SyncingGet200Response**](SyncingGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validatorsetsHeightGet**
+> ValidatorsetsLatestGet200Response validatorsetsHeightGet(height)
+
+Get a validator set a certain height
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTendermintRPCApi();
+final num height = 1; // num | Block height
+
+try {
+    final response = api.validatorsetsHeightGet(height);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TendermintRPCApi->validatorsetsHeightGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **height** | **num**| Block height | 
+
+### Return type
+
+[**ValidatorsetsLatestGet200Response**](ValidatorsetsLatestGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validatorsetsLatestGet**
+> ValidatorsetsLatestGet200Response validatorsetsLatestGet()
+
+Get the latest validator set
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTendermintRPCApi();
+
+try {
+    final response = api.validatorsetsLatestGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TendermintRPCApi->validatorsetsLatestGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ValidatorsetsLatestGet200Response**](ValidatorsetsLatestGet200Response.md)
 
 ### Authorization
 

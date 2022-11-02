@@ -9,10 +9,9 @@ part of 'ibc_core_client_v1_query_client_states_response.dart';
 class _$IbcCoreClientV1QueryClientStatesResponse
     extends IbcCoreClientV1QueryClientStatesResponse {
   @override
-  final BuiltList<IbcCoreClientV1IdentifiedClientState>? clientStates;
+  final BuiltList<ClientStates200ResponseClientStatesInner>? clientStates;
   @override
-  final QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination?
-      pagination;
+  final PaginationResponse? pagination;
 
   factory _$IbcCoreClientV1QueryClientStatesResponse(
           [void Function(IbcCoreClientV1QueryClientStatesResponseBuilder)?
@@ -63,22 +62,19 @@ class IbcCoreClientV1QueryClientStatesResponseBuilder
             IbcCoreClientV1QueryClientStatesResponseBuilder> {
   _$IbcCoreClientV1QueryClientStatesResponse? _$v;
 
-  ListBuilder<IbcCoreClientV1IdentifiedClientState>? _clientStates;
-  ListBuilder<IbcCoreClientV1IdentifiedClientState> get clientStates =>
+  ListBuilder<ClientStates200ResponseClientStatesInner>? _clientStates;
+  ListBuilder<ClientStates200ResponseClientStatesInner> get clientStates =>
       _$this._clientStates ??=
-          new ListBuilder<IbcCoreClientV1IdentifiedClientState>();
+          new ListBuilder<ClientStates200ResponseClientStatesInner>();
   set clientStates(
-          ListBuilder<IbcCoreClientV1IdentifiedClientState>? clientStates) =>
+          ListBuilder<ClientStates200ResponseClientStatesInner>?
+              clientStates) =>
       _$this._clientStates = clientStates;
 
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-      _pagination;
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder
-      get pagination => _$this._pagination ??=
-          new QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder();
-  set pagination(
-          QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-              pagination) =>
+  PaginationResponseBuilder? _pagination;
+  PaginationResponseBuilder get pagination =>
+      _$this._pagination ??= new PaginationResponseBuilder();
+  set pagination(PaginationResponseBuilder? pagination) =>
       _$this._pagination = pagination;
 
   IbcCoreClientV1QueryClientStatesResponseBuilder() {

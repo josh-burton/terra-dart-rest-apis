@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/policy_constraints.dart';
+import 'package:terra_dart_rest_apis/src/model/treasury_parameters_get200_response_tax_policy.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,17 +20,17 @@ part 'treasury_params.g.dart';
 /// * [windowProbation] 
 abstract class TreasuryParams implements Built<TreasuryParams, TreasuryParamsBuilder> {
     @BuiltValueField(wireName: r'tax_policy')
-    PolicyConstraints? get taxPolicy;
+    TreasuryParametersGet200ResponseTaxPolicy? get taxPolicy;
 
     @BuiltValueField(wireName: r'reward_policy')
-    PolicyConstraints? get rewardPolicy;
+    TreasuryParametersGet200ResponseTaxPolicy? get rewardPolicy;
 
     /// 67%
     @BuiltValueField(wireName: r'seigniorage_burden_target')
-    num? get seigniorageBurdenTarget;
+    double? get seigniorageBurdenTarget;
 
     @BuiltValueField(wireName: r'mining_increment')
-    num? get miningIncrement;
+    double? get miningIncrement;
 
     @BuiltValueField(wireName: r'window_short')
     int? get windowShort;
@@ -67,25 +67,25 @@ class _$TreasuryParamsSerializer implements StructuredSerializer<TreasuryParams>
             result
                 ..add(r'tax_policy')
                 ..add(serializers.serialize(object.taxPolicy,
-                    specifiedType: const FullType(PolicyConstraints)));
+                    specifiedType: const FullType(TreasuryParametersGet200ResponseTaxPolicy)));
         }
         if (object.rewardPolicy != null) {
             result
                 ..add(r'reward_policy')
                 ..add(serializers.serialize(object.rewardPolicy,
-                    specifiedType: const FullType(PolicyConstraints)));
+                    specifiedType: const FullType(TreasuryParametersGet200ResponseTaxPolicy)));
         }
         if (object.seigniorageBurdenTarget != null) {
             result
                 ..add(r'seigniorage_burden_target')
                 ..add(serializers.serialize(object.seigniorageBurdenTarget,
-                    specifiedType: const FullType(num)));
+                    specifiedType: const FullType(double)));
         }
         if (object.miningIncrement != null) {
             result
                 ..add(r'mining_increment')
                 ..add(serializers.serialize(object.miningIncrement,
-                    specifiedType: const FullType(num)));
+                    specifiedType: const FullType(double)));
         }
         if (object.windowShort != null) {
             result
@@ -122,22 +122,22 @@ class _$TreasuryParamsSerializer implements StructuredSerializer<TreasuryParams>
             switch (key) {
                 case r'tax_policy':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PolicyConstraints)) as PolicyConstraints;
+                        specifiedType: const FullType(TreasuryParametersGet200ResponseTaxPolicy)) as TreasuryParametersGet200ResponseTaxPolicy;
                     result.taxPolicy.replace(valueDes);
                     break;
                 case r'reward_policy':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PolicyConstraints)) as PolicyConstraints;
+                        specifiedType: const FullType(TreasuryParametersGet200ResponseTaxPolicy)) as TreasuryParametersGet200ResponseTaxPolicy;
                     result.rewardPolicy.replace(valueDes);
                     break;
                 case r'seigniorage_burden_target':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(num)) as num;
+                        specifiedType: const FullType(double)) as double;
                     result.seigniorageBurdenTarget = valueDes;
                     break;
                 case r'mining_increment':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(num)) as num;
+                        specifiedType: const FullType(double)) as double;
                     result.miningIncrement = valueDes;
                     break;
                 case r'window_short':

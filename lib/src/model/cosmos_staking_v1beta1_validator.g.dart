@@ -6,27 +6,108 @@ part of 'cosmos_staking_v1beta1_validator.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const CosmosStakingV1beta1ValidatorStatusEnum
+    _$cosmosStakingV1beta1ValidatorStatusEnum_UNSPECIFIED =
+    const CosmosStakingV1beta1ValidatorStatusEnum._('UNSPECIFIED');
+const CosmosStakingV1beta1ValidatorStatusEnum
+    _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDED =
+    const CosmosStakingV1beta1ValidatorStatusEnum._('UNBONDED');
+const CosmosStakingV1beta1ValidatorStatusEnum
+    _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDING =
+    const CosmosStakingV1beta1ValidatorStatusEnum._('UNBONDING');
+const CosmosStakingV1beta1ValidatorStatusEnum
+    _$cosmosStakingV1beta1ValidatorStatusEnum_BONDED =
+    const CosmosStakingV1beta1ValidatorStatusEnum._('BONDED');
+
+CosmosStakingV1beta1ValidatorStatusEnum
+    _$cosmosStakingV1beta1ValidatorStatusEnumValueOf(String name) {
+  switch (name) {
+    case 'UNSPECIFIED':
+      return _$cosmosStakingV1beta1ValidatorStatusEnum_UNSPECIFIED;
+    case 'UNBONDED':
+      return _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDED;
+    case 'UNBONDING':
+      return _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDING;
+    case 'BONDED':
+      return _$cosmosStakingV1beta1ValidatorStatusEnum_BONDED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<CosmosStakingV1beta1ValidatorStatusEnum>
+    _$cosmosStakingV1beta1ValidatorStatusEnumValues =
+    new BuiltSet<CosmosStakingV1beta1ValidatorStatusEnum>(const <
+        CosmosStakingV1beta1ValidatorStatusEnum>[
+  _$cosmosStakingV1beta1ValidatorStatusEnum_UNSPECIFIED,
+  _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDED,
+  _$cosmosStakingV1beta1ValidatorStatusEnum_UNBONDING,
+  _$cosmosStakingV1beta1ValidatorStatusEnum_BONDED,
+]);
+
+Serializer<CosmosStakingV1beta1ValidatorStatusEnum>
+    _$cosmosStakingV1beta1ValidatorStatusEnumSerializer =
+    new _$CosmosStakingV1beta1ValidatorStatusEnumSerializer();
+
+class _$CosmosStakingV1beta1ValidatorStatusEnumSerializer
+    implements PrimitiveSerializer<CosmosStakingV1beta1ValidatorStatusEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNSPECIFIED': 'BOND_STATUS_UNSPECIFIED',
+    'UNBONDED': 'BOND_STATUS_UNBONDED',
+    'UNBONDING': 'BOND_STATUS_UNBONDING',
+    'BONDED': 'BOND_STATUS_BONDED',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'BOND_STATUS_UNSPECIFIED': 'UNSPECIFIED',
+    'BOND_STATUS_UNBONDED': 'UNBONDED',
+    'BOND_STATUS_UNBONDING': 'UNBONDING',
+    'BOND_STATUS_BONDED': 'BONDED',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    CosmosStakingV1beta1ValidatorStatusEnum
+  ];
+  @override
+  final String wireName = 'CosmosStakingV1beta1ValidatorStatusEnum';
+
+  @override
+  Object serialize(Serializers serializers,
+          CosmosStakingV1beta1ValidatorStatusEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  CosmosStakingV1beta1ValidatorStatusEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      CosmosStakingV1beta1ValidatorStatusEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$CosmosStakingV1beta1Validator extends CosmosStakingV1beta1Validator {
   @override
   final String? operatorAddress;
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? consensusPubkey;
+  final AccountsAreTheExistingAccountsInner? consensusPubkey;
   @override
   final bool? jailed;
   @override
-  final Status3? status;
+  final CosmosStakingV1beta1ValidatorStatusEnum? status;
   @override
   final String? tokens;
   @override
   final String? delegatorShares;
   @override
-  final CosmosStakingV1beta1ValidatorDescription? description;
+  final StakingDelegatorValidators200ResponseValidatorsInnerDescription?
+      description;
   @override
   final String? unbondingHeight;
   @override
   final DateTime? unbondingTime;
   @override
-  final CosmosStakingV1beta1ValidatorCommission? commission;
+  final StakingDelegatorValidators200ResponseValidatorsInnerCommission?
+      commission;
   @override
   final String? minSelfDelegation;
 
@@ -127,22 +208,22 @@ class CosmosStakingV1beta1ValidatorBuilder
   set operatorAddress(String? operatorAddress) =>
       _$this._operatorAddress = operatorAddress;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _consensusPubkey;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get consensusPubkey =>
+  AccountsAreTheExistingAccountsInnerBuilder? _consensusPubkey;
+  AccountsAreTheExistingAccountsInnerBuilder get consensusPubkey =>
       _$this._consensusPubkey ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+          new AccountsAreTheExistingAccountsInnerBuilder();
   set consensusPubkey(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
-              consensusPubkey) =>
+          AccountsAreTheExistingAccountsInnerBuilder? consensusPubkey) =>
       _$this._consensusPubkey = consensusPubkey;
 
   bool? _jailed;
   bool? get jailed => _$this._jailed;
   set jailed(bool? jailed) => _$this._jailed = jailed;
 
-  Status3? _status;
-  Status3? get status => _$this._status;
-  set status(Status3? status) => _$this._status = status;
+  CosmosStakingV1beta1ValidatorStatusEnum? _status;
+  CosmosStakingV1beta1ValidatorStatusEnum? get status => _$this._status;
+  set status(CosmosStakingV1beta1ValidatorStatusEnum? status) =>
+      _$this._status = status;
 
   String? _tokens;
   String? get tokens => _$this._tokens;
@@ -153,12 +234,14 @@ class CosmosStakingV1beta1ValidatorBuilder
   set delegatorShares(String? delegatorShares) =>
       _$this._delegatorShares = delegatorShares;
 
-  CosmosStakingV1beta1ValidatorDescriptionBuilder? _description;
-  CosmosStakingV1beta1ValidatorDescriptionBuilder get description =>
-      _$this._description ??=
-          new CosmosStakingV1beta1ValidatorDescriptionBuilder();
+  StakingDelegatorValidators200ResponseValidatorsInnerDescriptionBuilder?
+      _description;
+  StakingDelegatorValidators200ResponseValidatorsInnerDescriptionBuilder
+      get description => _$this._description ??=
+          new StakingDelegatorValidators200ResponseValidatorsInnerDescriptionBuilder();
   set description(
-          CosmosStakingV1beta1ValidatorDescriptionBuilder? description) =>
+          StakingDelegatorValidators200ResponseValidatorsInnerDescriptionBuilder?
+              description) =>
       _$this._description = description;
 
   String? _unbondingHeight;
@@ -171,11 +254,14 @@ class CosmosStakingV1beta1ValidatorBuilder
   set unbondingTime(DateTime? unbondingTime) =>
       _$this._unbondingTime = unbondingTime;
 
-  CosmosStakingV1beta1ValidatorCommissionBuilder? _commission;
-  CosmosStakingV1beta1ValidatorCommissionBuilder get commission =>
-      _$this._commission ??=
-          new CosmosStakingV1beta1ValidatorCommissionBuilder();
-  set commission(CosmosStakingV1beta1ValidatorCommissionBuilder? commission) =>
+  StakingDelegatorValidators200ResponseValidatorsInnerCommissionBuilder?
+      _commission;
+  StakingDelegatorValidators200ResponseValidatorsInnerCommissionBuilder
+      get commission => _$this._commission ??=
+          new StakingDelegatorValidators200ResponseValidatorsInnerCommissionBuilder();
+  set commission(
+          StakingDelegatorValidators200ResponseValidatorsInnerCommissionBuilder?
+              commission) =>
       _$this._commission = commission;
 
   String? _minSelfDelegation;

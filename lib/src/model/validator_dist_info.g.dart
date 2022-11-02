@@ -10,9 +10,10 @@ class _$ValidatorDistInfo extends ValidatorDistInfo {
   @override
   final String? operatorAddress;
   @override
-  final BuiltList<Coin>? selfBondRewards;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? selfBondRewards;
   @override
-  final ValCommission? valCommission;
+  final DistributionValidatorsValidatorAddrGet200ResponseValCommission?
+      valCommission;
 
   factory _$ValidatorDistInfo(
           [void Function(ValidatorDistInfoBuilder)? updates]) =>
@@ -65,16 +66,23 @@ class ValidatorDistInfoBuilder
   set operatorAddress(String? operatorAddress) =>
       _$this._operatorAddress = operatorAddress;
 
-  ListBuilder<Coin>? _selfBondRewards;
-  ListBuilder<Coin> get selfBondRewards =>
-      _$this._selfBondRewards ??= new ListBuilder<Coin>();
-  set selfBondRewards(ListBuilder<Coin>? selfBondRewards) =>
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _selfBondRewards;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get selfBondRewards =>
+      _$this._selfBondRewards ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set selfBondRewards(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>?
+              selfBondRewards) =>
       _$this._selfBondRewards = selfBondRewards;
 
-  ValCommissionBuilder? _valCommission;
-  ValCommissionBuilder get valCommission =>
-      _$this._valCommission ??= new ValCommissionBuilder();
-  set valCommission(ValCommissionBuilder? valCommission) =>
+  DistributionValidatorsValidatorAddrGet200ResponseValCommissionBuilder?
+      _valCommission;
+  DistributionValidatorsValidatorAddrGet200ResponseValCommissionBuilder
+      get valCommission => _$this._valCommission ??=
+          new DistributionValidatorsValidatorAddrGet200ResponseValCommissionBuilder();
+  set valCommission(
+          DistributionValidatorsValidatorAddrGet200ResponseValCommissionBuilder?
+              valCommission) =>
       _$this._valCommission = valCommission;
 
   ValidatorDistInfoBuilder() {

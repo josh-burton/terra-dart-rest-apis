@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/staking_redelegations_get200_response_inner_entries_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/redelegation_entry.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'redelegation.g.dart';
 /// * [delegatorAddress] 
 /// * [validatorSrcAddress] 
 /// * [validatorDstAddress] 
-/// * [entries] - 
+/// * [entries] 
 abstract class Redelegation implements Built<Redelegation, RedelegationBuilder> {
     @BuiltValueField(wireName: r'delegator_address')
     String? get delegatorAddress;
@@ -26,9 +26,8 @@ abstract class Redelegation implements Built<Redelegation, RedelegationBuilder> 
     @BuiltValueField(wireName: r'validator_dst_address')
     String? get validatorDstAddress;
 
-    /// 
     @BuiltValueField(wireName: r'entries')
-    BuiltList<RedelegationEntry>? get entries;
+    BuiltList<StakingRedelegationsGet200ResponseInnerEntriesInner>? get entries;
 
     Redelegation._();
 
@@ -74,7 +73,7 @@ class _$RedelegationSerializer implements StructuredSerializer<Redelegation> {
             result
                 ..add(r'entries')
                 ..add(serializers.serialize(object.entries,
-                    specifiedType: const FullType(BuiltList, [FullType(RedelegationEntry)])));
+                    specifiedType: const FullType(BuiltList, [FullType(StakingRedelegationsGet200ResponseInnerEntriesInner)])));
         }
         return result;
     }
@@ -108,7 +107,7 @@ class _$RedelegationSerializer implements StructuredSerializer<Redelegation> {
                     break;
                 case r'entries':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(RedelegationEntry)])) as BuiltList<RedelegationEntry>;
+                        specifiedType: const FullType(BuiltList, [FullType(StakingRedelegationsGet200ResponseInnerEntriesInner)])) as BuiltList<StakingRedelegationsGet200ResponseInnerEntriesInner>;
                     result.entries.replace(valueDes);
                     break;
             }

@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_vote.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/votes200_response_votes_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_gov_v1beta1_query_votes_response.g.dart';
 abstract class CosmosGovV1beta1QueryVotesResponse implements Built<CosmosGovV1beta1QueryVotesResponse, CosmosGovV1beta1QueryVotesResponseBuilder> {
     /// votes defined the queried votes.
     @BuiltValueField(wireName: r'votes')
-    BuiltList<CosmosGovV1beta1Vote>? get votes;
+    BuiltList<Votes200ResponseVotesInner>? get votes;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosGovV1beta1QueryVotesResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosGovV1beta1QueryVotesResponseSerializer implements StructuredSerial
             result
                 ..add(r'votes')
                 ..add(serializers.serialize(object.votes,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Vote)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Votes200ResponseVotesInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosGovV1beta1QueryVotesResponseSerializer implements StructuredSerial
             switch (key) {
                 case r'votes':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Vote)])) as BuiltList<CosmosGovV1beta1Vote>;
+                        specifiedType: const FullType(BuiltList, [FullType(Votes200ResponseVotesInner)])) as BuiltList<Votes200ResponseVotesInner>;
                     result.votes.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

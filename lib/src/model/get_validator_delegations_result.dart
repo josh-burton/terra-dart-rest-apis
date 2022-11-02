@@ -12,13 +12,15 @@ part 'get_validator_delegations_result.g.dart';
 /// GetValidatorDelegationsResult
 ///
 /// Properties:
-/// * [page] 
-/// * [limit] 
+/// * [page] - 
+/// * [limit] - 
 /// * [events] - Delegation event list
 abstract class GetValidatorDelegationsResult implements Built<GetValidatorDelegationsResult, GetValidatorDelegationsResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'page')
     num get page;
 
+    /// 
     @BuiltValueField(wireName: r'limit')
     num get limit;
 

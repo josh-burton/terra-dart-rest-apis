@@ -16,7 +16,7 @@ class _$CosmosUpgradeV1beta1Plan extends CosmosUpgradeV1beta1Plan {
   @override
   final String? info;
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? upgradedClientState;
+  final AccountsAreTheExistingAccountsInner? upgradedClientState;
 
   factory _$CosmosUpgradeV1beta1Plan(
           [void Function(CosmosUpgradeV1beta1PlanBuilder)? updates]) =>
@@ -87,13 +87,12 @@ class CosmosUpgradeV1beta1PlanBuilder
   String? get info => _$this._info;
   set info(String? info) => _$this._info = info;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _upgradedClientState;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get upgradedClientState =>
+  AccountsAreTheExistingAccountsInnerBuilder? _upgradedClientState;
+  AccountsAreTheExistingAccountsInnerBuilder get upgradedClientState =>
       _$this._upgradedClientState ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+          new AccountsAreTheExistingAccountsInnerBuilder();
   set upgradedClientState(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
-              upgradedClientState) =>
+          AccountsAreTheExistingAccountsInnerBuilder? upgradedClientState) =>
       _$this._upgradedClientState = upgradedClientState;
 
   CosmosUpgradeV1beta1PlanBuilder() {

@@ -9,13 +9,11 @@ part of 'ibc_core_channel_v1_query_channels_response.dart';
 class _$IbcCoreChannelV1QueryChannelsResponse
     extends IbcCoreChannelV1QueryChannelsResponse {
   @override
-  final BuiltList<IbcCoreChannelV1IdentifiedChannel>? channels;
+  final BuiltList<Channels200ResponseChannelsInner>? channels;
   @override
-  final QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination?
-      pagination;
+  final PaginationResponse? pagination;
   @override
-  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
-      height;
+  final QueryBlockHeight? height;
 
   factory _$IbcCoreChannelV1QueryChannelsResponse(
           [void Function(IbcCoreChannelV1QueryChannelsResponseBuilder)?
@@ -69,31 +67,22 @@ class IbcCoreChannelV1QueryChannelsResponseBuilder
             IbcCoreChannelV1QueryChannelsResponseBuilder> {
   _$IbcCoreChannelV1QueryChannelsResponse? _$v;
 
-  ListBuilder<IbcCoreChannelV1IdentifiedChannel>? _channels;
-  ListBuilder<IbcCoreChannelV1IdentifiedChannel> get channels =>
-      _$this._channels ??= new ListBuilder<IbcCoreChannelV1IdentifiedChannel>();
-  set channels(ListBuilder<IbcCoreChannelV1IdentifiedChannel>? channels) =>
+  ListBuilder<Channels200ResponseChannelsInner>? _channels;
+  ListBuilder<Channels200ResponseChannelsInner> get channels =>
+      _$this._channels ??= new ListBuilder<Channels200ResponseChannelsInner>();
+  set channels(ListBuilder<Channels200ResponseChannelsInner>? channels) =>
       _$this._channels = channels;
 
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-      _pagination;
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder
-      get pagination => _$this._pagination ??=
-          new QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder();
-  set pagination(
-          QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-              pagination) =>
+  PaginationResponseBuilder? _pagination;
+  PaginationResponseBuilder get pagination =>
+      _$this._pagination ??= new PaginationResponseBuilder();
+  set pagination(PaginationResponseBuilder? pagination) =>
       _$this._pagination = pagination;
 
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-      _height;
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
-      get height => _$this._height ??=
-          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
-  set height(
-          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-              height) =>
-      _$this._height = height;
+  QueryBlockHeightBuilder? _height;
+  QueryBlockHeightBuilder get height =>
+      _$this._height ??= new QueryBlockHeightBuilder();
+  set height(QueryBlockHeightBuilder? height) => _$this._height = height;
 
   IbcCoreChannelV1QueryChannelsResponseBuilder() {
     IbcCoreChannelV1QueryChannelsResponse._defaults(this);

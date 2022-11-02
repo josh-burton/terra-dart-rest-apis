@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/public_keydefinesthekeysavailableforusewith_tendermint_validators.dart';
+import 'package:terra_dart_rest_apis/src/model/public_key_defines_the_keys_available_for_use_with_tendermint_validators.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +20,7 @@ abstract class TendermintTypesValidator implements Built<TendermintTypesValidato
     String? get address;
 
     @BuiltValueField(wireName: r'pub_key')
-    PublicKeydefinesthekeysavailableforusewithTendermintValidators? get pubKey;
+    PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators? get pubKey;
 
     @BuiltValueField(wireName: r'voting_power')
     String? get votingPower;
@@ -60,7 +60,7 @@ class _$TendermintTypesValidatorSerializer implements StructuredSerializer<Tende
             result
                 ..add(r'pub_key')
                 ..add(serializers.serialize(object.pubKey,
-                    specifiedType: const FullType(PublicKeydefinesthekeysavailableforusewithTendermintValidators)));
+                    specifiedType: const FullType(PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators)));
         }
         if (object.votingPower != null) {
             result
@@ -96,7 +96,7 @@ class _$TendermintTypesValidatorSerializer implements StructuredSerializer<Tende
                     break;
                 case r'pub_key':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PublicKeydefinesthekeysavailableforusewithTendermintValidators)) as PublicKeydefinesthekeysavailableforusewithTendermintValidators;
+                        specifiedType: const FullType(PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators)) as PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators;
                     result.pubKey.replace(valueDes);
                     break;
                 case r'voting_power':

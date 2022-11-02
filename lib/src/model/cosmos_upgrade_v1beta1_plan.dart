@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -33,7 +33,7 @@ abstract class CosmosUpgradeV1beta1Plan implements Built<CosmosUpgradeV1beta1Pla
     String? get info;
 
     @BuiltValueField(wireName: r'upgraded_client_state')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get upgradedClientState;
+    AccountsAreTheExistingAccountsInner? get upgradedClientState;
 
     CosmosUpgradeV1beta1Plan._();
 
@@ -85,7 +85,7 @@ class _$CosmosUpgradeV1beta1PlanSerializer implements StructuredSerializer<Cosmo
             result
                 ..add(r'upgraded_client_state')
                 ..add(serializers.serialize(object.upgradedClientState,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(AccountsAreTheExistingAccountsInner)));
         }
         return result;
     }
@@ -124,7 +124,7 @@ class _$CosmosUpgradeV1beta1PlanSerializer implements StructuredSerializer<Cosmo
                     break;
                 case r'upgraded_client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(AccountsAreTheExistingAccountsInner)) as AccountsAreTheExistingAccountsInner;
                     result.upgradedClientState.replace(valueDes);
                     break;
             }

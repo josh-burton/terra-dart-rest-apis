@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/denom_traces200_response_denom_traces_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_denom_trace.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'ibc_applications_transfer_v1_query_denom_traces_response.g.dart';
 abstract class IbcApplicationsTransferV1QueryDenomTracesResponse implements Built<IbcApplicationsTransferV1QueryDenomTracesResponse, IbcApplicationsTransferV1QueryDenomTracesResponseBuilder> {
     /// denom_traces returns all denominations trace information.
     @BuiltValueField(wireName: r'denom_traces')
-    BuiltList<IbcApplicationsTransferV1DenomTrace>? get denomTraces;
+    BuiltList<DenomTraces200ResponseDenomTracesInner>? get denomTraces;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     IbcApplicationsTransferV1QueryDenomTracesResponse._();
 
@@ -49,13 +49,13 @@ class _$IbcApplicationsTransferV1QueryDenomTracesResponseSerializer implements S
             result
                 ..add(r'denom_traces')
                 ..add(serializers.serialize(object.denomTraces,
-                    specifiedType: const FullType(BuiltList, [FullType(IbcApplicationsTransferV1DenomTrace)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DenomTraces200ResponseDenomTracesInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$IbcApplicationsTransferV1QueryDenomTracesResponseSerializer implements S
             switch (key) {
                 case r'denom_traces':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(IbcApplicationsTransferV1DenomTrace)])) as BuiltList<IbcApplicationsTransferV1DenomTrace>;
+                        specifiedType: const FullType(BuiltList, [FullType(DenomTraces200ResponseDenomTracesInner)])) as BuiltList<DenomTraces200ResponseDenomTracesInner>;
                     result.denomTraces.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

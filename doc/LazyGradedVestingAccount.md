@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | [optional] 
-**value** | [**BaseLazyGradedVestingAccount**](BaseLazyGradedVestingAccount.md) |  | [optional] 
+**value** | [**AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue**](AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

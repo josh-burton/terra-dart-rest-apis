@@ -6,6 +6,87 @@ part of 'ibc_core_connection_v1_identified_connection.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const IbcCoreConnectionV1IdentifiedConnectionStateEnum
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_UNINITIALIZED_UNSPECIFIED =
+    const IbcCoreConnectionV1IdentifiedConnectionStateEnum._(
+        'UNINITIALIZED_UNSPECIFIED');
+const IbcCoreConnectionV1IdentifiedConnectionStateEnum
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_INIT =
+    const IbcCoreConnectionV1IdentifiedConnectionStateEnum._('INIT');
+const IbcCoreConnectionV1IdentifiedConnectionStateEnum
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_TRYOPEN =
+    const IbcCoreConnectionV1IdentifiedConnectionStateEnum._('TRYOPEN');
+const IbcCoreConnectionV1IdentifiedConnectionStateEnum
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_OPEN =
+    const IbcCoreConnectionV1IdentifiedConnectionStateEnum._('OPEN');
+
+IbcCoreConnectionV1IdentifiedConnectionStateEnum
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnumValueOf(String name) {
+  switch (name) {
+    case 'UNINITIALIZED_UNSPECIFIED':
+      return _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_UNINITIALIZED_UNSPECIFIED;
+    case 'INIT':
+      return _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_INIT;
+    case 'TRYOPEN':
+      return _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_TRYOPEN;
+    case 'OPEN':
+      return _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_OPEN;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<IbcCoreConnectionV1IdentifiedConnectionStateEnum>
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnumValues =
+    new BuiltSet<IbcCoreConnectionV1IdentifiedConnectionStateEnum>(const <
+        IbcCoreConnectionV1IdentifiedConnectionStateEnum>[
+  _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_UNINITIALIZED_UNSPECIFIED,
+  _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_INIT,
+  _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_TRYOPEN,
+  _$ibcCoreConnectionV1IdentifiedConnectionStateEnum_OPEN,
+]);
+
+Serializer<IbcCoreConnectionV1IdentifiedConnectionStateEnum>
+    _$ibcCoreConnectionV1IdentifiedConnectionStateEnumSerializer =
+    new _$IbcCoreConnectionV1IdentifiedConnectionStateEnumSerializer();
+
+class _$IbcCoreConnectionV1IdentifiedConnectionStateEnumSerializer
+    implements
+        PrimitiveSerializer<IbcCoreConnectionV1IdentifiedConnectionStateEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNINITIALIZED_UNSPECIFIED': 'STATE_UNINITIALIZED_UNSPECIFIED',
+    'INIT': 'STATE_INIT',
+    'TRYOPEN': 'STATE_TRYOPEN',
+    'OPEN': 'STATE_OPEN',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'STATE_UNINITIALIZED_UNSPECIFIED': 'UNINITIALIZED_UNSPECIFIED',
+    'STATE_INIT': 'INIT',
+    'STATE_TRYOPEN': 'TRYOPEN',
+    'STATE_OPEN': 'OPEN',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    IbcCoreConnectionV1IdentifiedConnectionStateEnum
+  ];
+  @override
+  final String wireName = 'IbcCoreConnectionV1IdentifiedConnectionStateEnum';
+
+  @override
+  Object serialize(Serializers serializers,
+          IbcCoreConnectionV1IdentifiedConnectionStateEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  IbcCoreConnectionV1IdentifiedConnectionStateEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      IbcCoreConnectionV1IdentifiedConnectionStateEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$IbcCoreConnectionV1IdentifiedConnection
     extends IbcCoreConnectionV1IdentifiedConnection {
   @override
@@ -13,11 +94,13 @@ class _$IbcCoreConnectionV1IdentifiedConnection
   @override
   final String? clientId;
   @override
-  final BuiltList<IbcCoreConnectionV1Version>? versions;
+  final BuiltList<
+          IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>?
+      versions;
   @override
-  final State? state;
+  final IbcCoreConnectionV1IdentifiedConnectionStateEnum? state;
   @override
-  final IbcCoreConnectionV1ConnectionEndCounterparty? counterparty;
+  final Connections200ResponseConnectionsInnerCounterparty? counterparty;
   @override
   final String? delayPeriod;
 
@@ -98,22 +181,31 @@ class IbcCoreConnectionV1IdentifiedConnectionBuilder
   String? get clientId => _$this._clientId;
   set clientId(String? clientId) => _$this._clientId = clientId;
 
-  ListBuilder<IbcCoreConnectionV1Version>? _versions;
-  ListBuilder<IbcCoreConnectionV1Version> get versions =>
-      _$this._versions ??= new ListBuilder<IbcCoreConnectionV1Version>();
-  set versions(ListBuilder<IbcCoreConnectionV1Version>? versions) =>
+  ListBuilder<
+          IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>?
+      _versions;
+  ListBuilder<
+          IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>
+      get versions => _$this._versions ??= new ListBuilder<
+          IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>();
+  set versions(
+          ListBuilder<
+                  IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>?
+              versions) =>
       _$this._versions = versions;
 
-  State? _state;
-  State? get state => _$this._state;
-  set state(State? state) => _$this._state = state;
+  IbcCoreConnectionV1IdentifiedConnectionStateEnum? _state;
+  IbcCoreConnectionV1IdentifiedConnectionStateEnum? get state => _$this._state;
+  set state(IbcCoreConnectionV1IdentifiedConnectionStateEnum? state) =>
+      _$this._state = state;
 
-  IbcCoreConnectionV1ConnectionEndCounterpartyBuilder? _counterparty;
-  IbcCoreConnectionV1ConnectionEndCounterpartyBuilder get counterparty =>
+  Connections200ResponseConnectionsInnerCounterpartyBuilder? _counterparty;
+  Connections200ResponseConnectionsInnerCounterpartyBuilder get counterparty =>
       _$this._counterparty ??=
-          new IbcCoreConnectionV1ConnectionEndCounterpartyBuilder();
+          new Connections200ResponseConnectionsInnerCounterpartyBuilder();
   set counterparty(
-          IbcCoreConnectionV1ConnectionEndCounterpartyBuilder? counterparty) =>
+          Connections200ResponseConnectionsInnerCounterpartyBuilder?
+              counterparty) =>
       _$this._counterparty = counterparty;
 
   String? _delayPeriod;

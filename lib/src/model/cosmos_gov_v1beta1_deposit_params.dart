@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response_balances_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'cosmos_gov_v1beta1_deposit_params.g.dart';
 abstract class CosmosGovV1beta1DepositParams implements Built<CosmosGovV1beta1DepositParams, CosmosGovV1beta1DepositParamsBuilder> {
     /// Minimum deposit for a proposal to enter voting period.
     @BuiltValueField(wireName: r'min_deposit')
-    BuiltList<CosmosBaseV1beta1Coin>? get minDeposit;
+    BuiltList<AllBalances200ResponseBalancesInner>? get minDeposit;
 
     /// Maximum period for Atom holders to deposit on a proposal. Initial value: 2  months.
     @BuiltValueField(wireName: r'max_deposit_period')
@@ -49,7 +49,7 @@ class _$CosmosGovV1beta1DepositParamsSerializer implements StructuredSerializer<
             result
                 ..add(r'min_deposit')
                 ..add(serializers.serialize(object.minDeposit,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])));
         }
         if (object.maxDepositPeriod != null) {
             result
@@ -74,7 +74,7 @@ class _$CosmosGovV1beta1DepositParamsSerializer implements StructuredSerializer<
             switch (key) {
                 case r'min_deposit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])) as BuiltList<CosmosBaseV1beta1Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])) as BuiltList<AllBalances200ResponseBalancesInner>;
                     result.minDeposit.replace(valueDes);
                     break;
                 case r'max_deposit_period':

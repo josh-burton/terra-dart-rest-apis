@@ -8,9 +8,11 @@ part of 'tendermint_types_light_block.dart';
 
 class _$TendermintTypesLightBlock extends TendermintTypesLightBlock {
   @override
-  final TendermintTypesSignedHeader? signedHeader;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeader?
+      signedHeader;
   @override
-  final TendermintTypesValidatorSet? validatorSet;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSet?
+      validatorSet;
 
   factory _$TendermintTypesLightBlock(
           [void Function(TendermintTypesLightBlockBuilder)? updates]) =>
@@ -55,16 +57,24 @@ class TendermintTypesLightBlockBuilder
         Builder<TendermintTypesLightBlock, TendermintTypesLightBlockBuilder> {
   _$TendermintTypesLightBlock? _$v;
 
-  TendermintTypesSignedHeaderBuilder? _signedHeader;
-  TendermintTypesSignedHeaderBuilder get signedHeader =>
-      _$this._signedHeader ??= new TendermintTypesSignedHeaderBuilder();
-  set signedHeader(TendermintTypesSignedHeaderBuilder? signedHeader) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderBuilder?
+      _signedHeader;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderBuilder
+      get signedHeader => _$this._signedHeader ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderBuilder();
+  set signedHeader(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderBuilder?
+              signedHeader) =>
       _$this._signedHeader = signedHeader;
 
-  TendermintTypesValidatorSetBuilder? _validatorSet;
-  TendermintTypesValidatorSetBuilder get validatorSet =>
-      _$this._validatorSet ??= new TendermintTypesValidatorSetBuilder();
-  set validatorSet(TendermintTypesValidatorSetBuilder? validatorSet) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetBuilder?
+      _validatorSet;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetBuilder
+      get validatorSet => _$this._validatorSet ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetBuilder();
+  set validatorSet(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetBuilder?
+              validatorSet) =>
       _$this._validatorSet = validatorSet;
 
   TendermintTypesLightBlockBuilder() {

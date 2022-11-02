@@ -12,8 +12,8 @@ part 'rates.g.dart';
 /// Properties:
 /// * [denom] - Coin denomination
 /// * [swaprate] - Current swap rate
-/// * [oneDayVariation] 
-/// * [oneDayVariationRate] 
+/// * [oneDayVariation] - 
+/// * [oneDayVariationRate] - 
 abstract class Rates implements Built<Rates, RatesBuilder> {
     /// Coin denomination
     @BuiltValueField(wireName: r'denom')
@@ -23,9 +23,11 @@ abstract class Rates implements Built<Rates, RatesBuilder> {
     @BuiltValueField(wireName: r'swaprate')
     String get swaprate;
 
+    /// 
     @BuiltValueField(wireName: r'oneDayVariation')
     String get oneDayVariation;
 
+    /// 
     @BuiltValueField(wireName: r'oneDayVariationRate')
     String get oneDayVariationRate;
 

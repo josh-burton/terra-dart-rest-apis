@@ -10,16 +10,19 @@ part 'accounts.g.dart';
 /// Accounts
 ///
 /// Properties:
-/// * [account] 
-/// * [amount] 
-/// * [percentage] 
+/// * [account] - 
+/// * [amount] - 
+/// * [percentage] - 
 abstract class Accounts implements Built<Accounts, AccountsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'account')
     num get account;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 
+    /// 
     @BuiltValueField(wireName: r'percentage')
     String get percentage;
 

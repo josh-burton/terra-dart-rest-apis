@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**blockIdFlag** | [**BlockIdFlagindicateswhichBlcokIDthesignatureisfor**](BlockIdFlagindicateswhichBlcokIDthesignatureisfor.md) |  | [optional] 
+**blockIdFlag** | **String** |  | [optional] [default to 'BLOCK_ID_FLAG_UNKNOWN']
 **validatorAddress** | **String** |  | [optional] 
 **timestamp** | [**DateTime**](DateTime.md) |  | [optional] 
 **signature** | **String** |  | [optional] 

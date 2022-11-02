@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_evidence_v1beta1_query_all_evidence_response.g.dart';
 abstract class CosmosEvidenceV1beta1QueryAllEvidenceResponse implements Built<CosmosEvidenceV1beta1QueryAllEvidenceResponse, CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder> {
     /// evidence returns all evidences.
     @BuiltValueField(wireName: r'evidence')
-    BuiltList<GoogleProtobufAny>? get evidence;
+    BuiltList<AccountsAreTheExistingAccountsInner>? get evidence;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosEvidenceV1beta1QueryAllEvidenceResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosEvidenceV1beta1QueryAllEvidenceResponseSerializer implements Struc
             result
                 ..add(r'evidence')
                 ..add(serializers.serialize(object.evidence,
-                    specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosEvidenceV1beta1QueryAllEvidenceResponseSerializer implements Struc
             switch (key) {
                 case r'evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])) as BuiltList<GoogleProtobufAny>;
+                        specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])) as BuiltList<AccountsAreTheExistingAccountsInner>;
                     result.evidence.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

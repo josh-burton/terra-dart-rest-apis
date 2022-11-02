@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/public_key.dart';
+import 'package:terra_dart_rest_apis/src/model/validatorsets_latest_get200_response_validators_inner_pub_key.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class TendermintValidator implements Built<TendermintValidator, Tenderm
     String? get address;
 
     @BuiltValueField(wireName: r'pub_key')
-    PublicKey? get pubKey;
+    ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey? get pubKey;
 
     @BuiltValueField(wireName: r'voting_power')
     String? get votingPower;
@@ -61,7 +61,7 @@ class _$TendermintValidatorSerializer implements StructuredSerializer<Tendermint
             result
                 ..add(r'pub_key')
                 ..add(serializers.serialize(object.pubKey,
-                    specifiedType: const FullType(PublicKey)));
+                    specifiedType: const FullType(ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey)));
         }
         if (object.votingPower != null) {
             result
@@ -97,7 +97,7 @@ class _$TendermintValidatorSerializer implements StructuredSerializer<Tendermint
                     break;
                 case r'pub_key':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PublicKey)) as PublicKey;
+                        specifiedType: const FullType(ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey)) as ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey;
                     result.pubKey.replace(valueDes);
                     break;
                 case r'voting_power':

@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_query_params_response.dart';
 class _$CosmosStakingV1beta1QueryParamsResponse
     extends CosmosStakingV1beta1QueryParamsResponse {
   @override
-  final CosmosStakingV1beta1QueryParamsResponseParams? params;
+  final StakingParams200ResponseParams? params;
 
   factory _$CosmosStakingV1beta1QueryParamsResponse(
           [void Function(CosmosStakingV1beta1QueryParamsResponseBuilder)?
@@ -56,11 +56,10 @@ class CosmosStakingV1beta1QueryParamsResponseBuilder
             CosmosStakingV1beta1QueryParamsResponseBuilder> {
   _$CosmosStakingV1beta1QueryParamsResponse? _$v;
 
-  CosmosStakingV1beta1QueryParamsResponseParamsBuilder? _params;
-  CosmosStakingV1beta1QueryParamsResponseParamsBuilder get params =>
-      _$this._params ??=
-          new CosmosStakingV1beta1QueryParamsResponseParamsBuilder();
-  set params(CosmosStakingV1beta1QueryParamsResponseParamsBuilder? params) =>
+  StakingParams200ResponseParamsBuilder? _params;
+  StakingParams200ResponseParamsBuilder get params =>
+      _$this._params ??= new StakingParams200ResponseParamsBuilder();
+  set params(StakingParams200ResponseParamsBuilder? params) =>
       _$this._params = params;
 
   CosmosStakingV1beta1QueryParamsResponseBuilder() {

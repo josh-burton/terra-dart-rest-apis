@@ -10,12 +10,14 @@ part 'get_tx_list_result_txs_tx_value_msg_value_outputs_coins.g.dart';
 /// GetTxListResultTxsTxValueMsgValueOutputsCoins
 ///
 /// Properties:
-/// * [deonm] 
-/// * [amount] 
+/// * [deonm] - 
+/// * [amount] - 
 abstract class GetTxListResultTxsTxValueMsgValueOutputsCoins implements Built<GetTxListResultTxsTxValueMsgValueOutputsCoins, GetTxListResultTxsTxValueMsgValueOutputsCoinsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'deonm')
     String get deonm;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

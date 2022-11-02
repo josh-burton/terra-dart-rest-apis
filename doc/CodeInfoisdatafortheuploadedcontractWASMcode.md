@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.CodeInfoisdatafortheuploadedcontractWASMcode
+# terra_dart_rest_apis.model.CodeInfoIsDataForTheUploadedContractWASMCode
 
 ## Load the model package
 ```dart

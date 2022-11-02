@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_get_tx_response_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'cosmos_tx_v1beta1_simulate_request.g.dart';
 /// * [txBytes] - tx_bytes is the raw transaction.  Since: cosmos-sdk 0.43
 abstract class CosmosTxV1beta1SimulateRequest implements Built<CosmosTxV1beta1SimulateRequest, CosmosTxV1beta1SimulateRequestBuilder> {
     @BuiltValueField(wireName: r'tx')
-    CosmosTxV1beta1GetTxResponseTx? get tx;
+    CosmosTxV1beta1Tx? get tx;
 
     /// tx_bytes is the raw transaction.  Since: cosmos-sdk 0.43
     @BuiltValueField(wireName: r'tx_bytes')
@@ -47,7 +47,7 @@ class _$CosmosTxV1beta1SimulateRequestSerializer implements StructuredSerializer
             result
                 ..add(r'tx')
                 ..add(serializers.serialize(object.tx,
-                    specifiedType: const FullType(CosmosTxV1beta1GetTxResponseTx)));
+                    specifiedType: const FullType(CosmosTxV1beta1Tx)));
         }
         if (object.txBytes != null) {
             result
@@ -72,7 +72,7 @@ class _$CosmosTxV1beta1SimulateRequestSerializer implements StructuredSerializer
             switch (key) {
                 case r'tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1GetTxResponseTx)) as CosmosTxV1beta1GetTxResponseTx;
+                        specifiedType: const FullType(CosmosTxV1beta1Tx)) as CosmosTxV1beta1Tx;
                     result.tx.replace(valueDes);
                     break;
                 case r'tx_bytes':

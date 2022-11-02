@@ -16,7 +16,7 @@ class _$TerraOracleV1beta1Params extends TerraOracleV1beta1Params {
   @override
   final String? rewardDistributionWindow;
   @override
-  final BuiltList<DenomTheobjecttoholdconfigurationsofeachdenom>? whitelist;
+  final BuiltList<DenomTheObjectToHoldConfigurationsOfEachDenom>? whitelist;
   @override
   final String? slashFraction;
   @override
@@ -118,12 +118,12 @@ class TerraOracleV1beta1ParamsBuilder
   set rewardDistributionWindow(String? rewardDistributionWindow) =>
       _$this._rewardDistributionWindow = rewardDistributionWindow;
 
-  ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>? _whitelist;
-  ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom> get whitelist =>
+  ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>? _whitelist;
+  ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom> get whitelist =>
       _$this._whitelist ??=
-          new ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>();
+          new ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>();
   set whitelist(
-          ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>?
+          ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>?
               whitelist) =>
       _$this._whitelist = whitelist;
 

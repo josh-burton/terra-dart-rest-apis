@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'delegate_req.g.dart';
 /// * [feeder] - bech32 encoded address
 abstract class DelegateReq implements Built<DelegateReq, DelegateReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq? get baseReq;
+    TxsEstimateFeePostRequestBaseReq? get baseReq;
 
     /// bech32 encoded address
     @BuiltValueField(wireName: r'feeder')
@@ -47,7 +47,7 @@ class _$DelegateReqSerializer implements StructuredSerializer<DelegateReq> {
             result
                 ..add(r'base_req')
                 ..add(serializers.serialize(object.baseReq,
-                    specifiedType: const FullType(BaseReq)));
+                    specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         }
         if (object.feeder != null) {
             result
@@ -72,7 +72,7 @@ class _$DelegateReqSerializer implements StructuredSerializer<DelegateReq> {
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'feeder':

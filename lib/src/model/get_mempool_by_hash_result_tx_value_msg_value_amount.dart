@@ -10,12 +10,14 @@ part 'get_mempool_by_hash_result_tx_value_msg_value_amount.g.dart';
 /// GetMempoolByHashResultTxValueMsgValueAmount
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class GetMempoolByHashResultTxValueMsgValueAmount implements Built<GetMempoolByHashResultTxValueMsgValueAmount, GetMempoolByHashResultTxValueMsgValueAmountBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

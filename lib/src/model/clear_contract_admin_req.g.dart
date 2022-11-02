@@ -8,7 +8,7 @@ part of 'clear_contract_admin_req.dart';
 
 class _$ClearContractAdminReq extends ClearContractAdminReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
 
   factory _$ClearContractAdminReq(
           [void Function(ClearContractAdminReqBuilder)? updates]) =>
@@ -48,9 +48,11 @@ class ClearContractAdminReqBuilder
     implements Builder<ClearContractAdminReq, ClearContractAdminReqBuilder> {
   _$ClearContractAdminReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   ClearContractAdminReqBuilder() {
     ClearContractAdminReq._defaults(this);

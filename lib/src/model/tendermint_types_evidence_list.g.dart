@@ -8,7 +8,8 @@ part of 'tendermint_types_evidence_list.dart';
 
 class _$TendermintTypesEvidenceList extends TendermintTypesEvidenceList {
   @override
-  final BuiltList<TendermintTypesEvidence>? evidence;
+  final BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>?
+      evidence;
 
   factory _$TendermintTypesEvidenceList(
           [void Function(TendermintTypesEvidenceListBuilder)? updates]) =>
@@ -50,10 +51,13 @@ class TendermintTypesEvidenceListBuilder
             TendermintTypesEvidenceListBuilder> {
   _$TendermintTypesEvidenceList? _$v;
 
-  ListBuilder<TendermintTypesEvidence>? _evidence;
-  ListBuilder<TendermintTypesEvidence> get evidence =>
-      _$this._evidence ??= new ListBuilder<TendermintTypesEvidence>();
-  set evidence(ListBuilder<TendermintTypesEvidence>? evidence) =>
+  ListBuilder<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>? _evidence;
+  ListBuilder<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>
+      get evidence => _$this._evidence ??= new ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInner>();
+  set evidence(
+          ListBuilder<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>?
+              evidence) =>
       _$this._evidence = evidence;
 
   TendermintTypesEvidenceListBuilder() {

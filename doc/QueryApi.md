@@ -5,132 +5,130 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**account**](QueryApi.md#account) | **GET** /cosmos/auth/v1beta1/accounts/{address} | Account
-[**accounts**](QueryApi.md#accounts) | **GET** /cosmos/auth/v1beta1/accounts | Accounts
-[**actives**](QueryApi.md#actives) | **GET** /terra/oracle/v1beta1/denoms/actives | Actives
-[**aggregatePrevote**](QueryApi.md#aggregateprevote) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/aggregate_prevote | AggregatePrevote
-[**aggregatePrevotes**](QueryApi.md#aggregateprevotes) | **GET** /terra/oracle/v1beta1/validators/aggregate_prevotes | AggregatePrevotes
-[**aggregateVote**](QueryApi.md#aggregatevote) | **GET** /terra/oracle/v1beta1/valdiators/{validator_addr}/aggregate_vote | AggregateVote
-[**aggregateVotes**](QueryApi.md#aggregatevotes) | **GET** /terra/oracle/v1beta1/validators/aggregate_votes | AggregateVotes
-[**allBalances**](QueryApi.md#allbalances) | **GET** /cosmos/bank/v1beta1/balances/{address} | AllBalances
-[**allEvidence**](QueryApi.md#allevidence) | **GET** /cosmos/evidence/v1beta1/evidence | AllEvidence
-[**allowance**](QueryApi.md#allowance) | **GET** /cosmos/feegrant/v1beta1/allowance/{granter}/{grantee} | Allowance
-[**allowances**](QueryApi.md#allowances) | **GET** /cosmos/feegrant/v1beta1/allowances/{grantee} | Allowances
-[**annualProvisions**](QueryApi.md#annualprovisions) | **GET** /cosmos/mint/v1beta1/annual_provisions | AnnualProvisions
-[**appliedPlan**](QueryApi.md#appliedplan) | **GET** /cosmos/upgrade/v1beta1/applied_plan/{name} | AppliedPlan
-[**authParams**](QueryApi.md#authparams) | **GET** /cosmos/auth/v1beta1/params | AuthParams
-[**balance**](QueryApi.md#balance) | **GET** /cosmos/bank/v1beta1/balances/{address}/by_denom | Balance
-[**bankParams**](QueryApi.md#bankparams) | **GET** /cosmos/bank/v1beta1/params | BankParams
-[**byteCode**](QueryApi.md#bytecode) | **GET** /terra/wasm/v1beta1/codes/{code_id}/byte_code | ByteCode
-[**channel**](QueryApi.md#channel) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id} | Channel
-[**channelClientState**](QueryApi.md#channelclientstate) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/client_state | ChannelClientState
-[**channelConsensusState**](QueryApi.md#channelconsensusstate) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/consensus_state/revision/{revision_number}/height/{revision_height} | ChannelConsensusState
-[**channels**](QueryApi.md#channels) | **GET** /ibc/core/channel/v1/channels | Channels
-[**clientConnections**](QueryApi.md#clientconnections) | **GET** /ibc/core/connection/v1/client_connections/{client_id} | ClientConnections
-[**clientParams**](QueryApi.md#clientparams) | **GET** /ibc/client/v1/params | ClientParams
-[**clientState**](QueryApi.md#clientstate) | **GET** /ibc/core/client/v1/client_states/{client_id} | ClientState
-[**clientStates**](QueryApi.md#clientstates) | **GET** /ibc/core/client/v1/client_states | ClientStates
-[**clientStatus**](QueryApi.md#clientstatus) | **GET** /ibc/core/client/v1/client_status/{client_id} | ClientStatus
-[**codeInfo**](QueryApi.md#codeinfo) | **GET** /terra/wasm/v1beta1/codes/{code_id} | CodeInfo
-[**communityPool**](QueryApi.md#communitypool) | **GET** /cosmos/distribution/v1beta1/community_pool | CommunityPool
-[**connection**](QueryApi.md#connection) | **GET** /ibc/core/connection/v1/connections/{connection_id} | Connection
-[**connectionChannels**](QueryApi.md#connectionchannels) | **GET** /ibc/core/channel/v1/connections/{connection}/channels | ConnectionChannels
-[**connectionClientState**](QueryApi.md#connectionclientstate) | **GET** /ibc/core/connection/v1/connections/{connection_id}/client_state | ConnectionClientState
-[**connectionConsensusState**](QueryApi.md#connectionconsensusstate) | **GET** /ibc/core/connection/v1/connections/{connection_id}/consensus_state/revision/{revision_number}/height/{revision_height} | ConnectionConsensusState
-[**connections**](QueryApi.md#connections) | **GET** /ibc/core/connection/v1/connections | Connections
-[**consensusState**](QueryApi.md#consensusstate) | **GET** /ibc/core/client/v1/consensus_states/{client_id}/revision/{revision_number}/height/{revision_height} | ConsensusState
-[**consensusStates**](QueryApi.md#consensusstates) | **GET** /ibc/core/client/v1/consensus_states/{client_id} | ConsensusStates
-[**contractInfo**](QueryApi.md#contractinfo) | **GET** /terra/wasm/v1beta1/contracts/{contract_address} | ContractInfo
-[**contractStore**](QueryApi.md#contractstore) | **GET** /terra/wasm/v1beta1/contracts/{contract_address}/store | ContractStore
-[**currentPlan**](QueryApi.md#currentplan) | **GET** /cosmos/upgrade/v1beta1/current_plan | CurrentPlan
-[**delegation**](QueryApi.md#delegation) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr} | Delegation
-[**delegationRewards**](QueryApi.md#delegationrewards) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards/{validator_address} | DelegationRewards
-[**delegationTotalRewards**](QueryApi.md#delegationtotalrewards) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards | DelegationTotalRewards
-[**delegatorDelegations**](QueryApi.md#delegatordelegations) | **GET** /cosmos/staking/v1beta1/delegations/{delegator_addr} | DelegatorDelegations
-[**delegatorUnbondingDelegations**](QueryApi.md#delegatorunbondingdelegations) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/unbonding_delegations | DelegatorUnbondingDelegations
-[**delegatorValidator**](QueryApi.md#delegatorvalidator) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/validators/{validator_addr} | DelegatorValidator
-[**delegatorValidators**](QueryApi.md#delegatorvalidators) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/validators | DelegatorValidators
-[**delegatorWithdrawAddress**](QueryApi.md#delegatorwithdrawaddress) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/withdraw_address | DelegatorWithdrawAddress
-[**denomMetadata**](QueryApi.md#denommetadata) | **GET** /cosmos/bank/v1beta1/denoms_metadata/{denom} | DenomMetadata
-[**denomTrace**](QueryApi.md#denomtrace) | **GET** /ibc/apps/transfer/v1/denom_traces/{hash} | DenomTrace
-[**denomTraces**](QueryApi.md#denomtraces) | **GET** /ibc/apps/transfer/v1/denom_traces | DenomTraces
-[**denomsMetadata**](QueryApi.md#denomsmetadata) | **GET** /cosmos/bank/v1beta1/denoms_metadata | DenomsMetadata
-[**deposit**](QueryApi.md#deposit) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/deposits/{depositor} | Deposit
-[**deposits**](QueryApi.md#deposits) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/deposits | Deposits
-[**distributionParams**](QueryApi.md#distributionparams) | **GET** /cosmos/distribution/v1beta1/params | DistributionParams
-[**evidence**](QueryApi.md#evidence) | **GET** /cosmos/evidence/v1beta1/evidence/{evidence_hash} | Evidence
-[**exchangeRate**](QueryApi.md#exchangerate) | **GET** /terra/oracle/v1beta1/denoms/{denom}/exchange_rate | ExchangeRate
-[**exchangeRates**](QueryApi.md#exchangerates) | **GET** /terra/oracle/v1beta1/denoms/exchange_rates | ExchangeRates
-[**feederDelegation**](QueryApi.md#feederdelegation) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/feeder | FeederDelegation
-[**govParams**](QueryApi.md#govparams) | **GET** /cosmos/gov/v1beta1/params/{params_type} | GovParams
-[**grants**](QueryApi.md#grants) | **GET** /cosmos/authz/v1beta1/grants | Grants
-[**historicalInfo**](QueryApi.md#historicalinfo) | **GET** /cosmos/staking/v1beta1/historical_info/{height} | HistoricalInfo
-[**iBCTransferParams**](QueryApi.md#ibctransferparams) | **GET** /ibc/apps/transfer/v1/params | IBCTransferParams
-[**iBCUpgradedConsensusState**](QueryApi.md#ibcupgradedconsensusstate) | **GET** /ibc/core/client/v1/upgraded_consensus_states | IBCUpgradedConsensusState
-[**indicators**](QueryApi.md#indicators) | **GET** /terra/treasury/v1beta1/indicators | Indicators
-[**inflation**](QueryApi.md#inflation) | **GET** /cosmos/mint/v1beta1/inflation | Inflation
-[**marketParams**](QueryApi.md#marketparams) | **GET** /terra/market/v1beta1/params | MarketParams
-[**mintParams**](QueryApi.md#mintparams) | **GET** /cosmos/mint/v1beta1/params | MintParams
-[**missCounter**](QueryApi.md#misscounter) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/miss | MissCounter
-[**moduleVersions**](QueryApi.md#moduleversions) | **GET** /cosmos/upgrade/v1beta1/module_versions | ModuleVersions
-[**nextSequenceReceive**](QueryApi.md#nextsequencereceive) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/next_sequence | NextSequenceReceive
-[**oracleParams**](QueryApi.md#oracleparams) | **GET** /terra/oracle/v1beta1/params | OracleParams
-[**packetAcknowledgement**](QueryApi.md#packetacknowledgement) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_acks/{sequence} | PacketAcknowledgement
-[**packetAcknowledgements**](QueryApi.md#packetacknowledgements) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_acknowledgements | PacketAcknowledgements
-[**packetCommitment**](QueryApi.md#packetcommitment) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{sequence} | PacketCommitment
-[**packetCommitments**](QueryApi.md#packetcommitments) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments | PacketCommitments
-[**packetReceipt**](QueryApi.md#packetreceipt) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_receipts/{sequence} | PacketReceipt
-[**params**](QueryApi.md#params) | **GET** /cosmos/params/v1beta1/params | Params
-[**pool**](QueryApi.md#pool) | **GET** /cosmos/staking/v1beta1/pool | Pool
-[**proposal**](QueryApi.md#proposal) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id} | Proposal
-[**proposals**](QueryApi.md#proposals) | **GET** /cosmos/gov/v1beta1/proposals | Proposals
-[**rawStore**](QueryApi.md#rawstore) | **GET** /terra/wasm/v1beta1/contracts/{contract_address}/store/raw | RawStore
-[**redelegations**](QueryApi.md#redelegations) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/redelegations | Redelegations
-[**rewardWeight**](QueryApi.md#rewardweight) | **GET** /terra/treasury/v1beta1/reward_weight | RewardWeight
-[**seigniorageProceeds**](QueryApi.md#seigniorageproceeds) | **GET** /terra/treasury/v1beta1/seigniorage_proceeds | SeigniorageProceeds
-[**signingInfo**](QueryApi.md#signinginfo) | **GET** /cosmos/slashing/v1beta1/signing_infos/{cons_address} | SigningInfo
-[**signingInfos**](QueryApi.md#signinginfos) | **GET** /cosmos/slashing/v1beta1/signing_infos | SigningInfos
-[**slashingParams**](QueryApi.md#slashingparams) | **GET** /cosmos/slashing/v1beta1/params | SlashingParams
-[**stakingDelegatorValidators**](QueryApi.md#stakingdelegatorvalidators) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/validators | StakingDelegatorValidators
-[**stakingParams**](QueryApi.md#stakingparams) | **GET** /cosmos/staking/v1beta1/params | StakingParams
-[**supplyOf**](QueryApi.md#supplyof) | **GET** /cosmos/bank/v1beta1/supply/{denom} | SupplyOf
-[**swap**](QueryApi.md#swap) | **GET** /terra/market/v1beta1/swap | Swap
-[**tallyResult**](QueryApi.md#tallyresult) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/tally | TallyResult
-[**taxCap**](QueryApi.md#taxcap) | **GET** /terra/treasury/v1beta1/tax_caps/{denom} | TaxCap
-[**taxCaps**](QueryApi.md#taxcaps) | **GET** /terra/treasury/v1beta1/tax_caps | TaxCaps
-[**taxProceeds**](QueryApi.md#taxproceeds) | **GET** /terra/treasury/v1beta1/tax_proceeds | TaxProceeds
-[**taxRate**](QueryApi.md#taxrate) | **GET** /terra/treasury/v1beta1/tax_rate | TaxRate
-[**terraPoolDelta**](QueryApi.md#terrapooldelta) | **GET** /terra/market/v1beta1/terra_pool_delta | TerraPoolDelta
-[**tobinTax**](QueryApi.md#tobintax) | **GET** /terra/oracle/v1beta1/denoms/{denom}/tobin_tax | TobinTax
-[**tobinTaxes**](QueryApi.md#tobintaxes) | **GET** /terra/oracle/v1beta1/denoms/tobin_taxes | TobinTaxes
-[**totalSupply**](QueryApi.md#totalsupply) | **GET** /cosmos/bank/v1beta1/supply | TotalSupply
-[**treasuryParams**](QueryApi.md#treasuryparams) | **GET** /terra/treasury/v1beta1/params | TreasuryParams
-[**unbondingDelegation**](QueryApi.md#unbondingdelegation) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}/unbonding_delegation | UnbondingDelegation
-[**unreceivedAcks**](QueryApi.md#unreceivedacks) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{packet_ack_sequences}/unreceived_acks | UnreceivedAcks
-[**unreceivedPackets**](QueryApi.md#unreceivedpackets) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{packet_commitment_sequences}/unreceived_packets | UnreceivedPackets
-[**upgradedClientState**](QueryApi.md#upgradedclientstate) | **GET** /ibc/core/client/v1/upgraded_client_states | UpgradedClientState
-[**upgradedConsensusState**](QueryApi.md#upgradedconsensusstate) | **GET** /cosmos/upgrade/v1beta1/upgraded_consensus_state/{last_height} | UpgradedConsensusState
-[**validator**](QueryApi.md#validator) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr} | Validator
-[**validatorCommission**](QueryApi.md#validatorcommission) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/commission | ValidatorCommission
-[**validatorDelegations**](QueryApi.md#validatordelegations) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations | ValidatorDelegations
-[**validatorOutstandingRewards**](QueryApi.md#validatoroutstandingrewards) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/outstanding_rewards | ValidatorOutstandingRewards
-[**validatorSlashes**](QueryApi.md#validatorslashes) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/slashes | ValidatorSlashes
-[**validatorUnbondingDelegations**](QueryApi.md#validatorunbondingdelegations) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/unbonding_delegations | ValidatorUnbondingDelegations
-[**validators**](QueryApi.md#validators) | **GET** /cosmos/staking/v1beta1/validators | Validators
-[**vote**](QueryApi.md#vote) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/votes/{voter} | Vote
-[**voteTargets**](QueryApi.md#votetargets) | **GET** /terra/oracle/v1beta1/denoms/vote_targets | VoteTargets
-[**votes**](QueryApi.md#votes) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/votes | Votes
-[**wasmParams**](QueryApi.md#wasmparams) | **GET** /terra/wasm/v1beta1/params | WasmParams
+[**account**](QueryApi.md#account) | **GET** /cosmos/auth/v1beta1/accounts/{address} | Account returns account details based on address.
+[**accounts**](QueryApi.md#accounts) | **GET** /cosmos/auth/v1beta1/accounts | Accounts returns all the existing accounts
+[**actives**](QueryApi.md#actives) | **GET** /terra/oracle/v1beta1/denoms/actives | Actives returns all active denoms
+[**aggregatePrevote**](QueryApi.md#aggregateprevote) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/aggregate_prevote | AggregatePrevote returns an aggregate prevote of a validator
+[**aggregatePrevotes**](QueryApi.md#aggregateprevotes) | **GET** /terra/oracle/v1beta1/validators/aggregate_prevotes | AggregatePrevotes returns aggregate prevotes of all validators
+[**aggregateVote**](QueryApi.md#aggregatevote) | **GET** /terra/oracle/v1beta1/valdiators/{validator_addr}/aggregate_vote | AggregateVote returns an aggregate vote of a validator
+[**aggregateVotes**](QueryApi.md#aggregatevotes) | **GET** /terra/oracle/v1beta1/validators/aggregate_votes | AggregateVotes returns aggregate votes of all validators
+[**allBalances**](QueryApi.md#allbalances) | **GET** /cosmos/bank/v1beta1/balances/{address} | AllBalances queries the balance of all coins for a single account.
+[**allEvidence**](QueryApi.md#allevidence) | **GET** /cosmos/evidence/v1beta1/evidence | AllEvidence queries all evidence.
+[**allowance**](QueryApi.md#allowance) | **GET** /cosmos/feegrant/v1beta1/allowance/{granter}/{grantee} | Allowance returns fee granted to the grantee by the granter.
+[**allowances**](QueryApi.md#allowances) | **GET** /cosmos/feegrant/v1beta1/allowances/{grantee} | Allowances returns all the grants for address.
+[**annualProvisions**](QueryApi.md#annualprovisions) | **GET** /cosmos/mint/v1beta1/annual_provisions | AnnualProvisions current minting annual provisions value.
+[**appliedPlan**](QueryApi.md#appliedplan) | **GET** /cosmos/upgrade/v1beta1/applied_plan/{name} | AppliedPlan queries a previously applied upgrade plan by its name.
+[**authParams**](QueryApi.md#authparams) | **GET** /cosmos/auth/v1beta1/params | Params queries all parameters.
+[**balance**](QueryApi.md#balance) | **GET** /cosmos/bank/v1beta1/balances/{address}/by_denom | Balance queries the balance of a single coin for a single account.
+[**bankParams**](QueryApi.md#bankparams) | **GET** /cosmos/bank/v1beta1/params | Params queries the parameters of x/bank module.
+[**byteCode**](QueryApi.md#bytecode) | **GET** /terra/wasm/v1beta1/codes/{code_id}/byte_code | ByteCode returns the stored byte code
+[**channel**](QueryApi.md#channel) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id} | Channel queries an IBC Channel.
+[**channelClientState**](QueryApi.md#channelclientstate) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/client_state | ChannelClientState queries for the client state for the channel associated with the provided channel identifiers.
+[**channelConsensusState**](QueryApi.md#channelconsensusstate) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/consensus_state/revision/{revision_number}/height/{revision_height} | ChannelConsensusState queries for the consensus state for the channel associated with the provided channel identifiers.
+[**channels**](QueryApi.md#channels) | **GET** /ibc/core/channel/v1/channels | Channels queries all the IBC channels of a chain.
+[**clientConnections**](QueryApi.md#clientconnections) | **GET** /ibc/core/connection/v1/client_connections/{client_id} | ClientConnections queries the connection paths associated with a client state.
+[**clientParams**](QueryApi.md#clientparams) | **GET** /ibc/client/v1/params | ClientParams queries all parameters of the ibc client.
+[**clientState**](QueryApi.md#clientstate) | **GET** /ibc/core/client/v1/client_states/{client_id} | ClientState queries an IBC light client.
+[**clientStates**](QueryApi.md#clientstates) | **GET** /ibc/core/client/v1/client_states | ClientStates queries all the IBC light clients of a chain.
+[**clientStatus**](QueryApi.md#clientstatus) | **GET** /ibc/core/client/v1/client_status/{client_id} | Status queries the status of an IBC client.
+[**codeInfo**](QueryApi.md#codeinfo) | **GET** /terra/wasm/v1beta1/codes/{code_id} | CodeInfo returns the stored code info
+[**communityPool**](QueryApi.md#communitypool) | **GET** /cosmos/distribution/v1beta1/community_pool | CommunityPool queries the community pool coins.
+[**connection**](QueryApi.md#connection) | **GET** /ibc/core/connection/v1/connections/{connection_id} | Connection queries an IBC connection end.
+[**connectionChannels**](QueryApi.md#connectionchannels) | **GET** /ibc/core/channel/v1/connections/{connection}/channels | ConnectionChannels queries all the channels associated with a connection end.
+[**connectionClientState**](QueryApi.md#connectionclientstate) | **GET** /ibc/core/connection/v1/connections/{connection_id}/client_state | ConnectionClientState queries the client state associated with the connection.
+[**connectionConsensusState**](QueryApi.md#connectionconsensusstate) | **GET** /ibc/core/connection/v1/connections/{connection_id}/consensus_state/revision/{revision_number}/height/{revision_height} | ConnectionConsensusState queries the consensus state associated with the connection.
+[**connections**](QueryApi.md#connections) | **GET** /ibc/core/connection/v1/connections | Connections queries all the IBC connections of a chain.
+[**consensusState**](QueryApi.md#consensusstate) | **GET** /ibc/core/client/v1/consensus_states/{client_id}/revision/{revision_number}/height/{revision_height} | ConsensusState queries a consensus state associated with a client state at a given height.
+[**consensusStates**](QueryApi.md#consensusstates) | **GET** /ibc/core/client/v1/consensus_states/{client_id} | ConsensusStates queries all the consensus state associated with a given client.
+[**contractInfo**](QueryApi.md#contractinfo) | **GET** /terra/wasm/v1beta1/contracts/{contract_address} | ContractInfo returns the stored contract info
+[**contractStore**](QueryApi.md#contractstore) | **GET** /terra/wasm/v1beta1/contracts/{contract_address}/store | ContractStore return smart query result from the contract
+[**currentPlan**](QueryApi.md#currentplan) | **GET** /cosmos/upgrade/v1beta1/current_plan | CurrentPlan queries the current upgrade plan.
+[**delegation**](QueryApi.md#delegation) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr} | Delegation queries delegate info for given validator delegator pair.
+[**delegationRewards**](QueryApi.md#delegationrewards) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards/{validator_address} | DelegationRewards queries the total rewards accrued by a delegation.
+[**delegationTotalRewards**](QueryApi.md#delegationtotalrewards) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards | DelegationTotalRewards queries the total rewards accrued by a each validator.
+[**delegatorDelegations**](QueryApi.md#delegatordelegations) | **GET** /cosmos/staking/v1beta1/delegations/{delegator_addr} | DelegatorDelegations queries all delegations of a given delegator address.
+[**delegatorUnbondingDelegations**](QueryApi.md#delegatorunbondingdelegations) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/unbonding_delegations | DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
+[**delegatorValidator**](QueryApi.md#delegatorvalidator) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/validators/{validator_addr} | DelegatorValidator queries validator info for given delegator validator pair.
+[**delegatorValidators**](QueryApi.md#delegatorvalidators) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/validators | DelegatorValidators queries the validators of a delegator.
+[**delegatorWithdrawAddress**](QueryApi.md#delegatorwithdrawaddress) | **GET** /cosmos/distribution/v1beta1/delegators/{delegator_address}/withdraw_address | DelegatorWithdrawAddress queries withdraw address of a delegator.
+[**denomMetadata**](QueryApi.md#denommetadata) | **GET** /cosmos/bank/v1beta1/denoms_metadata/{denom} | DenomsMetadata queries the client metadata of a given coin denomination.
+[**denomTrace**](QueryApi.md#denomtrace) | **GET** /ibc/apps/transfer/v1/denom_traces/{hash} | DenomTrace queries a denomination trace information.
+[**denomTraces**](QueryApi.md#denomtraces) | **GET** /ibc/apps/transfer/v1/denom_traces | DenomTraces queries all denomination traces.
+[**denomsMetadata**](QueryApi.md#denomsmetadata) | **GET** /cosmos/bank/v1beta1/denoms_metadata | DenomsMetadata queries the client metadata for all registered coin denominations.
+[**deposit**](QueryApi.md#deposit) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/deposits/{depositor} | Deposit queries single deposit information based proposalID, depositAddr.
+[**deposits**](QueryApi.md#deposits) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/deposits | Deposits queries all deposits of a single proposal.
+[**distributionParams**](QueryApi.md#distributionparams) | **GET** /cosmos/distribution/v1beta1/params | Params queries params of the distribution module.
+[**evidence**](QueryApi.md#evidence) | **GET** /cosmos/evidence/v1beta1/evidence/{evidence_hash} | Evidence queries evidence based on evidence hash.
+[**exchangeRate**](QueryApi.md#exchangerate) | **GET** /terra/oracle/v1beta1/denoms/{denom}/exchange_rate | ExchangeRate returns exchange rate of a denom
+[**exchangeRates**](QueryApi.md#exchangerates) | **GET** /terra/oracle/v1beta1/denoms/exchange_rates | ExchangeRates returns exchange rates of all denoms
+[**feederDelegation**](QueryApi.md#feederdelegation) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/feeder | FeederDelegation returns feeder delegation of a validator
+[**govParams**](QueryApi.md#govparams) | **GET** /cosmos/gov/v1beta1/params/{params_type} | Params queries all parameters of the gov module.
+[**grants**](QueryApi.md#grants) | **GET** /cosmos/authz/v1beta1/grants | Returns list of &#x60;Authorization&#x60;, granted to the grantee by the granter.
+[**historicalInfo**](QueryApi.md#historicalinfo) | **GET** /cosmos/staking/v1beta1/historical_info/{height} | HistoricalInfo queries the historical info for given height.
+[**iBCTransferParams**](QueryApi.md#ibctransferparams) | **GET** /ibc/apps/transfer/v1/params | Params queries all parameters of the ibc-transfer module.
+[**iBCUpgradedConsensusState**](QueryApi.md#ibcupgradedconsensusstate) | **GET** /ibc/core/client/v1/upgraded_consensus_states | UpgradedConsensusState queries an Upgraded IBC consensus state.
+[**indicators**](QueryApi.md#indicators) | **GET** /terra/treasury/v1beta1/indicators | Indicators return the current trl informations
+[**inflation**](QueryApi.md#inflation) | **GET** /cosmos/mint/v1beta1/inflation | Inflation returns the current minting inflation value.
+[**marketParams**](QueryApi.md#marketparams) | **GET** /terra/market/v1beta1/params | Params queries all parameters.
+[**mintParams**](QueryApi.md#mintparams) | **GET** /cosmos/mint/v1beta1/params | Params returns the total set of minting parameters.
+[**missCounter**](QueryApi.md#misscounter) | **GET** /terra/oracle/v1beta1/validators/{validator_addr}/miss | MissCounter returns oracle miss counter of a validator
+[**moduleVersions**](QueryApi.md#moduleversions) | **GET** /cosmos/upgrade/v1beta1/module_versions | ModuleVersions queries the list of module versions from state.
+[**nextSequenceReceive**](QueryApi.md#nextsequencereceive) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/next_sequence | NextSequenceReceive returns the next receive sequence for a given channel.
+[**oracleParams**](QueryApi.md#oracleparams) | **GET** /terra/oracle/v1beta1/params | Params queries all parameters.
+[**packetAcknowledgement**](QueryApi.md#packetacknowledgement) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_acks/{sequence} | PacketAcknowledgement queries a stored packet acknowledgement hash.
+[**packetAcknowledgements**](QueryApi.md#packetacknowledgements) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_acknowledgements | PacketAcknowledgements returns all the packet acknowledgements associated with a channel.
+[**packetCommitment**](QueryApi.md#packetcommitment) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{sequence} | PacketCommitment queries a stored packet commitment hash.
+[**packetCommitments**](QueryApi.md#packetcommitments) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments | PacketCommitments returns all the packet commitments hashes associated with a channel.
+[**packetReceipt**](QueryApi.md#packetreceipt) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_receipts/{sequence} | PacketReceipt queries if a given packet sequence has been received on the queried chain
+[**params**](QueryApi.md#params) | **GET** /cosmos/params/v1beta1/params | Params queries a specific parameter of a module, given its subspace and key.
+[**pool**](QueryApi.md#pool) | **GET** /cosmos/staking/v1beta1/pool | Pool queries the pool info.
+[**proposal**](QueryApi.md#proposal) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id} | Proposal queries proposal details based on ProposalID.
+[**proposals**](QueryApi.md#proposals) | **GET** /cosmos/gov/v1beta1/proposals | Proposals queries all proposals based on given status.
+[**rawStore**](QueryApi.md#rawstore) | **GET** /terra/wasm/v1beta1/contracts/{contract_address}/store/raw | RawStore return single key from the raw store data of a contract
+[**redelegations**](QueryApi.md#redelegations) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/redelegations | Redelegations queries redelegations of given address.
+[**rewardWeight**](QueryApi.md#rewardweight) | **GET** /terra/treasury/v1beta1/reward_weight | RewardWeight return the current reward weight
+[**seigniorageProceeds**](QueryApi.md#seigniorageproceeds) | **GET** /terra/treasury/v1beta1/seigniorage_proceeds | SeigniorageProceeds return the current seigniorage proceeds
+[**signingInfo**](QueryApi.md#signinginfo) | **GET** /cosmos/slashing/v1beta1/signing_infos/{cons_address} | SigningInfo queries the signing info of given cons address
+[**signingInfos**](QueryApi.md#signinginfos) | **GET** /cosmos/slashing/v1beta1/signing_infos | SigningInfos queries signing info of all validators
+[**slashingParams**](QueryApi.md#slashingparams) | **GET** /cosmos/slashing/v1beta1/params | Params queries the parameters of slashing module
+[**stakingDelegatorValidators**](QueryApi.md#stakingdelegatorvalidators) | **GET** /cosmos/staking/v1beta1/delegators/{delegator_addr}/validators | DelegatorValidators queries all validators info for given delegator address.
+[**stakingParams**](QueryApi.md#stakingparams) | **GET** /cosmos/staking/v1beta1/params | Parameters queries the staking parameters.
+[**supplyOf**](QueryApi.md#supplyof) | **GET** /cosmos/bank/v1beta1/supply/{denom} | SupplyOf queries the supply of a single coin.
+[**swap**](QueryApi.md#swap) | **GET** /terra/market/v1beta1/swap | Swap returns simulated swap amount.
+[**tallyResult**](QueryApi.md#tallyresult) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/tally | TallyResult queries the tally of a proposal vote.
+[**taxCap**](QueryApi.md#taxcap) | **GET** /terra/treasury/v1beta1/tax_caps/{denom} | TaxCap returns the tax cap of a denom
+[**taxCaps**](QueryApi.md#taxcaps) | **GET** /terra/treasury/v1beta1/tax_caps | TaxCaps returns the all tax caps
+[**taxProceeds**](QueryApi.md#taxproceeds) | **GET** /terra/treasury/v1beta1/tax_proceeds | TaxProceeds return the current tax proceeds
+[**taxRate**](QueryApi.md#taxrate) | **GET** /terra/treasury/v1beta1/tax_rate | TaxRate return the current tax rate
+[**terraPoolDelta**](QueryApi.md#terrapooldelta) | **GET** /terra/market/v1beta1/terra_pool_delta | TerraPoolDelta returns terra_pool_delta amount.
+[**tobinTax**](QueryApi.md#tobintax) | **GET** /terra/oracle/v1beta1/denoms/{denom}/tobin_tax | TobinTax returns tobin tax of a denom
+[**tobinTaxes**](QueryApi.md#tobintaxes) | **GET** /terra/oracle/v1beta1/denoms/tobin_taxes | TobinTaxes returns tobin taxes of all denoms
+[**totalSupply**](QueryApi.md#totalsupply) | **GET** /cosmos/bank/v1beta1/supply | TotalSupply queries the total supply of all coins.
+[**treasuryParams**](QueryApi.md#treasuryparams) | **GET** /terra/treasury/v1beta1/params | Params queries all parameters.
+[**unbondingDelegation**](QueryApi.md#unbondingdelegation) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}/unbonding_delegation | UnbondingDelegation queries unbonding info for given validator delegator pair.
+[**unreceivedAcks**](QueryApi.md#unreceivedacks) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{packet_ack_sequences}/unreceived_acks | UnreceivedAcks returns all the unreceived IBC acknowledgements associated with a channel and sequences.
+[**unreceivedPackets**](QueryApi.md#unreceivedpackets) | **GET** /ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments/{packet_commitment_sequences}/unreceived_packets | UnreceivedPackets returns all the unreceived IBC packets associated with a channel and sequences.
+[**upgradedClientState**](QueryApi.md#upgradedclientstate) | **GET** /ibc/core/client/v1/upgraded_client_states | UpgradedClientState queries an Upgraded IBC light client.
+[**upgradedConsensusState**](QueryApi.md#upgradedconsensusstate) | **GET** /cosmos/upgrade/v1beta1/upgraded_consensus_state/{last_height} | UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier This rpc is deprecated now that IBC has its own replacement (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
+[**validator**](QueryApi.md#validator) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr} | Validator queries validator info for given validator address.
+[**validatorCommission**](QueryApi.md#validatorcommission) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/commission | ValidatorCommission queries accumulated commission for a validator.
+[**validatorDelegations**](QueryApi.md#validatordelegations) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/delegations | ValidatorDelegations queries delegate info for given validator.
+[**validatorOutstandingRewards**](QueryApi.md#validatoroutstandingrewards) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/outstanding_rewards | ValidatorOutstandingRewards queries rewards of a validator address.
+[**validatorSlashes**](QueryApi.md#validatorslashes) | **GET** /cosmos/distribution/v1beta1/validators/{validator_address}/slashes | ValidatorSlashes queries slash events of a validator.
+[**validatorUnbondingDelegations**](QueryApi.md#validatorunbondingdelegations) | **GET** /cosmos/staking/v1beta1/validators/{validator_addr}/unbonding_delegations | ValidatorUnbondingDelegations queries unbonding delegations of a validator.
+[**validators**](QueryApi.md#validators) | **GET** /cosmos/staking/v1beta1/validators | Validators queries all validators that match the given status.
+[**vote**](QueryApi.md#vote) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/votes/{voter} | Vote queries voted information based on proposalID, voterAddr.
+[**voteTargets**](QueryApi.md#votetargets) | **GET** /terra/oracle/v1beta1/denoms/vote_targets | VoteTargets returns all vote target denoms
+[**votes**](QueryApi.md#votes) | **GET** /cosmos/gov/v1beta1/proposals/{proposal_id}/votes | Votes queries votes of a given proposal.
+[**wasmParams**](QueryApi.md#wasmparams) | **GET** /terra/wasm/v1beta1/params | Params queries all parameters.
 
 
 # **account**
-> CosmosAuthV1beta1QueryAccountResponse account(address)
-
-Account
+> Account200Response account(address)
 
 Account returns account details based on address.
 
@@ -157,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosAuthV1beta1QueryAccountResponse**](CosmosAuthV1beta1QueryAccountResponse.md)
+[**Account200Response**](Account200Response.md)
 
 ### Authorization
 
@@ -166,14 +164,14 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accounts**
-> CosmosAuthV1beta1QueryAccountsResponse accounts(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
+> Accounts200Response accounts(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
-Accounts
+Accounts returns all the existing accounts
 
 Since: cosmos-sdk 0.43
 
@@ -182,7 +180,7 @@ Since: cosmos-sdk 0.43
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -208,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosAuthV1beta1QueryAccountsResponse**](CosmosAuthV1beta1QueryAccountsResponse.md)
+[**Accounts200Response**](Accounts200Response.md)
 
 ### Authorization
 
@@ -217,14 +215,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **actives**
-> TerraOracleV1beta1QueryActivesResponse actives()
-
-Actives
+> Actives200Response actives()
 
 Actives returns all active denoms
 
@@ -247,7 +243,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryActivesResponse**](TerraOracleV1beta1QueryActivesResponse.md)
+[**Actives200Response**](Actives200Response.md)
 
 ### Authorization
 
@@ -256,14 +252,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **aggregatePrevote**
-> TerraOracleV1beta1QueryAggregatePrevoteResponse aggregatePrevote(validatorAddr)
-
-AggregatePrevote
+> AggregatePrevote200Response aggregatePrevote(validatorAddr)
 
 AggregatePrevote returns an aggregate prevote of a validator
 
@@ -290,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryAggregatePrevoteResponse**](TerraOracleV1beta1QueryAggregatePrevoteResponse.md)
+[**AggregatePrevote200Response**](AggregatePrevote200Response.md)
 
 ### Authorization
 
@@ -299,14 +293,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **aggregatePrevotes**
-> TerraOracleV1beta1QueryAggregatePrevotesResponse aggregatePrevotes()
-
-AggregatePrevotes
+> AggregatePrevotes200Response aggregatePrevotes()
 
 AggregatePrevotes returns aggregate prevotes of all validators
 
@@ -329,7 +321,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryAggregatePrevotesResponse**](TerraOracleV1beta1QueryAggregatePrevotesResponse.md)
+[**AggregatePrevotes200Response**](AggregatePrevotes200Response.md)
 
 ### Authorization
 
@@ -338,14 +330,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **aggregateVote**
-> TerraOracleV1beta1QueryAggregateVoteResponse aggregateVote(validatorAddr)
-
-AggregateVote
+> AggregateVote200Response aggregateVote(validatorAddr)
 
 AggregateVote returns an aggregate vote of a validator
 
@@ -372,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryAggregateVoteResponse**](TerraOracleV1beta1QueryAggregateVoteResponse.md)
+[**AggregateVote200Response**](AggregateVote200Response.md)
 
 ### Authorization
 
@@ -381,14 +371,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **aggregateVotes**
-> TerraOracleV1beta1QueryAggregateVotesResponse aggregateVotes()
-
-AggregateVotes
+> AggregateVotes200Response aggregateVotes()
 
 AggregateVotes returns aggregate votes of all validators
 
@@ -411,7 +399,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryAggregateVotesResponse**](TerraOracleV1beta1QueryAggregateVotesResponse.md)
+[**AggregateVotes200Response**](AggregateVotes200Response.md)
 
 ### Authorization
 
@@ -420,14 +408,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allBalances**
-> CosmosBankV1beta1QueryAllBalancesResponse allBalances(address, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-AllBalances
+> AllBalances200Response allBalances(address, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 AllBalances queries the balance of all coins for a single account.
 
@@ -437,7 +423,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String address = address_example; // String | address is the address to query balances for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -464,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBankV1beta1QueryAllBalancesResponse**](CosmosBankV1beta1QueryAllBalancesResponse.md)
+[**AllBalances200Response**](AllBalances200Response.md)
 
 ### Authorization
 
@@ -473,14 +459,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allEvidence**
-> CosmosEvidenceV1beta1QueryAllEvidenceResponse allEvidence(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-AllEvidence
+> AllEvidence200Response allEvidence(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 AllEvidence queries all evidence.
 
@@ -489,7 +473,7 @@ AllEvidence queries all evidence.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -515,7 +499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosEvidenceV1beta1QueryAllEvidenceResponse**](CosmosEvidenceV1beta1QueryAllEvidenceResponse.md)
+[**AllEvidence200Response**](AllEvidence200Response.md)
 
 ### Authorization
 
@@ -524,14 +508,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allowance**
-> CosmosFeegrantV1beta1QueryAllowanceResponse allowance(granter, grantee)
-
-Allowance
+> Allowance200Response allowance(granter, grantee)
 
 Allowance returns fee granted to the grantee by the granter.
 
@@ -560,7 +542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosFeegrantV1beta1QueryAllowanceResponse**](CosmosFeegrantV1beta1QueryAllowanceResponse.md)
+[**Allowance200Response**](Allowance200Response.md)
 
 ### Authorization
 
@@ -569,14 +551,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allowances**
-> CosmosFeegrantV1beta1QueryAllowancesResponse allowances(grantee, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Allowances
+> Allowances200Response allowances(grantee, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Allowances returns all the grants for address.
 
@@ -586,7 +566,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String grantee = grantee_example; // String | 
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -613,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosFeegrantV1beta1QueryAllowancesResponse**](CosmosFeegrantV1beta1QueryAllowancesResponse.md)
+[**Allowances200Response**](Allowances200Response.md)
 
 ### Authorization
 
@@ -622,14 +602,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annualProvisions**
-> CosmosMintV1beta1QueryAnnualProvisionsResponse annualProvisions()
-
-AnnualProvisions
+> AnnualProvisions200Response annualProvisions()
 
 AnnualProvisions current minting annual provisions value.
 
@@ -652,7 +630,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosMintV1beta1QueryAnnualProvisionsResponse**](CosmosMintV1beta1QueryAnnualProvisionsResponse.md)
+[**AnnualProvisions200Response**](AnnualProvisions200Response.md)
 
 ### Authorization
 
@@ -661,14 +639,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **appliedPlan**
-> CosmosUpgradeV1beta1QueryAppliedPlanResponse appliedPlan(name)
-
-AppliedPlan
+> AppliedPlan200Response appliedPlan(name)
 
 AppliedPlan queries a previously applied upgrade plan by its name.
 
@@ -695,7 +671,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosUpgradeV1beta1QueryAppliedPlanResponse**](CosmosUpgradeV1beta1QueryAppliedPlanResponse.md)
+[**AppliedPlan200Response**](AppliedPlan200Response.md)
 
 ### Authorization
 
@@ -704,14 +680,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authParams**
-> CosmosAuthV1beta1QueryParamsResponse authParams()
-
-AuthParams
+> AuthParams200Response authParams()
 
 Params queries all parameters.
 
@@ -734,7 +708,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosAuthV1beta1QueryParamsResponse**](CosmosAuthV1beta1QueryParamsResponse.md)
+[**AuthParams200Response**](AuthParams200Response.md)
 
 ### Authorization
 
@@ -743,14 +717,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **balance**
-> CosmosBankV1beta1QueryBalanceResponse balance(address, denom)
-
-Balance
+> Balance200Response balance(address, denom)
 
 Balance queries the balance of a single coin for a single account.
 
@@ -779,7 +751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBankV1beta1QueryBalanceResponse**](CosmosBankV1beta1QueryBalanceResponse.md)
+[**Balance200Response**](Balance200Response.md)
 
 ### Authorization
 
@@ -788,14 +760,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bankParams**
-> CosmosBankV1beta1QueryParamsResponse bankParams()
-
-BankParams
+> BankParams200Response bankParams()
 
 Params queries the parameters of x/bank module.
 
@@ -818,7 +788,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosBankV1beta1QueryParamsResponse**](CosmosBankV1beta1QueryParamsResponse.md)
+[**BankParams200Response**](BankParams200Response.md)
 
 ### Authorization
 
@@ -827,14 +797,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **byteCode**
-> TerraWasmV1beta1QueryByteCodeResponse byteCode(codeId)
-
-ByteCode
+> ByteCode200Response byteCode(codeId)
 
 ByteCode returns the stored byte code
 
@@ -861,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraWasmV1beta1QueryByteCodeResponse**](TerraWasmV1beta1QueryByteCodeResponse.md)
+[**ByteCode200Response**](ByteCode200Response.md)
 
 ### Authorization
 
@@ -870,14 +838,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **channel**
-> IbcCoreChannelV1QueryChannelResponse channel(channelId, portId)
-
-Channel
+> Channel200Response channel(channelId, portId)
 
 Channel queries an IBC Channel.
 
@@ -906,7 +872,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreChannelV1QueryChannelResponse**](IbcCoreChannelV1QueryChannelResponse.md)
+[**Channel200Response**](Channel200Response.md)
 
 ### Authorization
 
@@ -915,14 +881,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **channelClientState**
-> QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod channelClientState(channelId, portId)
-
-ChannelClientState
+> QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod channelClientState(channelId, portId)
 
 ChannelClientState queries for the client state for the channel associated with the provided channel identifiers.
 
@@ -951,7 +915,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod**](QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod.md)
+[**QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod**](QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod.md)
 
 ### Authorization
 
@@ -960,14 +924,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **channelConsensusState**
-> QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod channelConsensusState(channelId, portId, revisionNumber, revisionHeight)
-
-ChannelConsensusState
+> QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1 channelConsensusState(channelId, portId, revisionNumber, revisionHeight)
 
 ChannelConsensusState queries for the consensus state for the channel associated with the provided channel identifiers.
 
@@ -1000,7 +962,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod**](QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod.md)
+[**QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1**](QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1.md)
 
 ### Authorization
 
@@ -1009,14 +971,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **channels**
-> IbcCoreChannelV1QueryChannelsResponse channels(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Channels
+> Channels200Response channels(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Channels queries all the IBC channels of a chain.
 
@@ -1025,7 +985,7 @@ Channels queries all the IBC channels of a chain.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -1051,7 +1011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreChannelV1QueryChannelsResponse**](IbcCoreChannelV1QueryChannelsResponse.md)
+[**Channels200Response**](Channels200Response.md)
 
 ### Authorization
 
@@ -1060,14 +1020,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clientConnections**
-> QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod clientConnections(clientId)
-
-ClientConnections
+> QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod clientConnections(clientId)
 
 ClientConnections queries the connection paths associated with a client state.
 
@@ -1094,7 +1052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod**](QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod.md)
+[**QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod**](QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod.md)
 
 ### Authorization
 
@@ -1103,14 +1061,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clientParams**
-> IbcCoreClientV1QueryClientParamsResponse clientParams()
-
-ClientParams
+> ClientParams200Response clientParams()
 
 ClientParams queries all parameters of the ibc client.
 
@@ -1133,7 +1089,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IbcCoreClientV1QueryClientParamsResponse**](IbcCoreClientV1QueryClientParamsResponse.md)
+[**ClientParams200Response**](ClientParams200Response.md)
 
 ### Authorization
 
@@ -1142,14 +1098,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clientState**
-> IbcCoreClientV1QueryClientStateResponse clientState(clientId)
-
-ClientState
+> ClientState200Response clientState(clientId)
 
 ClientState queries an IBC light client.
 
@@ -1176,7 +1130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreClientV1QueryClientStateResponse**](IbcCoreClientV1QueryClientStateResponse.md)
+[**ClientState200Response**](ClientState200Response.md)
 
 ### Authorization
 
@@ -1185,14 +1139,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clientStates**
-> IbcCoreClientV1QueryClientStatesResponse clientStates(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ClientStates
+> ClientStates200Response clientStates(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ClientStates queries all the IBC light clients of a chain.
 
@@ -1201,7 +1153,7 @@ ClientStates queries all the IBC light clients of a chain.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -1227,7 +1179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreClientV1QueryClientStatesResponse**](IbcCoreClientV1QueryClientStatesResponse.md)
+[**ClientStates200Response**](ClientStates200Response.md)
 
 ### Authorization
 
@@ -1236,14 +1188,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clientStatus**
-> IbcCoreClientV1QueryClientStatusResponse clientStatus(clientId)
-
-ClientStatus
+> ClientStatus200Response clientStatus(clientId)
 
 Status queries the status of an IBC client.
 
@@ -1270,7 +1220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreClientV1QueryClientStatusResponse**](IbcCoreClientV1QueryClientStatusResponse.md)
+[**ClientStatus200Response**](ClientStatus200Response.md)
 
 ### Authorization
 
@@ -1279,14 +1229,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **codeInfo**
-> TerraWasmV1beta1QueryCodeInfoResponse codeInfo(codeId)
-
-CodeInfo
+> CodeInfo200Response codeInfo(codeId)
 
 CodeInfo returns the stored code info
 
@@ -1313,7 +1261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraWasmV1beta1QueryCodeInfoResponse**](TerraWasmV1beta1QueryCodeInfoResponse.md)
+[**CodeInfo200Response**](CodeInfo200Response.md)
 
 ### Authorization
 
@@ -1322,14 +1270,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityPool**
-> CosmosDistributionV1beta1QueryCommunityPoolResponse communityPool()
-
-CommunityPool
+> CommunityPool200Response communityPool()
 
 CommunityPool queries the community pool coins.
 
@@ -1352,7 +1298,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryCommunityPoolResponse**](CosmosDistributionV1beta1QueryCommunityPoolResponse.md)
+[**CommunityPool200Response**](CommunityPool200Response.md)
 
 ### Authorization
 
@@ -1361,14 +1307,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **connection**
-> IbcCoreConnectionV1QueryConnectionResponse connection(connectionId)
-
-Connection
+> Connection200Response connection(connectionId)
 
 Connection queries an IBC connection end.
 
@@ -1395,7 +1339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreConnectionV1QueryConnectionResponse**](IbcCoreConnectionV1QueryConnectionResponse.md)
+[**Connection200Response**](Connection200Response.md)
 
 ### Authorization
 
@@ -1404,14 +1348,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **connectionChannels**
-> QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod connectionChannels(connection, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ConnectionChannels
+> QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod connectionChannels(connection, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ConnectionChannels queries all the channels associated with a connection end.
 
@@ -1421,7 +1363,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String connection = connection_example; // String | connection unique identifier
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -1448,7 +1390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod**](QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod.md)
+[**QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod**](QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod.md)
 
 ### Authorization
 
@@ -1457,14 +1399,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **connectionClientState**
-> QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod connectionClientState(connectionId)
-
-ConnectionClientState
+> QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod connectionClientState(connectionId)
 
 ConnectionClientState queries the client state associated with the connection.
 
@@ -1491,7 +1431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod**](QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod.md)
+[**QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod**](QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod.md)
 
 ### Authorization
 
@@ -1500,14 +1440,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **connectionConsensusState**
-> QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod connectionConsensusState(connectionId, revisionNumber, revisionHeight)
-
-ConnectionConsensusState
+> QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod connectionConsensusState(connectionId, revisionNumber, revisionHeight)
 
 ConnectionConsensusState queries the consensus state associated with the connection.
 
@@ -1538,7 +1476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod**](QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod.md)
+[**QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod**](QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod.md)
 
 ### Authorization
 
@@ -1547,14 +1485,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **connections**
-> IbcCoreConnectionV1QueryConnectionsResponse connections(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Connections
+> Connections200Response connections(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Connections queries all the IBC connections of a chain.
 
@@ -1563,7 +1499,7 @@ Connections queries all the IBC connections of a chain.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -1589,7 +1525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcCoreConnectionV1QueryConnectionsResponse**](IbcCoreConnectionV1QueryConnectionsResponse.md)
+[**Connections200Response**](Connections200Response.md)
 
 ### Authorization
 
@@ -1598,14 +1534,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consensusState**
-> QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod consensusState(clientId, revisionNumber, revisionHeight, latestHeight)
-
-ConsensusState
+> QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod consensusState(clientId, revisionNumber, revisionHeight, latestHeight)
 
 ConsensusState queries a consensus state associated with a client state at a given height.
 
@@ -1638,7 +1572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod**](QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod.md)
+[**QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod**](QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod.md)
 
 ### Authorization
 
@@ -1647,14 +1581,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consensusStates**
-> QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod consensusStates(clientId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ConsensusStates
+> QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod consensusStates(clientId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ConsensusStates queries all the consensus state associated with a given client.
 
@@ -1664,7 +1596,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String clientId = clientId_example; // String | client identifier
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -1691,7 +1623,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod**](QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod.md)
+[**QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod**](QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod.md)
 
 ### Authorization
 
@@ -1700,14 +1632,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **contractInfo**
-> TerraWasmV1beta1QueryContractInfoResponse contractInfo(contractAddress)
-
-ContractInfo
+> ContractInfo200Response contractInfo(contractAddress)
 
 ContractInfo returns the stored contract info
 
@@ -1734,7 +1664,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraWasmV1beta1QueryContractInfoResponse**](TerraWasmV1beta1QueryContractInfoResponse.md)
+[**ContractInfo200Response**](ContractInfo200Response.md)
 
 ### Authorization
 
@@ -1743,14 +1673,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **contractStore**
-> TerraWasmV1beta1QueryContractStoreResponse contractStore(contractAddress, queryMsg)
-
-ContractStore
+> ContractStore200Response contractStore(contractAddress, queryMsg)
 
 ContractStore return smart query result from the contract
 
@@ -1760,7 +1688,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String contractAddress = contractAddress_example; // String | 
-final String queryMsg = queryMsg_example; // String | 
+final String queryMsg = BYTE_ARRAY_DATA_HERE; // String | 
 
 try {
     final response = api.contractStore(contractAddress, queryMsg);
@@ -1779,7 +1707,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraWasmV1beta1QueryContractStoreResponse**](TerraWasmV1beta1QueryContractStoreResponse.md)
+[**ContractStore200Response**](ContractStore200Response.md)
 
 ### Authorization
 
@@ -1788,14 +1716,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **currentPlan**
-> CosmosUpgradeV1beta1QueryCurrentPlanResponse currentPlan()
-
-CurrentPlan
+> CurrentPlan200Response currentPlan()
 
 CurrentPlan queries the current upgrade plan.
 
@@ -1818,7 +1744,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosUpgradeV1beta1QueryCurrentPlanResponse**](CosmosUpgradeV1beta1QueryCurrentPlanResponse.md)
+[**CurrentPlan200Response**](CurrentPlan200Response.md)
 
 ### Authorization
 
@@ -1827,14 +1753,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegation**
-> CosmosStakingV1beta1QueryDelegationResponse delegation(validatorAddr, delegatorAddr)
-
-Delegation
+> Delegation200Response delegation(validatorAddr, delegatorAddr)
 
 Delegation queries delegate info for given validator delegator pair.
 
@@ -1863,7 +1787,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryDelegationResponse**](CosmosStakingV1beta1QueryDelegationResponse.md)
+[**Delegation200Response**](Delegation200Response.md)
 
 ### Authorization
 
@@ -1872,14 +1796,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegationRewards**
-> CosmosDistributionV1beta1QueryDelegationRewardsResponse delegationRewards(delegatorAddress, validatorAddress)
-
-DelegationRewards
+> DelegationRewards200Response delegationRewards(delegatorAddress, validatorAddress)
 
 DelegationRewards queries the total rewards accrued by a delegation.
 
@@ -1908,7 +1830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryDelegationRewardsResponse**](CosmosDistributionV1beta1QueryDelegationRewardsResponse.md)
+[**DelegationRewards200Response**](DelegationRewards200Response.md)
 
 ### Authorization
 
@@ -1917,14 +1839,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegationTotalRewards**
-> CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse delegationTotalRewards(delegatorAddress)
-
-DelegationTotalRewards
+> DelegationTotalRewards200Response delegationTotalRewards(delegatorAddress)
 
 DelegationTotalRewards queries the total rewards accrued by a each validator.
 
@@ -1951,7 +1871,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse**](CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse.md)
+[**DelegationTotalRewards200Response**](DelegationTotalRewards200Response.md)
 
 ### Authorization
 
@@ -1960,14 +1880,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegatorDelegations**
-> CosmosStakingV1beta1QueryDelegatorDelegationsResponse delegatorDelegations(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-DelegatorDelegations
+> DelegatorDelegations200Response delegatorDelegations(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 DelegatorDelegations queries all delegations of a given delegator address.
 
@@ -1977,7 +1895,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String delegatorAddr = delegatorAddr_example; // String | delegator_addr defines the delegator address to query for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2004,7 +1922,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryDelegatorDelegationsResponse**](CosmosStakingV1beta1QueryDelegatorDelegationsResponse.md)
+[**DelegatorDelegations200Response**](DelegatorDelegations200Response.md)
 
 ### Authorization
 
@@ -2013,14 +1931,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegatorUnbondingDelegations**
-> CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse delegatorUnbondingDelegations(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-DelegatorUnbondingDelegations
+> DelegatorUnbondingDelegations200Response delegatorUnbondingDelegations(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
 
@@ -2030,7 +1946,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String delegatorAddr = delegatorAddr_example; // String | delegator_addr defines the delegator address to query for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2057,7 +1973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse**](CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse.md)
+[**DelegatorUnbondingDelegations200Response**](DelegatorUnbondingDelegations200Response.md)
 
 ### Authorization
 
@@ -2066,14 +1982,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegatorValidator**
-> CosmosStakingV1beta1QueryDelegatorValidatorResponse delegatorValidator(delegatorAddr, validatorAddr)
-
-DelegatorValidator
+> DelegatorValidator200Response delegatorValidator(delegatorAddr, validatorAddr)
 
 DelegatorValidator queries validator info for given delegator validator pair.
 
@@ -2102,7 +2016,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryDelegatorValidatorResponse**](CosmosStakingV1beta1QueryDelegatorValidatorResponse.md)
+[**DelegatorValidator200Response**](DelegatorValidator200Response.md)
 
 ### Authorization
 
@@ -2111,14 +2025,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegatorValidators**
-> CosmosDistributionV1beta1QueryDelegatorValidatorsResponse delegatorValidators(delegatorAddress)
-
-DelegatorValidators
+> DelegatorValidators200Response delegatorValidators(delegatorAddress)
 
 DelegatorValidators queries the validators of a delegator.
 
@@ -2145,7 +2057,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryDelegatorValidatorsResponse**](CosmosDistributionV1beta1QueryDelegatorValidatorsResponse.md)
+[**DelegatorValidators200Response**](DelegatorValidators200Response.md)
 
 ### Authorization
 
@@ -2154,14 +2066,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delegatorWithdrawAddress**
-> CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse delegatorWithdrawAddress(delegatorAddress)
-
-DelegatorWithdrawAddress
+> DelegatorWithdrawAddress200Response delegatorWithdrawAddress(delegatorAddress)
 
 DelegatorWithdrawAddress queries withdraw address of a delegator.
 
@@ -2188,7 +2098,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse**](CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse.md)
+[**DelegatorWithdrawAddress200Response**](DelegatorWithdrawAddress200Response.md)
 
 ### Authorization
 
@@ -2197,14 +2107,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **denomMetadata**
-> CosmosBankV1beta1QueryDenomMetadataResponse denomMetadata(denom)
-
-DenomMetadata
+> DenomMetadata200Response denomMetadata(denom)
 
 DenomsMetadata queries the client metadata of a given coin denomination.
 
@@ -2231,7 +2139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBankV1beta1QueryDenomMetadataResponse**](CosmosBankV1beta1QueryDenomMetadataResponse.md)
+[**DenomMetadata200Response**](DenomMetadata200Response.md)
 
 ### Authorization
 
@@ -2240,14 +2148,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **denomTrace**
-> IbcApplicationsTransferV1QueryDenomTraceResponse denomTrace(hash)
-
-DenomTrace
+> DenomTrace200Response denomTrace(hash)
 
 DenomTrace queries a denomination trace information.
 
@@ -2274,7 +2180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcApplicationsTransferV1QueryDenomTraceResponse**](IbcApplicationsTransferV1QueryDenomTraceResponse.md)
+[**DenomTrace200Response**](DenomTrace200Response.md)
 
 ### Authorization
 
@@ -2283,14 +2189,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **denomTraces**
-> IbcApplicationsTransferV1QueryDenomTracesResponse denomTraces(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-DenomTraces
+> DenomTraces200Response denomTraces(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 DenomTraces queries all denomination traces.
 
@@ -2299,7 +2203,7 @@ DenomTraces queries all denomination traces.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2325,7 +2229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IbcApplicationsTransferV1QueryDenomTracesResponse**](IbcApplicationsTransferV1QueryDenomTracesResponse.md)
+[**DenomTraces200Response**](DenomTraces200Response.md)
 
 ### Authorization
 
@@ -2334,14 +2238,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **denomsMetadata**
-> CosmosBankV1beta1QueryDenomsMetadataResponse denomsMetadata(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-DenomsMetadata
+> DenomsMetadata200Response denomsMetadata(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 DenomsMetadata queries the client metadata for all registered coin denominations.
 
@@ -2350,7 +2252,7 @@ DenomsMetadata queries the client metadata for all registered coin denominations
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2376,7 +2278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBankV1beta1QueryDenomsMetadataResponse**](CosmosBankV1beta1QueryDenomsMetadataResponse.md)
+[**DenomsMetadata200Response**](DenomsMetadata200Response.md)
 
 ### Authorization
 
@@ -2385,14 +2287,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deposit**
-> CosmosGovV1beta1QueryDepositResponse deposit(proposalId, depositor)
-
-Deposit
+> Deposit200Response deposit(proposalId, depositor)
 
 Deposit queries single deposit information based proposalID, depositAddr.
 
@@ -2421,7 +2321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryDepositResponse**](CosmosGovV1beta1QueryDepositResponse.md)
+[**Deposit200Response**](Deposit200Response.md)
 
 ### Authorization
 
@@ -2430,14 +2330,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deposits**
-> CosmosGovV1beta1QueryDepositsResponse deposits(proposalId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Deposits
+> Deposits200Response deposits(proposalId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Deposits queries all deposits of a single proposal.
 
@@ -2447,7 +2345,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String proposalId = proposalId_example; // String | proposal_id defines the unique id of the proposal.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2474,7 +2372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryDepositsResponse**](CosmosGovV1beta1QueryDepositsResponse.md)
+[**Deposits200Response**](Deposits200Response.md)
 
 ### Authorization
 
@@ -2483,14 +2381,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **distributionParams**
-> CosmosDistributionV1beta1QueryParamsResponse distributionParams()
-
-DistributionParams
+> DistributionParams200Response distributionParams()
 
 Params queries params of the distribution module.
 
@@ -2513,7 +2409,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryParamsResponse**](CosmosDistributionV1beta1QueryParamsResponse.md)
+[**DistributionParams200Response**](DistributionParams200Response.md)
 
 ### Authorization
 
@@ -2522,14 +2418,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **evidence**
-> CosmosEvidenceV1beta1QueryEvidenceResponse evidence(evidenceHash)
-
-Evidence
+> Evidence200Response evidence(evidenceHash)
 
 Evidence queries evidence based on evidence hash.
 
@@ -2538,7 +2432,7 @@ Evidence queries evidence based on evidence hash.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String evidenceHash = evidenceHash_example; // String | evidence_hash defines the hash of the requested evidence.
+final String evidenceHash = BYTE_ARRAY_DATA_HERE; // String | evidence_hash defines the hash of the requested evidence.
 
 try {
     final response = api.evidence(evidenceHash);
@@ -2556,7 +2450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosEvidenceV1beta1QueryEvidenceResponse**](CosmosEvidenceV1beta1QueryEvidenceResponse.md)
+[**Evidence200Response**](Evidence200Response.md)
 
 ### Authorization
 
@@ -2565,14 +2459,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exchangeRate**
-> TerraOracleV1beta1QueryExchangeRateResponse exchangeRate(denom)
-
-ExchangeRate
+> ExchangeRate200Response exchangeRate(denom)
 
 ExchangeRate returns exchange rate of a denom
 
@@ -2599,7 +2491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryExchangeRateResponse**](TerraOracleV1beta1QueryExchangeRateResponse.md)
+[**ExchangeRate200Response**](ExchangeRate200Response.md)
 
 ### Authorization
 
@@ -2608,14 +2500,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exchangeRates**
-> TerraOracleV1beta1QueryExchangeRatesResponse exchangeRates()
-
-ExchangeRates
+> ExchangeRates200Response exchangeRates()
 
 ExchangeRates returns exchange rates of all denoms
 
@@ -2638,7 +2528,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryExchangeRatesResponse**](TerraOracleV1beta1QueryExchangeRatesResponse.md)
+[**ExchangeRates200Response**](ExchangeRates200Response.md)
 
 ### Authorization
 
@@ -2647,14 +2537,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **feederDelegation**
-> TerraOracleV1beta1QueryFeederDelegationResponse feederDelegation(validatorAddr)
-
-FeederDelegation
+> FeederDelegation200Response feederDelegation(validatorAddr)
 
 FeederDelegation returns feeder delegation of a validator
 
@@ -2681,7 +2569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryFeederDelegationResponse**](TerraOracleV1beta1QueryFeederDelegationResponse.md)
+[**FeederDelegation200Response**](FeederDelegation200Response.md)
 
 ### Authorization
 
@@ -2690,14 +2578,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **govParams**
-> CosmosGovV1beta1QueryParamsResponse govParams(paramsType)
-
-GovParams
+> GovParams200Response govParams(paramsType)
 
 Params queries all parameters of the gov module.
 
@@ -2724,7 +2610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryParamsResponse**](CosmosGovV1beta1QueryParamsResponse.md)
+[**GovParams200Response**](GovParams200Response.md)
 
 ### Authorization
 
@@ -2733,14 +2619,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **grants**
-> CosmosAuthzV1beta1QueryGrantsResponse grants(granter, grantee, msgTypeUrl, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Grants
+> Grants200Response grants(granter, grantee, msgTypeUrl, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Returns list of `Authorization`, granted to the grantee by the granter.
 
@@ -2752,7 +2636,7 @@ final api = TerraRestApi().getQueryApi();
 final String granter = granter_example; // String | 
 final String grantee = grantee_example; // String | 
 final String msgTypeUrl = msgTypeUrl_example; // String | Optional, msg_type_url, when set, will query only grants matching given msg type.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -2781,7 +2665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosAuthzV1beta1QueryGrantsResponse**](CosmosAuthzV1beta1QueryGrantsResponse.md)
+[**Grants200Response**](Grants200Response.md)
 
 ### Authorization
 
@@ -2790,14 +2674,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **historicalInfo**
-> CosmosStakingV1beta1QueryHistoricalInfoResponse historicalInfo(height)
-
-HistoricalInfo
+> HistoricalInfo200Response historicalInfo(height)
 
 HistoricalInfo queries the historical info for given height.
 
@@ -2824,7 +2706,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryHistoricalInfoResponse**](CosmosStakingV1beta1QueryHistoricalInfoResponse.md)
+[**HistoricalInfo200Response**](HistoricalInfo200Response.md)
 
 ### Authorization
 
@@ -2833,14 +2715,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **iBCTransferParams**
-> IbcApplicationsTransferV1QueryParamsResponse iBCTransferParams()
-
-IBCTransferParams
+> IBCTransferParams200Response iBCTransferParams()
 
 Params queries all parameters of the ibc-transfer module.
 
@@ -2863,7 +2743,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IbcApplicationsTransferV1QueryParamsResponse**](IbcApplicationsTransferV1QueryParamsResponse.md)
+[**IBCTransferParams200Response**](IBCTransferParams200Response.md)
 
 ### Authorization
 
@@ -2872,14 +2752,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **iBCUpgradedConsensusState**
-> IbcCoreClientV1QueryUpgradedConsensusStateResponse iBCUpgradedConsensusState()
-
-IBCUpgradedConsensusState
+> IBCUpgradedConsensusState200Response iBCUpgradedConsensusState()
 
 UpgradedConsensusState queries an Upgraded IBC consensus state.
 
@@ -2902,7 +2780,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IbcCoreClientV1QueryUpgradedConsensusStateResponse**](IbcCoreClientV1QueryUpgradedConsensusStateResponse.md)
+[**IBCUpgradedConsensusState200Response**](IBCUpgradedConsensusState200Response.md)
 
 ### Authorization
 
@@ -2911,14 +2789,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **indicators**
-> TerraTreasuryV1beta1QueryIndicatorsResponse indicators()
-
-Indicators
+> Indicators200Response indicators()
 
 Indicators return the current trl informations
 
@@ -2941,7 +2817,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryIndicatorsResponse**](TerraTreasuryV1beta1QueryIndicatorsResponse.md)
+[**Indicators200Response**](Indicators200Response.md)
 
 ### Authorization
 
@@ -2950,14 +2826,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **inflation**
-> CosmosMintV1beta1QueryInflationResponse inflation()
-
-Inflation
+> Inflation200Response inflation()
 
 Inflation returns the current minting inflation value.
 
@@ -2980,7 +2854,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosMintV1beta1QueryInflationResponse**](CosmosMintV1beta1QueryInflationResponse.md)
+[**Inflation200Response**](Inflation200Response.md)
 
 ### Authorization
 
@@ -2989,14 +2863,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **marketParams**
-> TerraMarketV1beta1QueryParamsResponse marketParams()
-
-MarketParams
+> MarketParams200Response marketParams()
 
 Params queries all parameters.
 
@@ -3019,7 +2891,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraMarketV1beta1QueryParamsResponse**](TerraMarketV1beta1QueryParamsResponse.md)
+[**MarketParams200Response**](MarketParams200Response.md)
 
 ### Authorization
 
@@ -3028,14 +2900,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mintParams**
-> CosmosMintV1beta1QueryParamsResponse mintParams()
-
-MintParams
+> MintParams200Response mintParams()
 
 Params returns the total set of minting parameters.
 
@@ -3058,7 +2928,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosMintV1beta1QueryParamsResponse**](CosmosMintV1beta1QueryParamsResponse.md)
+[**MintParams200Response**](MintParams200Response.md)
 
 ### Authorization
 
@@ -3067,14 +2937,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **missCounter**
-> TerraOracleV1beta1QueryMissCounterResponse missCounter(validatorAddr)
-
-MissCounter
+> MissCounter200Response missCounter(validatorAddr)
 
 MissCounter returns oracle miss counter of a validator
 
@@ -3101,7 +2969,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryMissCounterResponse**](TerraOracleV1beta1QueryMissCounterResponse.md)
+[**MissCounter200Response**](MissCounter200Response.md)
 
 ### Authorization
 
@@ -3110,14 +2978,14 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **moduleVersions**
-> CosmosUpgradeV1beta1QueryModuleVersionsResponse moduleVersions(moduleName)
+> ModuleVersions200Response moduleVersions(moduleName)
 
-ModuleVersions
+ModuleVersions queries the list of module versions from state.
 
 Since: cosmos-sdk 0.43
 
@@ -3144,7 +3012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosUpgradeV1beta1QueryModuleVersionsResponse**](CosmosUpgradeV1beta1QueryModuleVersionsResponse.md)
+[**ModuleVersions200Response**](ModuleVersions200Response.md)
 
 ### Authorization
 
@@ -3153,14 +3021,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **nextSequenceReceive**
-> QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod nextSequenceReceive(channelId, portId)
-
-NextSequenceReceive
+> QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod nextSequenceReceive(channelId, portId)
 
 NextSequenceReceive returns the next receive sequence for a given channel.
 
@@ -3189,7 +3055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod**](QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod.md)
+[**QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod**](QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod.md)
 
 ### Authorization
 
@@ -3198,14 +3064,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **oracleParams**
-> TerraOracleV1beta1QueryParamsResponse oracleParams()
-
-OracleParams
+> OracleParams200Response oracleParams()
 
 Params queries all parameters.
 
@@ -3228,7 +3092,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryParamsResponse**](TerraOracleV1beta1QueryParamsResponse.md)
+[**OracleParams200Response**](OracleParams200Response.md)
 
 ### Authorization
 
@@ -3237,14 +3101,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **packetAcknowledgement**
-> QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved packetAcknowledgement(channelId, portId, sequence)
-
-PacketAcknowledgement
+> QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved packetAcknowledgement(channelId, portId, sequence)
 
 PacketAcknowledgement queries a stored packet acknowledgement hash.
 
@@ -3275,7 +3137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved**](QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.md)
+[**QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved**](QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved.md)
 
 ### Authorization
 
@@ -3284,14 +3146,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **packetAcknowledgements**
-> QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod packetAcknowledgements(channelId, portId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-PacketAcknowledgements
+> QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod packetAcknowledgements(channelId, portId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 PacketAcknowledgements returns all the packet acknowledgements associated with a channel.
 
@@ -3302,7 +3162,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getQueryApi();
 final String channelId = channelId_example; // String | channel unique identifier
 final String portId = portId_example; // String | port unique identifier
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -3330,7 +3190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod**](QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod.md)
+[**QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod**](QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod.md)
 
 ### Authorization
 
@@ -3339,14 +3199,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **packetCommitment**
-> QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved packetCommitment(channelId, portId, sequence)
-
-PacketCommitment
+> QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved packetCommitment(channelId, portId, sequence)
 
 PacketCommitment queries a stored packet commitment hash.
 
@@ -3377,7 +3235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved**](QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.md)
+[**QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved**](QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved.md)
 
 ### Authorization
 
@@ -3386,14 +3244,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **packetCommitments**
-> QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod packetCommitments(channelId, portId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-PacketCommitments
+> QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod packetCommitments(channelId, portId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 PacketCommitments returns all the packet commitments hashes associated with a channel.
 
@@ -3404,7 +3260,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getQueryApi();
 final String channelId = channelId_example; // String | channel unique identifier
 final String portId = portId_example; // String | port unique identifier
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -3432,7 +3288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod**](QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod.md)
+[**QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod**](QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod.md)
 
 ### Authorization
 
@@ -3441,14 +3297,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **packetReceipt**
-> QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved packetReceipt(channelId, portId, sequence)
-
-PacketReceipt
+> QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved packetReceipt(channelId, portId, sequence)
 
 PacketReceipt queries if a given packet sequence has been received on the queried chain
 
@@ -3479,7 +3333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved**](QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.md)
+[**QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved**](QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved.md)
 
 ### Authorization
 
@@ -3488,14 +3342,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **params**
-> CosmosParamsV1beta1QueryParamsResponse params(subspace, key)
-
-Params
+> Params200Response params(subspace, key)
 
 Params queries a specific parameter of a module, given its subspace and key.
 
@@ -3524,7 +3376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosParamsV1beta1QueryParamsResponse**](CosmosParamsV1beta1QueryParamsResponse.md)
+[**Params200Response**](Params200Response.md)
 
 ### Authorization
 
@@ -3533,14 +3385,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pool**
-> CosmosStakingV1beta1QueryPoolResponse pool()
-
-Pool
+> Pool200Response pool()
 
 Pool queries the pool info.
 
@@ -3563,7 +3413,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryPoolResponse**](CosmosStakingV1beta1QueryPoolResponse.md)
+[**Pool200Response**](Pool200Response.md)
 
 ### Authorization
 
@@ -3572,14 +3422,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **proposal**
-> CosmosGovV1beta1QueryProposalResponse proposal(proposalId)
-
-Proposal
+> Proposal200Response proposal(proposalId)
 
 Proposal queries proposal details based on ProposalID.
 
@@ -3606,7 +3454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryProposalResponse**](CosmosGovV1beta1QueryProposalResponse.md)
+[**Proposal200Response**](Proposal200Response.md)
 
 ### Authorization
 
@@ -3615,14 +3463,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **proposals**
-> CosmosGovV1beta1QueryProposalsResponse proposals(proposalStatus, voter, depositor, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Proposals
+> Proposals200Response proposals(proposalStatus, voter, depositor, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Proposals queries all proposals based on given status.
 
@@ -3631,10 +3477,10 @@ Proposals queries all proposals based on given status.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final ProposalStatus proposalStatus = ; // ProposalStatus | proposal_status defines the status of the proposals.   - PROPOSAL_STATUS_UNSPECIFIED: PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.  - PROPOSAL_STATUS_DEPOSIT_PERIOD: PROPOSAL_STATUS_DEPOSIT_PERIOD defines a proposal status during the deposit period.  - PROPOSAL_STATUS_VOTING_PERIOD: PROPOSAL_STATUS_VOTING_PERIOD defines a proposal status during the voting period.  - PROPOSAL_STATUS_PASSED: PROPOSAL_STATUS_PASSED defines a proposal status of a proposal that has passed.  - PROPOSAL_STATUS_REJECTED: PROPOSAL_STATUS_REJECTED defines a proposal status of a proposal that has been rejected.  - PROPOSAL_STATUS_FAILED: PROPOSAL_STATUS_FAILED defines a proposal status of a proposal that has failed.
+final String proposalStatus = proposalStatus_example; // String | proposal_status defines the status of the proposals.   - PROPOSAL_STATUS_UNSPECIFIED: PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.  - PROPOSAL_STATUS_DEPOSIT_PERIOD: PROPOSAL_STATUS_DEPOSIT_PERIOD defines a proposal status during the deposit period.  - PROPOSAL_STATUS_VOTING_PERIOD: PROPOSAL_STATUS_VOTING_PERIOD defines a proposal status during the voting period.  - PROPOSAL_STATUS_PASSED: PROPOSAL_STATUS_PASSED defines a proposal status of a proposal that has passed.  - PROPOSAL_STATUS_REJECTED: PROPOSAL_STATUS_REJECTED defines a proposal status of a proposal that has been rejected.  - PROPOSAL_STATUS_FAILED: PROPOSAL_STATUS_FAILED defines a proposal status of a proposal that has failed.
 final String voter = voter_example; // String | voter defines the voter address for the proposals.
 final String depositor = depositor_example; // String | depositor defines the deposit addresses from the proposals.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -3652,7 +3498,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **proposalStatus** | [**ProposalStatus**](.md)| proposal_status defines the status of the proposals.   - PROPOSAL_STATUS_UNSPECIFIED: PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.  - PROPOSAL_STATUS_DEPOSIT_PERIOD: PROPOSAL_STATUS_DEPOSIT_PERIOD defines a proposal status during the deposit period.  - PROPOSAL_STATUS_VOTING_PERIOD: PROPOSAL_STATUS_VOTING_PERIOD defines a proposal status during the voting period.  - PROPOSAL_STATUS_PASSED: PROPOSAL_STATUS_PASSED defines a proposal status of a proposal that has passed.  - PROPOSAL_STATUS_REJECTED: PROPOSAL_STATUS_REJECTED defines a proposal status of a proposal that has been rejected.  - PROPOSAL_STATUS_FAILED: PROPOSAL_STATUS_FAILED defines a proposal status of a proposal that has failed. | [optional] 
+ **proposalStatus** | **String**| proposal_status defines the status of the proposals.   - PROPOSAL_STATUS_UNSPECIFIED: PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.  - PROPOSAL_STATUS_DEPOSIT_PERIOD: PROPOSAL_STATUS_DEPOSIT_PERIOD defines a proposal status during the deposit period.  - PROPOSAL_STATUS_VOTING_PERIOD: PROPOSAL_STATUS_VOTING_PERIOD defines a proposal status during the voting period.  - PROPOSAL_STATUS_PASSED: PROPOSAL_STATUS_PASSED defines a proposal status of a proposal that has passed.  - PROPOSAL_STATUS_REJECTED: PROPOSAL_STATUS_REJECTED defines a proposal status of a proposal that has been rejected.  - PROPOSAL_STATUS_FAILED: PROPOSAL_STATUS_FAILED defines a proposal status of a proposal that has failed. | [optional] [default to 'PROPOSAL_STATUS_UNSPECIFIED']
  **voter** | **String**| voter defines the voter address for the proposals. | [optional] 
  **depositor** | **String**| depositor defines the deposit addresses from the proposals. | [optional] 
  **paginationPeriodKey** | **String**| key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set. | [optional] 
@@ -3663,7 +3509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryProposalsResponse**](CosmosGovV1beta1QueryProposalsResponse.md)
+[**Proposals200Response**](Proposals200Response.md)
 
 ### Authorization
 
@@ -3672,14 +3518,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **rawStore**
-> TerraWasmV1beta1QueryRawStoreResponse rawStore(contractAddress, key)
-
-RawStore
+> RawStore200Response rawStore(contractAddress, key)
 
 RawStore return single key from the raw store data of a contract
 
@@ -3689,7 +3533,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String contractAddress = contractAddress_example; // String | 
-final String key = key_example; // String | 
+final String key = BYTE_ARRAY_DATA_HERE; // String | 
 
 try {
     final response = api.rawStore(contractAddress, key);
@@ -3708,7 +3552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraWasmV1beta1QueryRawStoreResponse**](TerraWasmV1beta1QueryRawStoreResponse.md)
+[**RawStore200Response**](RawStore200Response.md)
 
 ### Authorization
 
@@ -3717,14 +3561,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **redelegations**
-> CosmosStakingV1beta1QueryRedelegationsResponse redelegations(delegatorAddr, srcValidatorAddr, dstValidatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Redelegations
+> Redelegations200Response redelegations(delegatorAddr, srcValidatorAddr, dstValidatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Redelegations queries redelegations of given address.
 
@@ -3736,7 +3578,7 @@ final api = TerraRestApi().getQueryApi();
 final String delegatorAddr = delegatorAddr_example; // String | delegator_addr defines the delegator address to query for.
 final String srcValidatorAddr = srcValidatorAddr_example; // String | src_validator_addr defines the validator address to redelegate from.
 final String dstValidatorAddr = dstValidatorAddr_example; // String | dst_validator_addr defines the validator address to redelegate to.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -3765,7 +3607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryRedelegationsResponse**](CosmosStakingV1beta1QueryRedelegationsResponse.md)
+[**Redelegations200Response**](Redelegations200Response.md)
 
 ### Authorization
 
@@ -3774,14 +3616,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **rewardWeight**
-> TerraTreasuryV1beta1QueryRewardWeightResponse rewardWeight()
-
-RewardWeight
+> RewardWeight200Response rewardWeight()
 
 RewardWeight return the current reward weight
 
@@ -3804,7 +3644,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryRewardWeightResponse**](TerraTreasuryV1beta1QueryRewardWeightResponse.md)
+[**RewardWeight200Response**](RewardWeight200Response.md)
 
 ### Authorization
 
@@ -3813,14 +3653,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **seigniorageProceeds**
-> TerraTreasuryV1beta1QuerySeigniorageProceedsResponse seigniorageProceeds()
-
-SeigniorageProceeds
+> SeigniorageProceeds200Response seigniorageProceeds()
 
 SeigniorageProceeds return the current seigniorage proceeds
 
@@ -3843,7 +3681,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QuerySeigniorageProceedsResponse**](TerraTreasuryV1beta1QuerySeigniorageProceedsResponse.md)
+[**SeigniorageProceeds200Response**](SeigniorageProceeds200Response.md)
 
 ### Authorization
 
@@ -3852,14 +3690,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **signingInfo**
-> QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod signingInfo(consAddress)
-
-SigningInfo
+> QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod signingInfo(consAddress)
 
 SigningInfo queries the signing info of given cons address
 
@@ -3886,7 +3722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod**](QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod.md)
+[**QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod**](QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod.md)
 
 ### Authorization
 
@@ -3895,14 +3731,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **signingInfos**
-> QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod signingInfos(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-SigningInfos
+> QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod signingInfos(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 SigningInfos queries signing info of all validators
 
@@ -3911,7 +3745,7 @@ SigningInfos queries signing info of all validators
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -3937,7 +3771,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod**](QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod.md)
+[**QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod**](QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod.md)
 
 ### Authorization
 
@@ -3946,14 +3780,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **slashingParams**
-> QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod slashingParams()
-
-SlashingParams
+> QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod slashingParams()
 
 Params queries the parameters of slashing module
 
@@ -3976,7 +3808,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod**](QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod.md)
+[**QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod**](QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod.md)
 
 ### Authorization
 
@@ -3985,14 +3817,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stakingDelegatorValidators**
-> StakingDelegatorValidatorsResponse stakingDelegatorValidators(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-StakingDelegatorValidators
+> StakingDelegatorValidators200Response stakingDelegatorValidators(delegatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 DelegatorValidators queries all validators info for given delegator address.
 
@@ -4002,7 +3832,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String delegatorAddr = delegatorAddr_example; // String | delegator_addr defines the delegator address to query for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -4029,7 +3859,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StakingDelegatorValidatorsResponse**](StakingDelegatorValidatorsResponse.md)
+[**StakingDelegatorValidators200Response**](StakingDelegatorValidators200Response.md)
 
 ### Authorization
 
@@ -4038,14 +3868,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stakingParams**
-> CosmosStakingV1beta1QueryParamsResponse stakingParams()
-
-StakingParams
+> StakingParams200Response stakingParams()
 
 Parameters queries the staking parameters.
 
@@ -4068,7 +3896,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryParamsResponse**](CosmosStakingV1beta1QueryParamsResponse.md)
+[**StakingParams200Response**](StakingParams200Response.md)
 
 ### Authorization
 
@@ -4077,14 +3905,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **supplyOf**
-> CosmosBankV1beta1QuerySupplyOfResponse supplyOf(denom)
-
-SupplyOf
+> SupplyOf200Response supplyOf(denom)
 
 SupplyOf queries the supply of a single coin.
 
@@ -4111,7 +3937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBankV1beta1QuerySupplyOfResponse**](CosmosBankV1beta1QuerySupplyOfResponse.md)
+[**SupplyOf200Response**](SupplyOf200Response.md)
 
 ### Authorization
 
@@ -4120,14 +3946,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **swap**
-> TerraMarketV1beta1QuerySwapResponse swap(offerCoin, askDenom)
-
-Swap
+> Swap200Response swap(offerCoin, askDenom)
 
 Swap returns simulated swap amount.
 
@@ -4156,7 +3980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraMarketV1beta1QuerySwapResponse**](TerraMarketV1beta1QuerySwapResponse.md)
+[**Swap200Response**](Swap200Response.md)
 
 ### Authorization
 
@@ -4165,14 +3989,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tallyResult**
-> CosmosGovV1beta1QueryTallyResultResponse tallyResult(proposalId)
-
-TallyResult
+> TallyResult200Response tallyResult(proposalId)
 
 TallyResult queries the tally of a proposal vote.
 
@@ -4199,7 +4021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryTallyResultResponse**](CosmosGovV1beta1QueryTallyResultResponse.md)
+[**TallyResult200Response**](TallyResult200Response.md)
 
 ### Authorization
 
@@ -4208,14 +4030,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **taxCap**
-> TerraTreasuryV1beta1QueryTaxCapResponse taxCap(denom)
-
-TaxCap
+> TaxCap200Response taxCap(denom)
 
 TaxCap returns the tax cap of a denom
 
@@ -4242,7 +4062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryTaxCapResponse**](TerraTreasuryV1beta1QueryTaxCapResponse.md)
+[**TaxCap200Response**](TaxCap200Response.md)
 
 ### Authorization
 
@@ -4251,14 +4071,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **taxCaps**
-> TerraTreasuryV1beta1QueryTaxCapsResponse taxCaps()
-
-TaxCaps
+> TaxCaps200Response taxCaps()
 
 TaxCaps returns the all tax caps
 
@@ -4281,7 +4099,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryTaxCapsResponse**](TerraTreasuryV1beta1QueryTaxCapsResponse.md)
+[**TaxCaps200Response**](TaxCaps200Response.md)
 
 ### Authorization
 
@@ -4290,14 +4108,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **taxProceeds**
-> TerraTreasuryV1beta1QueryTaxProceedsResponse taxProceeds()
-
-TaxProceeds
+> TaxProceeds200Response taxProceeds()
 
 TaxProceeds return the current tax proceeds
 
@@ -4320,7 +4136,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryTaxProceedsResponse**](TerraTreasuryV1beta1QueryTaxProceedsResponse.md)
+[**TaxProceeds200Response**](TaxProceeds200Response.md)
 
 ### Authorization
 
@@ -4329,14 +4145,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **taxRate**
-> TerraTreasuryV1beta1QueryTaxRateResponse taxRate()
-
-TaxRate
+> TaxRate200Response taxRate()
 
 TaxRate return the current tax rate
 
@@ -4359,7 +4173,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryTaxRateResponse**](TerraTreasuryV1beta1QueryTaxRateResponse.md)
+[**TaxRate200Response**](TaxRate200Response.md)
 
 ### Authorization
 
@@ -4368,14 +4182,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **terraPoolDelta**
-> TerraMarketV1beta1QueryTerraPoolDeltaResponse terraPoolDelta()
-
-TerraPoolDelta
+> TerraPoolDelta200Response terraPoolDelta()
 
 TerraPoolDelta returns terra_pool_delta amount.
 
@@ -4398,7 +4210,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraMarketV1beta1QueryTerraPoolDeltaResponse**](TerraMarketV1beta1QueryTerraPoolDeltaResponse.md)
+[**TerraPoolDelta200Response**](TerraPoolDelta200Response.md)
 
 ### Authorization
 
@@ -4407,14 +4219,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tobinTax**
-> TerraOracleV1beta1QueryTobinTaxResponse tobinTax(denom)
-
-TobinTax
+> TobinTax200Response tobinTax(denom)
 
 TobinTax returns tobin tax of a denom
 
@@ -4441,7 +4251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TerraOracleV1beta1QueryTobinTaxResponse**](TerraOracleV1beta1QueryTobinTaxResponse.md)
+[**TobinTax200Response**](TobinTax200Response.md)
 
 ### Authorization
 
@@ -4450,14 +4260,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tobinTaxes**
-> TerraOracleV1beta1QueryTobinTaxesResponse tobinTaxes()
-
-TobinTaxes
+> TobinTaxes200Response tobinTaxes()
 
 TobinTaxes returns tobin taxes of all denoms
 
@@ -4480,7 +4288,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryTobinTaxesResponse**](TerraOracleV1beta1QueryTobinTaxesResponse.md)
+[**TobinTaxes200Response**](TobinTaxes200Response.md)
 
 ### Authorization
 
@@ -4489,14 +4297,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **totalSupply**
-> QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod totalSupply(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-TotalSupply
+> QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod totalSupply(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 TotalSupply queries the total supply of all coins.
 
@@ -4505,7 +4311,7 @@ TotalSupply queries the total supply of all coins.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -4531,7 +4337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod**](QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod.md)
+[**QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod**](QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod.md)
 
 ### Authorization
 
@@ -4540,14 +4346,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **treasuryParams**
-> TerraTreasuryV1beta1QueryParamsResponse treasuryParams()
-
-TreasuryParams
+> TreasuryParams200Response treasuryParams()
 
 Params queries all parameters.
 
@@ -4570,7 +4374,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraTreasuryV1beta1QueryParamsResponse**](TerraTreasuryV1beta1QueryParamsResponse.md)
+[**TreasuryParams200Response**](TreasuryParams200Response.md)
 
 ### Authorization
 
@@ -4579,14 +4383,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unbondingDelegation**
-> CosmosStakingV1beta1QueryUnbondingDelegationResponse unbondingDelegation(validatorAddr, delegatorAddr)
-
-UnbondingDelegation
+> UnbondingDelegation200Response unbondingDelegation(validatorAddr, delegatorAddr)
 
 UnbondingDelegation queries unbonding info for given validator delegator pair.
 
@@ -4615,7 +4417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryUnbondingDelegationResponse**](CosmosStakingV1beta1QueryUnbondingDelegationResponse.md)
+[**UnbondingDelegation200Response**](UnbondingDelegation200Response.md)
 
 ### Authorization
 
@@ -4624,14 +4426,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unreceivedAcks**
-> QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod unreceivedAcks(channelId, portId, packetAckSequences)
-
-UnreceivedAcks
+> QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod unreceivedAcks(channelId, portId, packetAckSequences)
 
 UnreceivedAcks returns all the unreceived IBC acknowledgements associated with a channel and sequences.
 
@@ -4662,7 +4462,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod**](QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod.md)
+[**QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod**](QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod.md)
 
 ### Authorization
 
@@ -4671,14 +4471,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unreceivedPackets**
-> QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod unreceivedPackets(channelId, portId, packetCommitmentSequences)
-
-UnreceivedPackets
+> QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod unreceivedPackets(channelId, portId, packetCommitmentSequences)
 
 UnreceivedPackets returns all the unreceived IBC packets associated with a channel and sequences.
 
@@ -4709,7 +4507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod**](QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod.md)
+[**QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod**](QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod.md)
 
 ### Authorization
 
@@ -4718,14 +4516,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upgradedClientState**
-> IbcCoreClientV1QueryUpgradedClientStateResponse upgradedClientState()
-
-UpgradedClientState
+> UpgradedClientState200Response upgradedClientState()
 
 UpgradedClientState queries an Upgraded IBC light client.
 
@@ -4748,7 +4544,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IbcCoreClientV1QueryUpgradedClientStateResponse**](IbcCoreClientV1QueryUpgradedClientStateResponse.md)
+[**UpgradedClientState200Response**](UpgradedClientState200Response.md)
 
 ### Authorization
 
@@ -4757,14 +4553,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upgradedConsensusState**
-> CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse upgradedConsensusState(lastHeight)
-
-UpgradedConsensusState
+> UpgradedConsensusState200Response upgradedConsensusState(lastHeight)
 
 UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier This rpc is deprecated now that IBC has its own replacement (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
 
@@ -4791,7 +4585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse**](CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse.md)
+[**UpgradedConsensusState200Response**](UpgradedConsensusState200Response.md)
 
 ### Authorization
 
@@ -4800,14 +4594,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validator**
-> QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod validator(validatorAddr)
-
-Validator
+> QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod validator(validatorAddr)
 
 Validator queries validator info for given validator address.
 
@@ -4834,7 +4626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod**](QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod.md)
+[**QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod**](QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod.md)
 
 ### Authorization
 
@@ -4843,14 +4635,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validatorCommission**
-> QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod validatorCommission(validatorAddress)
-
-ValidatorCommission
+> QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod validatorCommission(validatorAddress)
 
 ValidatorCommission queries accumulated commission for a validator.
 
@@ -4877,7 +4667,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod**](QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod.md)
+[**QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod**](QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod.md)
 
 ### Authorization
 
@@ -4886,14 +4676,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validatorDelegations**
-> QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod validatorDelegations(validatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ValidatorDelegations
+> QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod validatorDelegations(validatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ValidatorDelegations queries delegate info for given validator.
 
@@ -4903,7 +4691,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String validatorAddr = validatorAddr_example; // String | validator_addr defines the validator address to query for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -4930,7 +4718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod**](QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod.md)
+[**QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod**](QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod.md)
 
 ### Authorization
 
@@ -4939,14 +4727,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validatorOutstandingRewards**
-> CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse validatorOutstandingRewards(validatorAddress)
-
-ValidatorOutstandingRewards
+> ValidatorOutstandingRewards200Response validatorOutstandingRewards(validatorAddress)
 
 ValidatorOutstandingRewards queries rewards of a validator address.
 
@@ -4973,7 +4759,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse**](CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse.md)
+[**ValidatorOutstandingRewards200Response**](ValidatorOutstandingRewards200Response.md)
 
 ### Authorization
 
@@ -4982,14 +4768,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validatorSlashes**
-> CosmosDistributionV1beta1QueryValidatorSlashesResponse validatorSlashes(validatorAddress, startingHeight, endingHeight, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ValidatorSlashes
+> ValidatorSlashes200Response validatorSlashes(validatorAddress, startingHeight, endingHeight, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ValidatorSlashes queries slash events of a validator.
 
@@ -5001,7 +4785,7 @@ final api = TerraRestApi().getQueryApi();
 final String validatorAddress = validatorAddress_example; // String | validator_address defines the validator address to query for.
 final String startingHeight = startingHeight_example; // String | starting_height defines the optional starting height to query the slashes.
 final String endingHeight = endingHeight_example; // String | starting_height defines the optional ending height to query the slashes.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -5030,7 +4814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosDistributionV1beta1QueryValidatorSlashesResponse**](CosmosDistributionV1beta1QueryValidatorSlashesResponse.md)
+[**ValidatorSlashes200Response**](ValidatorSlashes200Response.md)
 
 ### Authorization
 
@@ -5039,14 +4823,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validatorUnbondingDelegations**
-> CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse validatorUnbondingDelegations(validatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-ValidatorUnbondingDelegations
+> ValidatorUnbondingDelegations200Response validatorUnbondingDelegations(validatorAddr, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 ValidatorUnbondingDelegations queries unbonding delegations of a validator.
 
@@ -5056,7 +4838,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String validatorAddr = validatorAddr_example; // String | validator_addr defines the validator address to query for.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -5083,7 +4865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse**](CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse.md)
+[**ValidatorUnbondingDelegations200Response**](ValidatorUnbondingDelegations200Response.md)
 
 ### Authorization
 
@@ -5092,14 +4874,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validators**
-> QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1 validators(status, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Validators
+> QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod validators(status, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Validators queries all validators that match the given status.
 
@@ -5109,7 +4889,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String status = status_example; // String | status enables to query for validators matching a given status.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -5136,7 +4916,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1**](QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1.md)
+[**QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod**](QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod.md)
 
 ### Authorization
 
@@ -5145,14 +4925,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **vote**
-> CosmosGovV1beta1QueryVoteResponse vote(proposalId, voter)
-
-Vote
+> Vote200Response vote(proposalId, voter)
 
 Vote queries voted information based on proposalID, voterAddr.
 
@@ -5181,7 +4959,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryVoteResponse**](CosmosGovV1beta1QueryVoteResponse.md)
+[**Vote200Response**](Vote200Response.md)
 
 ### Authorization
 
@@ -5190,14 +4968,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **voteTargets**
-> TerraOracleV1beta1QueryVoteTargetsResponse voteTargets()
-
-VoteTargets
+> VoteTargets200Response voteTargets()
 
 VoteTargets returns all vote target denoms
 
@@ -5220,7 +4996,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraOracleV1beta1QueryVoteTargetsResponse**](TerraOracleV1beta1QueryVoteTargetsResponse.md)
+[**VoteTargets200Response**](VoteTargets200Response.md)
 
 ### Authorization
 
@@ -5229,14 +5005,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **votes**
-> CosmosGovV1beta1QueryVotesResponse votes(proposalId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-Votes
+> Votes200Response votes(proposalId, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 Votes queries votes of a given proposal.
 
@@ -5246,7 +5020,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getQueryApi();
 final String proposalId = proposalId_example; // String | proposal_id defines the unique id of the proposal.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -5273,7 +5047,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosGovV1beta1QueryVotesResponse**](CosmosGovV1beta1QueryVotesResponse.md)
+[**Votes200Response**](Votes200Response.md)
 
 ### Authorization
 
@@ -5282,14 +5056,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **wasmParams**
-> TerraWasmV1beta1QueryParamsResponse wasmParams()
-
-WasmParams
+> WasmParams200Response wasmParams()
 
 Params queries all parameters.
 
@@ -5312,7 +5084,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TerraWasmV1beta1QueryParamsResponse**](TerraWasmV1beta1QueryParamsResponse.md)
+[**WasmParams200Response**](WasmParams200Response.md)
 
 ### Authorization
 
@@ -5321,7 +5093,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

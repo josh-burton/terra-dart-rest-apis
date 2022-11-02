@@ -13,14 +13,16 @@ part 'get_tx_list_result_txs_logs.g.dart';
 /// GetTxListResultTxsLogs
 ///
 /// Properties:
-/// * [msgIndex] 
-/// * [success] 
+/// * [msgIndex] - 
+/// * [success] - 
 /// * [log] 
 /// * [events] - 
 abstract class GetTxListResultTxsLogs implements Built<GetTxListResultTxsLogs, GetTxListResultTxsLogsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'msg_index')
     num get msgIndex;
 
+    /// 
     @BuiltValueField(wireName: r'success')
     bool get success;
 

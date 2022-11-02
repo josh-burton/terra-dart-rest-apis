@@ -5,71 +5,26 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**commissionandselfDelegationrewardsofasinglevalidator**](DistributionApi.md#commissionandselfdelegationrewardsofasinglevalidator) | **GET** /distribution/validators/{validatorAddr}/rewards | Commission and self-delegation rewards of a single validator
-[**communitypoolparameters**](DistributionApi.md#communitypoolparameters) | **GET** /distribution/community_pool | Community pool parameters
-[**feedistributionoutstandingrewardsofasinglevalidator**](DistributionApi.md#feedistributionoutstandingrewardsofasinglevalidator) | **GET** /distribution/validators/{validatorAddr}/outstanding_rewards | Fee distribution outstanding rewards of a single validator
-[**feedistributionparameters**](DistributionApi.md#feedistributionparameters) | **GET** /distribution/parameters | Fee distribution parameters
-[**gettherewardswithdrawaladdress**](DistributionApi.md#gettherewardswithdrawaladdress) | **GET** /distribution/delegators/{delegatorAddr}/withdraw_address | Get the rewards withdrawal address
-[**getthetotalrewardsbalancefromalldelegations**](DistributionApi.md#getthetotalrewardsbalancefromalldelegations) | **GET** /distribution/delegators/{delegatorAddr}/rewards | Get the total rewards balance from all delegations
-[**queryadelegationreward**](DistributionApi.md#queryadelegationreward) | **GET** /distribution/delegators/{delegatorAddr}/rewards/{validatorAddr} | Query a delegation reward
-[**replacetherewardswithdrawaladdress**](DistributionApi.md#replacetherewardswithdrawaladdress) | **POST** /distribution/delegators/{delegatorAddr}/withdraw_address | Replace the rewards withdrawal address
-[**validatordistributioninformation**](DistributionApi.md#validatordistributioninformation) | **GET** /distribution/validators/{validatorAddr} | Validator distribution information
-[**withdrawadelegationreward**](DistributionApi.md#withdrawadelegationreward) | **POST** /distribution/delegators/{delegatorAddr}/rewards/{validatorAddr} | Withdraw a delegation reward
-[**withdrawallthedelegatorsdelegationrewards**](DistributionApi.md#withdrawallthedelegatorsdelegationrewards) | **POST** /distribution/delegators/{delegatorAddr}/rewards | Withdraw all the delegator&#39;s delegation rewards
-[**withdrawthevalidatorsrewards**](DistributionApi.md#withdrawthevalidatorsrewards) | **POST** /distribution/validators/{validatorAddr}/rewards | Withdraw the validator&#39;s rewards
+[**distributionCommunityPoolGet**](DistributionApi.md#distributioncommunitypoolget) | **GET** /distribution/community_pool | Community pool parameters
+[**distributionDelegatorsDelegatorAddrRewardsGet**](DistributionApi.md#distributiondelegatorsdelegatoraddrrewardsget) | **GET** /distribution/delegators/{delegatorAddr}/rewards | Get the total rewards balance from all delegations
+[**distributionDelegatorsDelegatorAddrRewardsPost**](DistributionApi.md#distributiondelegatorsdelegatoraddrrewardspost) | **POST** /distribution/delegators/{delegatorAddr}/rewards | Withdraw all the delegator&#39;s delegation rewards
+[**distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet**](DistributionApi.md#distributiondelegatorsdelegatoraddrrewardsvalidatoraddrget) | **GET** /distribution/delegators/{delegatorAddr}/rewards/{validatorAddr} | Query a delegation reward
+[**distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost**](DistributionApi.md#distributiondelegatorsdelegatoraddrrewardsvalidatoraddrpost) | **POST** /distribution/delegators/{delegatorAddr}/rewards/{validatorAddr} | Withdraw a delegation reward
+[**distributionDelegatorsDelegatorAddrWithdrawAddressGet**](DistributionApi.md#distributiondelegatorsdelegatoraddrwithdrawaddressget) | **GET** /distribution/delegators/{delegatorAddr}/withdraw_address | Get the rewards withdrawal address
+[**distributionDelegatorsDelegatorAddrWithdrawAddressPost**](DistributionApi.md#distributiondelegatorsdelegatoraddrwithdrawaddresspost) | **POST** /distribution/delegators/{delegatorAddr}/withdraw_address | Replace the rewards withdrawal address
+[**distributionParametersGet**](DistributionApi.md#distributionparametersget) | **GET** /distribution/parameters | Fee distribution parameters
+[**distributionValidatorsValidatorAddrGet**](DistributionApi.md#distributionvalidatorsvalidatoraddrget) | **GET** /distribution/validators/{validatorAddr} | Validator distribution information
+[**distributionValidatorsValidatorAddrOutstandingRewardsGet**](DistributionApi.md#distributionvalidatorsvalidatoraddroutstandingrewardsget) | **GET** /distribution/validators/{validatorAddr}/outstanding_rewards | Fee distribution outstanding rewards of a single validator
+[**distributionValidatorsValidatorAddrRewardsGet**](DistributionApi.md#distributionvalidatorsvalidatoraddrrewardsget) | **GET** /distribution/validators/{validatorAddr}/rewards | Commission and self-delegation rewards of a single validator
+[**distributionValidatorsValidatorAddrRewardsPost**](DistributionApi.md#distributionvalidatorsvalidatoraddrrewardspost) | **POST** /distribution/validators/{validatorAddr}/rewards | Withdraw the validator&#39;s rewards
 
 
-# **commissionandselfDelegationrewardsofasinglevalidator**
-> BuiltList<Coin> commissionandselfDelegationrewardsofasinglevalidator(validatorAddr)
-
-Commission and self-delegation rewards of a single validator
-
-Query the commission and self-delegation rewards of validator.
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getDistributionApi();
-final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
-
-try {
-    final response = api.commissionandselfDelegationrewardsofasinglevalidator(validatorAddr);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling DistributionApi->commissionandselfDelegationrewardsofasinglevalidator: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
-
-### Return type
-
-[**BuiltList&lt;Coin&gt;**](Coin.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **communitypoolparameters**
-> BuiltList<Coin> communitypoolparameters()
-
-Community pool parameters
+# **distributionCommunityPoolGet**
+> BuiltList<TxsHashGet200ResponseTxFeeAmountInner> distributionCommunityPoolGet()
 
 Community pool parameters
 
@@ -80,10 +35,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getDistributionApi();
 
 try {
-    final response = api.communitypoolparameters();
+    final response = api.distributionCommunityPoolGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->communitypoolparameters: $e\n');
+    print('Exception when calling DistributionApi->distributionCommunityPoolGet: $e\n');
 }
 ```
 
@@ -92,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;Coin&gt;**](Coin.md)
+[**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md)
 
 ### Authorization
 
@@ -105,25 +60,25 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **feedistributionoutstandingrewardsofasinglevalidator**
-> FeedistributionoutstandingrewardsofasinglevalidatorResponse feedistributionoutstandingrewardsofasinglevalidator(validatorAddr)
+# **distributionDelegatorsDelegatorAddrRewardsGet**
+> DistributionDelegatorsDelegatorAddrRewardsGet200Response distributionDelegatorsDelegatorAddrRewardsGet(delegatorAddr)
 
-Fee distribution outstanding rewards of a single validator
+Get the total rewards balance from all delegations
 
-Fee distribution outstanding rewards of a single validator
+Get the sum of all the rewards earned by delegations by a single delegator
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
-final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
+final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
 
 try {
-    final response = api.feedistributionoutstandingrewardsofasinglevalidator(validatorAddr);
+    final response = api.distributionDelegatorsDelegatorAddrRewardsGet(delegatorAddr);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->feedistributionoutstandingrewardsofasinglevalidator: $e\n');
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrRewardsGet: $e\n');
 }
 ```
 
@@ -131,11 +86,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
+ **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
 
 ### Return type
 
-[**FeedistributionoutstandingrewardsofasinglevalidatorResponse**](FeedistributionoutstandingrewardsofasinglevalidatorResponse.md)
+[**DistributionDelegatorsDelegatorAddrRewardsGet200Response**](DistributionDelegatorsDelegatorAddrRewardsGet200Response.md)
 
 ### Authorization
 
@@ -148,33 +103,84 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **feedistributionparameters**
-> FeedistributionparametersResponse feedistributionparameters()
+# **distributionDelegatorsDelegatorAddrRewardsPost**
+> TxsHashGet200ResponseTx distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr, withdrawRequestBody)
 
-Fee distribution parameters
+Withdraw all the delegator's delegation rewards
 
-Fee distribution parameters
+Withdraw all the delegator's delegation rewards
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
+final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
+final DistributionDelegatorsDelegatorAddrRewardsGetRequest withdrawRequestBody = ; // DistributionDelegatorsDelegatorAddrRewardsGetRequest | 
 
 try {
-    final response = api.feedistributionparameters();
+    final response = api.distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr, withdrawRequestBody);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->feedistributionparameters: $e\n');
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrRewardsPost: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
+ **withdrawRequestBody** | [**DistributionDelegatorsDelegatorAddrRewardsGetRequest**](DistributionDelegatorsDelegatorAddrRewardsGetRequest.md)|  | [optional] 
 
 ### Return type
 
-[**FeedistributionparametersResponse**](FeedistributionparametersResponse.md)
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet**
+> BuiltList<TxsHashGet200ResponseTxFeeAmountInner> distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet(delegatorAddr, validatorAddr)
+
+Query a delegation reward
+
+Query a single delegation reward by a delegator
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getDistributionApi();
+final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
+final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
+
+try {
+    final response = api.distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet(delegatorAddr, validatorAddr);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
+ **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
+
+### Return type
+
+[**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md)
 
 ### Authorization
 
@@ -187,8 +193,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gettherewardswithdrawaladdress**
-> String gettherewardswithdrawaladdress(delegatorAddr)
+# **distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost**
+> TxsHashGet200ResponseTx distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr, validatorAddr, withdrawRequestBody)
+
+Withdraw a delegation reward
+
+Withdraw a delegator's delegation reward from a single validator
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getDistributionApi();
+final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
+final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
+final DistributionDelegatorsDelegatorAddrRewardsGetRequest withdrawRequestBody = ; // DistributionDelegatorsDelegatorAddrRewardsGetRequest | 
+
+try {
+    final response = api.distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr, validatorAddr, withdrawRequestBody);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
+ **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
+ **withdrawRequestBody** | [**DistributionDelegatorsDelegatorAddrRewardsGetRequest**](DistributionDelegatorsDelegatorAddrRewardsGetRequest.md)|  | [optional] 
+
+### Return type
+
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **distributionDelegatorsDelegatorAddrWithdrawAddressGet**
+> String distributionDelegatorsDelegatorAddrWithdrawAddressGet(delegatorAddr)
 
 Get the rewards withdrawal address
 
@@ -202,10 +255,10 @@ final api = TerraRestApi().getDistributionApi();
 final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
 
 try {
-    final response = api.gettherewardswithdrawaladdress(delegatorAddr);
+    final response = api.distributionDelegatorsDelegatorAddrWithdrawAddressGet(delegatorAddr);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->gettherewardswithdrawaladdress: $e\n');
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrWithdrawAddressGet: $e\n');
 }
 ```
 
@@ -230,96 +283,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getthetotalrewardsbalancefromalldelegations**
-> DelegatorTotalRewards getthetotalrewardsbalancefromalldelegations(delegatorAddr)
-
-Get the total rewards balance from all delegations
-
-Get the sum of all the rewards earned by delegations by a single delegator
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getDistributionApi();
-final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-
-try {
-    final response = api.getthetotalrewardsbalancefromalldelegations(delegatorAddr);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling DistributionApi->getthetotalrewardsbalancefromalldelegations: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
-
-### Return type
-
-[**DelegatorTotalRewards**](DelegatorTotalRewards.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **queryadelegationreward**
-> BuiltList<Coin> queryadelegationreward(delegatorAddr, validatorAddr)
-
-Query a delegation reward
-
-Query a single delegation reward by a delegator
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getDistributionApi();
-final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
-
-try {
-    final response = api.queryadelegationreward(delegatorAddr, validatorAddr);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling DistributionApi->queryadelegationreward: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
-
-### Return type
-
-[**BuiltList&lt;Coin&gt;**](Coin.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replacetherewardswithdrawaladdress**
-> StdTx replacetherewardswithdrawaladdress(delegatorAddr, withdrawrequestbody2)
+# **distributionDelegatorsDelegatorAddrWithdrawAddressPost**
+> TxsHashGet200ResponseTx distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr, withdrawRequestBody)
 
 Replace the rewards withdrawal address
 
@@ -331,13 +296,13 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
 final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final Withdrawrequestbody2 withdrawrequestbody2 = ; // Withdrawrequestbody2 | 
+final DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest withdrawRequestBody = ; // DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest | 
 
 try {
-    final response = api.replacetherewardswithdrawaladdress(delegatorAddr, withdrawrequestbody2);
+    final response = api.distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr, withdrawRequestBody);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->replacetherewardswithdrawaladdress: $e\n');
+    print('Exception when calling DistributionApi->distributionDelegatorsDelegatorAddrWithdrawAddressPost: $e\n');
 }
 ```
 
@@ -346,11 +311,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **withdrawrequestbody2** | [**Withdrawrequestbody2**](Withdrawrequestbody2.md)|  | [optional] 
+ **withdrawRequestBody** | [**DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest**](DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest.md)|  | [optional] 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
 
 ### Authorization
 
@@ -363,8 +328,45 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **validatordistributioninformation**
-> ValidatorDistInfo validatordistributioninformation(validatorAddr)
+# **distributionParametersGet**
+> JsonObject distributionParametersGet()
+
+Fee distribution parameters
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getDistributionApi();
+
+try {
+    final response = api.distributionParametersGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DistributionApi->distributionParametersGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**JsonObject**](JsonObject.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **distributionValidatorsValidatorAddrGet**
+> DistributionValidatorsValidatorAddrGet200Response distributionValidatorsValidatorAddrGet(validatorAddr)
 
 Validator distribution information
 
@@ -378,10 +380,10 @@ final api = TerraRestApi().getDistributionApi();
 final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
 
 try {
-    final response = api.validatordistributioninformation(validatorAddr);
+    final response = api.distributionValidatorsValidatorAddrGet(validatorAddr);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->validatordistributioninformation: $e\n');
+    print('Exception when calling DistributionApi->distributionValidatorsValidatorAddrGet: $e\n');
 }
 ```
 
@@ -393,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidatorDistInfo**](ValidatorDistInfo.md)
+[**DistributionValidatorsValidatorAddrGet200Response**](DistributionValidatorsValidatorAddrGet200Response.md)
 
 ### Authorization
 
@@ -406,27 +408,23 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **withdrawadelegationreward**
-> StdTx withdrawadelegationreward(delegatorAddr, validatorAddr, clearContractAdminReq)
+# **distributionValidatorsValidatorAddrOutstandingRewardsGet**
+> DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response distributionValidatorsValidatorAddrOutstandingRewardsGet(validatorAddr)
 
-Withdraw a delegation reward
-
-Withdraw a delegator's delegation reward from a single validator
+Fee distribution outstanding rewards of a single validator
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
-final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
 final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
-final ClearContractAdminReq clearContractAdminReq = ; // ClearContractAdminReq | 
 
 try {
-    final response = api.withdrawadelegationreward(delegatorAddr, validatorAddr, clearContractAdminReq);
+    final response = api.distributionValidatorsValidatorAddrOutstandingRewardsGet(validatorAddr);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->withdrawadelegationreward: $e\n');
+    print('Exception when calling DistributionApi->distributionValidatorsValidatorAddrOutstandingRewardsGet: $e\n');
 }
 ```
 
@@ -434,13 +432,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
  **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
- **clearContractAdminReq** | [**ClearContractAdminReq**](ClearContractAdminReq.md)|  | [optional] 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response**](DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response.md)
 
 ### Authorization
 
@@ -448,31 +444,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **withdrawallthedelegatorsdelegationrewards**
-> StdTx withdrawallthedelegatorsdelegationrewards(delegatorAddr, clearContractAdminReq)
+# **distributionValidatorsValidatorAddrRewardsGet**
+> BuiltList<TxsHashGet200ResponseTxFeeAmountInner> distributionValidatorsValidatorAddrRewardsGet(validatorAddr)
 
-Withdraw all the delegator's delegation rewards
+Commission and self-delegation rewards of a single validator
 
-Withdraw all the delegator's delegation rewards
+Query the commission and self-delegation rewards of validator.
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
-final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final ClearContractAdminReq clearContractAdminReq = ; // ClearContractAdminReq | 
+final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
 
 try {
-    final response = api.withdrawallthedelegatorsdelegationrewards(delegatorAddr, clearContractAdminReq);
+    final response = api.distributionValidatorsValidatorAddrRewardsGet(validatorAddr);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->withdrawallthedelegatorsdelegationrewards: $e\n');
+    print('Exception when calling DistributionApi->distributionValidatorsValidatorAddrRewardsGet: $e\n');
 }
 ```
 
@@ -480,12 +475,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **clearContractAdminReq** | [**ClearContractAdminReq**](ClearContractAdminReq.md)|  | [optional] 
+ **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md)
 
 ### Authorization
 
@@ -493,13 +487,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **withdrawthevalidatorsrewards**
-> StdTx withdrawthevalidatorsrewards(validatorAddr, clearContractAdminReq)
+# **distributionValidatorsValidatorAddrRewardsPost**
+> TxsHashGet200ResponseTx distributionValidatorsValidatorAddrRewardsPost(validatorAddr, withdrawRequestBody)
 
 Withdraw the validator's rewards
 
@@ -511,13 +505,13 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDistributionApi();
 final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 OperatorAddress of validator
-final ClearContractAdminReq clearContractAdminReq = ; // ClearContractAdminReq | 
+final DistributionDelegatorsDelegatorAddrRewardsGetRequest withdrawRequestBody = ; // DistributionDelegatorsDelegatorAddrRewardsGetRequest | 
 
 try {
-    final response = api.withdrawthevalidatorsrewards(validatorAddr, clearContractAdminReq);
+    final response = api.distributionValidatorsValidatorAddrRewardsPost(validatorAddr, withdrawRequestBody);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DistributionApi->withdrawthevalidatorsrewards: $e\n');
+    print('Exception when calling DistributionApi->distributionValidatorsValidatorAddrRewardsPost: $e\n');
 }
 ```
 
@@ -526,11 +520,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **validatorAddr** | **String**| Bech32 OperatorAddress of validator | 
- **clearContractAdminReq** | [**ClearContractAdminReq**](ClearContractAdminReq.md)|  | [optional] 
+ **withdrawRequestBody** | [**DistributionDelegatorsDelegatorAddrRewardsGetRequest**](DistributionDelegatorsDelegatorAddrRewardsGetRequest.md)|  | [optional] 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
 
 ### Authorization
 

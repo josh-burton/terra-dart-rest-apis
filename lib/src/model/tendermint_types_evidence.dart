@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_duplicate_vote_evidence.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_light_client_attack_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_duplicate_vote_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'tendermint_types_evidence.g.dart';
 /// * [lightClientAttackEvidence] 
 abstract class TendermintTypesEvidence implements Built<TendermintTypesEvidence, TendermintTypesEvidenceBuilder> {
     @BuiltValueField(wireName: r'duplicate_vote_evidence')
-    TendermintTypesEvidenceDuplicateVoteEvidence? get duplicateVoteEvidence;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidence? get duplicateVoteEvidence;
 
     @BuiltValueField(wireName: r'light_client_attack_evidence')
-    TendermintTypesEvidenceLightClientAttackEvidence? get lightClientAttackEvidence;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidence? get lightClientAttackEvidence;
 
     TendermintTypesEvidence._();
 
@@ -47,13 +47,13 @@ class _$TendermintTypesEvidenceSerializer implements StructuredSerializer<Tender
             result
                 ..add(r'duplicate_vote_evidence')
                 ..add(serializers.serialize(object.duplicateVoteEvidence,
-                    specifiedType: const FullType(TendermintTypesEvidenceDuplicateVoteEvidence)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidence)));
         }
         if (object.lightClientAttackEvidence != null) {
             result
                 ..add(r'light_client_attack_evidence')
                 ..add(serializers.serialize(object.lightClientAttackEvidence,
-                    specifiedType: const FullType(TendermintTypesEvidenceLightClientAttackEvidence)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidence)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$TendermintTypesEvidenceSerializer implements StructuredSerializer<Tender
             switch (key) {
                 case r'duplicate_vote_evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesEvidenceDuplicateVoteEvidence)) as TendermintTypesEvidenceDuplicateVoteEvidence;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidence)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidence;
                     result.duplicateVoteEvidence.replace(valueDes);
                     break;
                 case r'light_client_attack_evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesEvidenceLightClientAttackEvidence)) as TendermintTypesEvidenceLightClientAttackEvidence;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidence)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidence;
                     result.lightClientAttackEvidence.replace(valueDes);
                     break;
             }

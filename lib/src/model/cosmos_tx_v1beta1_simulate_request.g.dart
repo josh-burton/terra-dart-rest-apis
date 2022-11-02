@@ -8,7 +8,7 @@ part of 'cosmos_tx_v1beta1_simulate_request.dart';
 
 class _$CosmosTxV1beta1SimulateRequest extends CosmosTxV1beta1SimulateRequest {
   @override
-  final CosmosTxV1beta1GetTxResponseTx? tx;
+  final CosmosTxV1beta1Tx? tx;
   @override
   final String? txBytes;
 
@@ -55,10 +55,10 @@ class CosmosTxV1beta1SimulateRequestBuilder
             CosmosTxV1beta1SimulateRequestBuilder> {
   _$CosmosTxV1beta1SimulateRequest? _$v;
 
-  CosmosTxV1beta1GetTxResponseTxBuilder? _tx;
-  CosmosTxV1beta1GetTxResponseTxBuilder get tx =>
-      _$this._tx ??= new CosmosTxV1beta1GetTxResponseTxBuilder();
-  set tx(CosmosTxV1beta1GetTxResponseTxBuilder? tx) => _$this._tx = tx;
+  CosmosTxV1beta1TxBuilder? _tx;
+  CosmosTxV1beta1TxBuilder get tx =>
+      _$this._tx ??= new CosmosTxV1beta1TxBuilder();
+  set tx(CosmosTxV1beta1TxBuilder? tx) => _$this._tx = tx;
 
   String? _txBytes;
   String? get txBytes => _$this._txBytes;

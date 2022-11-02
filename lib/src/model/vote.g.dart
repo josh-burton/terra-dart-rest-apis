@@ -12,7 +12,8 @@ class _$Vote extends Vote {
   @override
   final String? proposalId;
   @override
-  final BuiltList<Option>? options;
+  final BuiltList<GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>?
+      options;
 
   factory _$Vote([void Function(VoteBuilder)? updates]) =>
       (new VoteBuilder()..update(updates))._build();
@@ -62,10 +63,16 @@ class VoteBuilder implements Builder<Vote, VoteBuilder> {
   String? get proposalId => _$this._proposalId;
   set proposalId(String? proposalId) => _$this._proposalId = proposalId;
 
-  ListBuilder<Option>? _options;
-  ListBuilder<Option> get options =>
-      _$this._options ??= new ListBuilder<Option>();
-  set options(ListBuilder<Option>? options) => _$this._options = options;
+  ListBuilder<GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>?
+      _options;
+  ListBuilder<GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>
+      get options => _$this._options ??= new ListBuilder<
+          GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>();
+  set options(
+          ListBuilder<
+                  GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>?
+              options) =>
+      _$this._options = options;
 
   VoteBuilder() {
     Vote._defaults(this);

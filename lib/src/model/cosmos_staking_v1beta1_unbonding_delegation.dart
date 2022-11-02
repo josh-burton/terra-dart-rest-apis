@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_unbonding_delegation_entry.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_unbonding_delegations200_response_unbonding_responses_inner_entries_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -26,7 +26,7 @@ abstract class CosmosStakingV1beta1UnbondingDelegation implements Built<CosmosSt
 
     /// entries are the unbonding delegation entries.
     @BuiltValueField(wireName: r'entries')
-    BuiltList<CosmosStakingV1beta1UnbondingDelegationEntry>? get entries;
+    BuiltList<DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>? get entries;
 
     CosmosStakingV1beta1UnbondingDelegation._();
 
@@ -66,7 +66,7 @@ class _$CosmosStakingV1beta1UnbondingDelegationSerializer implements StructuredS
             result
                 ..add(r'entries')
                 ..add(serializers.serialize(object.entries,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1UnbondingDelegationEntry)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner)])));
         }
         return result;
     }
@@ -95,7 +95,7 @@ class _$CosmosStakingV1beta1UnbondingDelegationSerializer implements StructuredS
                     break;
                 case r'entries':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1UnbondingDelegationEntry)])) as BuiltList<CosmosStakingV1beta1UnbondingDelegationEntry>;
+                        specifiedType: const FullType(BuiltList, [FullType(DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner)])) as BuiltList<DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>;
                     result.entries.replace(valueDes);
                     break;
             }

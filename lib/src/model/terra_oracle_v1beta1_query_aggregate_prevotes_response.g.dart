@@ -10,7 +10,7 @@ class _$TerraOracleV1beta1QueryAggregatePrevotesResponse
     extends TerraOracleV1beta1QueryAggregatePrevotesResponse {
   @override
   final BuiltList<
-          StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>?
+          StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>?
       aggregatePrevotes;
 
   factory _$TerraOracleV1beta1QueryAggregatePrevotesResponse(
@@ -63,15 +63,15 @@ class TerraOracleV1beta1QueryAggregatePrevotesResponseBuilder
   _$TerraOracleV1beta1QueryAggregatePrevotesResponse? _$v;
 
   ListBuilder<
-          StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>?
+          StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>?
       _aggregatePrevotes;
   ListBuilder<
-          StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>
+          StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>
       get aggregatePrevotes => _$this._aggregatePrevotes ??= new ListBuilder<
-          StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>();
+          StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>();
   set aggregatePrevotes(
           ListBuilder<
-                  StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>?
+                  StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>?
               aggregatePrevotes) =>
       _$this._aggregatePrevotes = aggregatePrevotes;
 

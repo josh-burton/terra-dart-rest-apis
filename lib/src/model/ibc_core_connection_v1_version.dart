@@ -12,12 +12,11 @@ part 'ibc_core_connection_v1_version.g.dart';
 ///
 /// Properties:
 /// * [identifier] 
-/// * [features] - 
+/// * [features] 
 abstract class IbcCoreConnectionV1Version implements Built<IbcCoreConnectionV1Version, IbcCoreConnectionV1VersionBuilder> {
     @BuiltValueField(wireName: r'identifier')
     String? get identifier;
 
-    /// 
     @BuiltValueField(wireName: r'features')
     BuiltList<String>? get features;
 

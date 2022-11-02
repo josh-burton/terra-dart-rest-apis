@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **height** | **num** |  | [optional] 
 **time** | **String** |  | [optional] 
 **numTxs** | **num** |  | [optional] 
-**lastBlockId** | [**BlockID**](BlockID.md) |  | [optional] 
+**lastBlockId** | [**BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId**](BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId.md) |  | [optional] 
 **totalTxs** | **num** |  | [optional] 
 **lastCommitHash** | **String** |  | [optional] 
 **dataHash** | **String** |  | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **lastResultsHash** | **String** |  | [optional] 
 **evidenceHash** | **String** |  | [optional] 
 **proposerAddress** | **String** | bech32 encoded address | [optional] 
-**version** | [**Version**](Version.md) |  | [optional] 
+**version** | [**BlocksLatestGet200ResponseBlockMetaHeaderVersion**](BlocksLatestGet200ResponseBlockMetaHeaderVersion.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

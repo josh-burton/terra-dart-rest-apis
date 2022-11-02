@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**single** | [**SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture**](SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture.md) |  | [optional] 
-**multi** | [**Multiisthemodeinfoforamultisigpublickey**](Multiisthemodeinfoforamultisigpublickey.md) |  | [optional] 
+**single** | [**SingleRepresentsASingleSigner**](SingleRepresentsASingleSigner.md) |  | [optional] 
+**multi** | [**CosmosTxV1beta1ModeInfoMulti**](CosmosTxV1beta1ModeInfoMulti.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

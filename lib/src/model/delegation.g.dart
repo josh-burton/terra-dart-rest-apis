@@ -8,9 +8,10 @@ part of 'delegation.dart';
 
 class _$Delegation extends Delegation {
   @override
-  final Delegation1? delegation;
+  final StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegation?
+      delegation;
   @override
-  final Coin? balance;
+  final TxsHashGet200ResponseTxFeeAmountInner? balance;
 
   factory _$Delegation([void Function(DelegationBuilder)? updates]) =>
       (new DelegationBuilder()..update(updates))._build();
@@ -49,15 +50,21 @@ class _$Delegation extends Delegation {
 class DelegationBuilder implements Builder<Delegation, DelegationBuilder> {
   _$Delegation? _$v;
 
-  Delegation1Builder? _delegation;
-  Delegation1Builder get delegation =>
-      _$this._delegation ??= new Delegation1Builder();
-  set delegation(Delegation1Builder? delegation) =>
+  StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegationBuilder?
+      _delegation;
+  StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegationBuilder
+      get delegation => _$this._delegation ??=
+          new StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegationBuilder();
+  set delegation(
+          StakingDelegatorsDelegatorAddrDelegationsGet200ResponseInnerDelegationBuilder?
+              delegation) =>
       _$this._delegation = delegation;
 
-  CoinBuilder? _balance;
-  CoinBuilder get balance => _$this._balance ??= new CoinBuilder();
-  set balance(CoinBuilder? balance) => _$this._balance = balance;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder? _balance;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder get balance =>
+      _$this._balance ??= new TxsHashGet200ResponseTxFeeAmountInnerBuilder();
+  set balance(TxsHashGet200ResponseTxFeeAmountInnerBuilder? balance) =>
+      _$this._balance = balance;
 
   DelegationBuilder() {
     Delegation._defaults(this);

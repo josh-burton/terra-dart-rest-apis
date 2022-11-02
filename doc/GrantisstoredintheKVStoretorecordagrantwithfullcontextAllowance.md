@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance
+# terra_dart_rest_apis.model.GrantIsStoredInTheKVStoreToRecordAGrantWithFullContextAllowance
 
 ## Load the model package
 ```dart

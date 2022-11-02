@@ -9,7 +9,7 @@ part of 'terra_oracle_v1beta1_query_exchange_rates_response.dart';
 class _$TerraOracleV1beta1QueryExchangeRatesResponse
     extends TerraOracleV1beta1QueryExchangeRatesResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? exchangeRates;
+  final BuiltList<CommunityPool200ResponsePoolInner>? exchangeRates;
 
   factory _$TerraOracleV1beta1QueryExchangeRatesResponse(
           [void Function(TerraOracleV1beta1QueryExchangeRatesResponseBuilder)?
@@ -58,10 +58,12 @@ class TerraOracleV1beta1QueryExchangeRatesResponseBuilder
             TerraOracleV1beta1QueryExchangeRatesResponseBuilder> {
   _$TerraOracleV1beta1QueryExchangeRatesResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _exchangeRates;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get exchangeRates =>
-      _$this._exchangeRates ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set exchangeRates(ListBuilder<CosmosBaseV1beta1DecCoin>? exchangeRates) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _exchangeRates;
+  ListBuilder<CommunityPool200ResponsePoolInner> get exchangeRates =>
+      _$this._exchangeRates ??=
+          new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set exchangeRates(
+          ListBuilder<CommunityPool200ResponsePoolInner>? exchangeRates) =>
       _$this._exchangeRates = exchangeRates;
 
   TerraOracleV1beta1QueryExchangeRatesResponseBuilder() {

@@ -10,12 +10,14 @@ part 'get_mempool_by_hash_result_tx_value_signatures_pub_key.g.dart';
 /// GetMempoolByHashResultTxValueSignaturesPubKey
 ///
 /// Properties:
-/// * [type] 
-/// * [value] 
+/// * [type] - 
+/// * [value] - 
 abstract class GetMempoolByHashResultTxValueSignaturesPubKey implements Built<GetMempoolByHashResultTxValueSignaturesPubKey, GetMempoolByHashResultTxValueSignaturesPubKeyBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 
+    /// 
     @BuiltValueField(wireName: r'value')
     String get value;
 

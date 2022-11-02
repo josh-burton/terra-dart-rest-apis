@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/block_id.dart';
-import 'package:terra_dart_rest_apis/src/model/version.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_meta_header_last_block_id.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_meta_header_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -42,7 +42,7 @@ abstract class BlockHeader implements Built<BlockHeader, BlockHeaderBuilder> {
     num? get numTxs;
 
     @BuiltValueField(wireName: r'last_block_id')
-    BlockID? get lastBlockId;
+    BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId? get lastBlockId;
 
     @BuiltValueField(wireName: r'total_txs')
     num? get totalTxs;
@@ -76,7 +76,7 @@ abstract class BlockHeader implements Built<BlockHeader, BlockHeaderBuilder> {
     String? get proposerAddress;
 
     @BuiltValueField(wireName: r'version')
-    Version? get version;
+    BlocksLatestGet200ResponseBlockMetaHeaderVersion? get version;
 
     BlockHeader._();
 
@@ -128,7 +128,7 @@ class _$BlockHeaderSerializer implements StructuredSerializer<BlockHeader> {
             result
                 ..add(r'last_block_id')
                 ..add(serializers.serialize(object.lastBlockId,
-                    specifiedType: const FullType(BlockID)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId)));
         }
         if (object.totalTxs != null) {
             result
@@ -194,7 +194,7 @@ class _$BlockHeaderSerializer implements StructuredSerializer<BlockHeader> {
             result
                 ..add(r'version')
                 ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(Version)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderVersion)));
         }
         return result;
     }
@@ -233,7 +233,7 @@ class _$BlockHeaderSerializer implements StructuredSerializer<BlockHeader> {
                     break;
                 case r'last_block_id':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockID)) as BlockID;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId)) as BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId;
                     result.lastBlockId.replace(valueDes);
                     break;
                 case r'total_txs':
@@ -288,7 +288,7 @@ class _$BlockHeaderSerializer implements StructuredSerializer<BlockHeader> {
                     break;
                 case r'version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Version)) as Version;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderVersion)) as BlocksLatestGet200ResponseBlockMetaHeaderVersion;
                     result.version.replace(valueDes);
                     break;
             }

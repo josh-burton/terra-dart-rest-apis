@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:terra_dart_rest_apis/src/model/gettheaccountinformationonblockchain_response.dart';
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response.dart';
 
 class AuthApi {
 
@@ -18,7 +18,7 @@ class AuthApi {
   const AuthApi(this._dio, this._serializers);
 
   /// Get the account information on blockchain
-  /// Get the account information on blockchain
+  /// 
   ///
   /// Parameters:
   /// * [address] - Account address
@@ -29,10 +29,10 @@ class AuthApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [GettheaccountinformationonblockchainResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AuthAccountsAddressGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<GettheaccountinformationonblockchainResponse>> gettheaccountinformationonblockchain({ 
+  Future<Response<AuthAccountsAddressGet200Response>> authAccountsAddressGet({ 
     required String address,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -62,14 +62,14 @@ class AuthApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    GettheaccountinformationonblockchainResponse _responseData;
+    AuthAccountsAddressGet200Response _responseData;
 
     try {
-      const _responseType = FullType(GettheaccountinformationonblockchainResponse);
+      const _responseType = FullType(AuthAccountsAddressGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as GettheaccountinformationonblockchainResponse;
+      ) as AuthAccountsAddressGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -80,7 +80,7 @@ class AuthApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<GettheaccountinformationonblockchainResponse>(
+    return Response<AuthAccountsAddressGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

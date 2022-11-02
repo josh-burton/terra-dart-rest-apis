@@ -9,7 +9,7 @@ part of 'cosmos_evidence_v1beta1_query_evidence_response.dart';
 class _$CosmosEvidenceV1beta1QueryEvidenceResponse
     extends CosmosEvidenceV1beta1QueryEvidenceResponse {
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? evidence;
+  final AccountsAreTheExistingAccountsInner? evidence;
 
   factory _$CosmosEvidenceV1beta1QueryEvidenceResponse(
           [void Function(CosmosEvidenceV1beta1QueryEvidenceResponseBuilder)?
@@ -56,11 +56,10 @@ class CosmosEvidenceV1beta1QueryEvidenceResponseBuilder
             CosmosEvidenceV1beta1QueryEvidenceResponseBuilder> {
   _$CosmosEvidenceV1beta1QueryEvidenceResponse? _$v;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _evidence;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get evidence =>
-      _$this._evidence ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
-  set evidence(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? evidence) =>
+  AccountsAreTheExistingAccountsInnerBuilder? _evidence;
+  AccountsAreTheExistingAccountsInnerBuilder get evidence =>
+      _$this._evidence ??= new AccountsAreTheExistingAccountsInnerBuilder();
+  set evidence(AccountsAreTheExistingAccountsInnerBuilder? evidence) =>
       _$this._evidence = evidence;
 
   CosmosEvidenceV1beta1QueryEvidenceResponseBuilder() {

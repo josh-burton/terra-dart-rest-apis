@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'revoke_grant_req.g.dart';
 /// * [baseReq] 
 abstract class RevokeGrantReq implements Built<RevokeGrantReq, RevokeGrantReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq get baseReq;
+    TxsEstimateFeePostRequestBaseReq get baseReq;
 
     RevokeGrantReq._();
 
@@ -41,7 +41,7 @@ class _$RevokeGrantReqSerializer implements StructuredSerializer<RevokeGrantReq>
         result
             ..add(r'base_req')
             ..add(serializers.serialize(object.baseReq,
-                specifiedType: const FullType(BaseReq)));
+                specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         return result;
     }
 
@@ -59,7 +59,7 @@ class _$RevokeGrantReqSerializer implements StructuredSerializer<RevokeGrantReq>
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
             }

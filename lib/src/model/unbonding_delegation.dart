@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/unbonding_entry.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegators_delegator_addr_unbonding_delegations_get200_response_inner_entries_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'unbonding_delegation.g.dart';
 /// Properties:
 /// * [delegatorAddress] 
 /// * [validatorAddress] 
-/// * [entries] - 
+/// * [entries] 
 abstract class UnbondingDelegation implements Built<UnbondingDelegation, UnbondingDelegationBuilder> {
     @BuiltValueField(wireName: r'delegator_address')
     String? get delegatorAddress;
@@ -22,9 +22,8 @@ abstract class UnbondingDelegation implements Built<UnbondingDelegation, Unbondi
     @BuiltValueField(wireName: r'validator_address')
     String? get validatorAddress;
 
-    /// 
     @BuiltValueField(wireName: r'entries')
-    BuiltList<UnbondingEntry>? get entries;
+    BuiltList<StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>? get entries;
 
     UnbondingDelegation._();
 
@@ -64,7 +63,7 @@ class _$UnbondingDelegationSerializer implements StructuredSerializer<UnbondingD
             result
                 ..add(r'entries')
                 ..add(serializers.serialize(object.entries,
-                    specifiedType: const FullType(BuiltList, [FullType(UnbondingEntry)])));
+                    specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner)])));
         }
         return result;
     }
@@ -93,7 +92,7 @@ class _$UnbondingDelegationSerializer implements StructuredSerializer<UnbondingD
                     break;
                 case r'entries':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(UnbondingEntry)])) as BuiltList<UnbondingEntry>;
+                        specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner)])) as BuiltList<StakingDelegatorsDelegatorAddrUnbondingDelegationsGet200ResponseInnerEntriesInner>;
                     result.entries.replace(valueDes);
                     break;
             }

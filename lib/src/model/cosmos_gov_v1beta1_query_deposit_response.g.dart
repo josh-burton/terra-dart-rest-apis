@@ -9,7 +9,7 @@ part of 'cosmos_gov_v1beta1_query_deposit_response.dart';
 class _$CosmosGovV1beta1QueryDepositResponse
     extends CosmosGovV1beta1QueryDepositResponse {
   @override
-  final CosmosGovV1beta1QueryDepositResponseDeposit? deposit;
+  final Deposits200ResponseDepositsInner? deposit;
 
   factory _$CosmosGovV1beta1QueryDepositResponse(
           [void Function(CosmosGovV1beta1QueryDepositResponseBuilder)?
@@ -54,11 +54,10 @@ class CosmosGovV1beta1QueryDepositResponseBuilder
             CosmosGovV1beta1QueryDepositResponseBuilder> {
   _$CosmosGovV1beta1QueryDepositResponse? _$v;
 
-  CosmosGovV1beta1QueryDepositResponseDepositBuilder? _deposit;
-  CosmosGovV1beta1QueryDepositResponseDepositBuilder get deposit =>
-      _$this._deposit ??=
-          new CosmosGovV1beta1QueryDepositResponseDepositBuilder();
-  set deposit(CosmosGovV1beta1QueryDepositResponseDepositBuilder? deposit) =>
+  Deposits200ResponseDepositsInnerBuilder? _deposit;
+  Deposits200ResponseDepositsInnerBuilder get deposit =>
+      _$this._deposit ??= new Deposits200ResponseDepositsInnerBuilder();
+  set deposit(Deposits200ResponseDepositsInnerBuilder? deposit) =>
       _$this._deposit = deposit;
 
   CosmosGovV1beta1QueryDepositResponseBuilder() {

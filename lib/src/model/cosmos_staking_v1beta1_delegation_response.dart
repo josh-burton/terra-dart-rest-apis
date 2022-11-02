@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_balance_response_balance.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_delegation_response_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_delegations200_response_delegation_responses_inner_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response_balances_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_staking_v1beta1_delegation_response.g.dart';
 /// * [balance] 
 abstract class CosmosStakingV1beta1DelegationResponse implements Built<CosmosStakingV1beta1DelegationResponse, CosmosStakingV1beta1DelegationResponseBuilder> {
     @BuiltValueField(wireName: r'delegation')
-    CosmosStakingV1beta1DelegationResponseDelegation? get delegation;
+    DelegatorDelegations200ResponseDelegationResponsesInnerDelegation? get delegation;
 
     @BuiltValueField(wireName: r'balance')
-    CosmosBankV1beta1QueryBalanceResponseBalance? get balance;
+    AllBalances200ResponseBalancesInner? get balance;
 
     CosmosStakingV1beta1DelegationResponse._();
 
@@ -47,13 +47,13 @@ class _$CosmosStakingV1beta1DelegationResponseSerializer implements StructuredSe
             result
                 ..add(r'delegation')
                 ..add(serializers.serialize(object.delegation,
-                    specifiedType: const FullType(CosmosStakingV1beta1DelegationResponseDelegation)));
+                    specifiedType: const FullType(DelegatorDelegations200ResponseDelegationResponsesInnerDelegation)));
         }
         if (object.balance != null) {
             result
                 ..add(r'balance')
                 ..add(serializers.serialize(object.balance,
-                    specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)));
+                    specifiedType: const FullType(AllBalances200ResponseBalancesInner)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosStakingV1beta1DelegationResponseSerializer implements StructuredSe
             switch (key) {
                 case r'delegation':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1DelegationResponseDelegation)) as CosmosStakingV1beta1DelegationResponseDelegation;
+                        specifiedType: const FullType(DelegatorDelegations200ResponseDelegationResponsesInnerDelegation)) as DelegatorDelegations200ResponseDelegationResponsesInnerDelegation;
                     result.delegation.replace(valueDes);
                     break;
                 case r'balance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)) as CosmosBankV1beta1QueryBalanceResponseBalance;
+                        specifiedType: const FullType(AllBalances200ResponseBalancesInner)) as AllBalances200ResponseBalancesInner;
                     result.balance.replace(valueDes);
                     break;
             }

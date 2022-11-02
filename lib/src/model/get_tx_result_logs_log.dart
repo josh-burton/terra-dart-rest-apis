@@ -10,8 +10,9 @@ part 'get_tx_result_logs_log.g.dart';
 /// GetTxResultLogsLog
 ///
 /// Properties:
-/// * [tax] 
+/// * [tax] - 
 abstract class GetTxResultLogsLog implements Built<GetTxResultLogsLog, GetTxResultLogsLogBuilder> {
+    /// 
     @BuiltValueField(wireName: r'tax')
     String get tax;
 

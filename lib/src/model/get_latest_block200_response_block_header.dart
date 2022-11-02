@@ -1,0 +1,268 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+import 'package:terra_dart_rest_apis/src/model/block_id1.dart';
+import 'package:terra_dart_rest_apis/src/model/basic_block_info.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'get_latest_block200_response_block_header.g.dart';
+
+/// Header defines the structure of a Tendermint block header.
+///
+/// Properties:
+/// * [version] 
+/// * [chainId] 
+/// * [height] 
+/// * [time] 
+/// * [lastBlockId] 
+/// * [lastCommitHash] 
+/// * [dataHash] 
+/// * [validatorsHash] 
+/// * [nextValidatorsHash] 
+/// * [consensusHash] 
+/// * [appHash] 
+/// * [lastResultsHash] 
+/// * [evidenceHash] 
+/// * [proposerAddress] 
+abstract class GetLatestBlock200ResponseBlockHeader implements Built<GetLatestBlock200ResponseBlockHeader, GetLatestBlock200ResponseBlockHeaderBuilder> {
+    @BuiltValueField(wireName: r'version')
+    BasicBlockInfo? get version;
+
+    @BuiltValueField(wireName: r'chain_id')
+    String? get chainId;
+
+    @BuiltValueField(wireName: r'height')
+    String? get height;
+
+    @BuiltValueField(wireName: r'time')
+    DateTime? get time;
+
+    @BuiltValueField(wireName: r'last_block_id')
+    BlockID1? get lastBlockId;
+
+    @BuiltValueField(wireName: r'last_commit_hash')
+    String? get lastCommitHash;
+
+    @BuiltValueField(wireName: r'data_hash')
+    String? get dataHash;
+
+    @BuiltValueField(wireName: r'validators_hash')
+    String? get validatorsHash;
+
+    @BuiltValueField(wireName: r'next_validators_hash')
+    String? get nextValidatorsHash;
+
+    @BuiltValueField(wireName: r'consensus_hash')
+    String? get consensusHash;
+
+    @BuiltValueField(wireName: r'app_hash')
+    String? get appHash;
+
+    @BuiltValueField(wireName: r'last_results_hash')
+    String? get lastResultsHash;
+
+    @BuiltValueField(wireName: r'evidence_hash')
+    String? get evidenceHash;
+
+    @BuiltValueField(wireName: r'proposer_address')
+    String? get proposerAddress;
+
+    GetLatestBlock200ResponseBlockHeader._();
+
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetLatestBlock200ResponseBlockHeaderBuilder b) => b;
+
+    factory GetLatestBlock200ResponseBlockHeader([void updates(GetLatestBlock200ResponseBlockHeaderBuilder b)]) = _$GetLatestBlock200ResponseBlockHeader;
+
+    @BuiltValueSerializer(custom: true)
+    static Serializer<GetLatestBlock200ResponseBlockHeader> get serializer => _$GetLatestBlock200ResponseBlockHeaderSerializer();
+}
+
+class _$GetLatestBlock200ResponseBlockHeaderSerializer implements StructuredSerializer<GetLatestBlock200ResponseBlockHeader> {
+    @override
+    final Iterable<Type> types = const [GetLatestBlock200ResponseBlockHeader, _$GetLatestBlock200ResponseBlockHeader];
+
+    @override
+    final String wireName = r'GetLatestBlock200ResponseBlockHeader';
+
+    @override
+    Iterable<Object?> serialize(Serializers serializers, GetLatestBlock200ResponseBlockHeader object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object?>[];
+        if (object.version != null) {
+            result
+                ..add(r'version')
+                ..add(serializers.serialize(object.version,
+                    specifiedType: const FullType(BasicBlockInfo)));
+        }
+        if (object.chainId != null) {
+            result
+                ..add(r'chain_id')
+                ..add(serializers.serialize(object.chainId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.height != null) {
+            result
+                ..add(r'height')
+                ..add(serializers.serialize(object.height,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.time != null) {
+            result
+                ..add(r'time')
+                ..add(serializers.serialize(object.time,
+                    specifiedType: const FullType(DateTime)));
+        }
+        if (object.lastBlockId != null) {
+            result
+                ..add(r'last_block_id')
+                ..add(serializers.serialize(object.lastBlockId,
+                    specifiedType: const FullType(BlockID1)));
+        }
+        if (object.lastCommitHash != null) {
+            result
+                ..add(r'last_commit_hash')
+                ..add(serializers.serialize(object.lastCommitHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.dataHash != null) {
+            result
+                ..add(r'data_hash')
+                ..add(serializers.serialize(object.dataHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.validatorsHash != null) {
+            result
+                ..add(r'validators_hash')
+                ..add(serializers.serialize(object.validatorsHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.nextValidatorsHash != null) {
+            result
+                ..add(r'next_validators_hash')
+                ..add(serializers.serialize(object.nextValidatorsHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.consensusHash != null) {
+            result
+                ..add(r'consensus_hash')
+                ..add(serializers.serialize(object.consensusHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.appHash != null) {
+            result
+                ..add(r'app_hash')
+                ..add(serializers.serialize(object.appHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.lastResultsHash != null) {
+            result
+                ..add(r'last_results_hash')
+                ..add(serializers.serialize(object.lastResultsHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.evidenceHash != null) {
+            result
+                ..add(r'evidence_hash')
+                ..add(serializers.serialize(object.evidenceHash,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.proposerAddress != null) {
+            result
+                ..add(r'proposer_address')
+                ..add(serializers.serialize(object.proposerAddress,
+                    specifiedType: const FullType(String)));
+        }
+        return result;
+    }
+
+    @override
+    GetLatestBlock200ResponseBlockHeader deserialize(Serializers serializers, Iterable<Object?> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = GetLatestBlock200ResponseBlockHeaderBuilder();
+
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final Object? value = iterator.current;
+            
+            switch (key) {
+                case r'version':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(BasicBlockInfo)) as BasicBlockInfo;
+                    result.version.replace(valueDes);
+                    break;
+                case r'chain_id':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.chainId = valueDes;
+                    break;
+                case r'height':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.height = valueDes;
+                    break;
+                case r'time':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    result.time = valueDes;
+                    break;
+                case r'last_block_id':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(BlockID1)) as BlockID1;
+                    result.lastBlockId.replace(valueDes);
+                    break;
+                case r'last_commit_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.lastCommitHash = valueDes;
+                    break;
+                case r'data_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.dataHash = valueDes;
+                    break;
+                case r'validators_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.validatorsHash = valueDes;
+                    break;
+                case r'next_validators_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.nextValidatorsHash = valueDes;
+                    break;
+                case r'consensus_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.consensusHash = valueDes;
+                    break;
+                case r'app_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.appHash = valueDes;
+                    break;
+                case r'last_results_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.lastResultsHash = valueDes;
+                    break;
+                case r'evidence_hash':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.evidenceHash = valueDes;
+                    break;
+                case r'proposer_address':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.proposerAddress = valueDes;
+                    break;
+            }
+        }
+        return result.build();
+    }
+}
+

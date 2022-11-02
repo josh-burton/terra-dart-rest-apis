@@ -8,13 +8,13 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
 import 'package:terra_dart_rest_apis/src/model/accounts.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
 import 'package:terra_dart_rest_apis/src/model/get_tax_proceeds_result.dart';
-import 'package:terra_dart_rest_apis/src/model/getthecurrenttreasuryindicators_response.dart';
-import 'package:terra_dart_rest_apis/src/model/tax_cap.dart';
-import 'package:terra_dart_rest_apis/src/model/treasury_params.dart';
+import 'package:terra_dart_rest_apis/src/model/treasury_parameters_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/treasury_tax_caps_get200_response_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 
 class TreasuryApi {
 
@@ -24,12 +24,10 @@ class TreasuryApi {
 
   const TreasuryApi(this._dio, this._serializers);
 
-  /// Get circulating supply of coins
-  /// Get circulating supply of coins
+  /// Get the current treasury indicators
+  /// 
   ///
   /// Parameters:
-  /// * [denom] - Coin denomination
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,11 +35,10 @@ class TreasuryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [double] as data
+  /// Returns a [Future] containing a [Response] with a [JsonObject] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<double>> getcirculatingsupplyofcoins({ 
-    required String denom,
-    required String contentType,
+  @Deprecated('This operation has been deprecated')
+  Future<Response<JsonObject>> treasuryIndicatorsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -49,11 +46,10 @@ class TreasuryApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/v1/circulatingsupply/{denom}'.replaceAll('{' r'denom' '}', denom.toString());
+    final _path = r'/treasury/indicators';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -71,10 +67,14 @@ class TreasuryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    double _responseData;
+    JsonObject _responseData;
 
     try {
-      _responseData = _response.data as double;
+      const _responseType = FullType(JsonObject);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as JsonObject;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -85,7 +85,80 @@ class TreasuryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<double>(
+    return Response<JsonObject>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get treasury module params
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TreasuryParametersGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TreasuryParametersGet200Response>> treasuryParametersGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/treasury/parameters';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TreasuryParametersGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(TreasuryParametersGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TreasuryParametersGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TreasuryParametersGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -98,7 +171,7 @@ class TreasuryApi {
   }
 
   /// Get current reward weight
-  /// Get current reward weight
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -111,7 +184,7 @@ class TreasuryApi {
   /// Returns a [Future] containing a [Response] with a [double] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<double>> getcurrentrewardweight({ 
+  Future<Response<double>> treasuryRewardWeightGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -166,8 +239,8 @@ class TreasuryApi {
     );
   }
 
-  /// Get current tax proceeds
-  /// Get current tax proceeds
+  /// retrieves the size of the seigniorage pool
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -177,10 +250,10 @@ class TreasuryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Coin>] as data
+  /// Returns a [Future] containing a [Response] with a [int] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<Coin>>> getcurrenttaxproceeds({ 
+  Future<Response<int>> treasurySeigniorageProceedsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -188,7 +261,7 @@ class TreasuryApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/treasury/tax_proceeds';
+    final _path = r'/treasury/seigniorage_proceeds';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -209,14 +282,10 @@ class TreasuryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<Coin> _responseData;
+    int _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(Coin)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<Coin>;
+      _responseData = _response.data as int;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -227,163 +296,7 @@ class TreasuryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<Coin>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get current tax rate
-  /// Get current tax rate
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [double] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<double>> getcurrenttaxrate({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/treasury/tax_rate';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    double _responseData;
-
-    try {
-      _responseData = _response.data as double;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<double>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get richlist of coins
-  /// Get richlist of coins
-  ///
-  /// Parameters:
-  /// * [denom] - Coin denomination
-  /// * [contentType] - 
-  /// * [page] - Page number
-  /// * [limit] - Page size
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Accounts>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Accounts>>> getrichlistofcoins({ 
-    required String denom,
-    required String contentType,
-    double? page,
-    double? limit,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/v1/richlist/{denom}'.replaceAll('{' r'denom' '}', denom.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        r'Content-Type': contentType,
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(double)),
-      if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(double)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<Accounts> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(Accounts)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<Accounts>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<Accounts>>(
+    return Response<int>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -396,7 +309,7 @@ class TreasuryApi {
   }
 
   /// Get tax cap of the denom
-  /// Get tax cap of the denom
+  /// 
   ///
   /// Parameters:
   /// * [denom] - Denom
@@ -410,7 +323,7 @@ class TreasuryApi {
   /// Returns a [Future] containing a [Response] with a [int] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<int>> gettaxcapofthedenom({ 
+  Future<Response<int>> treasuryTaxCapDenomGet({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -467,7 +380,7 @@ class TreasuryApi {
   }
 
   /// Get tax caps for the all whitelisted denoms
-  /// Get tax caps for the all whitelisted denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -477,10 +390,10 @@ class TreasuryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<TaxCap>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TreasuryTaxCapsGet200ResponseInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<TaxCap>>> gettaxcapsfortheallwhitelisteddenoms({ 
+  Future<Response<BuiltList<TreasuryTaxCapsGet200ResponseInner>>> treasuryTaxCapsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -509,14 +422,14 @@ class TreasuryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<TaxCap> _responseData;
+    BuiltList<TreasuryTaxCapsGet200ResponseInner> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(TaxCap)]);
+      const _responseType = FullType(BuiltList, [FullType(TreasuryTaxCapsGet200ResponseInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<TaxCap>;
+      ) as BuiltList<TreasuryTaxCapsGet200ResponseInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -527,7 +440,303 @@ class TreasuryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<TaxCap>>(
+    return Response<BuiltList<TreasuryTaxCapsGet200ResponseInner>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get current tax proceeds
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TxsHashGet200ResponseTxFeeAmountInner>] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>> treasuryTaxProceedsGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/treasury/tax_proceeds';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get current tax rate
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [double] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<double>> treasuryTaxRateGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/treasury/tax_rate';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    double _responseData;
+
+    try {
+      _responseData = _response.data as double;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<double>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get circulating supply of coins
+  /// Get circulating supply of coins
+  ///
+  /// Parameters:
+  /// * [denom] - Coin denomination
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [num] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<num>> v1CirculatingsupplyDenomGet({ 
+    required String denom,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/circulatingsupply/{denom}'.replaceAll('{' r'denom' '}', denom.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    num _responseData;
+
+    try {
+      _responseData = _response.data as num;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<num>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get richlist of coins
+  /// Get richlist of coins
+  ///
+  /// Parameters:
+  /// * [denom] - Coin denomination
+  /// * [page] - Page number
+  /// * [limit] - Page size
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Accounts>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Accounts>>> v1RichlistDenomGet({ 
+    required String denom,
+    num? page,
+    num? limit,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/richlist/{denom}'.replaceAll('{' r'denom' '}', denom.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(num)),
+      if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(num)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<Accounts> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(Accounts)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<Accounts>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<Accounts>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -543,7 +752,6 @@ class TreasuryApi {
   /// Get taxproceeds
   ///
   /// Parameters:
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -553,8 +761,7 @@ class TreasuryApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetTaxProceedsResult] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetTaxProceedsResult>> gettaxproceeds({ 
-    required String contentType,
+  Future<Response<GetTaxProceedsResult>> v1TaxproceedsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -566,7 +773,6 @@ class TreasuryApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -614,85 +820,11 @@ class TreasuryApi {
     );
   }
 
-  /// Get the current treasury indicators
-  /// Get the current treasury indicators
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetthecurrenttreasuryindicatorsResponse] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<GetthecurrenttreasuryindicatorsResponse>> getthecurrenttreasuryindicators({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/treasury/indicators';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetthecurrenttreasuryindicatorsResponse _responseData;
-
-    try {
-      const _responseType = FullType(GetthecurrenttreasuryindicatorsResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetthecurrenttreasuryindicatorsResponse;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetthecurrenttreasuryindicatorsResponse>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Get total supply of coins
   /// Get total supply of coins
   ///
   /// Parameters:
   /// * [denom] - Coin denomination
-  /// * [contentType] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -702,9 +834,8 @@ class TreasuryApi {
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<String>> gettotalsupplyofcoins({ 
+  Future<Response<String>> v1TotalsupplyDenomGet({ 
     required String denom,
-    required String contentType,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -716,7 +847,6 @@ class TreasuryApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        r'Content-Type': contentType,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -749,148 +879,6 @@ class TreasuryApi {
     }
 
     return Response<String>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get treasury module params
-  /// Get treasury module params
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [TreasuryParams] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<TreasuryParams>> gettreasurymoduleparams({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/treasury/parameters';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    TreasuryParams _responseData;
-
-    try {
-      const _responseType = FullType(TreasuryParams);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as TreasuryParams;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<TreasuryParams>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// retrieves the size of the seigniorage pool
-  /// retrieves the size of the seigniorage pool
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [int] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<int>> retrievesthesizeoftheseignioragepool({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/treasury/seigniorage_proceeds';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    int _responseData;
-
-    try {
-      _responseData = _response.data as int;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<int>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

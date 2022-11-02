@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_header_version.dart';
-import 'package:terra_dart_rest_apis/src/model/block_id26.dart';
+import 'package:terra_dart_rest_apis/src/model/block_id1.dart';
+import 'package:terra_dart_rest_apis/src/model/basic_block_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -28,7 +28,7 @@ part 'tendermint_types_header.g.dart';
 /// * [proposerAddress] 
 abstract class TendermintTypesHeader implements Built<TendermintTypesHeader, TendermintTypesHeaderBuilder> {
     @BuiltValueField(wireName: r'version')
-    TendermintTypesHeaderVersion? get version;
+    BasicBlockInfo? get version;
 
     @BuiltValueField(wireName: r'chain_id')
     String? get chainId;
@@ -40,7 +40,7 @@ abstract class TendermintTypesHeader implements Built<TendermintTypesHeader, Ten
     DateTime? get time;
 
     @BuiltValueField(wireName: r'last_block_id')
-    BlockID26? get lastBlockId;
+    BlockID1? get lastBlockId;
 
     @BuiltValueField(wireName: r'last_commit_hash')
     String? get lastCommitHash;
@@ -95,7 +95,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
             result
                 ..add(r'version')
                 ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(TendermintTypesHeaderVersion)));
+                    specifiedType: const FullType(BasicBlockInfo)));
         }
         if (object.chainId != null) {
             result
@@ -119,7 +119,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
             result
                 ..add(r'last_block_id')
                 ..add(serializers.serialize(object.lastBlockId,
-                    specifiedType: const FullType(BlockID26)));
+                    specifiedType: const FullType(BlockID1)));
         }
         if (object.lastCommitHash != null) {
             result
@@ -192,7 +192,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
             switch (key) {
                 case r'version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesHeaderVersion)) as TendermintTypesHeaderVersion;
+                        specifiedType: const FullType(BasicBlockInfo)) as BasicBlockInfo;
                     result.version.replace(valueDes);
                     break;
                 case r'chain_id':
@@ -212,7 +212,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
                     break;
                 case r'last_block_id':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockID26)) as BlockID26;
+                        specifiedType: const FullType(BlockID1)) as BlockID1;
                     result.lastBlockId.replace(valueDes);
                     break;
                 case r'last_commit_hash':

@@ -10,20 +10,24 @@ part 'get_validator_detail_result_commission_info.g.dart';
 /// GetValidatorDetailResultCommissionInfo
 ///
 /// Properties:
-/// * [rate] 
-/// * [maxRate] 
-/// * [maxChangeRate] 
-/// * [updateTime] 
+/// * [rate] - 
+/// * [maxRate] - 
+/// * [maxChangeRate] - 
+/// * [updateTime] - 
 abstract class GetValidatorDetailResultCommissionInfo implements Built<GetValidatorDetailResultCommissionInfo, GetValidatorDetailResultCommissionInfoBuilder> {
+    /// 
     @BuiltValueField(wireName: r'rate')
     String get rate;
 
+    /// 
     @BuiltValueField(wireName: r'maxRate')
     String get maxRate;
 
+    /// 
     @BuiltValueField(wireName: r'maxChangeRate')
     String get maxChangeRate;
 
+    /// 
     @BuiltValueField(wireName: r'updateTime')
     String get updateTime;
 

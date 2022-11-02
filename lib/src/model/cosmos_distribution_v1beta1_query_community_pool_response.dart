@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_dec_coin.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response_pool_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'cosmos_distribution_v1beta1_query_community_pool_response.g.dart';
 abstract class CosmosDistributionV1beta1QueryCommunityPoolResponse implements Built<CosmosDistributionV1beta1QueryCommunityPoolResponse, CosmosDistributionV1beta1QueryCommunityPoolResponseBuilder> {
     /// pool defines community pool's coins.
     @BuiltValueField(wireName: r'pool')
-    BuiltList<CosmosBaseV1beta1DecCoin>? get pool;
+    BuiltList<CommunityPool200ResponsePoolInner>? get pool;
 
     CosmosDistributionV1beta1QueryCommunityPoolResponse._();
 
@@ -44,7 +44,7 @@ class _$CosmosDistributionV1beta1QueryCommunityPoolResponseSerializer implements
             result
                 ..add(r'pool')
                 ..add(serializers.serialize(object.pool,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])));
         }
         return result;
     }
@@ -63,7 +63,7 @@ class _$CosmosDistributionV1beta1QueryCommunityPoolResponseSerializer implements
             switch (key) {
                 case r'pool':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])) as BuiltList<CosmosBaseV1beta1DecCoin>;
+                        specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])) as BuiltList<CommunityPool200ResponsePoolInner>;
                     result.pool.replace(valueDes);
                     break;
             }

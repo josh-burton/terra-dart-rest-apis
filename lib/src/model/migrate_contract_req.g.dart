@@ -8,7 +8,7 @@ part of 'migrate_contract_req.dart';
 
 class _$MigrateContractReq extends MigrateContractReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
   final num? newCodeId;
   @override
@@ -59,9 +59,11 @@ class MigrateContractReqBuilder
     implements Builder<MigrateContractReq, MigrateContractReqBuilder> {
   _$MigrateContractReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   num? _newCodeId;
   num? get newCodeId => _$this._newCodeId;

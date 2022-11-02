@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/ibc_core_channel_v1_identified_channel.dart';
+import 'package:terra_dart_rest_apis/src/model/pagination_response.dart';
+import 'package:terra_dart_rest_apis/src/model/query_block_height.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/query_signing_infos_responseistheresponsetypeforthe_query_signing_infos_rp_cmethod_pagination.dart';
-import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
+import 'package:terra_dart_rest_apis/src/model/channels200_response_channels_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,13 +20,13 @@ part 'ibc_core_channel_v1_query_channels_response.g.dart';
 abstract class IbcCoreChannelV1QueryChannelsResponse implements Built<IbcCoreChannelV1QueryChannelsResponse, IbcCoreChannelV1QueryChannelsResponseBuilder> {
     /// list of stored channels of the chain.
     @BuiltValueField(wireName: r'channels')
-    BuiltList<IbcCoreChannelV1IdentifiedChannel>? get channels;
+    BuiltList<Channels200ResponseChannelsInner>? get channels;
 
     @BuiltValueField(wireName: r'pagination')
-    QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination? get pagination;
+    PaginationResponse? get pagination;
 
     @BuiltValueField(wireName: r'height')
-    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get height;
+    QueryBlockHeight? get height;
 
     IbcCoreChannelV1QueryChannelsResponse._();
 
@@ -54,19 +54,19 @@ class _$IbcCoreChannelV1QueryChannelsResponseSerializer implements StructuredSer
             result
                 ..add(r'channels')
                 ..add(serializers.serialize(object.channels,
-                    specifiedType: const FullType(BuiltList, [FullType(IbcCoreChannelV1IdentifiedChannel)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Channels200ResponseChannelsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)));
+                    specifiedType: const FullType(PaginationResponse)));
         }
         if (object.height != null) {
             result
                 ..add(r'height')
                 ..add(serializers.serialize(object.height,
-                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
+                    specifiedType: const FullType(QueryBlockHeight)));
         }
         return result;
     }
@@ -85,17 +85,17 @@ class _$IbcCoreChannelV1QueryChannelsResponseSerializer implements StructuredSer
             switch (key) {
                 case r'channels':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(IbcCoreChannelV1IdentifiedChannel)])) as BuiltList<IbcCoreChannelV1IdentifiedChannel>;
+                        specifiedType: const FullType(BuiltList, [FullType(Channels200ResponseChannelsInner)])) as BuiltList<Channels200ResponseChannelsInner>;
                     result.channels.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)) as QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination;
+                        specifiedType: const FullType(PaginationResponse)) as PaginationResponse;
                     result.pagination.replace(valueDes);
                     break;
                 case r'height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
+                        specifiedType: const FullType(QueryBlockHeight)) as QueryBlockHeight;
                     result.height.replace(valueDes);
                     break;
             }

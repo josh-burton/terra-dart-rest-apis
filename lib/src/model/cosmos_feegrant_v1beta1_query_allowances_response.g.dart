@@ -9,10 +9,10 @@ part of 'cosmos_feegrant_v1beta1_query_allowances_response.dart';
 class _$CosmosFeegrantV1beta1QueryAllowancesResponse
     extends CosmosFeegrantV1beta1QueryAllowancesResponse {
   @override
-  final BuiltList<GrantisstoredintheKVStoretorecordagrantwithfullcontext>?
+  final BuiltList<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>?
       allowances;
   @override
-  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
+  final Grants200ResponsePagination? pagination;
 
   factory _$CosmosFeegrantV1beta1QueryAllowancesResponse(
           [void Function(CosmosFeegrantV1beta1QueryAllowancesResponseBuilder)?
@@ -64,22 +64,20 @@ class CosmosFeegrantV1beta1QueryAllowancesResponseBuilder
             CosmosFeegrantV1beta1QueryAllowancesResponseBuilder> {
   _$CosmosFeegrantV1beta1QueryAllowancesResponse? _$v;
 
-  ListBuilder<GrantisstoredintheKVStoretorecordagrantwithfullcontext>?
+  ListBuilder<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>?
       _allowances;
-  ListBuilder<GrantisstoredintheKVStoretorecordagrantwithfullcontext>
+  ListBuilder<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>
       get allowances => _$this._allowances ??= new ListBuilder<
-          GrantisstoredintheKVStoretorecordagrantwithfullcontext>();
+          GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>();
   set allowances(
-          ListBuilder<GrantisstoredintheKVStoretorecordagrantwithfullcontext>?
+          ListBuilder<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>?
               allowances) =>
       _$this._allowances = allowances;
 
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
+  Grants200ResponsePaginationBuilder? _pagination;
+  Grants200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Grants200ResponsePaginationBuilder();
+  set pagination(Grants200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosFeegrantV1beta1QueryAllowancesResponseBuilder() {

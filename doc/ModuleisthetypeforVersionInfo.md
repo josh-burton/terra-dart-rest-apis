@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.ModuleisthetypeforVersionInfo
+# terra_dart_rest_apis.model.ModuleIsTheTypeForVersionInfo
 
 ## Load the model package
 ```dart

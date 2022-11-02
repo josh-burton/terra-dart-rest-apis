@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.Datacontainsthesetoftransactionsincludedintheblock
+# terra_dart_rest_apis.model.DataContainsTheSetOfTransactionsIncludedInTheBlock
 
 ## Load the model package
 ```dart

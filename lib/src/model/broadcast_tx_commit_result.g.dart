@@ -8,9 +8,9 @@ part of 'broadcast_tx_commit_result.dart';
 
 class _$BroadcastTxCommitResult extends BroadcastTxCommitResult {
   @override
-  final CheckTxResult? checkTx;
+  final TxsGet200Response1CheckTx? checkTx;
   @override
-  final CheckTxResult? deliverTx;
+  final TxsGet200Response1DeliverTx? deliverTx;
   @override
   final String? hash;
   @override
@@ -66,15 +66,16 @@ class BroadcastTxCommitResultBuilder
         Builder<BroadcastTxCommitResult, BroadcastTxCommitResultBuilder> {
   _$BroadcastTxCommitResult? _$v;
 
-  CheckTxResultBuilder? _checkTx;
-  CheckTxResultBuilder get checkTx =>
-      _$this._checkTx ??= new CheckTxResultBuilder();
-  set checkTx(CheckTxResultBuilder? checkTx) => _$this._checkTx = checkTx;
+  TxsGet200Response1CheckTxBuilder? _checkTx;
+  TxsGet200Response1CheckTxBuilder get checkTx =>
+      _$this._checkTx ??= new TxsGet200Response1CheckTxBuilder();
+  set checkTx(TxsGet200Response1CheckTxBuilder? checkTx) =>
+      _$this._checkTx = checkTx;
 
-  CheckTxResultBuilder? _deliverTx;
-  CheckTxResultBuilder get deliverTx =>
-      _$this._deliverTx ??= new CheckTxResultBuilder();
-  set deliverTx(CheckTxResultBuilder? deliverTx) =>
+  TxsGet200Response1DeliverTxBuilder? _deliverTx;
+  TxsGet200Response1DeliverTxBuilder get deliverTx =>
+      _$this._deliverTx ??= new TxsGet200Response1DeliverTxBuilder();
+  set deliverTx(TxsGet200Response1DeliverTxBuilder? deliverTx) =>
       _$this._deliverTx = deliverTx;
 
   String? _hash;

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/exchange_rate_tuple_structtostoreinterpretedexchangeratesdatatostore.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/exchange_rate_tuple_struct_to_store_interpreted_exchange_rates_data_to_store.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,12 +12,11 @@ part 'terra_oracle_v1beta1_aggregate_exchange_rate_vote.g.dart';
 /// MsgAggregateExchangeRateVote - struct for voting on the exchange rates of Luna denominated in various Terra assets.
 ///
 /// Properties:
-/// * [exchangeRateTuples] - 
+/// * [exchangeRateTuples] 
 /// * [voter] 
 abstract class TerraOracleV1beta1AggregateExchangeRateVote implements Built<TerraOracleV1beta1AggregateExchangeRateVote, TerraOracleV1beta1AggregateExchangeRateVoteBuilder> {
-    /// 
     @BuiltValueField(wireName: r'exchange_rate_tuples')
-    BuiltList<ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>? get exchangeRateTuples;
+    BuiltList<ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>? get exchangeRateTuples;
 
     @BuiltValueField(wireName: r'voter')
     String? get voter;
@@ -48,7 +47,7 @@ class _$TerraOracleV1beta1AggregateExchangeRateVoteSerializer implements Structu
             result
                 ..add(r'exchange_rate_tuples')
                 ..add(serializers.serialize(object.exchangeRateTuples,
-                    specifiedType: const FullType(BuiltList, [FullType(ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore)])));
+                    specifiedType: const FullType(BuiltList, [FullType(ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore)])));
         }
         if (object.voter != null) {
             result
@@ -73,7 +72,7 @@ class _$TerraOracleV1beta1AggregateExchangeRateVoteSerializer implements Structu
             switch (key) {
                 case r'exchange_rate_tuples':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore)])) as BuiltList<ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>;
+                        specifiedType: const FullType(BuiltList, [FullType(ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore)])) as BuiltList<ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>;
                     result.exchangeRateTuples.replace(valueDes);
                     break;
                 case r'voter':

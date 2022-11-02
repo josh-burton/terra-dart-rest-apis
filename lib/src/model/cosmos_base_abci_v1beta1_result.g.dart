@@ -12,7 +12,7 @@ class _$CosmosBaseAbciV1beta1Result extends CosmosBaseAbciV1beta1Result {
   @override
   final String? log;
   @override
-  final BuiltList<TendermintAbciEvent>? events;
+  final BuiltList<Simulate200ResponseResultEventsInner>? events;
 
   factory _$CosmosBaseAbciV1beta1Result(
           [void Function(CosmosBaseAbciV1beta1ResultBuilder)? updates]) =>
@@ -68,10 +68,11 @@ class CosmosBaseAbciV1beta1ResultBuilder
   String? get log => _$this._log;
   set log(String? log) => _$this._log = log;
 
-  ListBuilder<TendermintAbciEvent>? _events;
-  ListBuilder<TendermintAbciEvent> get events =>
-      _$this._events ??= new ListBuilder<TendermintAbciEvent>();
-  set events(ListBuilder<TendermintAbciEvent>? events) =>
+  ListBuilder<Simulate200ResponseResultEventsInner>? _events;
+  ListBuilder<Simulate200ResponseResultEventsInner> get events =>
+      _$this._events ??=
+          new ListBuilder<Simulate200ResponseResultEventsInner>();
+  set events(ListBuilder<Simulate200ResponseResultEventsInner>? events) =>
       _$this._events = events;
 
   CosmosBaseAbciV1beta1ResultBuilder() {

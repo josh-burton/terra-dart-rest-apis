@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_lazy_graded_vesting_account.dart';
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response_lazy_graded_vesting_account_value.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class LazyGradedVestingAccount implements Built<LazyGradedVestingAccoun
     String? get type;
 
     @BuiltValueField(wireName: r'value')
-    BaseLazyGradedVestingAccount? get value;
+    AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue? get value;
 
     LazyGradedVestingAccount._();
 
@@ -52,7 +52,7 @@ class _$LazyGradedVestingAccountSerializer implements StructuredSerializer<LazyG
             result
                 ..add(r'value')
                 ..add(serializers.serialize(object.value,
-                    specifiedType: const FullType(BaseLazyGradedVestingAccount)));
+                    specifiedType: const FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$LazyGradedVestingAccountSerializer implements StructuredSerializer<LazyG
                     break;
                 case r'value':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseLazyGradedVestingAccount)) as BaseLazyGradedVestingAccount;
+                        specifiedType: const FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue)) as AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValue;
                     result.value.replace(valueDes);
                     break;
             }

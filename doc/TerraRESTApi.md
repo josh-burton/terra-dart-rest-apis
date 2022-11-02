@@ -5,15 +5,15 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**thepropertiesoftheconnectednode**](TerraRESTApi.md#thepropertiesoftheconnectednode) | **GET** /node_info | The properties of the connected node
+[**nodeInfoGet**](TerraRESTApi.md#nodeinfoget) | **GET** /node_info | The properties of the connected node
 
 
-# **thepropertiesoftheconnectednode**
-> ThepropertiesoftheconnectednodeResponse thepropertiesoftheconnectednode()
+# **nodeInfoGet**
+> NodeInfoGet200Response nodeInfoGet()
 
 The properties of the connected node
 
@@ -26,10 +26,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTerraRESTApi();
 
 try {
-    final response = api.thepropertiesoftheconnectednode();
+    final response = api.nodeInfoGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TerraRESTApi->thepropertiesoftheconnectednode: $e\n');
+    print('Exception when calling TerraRESTApi->nodeInfoGet: $e\n');
 }
 ```
 
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ThepropertiesoftheconnectednodeResponse**](ThepropertiesoftheconnectednodeResponse.md)
+[**NodeInfoGet200Response**](NodeInfoGet200Response.md)
 
 ### Authorization
 

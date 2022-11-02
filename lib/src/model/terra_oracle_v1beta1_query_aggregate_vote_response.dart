@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_aggregate_vote_response_aggregate_vote.dart';
+import 'package:terra_dart_rest_apis/src/model/aggregate_vote_defines_oracle_aggregate_vote_submitted_by_a_validator_in_the_current_vote_period.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_oracle_v1beta1_query_aggregate_vote_response.g.dart';
 /// * [aggregateVote] 
 abstract class TerraOracleV1beta1QueryAggregateVoteResponse implements Built<TerraOracleV1beta1QueryAggregateVoteResponse, TerraOracleV1beta1QueryAggregateVoteResponseBuilder> {
     @BuiltValueField(wireName: r'aggregate_vote')
-    TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote? get aggregateVote;
+    AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriod? get aggregateVote;
 
     TerraOracleV1beta1QueryAggregateVoteResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraOracleV1beta1QueryAggregateVoteResponseSerializer implements Struct
             result
                 ..add(r'aggregate_vote')
                 ..add(serializers.serialize(object.aggregateVote,
-                    specifiedType: const FullType(TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote)));
+                    specifiedType: const FullType(AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriod)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraOracleV1beta1QueryAggregateVoteResponseSerializer implements Struct
             switch (key) {
                 case r'aggregate_vote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote)) as TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote;
+                        specifiedType: const FullType(AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriod)) as AggregateVoteDefinesOracleAggregateVoteSubmittedByAValidatorInTheCurrentVotePeriod;
                     result.aggregateVote.replace(valueDes);
                     break;
             }

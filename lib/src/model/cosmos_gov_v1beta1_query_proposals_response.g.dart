@@ -9,9 +9,9 @@ part of 'cosmos_gov_v1beta1_query_proposals_response.dart';
 class _$CosmosGovV1beta1QueryProposalsResponse
     extends CosmosGovV1beta1QueryProposalsResponse {
   @override
-  final BuiltList<CosmosGovV1beta1Proposal>? proposals;
+  final BuiltList<Proposals200ResponseProposalsInner>? proposals;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosGovV1beta1QueryProposalsResponse(
           [void Function(CosmosGovV1beta1QueryProposalsResponseBuilder)?
@@ -61,19 +61,17 @@ class CosmosGovV1beta1QueryProposalsResponseBuilder
             CosmosGovV1beta1QueryProposalsResponseBuilder> {
   _$CosmosGovV1beta1QueryProposalsResponse? _$v;
 
-  ListBuilder<CosmosGovV1beta1Proposal>? _proposals;
-  ListBuilder<CosmosGovV1beta1Proposal> get proposals =>
-      _$this._proposals ??= new ListBuilder<CosmosGovV1beta1Proposal>();
-  set proposals(ListBuilder<CosmosGovV1beta1Proposal>? proposals) =>
+  ListBuilder<Proposals200ResponseProposalsInner>? _proposals;
+  ListBuilder<Proposals200ResponseProposalsInner> get proposals =>
+      _$this._proposals ??=
+          new ListBuilder<Proposals200ResponseProposalsInner>();
+  set proposals(ListBuilder<Proposals200ResponseProposalsInner>? proposals) =>
       _$this._proposals = proposals;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosGovV1beta1QueryProposalsResponseBuilder() {

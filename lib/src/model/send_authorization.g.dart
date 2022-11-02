@@ -10,7 +10,7 @@ class _$SendAuthorization extends SendAuthorization {
   @override
   final String? type;
   @override
-  final Value4? value;
+  final SendAuthorizationValue? value;
 
   factory _$SendAuthorization(
           [void Function(SendAuthorizationBuilder)? updates]) =>
@@ -56,9 +56,10 @@ class SendAuthorizationBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  Value4Builder? _value;
-  Value4Builder get value => _$this._value ??= new Value4Builder();
-  set value(Value4Builder? value) => _$this._value = value;
+  SendAuthorizationValueBuilder? _value;
+  SendAuthorizationValueBuilder get value =>
+      _$this._value ??= new SendAuthorizationValueBuilder();
+  set value(SendAuthorizationValueBuilder? value) => _$this._value = value;
 
   SendAuthorizationBuilder() {
     SendAuthorization._defaults(this);

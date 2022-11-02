@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **delegatorAddress** | **String** |  | [optional] 
 **validatorSrcAddress** | **String** |  | [optional] 
 **validatorDstAddress** | **String** |  | [optional] 
-**entries** | [**BuiltList&lt;RedelegationEntry&gt;**](RedelegationEntry.md) |  | [optional] 
+**entries** | [**BuiltList&lt;StakingRedelegationsGet200ResponseInnerEntriesInner&gt;**](StakingRedelegationsGet200ResponseInnerEntriesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

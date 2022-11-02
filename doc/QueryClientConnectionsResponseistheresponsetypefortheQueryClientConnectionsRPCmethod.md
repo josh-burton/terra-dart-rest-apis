@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod
+# terra_dart_rest_apis.model.QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod
 
 ## Load the model package
 ```dart
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **connectionPaths** | **BuiltList&lt;String&gt;** | slice of all the connection paths associated with a client. | [optional] 
 **proof** | **String** |  | [optional] 
-**proofHeight** | [**QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight**](QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight.md) |  | [optional] 
+**proofHeight** | [**HeightAtWhichTheProofWasGenerated**](HeightAtWhichTheProofWasGenerated.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

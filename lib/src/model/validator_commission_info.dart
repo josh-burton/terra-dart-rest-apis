@@ -10,20 +10,24 @@ part 'validator_commission_info.g.dart';
 /// ValidatorCommissionInfo
 ///
 /// Properties:
-/// * [rate] 
-/// * [maxRate] 
-/// * [maxChangeRate] 
-/// * [updateTime] 
+/// * [rate] - 
+/// * [maxRate] - 
+/// * [maxChangeRate] - 
+/// * [updateTime] - 
 abstract class ValidatorCommissionInfo implements Built<ValidatorCommissionInfo, ValidatorCommissionInfoBuilder> {
+    /// 
     @BuiltValueField(wireName: r'rate')
     String get rate;
 
+    /// 
     @BuiltValueField(wireName: r'maxRate')
     String get maxRate;
 
+    /// 
     @BuiltValueField(wireName: r'maxChangeRate')
     String get maxChangeRate;
 
+    /// 
     @BuiltValueField(wireName: r'updateTime')
     String get updateTime;
 

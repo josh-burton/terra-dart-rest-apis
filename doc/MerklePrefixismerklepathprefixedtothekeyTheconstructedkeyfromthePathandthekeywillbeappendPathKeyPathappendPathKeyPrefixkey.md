@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey
+# terra_dart_rest_apis.model.MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey
 
 ## Load the model package
 ```dart

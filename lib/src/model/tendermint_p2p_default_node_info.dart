@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_p2p_protocol_version.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_p2p_default_node_info_other.dart';
+import 'package:terra_dart_rest_apis/src/model/get_node_info200_response_default_node_info_other.dart';
+import 'package:terra_dart_rest_apis/src/model/get_node_info200_response_default_node_info_protocol_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -22,7 +22,7 @@ part 'tendermint_p2p_default_node_info.g.dart';
 /// * [other] 
 abstract class TendermintP2pDefaultNodeInfo implements Built<TendermintP2pDefaultNodeInfo, TendermintP2pDefaultNodeInfoBuilder> {
     @BuiltValueField(wireName: r'protocol_version')
-    TendermintP2pProtocolVersion? get protocolVersion;
+    GetNodeInfo200ResponseDefaultNodeInfoProtocolVersion? get protocolVersion;
 
     @BuiltValueField(wireName: r'default_node_id')
     String? get defaultNodeId;
@@ -43,7 +43,7 @@ abstract class TendermintP2pDefaultNodeInfo implements Built<TendermintP2pDefaul
     String? get moniker;
 
     @BuiltValueField(wireName: r'other')
-    TendermintP2pDefaultNodeInfoOther? get other;
+    GetNodeInfo200ResponseDefaultNodeInfoOther? get other;
 
     TendermintP2pDefaultNodeInfo._();
 
@@ -71,7 +71,7 @@ class _$TendermintP2pDefaultNodeInfoSerializer implements StructuredSerializer<T
             result
                 ..add(r'protocol_version')
                 ..add(serializers.serialize(object.protocolVersion,
-                    specifiedType: const FullType(TendermintP2pProtocolVersion)));
+                    specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfoProtocolVersion)));
         }
         if (object.defaultNodeId != null) {
             result
@@ -113,7 +113,7 @@ class _$TendermintP2pDefaultNodeInfoSerializer implements StructuredSerializer<T
             result
                 ..add(r'other')
                 ..add(serializers.serialize(object.other,
-                    specifiedType: const FullType(TendermintP2pDefaultNodeInfoOther)));
+                    specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfoOther)));
         }
         return result;
     }
@@ -132,7 +132,7 @@ class _$TendermintP2pDefaultNodeInfoSerializer implements StructuredSerializer<T
             switch (key) {
                 case r'protocol_version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintP2pProtocolVersion)) as TendermintP2pProtocolVersion;
+                        specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfoProtocolVersion)) as GetNodeInfo200ResponseDefaultNodeInfoProtocolVersion;
                     result.protocolVersion.replace(valueDes);
                     break;
                 case r'default_node_id':
@@ -167,7 +167,7 @@ class _$TendermintP2pDefaultNodeInfoSerializer implements StructuredSerializer<T
                     break;
                 case r'other':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintP2pDefaultNodeInfoOther)) as TendermintP2pDefaultNodeInfoOther;
+                        specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfoOther)) as GetNodeInfo200ResponseDefaultNodeInfoOther;
                     result.other.replace(valueDes);
                     break;
             }

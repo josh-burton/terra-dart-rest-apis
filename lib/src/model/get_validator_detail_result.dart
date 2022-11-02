@@ -18,36 +18,40 @@ part 'get_validator_detail_result.g.dart';
 /// GetValidatorDetailResult
 ///
 /// Properties:
-/// * [operatorAddress] 
-/// * [consensusPubkey] 
+/// * [operatorAddress] - 
+/// * [consensusPubkey] - 
 /// * [description] 
-/// * [tokens] 
-/// * [delegatorShares] 
+/// * [tokens] - 
+/// * [delegatorShares] - 
 /// * [votingPower] 
 /// * [commissionInfo] 
-/// * [upTime] 
-/// * [status] 
+/// * [upTime] - 
+/// * [status] - 
 /// * [rewardsPool] 
-/// * [stakingReturn] 
-/// * [accountAddress] 
+/// * [stakingReturn] - 
+/// * [accountAddress] - 
 /// * [selfDelegation] 
 /// * [myDelegation] - total delegation amount
 /// * [myUndelegation] - user undelegations
 /// * [myDelegatable] - delegateable amount
 /// * [myRewards] 
 abstract class GetValidatorDetailResult implements Built<GetValidatorDetailResult, GetValidatorDetailResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'consensusPubkey')
     String get consensusPubkey;
 
     @BuiltValueField(wireName: r'description')
     GetValidatorDetailResultDescription get description;
 
+    /// 
     @BuiltValueField(wireName: r'tokens')
     String get tokens;
 
+    /// 
     @BuiltValueField(wireName: r'delegatorShares')
     String get delegatorShares;
 
@@ -57,18 +61,22 @@ abstract class GetValidatorDetailResult implements Built<GetValidatorDetailResul
     @BuiltValueField(wireName: r'commissionInfo')
     GetValidatorDetailResultCommissionInfo get commissionInfo;
 
+    /// 
     @BuiltValueField(wireName: r'upTime')
     num get upTime;
 
+    /// 
     @BuiltValueField(wireName: r'status')
     String get status;
 
     @BuiltValueField(wireName: r'rewardsPool')
     GetValidatorDetailResultRewardsPool get rewardsPool;
 
+    /// 
     @BuiltValueField(wireName: r'stakingReturn')
     String get stakingReturn;
 
+    /// 
     @BuiltValueField(wireName: r'accountAddress')
     String get accountAddress;
 

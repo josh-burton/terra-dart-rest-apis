@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_tx_response.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/grants200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,10 +24,10 @@ abstract class CosmosTxV1beta1GetTxsEventResponse implements Built<CosmosTxV1bet
 
     /// tx_responses is the list of queried TxResponses.
     @BuiltValueField(wireName: r'tx_responses')
-    BuiltList<CosmosBaseAbciV1beta1TxResponse>? get txResponses;
+    BuiltList<BroadcastTx200ResponseTxResponse>? get txResponses;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthzV1beta1QueryGrantsResponsePagination? get pagination;
+    Grants200ResponsePagination? get pagination;
 
     CosmosTxV1beta1GetTxsEventResponse._();
 
@@ -61,13 +61,13 @@ class _$CosmosTxV1beta1GetTxsEventResponseSerializer implements StructuredSerial
             result
                 ..add(r'tx_responses')
                 ..add(serializers.serialize(object.txResponses,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1TxResponse)])));
+                    specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponse)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)));
+                    specifiedType: const FullType(Grants200ResponsePagination)));
         }
         return result;
     }
@@ -91,12 +91,12 @@ class _$CosmosTxV1beta1GetTxsEventResponseSerializer implements StructuredSerial
                     break;
                 case r'tx_responses':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1TxResponse)])) as BuiltList<CosmosBaseAbciV1beta1TxResponse>;
+                        specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponse)])) as BuiltList<BroadcastTx200ResponseTxResponse>;
                     result.txResponses.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)) as CosmosAuthzV1beta1QueryGrantsResponsePagination;
+                        specifiedType: const FullType(Grants200ResponsePagination)) as Grants200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

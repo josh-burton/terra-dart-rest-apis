@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/public_key.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_signature_pub_key.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class StdSignature implements Built<StdSignature, StdSignatureBuilder> 
     String? get signature;
 
     @BuiltValueField(wireName: r'pub_key')
-    PublicKey? get pubKey;
+    TxsHashGet200ResponseTxSignaturePubKey? get pubKey;
 
     StdSignature._();
 
@@ -52,7 +52,7 @@ class _$StdSignatureSerializer implements StructuredSerializer<StdSignature> {
             result
                 ..add(r'pub_key')
                 ..add(serializers.serialize(object.pubKey,
-                    specifiedType: const FullType(PublicKey)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxSignaturePubKey)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$StdSignatureSerializer implements StructuredSerializer<StdSignature> {
                     break;
                 case r'pub_key':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PublicKey)) as PublicKey;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxSignaturePubKey)) as TxsHashGet200ResponseTxSignaturePubKey;
                     result.pubKey.replace(valueDes);
                     break;
             }

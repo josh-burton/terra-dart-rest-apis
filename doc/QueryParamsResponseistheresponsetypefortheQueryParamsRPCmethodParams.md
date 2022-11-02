@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams
+# terra_dart_rest_apis.model.QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethodParams
 
 ## Load the model package
 ```dart

@@ -12,9 +12,10 @@ part 'get_tx_list_result_txs_tx_value_msg_value_outputs.g.dart';
 /// GetTxListResultTxsTxValueMsgValueOutputs
 ///
 /// Properties:
-/// * [address] 
+/// * [address] - 
 /// * [coins] - 
 abstract class GetTxListResultTxsTxValueMsgValueOutputs implements Built<GetTxListResultTxsTxValueMsgValueOutputs, GetTxListResultTxsTxValueMsgValueOutputsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'address')
     String get address;
 

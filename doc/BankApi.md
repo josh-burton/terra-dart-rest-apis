@@ -5,109 +5,19 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getaccountinformation**](BankApi.md#getaccountinformation) | **GET** /v1/bank/{account} | Get account information
-[**gettheaccountbalances**](BankApi.md#gettheaccountbalances) | **GET** /bank/balances/{address} | Get the account balances
-[**sendcoinsfromoneaccounttoanother**](BankApi.md#sendcoinsfromoneaccounttoanother) | **POST** /bank/accounts/{address}/transfers | Send coins from one account to another
-[**totalsupplyofasinglecoindenomination**](BankApi.md#totalsupplyofasinglecoindenomination) | **GET** /bank/total/{denomination} | Total supply of a single coin denomination
-[**totalsupplyofcoinsinthechain**](BankApi.md#totalsupplyofcoinsinthechain) | **GET** /bank/total | Total supply of coins in the chain
+[**bankAccountsAddressTransfersPost**](BankApi.md#bankaccountsaddresstransferspost) | **POST** /bank/accounts/{address}/transfers | Send coins from one account to another
+[**bankBalancesAddressGet**](BankApi.md#bankbalancesaddressget) | **GET** /bank/balances/{address} | Get the account balances
+[**bankTotalDenominationGet**](BankApi.md#banktotaldenominationget) | **GET** /bank/total/{denomination} | Total supply of a single coin denomination
+[**bankTotalGet**](BankApi.md#banktotalget) | **GET** /bank/total | Total supply of coins in the chain
+[**v1BankAccountGet**](BankApi.md#v1bankaccountget) | **GET** /v1/bank/{account} | Get account information
 
 
-# **getaccountinformation**
-> GetBankResult getaccountinformation(account, contentType)
-
-Get account information
-
-Get account information
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getBankApi();
-final String account = account_example; // String | Account address in bech32 format
-final String contentType = contentType_example; // String | 
-
-try {
-    final response = api.getaccountinformation(account, contentType);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling BankApi->getaccountinformation: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account** | **String**| Account address in bech32 format | 
- **contentType** | **String**|  | 
-
-### Return type
-
-[**GetBankResult**](GetBankResult.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **gettheaccountbalances**
-> BuiltList<Coin> gettheaccountbalances(address)
-
-Get the account balances
-
-Get the account balances
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getBankApi();
-final String address = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Account address in bech32 format
-
-try {
-    final response = api.gettheaccountbalances(address);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling BankApi->gettheaccountbalances: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address** | **String**| Account address in bech32 format | 
-
-### Return type
-
-[**BuiltList&lt;Coin&gt;**](Coin.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sendcoinsfromoneaccounttoanother**
-> StdTx sendcoinsfromoneaccounttoanother(address, sendcoinsfromoneaccounttoanotherRequest)
-
-Send coins from one account to another
+# **bankAccountsAddressTransfersPost**
+> TxsHashGet200ResponseTx bankAccountsAddressTransfersPost(address, account)
 
 Send coins from one account to another
 
@@ -117,13 +27,13 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getBankApi();
 final String address = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Account address in bech32 format
-final SendcoinsfromoneaccounttoanotherRequest sendcoinsfromoneaccounttoanotherRequest = ; // SendcoinsfromoneaccounttoanotherRequest | The sender and tx information
+final BankAccountsAddressTransfersPostRequest account = ; // BankAccountsAddressTransfersPostRequest | The sender and tx information
 
 try {
-    final response = api.sendcoinsfromoneaccounttoanother(address, sendcoinsfromoneaccounttoanotherRequest);
+    final response = api.bankAccountsAddressTransfersPost(address, account);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling BankApi->sendcoinsfromoneaccounttoanother: $e\n');
+    print('Exception when calling BankApi->bankAccountsAddressTransfersPost: $e\n');
 }
 ```
 
@@ -132,11 +42,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| Account address in bech32 format | 
- **sendcoinsfromoneaccounttoanotherRequest** | [**SendcoinsfromoneaccounttoanotherRequest**](SendcoinsfromoneaccounttoanotherRequest.md)| The sender and tx information | 
+ **account** | [**BankAccountsAddressTransfersPostRequest**](BankAccountsAddressTransfersPostRequest.md)| The sender and tx information | 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
 
 ### Authorization
 
@@ -149,10 +59,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **totalsupplyofasinglecoindenomination**
-> String totalsupplyofasinglecoindenomination(denomination)
+# **bankBalancesAddressGet**
+> BuiltList<TxsHashGet200ResponseTxFeeAmountInner> bankBalancesAddressGet(address)
 
-Total supply of a single coin denomination
+Get the account balances
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getBankApi();
+final String address = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Account address in bech32 format
+
+try {
+    final response = api.bankBalancesAddressGet(address);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling BankApi->bankBalancesAddressGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **String**| Account address in bech32 format | 
+
+### Return type
+
+[**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankTotalDenominationGet**
+> String bankTotalDenominationGet(denomination)
 
 Total supply of a single coin denomination
 
@@ -164,10 +113,10 @@ final api = TerraRestApi().getBankApi();
 final String denomination = uluna; // String | Coin denomination
 
 try {
-    final response = api.totalsupplyofasinglecoindenomination(denomination);
+    final response = api.bankTotalDenominationGet(denomination);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling BankApi->totalsupplyofasinglecoindenomination: $e\n');
+    print('Exception when calling BankApi->bankTotalDenominationGet: $e\n');
 }
 ```
 
@@ -192,10 +141,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **totalsupplyofcoinsinthechain**
-> Supply totalsupplyofcoinsinthechain()
-
-Total supply of coins in the chain
+# **bankTotalGet**
+> BankTotalGet200Response bankTotalGet()
 
 Total supply of coins in the chain
 
@@ -206,10 +153,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getBankApi();
 
 try {
-    final response = api.totalsupplyofcoinsinthechain();
+    final response = api.bankTotalGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling BankApi->totalsupplyofcoinsinthechain: $e\n');
+    print('Exception when calling BankApi->bankTotalGet: $e\n');
 }
 ```
 
@@ -218,7 +165,50 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Supply**](Supply.md)
+[**BankTotalGet200Response**](BankTotalGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1BankAccountGet**
+> GetBankResult v1BankAccountGet(account)
+
+Get account information
+
+Get account information
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getBankApi();
+final String account = account_example; // String | Account address in bech32 format
+
+try {
+    final response = api.v1BankAccountGet(account);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling BankApi->v1BankAccountGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account** | **String**| Account address in bech32 format | 
+
+### Return type
+
+[**GetBankResult**](GetBankResult.md)
 
 ### Authorization
 

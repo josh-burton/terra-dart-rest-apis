@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/structforaggregateprevotingonthe_exchange_rate_vote_thepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringin_sha256saltexchangeratedenom_exchangeratedenomvoter.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/struct_for_aggregate_prevoting_on_the_exchange_rate_vote_the_purpose_of_aggregate_prevote_is_to_hide_vote_exchange_rates_with_hash_which_is_formatted_as_hex_string_in_sha256_salt_exchange_rate_denom_exchange_rate_denom_voter.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'terra_oracle_v1beta1_query_aggregate_prevotes_response.g.dart';
 /// QueryAggregatePrevotesResponse is response type for the Query/AggregatePrevotes RPC method.
 ///
 /// Properties:
-/// * [aggregatePrevotes] - 
+/// * [aggregatePrevotes] 
 abstract class TerraOracleV1beta1QueryAggregatePrevotesResponse implements Built<TerraOracleV1beta1QueryAggregatePrevotesResponse, TerraOracleV1beta1QueryAggregatePrevotesResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'aggregate_prevotes')
-    BuiltList<StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>? get aggregatePrevotes;
+    BuiltList<StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>? get aggregatePrevotes;
 
     TerraOracleV1beta1QueryAggregatePrevotesResponse._();
 
@@ -44,7 +43,7 @@ class _$TerraOracleV1beta1QueryAggregatePrevotesResponseSerializer implements St
             result
                 ..add(r'aggregate_prevotes')
                 ..add(serializers.serialize(object.aggregatePrevotes,
-                    specifiedType: const FullType(BuiltList, [FullType(StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter)])));
+                    specifiedType: const FullType(BuiltList, [FullType(StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$TerraOracleV1beta1QueryAggregatePrevotesResponseSerializer implements St
             switch (key) {
                 case r'aggregate_prevotes':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter)])) as BuiltList<StructforaggregateprevotingontheExchangeRateVoteThepurposeofaggregateprevoteistohidevoteexchangerateswithhashwhichisformattedashexstringinSHA256saltexchangeratedenomExchangeratedenomvoter>;
+                        specifiedType: const FullType(BuiltList, [FullType(StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter)])) as BuiltList<StructForAggregatePrevotingOnTheExchangeRateVoteThePurposeOfAggregatePrevoteIsToHideVoteExchangeRatesWithHashWhichIsFormattedAsHexStringInSHA256SaltExchangeRateDenomExchangeRateDenomVoter>;
                     result.aggregatePrevotes.replace(valueDes);
                     break;
             }

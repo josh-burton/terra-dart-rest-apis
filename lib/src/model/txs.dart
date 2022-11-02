@@ -12,13 +12,14 @@ part 'txs.g.dart';
 ///
 /// Properties:
 /// * [timestamp] - Last seen
-/// * [txhash] 
+/// * [txhash] - 
 /// * [tx] 
 abstract class Txs implements Built<Txs, TxsBuilder> {
     /// Last seen
     @BuiltValueField(wireName: r'timestamp')
     String get timestamp;
 
+    /// 
     @BuiltValueField(wireName: r'txhash')
     String get txhash;
 

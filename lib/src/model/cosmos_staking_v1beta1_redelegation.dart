@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_entry.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/redelegations200_response_redelegation_responses_inner_redelegation_entries_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -31,7 +31,7 @@ abstract class CosmosStakingV1beta1Redelegation implements Built<CosmosStakingV1
 
     /// entries are the redelegation entries.
     @BuiltValueField(wireName: r'entries')
-    BuiltList<CosmosStakingV1beta1RedelegationEntry>? get entries;
+    BuiltList<Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>? get entries;
 
     CosmosStakingV1beta1Redelegation._();
 
@@ -77,7 +77,7 @@ class _$CosmosStakingV1beta1RedelegationSerializer implements StructuredSerializ
             result
                 ..add(r'entries')
                 ..add(serializers.serialize(object.entries,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1RedelegationEntry)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner)])));
         }
         return result;
     }
@@ -111,7 +111,7 @@ class _$CosmosStakingV1beta1RedelegationSerializer implements StructuredSerializ
                     break;
                 case r'entries':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1RedelegationEntry)])) as BuiltList<CosmosStakingV1beta1RedelegationEntry>;
+                        specifiedType: const FullType(BuiltList, [FullType(Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner)])) as BuiltList<Redelegations200ResponseRedelegationResponsesInnerRedelegationEntriesInner>;
                     result.entries.replace(valueDes);
                     break;
             }

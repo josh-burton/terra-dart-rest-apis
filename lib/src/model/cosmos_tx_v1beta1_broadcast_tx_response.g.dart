@@ -9,7 +9,7 @@ part of 'cosmos_tx_v1beta1_broadcast_tx_response.dart';
 class _$CosmosTxV1beta1BroadcastTxResponse
     extends CosmosTxV1beta1BroadcastTxResponse {
   @override
-  final CosmosTxV1beta1BroadcastTxResponseTxResponse? txResponse;
+  final BroadcastTx200ResponseTxResponse? txResponse;
 
   factory _$CosmosTxV1beta1BroadcastTxResponse(
           [void Function(CosmosTxV1beta1BroadcastTxResponseBuilder)?
@@ -54,12 +54,10 @@ class CosmosTxV1beta1BroadcastTxResponseBuilder
             CosmosTxV1beta1BroadcastTxResponseBuilder> {
   _$CosmosTxV1beta1BroadcastTxResponse? _$v;
 
-  CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder? _txResponse;
-  CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder get txResponse =>
-      _$this._txResponse ??=
-          new CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder();
-  set txResponse(
-          CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder? txResponse) =>
+  BroadcastTx200ResponseTxResponseBuilder? _txResponse;
+  BroadcastTx200ResponseTxResponseBuilder get txResponse =>
+      _$this._txResponse ??= new BroadcastTx200ResponseTxResponseBuilder();
+  set txResponse(BroadcastTx200ResponseTxResponseBuilder? txResponse) =>
       _$this._txResponse = txResponse;
 
   CosmosTxV1beta1BroadcastTxResponseBuilder() {

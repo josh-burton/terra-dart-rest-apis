@@ -10,12 +10,14 @@ part 'get_validator_claims_result_claims_amount.g.dart';
 /// GetValidatorClaimsResultClaimsAmount
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class GetValidatorClaimsResultClaimsAmount implements Built<GetValidatorClaimsResultClaimsAmount, GetValidatorClaimsResultClaimsAmountBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

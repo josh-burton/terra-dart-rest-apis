@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseReq** | [**BaseReq**](BaseReq.md) |  | [optional] 
+**baseReq** | [**TxsEstimateFeePostRequestBaseReq**](TxsEstimateFeePostRequestBaseReq.md) |  | [optional] 
 **exchangeRates** | **String** | proof exchange rates of Luna in denom currency were used to make aggregate prevote hash | [optional] 
 **salt** | **String** | proof salt was used to make prevote hash; initial prevote does not require this field | [optional] 
 

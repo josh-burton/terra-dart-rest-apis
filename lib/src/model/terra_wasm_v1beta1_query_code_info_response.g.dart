@@ -9,7 +9,7 @@ part of 'terra_wasm_v1beta1_query_code_info_response.dart';
 class _$TerraWasmV1beta1QueryCodeInfoResponse
     extends TerraWasmV1beta1QueryCodeInfoResponse {
   @override
-  final CodeInfoisdatafortheuploadedcontractWASMcode? codeInfo;
+  final CodeInfoIsDataForTheUploadedContractWASMCode? codeInfo;
 
   factory _$TerraWasmV1beta1QueryCodeInfoResponse(
           [void Function(TerraWasmV1beta1QueryCodeInfoResponseBuilder)?
@@ -56,11 +56,11 @@ class TerraWasmV1beta1QueryCodeInfoResponseBuilder
             TerraWasmV1beta1QueryCodeInfoResponseBuilder> {
   _$TerraWasmV1beta1QueryCodeInfoResponse? _$v;
 
-  CodeInfoisdatafortheuploadedcontractWASMcodeBuilder? _codeInfo;
-  CodeInfoisdatafortheuploadedcontractWASMcodeBuilder get codeInfo =>
+  CodeInfoIsDataForTheUploadedContractWASMCodeBuilder? _codeInfo;
+  CodeInfoIsDataForTheUploadedContractWASMCodeBuilder get codeInfo =>
       _$this._codeInfo ??=
-          new CodeInfoisdatafortheuploadedcontractWASMcodeBuilder();
-  set codeInfo(CodeInfoisdatafortheuploadedcontractWASMcodeBuilder? codeInfo) =>
+          new CodeInfoIsDataForTheUploadedContractWASMCodeBuilder();
+  set codeInfo(CodeInfoIsDataForTheUploadedContractWASMCodeBuilder? codeInfo) =>
       _$this._codeInfo = codeInfo;
 
   TerraWasmV1beta1QueryCodeInfoResponseBuilder() {

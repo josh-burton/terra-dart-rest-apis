@@ -12,9 +12,10 @@ part 'get_staking_for_account_result_validators_rewards_pool.g.dart';
 /// GetStakingForAccountResultValidatorsRewardsPool
 ///
 /// Properties:
-/// * [total] 
+/// * [total] - 
 /// * [denoms] - 
 abstract class GetStakingForAccountResultValidatorsRewardsPool implements Built<GetStakingForAccountResultValidatorsRewardsPool, GetStakingForAccountResultValidatorsRewardsPoolBuilder> {
+    /// 
     @BuiltValueField(wireName: r'total')
     String get total;
 

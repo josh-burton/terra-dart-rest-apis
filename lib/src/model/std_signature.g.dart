@@ -10,7 +10,7 @@ class _$StdSignature extends StdSignature {
   @override
   final String? signature;
   @override
-  final PublicKey? pubKey;
+  final TxsHashGet200ResponseTxSignaturePubKey? pubKey;
 
   factory _$StdSignature([void Function(StdSignatureBuilder)? updates]) =>
       (new StdSignatureBuilder()..update(updates))._build();
@@ -54,9 +54,11 @@ class StdSignatureBuilder
   String? get signature => _$this._signature;
   set signature(String? signature) => _$this._signature = signature;
 
-  PublicKeyBuilder? _pubKey;
-  PublicKeyBuilder get pubKey => _$this._pubKey ??= new PublicKeyBuilder();
-  set pubKey(PublicKeyBuilder? pubKey) => _$this._pubKey = pubKey;
+  TxsHashGet200ResponseTxSignaturePubKeyBuilder? _pubKey;
+  TxsHashGet200ResponseTxSignaturePubKeyBuilder get pubKey =>
+      _$this._pubKey ??= new TxsHashGet200ResponseTxSignaturePubKeyBuilder();
+  set pubKey(TxsHashGet200ResponseTxSignaturePubKeyBuilder? pubKey) =>
+      _$this._pubKey = pubKey;
 
   StdSignatureBuilder() {
     StdSignature._defaults(this);

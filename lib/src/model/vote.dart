@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/option.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_proposals_proposal_id_votes_get200_response_inner_options_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'vote.g.dart';
 /// Properties:
 /// * [voter] 
 /// * [proposalId] 
-/// * [options] - 
+/// * [options] 
 abstract class Vote implements Built<Vote, VoteBuilder> {
     @BuiltValueField(wireName: r'voter')
     String? get voter;
@@ -22,9 +22,8 @@ abstract class Vote implements Built<Vote, VoteBuilder> {
     @BuiltValueField(wireName: r'proposal_id')
     String? get proposalId;
 
-    /// 
     @BuiltValueField(wireName: r'options')
-    BuiltList<Option>? get options;
+    BuiltList<GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>? get options;
 
     Vote._();
 
@@ -64,7 +63,7 @@ class _$VoteSerializer implements StructuredSerializer<Vote> {
             result
                 ..add(r'options')
                 ..add(serializers.serialize(object.options,
-                    specifiedType: const FullType(BuiltList, [FullType(Option)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner)])));
         }
         return result;
     }
@@ -93,7 +92,7 @@ class _$VoteSerializer implements StructuredSerializer<Vote> {
                     break;
                 case r'options':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Option)])) as BuiltList<Option>;
+                        specifiedType: const FullType(BuiltList, [FullType(GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner)])) as BuiltList<GovProposalsProposalIdVotesGet200ResponseInnerOptionsInner>;
                     result.options.replace(valueDes);
                     break;
             }

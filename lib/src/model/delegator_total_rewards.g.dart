@@ -8,9 +8,11 @@ part of 'delegator_total_rewards.dart';
 
 class _$DelegatorTotalRewards extends DelegatorTotalRewards {
   @override
-  final BuiltList<DelegationDelegatorReward>? rewards;
+  final BuiltList<
+          DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>?
+      rewards;
   @override
-  final BuiltList<Coin>? total;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? total;
 
   factory _$DelegatorTotalRewards(
           [void Function(DelegatorTotalRewardsBuilder)? updates]) =>
@@ -53,15 +55,25 @@ class DelegatorTotalRewardsBuilder
     implements Builder<DelegatorTotalRewards, DelegatorTotalRewardsBuilder> {
   _$DelegatorTotalRewards? _$v;
 
-  ListBuilder<DelegationDelegatorReward>? _rewards;
-  ListBuilder<DelegationDelegatorReward> get rewards =>
-      _$this._rewards ??= new ListBuilder<DelegationDelegatorReward>();
-  set rewards(ListBuilder<DelegationDelegatorReward>? rewards) =>
+  ListBuilder<
+          DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>?
+      _rewards;
+  ListBuilder<
+          DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>
+      get rewards => _$this._rewards ??= new ListBuilder<
+          DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>();
+  set rewards(
+          ListBuilder<
+                  DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>?
+              rewards) =>
       _$this._rewards = rewards;
 
-  ListBuilder<Coin>? _total;
-  ListBuilder<Coin> get total => _$this._total ??= new ListBuilder<Coin>();
-  set total(ListBuilder<Coin>? total) => _$this._total = total;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _total;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get total =>
+      _$this._total ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set total(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? total) =>
+      _$this._total = total;
 
   DelegatorTotalRewardsBuilder() {
     DelegatorTotalRewards._defaults(this);

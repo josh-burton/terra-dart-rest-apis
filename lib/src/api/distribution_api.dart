@@ -8,14 +8,14 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/clear_contract_admin_req.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/delegator_total_rewards.dart';
-import 'package:terra_dart_rest_apis/src/model/feedistributionoutstandingrewardsofasinglevalidator_response.dart';
-import 'package:terra_dart_rest_apis/src/model/feedistributionparameters_response.dart';
-import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/validator_dist_info.dart';
-import 'package:terra_dart_rest_apis/src/model/withdrawrequestbody2.dart';
+import 'package:built_value/json_object.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_delegators_delegator_addr_rewards_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_delegators_delegator_addr_rewards_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_delegators_delegator_addr_withdraw_address_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_validators_validator_addr_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_validators_validator_addr_outstanding_rewards_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 
 class DistributionApi {
 
@@ -25,83 +25,8 @@ class DistributionApi {
 
   const DistributionApi(this._dio, this._serializers);
 
-  /// Commission and self-delegation rewards of a single validator
-  /// Query the commission and self-delegation rewards of validator.
-  ///
-  /// Parameters:
-  /// * [validatorAddr] - Bech32 OperatorAddress of validator
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Coin>] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<Coin>>> commissionandselfDelegationrewardsofasinglevalidator({ 
-    required String validatorAddr,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/distribution/validators/{validatorAddr}/rewards'.replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<Coin> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(Coin)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<Coin>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<Coin>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Community pool parameters
-  /// Community pool parameters
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -111,10 +36,10 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Coin>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TxsHashGet200ResponseTxFeeAmountInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<Coin>>> communitypoolparameters({ 
+  Future<Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>> distributionCommunityPoolGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,14 +68,14 @@ class DistributionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<Coin> _responseData;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(Coin)]);
+      const _responseType = FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<Coin>;
+      ) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -161,7 +86,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<Coin>>(
+    return Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -173,10 +98,182 @@ class DistributionApi {
     );
   }
 
-  /// Fee distribution outstanding rewards of a single validator
-  /// Fee distribution outstanding rewards of a single validator
+  /// Get the total rewards balance from all delegations
+  /// Get the sum of all the rewards earned by delegations by a single delegator
   ///
   /// Parameters:
+  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [DistributionDelegatorsDelegatorAddrRewardsGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<DistributionDelegatorsDelegatorAddrRewardsGet200Response>> distributionDelegatorsDelegatorAddrRewardsGet({ 
+    required String delegatorAddr,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/distribution/delegators/{delegatorAddr}/rewards'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    DistributionDelegatorsDelegatorAddrRewardsGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(DistributionDelegatorsDelegatorAddrRewardsGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as DistributionDelegatorsDelegatorAddrRewardsGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<DistributionDelegatorsDelegatorAddrRewardsGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Withdraw all the delegator&#39;s delegation rewards
+  /// Withdraw all the delegator&#39;s delegation rewards
+  ///
+  /// Parameters:
+  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
+  /// * [withdrawRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> distributionDelegatorsDelegatorAddrRewardsPost({ 
+    required String delegatorAddr,
+    DistributionDelegatorsDelegatorAddrRewardsGetRequest? withdrawRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/distribution/delegators/{delegatorAddr}/rewards'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(DistributionDelegatorsDelegatorAddrRewardsGetRequest);
+      _bodyData = withdrawRequestBody == null ? null : _serializers.serialize(withdrawRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Query a delegation reward
+  /// Query a single delegation reward by a delegator
+  ///
+  /// Parameters:
+  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
   /// * [validatorAddr] - Bech32 OperatorAddress of validator
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -185,10 +282,11 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [FeedistributionoutstandingrewardsofasinglevalidatorResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TxsHashGet200ResponseTxFeeAmountInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<FeedistributionoutstandingrewardsofasinglevalidatorResponse>> feedistributionoutstandingrewardsofasinglevalidator({ 
+  Future<Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>> distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet({ 
+    required String delegatorAddr,
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -197,7 +295,7 @@ class DistributionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/distribution/validators/{validatorAddr}/outstanding_rewards'.replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
+    final _path = r'/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString()).replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -218,14 +316,14 @@ class DistributionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    FeedistributionoutstandingrewardsofasinglevalidatorResponse _responseData;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner> _responseData;
 
     try {
-      const _responseType = FullType(FeedistributionoutstandingrewardsofasinglevalidatorResponse);
+      const _responseType = FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as FeedistributionoutstandingrewardsofasinglevalidatorResponse;
+      ) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -236,7 +334,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<FeedistributionoutstandingrewardsofasinglevalidatorResponse>(
+    return Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -248,10 +346,13 @@ class DistributionApi {
     );
   }
 
-  /// Fee distribution parameters
-  /// Fee distribution parameters
+  /// Withdraw a delegation reward
+  /// Withdraw a delegator&#39;s delegation reward from a single validator
   ///
   /// Parameters:
+  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
+  /// * [validatorAddr] - Bech32 OperatorAddress of validator
+  /// * [withdrawRequestBody] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -259,10 +360,13 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [FeedistributionparametersResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<FeedistributionparametersResponse>> feedistributionparameters({ 
+  Future<Response<TxsHashGet200ResponseTx>> distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost({ 
+    required String delegatorAddr,
+    required String validatorAddr,
+    DistributionDelegatorsDelegatorAddrRewardsGetRequest? withdrawRequestBody,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -270,9 +374,9 @@ class DistributionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/distribution/parameters';
+    final _path = r'/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString()).replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
     final _options = Options(
-      method: r'GET',
+      method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
@@ -280,25 +384,44 @@ class DistributionApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(DistributionDelegatorsDelegatorAddrRewardsGetRequest);
+      _bodyData = withdrawRequestBody == null ? null : _serializers.serialize(withdrawRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    FeedistributionparametersResponse _responseData;
+    TxsHashGet200ResponseTx _responseData;
 
     try {
-      const _responseType = FullType(FeedistributionparametersResponse);
+      const _responseType = FullType(TxsHashGet200ResponseTx);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as FeedistributionparametersResponse;
+      ) as TxsHashGet200ResponseTx;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -309,7 +432,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<FeedistributionparametersResponse>(
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -336,7 +459,7 @@ class DistributionApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> gettherewardswithdrawaladdress({ 
+  Future<Response<String>> distributionDelegatorsDelegatorAddrWithdrawAddressGet({ 
     required String delegatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -392,164 +515,12 @@ class DistributionApi {
     );
   }
 
-  /// Get the total rewards balance from all delegations
-  /// Get the sum of all the rewards earned by delegations by a single delegator
-  ///
-  /// Parameters:
-  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [DelegatorTotalRewards] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<DelegatorTotalRewards>> getthetotalrewardsbalancefromalldelegations({ 
-    required String delegatorAddr,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/distribution/delegators/{delegatorAddr}/rewards'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    DelegatorTotalRewards _responseData;
-
-    try {
-      const _responseType = FullType(DelegatorTotalRewards);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as DelegatorTotalRewards;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<DelegatorTotalRewards>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Query a delegation reward
-  /// Query a single delegation reward by a delegator
-  ///
-  /// Parameters:
-  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [validatorAddr] - Bech32 OperatorAddress of validator
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Coin>] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<Coin>>> queryadelegationreward({ 
-    required String delegatorAddr,
-    required String validatorAddr,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString()).replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<Coin> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(Coin)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<Coin>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<Coin>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Replace the rewards withdrawal address
   /// Replace the delegations&#39; rewards withdrawal address for a new one.
   ///
   /// Parameters:
   /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [withdrawrequestbody2] - 
+  /// * [withdrawRequestBody] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -557,12 +528,12 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> replacetherewardswithdrawaladdress({ 
+  Future<Response<TxsHashGet200ResponseTx>> distributionDelegatorsDelegatorAddrWithdrawAddressPost({ 
     required String delegatorAddr,
-    Withdrawrequestbody2? withdrawrequestbody2,
+    DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest? withdrawRequestBody,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -587,8 +558,8 @@ class DistributionApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Withdrawrequestbody2);
-      _bodyData = withdrawrequestbody2 == null ? null : _serializers.serialize(withdrawrequestbody2, specifiedType: _type);
+      const _type = FullType(DistributionDelegatorsDelegatorAddrWithdrawAddressGetRequest);
+      _bodyData = withdrawRequestBody == null ? null : _serializers.serialize(withdrawRequestBody, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -610,14 +581,14 @@ class DistributionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    StdTx _responseData;
+    TxsHashGet200ResponseTx _responseData;
 
     try {
-      const _responseType = FullType(StdTx);
+      const _responseType = FullType(TxsHashGet200ResponseTx);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StdTx;
+      ) as TxsHashGet200ResponseTx;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -628,7 +599,80 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StdTx>(
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Fee distribution parameters
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [JsonObject] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<JsonObject>> distributionParametersGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/distribution/parameters';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    JsonObject _responseData;
+
+    try {
+      const _responseType = FullType(JsonObject);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as JsonObject;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<JsonObject>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -652,10 +696,10 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ValidatorDistInfo] as data
+  /// Returns a [Future] containing a [Response] with a [DistributionValidatorsValidatorAddrGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<ValidatorDistInfo>> validatordistributioninformation({ 
+  Future<Response<DistributionValidatorsValidatorAddrGet200Response>> distributionValidatorsValidatorAddrGet({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -685,14 +729,14 @@ class DistributionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ValidatorDistInfo _responseData;
+    DistributionValidatorsValidatorAddrGet200Response _responseData;
 
     try {
-      const _responseType = FullType(ValidatorDistInfo);
+      const _responseType = FullType(DistributionValidatorsValidatorAddrGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ValidatorDistInfo;
+      ) as DistributionValidatorsValidatorAddrGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -703,7 +747,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<ValidatorDistInfo>(
+    return Response<DistributionValidatorsValidatorAddrGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -715,13 +759,11 @@ class DistributionApi {
     );
   }
 
-  /// Withdraw a delegation reward
-  /// Withdraw a delegator&#39;s delegation reward from a single validator
+  /// Fee distribution outstanding rewards of a single validator
+  /// 
   ///
   /// Parameters:
-  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
   /// * [validatorAddr] - Bech32 OperatorAddress of validator
-  /// * [clearContractAdminReq] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -729,13 +771,11 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
+  /// Returns a [Future] containing a [Response] with a [DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> withdrawadelegationreward({ 
-    required String delegatorAddr,
+  Future<Response<DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response>> distributionValidatorsValidatorAddrOutstandingRewardsGet({ 
     required String validatorAddr,
-    ClearContractAdminReq? clearContractAdminReq,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -743,9 +783,9 @@ class DistributionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString()).replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
+    final _path = r'/distribution/validators/{validatorAddr}/outstanding_rewards'.replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
     final _options = Options(
-      method: r'POST',
+      method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
@@ -753,44 +793,25 @@ class DistributionApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(ClearContractAdminReq);
-      _bodyData = clearContractAdminReq == null ? null : _serializers.serialize(clearContractAdminReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
     final _response = await _dio.request<Object>(
       _path,
-      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    StdTx _responseData;
+    DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response _responseData;
 
     try {
-      const _responseType = FullType(StdTx);
+      const _responseType = FullType(DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StdTx;
+      ) as DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -801,7 +822,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StdTx>(
+    return Response<DistributionValidatorsValidatorAddrOutstandingRewardsGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -813,12 +834,11 @@ class DistributionApi {
     );
   }
 
-  /// Withdraw all the delegator&#39;s delegation rewards
-  /// Withdraw all the delegator&#39;s delegation rewards
+  /// Commission and self-delegation rewards of a single validator
+  /// Query the commission and self-delegation rewards of validator.
   ///
   /// Parameters:
-  /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [clearContractAdminReq] - 
+  /// * [validatorAddr] - Bech32 OperatorAddress of validator
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -826,12 +846,11 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TxsHashGet200ResponseTxFeeAmountInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> withdrawallthedelegatorsdelegationrewards({ 
-    required String delegatorAddr,
-    ClearContractAdminReq? clearContractAdminReq,
+  Future<Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>> distributionValidatorsValidatorAddrRewardsGet({ 
+    required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -839,9 +858,9 @@ class DistributionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/distribution/delegators/{delegatorAddr}/rewards'.replaceAll('{' r'delegatorAddr' '}', delegatorAddr.toString());
+    final _path = r'/distribution/validators/{validatorAddr}/rewards'.replaceAll('{' r'validatorAddr' '}', validatorAddr.toString());
     final _options = Options(
-      method: r'POST',
+      method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
@@ -849,44 +868,25 @@ class DistributionApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(ClearContractAdminReq);
-      _bodyData = clearContractAdminReq == null ? null : _serializers.serialize(clearContractAdminReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
     final _response = await _dio.request<Object>(
       _path,
-      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    StdTx _responseData;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner> _responseData;
 
     try {
-      const _responseType = FullType(StdTx);
+      const _responseType = FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StdTx;
+      ) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -897,7 +897,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StdTx>(
+    return Response<BuiltList<TxsHashGet200ResponseTxFeeAmountInner>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -914,7 +914,7 @@ class DistributionApi {
   ///
   /// Parameters:
   /// * [validatorAddr] - Bech32 OperatorAddress of validator
-  /// * [clearContractAdminReq] - 
+  /// * [withdrawRequestBody] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -922,12 +922,12 @@ class DistributionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> withdrawthevalidatorsrewards({ 
+  Future<Response<TxsHashGet200ResponseTx>> distributionValidatorsValidatorAddrRewardsPost({ 
     required String validatorAddr,
-    ClearContractAdminReq? clearContractAdminReq,
+    DistributionDelegatorsDelegatorAddrRewardsGetRequest? withdrawRequestBody,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -952,8 +952,8 @@ class DistributionApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(ClearContractAdminReq);
-      _bodyData = clearContractAdminReq == null ? null : _serializers.serialize(clearContractAdminReq, specifiedType: _type);
+      const _type = FullType(DistributionDelegatorsDelegatorAddrRewardsGetRequest);
+      _bodyData = withdrawRequestBody == null ? null : _serializers.serialize(withdrawRequestBody, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -975,14 +975,14 @@ class DistributionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    StdTx _responseData;
+    TxsHashGet200ResponseTx _responseData;
 
     try {
-      const _responseType = FullType(StdTx);
+      const _responseType = FullType(TxsHashGet200ResponseTx);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StdTx;
+      ) as TxsHashGet200ResponseTx;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -993,7 +993,7 @@ class DistributionApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StdTx>(
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

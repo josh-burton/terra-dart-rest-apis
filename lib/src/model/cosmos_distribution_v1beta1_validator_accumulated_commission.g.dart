@@ -9,7 +9,7 @@ part of 'cosmos_distribution_v1beta1_validator_accumulated_commission.dart';
 class _$CosmosDistributionV1beta1ValidatorAccumulatedCommission
     extends CosmosDistributionV1beta1ValidatorAccumulatedCommission {
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? commission;
+  final BuiltList<CommunityPool200ResponsePoolInner>? commission;
 
   factory _$CosmosDistributionV1beta1ValidatorAccumulatedCommission(
           [void Function(
@@ -61,10 +61,11 @@ class CosmosDistributionV1beta1ValidatorAccumulatedCommissionBuilder
             CosmosDistributionV1beta1ValidatorAccumulatedCommissionBuilder> {
   _$CosmosDistributionV1beta1ValidatorAccumulatedCommission? _$v;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _commission;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get commission =>
-      _$this._commission ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set commission(ListBuilder<CosmosBaseV1beta1DecCoin>? commission) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _commission;
+  ListBuilder<CommunityPool200ResponsePoolInner> get commission =>
+      _$this._commission ??=
+          new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set commission(ListBuilder<CommunityPool200ResponsePoolInner>? commission) =>
       _$this._commission = commission;
 
   CosmosDistributionV1beta1ValidatorAccumulatedCommissionBuilder() {

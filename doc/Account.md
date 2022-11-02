@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | [optional] 
-**value** | [**BaseAccount**](BaseAccount.md) |  | [optional] 
+**value** | [**AuthAccountsAddressGet200ResponseAccountValue**](AuthAccountsAddressGet200ResponseAccountValue.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

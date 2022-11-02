@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/value4.dart';
+import 'package:terra_dart_rest_apis/src/model/send_authorization_value.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class SendAuthorization implements Built<SendAuthorization, SendAuthori
     String? get type;
 
     @BuiltValueField(wireName: r'value')
-    Value4? get value;
+    SendAuthorizationValue? get value;
 
     SendAuthorization._();
 
@@ -52,7 +52,7 @@ class _$SendAuthorizationSerializer implements StructuredSerializer<SendAuthoriz
             result
                 ..add(r'value')
                 ..add(serializers.serialize(object.value,
-                    specifiedType: const FullType(Value4)));
+                    specifiedType: const FullType(SendAuthorizationValue)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$SendAuthorizationSerializer implements StructuredSerializer<SendAuthoriz
                     break;
                 case r'value':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Value4)) as Value4;
+                        specifiedType: const FullType(SendAuthorizationValue)) as SendAuthorizationValue;
                     result.value.replace(valueDes);
                     break;
             }

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_simulate_response_result.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_simulate_response_gas_info.dart';
+import 'package:terra_dart_rest_apis/src/model/simulate200_response_result.dart';
+import 'package:terra_dart_rest_apis/src/model/simulate200_response_gas_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_tx_v1beta1_simulate_response.g.dart';
 /// * [result] 
 abstract class CosmosTxV1beta1SimulateResponse implements Built<CosmosTxV1beta1SimulateResponse, CosmosTxV1beta1SimulateResponseBuilder> {
     @BuiltValueField(wireName: r'gas_info')
-    CosmosTxV1beta1SimulateResponseGasInfo? get gasInfo;
+    Simulate200ResponseGasInfo? get gasInfo;
 
     @BuiltValueField(wireName: r'result')
-    CosmosTxV1beta1SimulateResponseResult? get result;
+    Simulate200ResponseResult? get result;
 
     CosmosTxV1beta1SimulateResponse._();
 
@@ -47,13 +47,13 @@ class _$CosmosTxV1beta1SimulateResponseSerializer implements StructuredSerialize
             result
                 ..add(r'gas_info')
                 ..add(serializers.serialize(object.gasInfo,
-                    specifiedType: const FullType(CosmosTxV1beta1SimulateResponseGasInfo)));
+                    specifiedType: const FullType(Simulate200ResponseGasInfo)));
         }
         if (object.result != null) {
             result
                 ..add(r'result')
                 ..add(serializers.serialize(object.result,
-                    specifiedType: const FullType(CosmosTxV1beta1SimulateResponseResult)));
+                    specifiedType: const FullType(Simulate200ResponseResult)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosTxV1beta1SimulateResponseSerializer implements StructuredSerialize
             switch (key) {
                 case r'gas_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1SimulateResponseGasInfo)) as CosmosTxV1beta1SimulateResponseGasInfo;
+                        specifiedType: const FullType(Simulate200ResponseGasInfo)) as Simulate200ResponseGasInfo;
                     result.gasInfo.replace(valueDes);
                     break;
                 case r'result':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1SimulateResponseResult)) as CosmosTxV1beta1SimulateResponseResult;
+                        specifiedType: const FullType(Simulate200ResponseResult)) as Simulate200ResponseResult;
                     result.result.replace(valueDes);
                     break;
             }

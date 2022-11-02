@@ -9,13 +9,11 @@ part of 'ibc_core_connection_v1_query_connections_response.dart';
 class _$IbcCoreConnectionV1QueryConnectionsResponse
     extends IbcCoreConnectionV1QueryConnectionsResponse {
   @override
-  final BuiltList<IbcCoreConnectionV1IdentifiedConnection>? connections;
+  final BuiltList<Connections200ResponseConnectionsInner>? connections;
   @override
-  final QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination?
-      pagination;
+  final PaginationResponse? pagination;
   @override
-  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
-      height;
+  final QueryBlockHeight? height;
 
   factory _$IbcCoreConnectionV1QueryConnectionsResponse(
           [void Function(IbcCoreConnectionV1QueryConnectionsResponseBuilder)?
@@ -70,33 +68,24 @@ class IbcCoreConnectionV1QueryConnectionsResponseBuilder
             IbcCoreConnectionV1QueryConnectionsResponseBuilder> {
   _$IbcCoreConnectionV1QueryConnectionsResponse? _$v;
 
-  ListBuilder<IbcCoreConnectionV1IdentifiedConnection>? _connections;
-  ListBuilder<IbcCoreConnectionV1IdentifiedConnection> get connections =>
+  ListBuilder<Connections200ResponseConnectionsInner>? _connections;
+  ListBuilder<Connections200ResponseConnectionsInner> get connections =>
       _$this._connections ??=
-          new ListBuilder<IbcCoreConnectionV1IdentifiedConnection>();
+          new ListBuilder<Connections200ResponseConnectionsInner>();
   set connections(
-          ListBuilder<IbcCoreConnectionV1IdentifiedConnection>? connections) =>
+          ListBuilder<Connections200ResponseConnectionsInner>? connections) =>
       _$this._connections = connections;
 
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-      _pagination;
-  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder
-      get pagination => _$this._pagination ??=
-          new QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder();
-  set pagination(
-          QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
-              pagination) =>
+  PaginationResponseBuilder? _pagination;
+  PaginationResponseBuilder get pagination =>
+      _$this._pagination ??= new PaginationResponseBuilder();
+  set pagination(PaginationResponseBuilder? pagination) =>
       _$this._pagination = pagination;
 
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-      _height;
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
-      get height => _$this._height ??=
-          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
-  set height(
-          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-              height) =>
-      _$this._height = height;
+  QueryBlockHeightBuilder? _height;
+  QueryBlockHeightBuilder get height =>
+      _$this._height ??= new QueryBlockHeightBuilder();
+  set height(QueryBlockHeightBuilder? height) => _$this._height = height;
 
   IbcCoreConnectionV1QueryConnectionsResponseBuilder() {
     IbcCoreConnectionV1QueryConnectionsResponse._defaults(this);

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **pageNumber** | **num** |  | [optional] 
 **pageTotal** | **num** |  | [optional] 
 **limit** | **num** |  | [optional] 
-**txs** | [**BuiltList&lt;TxQuery&gt;**](TxQuery.md) |  | [optional] 
+**txs** | [**BuiltList&lt;TxsHashGet200Response&gt;**](TxsHashGet200Response.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

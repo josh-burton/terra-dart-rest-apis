@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/signature.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/fee.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_signature.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,23 +13,22 @@ part 'std_tx.g.dart';
 /// StdTx
 ///
 /// Properties:
-/// * [msg] - 
+/// * [msg] 
 /// * [fee] 
 /// * [memo] 
 /// * [signature] 
 abstract class StdTx implements Built<StdTx, StdTxBuilder> {
-    /// 
     @BuiltValueField(wireName: r'msg')
     BuiltList<String>? get msg;
 
     @BuiltValueField(wireName: r'fee')
-    Fee? get fee;
+    TxsHashGet200ResponseTxFee? get fee;
 
     @BuiltValueField(wireName: r'memo')
     String? get memo;
 
     @BuiltValueField(wireName: r'signature')
-    Signature? get signature;
+    TxsHashGet200ResponseTxSignature? get signature;
 
     StdTx._();
 
@@ -63,7 +62,7 @@ class _$StdTxSerializer implements StructuredSerializer<StdTx> {
             result
                 ..add(r'fee')
                 ..add(serializers.serialize(object.fee,
-                    specifiedType: const FullType(Fee)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxFee)));
         }
         if (object.memo != null) {
             result
@@ -75,7 +74,7 @@ class _$StdTxSerializer implements StructuredSerializer<StdTx> {
             result
                 ..add(r'signature')
                 ..add(serializers.serialize(object.signature,
-                    specifiedType: const FullType(Signature)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxSignature)));
         }
         return result;
     }
@@ -99,7 +98,7 @@ class _$StdTxSerializer implements StructuredSerializer<StdTx> {
                     break;
                 case r'fee':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Fee)) as Fee;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxFee)) as TxsHashGet200ResponseTxFee;
                     result.fee.replace(valueDes);
                     break;
                 case r'memo':
@@ -109,7 +108,7 @@ class _$StdTxSerializer implements StructuredSerializer<StdTx> {
                     break;
                 case r'signature':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Signature)) as Signature;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxSignature)) as TxsHashGet200ResponseTxSignature;
                     result.signature.replace(valueDes);
                     break;
             }

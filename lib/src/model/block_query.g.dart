@@ -8,9 +8,9 @@ part of 'block_query.dart';
 
 class _$BlockQuery extends BlockQuery {
   @override
-  final BlockMeta? blockMeta;
+  final BlocksLatestGet200ResponseBlockMeta? blockMeta;
   @override
-  final Block? block;
+  final BlocksLatestGet200ResponseBlock? block;
 
   factory _$BlockQuery([void Function(BlockQueryBuilder)? updates]) =>
       (new BlockQueryBuilder()..update(updates))._build();
@@ -49,14 +49,17 @@ class _$BlockQuery extends BlockQuery {
 class BlockQueryBuilder implements Builder<BlockQuery, BlockQueryBuilder> {
   _$BlockQuery? _$v;
 
-  BlockMetaBuilder? _blockMeta;
-  BlockMetaBuilder get blockMeta =>
-      _$this._blockMeta ??= new BlockMetaBuilder();
-  set blockMeta(BlockMetaBuilder? blockMeta) => _$this._blockMeta = blockMeta;
+  BlocksLatestGet200ResponseBlockMetaBuilder? _blockMeta;
+  BlocksLatestGet200ResponseBlockMetaBuilder get blockMeta =>
+      _$this._blockMeta ??= new BlocksLatestGet200ResponseBlockMetaBuilder();
+  set blockMeta(BlocksLatestGet200ResponseBlockMetaBuilder? blockMeta) =>
+      _$this._blockMeta = blockMeta;
 
-  BlockBuilder? _block;
-  BlockBuilder get block => _$this._block ??= new BlockBuilder();
-  set block(BlockBuilder? block) => _$this._block = block;
+  BlocksLatestGet200ResponseBlockBuilder? _block;
+  BlocksLatestGet200ResponseBlockBuilder get block =>
+      _$this._block ??= new BlocksLatestGet200ResponseBlockBuilder();
+  set block(BlocksLatestGet200ResponseBlockBuilder? block) =>
+      _$this._block = block;
 
   BlockQueryBuilder() {
     BlockQuery._defaults(this);

@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_deposit.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/deposits200_response_deposits_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,15 +13,14 @@ part 'cosmos_gov_v1beta1_query_deposits_response.g.dart';
 /// QueryDepositsResponse is the response type for the Query/Deposits RPC method.
 ///
 /// Properties:
-/// * [deposits] - 
+/// * [deposits] 
 /// * [pagination] 
 abstract class CosmosGovV1beta1QueryDepositsResponse implements Built<CosmosGovV1beta1QueryDepositsResponse, CosmosGovV1beta1QueryDepositsResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'deposits')
-    BuiltList<CosmosGovV1beta1Deposit>? get deposits;
+    BuiltList<Deposits200ResponseDepositsInner>? get deposits;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosGovV1beta1QueryDepositsResponse._();
 
@@ -49,13 +48,13 @@ class _$CosmosGovV1beta1QueryDepositsResponseSerializer implements StructuredSer
             result
                 ..add(r'deposits')
                 ..add(serializers.serialize(object.deposits,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Deposit)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Deposits200ResponseDepositsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$CosmosGovV1beta1QueryDepositsResponseSerializer implements StructuredSer
             switch (key) {
                 case r'deposits':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosGovV1beta1Deposit)])) as BuiltList<CosmosGovV1beta1Deposit>;
+                        specifiedType: const FullType(BuiltList, [FullType(Deposits200ResponseDepositsInner)])) as BuiltList<Deposits200ResponseDepositsInner>;
                     result.deposits.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

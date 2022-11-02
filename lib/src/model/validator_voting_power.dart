@@ -10,12 +10,14 @@ part 'validator_voting_power.g.dart';
 /// ValidatorVotingPower
 ///
 /// Properties:
-/// * [amount] 
-/// * [weight] 
+/// * [amount] - 
+/// * [weight] - 
 abstract class ValidatorVotingPower implements Built<ValidatorVotingPower, ValidatorVotingPowerBuilder> {
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 
+    /// 
     @BuiltValueField(wireName: r'weight')
     String get weight;
 

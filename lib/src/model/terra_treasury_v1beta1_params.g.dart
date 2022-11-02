@@ -8,10 +8,10 @@ part of 'terra_treasury_v1beta1_params.dart';
 
 class _$TerraTreasuryV1beta1Params extends TerraTreasuryV1beta1Params {
   @override
-  final PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies?
+  final PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies?
       taxPolicy;
   @override
-  final PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies?
+  final PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies?
       rewardPolicy;
   @override
   final String? seigniorageBurdenTarget;
@@ -93,23 +93,23 @@ class TerraTreasuryV1beta1ParamsBuilder
         Builder<TerraTreasuryV1beta1Params, TerraTreasuryV1beta1ParamsBuilder> {
   _$TerraTreasuryV1beta1Params? _$v;
 
-  PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder?
+  PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder?
       _taxPolicy;
-  PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder
+  PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder
       get taxPolicy => _$this._taxPolicy ??=
-          new PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder();
+          new PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder();
   set taxPolicy(
-          PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder?
+          PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder?
               taxPolicy) =>
       _$this._taxPolicy = taxPolicy;
 
-  PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder?
+  PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder?
       _rewardPolicy;
-  PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder
+  PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder
       get rewardPolicy => _$this._rewardPolicy ??=
-          new PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder();
+          new PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder();
   set rewardPolicy(
-          PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBuilder?
+          PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPoliciesBuilder?
               rewardPolicy) =>
       _$this._rewardPolicy = rewardPolicy;
 

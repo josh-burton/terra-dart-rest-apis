@@ -5,19 +5,17 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**currentmintingannualprovisionsvalue**](MintApi.md#currentmintingannualprovisionsvalue) | **GET** /minting/annual-provisions | Current minting annual provisions value
-[**currentmintinginflationvalue**](MintApi.md#currentmintinginflationvalue) | **GET** /minting/inflation | Current minting inflation value
-[**mintingmoduleparameters**](MintApi.md#mintingmoduleparameters) | **GET** /minting/parameters | Minting module parameters
+[**mintingAnnualProvisionsGet**](MintApi.md#mintingannualprovisionsget) | **GET** /minting/annual-provisions | Current minting annual provisions value
+[**mintingInflationGet**](MintApi.md#mintinginflationget) | **GET** /minting/inflation | Current minting inflation value
+[**mintingParametersGet**](MintApi.md#mintingparametersget) | **GET** /minting/parameters | Minting module parameters
 
 
-# **currentmintingannualprovisionsvalue**
-> String currentmintingannualprovisionsvalue()
-
-Current minting annual provisions value
+# **mintingAnnualProvisionsGet**
+> String mintingAnnualProvisionsGet()
 
 Current minting annual provisions value
 
@@ -28,10 +26,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getMintApi();
 
 try {
-    final response = api.currentmintingannualprovisionsvalue();
+    final response = api.mintingAnnualProvisionsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MintApi->currentmintingannualprovisionsvalue: $e\n');
+    print('Exception when calling MintApi->mintingAnnualProvisionsGet: $e\n');
 }
 ```
 
@@ -53,10 +51,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **currentmintinginflationvalue**
-> String currentmintinginflationvalue()
-
-Current minting inflation value
+# **mintingInflationGet**
+> String mintingInflationGet()
 
 Current minting inflation value
 
@@ -67,10 +63,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getMintApi();
 
 try {
-    final response = api.currentmintinginflationvalue();
+    final response = api.mintingInflationGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MintApi->currentmintinginflationvalue: $e\n');
+    print('Exception when calling MintApi->mintingInflationGet: $e\n');
 }
 ```
 
@@ -92,10 +88,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **mintingmoduleparameters**
-> MintingmoduleparametersResponse mintingmoduleparameters()
-
-Minting module parameters
+# **mintingParametersGet**
+> JsonObject mintingParametersGet()
 
 Minting module parameters
 
@@ -106,10 +100,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getMintApi();
 
 try {
-    final response = api.mintingmoduleparameters();
+    final response = api.mintingParametersGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MintApi->mintingmoduleparameters: $e\n');
+    print('Exception when calling MintApi->mintingParametersGet: $e\n');
 }
 ```
 
@@ -118,7 +112,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MintingmoduleparametersResponse**](MintingmoduleparametersResponse.md)
+[**JsonObject**](JsonObject.md)
 
 ### Authorization
 

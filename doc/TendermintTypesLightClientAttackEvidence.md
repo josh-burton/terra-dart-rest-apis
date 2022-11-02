@@ -8,9 +8,9 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conflictingBlock** | [**TendermintTypesLightBlock**](TendermintTypesLightBlock.md) |  | [optional] 
+**conflictingBlock** | [**GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock**](GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock.md) |  | [optional] 
 **commonHeight** | **String** |  | [optional] 
-**byzantineValidators** | [**BuiltList&lt;TendermintTypesValidator&gt;**](TendermintTypesValidator.md) |  | [optional] 
+**byzantineValidators** | [**BuiltList&lt;GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner&gt;**](GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner.md) |  | [optional] 
 **totalVotingPower** | **String** |  | [optional] 
 **timestamp** | [**DateTime**](DateTime.md) |  | [optional] 
 

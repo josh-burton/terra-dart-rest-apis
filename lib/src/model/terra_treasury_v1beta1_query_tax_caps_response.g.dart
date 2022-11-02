@@ -9,7 +9,7 @@ part of 'terra_treasury_v1beta1_query_tax_caps_response.dart';
 class _$TerraTreasuryV1beta1QueryTaxCapsResponse
     extends TerraTreasuryV1beta1QueryTaxCapsResponse {
   @override
-  final BuiltList<TerraTreasuryV1beta1QueryTaxCapsResponseItem>? taxCaps;
+  final BuiltList<TaxCaps200ResponseTaxCapsInner>? taxCaps;
 
   factory _$TerraTreasuryV1beta1QueryTaxCapsResponse(
           [void Function(TerraTreasuryV1beta1QueryTaxCapsResponseBuilder)?
@@ -56,12 +56,10 @@ class TerraTreasuryV1beta1QueryTaxCapsResponseBuilder
             TerraTreasuryV1beta1QueryTaxCapsResponseBuilder> {
   _$TerraTreasuryV1beta1QueryTaxCapsResponse? _$v;
 
-  ListBuilder<TerraTreasuryV1beta1QueryTaxCapsResponseItem>? _taxCaps;
-  ListBuilder<TerraTreasuryV1beta1QueryTaxCapsResponseItem> get taxCaps =>
-      _$this._taxCaps ??=
-          new ListBuilder<TerraTreasuryV1beta1QueryTaxCapsResponseItem>();
-  set taxCaps(
-          ListBuilder<TerraTreasuryV1beta1QueryTaxCapsResponseItem>? taxCaps) =>
+  ListBuilder<TaxCaps200ResponseTaxCapsInner>? _taxCaps;
+  ListBuilder<TaxCaps200ResponseTaxCapsInner> get taxCaps =>
+      _$this._taxCaps ??= new ListBuilder<TaxCaps200ResponseTaxCapsInner>();
+  set taxCaps(ListBuilder<TaxCaps200ResponseTaxCapsInner>? taxCaps) =>
       _$this._taxCaps = taxCaps;
 
   TerraTreasuryV1beta1QueryTaxCapsResponseBuilder() {

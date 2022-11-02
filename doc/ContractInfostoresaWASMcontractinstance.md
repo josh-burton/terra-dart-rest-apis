@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.ContractInfostoresaWASMcontractinstance
+# terra_dart_rest_apis.model.ContractInfoStoresAWASMContractInstance
 
 ## Load the model package
 ```dart

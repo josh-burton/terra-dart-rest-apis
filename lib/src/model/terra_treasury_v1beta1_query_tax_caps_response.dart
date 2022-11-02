@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/tax_caps200_response_tax_caps_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_tax_caps_response_item.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'terra_treasury_v1beta1_query_tax_caps_response.g.dart';
 /// QueryTaxCapsResponse is response type for the Query/TaxCaps RPC method.
 ///
 /// Properties:
-/// * [taxCaps] - 
+/// * [taxCaps] 
 abstract class TerraTreasuryV1beta1QueryTaxCapsResponse implements Built<TerraTreasuryV1beta1QueryTaxCapsResponse, TerraTreasuryV1beta1QueryTaxCapsResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'tax_caps')
-    BuiltList<TerraTreasuryV1beta1QueryTaxCapsResponseItem>? get taxCaps;
+    BuiltList<TaxCaps200ResponseTaxCapsInner>? get taxCaps;
 
     TerraTreasuryV1beta1QueryTaxCapsResponse._();
 
@@ -44,7 +43,7 @@ class _$TerraTreasuryV1beta1QueryTaxCapsResponseSerializer implements Structured
             result
                 ..add(r'tax_caps')
                 ..add(serializers.serialize(object.taxCaps,
-                    specifiedType: const FullType(BuiltList, [FullType(TerraTreasuryV1beta1QueryTaxCapsResponseItem)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TaxCaps200ResponseTaxCapsInner)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$TerraTreasuryV1beta1QueryTaxCapsResponseSerializer implements Structured
             switch (key) {
                 case r'tax_caps':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TerraTreasuryV1beta1QueryTaxCapsResponseItem)])) as BuiltList<TerraTreasuryV1beta1QueryTaxCapsResponseItem>;
+                        specifiedType: const FullType(BuiltList, [FullType(TaxCaps200ResponseTaxCapsInner)])) as BuiltList<TaxCaps200ResponseTaxCapsInner>;
                     result.taxCaps.replace(valueDes);
                     break;
             }

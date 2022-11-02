@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**defaultNodeInfo** | [**TendermintP2pDefaultNodeInfo**](TendermintP2pDefaultNodeInfo.md) |  | [optional] 
-**applicationVersion** | [**CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion**](CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion.md) |  | [optional] 
+**defaultNodeInfo** | [**GetNodeInfo200ResponseDefaultNodeInfo**](GetNodeInfo200ResponseDefaultNodeInfo.md) |  | [optional] 
+**applicationVersion** | [**GetNodeInfo200ResponseApplicationVersion**](GetNodeInfo200ResponseApplicationVersion.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

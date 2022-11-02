@@ -11,9 +11,10 @@ part 'txs_tx.g.dart';
 /// TxsTx
 ///
 /// Properties:
-/// * [type] 
+/// * [type] - 
 /// * [value] 
 abstract class TxsTx implements Built<TxsTx, TxsTxBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 

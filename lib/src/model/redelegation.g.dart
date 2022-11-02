@@ -14,7 +14,7 @@ class _$Redelegation extends Redelegation {
   @override
   final String? validatorDstAddress;
   @override
-  final BuiltList<RedelegationEntry>? entries;
+  final BuiltList<StakingRedelegationsGet200ResponseInnerEntriesInner>? entries;
 
   factory _$Redelegation([void Function(RedelegationBuilder)? updates]) =>
       (new RedelegationBuilder()..update(updates))._build();
@@ -83,10 +83,14 @@ class RedelegationBuilder
   set validatorDstAddress(String? validatorDstAddress) =>
       _$this._validatorDstAddress = validatorDstAddress;
 
-  ListBuilder<RedelegationEntry>? _entries;
-  ListBuilder<RedelegationEntry> get entries =>
-      _$this._entries ??= new ListBuilder<RedelegationEntry>();
-  set entries(ListBuilder<RedelegationEntry>? entries) =>
+  ListBuilder<StakingRedelegationsGet200ResponseInnerEntriesInner>? _entries;
+  ListBuilder<
+      StakingRedelegationsGet200ResponseInnerEntriesInner> get entries => _$this
+          ._entries ??=
+      new ListBuilder<StakingRedelegationsGet200ResponseInnerEntriesInner>();
+  set entries(
+          ListBuilder<StakingRedelegationsGet200ResponseInnerEntriesInner>?
+              entries) =>
       _$this._entries = entries;
 
   RedelegationBuilder() {

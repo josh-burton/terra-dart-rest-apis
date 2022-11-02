@@ -8,7 +8,7 @@ part of 'tendermint_types_header.dart';
 
 class _$TendermintTypesHeader extends TendermintTypesHeader {
   @override
-  final TendermintTypesHeaderVersion? version;
+  final BasicBlockInfo? version;
   @override
   final String? chainId;
   @override
@@ -16,7 +16,7 @@ class _$TendermintTypesHeader extends TendermintTypesHeader {
   @override
   final DateTime? time;
   @override
-  final BlockID26? lastBlockId;
+  final BlockID1? lastBlockId;
   @override
   final String? lastCommitHash;
   @override
@@ -143,11 +143,10 @@ class TendermintTypesHeaderBuilder
     implements Builder<TendermintTypesHeader, TendermintTypesHeaderBuilder> {
   _$TendermintTypesHeader? _$v;
 
-  TendermintTypesHeaderVersionBuilder? _version;
-  TendermintTypesHeaderVersionBuilder get version =>
-      _$this._version ??= new TendermintTypesHeaderVersionBuilder();
-  set version(TendermintTypesHeaderVersionBuilder? version) =>
-      _$this._version = version;
+  BasicBlockInfoBuilder? _version;
+  BasicBlockInfoBuilder get version =>
+      _$this._version ??= new BasicBlockInfoBuilder();
+  set version(BasicBlockInfoBuilder? version) => _$this._version = version;
 
   String? _chainId;
   String? get chainId => _$this._chainId;
@@ -161,10 +160,10 @@ class TendermintTypesHeaderBuilder
   DateTime? get time => _$this._time;
   set time(DateTime? time) => _$this._time = time;
 
-  BlockID26Builder? _lastBlockId;
-  BlockID26Builder get lastBlockId =>
-      _$this._lastBlockId ??= new BlockID26Builder();
-  set lastBlockId(BlockID26Builder? lastBlockId) =>
+  BlockID1Builder? _lastBlockId;
+  BlockID1Builder get lastBlockId =>
+      _$this._lastBlockId ??= new BlockID1Builder();
+  set lastBlockId(BlockID1Builder? lastBlockId) =>
       _$this._lastBlockId = lastBlockId;
 
   String? _lastCommitHash;

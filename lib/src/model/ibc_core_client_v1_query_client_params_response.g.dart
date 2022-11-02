@@ -9,7 +9,7 @@ part of 'ibc_core_client_v1_query_client_params_response.dart';
 class _$IbcCoreClientV1QueryClientParamsResponse
     extends IbcCoreClientV1QueryClientParamsResponse {
   @override
-  final IbcCoreClientV1QueryClientParamsResponseParams? params;
+  final ClientParams200ResponseParams? params;
 
   factory _$IbcCoreClientV1QueryClientParamsResponse(
           [void Function(IbcCoreClientV1QueryClientParamsResponseBuilder)?
@@ -56,11 +56,10 @@ class IbcCoreClientV1QueryClientParamsResponseBuilder
             IbcCoreClientV1QueryClientParamsResponseBuilder> {
   _$IbcCoreClientV1QueryClientParamsResponse? _$v;
 
-  IbcCoreClientV1QueryClientParamsResponseParamsBuilder? _params;
-  IbcCoreClientV1QueryClientParamsResponseParamsBuilder get params =>
-      _$this._params ??=
-          new IbcCoreClientV1QueryClientParamsResponseParamsBuilder();
-  set params(IbcCoreClientV1QueryClientParamsResponseParamsBuilder? params) =>
+  ClientParams200ResponseParamsBuilder? _params;
+  ClientParams200ResponseParamsBuilder get params =>
+      _$this._params ??= new ClientParams200ResponseParamsBuilder();
+  set params(ClientParams200ResponseParamsBuilder? params) =>
       _$this._params = params;
 
   IbcCoreClientV1QueryClientParamsResponseBuilder() {

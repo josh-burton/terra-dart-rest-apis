@@ -8,7 +8,7 @@ part of 'send_grant_info.dart';
 
 class _$SendGrantInfo extends SendGrantInfo {
   @override
-  final SendAuthorization? authorization;
+  final SendGrantInfoAuthorization? authorization;
   @override
   final String? expiration;
 
@@ -50,10 +50,10 @@ class SendGrantInfoBuilder
     implements Builder<SendGrantInfo, SendGrantInfoBuilder> {
   _$SendGrantInfo? _$v;
 
-  SendAuthorizationBuilder? _authorization;
-  SendAuthorizationBuilder get authorization =>
-      _$this._authorization ??= new SendAuthorizationBuilder();
-  set authorization(SendAuthorizationBuilder? authorization) =>
+  SendGrantInfoAuthorizationBuilder? _authorization;
+  SendGrantInfoAuthorizationBuilder get authorization =>
+      _$this._authorization ??= new SendGrantInfoAuthorizationBuilder();
+  set authorization(SendGrantInfoAuthorizationBuilder? authorization) =>
       _$this._authorization = authorization;
 
   String? _expiration;

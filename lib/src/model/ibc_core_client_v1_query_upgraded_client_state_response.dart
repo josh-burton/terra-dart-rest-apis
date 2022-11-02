@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/client_state_associated_with_the_request_identifier.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'ibc_core_client_v1_query_upgraded_client_state_response.g.dart';
 /// * [upgradedClientState] 
 abstract class IbcCoreClientV1QueryUpgradedClientStateResponse implements Built<IbcCoreClientV1QueryUpgradedClientStateResponse, IbcCoreClientV1QueryUpgradedClientStateResponseBuilder> {
     @BuiltValueField(wireName: r'upgraded_client_state')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get upgradedClientState;
+    ClientStateAssociatedWithTheRequestIdentifier? get upgradedClientState;
 
     IbcCoreClientV1QueryUpgradedClientStateResponse._();
 
@@ -42,7 +42,7 @@ class _$IbcCoreClientV1QueryUpgradedClientStateResponseSerializer implements Str
             result
                 ..add(r'upgraded_client_state')
                 ..add(serializers.serialize(object.upgradedClientState,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(ClientStateAssociatedWithTheRequestIdentifier)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$IbcCoreClientV1QueryUpgradedClientStateResponseSerializer implements Str
             switch (key) {
                 case r'upgraded_client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(ClientStateAssociatedWithTheRequestIdentifier)) as ClientStateAssociatedWithTheRequestIdentifier;
                     result.upgradedClientState.replace(valueDes);
                     break;
             }

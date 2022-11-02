@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/simulate200_response_result_events_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_abci_event.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -26,7 +26,7 @@ abstract class CosmosBaseAbciV1beta1Result implements Built<CosmosBaseAbciV1beta
 
     /// Events contains a slice of Event objects that were emitted during message or handler execution.
     @BuiltValueField(wireName: r'events')
-    BuiltList<TendermintAbciEvent>? get events;
+    BuiltList<Simulate200ResponseResultEventsInner>? get events;
 
     CosmosBaseAbciV1beta1Result._();
 
@@ -66,7 +66,7 @@ class _$CosmosBaseAbciV1beta1ResultSerializer implements StructuredSerializer<Co
             result
                 ..add(r'events')
                 ..add(serializers.serialize(object.events,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEvent)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInner)])));
         }
         return result;
     }
@@ -95,7 +95,7 @@ class _$CosmosBaseAbciV1beta1ResultSerializer implements StructuredSerializer<Co
                     break;
                 case r'events':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEvent)])) as BuiltList<TendermintAbciEvent>;
+                        specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInner)])) as BuiltList<Simulate200ResponseResultEventsInner>;
                     result.events.replace(valueDes);
                     break;
             }

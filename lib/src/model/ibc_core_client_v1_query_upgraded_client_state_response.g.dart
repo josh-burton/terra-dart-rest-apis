@@ -9,7 +9,7 @@ part of 'ibc_core_client_v1_query_upgraded_client_state_response.dart';
 class _$IbcCoreClientV1QueryUpgradedClientStateResponse
     extends IbcCoreClientV1QueryUpgradedClientStateResponse {
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? upgradedClientState;
+  final ClientStateAssociatedWithTheRequestIdentifier? upgradedClientState;
 
   factory _$IbcCoreClientV1QueryUpgradedClientStateResponse(
           [void Function(
@@ -61,12 +61,12 @@ class IbcCoreClientV1QueryUpgradedClientStateResponseBuilder
             IbcCoreClientV1QueryUpgradedClientStateResponseBuilder> {
   _$IbcCoreClientV1QueryUpgradedClientStateResponse? _$v;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _upgradedClientState;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get upgradedClientState =>
-      _$this._upgradedClientState ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  ClientStateAssociatedWithTheRequestIdentifierBuilder? _upgradedClientState;
+  ClientStateAssociatedWithTheRequestIdentifierBuilder
+      get upgradedClientState => _$this._upgradedClientState ??=
+          new ClientStateAssociatedWithTheRequestIdentifierBuilder();
   set upgradedClientState(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+          ClientStateAssociatedWithTheRequestIdentifierBuilder?
               upgradedClientState) =>
       _$this._upgradedClientState = upgradedClientState;
 

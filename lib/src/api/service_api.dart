@@ -9,22 +9,21 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_block_by_height_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_latest_block_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_latest_validator_set_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_node_info_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_syncing_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_validator_set_by_height_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_broadcast_tx_request.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_broadcast_tx_response.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_default_response.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx_request.dart';
+import 'package:terra_dart_rest_apis/src/model/compute_tax200_response.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_get_tx_response.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_get_txs_event_response.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_simulate_request.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_simulate_response.dart';
-import 'package:terra_dart_rest_apis/src/model/grpc_gateway_runtime_error.dart';
-import 'package:terra_dart_rest_apis/src/model/order_by.dart';
+import 'package:terra_dart_rest_apis/src/model/get_block_by_height200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_validator_set200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/get_node_info200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/get_syncing200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/get_validator_set_by_height200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/simulate200_response.dart';
 import 'package:terra_dart_rest_apis/src/model/terra_tx_v1beta1_compute_tax_request.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_tx_v1beta1_compute_tax_response.dart';
 
 class ServiceApi {
 
@@ -34,11 +33,11 @@ class ServiceApi {
 
   const ServiceApi(this._dio, this._serializers);
 
-  /// BroadcastTx
   /// BroadcastTx broadcast transaction.
+  /// 
   ///
   /// Parameters:
-  /// * [cosmosTxV1beta1BroadcastTxRequest] - 
+  /// * [body] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -46,10 +45,10 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosTxV1beta1BroadcastTxResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BroadcastTx200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosTxV1beta1BroadcastTxResponse>> broadcastTx({ 
-    required CosmosTxV1beta1BroadcastTxRequest cosmosTxV1beta1BroadcastTxRequest,
+  Future<Response<BroadcastTx200Response>> broadcastTx({ 
+    required BroadcastTxRequest body,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -67,15 +66,14 @@ class ServiceApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
     dynamic _bodyData;
 
     try {
-      const _type = FullType(CosmosTxV1beta1BroadcastTxRequest);
-      _bodyData = _serializers.serialize(cosmosTxV1beta1BroadcastTxRequest, specifiedType: _type);
+      const _type = FullType(BroadcastTxRequest);
+      _bodyData = _serializers.serialize(body, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -97,14 +95,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosTxV1beta1BroadcastTxResponse _responseData;
+    BroadcastTx200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosTxV1beta1BroadcastTxResponse);
+      const _responseType = FullType(BroadcastTx200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosTxV1beta1BroadcastTxResponse;
+      ) as BroadcastTx200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -115,7 +113,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosTxV1beta1BroadcastTxResponse>(
+    return Response<BroadcastTx200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -127,11 +125,11 @@ class ServiceApi {
     );
   }
 
-  /// ComputeTax
   /// EstimateFee simulates executing a transaction for estimating gas usage.
+  /// 
   ///
   /// Parameters:
-  /// * [terraTxV1beta1ComputeTaxRequest] - 
+  /// * [body] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -139,10 +137,10 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTxV1beta1ComputeTaxResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ComputeTax200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTxV1beta1ComputeTaxResponse>> computeTax({ 
-    required TerraTxV1beta1ComputeTaxRequest terraTxV1beta1ComputeTaxRequest,
+  Future<Response<ComputeTax200Response>> computeTax({ 
+    required TerraTxV1beta1ComputeTaxRequest body,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -160,7 +158,6 @@ class ServiceApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
@@ -168,7 +165,7 @@ class ServiceApi {
 
     try {
       const _type = FullType(TerraTxV1beta1ComputeTaxRequest);
-      _bodyData = _serializers.serialize(terraTxV1beta1ComputeTaxRequest, specifiedType: _type);
+      _bodyData = _serializers.serialize(body, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -190,14 +187,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTxV1beta1ComputeTaxResponse _responseData;
+    ComputeTax200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTxV1beta1ComputeTaxResponse);
+      const _responseType = FullType(ComputeTax200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTxV1beta1ComputeTaxResponse;
+      ) as ComputeTax200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -208,7 +205,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTxV1beta1ComputeTaxResponse>(
+    return Response<ComputeTax200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -220,11 +217,11 @@ class ServiceApi {
     );
   }
 
-  /// GetBlockByHeight
   /// GetBlockByHeight queries block for given height.
+  /// 
   ///
   /// Parameters:
-  /// * [height] - 
+  /// * [height] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -232,9 +229,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetBlockByHeightResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetBlockByHeight200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetBlockByHeightResponse>> getBlockByHeight({ 
+  Future<Response<GetBlockByHeight200Response>> getBlockByHeight({ 
     required String height,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -264,14 +261,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetBlockByHeightResponse _responseData;
+    GetBlockByHeight200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetBlockByHeightResponse);
+      const _responseType = FullType(GetBlockByHeight200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetBlockByHeightResponse;
+      ) as GetBlockByHeight200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -282,7 +279,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetBlockByHeightResponse>(
+    return Response<GetBlockByHeight200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -294,8 +291,8 @@ class ServiceApi {
     );
   }
 
-  /// GetLatestBlock
   /// GetLatestBlock returns the latest block.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -305,9 +302,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetLatestBlockResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetLatestBlock200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetLatestBlockResponse>> getLatestBlock({ 
+  Future<Response<GetLatestBlock200Response>> getLatestBlock({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -336,14 +333,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetLatestBlockResponse _responseData;
+    GetLatestBlock200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetLatestBlockResponse);
+      const _responseType = FullType(GetLatestBlock200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetLatestBlockResponse;
+      ) as GetLatestBlock200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -354,7 +351,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetLatestBlockResponse>(
+    return Response<GetLatestBlock200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -366,8 +363,8 @@ class ServiceApi {
     );
   }
 
-  /// GetLatestValidatorSet
   /// GetLatestValidatorSet queries latest validator-set.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -382,9 +379,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetLatestValidatorSet200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse>> getLatestValidatorSet({ 
+  Future<Response<GetLatestValidatorSet200Response>> getLatestValidatorSet({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -427,14 +424,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse _responseData;
+    GetLatestValidatorSet200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse);
+      const _responseType = FullType(GetLatestValidatorSet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse;
+      ) as GetLatestValidatorSet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -445,7 +442,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse>(
+    return Response<GetLatestValidatorSet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -457,8 +454,8 @@ class ServiceApi {
     );
   }
 
-  /// GetNodeInfo
   /// GetNodeInfo queries the current node info.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -468,9 +465,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetNodeInfoResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetNodeInfo200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetNodeInfoResponse>> getNodeInfo({ 
+  Future<Response<GetNodeInfo200Response>> getNodeInfo({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -499,14 +496,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetNodeInfoResponse _responseData;
+    GetNodeInfo200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetNodeInfoResponse);
+      const _responseType = FullType(GetNodeInfo200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetNodeInfoResponse;
+      ) as GetNodeInfo200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -517,7 +514,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetNodeInfoResponse>(
+    return Response<GetNodeInfo200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -529,8 +526,8 @@ class ServiceApi {
     );
   }
 
-  /// GetSyncing
   /// GetSyncing queries node syncing.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -540,9 +537,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetSyncingResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetSyncing200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetSyncingResponse>> getSyncing({ 
+  Future<Response<GetSyncing200Response>> getSyncing({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -571,14 +568,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetSyncingResponse _responseData;
+    GetSyncing200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetSyncingResponse);
+      const _responseType = FullType(GetSyncing200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetSyncingResponse;
+      ) as GetSyncing200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -589,7 +586,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetSyncingResponse>(
+    return Response<GetSyncing200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -601,8 +598,8 @@ class ServiceApi {
     );
   }
 
-  /// GetTx
   /// GetTx fetches a tx by hash.
+  /// 
   ///
   /// Parameters:
   /// * [hash] - hash is the tx hash to query, encoded as a hex string.
@@ -615,7 +612,7 @@ class ServiceApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CosmosTxV1beta1GetTxResponse] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosTxV1beta1GetTxResponse>> getTx1({ 
+  Future<Response<CosmosTxV1beta1GetTxResponse>> getTx({ 
     required String hash,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -675,8 +672,8 @@ class ServiceApi {
     );
   }
 
-  /// GetTxsEvent
   /// GetTxsEvent fetches txs by event.
+  /// 
   ///
   /// Parameters:
   /// * [events] - events is the list of transaction event type.
@@ -685,7 +682,7 @@ class ServiceApi {
   /// * [paginationPeriodLimit] - limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
   /// * [paginationPeriodCountTotal] - count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
   /// * [paginationPeriodReverse] - reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43
-  /// * [orderBy] - - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order
+  /// * [orderBy] -  - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -702,7 +699,7 @@ class ServiceApi {
     String? paginationPeriodLimit,
     bool? paginationPeriodCountTotal,
     bool? paginationPeriodReverse,
-    OrderBy? orderBy,
+    String? orderBy = 'ORDER_BY_UNSPECIFIED',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -730,7 +727,7 @@ class ServiceApi {
       if (paginationPeriodLimit != null) r'pagination.limit': encodeQueryParameter(_serializers, paginationPeriodLimit, const FullType(String)),
       if (paginationPeriodCountTotal != null) r'pagination.count_total': encodeQueryParameter(_serializers, paginationPeriodCountTotal, const FullType(bool)),
       if (paginationPeriodReverse != null) r'pagination.reverse': encodeQueryParameter(_serializers, paginationPeriodReverse, const FullType(bool)),
-      if (orderBy != null) r'order_by': encodeQueryParameter(_serializers, orderBy, const FullType(OrderBy)),
+      if (orderBy != null) r'order_by': encodeQueryParameter(_serializers, orderBy, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -772,11 +769,11 @@ class ServiceApi {
     );
   }
 
-  /// GetValidatorSetByHeight
   /// GetValidatorSetByHeight queries validator-set at a given height.
+  /// 
   ///
   /// Parameters:
-  /// * [height] - 
+  /// * [height] 
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
   /// * [paginationPeriodOffset] - offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
   /// * [paginationPeriodLimit] - limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
@@ -789,9 +786,9 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetValidatorSetByHeight200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse>> getValidatorSetByHeight({ 
+  Future<Response<GetValidatorSetByHeight200Response>> getValidatorSetByHeight({ 
     required String height,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -835,14 +832,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse _responseData;
+    GetValidatorSetByHeight200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse);
+      const _responseType = FullType(GetValidatorSetByHeight200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse;
+      ) as GetValidatorSetByHeight200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -853,7 +850,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse>(
+    return Response<GetValidatorSetByHeight200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -865,11 +862,11 @@ class ServiceApi {
     );
   }
 
-  /// Simulate
   /// Simulate simulates executing a transaction for estimating gas usage.
+  /// 
   ///
   /// Parameters:
-  /// * [cosmosTxV1beta1SimulateRequest] - 
+  /// * [body] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -877,10 +874,10 @@ class ServiceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosTxV1beta1SimulateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Simulate200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosTxV1beta1SimulateResponse>> simulate({ 
-    required CosmosTxV1beta1SimulateRequest cosmosTxV1beta1SimulateRequest,
+  Future<Response<Simulate200Response>> simulate({ 
+    required CosmosTxV1beta1SimulateRequest body,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -898,7 +895,6 @@ class ServiceApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
@@ -906,7 +902,7 @@ class ServiceApi {
 
     try {
       const _type = FullType(CosmosTxV1beta1SimulateRequest);
-      _bodyData = _serializers.serialize(cosmosTxV1beta1SimulateRequest, specifiedType: _type);
+      _bodyData = _serializers.serialize(body, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -928,14 +924,14 @@ class ServiceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosTxV1beta1SimulateResponse _responseData;
+    Simulate200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosTxV1beta1SimulateResponse);
+      const _responseType = FullType(Simulate200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosTxV1beta1SimulateResponse;
+      ) as Simulate200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -946,7 +942,7 @@ class ServiceApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosTxV1beta1SimulateResponse>(
+    return Response<Simulate200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

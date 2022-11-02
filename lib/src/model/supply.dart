@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'supply.g.dart';
 /// Supply
 ///
 /// Properties:
-/// * [total] - 
+/// * [total] 
 abstract class Supply implements Built<Supply, SupplyBuilder> {
-    /// 
     @BuiltValueField(wireName: r'total')
-    BuiltList<Coin>? get total;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get total;
 
     Supply._();
 
@@ -44,7 +43,7 @@ class _$SupplySerializer implements StructuredSerializer<Supply> {
             result
                 ..add(r'total')
                 ..add(serializers.serialize(object.total,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$SupplySerializer implements StructuredSerializer<Supply> {
             switch (key) {
                 case r'total':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.total.replace(valueDes);
                     break;
             }

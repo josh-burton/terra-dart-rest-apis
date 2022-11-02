@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved
+# terra_dart_rest_apis.model.QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved
 
 ## Load the model package
 ```dart
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **commitment** | **String** |  | [optional] 
 **proof** | **String** |  | [optional] 
-**proofHeight** | [**QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight**](QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight.md) |  | [optional] 
+**proofHeight** | [**HeightAtWhichTheProofWasRetrieved**](HeightAtWhichTheProofWasRetrieved.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

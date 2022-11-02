@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,15 +13,14 @@ part 'delegation_delegator_reward.g.dart';
 ///
 /// Properties:
 /// * [validatorAddress] - bech32 encoded address
-/// * [reward] - 
+/// * [reward] 
 abstract class DelegationDelegatorReward implements Built<DelegationDelegatorReward, DelegationDelegatorRewardBuilder> {
     /// bech32 encoded address
     @BuiltValueField(wireName: r'validator_address')
     String? get validatorAddress;
 
-    /// 
     @BuiltValueField(wireName: r'reward')
-    BuiltList<Coin>? get reward;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get reward;
 
     DelegationDelegatorReward._();
 
@@ -55,7 +54,7 @@ class _$DelegationDelegatorRewardSerializer implements StructuredSerializer<Dele
             result
                 ..add(r'reward')
                 ..add(serializers.serialize(object.reward,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         return result;
     }
@@ -79,7 +78,7 @@ class _$DelegationDelegatorRewardSerializer implements StructuredSerializer<Dele
                     break;
                 case r'reward':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.reward.replace(valueDes);
                     break;
             }

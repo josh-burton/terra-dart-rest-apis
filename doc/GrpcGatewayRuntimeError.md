@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **error** | **String** |  | [optional] 
 **code** | **int** |  | [optional] 
 **message** | **String** |  | [optional] 
-**details** | [**BuiltList&lt;GoogleProtobufAny&gt;**](GoogleProtobufAny.md) |  | [optional] 
+**details** | [**BuiltList&lt;AccountsAreTheExistingAccountsInner&gt;**](AccountsAreTheExistingAccountsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

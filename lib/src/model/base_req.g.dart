@@ -22,7 +22,7 @@ class _$BaseReq extends BaseReq {
   @override
   final String? gasAdjustment;
   @override
-  final BuiltList<Coin>? fees;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? fees;
   @override
   final bool? simulate;
 
@@ -130,9 +130,11 @@ class BaseReqBuilder implements Builder<BaseReq, BaseReqBuilder> {
   set gasAdjustment(String? gasAdjustment) =>
       _$this._gasAdjustment = gasAdjustment;
 
-  ListBuilder<Coin>? _fees;
-  ListBuilder<Coin> get fees => _$this._fees ??= new ListBuilder<Coin>();
-  set fees(ListBuilder<Coin>? fees) => _$this._fees = fees;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _fees;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get fees =>
+      _$this._fees ??= new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set fees(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? fees) =>
+      _$this._fees = fees;
 
   bool? _simulate;
   bool? get simulate => _$this._simulate;

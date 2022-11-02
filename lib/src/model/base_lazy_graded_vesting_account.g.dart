@@ -8,9 +8,12 @@ part of 'base_lazy_graded_vesting_account.dart';
 
 class _$BaseLazyGradedVestingAccount extends BaseLazyGradedVestingAccount {
   @override
-  final BaseVestingAccount? baseVestingAccount;
+  final AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccount?
+      baseVestingAccount;
   @override
-  final BuiltList<VestingSchedule>? vestingSchedules;
+  final BuiltList<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>?
+      vestingSchedules;
 
   factory _$BaseLazyGradedVestingAccount(
           [void Function(BaseLazyGradedVestingAccountBuilder)? updates]) =>
@@ -58,16 +61,27 @@ class BaseLazyGradedVestingAccountBuilder
             BaseLazyGradedVestingAccountBuilder> {
   _$BaseLazyGradedVestingAccount? _$v;
 
-  BaseVestingAccountBuilder? _baseVestingAccount;
-  BaseVestingAccountBuilder get baseVestingAccount =>
-      _$this._baseVestingAccount ??= new BaseVestingAccountBuilder();
-  set baseVestingAccount(BaseVestingAccountBuilder? baseVestingAccount) =>
+  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccountBuilder?
+      _baseVestingAccount;
+  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccountBuilder
+      get baseVestingAccount => _$this._baseVestingAccount ??=
+          new AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccountBuilder();
+  set baseVestingAccount(
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccountBuilder?
+              baseVestingAccount) =>
       _$this._baseVestingAccount = baseVestingAccount;
 
-  ListBuilder<VestingSchedule>? _vestingSchedules;
-  ListBuilder<VestingSchedule> get vestingSchedules =>
-      _$this._vestingSchedules ??= new ListBuilder<VestingSchedule>();
-  set vestingSchedules(ListBuilder<VestingSchedule>? vestingSchedules) =>
+  ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>?
+      _vestingSchedules;
+  ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>
+      get vestingSchedules => _$this._vestingSchedules ??= new ListBuilder<
+          AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>();
+  set vestingSchedules(
+          ListBuilder<
+                  AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>?
+              vestingSchedules) =>
       _$this._vestingSchedules = vestingSchedules;
 
   BaseLazyGradedVestingAccountBuilder() {

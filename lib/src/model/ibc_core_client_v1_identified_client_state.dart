@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/client_state.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class IbcCoreClientV1IdentifiedClientState implements Built<IbcCoreClie
     String? get clientId;
 
     @BuiltValueField(wireName: r'client_state')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get clientState;
+    ClientState? get clientState;
 
     IbcCoreClientV1IdentifiedClientState._();
 
@@ -52,7 +52,7 @@ class _$IbcCoreClientV1IdentifiedClientStateSerializer implements StructuredSeri
             result
                 ..add(r'client_state')
                 ..add(serializers.serialize(object.clientState,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(ClientState)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$IbcCoreClientV1IdentifiedClientStateSerializer implements StructuredSeri
                     break;
                 case r'client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(ClientState)) as ClientState;
                     result.clientState.replace(valueDes);
                     break;
             }

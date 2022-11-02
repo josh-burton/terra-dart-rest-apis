@@ -10,12 +10,14 @@ part 'get_staking_for_account_result_validators_voting_power.g.dart';
 /// GetStakingForAccountResultValidatorsVotingPower
 ///
 /// Properties:
-/// * [amount] 
-/// * [weight] 
+/// * [amount] - 
+/// * [weight] - 
 abstract class GetStakingForAccountResultValidatorsVotingPower implements Built<GetStakingForAccountResultValidatorsVotingPower, GetStakingForAccountResultValidatorsVotingPowerBuilder> {
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 
+    /// 
     @BuiltValueField(wireName: r'weight')
     String get weight;
 

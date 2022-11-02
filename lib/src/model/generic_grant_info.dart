@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/generic_authorization.dart';
+import 'package:terra_dart_rest_apis/src/model/generic_grant_info_authorization.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'generic_grant_info.g.dart';
 /// * [expiration] 
 abstract class GenericGrantInfo implements Built<GenericGrantInfo, GenericGrantInfoBuilder> {
     @BuiltValueField(wireName: r'authorization')
-    GenericAuthorization? get authorization;
+    GenericGrantInfoAuthorization? get authorization;
 
     @BuiltValueField(wireName: r'expiration')
     String? get expiration;
@@ -46,7 +46,7 @@ class _$GenericGrantInfoSerializer implements StructuredSerializer<GenericGrantI
             result
                 ..add(r'authorization')
                 ..add(serializers.serialize(object.authorization,
-                    specifiedType: const FullType(GenericAuthorization)));
+                    specifiedType: const FullType(GenericGrantInfoAuthorization)));
         }
         if (object.expiration != null) {
             result
@@ -71,7 +71,7 @@ class _$GenericGrantInfoSerializer implements StructuredSerializer<GenericGrantI
             switch (key) {
                 case r'authorization':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GenericAuthorization)) as GenericAuthorization;
+                        specifiedType: const FullType(GenericGrantInfoAuthorization)) as GenericGrantInfoAuthorization;
                     result.authorization.replace(valueDes);
                     break;
                 case r'expiration':

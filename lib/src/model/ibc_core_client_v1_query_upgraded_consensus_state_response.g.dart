@@ -9,7 +9,8 @@ part of 'ibc_core_client_v1_query_upgraded_consensus_state_response.dart';
 class _$IbcCoreClientV1QueryUpgradedConsensusStateResponse
     extends IbcCoreClientV1QueryUpgradedConsensusStateResponse {
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? upgradedConsensusState;
+  final ConsensusStateAssociatedWithTheRequestIdentifier?
+      upgradedConsensusState;
 
   factory _$IbcCoreClientV1QueryUpgradedConsensusStateResponse(
           [void Function(
@@ -62,12 +63,13 @@ class IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder
             IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder> {
   _$IbcCoreClientV1QueryUpgradedConsensusStateResponse? _$v;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _upgradedConsensusState;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder
+  ConsensusStateAssociatedWithTheRequestIdentifierBuilder?
+      _upgradedConsensusState;
+  ConsensusStateAssociatedWithTheRequestIdentifierBuilder
       get upgradedConsensusState => _$this._upgradedConsensusState ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+          new ConsensusStateAssociatedWithTheRequestIdentifierBuilder();
   set upgradedConsensusState(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+          ConsensusStateAssociatedWithTheRequestIdentifierBuilder?
               upgradedConsensusState) =>
       _$this._upgradedConsensusState = upgradedConsensusState;
 

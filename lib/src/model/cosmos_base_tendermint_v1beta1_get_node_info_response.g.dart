@@ -9,10 +9,9 @@ part of 'cosmos_base_tendermint_v1beta1_get_node_info_response.dart';
 class _$CosmosBaseTendermintV1beta1GetNodeInfoResponse
     extends CosmosBaseTendermintV1beta1GetNodeInfoResponse {
   @override
-  final TendermintP2pDefaultNodeInfo? defaultNodeInfo;
+  final GetNodeInfo200ResponseDefaultNodeInfo? defaultNodeInfo;
   @override
-  final CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion?
-      applicationVersion;
+  final GetNodeInfo200ResponseApplicationVersion? applicationVersion;
 
   factory _$CosmosBaseTendermintV1beta1GetNodeInfoResponse(
           [void Function(CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder)?
@@ -66,19 +65,20 @@ class CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder
             CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder> {
   _$CosmosBaseTendermintV1beta1GetNodeInfoResponse? _$v;
 
-  TendermintP2pDefaultNodeInfoBuilder? _defaultNodeInfo;
-  TendermintP2pDefaultNodeInfoBuilder get defaultNodeInfo =>
-      _$this._defaultNodeInfo ??= new TendermintP2pDefaultNodeInfoBuilder();
-  set defaultNodeInfo(TendermintP2pDefaultNodeInfoBuilder? defaultNodeInfo) =>
+  GetNodeInfo200ResponseDefaultNodeInfoBuilder? _defaultNodeInfo;
+  GetNodeInfo200ResponseDefaultNodeInfoBuilder get defaultNodeInfo =>
+      _$this._defaultNodeInfo ??=
+          new GetNodeInfo200ResponseDefaultNodeInfoBuilder();
+  set defaultNodeInfo(
+          GetNodeInfo200ResponseDefaultNodeInfoBuilder? defaultNodeInfo) =>
       _$this._defaultNodeInfo = defaultNodeInfo;
 
-  CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder?
-      _applicationVersion;
-  CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder
-      get applicationVersion => _$this._applicationVersion ??=
-          new CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder();
+  GetNodeInfo200ResponseApplicationVersionBuilder? _applicationVersion;
+  GetNodeInfo200ResponseApplicationVersionBuilder get applicationVersion =>
+      _$this._applicationVersion ??=
+          new GetNodeInfo200ResponseApplicationVersionBuilder();
   set applicationVersion(
-          CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder?
+          GetNodeInfo200ResponseApplicationVersionBuilder?
               applicationVersion) =>
       _$this._applicationVersion = applicationVersion;
 

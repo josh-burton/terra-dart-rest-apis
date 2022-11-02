@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_dec_coin.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response_pool_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,14 +13,13 @@ part 'cosmos_distribution_v1beta1_delegation_delegator_reward.g.dart';
 ///
 /// Properties:
 /// * [validatorAddress] 
-/// * [reward] - 
+/// * [reward] 
 abstract class CosmosDistributionV1beta1DelegationDelegatorReward implements Built<CosmosDistributionV1beta1DelegationDelegatorReward, CosmosDistributionV1beta1DelegationDelegatorRewardBuilder> {
     @BuiltValueField(wireName: r'validator_address')
     String? get validatorAddress;
 
-    /// 
     @BuiltValueField(wireName: r'reward')
-    BuiltList<CosmosBaseV1beta1DecCoin>? get reward;
+    BuiltList<CommunityPool200ResponsePoolInner>? get reward;
 
     CosmosDistributionV1beta1DelegationDelegatorReward._();
 
@@ -54,7 +53,7 @@ class _$CosmosDistributionV1beta1DelegationDelegatorRewardSerializer implements 
             result
                 ..add(r'reward')
                 ..add(serializers.serialize(object.reward,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])));
         }
         return result;
     }
@@ -78,7 +77,7 @@ class _$CosmosDistributionV1beta1DelegationDelegatorRewardSerializer implements 
                     break;
                 case r'reward':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])) as BuiltList<CosmosBaseV1beta1DecCoin>;
+                        specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])) as BuiltList<CommunityPool200ResponsePoolInner>;
                     result.reward.replace(valueDes);
                     break;
             }

@@ -9,9 +9,9 @@ part of 'cosmos_auth_v1beta1_query_accounts_response.dart';
 class _$CosmosAuthV1beta1QueryAccountsResponse
     extends CosmosAuthV1beta1QueryAccountsResponse {
   @override
-  final BuiltList<GoogleProtobufAny>? accounts;
+  final BuiltList<AccountsAreTheExistingAccountsInner>? accounts;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosAuthV1beta1QueryAccountsResponse(
           [void Function(CosmosAuthV1beta1QueryAccountsResponseBuilder)?
@@ -61,19 +61,17 @@ class CosmosAuthV1beta1QueryAccountsResponseBuilder
             CosmosAuthV1beta1QueryAccountsResponseBuilder> {
   _$CosmosAuthV1beta1QueryAccountsResponse? _$v;
 
-  ListBuilder<GoogleProtobufAny>? _accounts;
-  ListBuilder<GoogleProtobufAny> get accounts =>
-      _$this._accounts ??= new ListBuilder<GoogleProtobufAny>();
-  set accounts(ListBuilder<GoogleProtobufAny>? accounts) =>
+  ListBuilder<AccountsAreTheExistingAccountsInner>? _accounts;
+  ListBuilder<AccountsAreTheExistingAccountsInner> get accounts =>
+      _$this._accounts ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
+  set accounts(ListBuilder<AccountsAreTheExistingAccountsInner>? accounts) =>
       _$this._accounts = accounts;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosAuthV1beta1QueryAccountsResponseBuilder() {

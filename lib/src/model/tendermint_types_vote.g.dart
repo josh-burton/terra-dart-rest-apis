@@ -6,15 +6,85 @@ part of 'tendermint_types_vote.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const TendermintTypesVoteTypeEnum _$tendermintTypesVoteTypeEnum_UNKNOWN =
+    const TendermintTypesVoteTypeEnum._('UNKNOWN');
+const TendermintTypesVoteTypeEnum _$tendermintTypesVoteTypeEnum_PREVOTE =
+    const TendermintTypesVoteTypeEnum._('PREVOTE');
+const TendermintTypesVoteTypeEnum _$tendermintTypesVoteTypeEnum_PRECOMMIT =
+    const TendermintTypesVoteTypeEnum._('PRECOMMIT');
+const TendermintTypesVoteTypeEnum _$tendermintTypesVoteTypeEnum_PROPOSAL =
+    const TendermintTypesVoteTypeEnum._('PROPOSAL');
+
+TendermintTypesVoteTypeEnum _$tendermintTypesVoteTypeEnumValueOf(String name) {
+  switch (name) {
+    case 'UNKNOWN':
+      return _$tendermintTypesVoteTypeEnum_UNKNOWN;
+    case 'PREVOTE':
+      return _$tendermintTypesVoteTypeEnum_PREVOTE;
+    case 'PRECOMMIT':
+      return _$tendermintTypesVoteTypeEnum_PRECOMMIT;
+    case 'PROPOSAL':
+      return _$tendermintTypesVoteTypeEnum_PROPOSAL;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<TendermintTypesVoteTypeEnum>
+    _$tendermintTypesVoteTypeEnumValues = new BuiltSet<
+        TendermintTypesVoteTypeEnum>(const <TendermintTypesVoteTypeEnum>[
+  _$tendermintTypesVoteTypeEnum_UNKNOWN,
+  _$tendermintTypesVoteTypeEnum_PREVOTE,
+  _$tendermintTypesVoteTypeEnum_PRECOMMIT,
+  _$tendermintTypesVoteTypeEnum_PROPOSAL,
+]);
+
+Serializer<TendermintTypesVoteTypeEnum>
+    _$tendermintTypesVoteTypeEnumSerializer =
+    new _$TendermintTypesVoteTypeEnumSerializer();
+
+class _$TendermintTypesVoteTypeEnumSerializer
+    implements PrimitiveSerializer<TendermintTypesVoteTypeEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNKNOWN': 'SIGNED_MSG_TYPE_UNKNOWN',
+    'PREVOTE': 'SIGNED_MSG_TYPE_PREVOTE',
+    'PRECOMMIT': 'SIGNED_MSG_TYPE_PRECOMMIT',
+    'PROPOSAL': 'SIGNED_MSG_TYPE_PROPOSAL',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'SIGNED_MSG_TYPE_UNKNOWN': 'UNKNOWN',
+    'SIGNED_MSG_TYPE_PREVOTE': 'PREVOTE',
+    'SIGNED_MSG_TYPE_PRECOMMIT': 'PRECOMMIT',
+    'SIGNED_MSG_TYPE_PROPOSAL': 'PROPOSAL',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[TendermintTypesVoteTypeEnum];
+  @override
+  final String wireName = 'TendermintTypesVoteTypeEnum';
+
+  @override
+  Object serialize(Serializers serializers, TendermintTypesVoteTypeEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  TendermintTypesVoteTypeEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      TendermintTypesVoteTypeEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$TendermintTypesVote extends TendermintTypesVote {
   @override
-  final TendermintTypesSignedMsgType? type;
+  final TendermintTypesVoteTypeEnum? type;
   @override
   final String? height;
   @override
   final int? round;
   @override
-  final BlockID26? blockId;
+  final BlockID1? blockId;
   @override
   final DateTime? timestamp;
   @override
@@ -97,9 +167,9 @@ class TendermintTypesVoteBuilder
     implements Builder<TendermintTypesVote, TendermintTypesVoteBuilder> {
   _$TendermintTypesVote? _$v;
 
-  TendermintTypesSignedMsgType? _type;
-  TendermintTypesSignedMsgType? get type => _$this._type;
-  set type(TendermintTypesSignedMsgType? type) => _$this._type = type;
+  TendermintTypesVoteTypeEnum? _type;
+  TendermintTypesVoteTypeEnum? get type => _$this._type;
+  set type(TendermintTypesVoteTypeEnum? type) => _$this._type = type;
 
   String? _height;
   String? get height => _$this._height;
@@ -109,9 +179,9 @@ class TendermintTypesVoteBuilder
   int? get round => _$this._round;
   set round(int? round) => _$this._round = round;
 
-  BlockID26Builder? _blockId;
-  BlockID26Builder get blockId => _$this._blockId ??= new BlockID26Builder();
-  set blockId(BlockID26Builder? blockId) => _$this._blockId = blockId;
+  BlockID1Builder? _blockId;
+  BlockID1Builder get blockId => _$this._blockId ??= new BlockID1Builder();
+  set blockId(BlockID1Builder? blockId) => _$this._blockId = blockId;
 
   DateTime? _timestamp;
   DateTime? get timestamp => _$this._timestamp;

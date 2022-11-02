@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/block_meta.dart';
-import 'package:terra_dart_rest_apis/src/model/block.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_meta.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'block_query.g.dart';
 /// * [block] 
 abstract class BlockQuery implements Built<BlockQuery, BlockQueryBuilder> {
     @BuiltValueField(wireName: r'block_meta')
-    BlockMeta? get blockMeta;
+    BlocksLatestGet200ResponseBlockMeta? get blockMeta;
 
     @BuiltValueField(wireName: r'block')
-    Block? get block;
+    BlocksLatestGet200ResponseBlock? get block;
 
     BlockQuery._();
 
@@ -47,13 +47,13 @@ class _$BlockQuerySerializer implements StructuredSerializer<BlockQuery> {
             result
                 ..add(r'block_meta')
                 ..add(serializers.serialize(object.blockMeta,
-                    specifiedType: const FullType(BlockMeta)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockMeta)));
         }
         if (object.block != null) {
             result
                 ..add(r'block')
                 ..add(serializers.serialize(object.block,
-                    specifiedType: const FullType(Block)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlock)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$BlockQuerySerializer implements StructuredSerializer<BlockQuery> {
             switch (key) {
                 case r'block_meta':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockMeta)) as BlockMeta;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockMeta)) as BlocksLatestGet200ResponseBlockMeta;
                     result.blockMeta.replace(valueDes);
                     break;
                 case r'block':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Block)) as Block;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlock)) as BlocksLatestGet200ResponseBlock;
                     result.block.replace(valueDes);
                     break;
             }

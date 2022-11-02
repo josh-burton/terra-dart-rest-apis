@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_dec_coin.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response_pool_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'cosmos_distribution_v1beta1_validator_accumulated_commission.g.dart';
 /// ValidatorAccumulatedCommission represents accumulated commission for a validator kept as a running counter, can be withdrawn at any time.
 ///
 /// Properties:
-/// * [commission] - 
+/// * [commission] 
 abstract class CosmosDistributionV1beta1ValidatorAccumulatedCommission implements Built<CosmosDistributionV1beta1ValidatorAccumulatedCommission, CosmosDistributionV1beta1ValidatorAccumulatedCommissionBuilder> {
-    /// 
     @BuiltValueField(wireName: r'commission')
-    BuiltList<CosmosBaseV1beta1DecCoin>? get commission;
+    BuiltList<CommunityPool200ResponsePoolInner>? get commission;
 
     CosmosDistributionV1beta1ValidatorAccumulatedCommission._();
 
@@ -44,7 +43,7 @@ class _$CosmosDistributionV1beta1ValidatorAccumulatedCommissionSerializer implem
             result
                 ..add(r'commission')
                 ..add(serializers.serialize(object.commission,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$CosmosDistributionV1beta1ValidatorAccumulatedCommissionSerializer implem
             switch (key) {
                 case r'commission':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])) as BuiltList<CosmosBaseV1beta1DecCoin>;
+                        specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])) as BuiltList<CommunityPool200ResponsePoolInner>;
                     result.commission.replace(valueDes);
                     break;
             }

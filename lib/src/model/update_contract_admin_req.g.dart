@@ -8,7 +8,7 @@ part of 'update_contract_admin_req.dart';
 
 class _$UpdateContractAdminReq extends UpdateContractAdminReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
   final String? newAdmin;
 
@@ -53,9 +53,11 @@ class UpdateContractAdminReqBuilder
     implements Builder<UpdateContractAdminReq, UpdateContractAdminReqBuilder> {
   _$UpdateContractAdminReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   String? _newAdmin;
   String? get newAdmin => _$this._newAdmin;

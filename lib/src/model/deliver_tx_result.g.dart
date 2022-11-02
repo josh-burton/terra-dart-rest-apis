@@ -20,7 +20,7 @@ class _$DeliverTxResult extends DeliverTxResult {
   @override
   final String? log;
   @override
-  final BuiltList<KVPair>? tags;
+  final BuiltList<TxsHashGet200ResponseResultTagsInner>? tags;
 
   factory _$DeliverTxResult([void Function(DeliverTxResultBuilder)? updates]) =>
       (new DeliverTxResultBuilder()..update(updates))._build();
@@ -112,9 +112,11 @@ class DeliverTxResultBuilder
   String? get log => _$this._log;
   set log(String? log) => _$this._log = log;
 
-  ListBuilder<KVPair>? _tags;
-  ListBuilder<KVPair> get tags => _$this._tags ??= new ListBuilder<KVPair>();
-  set tags(ListBuilder<KVPair>? tags) => _$this._tags = tags;
+  ListBuilder<TxsHashGet200ResponseResultTagsInner>? _tags;
+  ListBuilder<TxsHashGet200ResponseResultTagsInner> get tags =>
+      _$this._tags ??= new ListBuilder<TxsHashGet200ResponseResultTagsInner>();
+  set tags(ListBuilder<TxsHashGet200ResponseResultTagsInner>? tags) =>
+      _$this._tags = tags;
 
   DeliverTxResultBuilder() {
     DeliverTxResult._defaults(this);

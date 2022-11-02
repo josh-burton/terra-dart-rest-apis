@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_get_tx_response_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'terra_tx_v1beta1_compute_tax_request.g.dart';
 /// * [txBytes] - tx_bytes is the raw transaction.
 abstract class TerraTxV1beta1ComputeTaxRequest implements Built<TerraTxV1beta1ComputeTaxRequest, TerraTxV1beta1ComputeTaxRequestBuilder> {
     @BuiltValueField(wireName: r'tx')
-    CosmosTxV1beta1GetTxResponseTx? get tx;
+    CosmosTxV1beta1Tx? get tx;
 
     /// tx_bytes is the raw transaction.
     @BuiltValueField(wireName: r'tx_bytes')
@@ -47,7 +47,7 @@ class _$TerraTxV1beta1ComputeTaxRequestSerializer implements StructuredSerialize
             result
                 ..add(r'tx')
                 ..add(serializers.serialize(object.tx,
-                    specifiedType: const FullType(CosmosTxV1beta1GetTxResponseTx)));
+                    specifiedType: const FullType(CosmosTxV1beta1Tx)));
         }
         if (object.txBytes != null) {
             result
@@ -72,7 +72,7 @@ class _$TerraTxV1beta1ComputeTaxRequestSerializer implements StructuredSerialize
             switch (key) {
                 case r'tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1GetTxResponseTx)) as CosmosTxV1beta1GetTxResponseTx;
+                        specifiedType: const FullType(CosmosTxV1beta1Tx)) as CosmosTxV1beta1Tx;
                     result.tx.replace(valueDes);
                     break;
                 case r'tx_bytes':

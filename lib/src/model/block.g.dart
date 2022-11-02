@@ -8,13 +8,13 @@ part of 'block.dart';
 
 class _$Block extends Block {
   @override
-  final BlockHeader? header;
+  final BlocksLatestGet200ResponseBlockMetaHeader? header;
   @override
   final BuiltList<String>? txs;
   @override
   final BuiltList<String>? evidence;
   @override
-  final LastCommit? lastCommit;
+  final BlocksLatestGet200ResponseBlockLastCommit? lastCommit;
 
   factory _$Block([void Function(BlockBuilder)? updates]) =>
       (new BlockBuilder()..update(updates))._build();
@@ -60,9 +60,11 @@ class _$Block extends Block {
 class BlockBuilder implements Builder<Block, BlockBuilder> {
   _$Block? _$v;
 
-  BlockHeaderBuilder? _header;
-  BlockHeaderBuilder get header => _$this._header ??= new BlockHeaderBuilder();
-  set header(BlockHeaderBuilder? header) => _$this._header = header;
+  BlocksLatestGet200ResponseBlockMetaHeaderBuilder? _header;
+  BlocksLatestGet200ResponseBlockMetaHeaderBuilder get header =>
+      _$this._header ??= new BlocksLatestGet200ResponseBlockMetaHeaderBuilder();
+  set header(BlocksLatestGet200ResponseBlockMetaHeaderBuilder? header) =>
+      _$this._header = header;
 
   ListBuilder<String>? _txs;
   ListBuilder<String> get txs => _$this._txs ??= new ListBuilder<String>();
@@ -73,10 +75,12 @@ class BlockBuilder implements Builder<Block, BlockBuilder> {
       _$this._evidence ??= new ListBuilder<String>();
   set evidence(ListBuilder<String>? evidence) => _$this._evidence = evidence;
 
-  LastCommitBuilder? _lastCommit;
-  LastCommitBuilder get lastCommit =>
-      _$this._lastCommit ??= new LastCommitBuilder();
-  set lastCommit(LastCommitBuilder? lastCommit) =>
+  BlocksLatestGet200ResponseBlockLastCommitBuilder? _lastCommit;
+  BlocksLatestGet200ResponseBlockLastCommitBuilder get lastCommit =>
+      _$this._lastCommit ??=
+          new BlocksLatestGet200ResponseBlockLastCommitBuilder();
+  set lastCommit(
+          BlocksLatestGet200ResponseBlockLastCommitBuilder? lastCommit) =>
       _$this._lastCommit = lastCommit;
 
   BlockBuilder() {

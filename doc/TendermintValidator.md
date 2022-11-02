@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **String** | bech32 encoded address | [optional] 
-**pubKey** | [**PublicKey**](PublicKey.md) |  | [optional] 
+**pubKey** | [**ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey**](ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey.md) |  | [optional] 
 **votingPower** | **String** |  | [optional] 
 **proposerPriority** | **String** |  | [optional] 
 

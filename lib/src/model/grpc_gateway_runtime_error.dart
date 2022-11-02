@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'grpc_gateway_runtime_error.g.dart';
 /// * [error] 
 /// * [code] 
 /// * [message] 
-/// * [details] - 
+/// * [details] 
 abstract class GrpcGatewayRuntimeError implements Built<GrpcGatewayRuntimeError, GrpcGatewayRuntimeErrorBuilder> {
     @BuiltValueField(wireName: r'error')
     String? get error;
@@ -26,9 +26,8 @@ abstract class GrpcGatewayRuntimeError implements Built<GrpcGatewayRuntimeError,
     @BuiltValueField(wireName: r'message')
     String? get message;
 
-    /// 
     @BuiltValueField(wireName: r'details')
-    BuiltList<GoogleProtobufAny>? get details;
+    BuiltList<AccountsAreTheExistingAccountsInner>? get details;
 
     GrpcGatewayRuntimeError._();
 
@@ -74,7 +73,7 @@ class _$GrpcGatewayRuntimeErrorSerializer implements StructuredSerializer<GrpcGa
             result
                 ..add(r'details')
                 ..add(serializers.serialize(object.details,
-                    specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])));
         }
         return result;
     }
@@ -108,7 +107,7 @@ class _$GrpcGatewayRuntimeErrorSerializer implements StructuredSerializer<GrpcGa
                     break;
                 case r'details':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GoogleProtobufAny)])) as BuiltList<GoogleProtobufAny>;
+                        specifiedType: const FullType(BuiltList, [FullType(AccountsAreTheExistingAccountsInner)])) as BuiltList<AccountsAreTheExistingAccountsInner>;
                     result.details.replace(valueDes);
                     break;
             }

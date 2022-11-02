@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/datacontainsthesetoftransactionsincludedintheblock.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_list.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_last_commit.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_header.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_signed_header_commit.dart';
+import 'package:terra_dart_rest_apis/src/model/data_contains_the_set_of_transactions_included_in_the_block.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,16 +20,16 @@ part 'tendermint_types_block.g.dart';
 /// * [lastCommit] 
 abstract class TendermintTypesBlock implements Built<TendermintTypesBlock, TendermintTypesBlockBuilder> {
     @BuiltValueField(wireName: r'header')
-    TendermintTypesBlockHeader? get header;
+    GetLatestBlock200ResponseBlockHeader? get header;
 
     @BuiltValueField(wireName: r'data')
-    Datacontainsthesetoftransactionsincludedintheblock? get data;
+    DataContainsTheSetOfTransactionsIncludedInTheBlock? get data;
 
     @BuiltValueField(wireName: r'evidence')
-    TendermintTypesEvidenceList? get evidence;
+    GetLatestBlock200ResponseBlockEvidence? get evidence;
 
     @BuiltValueField(wireName: r'last_commit')
-    TendermintTypesBlockLastCommit? get lastCommit;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit? get lastCommit;
 
     TendermintTypesBlock._();
 
@@ -57,25 +57,25 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(TendermintTypesBlockHeader)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockHeader)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(Datacontainsthesetoftransactionsincludedintheblock)));
+                    specifiedType: const FullType(DataContainsTheSetOfTransactionsIncludedInTheBlock)));
         }
         if (object.evidence != null) {
             result
                 ..add(r'evidence')
                 ..add(serializers.serialize(object.evidence,
-                    specifiedType: const FullType(TendermintTypesEvidenceList)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidence)));
         }
         if (object.lastCommit != null) {
             result
                 ..add(r'last_commit')
                 ..add(serializers.serialize(object.lastCommit,
-                    specifiedType: const FullType(TendermintTypesBlockLastCommit)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit)));
         }
         return result;
     }
@@ -94,22 +94,22 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlockHeader)) as TendermintTypesBlockHeader;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockHeader)) as GetLatestBlock200ResponseBlockHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'data':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Datacontainsthesetoftransactionsincludedintheblock)) as Datacontainsthesetoftransactionsincludedintheblock;
+                        specifiedType: const FullType(DataContainsTheSetOfTransactionsIncludedInTheBlock)) as DataContainsTheSetOfTransactionsIncludedInTheBlock;
                     result.data.replace(valueDes);
                     break;
                 case r'evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesEvidenceList)) as TendermintTypesEvidenceList;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidence)) as GetLatestBlock200ResponseBlockEvidence;
                     result.evidence.replace(valueDes);
                     break;
                 case r'last_commit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlockLastCommit)) as TendermintTypesBlockLastCommit;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit;
                     result.lastCommit.replace(valueDes);
                     break;
             }

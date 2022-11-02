@@ -11,7 +11,7 @@ class _$CosmosDistributionV1beta1DelegationDelegatorReward
   @override
   final String? validatorAddress;
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? reward;
+  final BuiltList<CommunityPool200ResponsePoolInner>? reward;
 
   factory _$CosmosDistributionV1beta1DelegationDelegatorReward(
           [void Function(
@@ -71,10 +71,10 @@ class CosmosDistributionV1beta1DelegationDelegatorRewardBuilder
   set validatorAddress(String? validatorAddress) =>
       _$this._validatorAddress = validatorAddress;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _reward;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get reward =>
-      _$this._reward ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set reward(ListBuilder<CosmosBaseV1beta1DecCoin>? reward) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _reward;
+  ListBuilder<CommunityPool200ResponsePoolInner> get reward =>
+      _$this._reward ??= new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set reward(ListBuilder<CommunityPool200ResponsePoolInner>? reward) =>
       _$this._reward = reward;
 
   CosmosDistributionV1beta1DelegationDelegatorRewardBuilder() {

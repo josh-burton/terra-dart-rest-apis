@@ -9,7 +9,7 @@ part of 'terra_oracle_v1beta1_query_tobin_taxes_response.dart';
 class _$TerraOracleV1beta1QueryTobinTaxesResponse
     extends TerraOracleV1beta1QueryTobinTaxesResponse {
   @override
-  final BuiltList<DenomTheobjecttoholdconfigurationsofeachdenom>? tobinTaxes;
+  final BuiltList<DenomTheObjectToHoldConfigurationsOfEachDenom>? tobinTaxes;
 
   factory _$TerraOracleV1beta1QueryTobinTaxesResponse(
           [void Function(TerraOracleV1beta1QueryTobinTaxesResponseBuilder)?
@@ -56,12 +56,12 @@ class TerraOracleV1beta1QueryTobinTaxesResponseBuilder
             TerraOracleV1beta1QueryTobinTaxesResponseBuilder> {
   _$TerraOracleV1beta1QueryTobinTaxesResponse? _$v;
 
-  ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>? _tobinTaxes;
-  ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom> get tobinTaxes =>
+  ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>? _tobinTaxes;
+  ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom> get tobinTaxes =>
       _$this._tobinTaxes ??=
-          new ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>();
+          new ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>();
   set tobinTaxes(
-          ListBuilder<DenomTheobjecttoholdconfigurationsofeachdenom>?
+          ListBuilder<DenomTheObjectToHoldConfigurationsOfEachDenom>?
               tobinTaxes) =>
       _$this._tobinTaxes = tobinTaxes;
 

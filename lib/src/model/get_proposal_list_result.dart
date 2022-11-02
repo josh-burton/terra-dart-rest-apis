@@ -15,7 +15,7 @@ part 'get_proposal_list_result.g.dart';
 /// Properties:
 /// * [minDeposit] - Minimum deposit minimum proposal deposit
 /// * [maxDepositPeriod] - Deposit period
-/// * [votingPeriod] 
+/// * [votingPeriod] - 
 /// * [proposals] - 
 abstract class GetProposalListResult implements Built<GetProposalListResult, GetProposalListResultBuilder> {
     /// Minimum deposit minimum proposal deposit
@@ -26,6 +26,7 @@ abstract class GetProposalListResult implements Built<GetProposalListResult, Get
     @BuiltValueField(wireName: r'maxDepositPeriod')
     String get maxDepositPeriod;
 
+    /// 
     @BuiltValueField(wireName: r'votingPeriod')
     String get votingPeriod;
 

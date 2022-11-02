@@ -12,9 +12,10 @@ part 'validators_rewards_pool.g.dart';
 /// ValidatorsRewardsPool
 ///
 /// Properties:
-/// * [total] 
+/// * [total] - 
 /// * [denoms] - 
 abstract class ValidatorsRewardsPool implements Built<ValidatorsRewardsPool, ValidatorsRewardsPoolBuilder> {
+    /// 
     @BuiltValueField(wireName: r'total')
     String get total;
 

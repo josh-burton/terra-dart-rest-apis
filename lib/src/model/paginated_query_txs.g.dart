@@ -18,7 +18,7 @@ class _$PaginatedQueryTxs extends PaginatedQueryTxs {
   @override
   final num? limit;
   @override
-  final BuiltList<TxQuery>? txs;
+  final BuiltList<TxsHashGet200Response>? txs;
 
   factory _$PaginatedQueryTxs(
           [void Function(PaginatedQueryTxsBuilder)? updates]) =>
@@ -102,9 +102,10 @@ class PaginatedQueryTxsBuilder
   num? get limit => _$this._limit;
   set limit(num? limit) => _$this._limit = limit;
 
-  ListBuilder<TxQuery>? _txs;
-  ListBuilder<TxQuery> get txs => _$this._txs ??= new ListBuilder<TxQuery>();
-  set txs(ListBuilder<TxQuery>? txs) => _$this._txs = txs;
+  ListBuilder<TxsHashGet200Response>? _txs;
+  ListBuilder<TxsHashGet200Response> get txs =>
+      _$this._txs ??= new ListBuilder<TxsHashGet200Response>();
+  set txs(ListBuilder<TxsHashGet200Response>? txs) => _$this._txs = txs;
 
   PaginatedQueryTxsBuilder() {
     PaginatedQueryTxs._defaults(this);

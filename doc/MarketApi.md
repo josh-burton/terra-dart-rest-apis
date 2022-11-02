@@ -5,67 +5,20 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getcurrentswaprate**](MarketApi.md#getcurrentswaprate) | **GET** /v1/market/swaprate/{base} | Get current swaprate
-[**getmarketparams**](MarketApi.md#getmarketparams) | **GET** /market/parameters | Get market params
-[**getpricehistory**](MarketApi.md#getpricehistory) | **GET** /v1/market/price | Get price history
-[**getterrapooldeltaisusdramountusedforswapoperationfromtheTerraPool**](MarketApi.md#getterrapooldeltaisusdramountusedforswapoperationfromtheterrapool) | **GET** /market/terra_pool_delta | Get terra pool delta, is usdr amount used for swap operation from the TerraPool.
-[**queryswapresultamount**](MarketApi.md#queryswapresultamount) | **GET** /market/swap | Query swap result amount
-[**swapcoinwithanothercoin**](MarketApi.md#swapcoinwithanothercoin) | **POST** /market/swap | Swap coin with another coin
+[**marketParametersGet**](MarketApi.md#marketparametersget) | **GET** /market/parameters | Get market params
+[**marketSwapGet**](MarketApi.md#marketswapget) | **GET** /market/swap | Query swap result amount
+[**marketSwapPost**](MarketApi.md#marketswappost) | **POST** /market/swap | Swap coin with another coin
+[**marketTerraPoolDeltaGet**](MarketApi.md#marketterrapooldeltaget) | **GET** /market/terra_pool_delta | Get terra pool delta, is usdr amount used for swap operation from the TerraPool.
+[**v1MarketPriceGet**](MarketApi.md#v1marketpriceget) | **GET** /v1/market/price | Get price history
+[**v1MarketSwaprateBaseGet**](MarketApi.md#v1marketswapratebaseget) | **GET** /v1/market/swaprate/{base} | Get current swaprate
 
 
-# **getcurrentswaprate**
-> BuiltList<Rates> getcurrentswaprate(base, contentType)
-
-Get current swaprate
-
-Get current swaprate
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getMarketApi();
-final String base = base_example; // String | Coin denomination
-final String contentType = contentType_example; // String | 
-
-try {
-    final response = api.getcurrentswaprate(base, contentType);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MarketApi->getcurrentswaprate: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **base** | **String**| Coin denomination | 
- **contentType** | **String**|  | 
-
-### Return type
-
-[**BuiltList&lt;Rates&gt;**](Rates.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getmarketparams**
-> MarketParams getmarketparams()
-
-Get market params
+# **marketParametersGet**
+> MarketParametersGet200Response marketParametersGet()
 
 Get market params
 
@@ -76,10 +29,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getMarketApi();
 
 try {
-    final response = api.getmarketparams();
+    final response = api.marketParametersGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MarketApi->getmarketparams: $e\n');
+    print('Exception when calling MarketApi->marketParametersGet: $e\n');
 }
 ```
 
@@ -88,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MarketParams**](MarketParams.md)
+[**MarketParametersGet200Response**](MarketParametersGet200Response.md)
 
 ### Authorization
 
@@ -101,27 +54,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getpricehistory**
-> GetMarketPriceResult getpricehistory(denom, interval, contentType)
+# **marketSwapGet**
+> TxsHashGet200ResponseTxFeeAmountInner marketSwapGet(offerCoin, askDenom)
 
-Get price history
-
-Get price history
+Query swap result amount
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getMarketApi();
-final String denom = denom_example; // String | Coin denomination
-final String interval = interval_example; // String | Price interval
-final String contentType = contentType_example; // String | 
+final String offerCoin = 1000000uluna; // String | coin expression want to swap
+final String askDenom = usdr; // String | Then coin denom want to ask
 
 try {
-    final response = api.getpricehistory(denom, interval, contentType);
+    final response = api.marketSwapGet(offerCoin, askDenom);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MarketApi->getpricehistory: $e\n');
+    print('Exception when calling MarketApi->marketSwapGet: $e\n');
 }
 ```
 
@@ -129,13 +79,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **denom** | **String**| Coin denomination | 
- **interval** | **String**| Price interval | 
- **contentType** | **String**|  | 
+ **offerCoin** | **String**| coin expression want to swap | 
+ **askDenom** | **String**| Then coin denom want to ask | 
 
 ### Return type
 
-[**GetMarketPriceResult**](GetMarketPriceResult.md)
+[**TxsHashGet200ResponseTxFeeAmountInner**](TxsHashGet200ResponseTxFeeAmountInner.md)
 
 ### Authorization
 
@@ -148,10 +97,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getterrapooldeltaisusdramountusedforswapoperationfromtheTerraPool**
-> double getterrapooldeltaisusdramountusedforswapoperationfromtheTerraPool()
+# **marketSwapPost**
+> TxsHashGet200ResponseTx marketSwapPost(swapCoinRequestBody)
 
-Get terra pool delta, is usdr amount used for swap operation from the TerraPool.
+Swap coin with another coin
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getMarketApi();
+final MarketSwapGetRequest swapCoinRequestBody = ; // MarketSwapGetRequest | 
+
+try {
+    final response = api.marketSwapPost(swapCoinRequestBody);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MarketApi->marketSwapPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **swapCoinRequestBody** | [**MarketSwapGetRequest**](MarketSwapGetRequest.md)|  | [optional] 
+
+### Return type
+
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **marketTerraPoolDeltaGet**
+> double marketTerraPoolDeltaGet()
 
 Get terra pool delta, is usdr amount used for swap operation from the TerraPool.
 
@@ -162,10 +150,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getMarketApi();
 
 try {
-    final response = api.getterrapooldeltaisusdramountusedforswapoperationfromtheTerraPool();
+    final response = api.marketTerraPoolDeltaGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MarketApi->getterrapooldeltaisusdramountusedforswapoperationfromtheTerraPool: $e\n');
+    print('Exception when calling MarketApi->marketTerraPoolDeltaGet: $e\n');
 }
 ```
 
@@ -187,26 +175,26 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **queryswapresultamount**
-> Coin queryswapresultamount(offerCoin, askDenom)
+# **v1MarketPriceGet**
+> GetMarketPriceResult v1MarketPriceGet(denom, interval)
 
-Query swap result amount
+Get price history
 
-Query swap result amount
+Get price history
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getMarketApi();
-final String offerCoin = 1000000uluna; // String | coin expression want to swap
-final String askDenom = usdr; // String | Then coin denom want to ask
+final String denom = denom_example; // String | Coin denomination
+final String interval = interval_example; // String | Price interval
 
 try {
-    final response = api.queryswapresultamount(offerCoin, askDenom);
+    final response = api.v1MarketPriceGet(denom, interval);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MarketApi->queryswapresultamount: $e\n');
+    print('Exception when calling MarketApi->v1MarketPriceGet: $e\n');
 }
 ```
 
@@ -214,12 +202,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **offerCoin** | **String**| coin expression want to swap | 
- **askDenom** | **String**| Then coin denom want to ask | 
+ **denom** | **String**| Coin denomination | 
+ **interval** | **String**| Price interval | 
 
 ### Return type
 
-[**Coin**](Coin.md)
+[**GetMarketPriceResult**](GetMarketPriceResult.md)
 
 ### Authorization
 
@@ -232,25 +220,25 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **swapcoinwithanothercoin**
-> StdTx swapcoinwithanothercoin(swapReq)
+# **v1MarketSwaprateBaseGet**
+> BuiltList<Rates> v1MarketSwaprateBaseGet(base)
 
-Swap coin with another coin
+Get current swaprate
 
-Swap coin with another coin
+Get current swaprate
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getMarketApi();
-final SwapReq swapReq = ; // SwapReq | 
+final String base = base_example; // String | Coin denomination
 
 try {
-    final response = api.swapcoinwithanothercoin(swapReq);
+    final response = api.v1MarketSwaprateBaseGet(base);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MarketApi->swapcoinwithanothercoin: $e\n');
+    print('Exception when calling MarketApi->v1MarketSwaprateBaseGet: $e\n');
 }
 ```
 
@@ -258,11 +246,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **swapReq** | [**SwapReq**](SwapReq.md)|  | [optional] 
+ **base** | **String**| Coin denomination | 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**BuiltList&lt;Rates&gt;**](Rates.md)
 
 ### Authorization
 
@@ -270,7 +258,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

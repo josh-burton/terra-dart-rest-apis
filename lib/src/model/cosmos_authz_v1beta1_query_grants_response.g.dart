@@ -9,9 +9,9 @@ part of 'cosmos_authz_v1beta1_query_grants_response.dart';
 class _$CosmosAuthzV1beta1QueryGrantsResponse
     extends CosmosAuthzV1beta1QueryGrantsResponse {
   @override
-  final BuiltList<CosmosAuthzV1beta1Grant>? grants;
+  final BuiltList<Grants200ResponseGrantsInner>? grants;
   @override
-  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
+  final Grants200ResponsePagination? pagination;
 
   factory _$CosmosAuthzV1beta1QueryGrantsResponse(
           [void Function(CosmosAuthzV1beta1QueryGrantsResponseBuilder)?
@@ -61,18 +61,16 @@ class CosmosAuthzV1beta1QueryGrantsResponseBuilder
             CosmosAuthzV1beta1QueryGrantsResponseBuilder> {
   _$CosmosAuthzV1beta1QueryGrantsResponse? _$v;
 
-  ListBuilder<CosmosAuthzV1beta1Grant>? _grants;
-  ListBuilder<CosmosAuthzV1beta1Grant> get grants =>
-      _$this._grants ??= new ListBuilder<CosmosAuthzV1beta1Grant>();
-  set grants(ListBuilder<CosmosAuthzV1beta1Grant>? grants) =>
+  ListBuilder<Grants200ResponseGrantsInner>? _grants;
+  ListBuilder<Grants200ResponseGrantsInner> get grants =>
+      _$this._grants ??= new ListBuilder<Grants200ResponseGrantsInner>();
+  set grants(ListBuilder<Grants200ResponseGrantsInner>? grants) =>
       _$this._grants = grants;
 
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
+  Grants200ResponsePaginationBuilder? _pagination;
+  Grants200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Grants200ResponsePaginationBuilder();
+  set pagination(Grants200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosAuthzV1beta1QueryGrantsResponseBuilder() {

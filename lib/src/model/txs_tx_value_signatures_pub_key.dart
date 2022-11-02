@@ -10,12 +10,14 @@ part 'txs_tx_value_signatures_pub_key.g.dart';
 /// TxsTxValueSignaturesPubKey
 ///
 /// Properties:
-/// * [type] 
-/// * [value] 
+/// * [type] - 
+/// * [value] - 
 abstract class TxsTxValueSignaturesPubKey implements Built<TxsTxValueSignaturesPubKey, TxsTxValueSignaturesPubKeyBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 
+    /// 
     @BuiltValueField(wireName: r'value')
     String get value;
 

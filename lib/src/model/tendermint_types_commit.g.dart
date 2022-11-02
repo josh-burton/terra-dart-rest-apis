@@ -12,9 +12,11 @@ class _$TendermintTypesCommit extends TendermintTypesCommit {
   @override
   final int? round;
   @override
-  final BlockID26? blockId;
+  final BlockID1? blockId;
   @override
-  final BuiltList<TendermintTypesCommitSig>? signatures;
+  final BuiltList<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>?
+      signatures;
 
   factory _$TendermintTypesCommit(
           [void Function(TendermintTypesCommitBuilder)? updates]) =>
@@ -73,14 +75,21 @@ class TendermintTypesCommitBuilder
   int? get round => _$this._round;
   set round(int? round) => _$this._round = round;
 
-  BlockID26Builder? _blockId;
-  BlockID26Builder get blockId => _$this._blockId ??= new BlockID26Builder();
-  set blockId(BlockID26Builder? blockId) => _$this._blockId = blockId;
+  BlockID1Builder? _blockId;
+  BlockID1Builder get blockId => _$this._blockId ??= new BlockID1Builder();
+  set blockId(BlockID1Builder? blockId) => _$this._blockId = blockId;
 
-  ListBuilder<TendermintTypesCommitSig>? _signatures;
-  ListBuilder<TendermintTypesCommitSig> get signatures =>
-      _$this._signatures ??= new ListBuilder<TendermintTypesCommitSig>();
-  set signatures(ListBuilder<TendermintTypesCommitSig>? signatures) =>
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>?
+      _signatures;
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>
+      get signatures => _$this._signatures ??= new ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>();
+  set signatures(
+          ListBuilder<
+                  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>?
+              signatures) =>
       _$this._signatures = signatures;
 
   TendermintTypesCommitBuilder() {

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_last_commit.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_header.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_signed_header_commit.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'tendermint_types_signed_header.g.dart';
 /// * [commit] 
 abstract class TendermintTypesSignedHeader implements Built<TendermintTypesSignedHeader, TendermintTypesSignedHeaderBuilder> {
     @BuiltValueField(wireName: r'header')
-    TendermintTypesBlockHeader? get header;
+    GetLatestBlock200ResponseBlockHeader? get header;
 
     @BuiltValueField(wireName: r'commit')
-    TendermintTypesBlockLastCommit? get commit;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit? get commit;
 
     TendermintTypesSignedHeader._();
 
@@ -47,13 +47,13 @@ class _$TendermintTypesSignedHeaderSerializer implements StructuredSerializer<Te
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(TendermintTypesBlockHeader)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockHeader)));
         }
         if (object.commit != null) {
             result
                 ..add(r'commit')
                 ..add(serializers.serialize(object.commit,
-                    specifiedType: const FullType(TendermintTypesBlockLastCommit)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$TendermintTypesSignedHeaderSerializer implements StructuredSerializer<Te
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlockHeader)) as TendermintTypesBlockHeader;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockHeader)) as GetLatestBlock200ResponseBlockHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'commit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlockLastCommit)) as TendermintTypesBlockLastCommit;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit;
                     result.commit.replace(valueDes);
                     break;
             }

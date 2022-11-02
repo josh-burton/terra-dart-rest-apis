@@ -9,9 +9,9 @@ part of 'cosmos_gov_v1beta1_query_votes_response.dart';
 class _$CosmosGovV1beta1QueryVotesResponse
     extends CosmosGovV1beta1QueryVotesResponse {
   @override
-  final BuiltList<CosmosGovV1beta1Vote>? votes;
+  final BuiltList<Votes200ResponseVotesInner>? votes;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosGovV1beta1QueryVotesResponse(
           [void Function(CosmosGovV1beta1QueryVotesResponseBuilder)?
@@ -59,18 +59,16 @@ class CosmosGovV1beta1QueryVotesResponseBuilder
             CosmosGovV1beta1QueryVotesResponseBuilder> {
   _$CosmosGovV1beta1QueryVotesResponse? _$v;
 
-  ListBuilder<CosmosGovV1beta1Vote>? _votes;
-  ListBuilder<CosmosGovV1beta1Vote> get votes =>
-      _$this._votes ??= new ListBuilder<CosmosGovV1beta1Vote>();
-  set votes(ListBuilder<CosmosGovV1beta1Vote>? votes) => _$this._votes = votes;
+  ListBuilder<Votes200ResponseVotesInner>? _votes;
+  ListBuilder<Votes200ResponseVotesInner> get votes =>
+      _$this._votes ??= new ListBuilder<Votes200ResponseVotesInner>();
+  set votes(ListBuilder<Votes200ResponseVotesInner>? votes) =>
+      _$this._votes = votes;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosGovV1beta1QueryVotesResponseBuilder() {

@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/value3.dart';
+import 'package:terra_dart_rest_apis/src/model/generic_authorization_value.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class GenericAuthorization implements Built<GenericAuthorization, Gener
     String? get type;
 
     @BuiltValueField(wireName: r'value')
-    Value3? get value;
+    GenericAuthorizationValue? get value;
 
     GenericAuthorization._();
 
@@ -52,7 +52,7 @@ class _$GenericAuthorizationSerializer implements StructuredSerializer<GenericAu
             result
                 ..add(r'value')
                 ..add(serializers.serialize(object.value,
-                    specifiedType: const FullType(Value3)));
+                    specifiedType: const FullType(GenericAuthorizationValue)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$GenericAuthorizationSerializer implements StructuredSerializer<GenericAu
                     break;
                 case r'value':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Value3)) as Value3;
+                        specifiedType: const FullType(GenericAuthorizationValue)) as GenericAuthorizationValue;
                     result.value.replace(valueDes);
                     break;
             }

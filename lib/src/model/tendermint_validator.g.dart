@@ -10,7 +10,7 @@ class _$TendermintValidator extends TendermintValidator {
   @override
   final String? address;
   @override
-  final PublicKey? pubKey;
+  final ValidatorsetsLatestGet200ResponseValidatorsInnerPubKey? pubKey;
   @override
   final String? votingPower;
   @override
@@ -70,9 +70,14 @@ class TendermintValidatorBuilder
   String? get address => _$this._address;
   set address(String? address) => _$this._address = address;
 
-  PublicKeyBuilder? _pubKey;
-  PublicKeyBuilder get pubKey => _$this._pubKey ??= new PublicKeyBuilder();
-  set pubKey(PublicKeyBuilder? pubKey) => _$this._pubKey = pubKey;
+  ValidatorsetsLatestGet200ResponseValidatorsInnerPubKeyBuilder? _pubKey;
+  ValidatorsetsLatestGet200ResponseValidatorsInnerPubKeyBuilder get pubKey =>
+      _$this._pubKey ??=
+          new ValidatorsetsLatestGet200ResponseValidatorsInnerPubKeyBuilder();
+  set pubKey(
+          ValidatorsetsLatestGet200ResponseValidatorsInnerPubKeyBuilder?
+              pubKey) =>
+      _$this._pubKey = pubKey;
 
   String? _votingPower;
   String? get votingPower => _$this._votingPower;

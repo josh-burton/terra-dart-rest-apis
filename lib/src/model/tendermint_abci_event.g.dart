@@ -10,7 +10,8 @@ class _$TendermintAbciEvent extends TendermintAbciEvent {
   @override
   final String? type;
   @override
-  final BuiltList<TendermintAbciEventAttribute>? attributes;
+  final BuiltList<Simulate200ResponseResultEventsInnerAttributesInner>?
+      attributes;
 
   factory _$TendermintAbciEvent(
           [void Function(TendermintAbciEventBuilder)? updates]) =>
@@ -57,10 +58,13 @@ class TendermintAbciEventBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  ListBuilder<TendermintAbciEventAttribute>? _attributes;
-  ListBuilder<TendermintAbciEventAttribute> get attributes =>
-      _$this._attributes ??= new ListBuilder<TendermintAbciEventAttribute>();
-  set attributes(ListBuilder<TendermintAbciEventAttribute>? attributes) =>
+  ListBuilder<Simulate200ResponseResultEventsInnerAttributesInner>? _attributes;
+  ListBuilder<Simulate200ResponseResultEventsInnerAttributesInner>
+      get attributes => _$this._attributes ??= new ListBuilder<
+          Simulate200ResponseResultEventsInnerAttributesInner>();
+  set attributes(
+          ListBuilder<Simulate200ResponseResultEventsInnerAttributesInner>?
+              attributes) =>
       _$this._attributes = attributes;
 
   TendermintAbciEventBuilder() {

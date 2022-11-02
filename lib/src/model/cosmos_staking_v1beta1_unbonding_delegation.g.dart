@@ -13,7 +13,9 @@ class _$CosmosStakingV1beta1UnbondingDelegation
   @override
   final String? validatorAddress;
   @override
-  final BuiltList<CosmosStakingV1beta1UnbondingDelegationEntry>? entries;
+  final BuiltList<
+          DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>?
+      entries;
 
   factory _$CosmosStakingV1beta1UnbondingDelegation(
           [void Function(CosmosStakingV1beta1UnbondingDelegationBuilder)?
@@ -78,12 +80,17 @@ class CosmosStakingV1beta1UnbondingDelegationBuilder
   set validatorAddress(String? validatorAddress) =>
       _$this._validatorAddress = validatorAddress;
 
-  ListBuilder<CosmosStakingV1beta1UnbondingDelegationEntry>? _entries;
-  ListBuilder<CosmosStakingV1beta1UnbondingDelegationEntry> get entries =>
-      _$this._entries ??=
-          new ListBuilder<CosmosStakingV1beta1UnbondingDelegationEntry>();
+  ListBuilder<
+          DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>?
+      _entries;
+  ListBuilder<
+          DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>
+      get entries => _$this._entries ??= new ListBuilder<
+          DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>();
   set entries(
-          ListBuilder<CosmosStakingV1beta1UnbondingDelegationEntry>? entries) =>
+          ListBuilder<
+                  DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner>?
+              entries) =>
       _$this._entries = entries;
 
   CosmosStakingV1beta1UnbondingDelegationBuilder() {

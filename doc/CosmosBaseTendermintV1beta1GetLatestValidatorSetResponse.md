@@ -9,8 +9,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blockHeight** | **String** |  | [optional] 
-**validators** | [**BuiltList&lt;CosmosBaseTendermintV1beta1Validator&gt;**](CosmosBaseTendermintV1beta1Validator.md) |  | [optional] 
-**pagination** | [**CosmosAuthzV1beta1QueryGrantsResponsePagination**](CosmosAuthzV1beta1QueryGrantsResponsePagination.md) |  | [optional] 
+**validators** | [**BuiltList&lt;GetLatestValidatorSet200ResponseValidatorsInner&gt;**](GetLatestValidatorSet200ResponseValidatorsInner.md) |  | [optional] 
+**pagination** | [**Grants200ResponsePagination**](Grants200ResponsePagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

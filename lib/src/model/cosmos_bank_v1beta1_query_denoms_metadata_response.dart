@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_metadata.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/denoms_metadata200_response_metadatas_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_bank_v1beta1_query_denoms_metadata_response.g.dart';
 abstract class CosmosBankV1beta1QueryDenomsMetadataResponse implements Built<CosmosBankV1beta1QueryDenomsMetadataResponse, CosmosBankV1beta1QueryDenomsMetadataResponseBuilder> {
     /// metadata provides the client information for all the registered tokens.
     @BuiltValueField(wireName: r'metadatas')
-    BuiltList<CosmosBankV1beta1Metadata>? get metadatas;
+    BuiltList<DenomsMetadata200ResponseMetadatasInner>? get metadatas;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosBankV1beta1QueryDenomsMetadataResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosBankV1beta1QueryDenomsMetadataResponseSerializer implements Struct
             result
                 ..add(r'metadatas')
                 ..add(serializers.serialize(object.metadatas,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1Metadata)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DenomsMetadata200ResponseMetadatasInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosBankV1beta1QueryDenomsMetadataResponseSerializer implements Struct
             switch (key) {
                 case r'metadatas':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1Metadata)])) as BuiltList<CosmosBankV1beta1Metadata>;
+                        specifiedType: const FullType(BuiltList, [FullType(DenomsMetadata200ResponseMetadatasInner)])) as BuiltList<DenomsMetadata200ResponseMetadatasInner>;
                     result.metadatas.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

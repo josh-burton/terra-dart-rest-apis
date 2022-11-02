@@ -8,7 +8,7 @@ part of 'revoke_grant_req.dart';
 
 class _$RevokeGrantReq extends RevokeGrantReq {
   @override
-  final BaseReq baseReq;
+  final TxsEstimateFeePostRequestBaseReq baseReq;
 
   factory _$RevokeGrantReq([void Function(RevokeGrantReqBuilder)? updates]) =>
       (new RevokeGrantReqBuilder()..update(updates))._build();
@@ -49,9 +49,11 @@ class RevokeGrantReqBuilder
     implements Builder<RevokeGrantReq, RevokeGrantReqBuilder> {
   _$RevokeGrantReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   RevokeGrantReqBuilder() {
     RevokeGrantReq._defaults(this);

@@ -8,11 +8,11 @@ part of 'grant_req.dart';
 
 class _$GrantReq extends GrantReq {
   @override
-  final BaseReq baseReq;
+  final TxsEstimateFeePostRequestBaseReq baseReq;
   @override
   final String period;
   @override
-  final BuiltList<Coin>? limit;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? limit;
 
   factory _$GrantReq([void Function(GrantReqBuilder)? updates]) =>
       (new GrantReqBuilder()..update(updates))._build();
@@ -58,17 +58,22 @@ class _$GrantReq extends GrantReq {
 class GrantReqBuilder implements Builder<GrantReq, GrantReqBuilder> {
   _$GrantReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   String? _period;
   String? get period => _$this._period;
   set period(String? period) => _$this._period = period;
 
-  ListBuilder<Coin>? _limit;
-  ListBuilder<Coin> get limit => _$this._limit ??= new ListBuilder<Coin>();
-  set limit(ListBuilder<Coin>? limit) => _$this._limit = limit;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _limit;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get limit =>
+      _$this._limit ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set limit(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? limit) =>
+      _$this._limit = limit;
 
   GrantReqBuilder() {
     GrantReq._defaults(this);

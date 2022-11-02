@@ -8,7 +8,7 @@ part of 'cosmos_tx_v1beta1_fee.dart';
 
 class _$CosmosTxV1beta1Fee extends CosmosTxV1beta1Fee {
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? amount;
+  final BuiltList<AllBalances200ResponseBalancesInner>? amount;
   @override
   final String? gasLimit;
   @override
@@ -64,10 +64,10 @@ class CosmosTxV1beta1FeeBuilder
     implements Builder<CosmosTxV1beta1Fee, CosmosTxV1beta1FeeBuilder> {
   _$CosmosTxV1beta1Fee? _$v;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _amount;
-  ListBuilder<CosmosBaseV1beta1Coin> get amount =>
-      _$this._amount ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set amount(ListBuilder<CosmosBaseV1beta1Coin>? amount) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _amount;
+  ListBuilder<AllBalances200ResponseBalancesInner> get amount =>
+      _$this._amount ??= new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set amount(ListBuilder<AllBalances200ResponseBalancesInner>? amount) =>
       _$this._amount = amount;
 
   String? _gasLimit;

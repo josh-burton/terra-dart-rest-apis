@@ -6,21 +6,114 @@ part of 'cosmos_gov_v1beta1_proposal.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_UNSPECIFIED =
+    const CosmosGovV1beta1ProposalStatusEnum._('UNSPECIFIED');
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_DEPOSIT_PERIOD =
+    const CosmosGovV1beta1ProposalStatusEnum._('DEPOSIT_PERIOD');
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_VOTING_PERIOD =
+    const CosmosGovV1beta1ProposalStatusEnum._('VOTING_PERIOD');
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_PASSED =
+    const CosmosGovV1beta1ProposalStatusEnum._('PASSED');
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_REJECTED =
+    const CosmosGovV1beta1ProposalStatusEnum._('REJECTED');
+const CosmosGovV1beta1ProposalStatusEnum
+    _$cosmosGovV1beta1ProposalStatusEnum_FAILED =
+    const CosmosGovV1beta1ProposalStatusEnum._('FAILED');
+
+CosmosGovV1beta1ProposalStatusEnum _$cosmosGovV1beta1ProposalStatusEnumValueOf(
+    String name) {
+  switch (name) {
+    case 'UNSPECIFIED':
+      return _$cosmosGovV1beta1ProposalStatusEnum_UNSPECIFIED;
+    case 'DEPOSIT_PERIOD':
+      return _$cosmosGovV1beta1ProposalStatusEnum_DEPOSIT_PERIOD;
+    case 'VOTING_PERIOD':
+      return _$cosmosGovV1beta1ProposalStatusEnum_VOTING_PERIOD;
+    case 'PASSED':
+      return _$cosmosGovV1beta1ProposalStatusEnum_PASSED;
+    case 'REJECTED':
+      return _$cosmosGovV1beta1ProposalStatusEnum_REJECTED;
+    case 'FAILED':
+      return _$cosmosGovV1beta1ProposalStatusEnum_FAILED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<CosmosGovV1beta1ProposalStatusEnum>
+    _$cosmosGovV1beta1ProposalStatusEnumValues =
+    new BuiltSet<CosmosGovV1beta1ProposalStatusEnum>(const <
+        CosmosGovV1beta1ProposalStatusEnum>[
+  _$cosmosGovV1beta1ProposalStatusEnum_UNSPECIFIED,
+  _$cosmosGovV1beta1ProposalStatusEnum_DEPOSIT_PERIOD,
+  _$cosmosGovV1beta1ProposalStatusEnum_VOTING_PERIOD,
+  _$cosmosGovV1beta1ProposalStatusEnum_PASSED,
+  _$cosmosGovV1beta1ProposalStatusEnum_REJECTED,
+  _$cosmosGovV1beta1ProposalStatusEnum_FAILED,
+]);
+
+Serializer<CosmosGovV1beta1ProposalStatusEnum>
+    _$cosmosGovV1beta1ProposalStatusEnumSerializer =
+    new _$CosmosGovV1beta1ProposalStatusEnumSerializer();
+
+class _$CosmosGovV1beta1ProposalStatusEnumSerializer
+    implements PrimitiveSerializer<CosmosGovV1beta1ProposalStatusEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNSPECIFIED': 'PROPOSAL_STATUS_UNSPECIFIED',
+    'DEPOSIT_PERIOD': 'PROPOSAL_STATUS_DEPOSIT_PERIOD',
+    'VOTING_PERIOD': 'PROPOSAL_STATUS_VOTING_PERIOD',
+    'PASSED': 'PROPOSAL_STATUS_PASSED',
+    'REJECTED': 'PROPOSAL_STATUS_REJECTED',
+    'FAILED': 'PROPOSAL_STATUS_FAILED',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'PROPOSAL_STATUS_UNSPECIFIED': 'UNSPECIFIED',
+    'PROPOSAL_STATUS_DEPOSIT_PERIOD': 'DEPOSIT_PERIOD',
+    'PROPOSAL_STATUS_VOTING_PERIOD': 'VOTING_PERIOD',
+    'PROPOSAL_STATUS_PASSED': 'PASSED',
+    'PROPOSAL_STATUS_REJECTED': 'REJECTED',
+    'PROPOSAL_STATUS_FAILED': 'FAILED',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[CosmosGovV1beta1ProposalStatusEnum];
+  @override
+  final String wireName = 'CosmosGovV1beta1ProposalStatusEnum';
+
+  @override
+  Object serialize(
+          Serializers serializers, CosmosGovV1beta1ProposalStatusEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  CosmosGovV1beta1ProposalStatusEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      CosmosGovV1beta1ProposalStatusEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$CosmosGovV1beta1Proposal extends CosmosGovV1beta1Proposal {
   @override
   final String? proposalId;
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? content;
+  final AccountsAreTheExistingAccountsInner? content;
   @override
-  final CosmosGovV1beta1ProposalStatus? status;
+  final CosmosGovV1beta1ProposalStatusEnum? status;
   @override
-  final CosmosGovV1beta1ProposalFinalTallyResult? finalTallyResult;
+  final Proposals200ResponseProposalsInnerFinalTallyResult? finalTallyResult;
   @override
   final DateTime? submitTime;
   @override
   final DateTime? depositEndTime;
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? totalDeposit;
+  final BuiltList<AllBalances200ResponseBalancesInner>? totalDeposit;
   @override
   final DateTime? votingStartTime;
   @override
@@ -111,23 +204,24 @@ class CosmosGovV1beta1ProposalBuilder
   String? get proposalId => _$this._proposalId;
   set proposalId(String? proposalId) => _$this._proposalId = proposalId;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _content;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get content =>
-      _$this._content ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
-  set content(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? content) =>
+  AccountsAreTheExistingAccountsInnerBuilder? _content;
+  AccountsAreTheExistingAccountsInnerBuilder get content =>
+      _$this._content ??= new AccountsAreTheExistingAccountsInnerBuilder();
+  set content(AccountsAreTheExistingAccountsInnerBuilder? content) =>
       _$this._content = content;
 
-  CosmosGovV1beta1ProposalStatus? _status;
-  CosmosGovV1beta1ProposalStatus? get status => _$this._status;
-  set status(CosmosGovV1beta1ProposalStatus? status) => _$this._status = status;
+  CosmosGovV1beta1ProposalStatusEnum? _status;
+  CosmosGovV1beta1ProposalStatusEnum? get status => _$this._status;
+  set status(CosmosGovV1beta1ProposalStatusEnum? status) =>
+      _$this._status = status;
 
-  CosmosGovV1beta1ProposalFinalTallyResultBuilder? _finalTallyResult;
-  CosmosGovV1beta1ProposalFinalTallyResultBuilder get finalTallyResult =>
-      _$this._finalTallyResult ??=
-          new CosmosGovV1beta1ProposalFinalTallyResultBuilder();
+  Proposals200ResponseProposalsInnerFinalTallyResultBuilder? _finalTallyResult;
+  Proposals200ResponseProposalsInnerFinalTallyResultBuilder
+      get finalTallyResult => _$this._finalTallyResult ??=
+          new Proposals200ResponseProposalsInnerFinalTallyResultBuilder();
   set finalTallyResult(
-          CosmosGovV1beta1ProposalFinalTallyResultBuilder? finalTallyResult) =>
+          Proposals200ResponseProposalsInnerFinalTallyResultBuilder?
+              finalTallyResult) =>
       _$this._finalTallyResult = finalTallyResult;
 
   DateTime? _submitTime;
@@ -139,10 +233,12 @@ class CosmosGovV1beta1ProposalBuilder
   set depositEndTime(DateTime? depositEndTime) =>
       _$this._depositEndTime = depositEndTime;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _totalDeposit;
-  ListBuilder<CosmosBaseV1beta1Coin> get totalDeposit =>
-      _$this._totalDeposit ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set totalDeposit(ListBuilder<CosmosBaseV1beta1Coin>? totalDeposit) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _totalDeposit;
+  ListBuilder<AllBalances200ResponseBalancesInner> get totalDeposit =>
+      _$this._totalDeposit ??=
+          new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set totalDeposit(
+          ListBuilder<AllBalances200ResponseBalancesInner>? totalDeposit) =>
       _$this._totalDeposit = totalDeposit;
 
   DateTime? _votingStartTime;

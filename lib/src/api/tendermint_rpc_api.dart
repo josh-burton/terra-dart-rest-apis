@@ -7,10 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:terra_dart_rest_apis/src/model/block_query.dart';
-import 'package:terra_dart_rest_apis/src/model/getavalidatorsetacertainheight_response.dart';
-import 'package:terra_dart_rest_apis/src/model/getthelatestvalidatorset_response.dart';
-import 'package:terra_dart_rest_apis/src/model/syncingstateofnode_response.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/syncing_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/validatorsets_latest_get200_response.dart';
 
 class TendermintRPCApi {
 
@@ -21,7 +20,7 @@ class TendermintRPCApi {
   const TendermintRPCApi(this._dio, this._serializers);
 
   /// Get a block at a certain height
-  /// Get a block at a certain height
+  /// 
   ///
   /// Parameters:
   /// * [height] - Block height
@@ -32,10 +31,10 @@ class TendermintRPCApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BlockQuery] as data
+  /// Returns a [Future] containing a [Response] with a [BlocksLatestGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BlockQuery>> getablockatacertainheight({ 
-    required double height,
+  Future<Response<BlocksLatestGet200Response>> blocksHeightGet({ 
+    required num height,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -64,14 +63,14 @@ class TendermintRPCApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BlockQuery _responseData;
+    BlocksLatestGet200Response _responseData;
 
     try {
-      const _responseType = FullType(BlockQuery);
+      const _responseType = FullType(BlocksLatestGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BlockQuery;
+      ) as BlocksLatestGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -82,81 +81,7 @@ class TendermintRPCApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BlockQuery>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get a validator set a certain height
-  /// Get a validator set a certain height
-  ///
-  /// Parameters:
-  /// * [height] - Block height
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetavalidatorsetacertainheightResponse] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetavalidatorsetacertainheightResponse>> getavalidatorsetacertainheight({ 
-    required double height,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/validatorsets/{height}'.replaceAll('{' r'height' '}', height.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetavalidatorsetacertainheightResponse _responseData;
-
-    try {
-      const _responseType = FullType(GetavalidatorsetacertainheightResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetavalidatorsetacertainheightResponse;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetavalidatorsetacertainheightResponse>(
+    return Response<BlocksLatestGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -169,7 +94,7 @@ class TendermintRPCApi {
   }
 
   /// Get the latest block
-  /// Get the latest block
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -179,9 +104,9 @@ class TendermintRPCApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BlockQuery] as data
+  /// Returns a [Future] containing a [Response] with a [BlocksLatestGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BlockQuery>> getthelatestblock({ 
+  Future<Response<BlocksLatestGet200Response>> blocksLatestGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -210,14 +135,14 @@ class TendermintRPCApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BlockQuery _responseData;
+    BlocksLatestGet200Response _responseData;
 
     try {
-      const _responseType = FullType(BlockQuery);
+      const _responseType = FullType(BlocksLatestGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BlockQuery;
+      ) as BlocksLatestGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -228,79 +153,7 @@ class TendermintRPCApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BlockQuery>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the latest validator set
-  /// Get the latest validator set
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetthelatestvalidatorsetResponse] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetthelatestvalidatorsetResponse>> getthelatestvalidatorset({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/validatorsets/latest';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetthelatestvalidatorsetResponse _responseData;
-
-    try {
-      const _responseType = FullType(GetthelatestvalidatorsetResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetthelatestvalidatorsetResponse;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetthelatestvalidatorsetResponse>(
+    return Response<BlocksLatestGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -323,9 +176,9 @@ class TendermintRPCApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [SyncingstateofnodeResponse] as data
+  /// Returns a [Future] containing a [Response] with a [SyncingGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<SyncingstateofnodeResponse>> syncingstateofnode({ 
+  Future<Response<SyncingGet200Response>> syncingGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -354,14 +207,14 @@ class TendermintRPCApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    SyncingstateofnodeResponse _responseData;
+    SyncingGet200Response _responseData;
 
     try {
-      const _responseType = FullType(SyncingstateofnodeResponse);
+      const _responseType = FullType(SyncingGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as SyncingstateofnodeResponse;
+      ) as SyncingGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -372,7 +225,153 @@ class TendermintRPCApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<SyncingstateofnodeResponse>(
+    return Response<SyncingGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get a validator set a certain height
+  /// 
+  ///
+  /// Parameters:
+  /// * [height] - Block height
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [ValidatorsetsLatestGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<ValidatorsetsLatestGet200Response>> validatorsetsHeightGet({ 
+    required num height,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/validatorsets/{height}'.replaceAll('{' r'height' '}', height.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    ValidatorsetsLatestGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(ValidatorsetsLatestGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as ValidatorsetsLatestGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<ValidatorsetsLatestGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get the latest validator set
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [ValidatorsetsLatestGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<ValidatorsetsLatestGet200Response>> validatorsetsLatestGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/validatorsets/latest';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    ValidatorsetsLatestGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(ValidatorsetsLatestGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as ValidatorsetsLatestGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<ValidatorsetsLatestGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

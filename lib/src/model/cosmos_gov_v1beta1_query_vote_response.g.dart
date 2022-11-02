@@ -9,7 +9,7 @@ part of 'cosmos_gov_v1beta1_query_vote_response.dart';
 class _$CosmosGovV1beta1QueryVoteResponse
     extends CosmosGovV1beta1QueryVoteResponse {
   @override
-  final CosmosGovV1beta1QueryVoteResponseVote? vote;
+  final Votes200ResponseVotesInner? vote;
 
   factory _$CosmosGovV1beta1QueryVoteResponse(
           [void Function(CosmosGovV1beta1QueryVoteResponseBuilder)? updates]) =>
@@ -52,11 +52,10 @@ class CosmosGovV1beta1QueryVoteResponseBuilder
             CosmosGovV1beta1QueryVoteResponseBuilder> {
   _$CosmosGovV1beta1QueryVoteResponse? _$v;
 
-  CosmosGovV1beta1QueryVoteResponseVoteBuilder? _vote;
-  CosmosGovV1beta1QueryVoteResponseVoteBuilder get vote =>
-      _$this._vote ??= new CosmosGovV1beta1QueryVoteResponseVoteBuilder();
-  set vote(CosmosGovV1beta1QueryVoteResponseVoteBuilder? vote) =>
-      _$this._vote = vote;
+  Votes200ResponseVotesInnerBuilder? _vote;
+  Votes200ResponseVotesInnerBuilder get vote =>
+      _$this._vote ??= new Votes200ResponseVotesInnerBuilder();
+  set vote(Votes200ResponseVotesInnerBuilder? vote) => _$this._vote = vote;
 
   CosmosGovV1beta1QueryVoteResponseBuilder() {
     CosmosGovV1beta1QueryVoteResponse._defaults(this);

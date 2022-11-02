@@ -10,16 +10,19 @@ part 'get_proposal_deposits_result_deposits_depositor.g.dart';
 /// GetProposalDepositsResultDepositsDepositor
 ///
 /// Properties:
-/// * [accountAddress] 
-/// * [operatorAddress] 
-/// * [moniker] 
+/// * [accountAddress] - 
+/// * [operatorAddress] - 
+/// * [moniker] - 
 abstract class GetProposalDepositsResultDepositsDepositor implements Built<GetProposalDepositsResultDepositsDepositor, GetProposalDepositsResultDepositsDepositorBuilder> {
+    /// 
     @BuiltValueField(wireName: r'accountAddress')
     String get accountAddress;
 
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'moniker')
     String get moniker;
 

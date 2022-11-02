@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_send_enabled.dart';
+import 'package:terra_dart_rest_apis/src/model/bank_params200_response_params_send_enabled_inner.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -12,12 +12,11 @@ part 'cosmos_bank_v1beta1_params.g.dart';
 /// Params defines the parameters for the bank module.
 ///
 /// Properties:
-/// * [sendEnabled] - 
+/// * [sendEnabled] 
 /// * [defaultSendEnabled] 
 abstract class CosmosBankV1beta1Params implements Built<CosmosBankV1beta1Params, CosmosBankV1beta1ParamsBuilder> {
-    /// 
     @BuiltValueField(wireName: r'send_enabled')
-    BuiltList<CosmosBankV1beta1SendEnabled>? get sendEnabled;
+    BuiltList<BankParams200ResponseParamsSendEnabledInner>? get sendEnabled;
 
     @BuiltValueField(wireName: r'default_send_enabled')
     bool? get defaultSendEnabled;
@@ -48,7 +47,7 @@ class _$CosmosBankV1beta1ParamsSerializer implements StructuredSerializer<Cosmos
             result
                 ..add(r'send_enabled')
                 ..add(serializers.serialize(object.sendEnabled,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1SendEnabled)])));
+                    specifiedType: const FullType(BuiltList, [FullType(BankParams200ResponseParamsSendEnabledInner)])));
         }
         if (object.defaultSendEnabled != null) {
             result
@@ -73,7 +72,7 @@ class _$CosmosBankV1beta1ParamsSerializer implements StructuredSerializer<Cosmos
             switch (key) {
                 case r'send_enabled':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBankV1beta1SendEnabled)])) as BuiltList<CosmosBankV1beta1SendEnabled>;
+                        specifiedType: const FullType(BuiltList, [FullType(BankParams200ResponseParamsSendEnabledInner)])) as BuiltList<BankParams200ResponseParamsSendEnabledInner>;
                     result.sendEnabled.replace(valueDes);
                     break;
                 case r'default_send_enabled':

@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**gasInfo** | [**CosmosTxV1beta1SimulateResponseGasInfo**](CosmosTxV1beta1SimulateResponseGasInfo.md) |  | [optional] 
-**result** | [**CosmosTxV1beta1SimulateResponseResult**](CosmosTxV1beta1SimulateResponseResult.md) |  | [optional] 
+**gasInfo** | [**Simulate200ResponseGasInfo**](Simulate200ResponseGasInfo.md) |  | [optional] 
+**result** | [**Simulate200ResponseResult**](Simulate200ResponseResult.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

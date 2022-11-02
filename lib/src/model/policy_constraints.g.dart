@@ -8,13 +8,13 @@ part of 'policy_constraints.dart';
 
 class _$PolicyConstraints extends PolicyConstraints {
   @override
-  final num? rateMin;
+  final double? rateMin;
   @override
-  final num? rateMax;
+  final double? rateMax;
   @override
-  final Coin? cap;
+  final TxsHashGet200ResponseTxFeeAmountInner? cap;
   @override
-  final num? changeMax;
+  final double? changeMax;
 
   factory _$PolicyConstraints(
           [void Function(PolicyConstraintsBuilder)? updates]) =>
@@ -63,21 +63,23 @@ class PolicyConstraintsBuilder
     implements Builder<PolicyConstraints, PolicyConstraintsBuilder> {
   _$PolicyConstraints? _$v;
 
-  num? _rateMin;
-  num? get rateMin => _$this._rateMin;
-  set rateMin(num? rateMin) => _$this._rateMin = rateMin;
+  double? _rateMin;
+  double? get rateMin => _$this._rateMin;
+  set rateMin(double? rateMin) => _$this._rateMin = rateMin;
 
-  num? _rateMax;
-  num? get rateMax => _$this._rateMax;
-  set rateMax(num? rateMax) => _$this._rateMax = rateMax;
+  double? _rateMax;
+  double? get rateMax => _$this._rateMax;
+  set rateMax(double? rateMax) => _$this._rateMax = rateMax;
 
-  CoinBuilder? _cap;
-  CoinBuilder get cap => _$this._cap ??= new CoinBuilder();
-  set cap(CoinBuilder? cap) => _$this._cap = cap;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder? _cap;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder get cap =>
+      _$this._cap ??= new TxsHashGet200ResponseTxFeeAmountInnerBuilder();
+  set cap(TxsHashGet200ResponseTxFeeAmountInnerBuilder? cap) =>
+      _$this._cap = cap;
 
-  num? _changeMax;
-  num? get changeMax => _$this._changeMax;
-  set changeMax(num? changeMax) => _$this._changeMax = changeMax;
+  double? _changeMax;
+  double? get changeMax => _$this._changeMax;
+  set changeMax(double? changeMax) => _$this._changeMax = changeMax;
 
   PolicyConstraintsBuilder() {
     PolicyConstraints._defaults(this);

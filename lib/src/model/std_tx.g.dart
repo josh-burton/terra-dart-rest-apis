@@ -10,11 +10,11 @@ class _$StdTx extends StdTx {
   @override
   final BuiltList<String>? msg;
   @override
-  final Fee? fee;
+  final TxsHashGet200ResponseTxFee? fee;
   @override
   final String? memo;
   @override
-  final Signature? signature;
+  final TxsHashGet200ResponseTxSignature? signature;
 
   factory _$StdTx([void Function(StdTxBuilder)? updates]) =>
       (new StdTxBuilder()..update(updates))._build();
@@ -62,18 +62,20 @@ class StdTxBuilder implements Builder<StdTx, StdTxBuilder> {
   ListBuilder<String> get msg => _$this._msg ??= new ListBuilder<String>();
   set msg(ListBuilder<String>? msg) => _$this._msg = msg;
 
-  FeeBuilder? _fee;
-  FeeBuilder get fee => _$this._fee ??= new FeeBuilder();
-  set fee(FeeBuilder? fee) => _$this._fee = fee;
+  TxsHashGet200ResponseTxFeeBuilder? _fee;
+  TxsHashGet200ResponseTxFeeBuilder get fee =>
+      _$this._fee ??= new TxsHashGet200ResponseTxFeeBuilder();
+  set fee(TxsHashGet200ResponseTxFeeBuilder? fee) => _$this._fee = fee;
 
   String? _memo;
   String? get memo => _$this._memo;
   set memo(String? memo) => _$this._memo = memo;
 
-  SignatureBuilder? _signature;
-  SignatureBuilder get signature =>
-      _$this._signature ??= new SignatureBuilder();
-  set signature(SignatureBuilder? signature) => _$this._signature = signature;
+  TxsHashGet200ResponseTxSignatureBuilder? _signature;
+  TxsHashGet200ResponseTxSignatureBuilder get signature =>
+      _$this._signature ??= new TxsHashGet200ResponseTxSignatureBuilder();
+  set signature(TxsHashGet200ResponseTxSignatureBuilder? signature) =>
+      _$this._signature = signature;
 
   StdTxBuilder() {
     StdTx._defaults(this);

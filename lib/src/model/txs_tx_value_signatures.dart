@@ -11,9 +11,10 @@ part 'txs_tx_value_signatures.g.dart';
 /// TxsTxValueSignatures
 ///
 /// Properties:
-/// * [signature] 
+/// * [signature] - 
 /// * [pubKey] 
 abstract class TxsTxValueSignatures implements Built<TxsTxValueSignatures, TxsTxValueSignaturesBuilder> {
+    /// 
     @BuiltValueField(wireName: r'signature')
     String get signature;
 

@@ -10,7 +10,8 @@ class _$CosmosBankV1beta1Metadata extends CosmosBankV1beta1Metadata {
   @override
   final String? description;
   @override
-  final BuiltList<CosmosBankV1beta1DenomUnit>? denomUnits;
+  final BuiltList<DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>?
+      denomUnits;
   @override
   final String? base;
   @override
@@ -88,10 +89,15 @@ class CosmosBankV1beta1MetadataBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  ListBuilder<CosmosBankV1beta1DenomUnit>? _denomUnits;
-  ListBuilder<CosmosBankV1beta1DenomUnit> get denomUnits =>
-      _$this._denomUnits ??= new ListBuilder<CosmosBankV1beta1DenomUnit>();
-  set denomUnits(ListBuilder<CosmosBankV1beta1DenomUnit>? denomUnits) =>
+  ListBuilder<DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>?
+      _denomUnits;
+  ListBuilder<DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>
+      get denomUnits => _$this._denomUnits ??= new ListBuilder<
+          DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>();
+  set denomUnits(
+          ListBuilder<
+                  DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner>?
+              denomUnits) =>
       _$this._denomUnits = denomUnits;
 
   String? _base;

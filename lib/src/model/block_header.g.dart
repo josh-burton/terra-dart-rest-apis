@@ -16,7 +16,7 @@ class _$BlockHeader extends BlockHeader {
   @override
   final num? numTxs;
   @override
-  final BlockID? lastBlockId;
+  final BlocksLatestGet200ResponseBlockMetaHeaderLastBlockId? lastBlockId;
   @override
   final num? totalTxs;
   @override
@@ -38,7 +38,7 @@ class _$BlockHeader extends BlockHeader {
   @override
   final String? proposerAddress;
   @override
-  final Version? version;
+  final BlocksLatestGet200ResponseBlockMetaHeaderVersion? version;
 
   factory _$BlockHeader([void Function(BlockHeaderBuilder)? updates]) =>
       (new BlockHeaderBuilder()..update(updates))._build();
@@ -172,10 +172,13 @@ class BlockHeaderBuilder implements Builder<BlockHeader, BlockHeaderBuilder> {
   num? get numTxs => _$this._numTxs;
   set numTxs(num? numTxs) => _$this._numTxs = numTxs;
 
-  BlockIDBuilder? _lastBlockId;
-  BlockIDBuilder get lastBlockId =>
-      _$this._lastBlockId ??= new BlockIDBuilder();
-  set lastBlockId(BlockIDBuilder? lastBlockId) =>
+  BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdBuilder? _lastBlockId;
+  BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdBuilder get lastBlockId =>
+      _$this._lastBlockId ??=
+          new BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdBuilder();
+  set lastBlockId(
+          BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdBuilder?
+              lastBlockId) =>
       _$this._lastBlockId = lastBlockId;
 
   num? _totalTxs;
@@ -224,9 +227,13 @@ class BlockHeaderBuilder implements Builder<BlockHeader, BlockHeaderBuilder> {
   set proposerAddress(String? proposerAddress) =>
       _$this._proposerAddress = proposerAddress;
 
-  VersionBuilder? _version;
-  VersionBuilder get version => _$this._version ??= new VersionBuilder();
-  set version(VersionBuilder? version) => _$this._version = version;
+  BlocksLatestGet200ResponseBlockMetaHeaderVersionBuilder? _version;
+  BlocksLatestGet200ResponseBlockMetaHeaderVersionBuilder get version =>
+      _$this._version ??=
+          new BlocksLatestGet200ResponseBlockMetaHeaderVersionBuilder();
+  set version(
+          BlocksLatestGet200ResponseBlockMetaHeaderVersionBuilder? version) =>
+      _$this._version = version;
 
   BlockHeaderBuilder() {
     BlockHeader._defaults(this);

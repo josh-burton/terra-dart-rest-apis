@@ -14,32 +14,36 @@ part 'get_staking_for_account_result_validators.g.dart';
 /// GetStakingForAccountResultValidators
 ///
 /// Properties:
-/// * [operatorAddress] 
-/// * [consensusPubkey] 
+/// * [operatorAddress] - 
+/// * [consensusPubkey] - 
 /// * [description] 
-/// * [tokens] 
-/// * [delegatorShares] 
+/// * [tokens] - 
+/// * [delegatorShares] - 
 /// * [votingPower] 
 /// * [commissionInfo] 
-/// * [upTime] 
-/// * [status] 
+/// * [upTime] - 
+/// * [status] - 
 /// * [rewardsPool] 
-/// * [stakingReturn] 
+/// * [stakingReturn] - 
 /// * [myDelegation] - The amount of user delegation to this validator
 /// * [myUndelegation] - Undelegation information of user in progress in this validator
 abstract class GetStakingForAccountResultValidators implements Built<GetStakingForAccountResultValidators, GetStakingForAccountResultValidatorsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'consensusPubkey')
     String get consensusPubkey;
 
     @BuiltValueField(wireName: r'description')
     GetStakingForAccountResultValidatorsDescription get description;
 
+    /// 
     @BuiltValueField(wireName: r'tokens')
     String get tokens;
 
+    /// 
     @BuiltValueField(wireName: r'delegatorShares')
     String get delegatorShares;
 
@@ -49,15 +53,18 @@ abstract class GetStakingForAccountResultValidators implements Built<GetStakingF
     @BuiltValueField(wireName: r'commissionInfo')
     GetStakingForAccountResultValidatorsCommissionInfo get commissionInfo;
 
+    /// 
     @BuiltValueField(wireName: r'upTime')
     num get upTime;
 
+    /// 
     @BuiltValueField(wireName: r'status')
     String get status;
 
     @BuiltValueField(wireName: r'rewardsPool')
     GetStakingForAccountResultValidatorsRewardsPool get rewardsPool;
 
+    /// 
     @BuiltValueField(wireName: r'stakingReturn')
     String get stakingReturn;
 

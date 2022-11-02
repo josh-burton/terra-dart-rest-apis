@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'swap_req.g.dart';
 /// * [receiver] - the `receiver` field can be skipped when the receiver is trader
 abstract class SwapReq implements Built<SwapReq, SwapReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq get baseReq;
+    TxsEstimateFeePostRequestBaseReq get baseReq;
 
     @BuiltValueField(wireName: r'offer_coin')
-    Coin get offerCoin;
+    TxsHashGet200ResponseTxFeeAmountInner get offerCoin;
 
     @BuiltValueField(wireName: r'ask_denom')
     String get askDenom;
@@ -55,11 +55,11 @@ class _$SwapReqSerializer implements StructuredSerializer<SwapReq> {
         result
             ..add(r'base_req')
             ..add(serializers.serialize(object.baseReq,
-                specifiedType: const FullType(BaseReq)));
+                specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         result
             ..add(r'offer_coin')
             ..add(serializers.serialize(object.offerCoin,
-                specifiedType: const FullType(Coin)));
+                specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)));
         result
             ..add(r'ask_denom')
             ..add(serializers.serialize(object.askDenom,
@@ -87,12 +87,12 @@ class _$SwapReqSerializer implements StructuredSerializer<SwapReq> {
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'offer_coin':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Coin)) as Coin;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxFeeAmountInner)) as TxsHashGet200ResponseTxFeeAmountInner;
                     result.offerCoin.replace(valueDes);
                     break;
                 case r'ask_denom':

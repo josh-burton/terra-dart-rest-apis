@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **sequence** | **String** |  | [optional] 
 **gas** | **String** |  | [optional] 
 **gasAdjustment** | **String** |  | [optional] 
-**fees** | [**BuiltList&lt;Coin&gt;**](Coin.md) |  | [optional] 
+**fees** | [**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | [optional] 
 **simulate** | **bool** | Estimate gas for a transaction (cannot be used in conjunction with generate_only) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

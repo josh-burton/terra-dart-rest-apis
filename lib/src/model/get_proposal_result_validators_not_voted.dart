@@ -11,13 +11,15 @@ part 'get_proposal_result_validators_not_voted.g.dart';
 /// GetProposalResultValidatorsNotVoted
 ///
 /// Properties:
-/// * [operatorAddress] 
-/// * [consensusPubKey] 
+/// * [operatorAddress] - 
+/// * [consensusPubKey] - 
 /// * [description] 
 abstract class GetProposalResultValidatorsNotVoted implements Built<GetProposalResultValidatorsNotVoted, GetProposalResultValidatorsNotVotedBuilder> {
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'consensusPubKey')
     String get consensusPubKey;
 

@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegator_validators200_response_validators_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_staking_v1beta1_query_delegator_validators_response.g.dart';
 abstract class CosmosStakingV1beta1QueryDelegatorValidatorsResponse implements Built<CosmosStakingV1beta1QueryDelegatorValidatorsResponse, CosmosStakingV1beta1QueryDelegatorValidatorsResponseBuilder> {
     /// validators defines the the validators' info of a delegator.
     @BuiltValueField(wireName: r'validators')
-    BuiltList<CosmosStakingV1beta1Validator>? get validators;
+    BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>? get validators;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosStakingV1beta1QueryDelegatorValidatorsResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosStakingV1beta1QueryDelegatorValidatorsResponseSerializer implement
             result
                 ..add(r'validators')
                 ..add(serializers.serialize(object.validators,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1Validator)])));
+                    specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorValidators200ResponseValidatorsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosStakingV1beta1QueryDelegatorValidatorsResponseSerializer implement
             switch (key) {
                 case r'validators':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1Validator)])) as BuiltList<CosmosStakingV1beta1Validator>;
+                        specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorValidators200ResponseValidatorsInner)])) as BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>;
                     result.validators.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

@@ -8,18 +8,19 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operatorAddress** | **String** | bech32 encoded address | [optional] 
-**consensusPubkey** | [**PublicKey**](PublicKey.md) |  | [optional] 
-**jailed** | **bool** |  | [optional] 
-**status** | **int** |  | [optional] 
-**tokens** | **String** |  | [optional] 
-**delegatorShares** | **String** |  | [optional] 
-**description** | [**Description**](Description.md) |  | [optional] 
-**bondHeight** | **String** |  | [optional] 
-**bondIntraTxCounter** | **int** |  | [optional] 
-**unbondingHeight** | **String** |  | [optional] 
-**unbondingTime** | **String** |  | [optional] 
-**commission** | [**Commission**](Commission.md) |  | [optional] 
+**operatorAddress** | **String** |  | 
+**consensusPubkey** | **String** |  | 
+**description** | [**ValidatorDescription**](ValidatorDescription.md) |  | 
+**tokens** | **String** |  | 
+**delegatorShares** | **String** |  | 
+**votingPower** | [**ValidatorVotingPower**](ValidatorVotingPower.md) |  | 
+**commissionInfo** | [**ValidatorCommissionInfo**](ValidatorCommissionInfo.md) |  | 
+**upTime** | **num** |  | 
+**status** | **String** |  | 
+**rewardsPool** | [**ValidatorRewardsPool**](ValidatorRewardsPool.md) |  | 
+**stakingReturn** | **String** |  | 
+**accountAddress** | **String** |  | 
+**selfDelegation** | [**ValidatorSelfDelegation**](ValidatorSelfDelegation.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,9 +12,10 @@ part 'get_proposal_votes_result.g.dart';
 /// GetProposalVotesResult
 ///
 /// Properties:
-/// * [limit] 
+/// * [limit] - 
 /// * [votes] - Vote list
 abstract class GetProposalVotesResult implements Built<GetProposalVotesResult, GetProposalVotesResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'limit')
     num get limit;
 

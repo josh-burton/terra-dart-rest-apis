@@ -5,27 +5,25 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**broadcastTx**](ServiceApi.md#broadcasttx) | **POST** /cosmos/tx/v1beta1/txs | BroadcastTx
-[**computeTax**](ServiceApi.md#computetax) | **POST** /terra/tx/v1beta1/compute_tax | ComputeTax
-[**getBlockByHeight**](ServiceApi.md#getblockbyheight) | **GET** /cosmos/base/tendermint/v1beta1/blocks/{height} | GetBlockByHeight
-[**getLatestBlock**](ServiceApi.md#getlatestblock) | **GET** /cosmos/base/tendermint/v1beta1/blocks/latest | GetLatestBlock
-[**getLatestValidatorSet**](ServiceApi.md#getlatestvalidatorset) | **GET** /cosmos/base/tendermint/v1beta1/validatorsets/latest | GetLatestValidatorSet
-[**getNodeInfo**](ServiceApi.md#getnodeinfo) | **GET** /cosmos/base/tendermint/v1beta1/node_info | GetNodeInfo
-[**getSyncing**](ServiceApi.md#getsyncing) | **GET** /cosmos/base/tendermint/v1beta1/syncing | GetSyncing
-[**getTx1**](ServiceApi.md#gettx1) | **GET** /cosmos/tx/v1beta1/txs/{hash} | GetTx
-[**getTxsEvent**](ServiceApi.md#gettxsevent) | **GET** /cosmos/tx/v1beta1/txs | GetTxsEvent
-[**getValidatorSetByHeight**](ServiceApi.md#getvalidatorsetbyheight) | **GET** /cosmos/base/tendermint/v1beta1/validatorsets/{height} | GetValidatorSetByHeight
-[**simulate**](ServiceApi.md#simulate) | **POST** /cosmos/tx/v1beta1/simulate | Simulate
+[**broadcastTx**](ServiceApi.md#broadcasttx) | **POST** /cosmos/tx/v1beta1/txs | BroadcastTx broadcast transaction.
+[**computeTax**](ServiceApi.md#computetax) | **POST** /terra/tx/v1beta1/compute_tax | EstimateFee simulates executing a transaction for estimating gas usage.
+[**getBlockByHeight**](ServiceApi.md#getblockbyheight) | **GET** /cosmos/base/tendermint/v1beta1/blocks/{height} | GetBlockByHeight queries block for given height.
+[**getLatestBlock**](ServiceApi.md#getlatestblock) | **GET** /cosmos/base/tendermint/v1beta1/blocks/latest | GetLatestBlock returns the latest block.
+[**getLatestValidatorSet**](ServiceApi.md#getlatestvalidatorset) | **GET** /cosmos/base/tendermint/v1beta1/validatorsets/latest | GetLatestValidatorSet queries latest validator-set.
+[**getNodeInfo**](ServiceApi.md#getnodeinfo) | **GET** /cosmos/base/tendermint/v1beta1/node_info | GetNodeInfo queries the current node info.
+[**getSyncing**](ServiceApi.md#getsyncing) | **GET** /cosmos/base/tendermint/v1beta1/syncing | GetSyncing queries node syncing.
+[**getTx**](ServiceApi.md#gettx) | **GET** /cosmos/tx/v1beta1/txs/{hash} | GetTx fetches a tx by hash.
+[**getTxsEvent**](ServiceApi.md#gettxsevent) | **GET** /cosmos/tx/v1beta1/txs | GetTxsEvent fetches txs by event.
+[**getValidatorSetByHeight**](ServiceApi.md#getvalidatorsetbyheight) | **GET** /cosmos/base/tendermint/v1beta1/validatorsets/{height} | GetValidatorSetByHeight queries validator-set at a given height.
+[**simulate**](ServiceApi.md#simulate) | **POST** /cosmos/tx/v1beta1/simulate | Simulate simulates executing a transaction for estimating gas usage.
 
 
 # **broadcastTx**
-> CosmosTxV1beta1BroadcastTxResponse broadcastTx(cosmosTxV1beta1BroadcastTxRequest)
-
-BroadcastTx
+> BroadcastTx200Response broadcastTx(body)
 
 BroadcastTx broadcast transaction.
 
@@ -34,10 +32,10 @@ BroadcastTx broadcast transaction.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
-final CosmosTxV1beta1BroadcastTxRequest cosmosTxV1beta1BroadcastTxRequest = ; // CosmosTxV1beta1BroadcastTxRequest | 
+final BroadcastTxRequest body = ; // BroadcastTxRequest | 
 
 try {
-    final response = api.broadcastTx(cosmosTxV1beta1BroadcastTxRequest);
+    final response = api.broadcastTx(body);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ServiceApi->broadcastTx: $e\n');
@@ -48,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cosmosTxV1beta1BroadcastTxRequest** | [**CosmosTxV1beta1BroadcastTxRequest**](CosmosTxV1beta1BroadcastTxRequest.md)|  | 
+ **body** | [**BroadcastTxRequest**](BroadcastTxRequest.md)|  | 
 
 ### Return type
 
-[**CosmosTxV1beta1BroadcastTxResponse**](CosmosTxV1beta1BroadcastTxResponse.md)
+[**BroadcastTx200Response**](BroadcastTx200Response.md)
 
 ### Authorization
 
@@ -60,15 +58,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **computeTax**
-> TerraTxV1beta1ComputeTaxResponse computeTax(terraTxV1beta1ComputeTaxRequest)
-
-ComputeTax
+> ComputeTax200Response computeTax(body)
 
 EstimateFee simulates executing a transaction for estimating gas usage.
 
@@ -77,10 +73,10 @@ EstimateFee simulates executing a transaction for estimating gas usage.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
-final TerraTxV1beta1ComputeTaxRequest terraTxV1beta1ComputeTaxRequest = ; // TerraTxV1beta1ComputeTaxRequest | 
+final TerraTxV1beta1ComputeTaxRequest body = ; // TerraTxV1beta1ComputeTaxRequest | 
 
 try {
-    final response = api.computeTax(terraTxV1beta1ComputeTaxRequest);
+    final response = api.computeTax(body);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ServiceApi->computeTax: $e\n');
@@ -91,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **terraTxV1beta1ComputeTaxRequest** | [**TerraTxV1beta1ComputeTaxRequest**](TerraTxV1beta1ComputeTaxRequest.md)|  | 
+ **body** | [**TerraTxV1beta1ComputeTaxRequest**](TerraTxV1beta1ComputeTaxRequest.md)|  | 
 
 ### Return type
 
-[**TerraTxV1beta1ComputeTaxResponse**](TerraTxV1beta1ComputeTaxResponse.md)
+[**ComputeTax200Response**](ComputeTax200Response.md)
 
 ### Authorization
 
@@ -103,15 +99,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getBlockByHeight**
-> CosmosBaseTendermintV1beta1GetBlockByHeightResponse getBlockByHeight(height)
-
-GetBlockByHeight
+> GetBlockByHeight200Response getBlockByHeight(height)
 
 GetBlockByHeight queries block for given height.
 
@@ -138,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetBlockByHeightResponse**](CosmosBaseTendermintV1beta1GetBlockByHeightResponse.md)
+[**GetBlockByHeight200Response**](GetBlockByHeight200Response.md)
 
 ### Authorization
 
@@ -147,14 +141,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getLatestBlock**
-> CosmosBaseTendermintV1beta1GetLatestBlockResponse getLatestBlock()
-
-GetLatestBlock
+> GetLatestBlock200Response getLatestBlock()
 
 GetLatestBlock returns the latest block.
 
@@ -177,7 +169,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetLatestBlockResponse**](CosmosBaseTendermintV1beta1GetLatestBlockResponse.md)
+[**GetLatestBlock200Response**](GetLatestBlock200Response.md)
 
 ### Authorization
 
@@ -186,14 +178,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getLatestValidatorSet**
-> CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse getLatestValidatorSet(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-GetLatestValidatorSet
+> GetLatestValidatorSet200Response getLatestValidatorSet(paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 GetLatestValidatorSet queries latest validator-set.
 
@@ -202,7 +192,7 @@ GetLatestValidatorSet queries latest validator-set.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -228,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse**](CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse.md)
+[**GetLatestValidatorSet200Response**](GetLatestValidatorSet200Response.md)
 
 ### Authorization
 
@@ -237,14 +227,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getNodeInfo**
-> CosmosBaseTendermintV1beta1GetNodeInfoResponse getNodeInfo()
-
-GetNodeInfo
+> GetNodeInfo200Response getNodeInfo()
 
 GetNodeInfo queries the current node info.
 
@@ -267,7 +255,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetNodeInfoResponse**](CosmosBaseTendermintV1beta1GetNodeInfoResponse.md)
+[**GetNodeInfo200Response**](GetNodeInfo200Response.md)
 
 ### Authorization
 
@@ -276,14 +264,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSyncing**
-> CosmosBaseTendermintV1beta1GetSyncingResponse getSyncing()
-
-GetSyncing
+> GetSyncing200Response getSyncing()
 
 GetSyncing queries node syncing.
 
@@ -306,7 +292,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetSyncingResponse**](CosmosBaseTendermintV1beta1GetSyncingResponse.md)
+[**GetSyncing200Response**](GetSyncing200Response.md)
 
 ### Authorization
 
@@ -315,14 +301,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getTx1**
-> CosmosTxV1beta1GetTxResponse getTx1(hash)
-
-GetTx
+# **getTx**
+> CosmosTxV1beta1GetTxResponse getTx(hash)
 
 GetTx fetches a tx by hash.
 
@@ -334,10 +318,10 @@ final api = TerraRestApi().getServiceApi();
 final String hash = hash_example; // String | hash is the tx hash to query, encoded as a hex string.
 
 try {
-    final response = api.getTx1(hash);
+    final response = api.getTx(hash);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling ServiceApi->getTx1: $e\n');
+    print('Exception when calling ServiceApi->getTx: $e\n');
 }
 ```
 
@@ -358,14 +342,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTxsEvent**
 > CosmosTxV1beta1GetTxsEventResponse getTxsEvent(events, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse, orderBy)
-
-GetTxsEvent
 
 GetTxsEvent fetches txs by event.
 
@@ -375,12 +357,12 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
 final BuiltList<String> events = ; // BuiltList<String> | events is the list of transaction event type.
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
 final bool paginationPeriodReverse = true; // bool | reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43
-final OrderBy orderBy = ; // OrderBy | - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order
+final String orderBy = orderBy_example; // String |  - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order
 
 try {
     final response = api.getTxsEvent(events, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse, orderBy);
@@ -400,7 +382,7 @@ Name | Type | Description  | Notes
  **paginationPeriodLimit** | **String**| limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app. | [optional] 
  **paginationPeriodCountTotal** | **bool**| count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set. | [optional] 
  **paginationPeriodReverse** | **bool**| reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43 | [optional] 
- **orderBy** | [**OrderBy**](.md)| - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order | [optional] 
+ **orderBy** | **String**|  - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.  - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order  - ORDER_BY_DESC: ORDER_BY_DESC defines descending order | [optional] [default to 'ORDER_BY_UNSPECIFIED']
 
 ### Return type
 
@@ -413,14 +395,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getValidatorSetByHeight**
-> CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse getValidatorSetByHeight(height, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
-
-GetValidatorSetByHeight
+> GetValidatorSetByHeight200Response getValidatorSetByHeight(height, paginationPeriodKey, paginationPeriodOffset, paginationPeriodLimit, paginationPeriodCountTotal, paginationPeriodReverse)
 
 GetValidatorSetByHeight queries validator-set at a given height.
 
@@ -430,7 +410,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
 final String height = height_example; // String | 
-final String paginationPeriodKey = paginationPeriodKey_example; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+final String paginationPeriodKey = BYTE_ARRAY_DATA_HERE; // String | key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
 final String paginationPeriodOffset = paginationPeriodOffset_example; // String | offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
 final String paginationPeriodLimit = paginationPeriodLimit_example; // String | limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
 final bool paginationPeriodCountTotal = true; // bool | count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
@@ -457,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse**](CosmosBaseTendermintV1beta1GetValidatorSetByHeightResponse.md)
+[**GetValidatorSetByHeight200Response**](GetValidatorSetByHeight200Response.md)
 
 ### Authorization
 
@@ -466,14 +446,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **simulate**
-> CosmosTxV1beta1SimulateResponse simulate(cosmosTxV1beta1SimulateRequest)
-
-Simulate
+> Simulate200Response simulate(body)
 
 Simulate simulates executing a transaction for estimating gas usage.
 
@@ -482,10 +460,10 @@ Simulate simulates executing a transaction for estimating gas usage.
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getServiceApi();
-final CosmosTxV1beta1SimulateRequest cosmosTxV1beta1SimulateRequest = ; // CosmosTxV1beta1SimulateRequest | 
+final CosmosTxV1beta1SimulateRequest body = ; // CosmosTxV1beta1SimulateRequest | 
 
 try {
-    final response = api.simulate(cosmosTxV1beta1SimulateRequest);
+    final response = api.simulate(body);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ServiceApi->simulate: $e\n');
@@ -496,11 +474,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cosmosTxV1beta1SimulateRequest** | [**CosmosTxV1beta1SimulateRequest**](CosmosTxV1beta1SimulateRequest.md)|  | 
+ **body** | [**CosmosTxV1beta1SimulateRequest**](CosmosTxV1beta1SimulateRequest.md)|  | 
 
 ### Return type
 
-[**CosmosTxV1beta1SimulateResponse**](CosmosTxV1beta1SimulateResponse.md)
+[**Simulate200Response**](Simulate200Response.md)
 
 ### Authorization
 
@@ -508,8 +486,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

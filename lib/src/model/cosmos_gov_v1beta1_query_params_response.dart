@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_params_response_tally_params.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_params_response_deposit_params.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_params_response_voting_params.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_params200_response_tally_params.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_params200_response_deposit_params.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_params200_response_voting_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,13 +18,13 @@ part 'cosmos_gov_v1beta1_query_params_response.g.dart';
 /// * [tallyParams] 
 abstract class CosmosGovV1beta1QueryParamsResponse implements Built<CosmosGovV1beta1QueryParamsResponse, CosmosGovV1beta1QueryParamsResponseBuilder> {
     @BuiltValueField(wireName: r'voting_params')
-    CosmosGovV1beta1QueryParamsResponseVotingParams? get votingParams;
+    GovParams200ResponseVotingParams? get votingParams;
 
     @BuiltValueField(wireName: r'deposit_params')
-    CosmosGovV1beta1QueryParamsResponseDepositParams? get depositParams;
+    GovParams200ResponseDepositParams? get depositParams;
 
     @BuiltValueField(wireName: r'tally_params')
-    CosmosGovV1beta1QueryParamsResponseTallyParams? get tallyParams;
+    GovParams200ResponseTallyParams? get tallyParams;
 
     CosmosGovV1beta1QueryParamsResponse._();
 
@@ -52,19 +52,19 @@ class _$CosmosGovV1beta1QueryParamsResponseSerializer implements StructuredSeria
             result
                 ..add(r'voting_params')
                 ..add(serializers.serialize(object.votingParams,
-                    specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseVotingParams)));
+                    specifiedType: const FullType(GovParams200ResponseVotingParams)));
         }
         if (object.depositParams != null) {
             result
                 ..add(r'deposit_params')
                 ..add(serializers.serialize(object.depositParams,
-                    specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseDepositParams)));
+                    specifiedType: const FullType(GovParams200ResponseDepositParams)));
         }
         if (object.tallyParams != null) {
             result
                 ..add(r'tally_params')
                 ..add(serializers.serialize(object.tallyParams,
-                    specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseTallyParams)));
+                    specifiedType: const FullType(GovParams200ResponseTallyParams)));
         }
         return result;
     }
@@ -83,17 +83,17 @@ class _$CosmosGovV1beta1QueryParamsResponseSerializer implements StructuredSeria
             switch (key) {
                 case r'voting_params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseVotingParams)) as CosmosGovV1beta1QueryParamsResponseVotingParams;
+                        specifiedType: const FullType(GovParams200ResponseVotingParams)) as GovParams200ResponseVotingParams;
                     result.votingParams.replace(valueDes);
                     break;
                 case r'deposit_params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseDepositParams)) as CosmosGovV1beta1QueryParamsResponseDepositParams;
+                        specifiedType: const FullType(GovParams200ResponseDepositParams)) as GovParams200ResponseDepositParams;
                     result.depositParams.replace(valueDes);
                     break;
                 case r'tally_params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1QueryParamsResponseTallyParams)) as CosmosGovV1beta1QueryParamsResponseTallyParams;
+                        specifiedType: const FullType(GovParams200ResponseTallyParams)) as GovParams200ResponseTallyParams;
                     result.tallyParams.replace(valueDes);
                     break;
             }

@@ -9,7 +9,7 @@ part of 'cosmos_upgrade_v1beta1_query_module_versions_response.dart';
 class _$CosmosUpgradeV1beta1QueryModuleVersionsResponse
     extends CosmosUpgradeV1beta1QueryModuleVersionsResponse {
   @override
-  final BuiltList<CosmosUpgradeV1beta1ModuleVersion>? moduleVersions;
+  final BuiltList<ModuleVersions200ResponseModuleVersionsInner>? moduleVersions;
 
   factory _$CosmosUpgradeV1beta1QueryModuleVersionsResponse(
           [void Function(
@@ -60,12 +60,13 @@ class CosmosUpgradeV1beta1QueryModuleVersionsResponseBuilder
             CosmosUpgradeV1beta1QueryModuleVersionsResponseBuilder> {
   _$CosmosUpgradeV1beta1QueryModuleVersionsResponse? _$v;
 
-  ListBuilder<CosmosUpgradeV1beta1ModuleVersion>? _moduleVersions;
-  ListBuilder<CosmosUpgradeV1beta1ModuleVersion> get moduleVersions =>
-      _$this._moduleVersions ??=
-          new ListBuilder<CosmosUpgradeV1beta1ModuleVersion>();
+  ListBuilder<ModuleVersions200ResponseModuleVersionsInner>? _moduleVersions;
+  ListBuilder<ModuleVersions200ResponseModuleVersionsInner>
+      get moduleVersions => _$this._moduleVersions ??=
+          new ListBuilder<ModuleVersions200ResponseModuleVersionsInner>();
   set moduleVersions(
-          ListBuilder<CosmosUpgradeV1beta1ModuleVersion>? moduleVersions) =>
+          ListBuilder<ModuleVersions200ResponseModuleVersionsInner>?
+              moduleVersions) =>
       _$this._moduleVersions = moduleVersions;
 
   CosmosUpgradeV1beta1QueryModuleVersionsResponseBuilder() {

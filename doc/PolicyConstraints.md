@@ -8,10 +8,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rateMin** | **num** | 0.05% | [optional] 
-**rateMax** | **num** | 1% | [optional] 
-**cap** | [**Coin**](Coin.md) |  | [optional] 
-**changeMax** | **num** | 0.025% | [optional] 
+**rateMin** | **double** | 0.05% | [optional] 
+**rateMax** | **double** | 1% | [optional] 
+**cap** | [**TxsHashGet200ResponseTxFeeAmountInner**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | [optional] 
+**changeMax** | **double** | 0.025% | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

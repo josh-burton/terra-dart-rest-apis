@@ -6,13 +6,166 @@ part of 'ibc_core_channel_v1_channel.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const IbcCoreChannelV1ChannelStateEnum
+    _$ibcCoreChannelV1ChannelStateEnum_UNINITIALIZED_UNSPECIFIED =
+    const IbcCoreChannelV1ChannelStateEnum._('UNINITIALIZED_UNSPECIFIED');
+const IbcCoreChannelV1ChannelStateEnum _$ibcCoreChannelV1ChannelStateEnum_INIT =
+    const IbcCoreChannelV1ChannelStateEnum._('INIT');
+const IbcCoreChannelV1ChannelStateEnum
+    _$ibcCoreChannelV1ChannelStateEnum_TRYOPEN =
+    const IbcCoreChannelV1ChannelStateEnum._('TRYOPEN');
+const IbcCoreChannelV1ChannelStateEnum _$ibcCoreChannelV1ChannelStateEnum_OPEN =
+    const IbcCoreChannelV1ChannelStateEnum._('OPEN');
+const IbcCoreChannelV1ChannelStateEnum
+    _$ibcCoreChannelV1ChannelStateEnum_CLOSED =
+    const IbcCoreChannelV1ChannelStateEnum._('CLOSED');
+
+IbcCoreChannelV1ChannelStateEnum _$ibcCoreChannelV1ChannelStateEnumValueOf(
+    String name) {
+  switch (name) {
+    case 'UNINITIALIZED_UNSPECIFIED':
+      return _$ibcCoreChannelV1ChannelStateEnum_UNINITIALIZED_UNSPECIFIED;
+    case 'INIT':
+      return _$ibcCoreChannelV1ChannelStateEnum_INIT;
+    case 'TRYOPEN':
+      return _$ibcCoreChannelV1ChannelStateEnum_TRYOPEN;
+    case 'OPEN':
+      return _$ibcCoreChannelV1ChannelStateEnum_OPEN;
+    case 'CLOSED':
+      return _$ibcCoreChannelV1ChannelStateEnum_CLOSED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<IbcCoreChannelV1ChannelStateEnum>
+    _$ibcCoreChannelV1ChannelStateEnumValues =
+    new BuiltSet<IbcCoreChannelV1ChannelStateEnum>(const <
+        IbcCoreChannelV1ChannelStateEnum>[
+  _$ibcCoreChannelV1ChannelStateEnum_UNINITIALIZED_UNSPECIFIED,
+  _$ibcCoreChannelV1ChannelStateEnum_INIT,
+  _$ibcCoreChannelV1ChannelStateEnum_TRYOPEN,
+  _$ibcCoreChannelV1ChannelStateEnum_OPEN,
+  _$ibcCoreChannelV1ChannelStateEnum_CLOSED,
+]);
+
+const IbcCoreChannelV1ChannelOrderingEnum
+    _$ibcCoreChannelV1ChannelOrderingEnum_NONE_UNSPECIFIED =
+    const IbcCoreChannelV1ChannelOrderingEnum._('NONE_UNSPECIFIED');
+const IbcCoreChannelV1ChannelOrderingEnum
+    _$ibcCoreChannelV1ChannelOrderingEnum_UNORDERED =
+    const IbcCoreChannelV1ChannelOrderingEnum._('UNORDERED');
+const IbcCoreChannelV1ChannelOrderingEnum
+    _$ibcCoreChannelV1ChannelOrderingEnum_ORDERED =
+    const IbcCoreChannelV1ChannelOrderingEnum._('ORDERED');
+
+IbcCoreChannelV1ChannelOrderingEnum
+    _$ibcCoreChannelV1ChannelOrderingEnumValueOf(String name) {
+  switch (name) {
+    case 'NONE_UNSPECIFIED':
+      return _$ibcCoreChannelV1ChannelOrderingEnum_NONE_UNSPECIFIED;
+    case 'UNORDERED':
+      return _$ibcCoreChannelV1ChannelOrderingEnum_UNORDERED;
+    case 'ORDERED':
+      return _$ibcCoreChannelV1ChannelOrderingEnum_ORDERED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<IbcCoreChannelV1ChannelOrderingEnum>
+    _$ibcCoreChannelV1ChannelOrderingEnumValues =
+    new BuiltSet<IbcCoreChannelV1ChannelOrderingEnum>(const <
+        IbcCoreChannelV1ChannelOrderingEnum>[
+  _$ibcCoreChannelV1ChannelOrderingEnum_NONE_UNSPECIFIED,
+  _$ibcCoreChannelV1ChannelOrderingEnum_UNORDERED,
+  _$ibcCoreChannelV1ChannelOrderingEnum_ORDERED,
+]);
+
+Serializer<IbcCoreChannelV1ChannelStateEnum>
+    _$ibcCoreChannelV1ChannelStateEnumSerializer =
+    new _$IbcCoreChannelV1ChannelStateEnumSerializer();
+Serializer<IbcCoreChannelV1ChannelOrderingEnum>
+    _$ibcCoreChannelV1ChannelOrderingEnumSerializer =
+    new _$IbcCoreChannelV1ChannelOrderingEnumSerializer();
+
+class _$IbcCoreChannelV1ChannelStateEnumSerializer
+    implements PrimitiveSerializer<IbcCoreChannelV1ChannelStateEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNINITIALIZED_UNSPECIFIED': 'STATE_UNINITIALIZED_UNSPECIFIED',
+    'INIT': 'STATE_INIT',
+    'TRYOPEN': 'STATE_TRYOPEN',
+    'OPEN': 'STATE_OPEN',
+    'CLOSED': 'STATE_CLOSED',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'STATE_UNINITIALIZED_UNSPECIFIED': 'UNINITIALIZED_UNSPECIFIED',
+    'STATE_INIT': 'INIT',
+    'STATE_TRYOPEN': 'TRYOPEN',
+    'STATE_OPEN': 'OPEN',
+    'STATE_CLOSED': 'CLOSED',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[IbcCoreChannelV1ChannelStateEnum];
+  @override
+  final String wireName = 'IbcCoreChannelV1ChannelStateEnum';
+
+  @override
+  Object serialize(
+          Serializers serializers, IbcCoreChannelV1ChannelStateEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  IbcCoreChannelV1ChannelStateEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      IbcCoreChannelV1ChannelStateEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
+class _$IbcCoreChannelV1ChannelOrderingEnumSerializer
+    implements PrimitiveSerializer<IbcCoreChannelV1ChannelOrderingEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'NONE_UNSPECIFIED': 'ORDER_NONE_UNSPECIFIED',
+    'UNORDERED': 'ORDER_UNORDERED',
+    'ORDERED': 'ORDER_ORDERED',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'ORDER_NONE_UNSPECIFIED': 'NONE_UNSPECIFIED',
+    'ORDER_UNORDERED': 'UNORDERED',
+    'ORDER_ORDERED': 'ORDERED',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    IbcCoreChannelV1ChannelOrderingEnum
+  ];
+  @override
+  final String wireName = 'IbcCoreChannelV1ChannelOrderingEnum';
+
+  @override
+  Object serialize(
+          Serializers serializers, IbcCoreChannelV1ChannelOrderingEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  IbcCoreChannelV1ChannelOrderingEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      IbcCoreChannelV1ChannelOrderingEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$IbcCoreChannelV1Channel extends IbcCoreChannelV1Channel {
   @override
-  final IbcCoreChannelV1State? state;
+  final IbcCoreChannelV1ChannelStateEnum? state;
   @override
-  final OrderdefinesifachannelisORDEREDorUNORDERED? ordering;
+  final IbcCoreChannelV1ChannelOrderingEnum? ordering;
   @override
-  final Counterpartydefinesachannelendcounterparty? counterparty;
+  final CounterpartyChannelEnd? counterparty;
   @override
   final BuiltList<String>? connectionHops;
   @override
@@ -77,21 +230,19 @@ class IbcCoreChannelV1ChannelBuilder
         Builder<IbcCoreChannelV1Channel, IbcCoreChannelV1ChannelBuilder> {
   _$IbcCoreChannelV1Channel? _$v;
 
-  IbcCoreChannelV1State? _state;
-  IbcCoreChannelV1State? get state => _$this._state;
-  set state(IbcCoreChannelV1State? state) => _$this._state = state;
+  IbcCoreChannelV1ChannelStateEnum? _state;
+  IbcCoreChannelV1ChannelStateEnum? get state => _$this._state;
+  set state(IbcCoreChannelV1ChannelStateEnum? state) => _$this._state = state;
 
-  OrderdefinesifachannelisORDEREDorUNORDERED? _ordering;
-  OrderdefinesifachannelisORDEREDorUNORDERED? get ordering => _$this._ordering;
-  set ordering(OrderdefinesifachannelisORDEREDorUNORDERED? ordering) =>
+  IbcCoreChannelV1ChannelOrderingEnum? _ordering;
+  IbcCoreChannelV1ChannelOrderingEnum? get ordering => _$this._ordering;
+  set ordering(IbcCoreChannelV1ChannelOrderingEnum? ordering) =>
       _$this._ordering = ordering;
 
-  CounterpartydefinesachannelendcounterpartyBuilder? _counterparty;
-  CounterpartydefinesachannelendcounterpartyBuilder get counterparty =>
-      _$this._counterparty ??=
-          new CounterpartydefinesachannelendcounterpartyBuilder();
-  set counterparty(
-          CounterpartydefinesachannelendcounterpartyBuilder? counterparty) =>
+  CounterpartyChannelEndBuilder? _counterparty;
+  CounterpartyChannelEndBuilder get counterparty =>
+      _$this._counterparty ??= new CounterpartyChannelEndBuilder();
+  set counterparty(CounterpartyChannelEndBuilder? counterparty) =>
       _$this._counterparty = counterparty;
 
   ListBuilder<String>? _connectionHops;

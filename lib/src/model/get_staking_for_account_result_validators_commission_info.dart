@@ -10,20 +10,24 @@ part 'get_staking_for_account_result_validators_commission_info.g.dart';
 /// GetStakingForAccountResultValidatorsCommissionInfo
 ///
 /// Properties:
-/// * [rate] 
-/// * [maxRate] 
-/// * [maxChangeRate] 
-/// * [updateTime] 
+/// * [rate] - 
+/// * [maxRate] - 
+/// * [maxChangeRate] - 
+/// * [updateTime] - 
 abstract class GetStakingForAccountResultValidatorsCommissionInfo implements Built<GetStakingForAccountResultValidatorsCommissionInfo, GetStakingForAccountResultValidatorsCommissionInfoBuilder> {
+    /// 
     @BuiltValueField(wireName: r'rate')
     String get rate;
 
+    /// 
     @BuiltValueField(wireName: r'maxRate')
     String get maxRate;
 
+    /// 
     @BuiltValueField(wireName: r'maxChangeRate')
     String get maxChangeRate;
 
+    /// 
     @BuiltValueField(wireName: r'updateTime')
     String get updateTime;
 

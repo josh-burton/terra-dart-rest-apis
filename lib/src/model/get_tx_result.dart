@@ -17,13 +17,13 @@ part 'get_tx_result.g.dart';
 /// * [tx] 
 /// * [events] - 
 /// * [logs] - tx logs
-/// * [height] 
-/// * [txhash] 
-/// * [rawLog] 
-/// * [gasUsed] 
-/// * [timestamp] 
-/// * [gasWanted] 
-/// * [chainId] 
+/// * [height] - 
+/// * [txhash] - 
+/// * [rawLog] - 
+/// * [gasUsed] - 
+/// * [timestamp] - 
+/// * [gasWanted] - 
+/// * [chainId] - 
 abstract class GetTxResult implements Built<GetTxResult, GetTxResultBuilder> {
     @BuiltValueField(wireName: r'tx')
     GetTxResultTx get tx;
@@ -36,24 +36,31 @@ abstract class GetTxResult implements Built<GetTxResult, GetTxResultBuilder> {
     @BuiltValueField(wireName: r'logs')
     BuiltList<GetTxResultLogs> get logs;
 
+    /// 
     @BuiltValueField(wireName: r'height')
     String get height;
 
+    /// 
     @BuiltValueField(wireName: r'txhash')
     String get txhash;
 
+    /// 
     @BuiltValueField(wireName: r'raw_log')
     String get rawLog;
 
+    /// 
     @BuiltValueField(wireName: r'gas_used')
     String get gasUsed;
 
+    /// 
     @BuiltValueField(wireName: r'timestamp')
     String get timestamp;
 
+    /// 
     @BuiltValueField(wireName: r'gas_wanted')
     String get gasWanted;
 
+    /// 
     @BuiltValueField(wireName: r'chainId')
     String get chainId;
 

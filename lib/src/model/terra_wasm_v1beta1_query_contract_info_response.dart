@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/contract_infostoresa_was_mcontractinstance.dart';
+import 'package:terra_dart_rest_apis/src/model/contract_info_stores_awasm_contract_instance.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_wasm_v1beta1_query_contract_info_response.g.dart';
 /// * [contractInfo] 
 abstract class TerraWasmV1beta1QueryContractInfoResponse implements Built<TerraWasmV1beta1QueryContractInfoResponse, TerraWasmV1beta1QueryContractInfoResponseBuilder> {
     @BuiltValueField(wireName: r'contract_info')
-    ContractInfostoresaWASMcontractinstance? get contractInfo;
+    ContractInfoStoresAWASMContractInstance? get contractInfo;
 
     TerraWasmV1beta1QueryContractInfoResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraWasmV1beta1QueryContractInfoResponseSerializer implements Structure
             result
                 ..add(r'contract_info')
                 ..add(serializers.serialize(object.contractInfo,
-                    specifiedType: const FullType(ContractInfostoresaWASMcontractinstance)));
+                    specifiedType: const FullType(ContractInfoStoresAWASMContractInstance)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraWasmV1beta1QueryContractInfoResponseSerializer implements Structure
             switch (key) {
                 case r'contract_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(ContractInfostoresaWASMcontractinstance)) as ContractInfostoresaWASMcontractinstance;
+                        specifiedType: const FullType(ContractInfoStoresAWASMContractInstance)) as ContractInfoStoresAWASMContractInstance;
                     result.contractInfo.replace(valueDes);
                     break;
             }

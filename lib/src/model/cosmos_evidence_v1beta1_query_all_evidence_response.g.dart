@@ -9,9 +9,9 @@ part of 'cosmos_evidence_v1beta1_query_all_evidence_response.dart';
 class _$CosmosEvidenceV1beta1QueryAllEvidenceResponse
     extends CosmosEvidenceV1beta1QueryAllEvidenceResponse {
   @override
-  final BuiltList<GoogleProtobufAny>? evidence;
+  final BuiltList<AccountsAreTheExistingAccountsInner>? evidence;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosEvidenceV1beta1QueryAllEvidenceResponse(
           [void Function(CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder)?
@@ -63,19 +63,17 @@ class CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder
             CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder> {
   _$CosmosEvidenceV1beta1QueryAllEvidenceResponse? _$v;
 
-  ListBuilder<GoogleProtobufAny>? _evidence;
-  ListBuilder<GoogleProtobufAny> get evidence =>
-      _$this._evidence ??= new ListBuilder<GoogleProtobufAny>();
-  set evidence(ListBuilder<GoogleProtobufAny>? evidence) =>
+  ListBuilder<AccountsAreTheExistingAccountsInner>? _evidence;
+  ListBuilder<AccountsAreTheExistingAccountsInner> get evidence =>
+      _$this._evidence ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
+  set evidence(ListBuilder<AccountsAreTheExistingAccountsInner>? evidence) =>
       _$this._evidence = evidence;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder() {

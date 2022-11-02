@@ -10,12 +10,14 @@ part 'validator_rewards_pool_denoms.g.dart';
 /// ValidatorRewardsPoolDenoms
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class ValidatorRewardsPoolDenoms implements Built<ValidatorRewardsPoolDenoms, ValidatorRewardsPoolDenomsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

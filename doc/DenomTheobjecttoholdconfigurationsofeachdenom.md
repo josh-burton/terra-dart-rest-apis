@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.DenomTheobjecttoholdconfigurationsofeachdenom
+# terra_dart_rest_apis.model.DenomTheObjectToHoldConfigurationsOfEachDenom
 
 ## Load the model package
 ```dart

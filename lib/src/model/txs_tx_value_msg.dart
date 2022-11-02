@@ -11,9 +11,10 @@ part 'txs_tx_value_msg.g.dart';
 /// TxsTxValueMsg
 ///
 /// Properties:
-/// * [type] 
+/// * [type] - 
 /// * [value] 
 abstract class TxsTxValueMsg implements Built<TxsTxValueMsg, TxsTxValueMsgBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 

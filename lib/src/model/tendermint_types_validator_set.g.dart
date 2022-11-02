@@ -8,9 +8,12 @@ part of 'tendermint_types_validator_set.dart';
 
 class _$TendermintTypesValidatorSet extends TendermintTypesValidatorSet {
   @override
-  final BuiltList<TendermintTypesValidator>? validators;
+  final BuiltList<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+      validators;
   @override
-  final TendermintTypesValidator? proposer;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner?
+      proposer;
   @override
   final String? totalVotingPower;
 
@@ -62,16 +65,27 @@ class TendermintTypesValidatorSetBuilder
             TendermintTypesValidatorSetBuilder> {
   _$TendermintTypesValidatorSet? _$v;
 
-  ListBuilder<TendermintTypesValidator>? _validators;
-  ListBuilder<TendermintTypesValidator> get validators =>
-      _$this._validators ??= new ListBuilder<TendermintTypesValidator>();
-  set validators(ListBuilder<TendermintTypesValidator>? validators) =>
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+      _validators;
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>
+      get validators => _$this._validators ??= new ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>();
+  set validators(
+          ListBuilder<
+                  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+              validators) =>
       _$this._validators = validators;
 
-  TendermintTypesValidatorBuilder? _proposer;
-  TendermintTypesValidatorBuilder get proposer =>
-      _$this._proposer ??= new TendermintTypesValidatorBuilder();
-  set proposer(TendermintTypesValidatorBuilder? proposer) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInnerBuilder?
+      _proposer;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInnerBuilder
+      get proposer => _$this._proposer ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInnerBuilder();
+  set proposer(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInnerBuilder?
+              proposer) =>
       _$this._proposer = proposer;
 
   String? _totalVotingPower;

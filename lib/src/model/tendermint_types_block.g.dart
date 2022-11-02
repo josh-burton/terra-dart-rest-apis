@@ -8,13 +8,14 @@ part of 'tendermint_types_block.dart';
 
 class _$TendermintTypesBlock extends TendermintTypesBlock {
   @override
-  final TendermintTypesBlockHeader? header;
+  final GetLatestBlock200ResponseBlockHeader? header;
   @override
-  final Datacontainsthesetoftransactionsincludedintheblock? data;
+  final DataContainsTheSetOfTransactionsIncludedInTheBlock? data;
   @override
-  final TendermintTypesEvidenceList? evidence;
+  final GetLatestBlock200ResponseBlockEvidence? evidence;
   @override
-  final TendermintTypesBlockLastCommit? lastCommit;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit?
+      lastCommit;
 
   factory _$TendermintTypesBlock(
           [void Function(TendermintTypesBlockBuilder)? updates]) =>
@@ -65,29 +66,33 @@ class TendermintTypesBlockBuilder
     implements Builder<TendermintTypesBlock, TendermintTypesBlockBuilder> {
   _$TendermintTypesBlock? _$v;
 
-  TendermintTypesBlockHeaderBuilder? _header;
-  TendermintTypesBlockHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
-  set header(TendermintTypesBlockHeaderBuilder? header) =>
+  GetLatestBlock200ResponseBlockHeaderBuilder? _header;
+  GetLatestBlock200ResponseBlockHeaderBuilder get header =>
+      _$this._header ??= new GetLatestBlock200ResponseBlockHeaderBuilder();
+  set header(GetLatestBlock200ResponseBlockHeaderBuilder? header) =>
       _$this._header = header;
 
-  DatacontainsthesetoftransactionsincludedintheblockBuilder? _data;
-  DatacontainsthesetoftransactionsincludedintheblockBuilder get data =>
+  DataContainsTheSetOfTransactionsIncludedInTheBlockBuilder? _data;
+  DataContainsTheSetOfTransactionsIncludedInTheBlockBuilder get data =>
       _$this._data ??=
-          new DatacontainsthesetoftransactionsincludedintheblockBuilder();
-  set data(DatacontainsthesetoftransactionsincludedintheblockBuilder? data) =>
+          new DataContainsTheSetOfTransactionsIncludedInTheBlockBuilder();
+  set data(DataContainsTheSetOfTransactionsIncludedInTheBlockBuilder? data) =>
       _$this._data = data;
 
-  TendermintTypesEvidenceListBuilder? _evidence;
-  TendermintTypesEvidenceListBuilder get evidence =>
-      _$this._evidence ??= new TendermintTypesEvidenceListBuilder();
-  set evidence(TendermintTypesEvidenceListBuilder? evidence) =>
+  GetLatestBlock200ResponseBlockEvidenceBuilder? _evidence;
+  GetLatestBlock200ResponseBlockEvidenceBuilder get evidence =>
+      _$this._evidence ??= new GetLatestBlock200ResponseBlockEvidenceBuilder();
+  set evidence(GetLatestBlock200ResponseBlockEvidenceBuilder? evidence) =>
       _$this._evidence = evidence;
 
-  TendermintTypesBlockLastCommitBuilder? _lastCommit;
-  TendermintTypesBlockLastCommitBuilder get lastCommit =>
-      _$this._lastCommit ??= new TendermintTypesBlockLastCommitBuilder();
-  set lastCommit(TendermintTypesBlockLastCommitBuilder? lastCommit) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder?
+      _lastCommit;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder
+      get lastCommit => _$this._lastCommit ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder();
+  set lastCommit(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder?
+              lastCommit) =>
       _$this._lastCommit = lastCommit;
 
   TendermintTypesBlockBuilder() {

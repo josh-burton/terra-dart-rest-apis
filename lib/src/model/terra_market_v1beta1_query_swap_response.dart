@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/terra_market_v1beta1_query_swap_response_return_coin.dart';
+import 'package:terra_dart_rest_apis/src/model/swap200_response_return_coin.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_market_v1beta1_query_swap_response.g.dart';
 /// * [returnCoin] 
 abstract class TerraMarketV1beta1QuerySwapResponse implements Built<TerraMarketV1beta1QuerySwapResponse, TerraMarketV1beta1QuerySwapResponseBuilder> {
     @BuiltValueField(wireName: r'return_coin')
-    TerraMarketV1beta1QuerySwapResponseReturnCoin? get returnCoin;
+    Swap200ResponseReturnCoin? get returnCoin;
 
     TerraMarketV1beta1QuerySwapResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraMarketV1beta1QuerySwapResponseSerializer implements StructuredSeria
             result
                 ..add(r'return_coin')
                 ..add(serializers.serialize(object.returnCoin,
-                    specifiedType: const FullType(TerraMarketV1beta1QuerySwapResponseReturnCoin)));
+                    specifiedType: const FullType(Swap200ResponseReturnCoin)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraMarketV1beta1QuerySwapResponseSerializer implements StructuredSeria
             switch (key) {
                 case r'return_coin':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TerraMarketV1beta1QuerySwapResponseReturnCoin)) as TerraMarketV1beta1QuerySwapResponseReturnCoin;
+                        specifiedType: const FullType(Swap200ResponseReturnCoin)) as Swap200ResponseReturnCoin;
                     result.returnCoin.replace(valueDes);
                     break;
             }

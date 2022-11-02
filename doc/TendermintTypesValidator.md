@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **String** |  | [optional] 
-**pubKey** | [**PublicKeydefinesthekeysavailableforusewithTendermintValidators**](PublicKeydefinesthekeysavailableforusewithTendermintValidators.md) |  | [optional] 
+**pubKey** | [**PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators**](PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators.md) |  | [optional] 
 **votingPower** | **String** |  | [optional] 
 **proposerPriority** | **String** |  | [optional] 
 

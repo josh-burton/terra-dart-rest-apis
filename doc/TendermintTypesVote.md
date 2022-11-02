@@ -8,10 +8,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**TendermintTypesSignedMsgType**](TendermintTypesSignedMsgType.md) |  | [optional] 
+**type** | **String** | SignedMsgType is a type of signed message in the consensus.   - SIGNED_MSG_TYPE_PREVOTE: Votes  - SIGNED_MSG_TYPE_PROPOSAL: Proposals | [optional] [default to 'SIGNED_MSG_TYPE_UNKNOWN']
 **height** | **String** |  | [optional] 
 **round** | **int** |  | [optional] 
-**blockId** | [**BlockID26**](BlockID26.md) |  | [optional] 
+**blockId** | [**BlockID1**](BlockID1.md) |  | [optional] 
 **timestamp** | [**DateTime**](DateTime.md) |  | [optional] 
 **validatorAddress** | **String** |  | [optional] 
 **validatorIndex** | **int** |  | [optional] 

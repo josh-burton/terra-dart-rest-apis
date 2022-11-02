@@ -8,9 +8,9 @@ part of 'get_proposal_result_vote_count.dart';
 
 class _$GetProposalResultVoteCount extends GetProposalResultVoteCount {
   @override
-  final String yes;
+  final String? yes;
   @override
-  final String no;
+  final String? no;
   @override
   final String noWithVeto;
   @override
@@ -21,15 +21,8 @@ class _$GetProposalResultVoteCount extends GetProposalResultVoteCount {
       (new GetProposalResultVoteCountBuilder()..update(updates))._build();
 
   _$GetProposalResultVoteCount._(
-      {required this.yes,
-      required this.no,
-      required this.noWithVeto,
-      required this.abstain})
+      {this.yes, this.no, required this.noWithVeto, required this.abstain})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        yes, r'GetProposalResultVoteCount', 'yes');
-    BuiltValueNullFieldError.checkNotNull(
-        no, r'GetProposalResultVoteCount', 'no');
     BuiltValueNullFieldError.checkNotNull(
         noWithVeto, r'GetProposalResultVoteCount', 'noWithVeto');
     BuiltValueNullFieldError.checkNotNull(
@@ -127,10 +120,8 @@ class GetProposalResultVoteCountBuilder
   _$GetProposalResultVoteCount _build() {
     final _$result = _$v ??
         new _$GetProposalResultVoteCount._(
-            yes: BuiltValueNullFieldError.checkNotNull(
-                yes, r'GetProposalResultVoteCount', 'yes'),
-            no: BuiltValueNullFieldError.checkNotNull(
-                no, r'GetProposalResultVoteCount', 'no'),
+            yes: yes,
+            no: no,
             noWithVeto: BuiltValueNullFieldError.checkNotNull(
                 noWithVeto, r'GetProposalResultVoteCount', 'noWithVeto'),
             abstain: BuiltValueNullFieldError.checkNotNull(

@@ -13,7 +13,7 @@ class _$CosmosBaseAbciV1beta1ABCIMessageLog
   @override
   final String? log;
   @override
-  final BuiltList<CosmosBaseAbciV1beta1StringEvent>? events;
+  final BuiltList<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>? events;
 
   factory _$CosmosBaseAbciV1beta1ABCIMessageLog(
           [void Function(CosmosBaseAbciV1beta1ABCIMessageLogBuilder)?
@@ -73,10 +73,14 @@ class CosmosBaseAbciV1beta1ABCIMessageLogBuilder
   String? get log => _$this._log;
   set log(String? log) => _$this._log = log;
 
-  ListBuilder<CosmosBaseAbciV1beta1StringEvent>? _events;
-  ListBuilder<CosmosBaseAbciV1beta1StringEvent> get events =>
-      _$this._events ??= new ListBuilder<CosmosBaseAbciV1beta1StringEvent>();
-  set events(ListBuilder<CosmosBaseAbciV1beta1StringEvent>? events) =>
+  ListBuilder<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>? _events;
+  ListBuilder<
+      BroadcastTx200ResponseTxResponseLogsInnerEventsInner> get events => _$this
+          ._events ??=
+      new ListBuilder<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>();
+  set events(
+          ListBuilder<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>?
+              events) =>
       _$this._events = events;
 
   CosmosBaseAbciV1beta1ABCIMessageLogBuilder() {

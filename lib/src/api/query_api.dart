@@ -9,178 +9,124 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
-import 'package:terra_dart_rest_apis/src/model/actives_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_prevote_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_prevotes_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_vote_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_votes_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/all_balances_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/annual_provisions_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/balance_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/bank_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/byte_code_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/code_info_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/community_pool_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/contract_info_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/contract_store_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_all_balances_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_balance_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_denom_metadata_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_denoms_metadata_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_supply_of_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_community_pool_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_delegation_rewards_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_delegation_total_rewards_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_delegator_validators_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_delegator_withdraw_address_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_validator_outstanding_rewards_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_validator_slashes_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_evidence_v1beta1_query_all_evidence_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_evidence_v1beta1_query_evidence_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_feegrant_v1beta1_query_allowance_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_feegrant_v1beta1_query_allowances_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_deposit_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_deposits_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_proposal_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_proposals_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_tally_result_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_vote_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_votes_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_mint_v1beta1_query_annual_provisions_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_mint_v1beta1_query_inflation_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_mint_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_params_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegation_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegator_delegations_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegator_unbonding_delegations_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegator_validator_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_historical_info_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_pool_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_redelegations_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_unbonding_delegation_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_validator_unbonding_delegations_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_query_applied_plan_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_query_current_plan_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_query_module_versions_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_query_upgraded_consensus_state_response.dart';
-import 'package:terra_dart_rest_apis/src/model/delegation_rewards_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/delegation_total_rewards_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/delegator_validators_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/delegator_withdraw_address_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/denom_metadata_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/denom_trace_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/denom_traces_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/denoms_metadata_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/distribution_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/exchange_rate_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/exchange_rates_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/feeder_delegation_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/grpc_gateway_runtime_error.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_query_denom_trace_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_query_denom_traces_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_channel_v1_query_channel_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_channel_v1_query_channels_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_client_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_client_state_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_client_states_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_client_status_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_upgraded_client_state_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_upgraded_consensus_state_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_query_connection_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_query_connections_response.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_transfer_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/indicators_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/inflation_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/market_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/mint_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/miss_counter_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/oracle_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/proposal_status.dart';
-import 'package:terra_dart_rest_apis/src/model/query_client_connections_responseistheresponsetypeforthe_query_client_connections_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_connection_channels_responseisthe_responsetypeforthe_query_query_connection_channels_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_connection_client_state_responseistheresponsetypeforthe_query_connection_client_state_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_connection_consensus_state_responseistheresponsetypeforthe_query_connection_consensus_state_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_consensus_state_responseistheresponsetypeforthe_query_consensus_state_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_consensus_states_responseistheresponsetypeforthe_query_consensus_states_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_packet_acknowledgement_responsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.dart';
-import 'package:terra_dart_rest_apis/src/model/query_packet_acknowledgemets_responseistherequesttypeforthe_query_query_packet_acknowledgements_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_packet_commitment_responsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.dart';
-import 'package:terra_dart_rest_apis/src/model/query_packet_commitments_responseistherequesttypeforthe_query_query_packet_commitments_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_packet_receipt_responsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved.dart';
-import 'package:terra_dart_rest_apis/src/model/query_params_responseistheresponsetypeforthe_query_params_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_sequence_responseistherequesttypeforthe_query_query_next_sequence_receive_response_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_signing_info_responseistheresponsetypeforthe_query_signing_info_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_signing_infos_responseistheresponsetypeforthe_query_signing_infos_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_total_supply_responseistheresponsetypeforthe_query_total_supply_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_unreceived_acks_responseistheresponsetypeforthe_query_unreceived_acks_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_unreceived_packets_responseistheresponsetypeforthe_query_unreceived_packet_commitments_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_validator_commission_responseistheresponsetypeforthe_query_validator_commission_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_validator_delegations_responseisresponsetypeforthe_query_validator_delegations_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_validator_responseisresponsetypeforthe_query_validator_rp_cmethod.dart';
-import 'package:terra_dart_rest_apis/src/model/query_validators_responseisresponsetypeforthe_query_validators_rp_cmethod1.dart';
-import 'package:terra_dart_rest_apis/src/model/raw_store_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/reward_weight_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/seigniorage_proceeds_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/signing_info_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/signing_infos_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/slashing_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/staking_delegator_validators_response.dart';
-import 'package:terra_dart_rest_apis/src/model/supply_of_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/swap_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/tax_cap_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/tax_caps_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/tax_proceeds_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/tax_rate_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_market_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_market_v1beta1_query_swap_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_market_v1beta1_query_terra_pool_delta_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_actives_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_aggregate_prevote_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_aggregate_prevotes_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_aggregate_vote_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_aggregate_votes_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_exchange_rate_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_exchange_rates_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_feeder_delegation_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_miss_counter_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_tobin_tax_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_tobin_taxes_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_vote_targets_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_pool_delta_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_indicators_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_reward_weight_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_seigniorage_proceeds_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_tax_cap_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_tax_caps_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_tax_proceeds_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_tax_rate_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_byte_code_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_code_info_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_contract_info_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_contract_store_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_params_response.dart';
-import 'package:terra_dart_rest_apis/src/model/terra_wasm_v1beta1_query_raw_store_response.dart';
-import 'package:terra_dart_rest_apis/src/model/tobin_tax_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/tobin_taxes_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/total_supply_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/treasury_params_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/validator_commission_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/validator_outstanding_rewards_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/validator_slashes_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/vote_targets_exception1.dart';
-import 'package:terra_dart_rest_apis/src/model/wasm_params_exception1.dart';
+import 'package:terra_dart_rest_apis/src/model/account200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_default_response.dart';
+import 'package:terra_dart_rest_apis/src/model/actives200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/aggregate_prevote200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/aggregate_prevotes200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/aggregate_vote200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/aggregate_votes200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/all_balances_default_response.dart';
+import 'package:terra_dart_rest_apis/src/model/all_evidence200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/allowance200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/allowances200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/annual_provisions200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/applied_plan200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/auth_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/balance200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/bank_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/byte_code200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/channel200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/channels200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/client_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/client_state200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/client_states200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/client_status200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/code_info200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/connection200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/connections200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/contract_info200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/contract_store200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/current_plan200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegation200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegation_rewards200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegation_total_rewards200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_delegations200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_unbonding_delegations200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_validator200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_validators200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_withdraw_address200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/denom_metadata200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/denom_trace200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/denom_traces200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/denoms_metadata200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/deposit200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/deposits200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/evidence200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/exchange_rate200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/exchange_rates200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/feeder_delegation200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/grants200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/historical_info200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_transfer_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_upgraded_consensus_state200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/indicators200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/inflation200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/market_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/mint_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/miss_counter200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/module_versions200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/pool200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/proposal200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/proposals200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_response_is_the_response_type_for_the_query_query_channel_client_state_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_response_is_the_response_type_for_the_query_query_channel_client_state_rpc_method1.dart';
+import 'package:terra_dart_rest_apis/src/model/query_client_connections_response_is_the_response_type_for_the_query_client_connections_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_connection_channels_response_is_the_response_type_for_the_query_query_connection_channels_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_connection_client_state_response_is_the_response_type_for_the_query_connection_client_state_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_connection_consensus_state_response_is_the_response_type_for_the_query_connection_consensus_state_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_consensus_state_response_is_the_response_type_for_the_query_consensus_state_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_consensus_states_response_is_the_response_type_for_the_query_consensus_states_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_packet_acknowledgement_response_defines_the_client_query_response_for_a_packet_which_also_includes_a_proof_and_the_height_from_which_the_proof_was_retrieved.dart';
+import 'package:terra_dart_rest_apis/src/model/query_packet_acknowledgemets_response_is_the_request_type_for_the_query_query_packet_acknowledgements_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_packet_commitment_response_defines_the_client_query_response_for_a_packet_which_also_includes_a_proof_and_the_height_from_which_the_proof_was_retrieved.dart';
+import 'package:terra_dart_rest_apis/src/model/query_packet_commitments_response_is_the_request_type_for_the_query_query_packet_commitments_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_packet_receipt_response_defines_the_client_query_response_for_a_packet_receipt_which_also_includes_a_proof_and_the_height_from_which_the_proof_was_retrieved.dart';
+import 'package:terra_dart_rest_apis/src/model/query_params_response_is_the_response_type_for_the_query_params_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_sequence_response_is_the_request_type_for_the_query_query_next_sequence_receive_response_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_signing_info_response_is_the_response_type_for_the_query_signing_info_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_signing_infos_response_is_the_response_type_for_the_query_signing_infos_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_total_supply_response_is_the_response_type_for_the_query_total_supply_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_unreceived_acks_response_is_the_response_type_for_the_query_unreceived_acks_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_unreceived_packets_response_is_the_response_type_for_the_query_unreceived_packet_commitments_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_validator_commission_response_is_the_response_type_for_the_query_validator_commission_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_validator_delegations_response_is_response_type_for_the_query_validator_delegations_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_validator_response_is_response_type_for_the_query_validator_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/query_validators_response_is_response_type_for_the_query_validators_rpc_method.dart';
+import 'package:terra_dart_rest_apis/src/model/raw_store200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/redelegations200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/reward_weight200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/seigniorage_proceeds200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegator_validators200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/supply_of200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/swap200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tally_result200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tax_cap200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tax_caps200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tax_proceeds200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tax_rate200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/terra_pool_delta200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tobin_tax200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/tobin_taxes200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/treasury_params200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/unbonding_delegation200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/upgraded_client_state200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/upgraded_consensus_state200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_outstanding_rewards200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_slashes200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_unbonding_delegations200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/vote200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/vote_targets200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/votes200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_params200_response.dart';
 
 class QueryApi {
 
@@ -190,8 +136,8 @@ class QueryApi {
 
   const QueryApi(this._dio, this._serializers);
 
-  /// Account
   /// Account returns account details based on address.
+  /// 
   ///
   /// Parameters:
   /// * [address] - address defines the address to query for.
@@ -202,9 +148,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosAuthV1beta1QueryAccountResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Account200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosAuthV1beta1QueryAccountResponse>> account({ 
+  Future<Response<Account200Response>> account({ 
     required String address,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -234,14 +180,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosAuthV1beta1QueryAccountResponse _responseData;
+    Account200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosAuthV1beta1QueryAccountResponse);
+      const _responseType = FullType(Account200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosAuthV1beta1QueryAccountResponse;
+      ) as Account200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -252,7 +198,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosAuthV1beta1QueryAccountResponse>(
+    return Response<Account200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -264,7 +210,7 @@ class QueryApi {
     );
   }
 
-  /// Accounts
+  /// Accounts returns all the existing accounts
   /// Since: cosmos-sdk 0.43
   ///
   /// Parameters:
@@ -280,9 +226,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosAuthV1beta1QueryAccountsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Accounts200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosAuthV1beta1QueryAccountsResponse>> accounts({ 
+  Future<Response<Accounts200Response>> accounts({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -325,14 +271,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosAuthV1beta1QueryAccountsResponse _responseData;
+    Accounts200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosAuthV1beta1QueryAccountsResponse);
+      const _responseType = FullType(Accounts200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosAuthV1beta1QueryAccountsResponse;
+      ) as Accounts200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -343,7 +289,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosAuthV1beta1QueryAccountsResponse>(
+    return Response<Accounts200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -355,8 +301,8 @@ class QueryApi {
     );
   }
 
-  /// Actives
   /// Actives returns all active denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -366,9 +312,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryActivesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Actives200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryActivesResponse>> actives({ 
+  Future<Response<Actives200Response>> actives({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -397,14 +343,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryActivesResponse _responseData;
+    Actives200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryActivesResponse);
+      const _responseType = FullType(Actives200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryActivesResponse;
+      ) as Actives200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -415,7 +361,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryActivesResponse>(
+    return Response<Actives200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -427,8 +373,8 @@ class QueryApi {
     );
   }
 
-  /// AggregatePrevote
   /// AggregatePrevote returns an aggregate prevote of a validator
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator defines the validator address to query for.
@@ -439,9 +385,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryAggregatePrevoteResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AggregatePrevote200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryAggregatePrevoteResponse>> aggregatePrevote({ 
+  Future<Response<AggregatePrevote200Response>> aggregatePrevote({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -471,14 +417,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryAggregatePrevoteResponse _responseData;
+    AggregatePrevote200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryAggregatePrevoteResponse);
+      const _responseType = FullType(AggregatePrevote200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryAggregatePrevoteResponse;
+      ) as AggregatePrevote200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -489,7 +435,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryAggregatePrevoteResponse>(
+    return Response<AggregatePrevote200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -501,8 +447,8 @@ class QueryApi {
     );
   }
 
-  /// AggregatePrevotes
   /// AggregatePrevotes returns aggregate prevotes of all validators
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -512,9 +458,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryAggregatePrevotesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AggregatePrevotes200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryAggregatePrevotesResponse>> aggregatePrevotes({ 
+  Future<Response<AggregatePrevotes200Response>> aggregatePrevotes({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -543,14 +489,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryAggregatePrevotesResponse _responseData;
+    AggregatePrevotes200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryAggregatePrevotesResponse);
+      const _responseType = FullType(AggregatePrevotes200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryAggregatePrevotesResponse;
+      ) as AggregatePrevotes200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -561,7 +507,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryAggregatePrevotesResponse>(
+    return Response<AggregatePrevotes200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -573,8 +519,8 @@ class QueryApi {
     );
   }
 
-  /// AggregateVote
   /// AggregateVote returns an aggregate vote of a validator
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator defines the validator address to query for.
@@ -585,9 +531,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryAggregateVoteResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AggregateVote200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryAggregateVoteResponse>> aggregateVote({ 
+  Future<Response<AggregateVote200Response>> aggregateVote({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -617,14 +563,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryAggregateVoteResponse _responseData;
+    AggregateVote200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryAggregateVoteResponse);
+      const _responseType = FullType(AggregateVote200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryAggregateVoteResponse;
+      ) as AggregateVote200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -635,7 +581,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryAggregateVoteResponse>(
+    return Response<AggregateVote200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -647,8 +593,8 @@ class QueryApi {
     );
   }
 
-  /// AggregateVotes
   /// AggregateVotes returns aggregate votes of all validators
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -658,9 +604,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryAggregateVotesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AggregateVotes200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryAggregateVotesResponse>> aggregateVotes({ 
+  Future<Response<AggregateVotes200Response>> aggregateVotes({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -689,14 +635,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryAggregateVotesResponse _responseData;
+    AggregateVotes200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryAggregateVotesResponse);
+      const _responseType = FullType(AggregateVotes200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryAggregateVotesResponse;
+      ) as AggregateVotes200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -707,7 +653,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryAggregateVotesResponse>(
+    return Response<AggregateVotes200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -719,8 +665,8 @@ class QueryApi {
     );
   }
 
-  /// AllBalances
   /// AllBalances queries the balance of all coins for a single account.
+  /// 
   ///
   /// Parameters:
   /// * [address] - address is the address to query balances for.
@@ -736,9 +682,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QueryAllBalancesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AllBalances200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QueryAllBalancesResponse>> allBalances({ 
+  Future<Response<AllBalances200Response>> allBalances({ 
     required String address,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -782,14 +728,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QueryAllBalancesResponse _responseData;
+    AllBalances200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QueryAllBalancesResponse);
+      const _responseType = FullType(AllBalances200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QueryAllBalancesResponse;
+      ) as AllBalances200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -800,7 +746,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QueryAllBalancesResponse>(
+    return Response<AllBalances200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -812,8 +758,8 @@ class QueryApi {
     );
   }
 
-  /// AllEvidence
   /// AllEvidence queries all evidence.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -828,9 +774,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosEvidenceV1beta1QueryAllEvidenceResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AllEvidence200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosEvidenceV1beta1QueryAllEvidenceResponse>> allEvidence({ 
+  Future<Response<AllEvidence200Response>> allEvidence({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -873,14 +819,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosEvidenceV1beta1QueryAllEvidenceResponse _responseData;
+    AllEvidence200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosEvidenceV1beta1QueryAllEvidenceResponse);
+      const _responseType = FullType(AllEvidence200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosEvidenceV1beta1QueryAllEvidenceResponse;
+      ) as AllEvidence200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -891,7 +837,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosEvidenceV1beta1QueryAllEvidenceResponse>(
+    return Response<AllEvidence200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -903,8 +849,8 @@ class QueryApi {
     );
   }
 
-  /// Allowance
   /// Allowance returns fee granted to the grantee by the granter.
+  /// 
   ///
   /// Parameters:
   /// * [granter] - granter is the address of the user granting an allowance of their funds.
@@ -916,9 +862,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosFeegrantV1beta1QueryAllowanceResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Allowance200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosFeegrantV1beta1QueryAllowanceResponse>> allowance({ 
+  Future<Response<Allowance200Response>> allowance({ 
     required String granter,
     required String grantee,
     CancelToken? cancelToken,
@@ -949,14 +895,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosFeegrantV1beta1QueryAllowanceResponse _responseData;
+    Allowance200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosFeegrantV1beta1QueryAllowanceResponse);
+      const _responseType = FullType(Allowance200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosFeegrantV1beta1QueryAllowanceResponse;
+      ) as Allowance200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -967,7 +913,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosFeegrantV1beta1QueryAllowanceResponse>(
+    return Response<Allowance200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -979,11 +925,11 @@ class QueryApi {
     );
   }
 
-  /// Allowances
   /// Allowances returns all the grants for address.
+  /// 
   ///
   /// Parameters:
-  /// * [grantee] - 
+  /// * [grantee] 
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
   /// * [paginationPeriodOffset] - offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
   /// * [paginationPeriodLimit] - limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
@@ -996,9 +942,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosFeegrantV1beta1QueryAllowancesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Allowances200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosFeegrantV1beta1QueryAllowancesResponse>> allowances({ 
+  Future<Response<Allowances200Response>> allowances({ 
     required String grantee,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -1042,14 +988,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosFeegrantV1beta1QueryAllowancesResponse _responseData;
+    Allowances200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosFeegrantV1beta1QueryAllowancesResponse);
+      const _responseType = FullType(Allowances200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosFeegrantV1beta1QueryAllowancesResponse;
+      ) as Allowances200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1060,7 +1006,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosFeegrantV1beta1QueryAllowancesResponse>(
+    return Response<Allowances200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1072,8 +1018,8 @@ class QueryApi {
     );
   }
 
-  /// AnnualProvisions
   /// AnnualProvisions current minting annual provisions value.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1083,9 +1029,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosMintV1beta1QueryAnnualProvisionsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AnnualProvisions200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosMintV1beta1QueryAnnualProvisionsResponse>> annualProvisions({ 
+  Future<Response<AnnualProvisions200Response>> annualProvisions({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1114,14 +1060,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosMintV1beta1QueryAnnualProvisionsResponse _responseData;
+    AnnualProvisions200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosMintV1beta1QueryAnnualProvisionsResponse);
+      const _responseType = FullType(AnnualProvisions200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosMintV1beta1QueryAnnualProvisionsResponse;
+      ) as AnnualProvisions200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1132,7 +1078,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosMintV1beta1QueryAnnualProvisionsResponse>(
+    return Response<AnnualProvisions200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1144,8 +1090,8 @@ class QueryApi {
     );
   }
 
-  /// AppliedPlan
   /// AppliedPlan queries a previously applied upgrade plan by its name.
+  /// 
   ///
   /// Parameters:
   /// * [name] - name is the name of the applied plan to query for.
@@ -1156,9 +1102,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosUpgradeV1beta1QueryAppliedPlanResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AppliedPlan200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosUpgradeV1beta1QueryAppliedPlanResponse>> appliedPlan({ 
+  Future<Response<AppliedPlan200Response>> appliedPlan({ 
     required String name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1188,14 +1134,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosUpgradeV1beta1QueryAppliedPlanResponse _responseData;
+    AppliedPlan200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosUpgradeV1beta1QueryAppliedPlanResponse);
+      const _responseType = FullType(AppliedPlan200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosUpgradeV1beta1QueryAppliedPlanResponse;
+      ) as AppliedPlan200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1206,7 +1152,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosUpgradeV1beta1QueryAppliedPlanResponse>(
+    return Response<AppliedPlan200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1218,8 +1164,8 @@ class QueryApi {
     );
   }
 
-  /// AuthParams
   /// Params queries all parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1229,9 +1175,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosAuthV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AuthParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosAuthV1beta1QueryParamsResponse>> authParams({ 
+  Future<Response<AuthParams200Response>> authParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1260,14 +1206,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosAuthV1beta1QueryParamsResponse _responseData;
+    AuthParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosAuthV1beta1QueryParamsResponse);
+      const _responseType = FullType(AuthParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosAuthV1beta1QueryParamsResponse;
+      ) as AuthParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1278,7 +1224,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosAuthV1beta1QueryParamsResponse>(
+    return Response<AuthParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1290,8 +1236,8 @@ class QueryApi {
     );
   }
 
-  /// Balance
   /// Balance queries the balance of a single coin for a single account.
+  /// 
   ///
   /// Parameters:
   /// * [address] - address is the address to query balances for.
@@ -1303,9 +1249,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QueryBalanceResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Balance200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QueryBalanceResponse>> balance({ 
+  Future<Response<Balance200Response>> balance({ 
     required String address,
     String? denom,
     CancelToken? cancelToken,
@@ -1341,14 +1287,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QueryBalanceResponse _responseData;
+    Balance200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QueryBalanceResponse);
+      const _responseType = FullType(Balance200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QueryBalanceResponse;
+      ) as Balance200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1359,7 +1305,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QueryBalanceResponse>(
+    return Response<Balance200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1371,8 +1317,8 @@ class QueryApi {
     );
   }
 
-  /// BankParams
   /// Params queries the parameters of x/bank module.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1382,9 +1328,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BankParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QueryParamsResponse>> bankParams({ 
+  Future<Response<BankParams200Response>> bankParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1413,14 +1359,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QueryParamsResponse _responseData;
+    BankParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QueryParamsResponse);
+      const _responseType = FullType(BankParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QueryParamsResponse;
+      ) as BankParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1431,7 +1377,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QueryParamsResponse>(
+    return Response<BankParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1443,8 +1389,8 @@ class QueryApi {
     );
   }
 
-  /// ByteCode
   /// ByteCode returns the stored byte code
+  /// 
   ///
   /// Parameters:
   /// * [codeId] - grpc-gateway_out does not support Go style CodID
@@ -1455,9 +1401,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryByteCodeResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ByteCode200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryByteCodeResponse>> byteCode({ 
+  Future<Response<ByteCode200Response>> byteCode({ 
     required String codeId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1487,14 +1433,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryByteCodeResponse _responseData;
+    ByteCode200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryByteCodeResponse);
+      const _responseType = FullType(ByteCode200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryByteCodeResponse;
+      ) as ByteCode200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1505,7 +1451,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryByteCodeResponse>(
+    return Response<ByteCode200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1517,8 +1463,8 @@ class QueryApi {
     );
   }
 
-  /// Channel
   /// Channel queries an IBC Channel.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -1530,9 +1476,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreChannelV1QueryChannelResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Channel200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreChannelV1QueryChannelResponse>> channel({ 
+  Future<Response<Channel200Response>> channel({ 
     required String channelId,
     required String portId,
     CancelToken? cancelToken,
@@ -1563,14 +1509,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreChannelV1QueryChannelResponse _responseData;
+    Channel200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreChannelV1QueryChannelResponse);
+      const _responseType = FullType(Channel200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreChannelV1QueryChannelResponse;
+      ) as Channel200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1581,7 +1527,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreChannelV1QueryChannelResponse>(
+    return Response<Channel200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1593,8 +1539,8 @@ class QueryApi {
     );
   }
 
-  /// ChannelClientState
   /// ChannelClientState queries for the client state for the channel associated with the provided channel identifiers.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -1606,9 +1552,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod>> channelClientState({ 
+  Future<Response<QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod>> channelClientState({ 
     required String channelId,
     required String portId,
     CancelToken? cancelToken,
@@ -1639,14 +1585,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod _responseData;
+    QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod);
+      const _responseType = FullType(QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod;
+      ) as QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1657,7 +1603,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod>(
+    return Response<QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1669,8 +1615,8 @@ class QueryApi {
     );
   }
 
-  /// ChannelConsensusState
   /// ChannelConsensusState queries for the consensus state for the channel associated with the provided channel identifiers.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -1684,9 +1630,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod>> channelConsensusState({ 
+  Future<Response<QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1>> channelConsensusState({ 
     required String channelId,
     required String portId,
     required String revisionNumber,
@@ -1719,14 +1665,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod _responseData;
+    QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1 _responseData;
 
     try {
-      const _responseType = FullType(QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod);
+      const _responseType = FullType(QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod;
+      ) as QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1737,7 +1683,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod>(
+    return Response<QueryChannelClientStateResponseIsTheResponseTypeForTheQueryQueryChannelClientStateRPCMethod1>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1749,8 +1695,8 @@ class QueryApi {
     );
   }
 
-  /// Channels
   /// Channels queries all the IBC channels of a chain.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -1765,9 +1711,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreChannelV1QueryChannelsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Channels200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreChannelV1QueryChannelsResponse>> channels({ 
+  Future<Response<Channels200Response>> channels({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -1810,14 +1756,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreChannelV1QueryChannelsResponse _responseData;
+    Channels200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreChannelV1QueryChannelsResponse);
+      const _responseType = FullType(Channels200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreChannelV1QueryChannelsResponse;
+      ) as Channels200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1828,7 +1774,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreChannelV1QueryChannelsResponse>(
+    return Response<Channels200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1840,8 +1786,8 @@ class QueryApi {
     );
   }
 
-  /// ClientConnections
   /// ClientConnections queries the connection paths associated with a client state.
+  /// 
   ///
   /// Parameters:
   /// * [clientId] - client identifier associated with a connection
@@ -1852,9 +1798,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod>> clientConnections({ 
+  Future<Response<QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod>> clientConnections({ 
     required String clientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1884,14 +1830,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod _responseData;
+    QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod);
+      const _responseType = FullType(QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod;
+      ) as QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1902,7 +1848,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryClientConnectionsResponseistheresponsetypefortheQueryClientConnectionsRPCmethod>(
+    return Response<QueryClientConnectionsResponseIsTheResponseTypeForTheQueryClientConnectionsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1914,8 +1860,8 @@ class QueryApi {
     );
   }
 
-  /// ClientParams
   /// ClientParams queries all parameters of the ibc client.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1925,9 +1871,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryClientParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ClientParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryClientParamsResponse>> clientParams({ 
+  Future<Response<ClientParams200Response>> clientParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1956,14 +1902,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryClientParamsResponse _responseData;
+    ClientParams200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryClientParamsResponse);
+      const _responseType = FullType(ClientParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryClientParamsResponse;
+      ) as ClientParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1974,7 +1920,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryClientParamsResponse>(
+    return Response<ClientParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1986,8 +1932,8 @@ class QueryApi {
     );
   }
 
-  /// ClientState
   /// ClientState queries an IBC light client.
+  /// 
   ///
   /// Parameters:
   /// * [clientId] - client state unique identifier
@@ -1998,9 +1944,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryClientStateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ClientState200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryClientStateResponse>> clientState({ 
+  Future<Response<ClientState200Response>> clientState({ 
     required String clientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2030,14 +1976,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryClientStateResponse _responseData;
+    ClientState200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryClientStateResponse);
+      const _responseType = FullType(ClientState200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryClientStateResponse;
+      ) as ClientState200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2048,7 +1994,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryClientStateResponse>(
+    return Response<ClientState200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2060,8 +2006,8 @@ class QueryApi {
     );
   }
 
-  /// ClientStates
   /// ClientStates queries all the IBC light clients of a chain.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -2076,9 +2022,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryClientStatesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ClientStates200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryClientStatesResponse>> clientStates({ 
+  Future<Response<ClientStates200Response>> clientStates({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -2121,14 +2067,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryClientStatesResponse _responseData;
+    ClientStates200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryClientStatesResponse);
+      const _responseType = FullType(ClientStates200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryClientStatesResponse;
+      ) as ClientStates200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2139,7 +2085,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryClientStatesResponse>(
+    return Response<ClientStates200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2151,8 +2097,8 @@ class QueryApi {
     );
   }
 
-  /// ClientStatus
   /// Status queries the status of an IBC client.
+  /// 
   ///
   /// Parameters:
   /// * [clientId] - client unique identifier
@@ -2163,9 +2109,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryClientStatusResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ClientStatus200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryClientStatusResponse>> clientStatus({ 
+  Future<Response<ClientStatus200Response>> clientStatus({ 
     required String clientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2195,14 +2141,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryClientStatusResponse _responseData;
+    ClientStatus200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryClientStatusResponse);
+      const _responseType = FullType(ClientStatus200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryClientStatusResponse;
+      ) as ClientStatus200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2213,7 +2159,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryClientStatusResponse>(
+    return Response<ClientStatus200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2225,8 +2171,8 @@ class QueryApi {
     );
   }
 
-  /// CodeInfo
   /// CodeInfo returns the stored code info
+  /// 
   ///
   /// Parameters:
   /// * [codeId] - grpc-gateway_out does not support Go style CodID
@@ -2237,9 +2183,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryCodeInfoResponse] as data
+  /// Returns a [Future] containing a [Response] with a [CodeInfo200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryCodeInfoResponse>> codeInfo({ 
+  Future<Response<CodeInfo200Response>> codeInfo({ 
     required String codeId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2269,14 +2215,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryCodeInfoResponse _responseData;
+    CodeInfo200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryCodeInfoResponse);
+      const _responseType = FullType(CodeInfo200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryCodeInfoResponse;
+      ) as CodeInfo200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2287,7 +2233,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryCodeInfoResponse>(
+    return Response<CodeInfo200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2299,8 +2245,8 @@ class QueryApi {
     );
   }
 
-  /// CommunityPool
   /// CommunityPool queries the community pool coins.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2310,9 +2256,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryCommunityPoolResponse] as data
+  /// Returns a [Future] containing a [Response] with a [CommunityPool200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryCommunityPoolResponse>> communityPool({ 
+  Future<Response<CommunityPool200Response>> communityPool({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2341,14 +2287,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryCommunityPoolResponse _responseData;
+    CommunityPool200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryCommunityPoolResponse);
+      const _responseType = FullType(CommunityPool200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryCommunityPoolResponse;
+      ) as CommunityPool200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2359,7 +2305,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryCommunityPoolResponse>(
+    return Response<CommunityPool200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2371,8 +2317,8 @@ class QueryApi {
     );
   }
 
-  /// Connection
   /// Connection queries an IBC connection end.
+  /// 
   ///
   /// Parameters:
   /// * [connectionId] - connection unique identifier
@@ -2383,9 +2329,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreConnectionV1QueryConnectionResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Connection200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreConnectionV1QueryConnectionResponse>> connection({ 
+  Future<Response<Connection200Response>> connection({ 
     required String connectionId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2415,14 +2361,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreConnectionV1QueryConnectionResponse _responseData;
+    Connection200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreConnectionV1QueryConnectionResponse);
+      const _responseType = FullType(Connection200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreConnectionV1QueryConnectionResponse;
+      ) as Connection200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2433,7 +2379,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreConnectionV1QueryConnectionResponse>(
+    return Response<Connection200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2445,8 +2391,8 @@ class QueryApi {
     );
   }
 
-  /// ConnectionChannels
   /// ConnectionChannels queries all the channels associated with a connection end.
+  /// 
   ///
   /// Parameters:
   /// * [connection] - connection unique identifier
@@ -2462,9 +2408,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod>> connectionChannels({ 
+  Future<Response<QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod>> connectionChannels({ 
     required String connection,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -2508,14 +2454,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod _responseData;
+    QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod);
+      const _responseType = FullType(QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod;
+      ) as QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2526,7 +2472,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConnectionChannelsResponseistheResponsetypefortheQueryQueryConnectionChannelsRPCmethod>(
+    return Response<QueryConnectionChannelsResponseIsTheResponseTypeForTheQueryQueryConnectionChannelsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2538,8 +2484,8 @@ class QueryApi {
     );
   }
 
-  /// ConnectionClientState
   /// ConnectionClientState queries the client state associated with the connection.
+  /// 
   ///
   /// Parameters:
   /// * [connectionId] - connection identifier
@@ -2550,9 +2496,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod>> connectionClientState({ 
+  Future<Response<QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod>> connectionClientState({ 
     required String connectionId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2582,14 +2528,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod _responseData;
+    QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod);
+      const _responseType = FullType(QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod;
+      ) as QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2600,7 +2546,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod>(
+    return Response<QueryConnectionClientStateResponseIsTheResponseTypeForTheQueryConnectionClientStateRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2612,13 +2558,13 @@ class QueryApi {
     );
   }
 
-  /// ConnectionConsensusState
   /// ConnectionConsensusState queries the consensus state associated with the connection.
+  /// 
   ///
   /// Parameters:
   /// * [connectionId] - connection identifier
-  /// * [revisionNumber] - 
-  /// * [revisionHeight] - 
+  /// * [revisionNumber] 
+  /// * [revisionHeight] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -2626,9 +2572,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod>> connectionConsensusState({ 
+  Future<Response<QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod>> connectionConsensusState({ 
     required String connectionId,
     required String revisionNumber,
     required String revisionHeight,
@@ -2660,14 +2606,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod _responseData;
+    QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod);
+      const _responseType = FullType(QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod;
+      ) as QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2678,7 +2624,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod>(
+    return Response<QueryConnectionConsensusStateResponseIsTheResponseTypeForTheQueryConnectionConsensusStateRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2690,8 +2636,8 @@ class QueryApi {
     );
   }
 
-  /// Connections
   /// Connections queries all the IBC connections of a chain.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -2706,9 +2652,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreConnectionV1QueryConnectionsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Connections200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreConnectionV1QueryConnectionsResponse>> connections({ 
+  Future<Response<Connections200Response>> connections({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -2751,14 +2697,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreConnectionV1QueryConnectionsResponse _responseData;
+    Connections200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreConnectionV1QueryConnectionsResponse);
+      const _responseType = FullType(Connections200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreConnectionV1QueryConnectionsResponse;
+      ) as Connections200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2769,7 +2715,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreConnectionV1QueryConnectionsResponse>(
+    return Response<Connections200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2781,8 +2727,8 @@ class QueryApi {
     );
   }
 
-  /// ConsensusState
   /// ConsensusState queries a consensus state associated with a client state at a given height.
+  /// 
   ///
   /// Parameters:
   /// * [clientId] - client identifier
@@ -2796,9 +2742,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod>> consensusState({ 
+  Future<Response<QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod>> consensusState({ 
     required String clientId,
     required String revisionNumber,
     required String revisionHeight,
@@ -2836,14 +2782,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod _responseData;
+    QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod);
+      const _responseType = FullType(QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod;
+      ) as QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2854,7 +2800,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConsensusStateResponseistheresponsetypefortheQueryConsensusStateRPCmethod>(
+    return Response<QueryConsensusStateResponseIsTheResponseTypeForTheQueryConsensusStateRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2866,8 +2812,8 @@ class QueryApi {
     );
   }
 
-  /// ConsensusStates
   /// ConsensusStates queries all the consensus state associated with a given client.
+  /// 
   ///
   /// Parameters:
   /// * [clientId] - client identifier
@@ -2883,9 +2829,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod>> consensusStates({ 
+  Future<Response<QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod>> consensusStates({ 
     required String clientId,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -2929,14 +2875,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod _responseData;
+    QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod);
+      const _responseType = FullType(QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod;
+      ) as QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2947,7 +2893,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod>(
+    return Response<QueryConsensusStatesResponseIsTheResponseTypeForTheQueryConsensusStatesRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2959,11 +2905,11 @@ class QueryApi {
     );
   }
 
-  /// ContractInfo
   /// ContractInfo returns the stored contract info
+  /// 
   ///
   /// Parameters:
-  /// * [contractAddress] - 
+  /// * [contractAddress] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -2971,9 +2917,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryContractInfoResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ContractInfo200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryContractInfoResponse>> contractInfo({ 
+  Future<Response<ContractInfo200Response>> contractInfo({ 
     required String contractAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3003,14 +2949,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryContractInfoResponse _responseData;
+    ContractInfo200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryContractInfoResponse);
+      const _responseType = FullType(ContractInfo200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryContractInfoResponse;
+      ) as ContractInfo200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3021,7 +2967,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryContractInfoResponse>(
+    return Response<ContractInfo200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3033,12 +2979,12 @@ class QueryApi {
     );
   }
 
-  /// ContractStore
   /// ContractStore return smart query result from the contract
+  /// 
   ///
   /// Parameters:
-  /// * [contractAddress] - 
-  /// * [queryMsg] - 
+  /// * [contractAddress] 
+  /// * [queryMsg] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -3046,9 +2992,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryContractStoreResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ContractStore200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryContractStoreResponse>> contractStore({ 
+  Future<Response<ContractStore200Response>> contractStore({ 
     required String contractAddress,
     String? queryMsg,
     CancelToken? cancelToken,
@@ -3084,14 +3030,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryContractStoreResponse _responseData;
+    ContractStore200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryContractStoreResponse);
+      const _responseType = FullType(ContractStore200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryContractStoreResponse;
+      ) as ContractStore200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3102,7 +3048,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryContractStoreResponse>(
+    return Response<ContractStore200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3114,8 +3060,8 @@ class QueryApi {
     );
   }
 
-  /// CurrentPlan
   /// CurrentPlan queries the current upgrade plan.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -3125,9 +3071,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosUpgradeV1beta1QueryCurrentPlanResponse] as data
+  /// Returns a [Future] containing a [Response] with a [CurrentPlan200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosUpgradeV1beta1QueryCurrentPlanResponse>> currentPlan({ 
+  Future<Response<CurrentPlan200Response>> currentPlan({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -3156,14 +3102,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosUpgradeV1beta1QueryCurrentPlanResponse _responseData;
+    CurrentPlan200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosUpgradeV1beta1QueryCurrentPlanResponse);
+      const _responseType = FullType(CurrentPlan200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosUpgradeV1beta1QueryCurrentPlanResponse;
+      ) as CurrentPlan200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3174,7 +3120,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosUpgradeV1beta1QueryCurrentPlanResponse>(
+    return Response<CurrentPlan200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3186,8 +3132,8 @@ class QueryApi {
     );
   }
 
-  /// Delegation
   /// Delegation queries delegate info for given validator delegator pair.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator_addr defines the validator address to query for.
@@ -3199,9 +3145,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryDelegationResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Delegation200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryDelegationResponse>> delegation({ 
+  Future<Response<Delegation200Response>> delegation({ 
     required String validatorAddr,
     required String delegatorAddr,
     CancelToken? cancelToken,
@@ -3232,14 +3178,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryDelegationResponse _responseData;
+    Delegation200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryDelegationResponse);
+      const _responseType = FullType(Delegation200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryDelegationResponse;
+      ) as Delegation200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3250,7 +3196,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryDelegationResponse>(
+    return Response<Delegation200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3262,8 +3208,8 @@ class QueryApi {
     );
   }
 
-  /// DelegationRewards
   /// DelegationRewards queries the total rewards accrued by a delegation.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddress] - delegator_address defines the delegator address to query for.
@@ -3275,9 +3221,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryDelegationRewardsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegationRewards200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryDelegationRewardsResponse>> delegationRewards({ 
+  Future<Response<DelegationRewards200Response>> delegationRewards({ 
     required String delegatorAddress,
     required String validatorAddress,
     CancelToken? cancelToken,
@@ -3308,14 +3254,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryDelegationRewardsResponse _responseData;
+    DelegationRewards200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryDelegationRewardsResponse);
+      const _responseType = FullType(DelegationRewards200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryDelegationRewardsResponse;
+      ) as DelegationRewards200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3326,7 +3272,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryDelegationRewardsResponse>(
+    return Response<DelegationRewards200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3338,8 +3284,8 @@ class QueryApi {
     );
   }
 
-  /// DelegationTotalRewards
   /// DelegationTotalRewards queries the total rewards accrued by a each validator.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddress] - delegator_address defines the delegator address to query for.
@@ -3350,9 +3296,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegationTotalRewards200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse>> delegationTotalRewards({ 
+  Future<Response<DelegationTotalRewards200Response>> delegationTotalRewards({ 
     required String delegatorAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3382,14 +3328,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse _responseData;
+    DelegationTotalRewards200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse);
+      const _responseType = FullType(DelegationTotalRewards200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse;
+      ) as DelegationTotalRewards200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3400,7 +3346,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse>(
+    return Response<DelegationTotalRewards200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3412,8 +3358,8 @@ class QueryApi {
     );
   }
 
-  /// DelegatorDelegations
   /// DelegatorDelegations queries all delegations of a given delegator address.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddr] - delegator_addr defines the delegator address to query for.
@@ -3429,9 +3375,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryDelegatorDelegationsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegatorDelegations200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryDelegatorDelegationsResponse>> delegatorDelegations({ 
+  Future<Response<DelegatorDelegations200Response>> delegatorDelegations({ 
     required String delegatorAddr,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -3475,14 +3421,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryDelegatorDelegationsResponse _responseData;
+    DelegatorDelegations200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryDelegatorDelegationsResponse);
+      const _responseType = FullType(DelegatorDelegations200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryDelegatorDelegationsResponse;
+      ) as DelegatorDelegations200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3493,7 +3439,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryDelegatorDelegationsResponse>(
+    return Response<DelegatorDelegations200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3505,8 +3451,8 @@ class QueryApi {
     );
   }
 
-  /// DelegatorUnbondingDelegations
   /// DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddr] - delegator_addr defines the delegator address to query for.
@@ -3522,9 +3468,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegatorUnbondingDelegations200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse>> delegatorUnbondingDelegations({ 
+  Future<Response<DelegatorUnbondingDelegations200Response>> delegatorUnbondingDelegations({ 
     required String delegatorAddr,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -3568,14 +3514,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse _responseData;
+    DelegatorUnbondingDelegations200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse);
+      const _responseType = FullType(DelegatorUnbondingDelegations200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse;
+      ) as DelegatorUnbondingDelegations200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3586,7 +3532,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryDelegatorUnbondingDelegationsResponse>(
+    return Response<DelegatorUnbondingDelegations200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3598,8 +3544,8 @@ class QueryApi {
     );
   }
 
-  /// DelegatorValidator
   /// DelegatorValidator queries validator info for given delegator validator pair.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddr] - delegator_addr defines the delegator address to query for.
@@ -3611,9 +3557,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryDelegatorValidatorResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegatorValidator200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryDelegatorValidatorResponse>> delegatorValidator({ 
+  Future<Response<DelegatorValidator200Response>> delegatorValidator({ 
     required String delegatorAddr,
     required String validatorAddr,
     CancelToken? cancelToken,
@@ -3644,14 +3590,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryDelegatorValidatorResponse _responseData;
+    DelegatorValidator200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryDelegatorValidatorResponse);
+      const _responseType = FullType(DelegatorValidator200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryDelegatorValidatorResponse;
+      ) as DelegatorValidator200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3662,7 +3608,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryDelegatorValidatorResponse>(
+    return Response<DelegatorValidator200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3674,8 +3620,8 @@ class QueryApi {
     );
   }
 
-  /// DelegatorValidators
   /// DelegatorValidators queries the validators of a delegator.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddress] - delegator_address defines the delegator address to query for.
@@ -3686,9 +3632,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryDelegatorValidatorsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegatorValidators200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryDelegatorValidatorsResponse>> delegatorValidators({ 
+  Future<Response<DelegatorValidators200Response>> delegatorValidators({ 
     required String delegatorAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3718,14 +3664,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryDelegatorValidatorsResponse _responseData;
+    DelegatorValidators200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryDelegatorValidatorsResponse);
+      const _responseType = FullType(DelegatorValidators200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryDelegatorValidatorsResponse;
+      ) as DelegatorValidators200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3736,7 +3682,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryDelegatorValidatorsResponse>(
+    return Response<DelegatorValidators200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3748,8 +3694,8 @@ class QueryApi {
     );
   }
 
-  /// DelegatorWithdrawAddress
   /// DelegatorWithdrawAddress queries withdraw address of a delegator.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddress] - delegator_address defines the delegator address to query for.
@@ -3760,9 +3706,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DelegatorWithdrawAddress200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse>> delegatorWithdrawAddress({ 
+  Future<Response<DelegatorWithdrawAddress200Response>> delegatorWithdrawAddress({ 
     required String delegatorAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3792,14 +3738,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse _responseData;
+    DelegatorWithdrawAddress200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse);
+      const _responseType = FullType(DelegatorWithdrawAddress200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse;
+      ) as DelegatorWithdrawAddress200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3810,7 +3756,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryDelegatorWithdrawAddressResponse>(
+    return Response<DelegatorWithdrawAddress200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3822,8 +3768,8 @@ class QueryApi {
     );
   }
 
-  /// DenomMetadata
   /// DenomsMetadata queries the client metadata of a given coin denomination.
+  /// 
   ///
   /// Parameters:
   /// * [denom] - denom is the coin denom to query the metadata for.
@@ -3834,9 +3780,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QueryDenomMetadataResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DenomMetadata200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QueryDenomMetadataResponse>> denomMetadata({ 
+  Future<Response<DenomMetadata200Response>> denomMetadata({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3866,14 +3812,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QueryDenomMetadataResponse _responseData;
+    DenomMetadata200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QueryDenomMetadataResponse);
+      const _responseType = FullType(DenomMetadata200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QueryDenomMetadataResponse;
+      ) as DenomMetadata200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3884,7 +3830,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QueryDenomMetadataResponse>(
+    return Response<DenomMetadata200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3896,8 +3842,8 @@ class QueryApi {
     );
   }
 
-  /// DenomTrace
   /// DenomTrace queries a denomination trace information.
+  /// 
   ///
   /// Parameters:
   /// * [hash] - hash (in hex format) of the denomination trace information.
@@ -3908,9 +3854,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcApplicationsTransferV1QueryDenomTraceResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DenomTrace200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcApplicationsTransferV1QueryDenomTraceResponse>> denomTrace({ 
+  Future<Response<DenomTrace200Response>> denomTrace({ 
     required String hash,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -3940,14 +3886,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcApplicationsTransferV1QueryDenomTraceResponse _responseData;
+    DenomTrace200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcApplicationsTransferV1QueryDenomTraceResponse);
+      const _responseType = FullType(DenomTrace200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcApplicationsTransferV1QueryDenomTraceResponse;
+      ) as DenomTrace200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -3958,7 +3904,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcApplicationsTransferV1QueryDenomTraceResponse>(
+    return Response<DenomTrace200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3970,8 +3916,8 @@ class QueryApi {
     );
   }
 
-  /// DenomTraces
   /// DenomTraces queries all denomination traces.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -3986,9 +3932,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcApplicationsTransferV1QueryDenomTracesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DenomTraces200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcApplicationsTransferV1QueryDenomTracesResponse>> denomTraces({ 
+  Future<Response<DenomTraces200Response>> denomTraces({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -4031,14 +3977,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcApplicationsTransferV1QueryDenomTracesResponse _responseData;
+    DenomTraces200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcApplicationsTransferV1QueryDenomTracesResponse);
+      const _responseType = FullType(DenomTraces200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcApplicationsTransferV1QueryDenomTracesResponse;
+      ) as DenomTraces200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4049,7 +3995,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcApplicationsTransferV1QueryDenomTracesResponse>(
+    return Response<DenomTraces200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4061,8 +4007,8 @@ class QueryApi {
     );
   }
 
-  /// DenomsMetadata
   /// DenomsMetadata queries the client metadata for all registered coin denominations.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -4077,9 +4023,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QueryDenomsMetadataResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DenomsMetadata200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QueryDenomsMetadataResponse>> denomsMetadata({ 
+  Future<Response<DenomsMetadata200Response>> denomsMetadata({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -4122,14 +4068,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QueryDenomsMetadataResponse _responseData;
+    DenomsMetadata200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QueryDenomsMetadataResponse);
+      const _responseType = FullType(DenomsMetadata200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QueryDenomsMetadataResponse;
+      ) as DenomsMetadata200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4140,7 +4086,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QueryDenomsMetadataResponse>(
+    return Response<DenomsMetadata200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4152,8 +4098,8 @@ class QueryApi {
     );
   }
 
-  /// Deposit
   /// Deposit queries single deposit information based proposalID, depositAddr.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -4165,9 +4111,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryDepositResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Deposit200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryDepositResponse>> deposit({ 
+  Future<Response<Deposit200Response>> deposit({ 
     required String proposalId,
     required String depositor,
     CancelToken? cancelToken,
@@ -4198,14 +4144,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryDepositResponse _responseData;
+    Deposit200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryDepositResponse);
+      const _responseType = FullType(Deposit200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryDepositResponse;
+      ) as Deposit200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4216,7 +4162,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryDepositResponse>(
+    return Response<Deposit200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4228,8 +4174,8 @@ class QueryApi {
     );
   }
 
-  /// Deposits
   /// Deposits queries all deposits of a single proposal.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -4245,9 +4191,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryDepositsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Deposits200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryDepositsResponse>> deposits({ 
+  Future<Response<Deposits200Response>> deposits({ 
     required String proposalId,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -4291,14 +4237,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryDepositsResponse _responseData;
+    Deposits200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryDepositsResponse);
+      const _responseType = FullType(Deposits200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryDepositsResponse;
+      ) as Deposits200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4309,7 +4255,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryDepositsResponse>(
+    return Response<Deposits200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4321,8 +4267,8 @@ class QueryApi {
     );
   }
 
-  /// DistributionParams
   /// Params queries params of the distribution module.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -4332,9 +4278,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [DistributionParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryParamsResponse>> distributionParams({ 
+  Future<Response<DistributionParams200Response>> distributionParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -4363,14 +4309,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryParamsResponse _responseData;
+    DistributionParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryParamsResponse);
+      const _responseType = FullType(DistributionParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryParamsResponse;
+      ) as DistributionParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4381,7 +4327,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryParamsResponse>(
+    return Response<DistributionParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4393,8 +4339,8 @@ class QueryApi {
     );
   }
 
-  /// Evidence
   /// Evidence queries evidence based on evidence hash.
+  /// 
   ///
   /// Parameters:
   /// * [evidenceHash] - evidence_hash defines the hash of the requested evidence.
@@ -4405,9 +4351,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosEvidenceV1beta1QueryEvidenceResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Evidence200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosEvidenceV1beta1QueryEvidenceResponse>> evidence({ 
+  Future<Response<Evidence200Response>> evidence({ 
     required String evidenceHash,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -4437,14 +4383,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosEvidenceV1beta1QueryEvidenceResponse _responseData;
+    Evidence200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosEvidenceV1beta1QueryEvidenceResponse);
+      const _responseType = FullType(Evidence200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosEvidenceV1beta1QueryEvidenceResponse;
+      ) as Evidence200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4455,7 +4401,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosEvidenceV1beta1QueryEvidenceResponse>(
+    return Response<Evidence200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4467,8 +4413,8 @@ class QueryApi {
     );
   }
 
-  /// ExchangeRate
   /// ExchangeRate returns exchange rate of a denom
+  /// 
   ///
   /// Parameters:
   /// * [denom] - denom defines the denomination to query for.
@@ -4479,9 +4425,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryExchangeRateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ExchangeRate200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryExchangeRateResponse>> exchangeRate({ 
+  Future<Response<ExchangeRate200Response>> exchangeRate({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -4511,14 +4457,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryExchangeRateResponse _responseData;
+    ExchangeRate200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryExchangeRateResponse);
+      const _responseType = FullType(ExchangeRate200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryExchangeRateResponse;
+      ) as ExchangeRate200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4529,7 +4475,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryExchangeRateResponse>(
+    return Response<ExchangeRate200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4541,8 +4487,8 @@ class QueryApi {
     );
   }
 
-  /// ExchangeRates
   /// ExchangeRates returns exchange rates of all denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -4552,9 +4498,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryExchangeRatesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ExchangeRates200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryExchangeRatesResponse>> exchangeRates({ 
+  Future<Response<ExchangeRates200Response>> exchangeRates({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -4583,14 +4529,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryExchangeRatesResponse _responseData;
+    ExchangeRates200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryExchangeRatesResponse);
+      const _responseType = FullType(ExchangeRates200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryExchangeRatesResponse;
+      ) as ExchangeRates200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4601,7 +4547,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryExchangeRatesResponse>(
+    return Response<ExchangeRates200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4613,8 +4559,8 @@ class QueryApi {
     );
   }
 
-  /// FeederDelegation
   /// FeederDelegation returns feeder delegation of a validator
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator defines the validator address to query for.
@@ -4625,9 +4571,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryFeederDelegationResponse] as data
+  /// Returns a [Future] containing a [Response] with a [FeederDelegation200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryFeederDelegationResponse>> feederDelegation({ 
+  Future<Response<FeederDelegation200Response>> feederDelegation({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -4657,14 +4603,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryFeederDelegationResponse _responseData;
+    FeederDelegation200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryFeederDelegationResponse);
+      const _responseType = FullType(FeederDelegation200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryFeederDelegationResponse;
+      ) as FeederDelegation200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4675,7 +4621,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryFeederDelegationResponse>(
+    return Response<FeederDelegation200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4687,8 +4633,8 @@ class QueryApi {
     );
   }
 
-  /// GovParams
   /// Params queries all parameters of the gov module.
+  /// 
   ///
   /// Parameters:
   /// * [paramsType] - params_type defines which parameters to query for, can be one of \"voting\", \"tallying\" or \"deposit\".
@@ -4699,9 +4645,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GovParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryParamsResponse>> govParams({ 
+  Future<Response<GovParams200Response>> govParams({ 
     required String paramsType,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -4731,14 +4677,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryParamsResponse _responseData;
+    GovParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryParamsResponse);
+      const _responseType = FullType(GovParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryParamsResponse;
+      ) as GovParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4749,7 +4695,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryParamsResponse>(
+    return Response<GovParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4761,12 +4707,12 @@ class QueryApi {
     );
   }
 
-  /// Grants
   /// Returns list of &#x60;Authorization&#x60;, granted to the grantee by the granter.
+  /// 
   ///
   /// Parameters:
-  /// * [granter] - 
-  /// * [grantee] - 
+  /// * [granter] 
+  /// * [grantee] 
   /// * [msgTypeUrl] - Optional, msg_type_url, when set, will query only grants matching given msg type.
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
   /// * [paginationPeriodOffset] - offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -4780,9 +4726,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosAuthzV1beta1QueryGrantsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Grants200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosAuthzV1beta1QueryGrantsResponse>> grants({ 
+  Future<Response<Grants200Response>> grants({ 
     String? granter,
     String? grantee,
     String? msgTypeUrl,
@@ -4831,14 +4777,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosAuthzV1beta1QueryGrantsResponse _responseData;
+    Grants200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosAuthzV1beta1QueryGrantsResponse);
+      const _responseType = FullType(Grants200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosAuthzV1beta1QueryGrantsResponse;
+      ) as Grants200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4849,7 +4795,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosAuthzV1beta1QueryGrantsResponse>(
+    return Response<Grants200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4861,8 +4807,8 @@ class QueryApi {
     );
   }
 
-  /// HistoricalInfo
   /// HistoricalInfo queries the historical info for given height.
+  /// 
   ///
   /// Parameters:
   /// * [height] - height defines at which height to query the historical info.
@@ -4873,9 +4819,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryHistoricalInfoResponse] as data
+  /// Returns a [Future] containing a [Response] with a [HistoricalInfo200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryHistoricalInfoResponse>> historicalInfo({ 
+  Future<Response<HistoricalInfo200Response>> historicalInfo({ 
     required String height,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -4905,14 +4851,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryHistoricalInfoResponse _responseData;
+    HistoricalInfo200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryHistoricalInfoResponse);
+      const _responseType = FullType(HistoricalInfo200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryHistoricalInfoResponse;
+      ) as HistoricalInfo200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4923,7 +4869,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryHistoricalInfoResponse>(
+    return Response<HistoricalInfo200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4935,8 +4881,8 @@ class QueryApi {
     );
   }
 
-  /// IBCTransferParams
   /// Params queries all parameters of the ibc-transfer module.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -4946,9 +4892,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcApplicationsTransferV1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [IBCTransferParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcApplicationsTransferV1QueryParamsResponse>> iBCTransferParams({ 
+  Future<Response<IBCTransferParams200Response>> iBCTransferParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -4977,14 +4923,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcApplicationsTransferV1QueryParamsResponse _responseData;
+    IBCTransferParams200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcApplicationsTransferV1QueryParamsResponse);
+      const _responseType = FullType(IBCTransferParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcApplicationsTransferV1QueryParamsResponse;
+      ) as IBCTransferParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -4995,7 +4941,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcApplicationsTransferV1QueryParamsResponse>(
+    return Response<IBCTransferParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5007,8 +4953,8 @@ class QueryApi {
     );
   }
 
-  /// IBCUpgradedConsensusState
   /// UpgradedConsensusState queries an Upgraded IBC consensus state.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5018,9 +4964,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryUpgradedConsensusStateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [IBCUpgradedConsensusState200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryUpgradedConsensusStateResponse>> iBCUpgradedConsensusState({ 
+  Future<Response<IBCUpgradedConsensusState200Response>> iBCUpgradedConsensusState({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5049,14 +4995,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryUpgradedConsensusStateResponse _responseData;
+    IBCUpgradedConsensusState200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryUpgradedConsensusStateResponse);
+      const _responseType = FullType(IBCUpgradedConsensusState200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryUpgradedConsensusStateResponse;
+      ) as IBCUpgradedConsensusState200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5067,7 +5013,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryUpgradedConsensusStateResponse>(
+    return Response<IBCUpgradedConsensusState200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5079,8 +5025,8 @@ class QueryApi {
     );
   }
 
-  /// Indicators
   /// Indicators return the current trl informations
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5090,9 +5036,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryIndicatorsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Indicators200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryIndicatorsResponse>> indicators({ 
+  Future<Response<Indicators200Response>> indicators({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5121,14 +5067,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryIndicatorsResponse _responseData;
+    Indicators200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryIndicatorsResponse);
+      const _responseType = FullType(Indicators200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryIndicatorsResponse;
+      ) as Indicators200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5139,7 +5085,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryIndicatorsResponse>(
+    return Response<Indicators200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5151,8 +5097,8 @@ class QueryApi {
     );
   }
 
-  /// Inflation
   /// Inflation returns the current minting inflation value.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5162,9 +5108,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosMintV1beta1QueryInflationResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Inflation200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosMintV1beta1QueryInflationResponse>> inflation({ 
+  Future<Response<Inflation200Response>> inflation({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5193,14 +5139,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosMintV1beta1QueryInflationResponse _responseData;
+    Inflation200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosMintV1beta1QueryInflationResponse);
+      const _responseType = FullType(Inflation200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosMintV1beta1QueryInflationResponse;
+      ) as Inflation200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5211,7 +5157,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosMintV1beta1QueryInflationResponse>(
+    return Response<Inflation200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5223,8 +5169,8 @@ class QueryApi {
     );
   }
 
-  /// MarketParams
   /// Params queries all parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5234,9 +5180,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraMarketV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [MarketParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraMarketV1beta1QueryParamsResponse>> marketParams({ 
+  Future<Response<MarketParams200Response>> marketParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5265,14 +5211,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraMarketV1beta1QueryParamsResponse _responseData;
+    MarketParams200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraMarketV1beta1QueryParamsResponse);
+      const _responseType = FullType(MarketParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraMarketV1beta1QueryParamsResponse;
+      ) as MarketParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5283,7 +5229,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraMarketV1beta1QueryParamsResponse>(
+    return Response<MarketParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5295,8 +5241,8 @@ class QueryApi {
     );
   }
 
-  /// MintParams
   /// Params returns the total set of minting parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5306,9 +5252,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosMintV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [MintParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosMintV1beta1QueryParamsResponse>> mintParams({ 
+  Future<Response<MintParams200Response>> mintParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5337,14 +5283,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosMintV1beta1QueryParamsResponse _responseData;
+    MintParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosMintV1beta1QueryParamsResponse);
+      const _responseType = FullType(MintParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosMintV1beta1QueryParamsResponse;
+      ) as MintParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5355,7 +5301,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosMintV1beta1QueryParamsResponse>(
+    return Response<MintParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5367,8 +5313,8 @@ class QueryApi {
     );
   }
 
-  /// MissCounter
   /// MissCounter returns oracle miss counter of a validator
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator defines the validator address to query for.
@@ -5379,9 +5325,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryMissCounterResponse] as data
+  /// Returns a [Future] containing a [Response] with a [MissCounter200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryMissCounterResponse>> missCounter({ 
+  Future<Response<MissCounter200Response>> missCounter({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -5411,14 +5357,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryMissCounterResponse _responseData;
+    MissCounter200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryMissCounterResponse);
+      const _responseType = FullType(MissCounter200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryMissCounterResponse;
+      ) as MissCounter200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5429,7 +5375,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryMissCounterResponse>(
+    return Response<MissCounter200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5441,7 +5387,7 @@ class QueryApi {
     );
   }
 
-  /// ModuleVersions
+  /// ModuleVersions queries the list of module versions from state.
   /// Since: cosmos-sdk 0.43
   ///
   /// Parameters:
@@ -5453,9 +5399,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosUpgradeV1beta1QueryModuleVersionsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ModuleVersions200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosUpgradeV1beta1QueryModuleVersionsResponse>> moduleVersions({ 
+  Future<Response<ModuleVersions200Response>> moduleVersions({ 
     String? moduleName,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -5490,14 +5436,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosUpgradeV1beta1QueryModuleVersionsResponse _responseData;
+    ModuleVersions200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosUpgradeV1beta1QueryModuleVersionsResponse);
+      const _responseType = FullType(ModuleVersions200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosUpgradeV1beta1QueryModuleVersionsResponse;
+      ) as ModuleVersions200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5508,7 +5454,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosUpgradeV1beta1QueryModuleVersionsResponse>(
+    return Response<ModuleVersions200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5520,8 +5466,8 @@ class QueryApi {
     );
   }
 
-  /// NextSequenceReceive
   /// NextSequenceReceive returns the next receive sequence for a given channel.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -5533,9 +5479,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod>> nextSequenceReceive({ 
+  Future<Response<QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod>> nextSequenceReceive({ 
     required String channelId,
     required String portId,
     CancelToken? cancelToken,
@@ -5566,14 +5512,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod _responseData;
+    QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod);
+      const _responseType = FullType(QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod;
+      ) as QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5584,7 +5530,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QuerySequenceResponseistherequesttypefortheQueryQueryNextSequenceReceiveResponseRPCmethod>(
+    return Response<QuerySequenceResponseIsTheRequestTypeForTheQueryQueryNextSequenceReceiveResponseRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5596,8 +5542,8 @@ class QueryApi {
     );
   }
 
-  /// OracleParams
   /// Params queries all parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -5607,9 +5553,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [OracleParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryParamsResponse>> oracleParams({ 
+  Future<Response<OracleParams200Response>> oracleParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -5638,14 +5584,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryParamsResponse _responseData;
+    OracleParams200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryParamsResponse);
+      const _responseType = FullType(OracleParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryParamsResponse;
+      ) as OracleParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5656,7 +5602,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryParamsResponse>(
+    return Response<OracleParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5668,8 +5614,8 @@ class QueryApi {
     );
   }
 
-  /// PacketAcknowledgement
   /// PacketAcknowledgement queries a stored packet acknowledgement hash.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -5682,9 +5628,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved] as data
+  /// Returns a [Future] containing a [Response] with a [QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>> packetAcknowledgement({ 
+  Future<Response<QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>> packetAcknowledgement({ 
     required String channelId,
     required String portId,
     required String sequence,
@@ -5716,14 +5662,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved _responseData;
+    QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved _responseData;
 
     try {
-      const _responseType = FullType(QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved);
+      const _responseType = FullType(QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved;
+      ) as QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5734,7 +5680,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryPacketAcknowledgementResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>(
+    return Response<QueryPacketAcknowledgementResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5746,8 +5692,8 @@ class QueryApi {
     );
   }
 
-  /// PacketAcknowledgements
   /// PacketAcknowledgements returns all the packet acknowledgements associated with a channel.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -5764,9 +5710,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod>> packetAcknowledgements({ 
+  Future<Response<QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod>> packetAcknowledgements({ 
     required String channelId,
     required String portId,
     String? paginationPeriodKey,
@@ -5811,14 +5757,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod _responseData;
+    QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod);
+      const _responseType = FullType(QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod;
+      ) as QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5829,7 +5775,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryPacketAcknowledgemetsResponseistherequesttypefortheQueryQueryPacketAcknowledgementsRPCmethod>(
+    return Response<QueryPacketAcknowledgemetsResponseIsTheRequestTypeForTheQueryQueryPacketAcknowledgementsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5841,8 +5787,8 @@ class QueryApi {
     );
   }
 
-  /// PacketCommitment
   /// PacketCommitment queries a stored packet commitment hash.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -5855,9 +5801,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved] as data
+  /// Returns a [Future] containing a [Response] with a [QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>> packetCommitment({ 
+  Future<Response<QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>> packetCommitment({ 
     required String channelId,
     required String portId,
     required String sequence,
@@ -5889,14 +5835,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved _responseData;
+    QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved _responseData;
 
     try {
-      const _responseType = FullType(QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved);
+      const _responseType = FullType(QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved;
+      ) as QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -5907,7 +5853,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryPacketCommitmentResponsedefinestheclientqueryresponseforapacketwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>(
+    return Response<QueryPacketCommitmentResponseDefinesTheClientQueryResponseForAPacketWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5919,8 +5865,8 @@ class QueryApi {
     );
   }
 
-  /// PacketCommitments
   /// PacketCommitments returns all the packet commitments hashes associated with a channel.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -5937,9 +5883,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod>> packetCommitments({ 
+  Future<Response<QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod>> packetCommitments({ 
     required String channelId,
     required String portId,
     String? paginationPeriodKey,
@@ -5984,14 +5930,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod _responseData;
+    QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod);
+      const _responseType = FullType(QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod;
+      ) as QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6002,7 +5948,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod>(
+    return Response<QueryPacketCommitmentsResponseIsTheRequestTypeForTheQueryQueryPacketCommitmentsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6014,8 +5960,8 @@ class QueryApi {
     );
   }
 
-  /// PacketReceipt
   /// PacketReceipt queries if a given packet sequence has been received on the queried chain
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -6028,9 +5974,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved] as data
+  /// Returns a [Future] containing a [Response] with a [QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>> packetReceipt({ 
+  Future<Response<QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>> packetReceipt({ 
     required String channelId,
     required String portId,
     required String sequence,
@@ -6062,14 +6008,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved _responseData;
+    QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved _responseData;
 
     try {
-      const _responseType = FullType(QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved);
+      const _responseType = FullType(QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved;
+      ) as QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6080,7 +6026,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryPacketReceiptResponsedefinestheclientqueryresponseforapacketreceiptwhichalsoincludesaproofandtheheightfromwhichtheproofwasretrieved>(
+    return Response<QueryPacketReceiptResponseDefinesTheClientQueryResponseForAPacketReceiptWhichAlsoIncludesAProofAndTheHeightFromWhichTheProofWasRetrieved>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6092,8 +6038,8 @@ class QueryApi {
     );
   }
 
-  /// Params
   /// Params queries a specific parameter of a module, given its subspace and key.
+  /// 
   ///
   /// Parameters:
   /// * [subspace] - subspace defines the module to query the parameter for.
@@ -6105,9 +6051,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosParamsV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Params200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosParamsV1beta1QueryParamsResponse>> params({ 
+  Future<Response<Params200Response>> params({ 
     String? subspace,
     String? key,
     CancelToken? cancelToken,
@@ -6144,14 +6090,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosParamsV1beta1QueryParamsResponse _responseData;
+    Params200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosParamsV1beta1QueryParamsResponse);
+      const _responseType = FullType(Params200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosParamsV1beta1QueryParamsResponse;
+      ) as Params200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6162,7 +6108,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosParamsV1beta1QueryParamsResponse>(
+    return Response<Params200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6174,8 +6120,8 @@ class QueryApi {
     );
   }
 
-  /// Pool
   /// Pool queries the pool info.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -6185,9 +6131,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryPoolResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Pool200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryPoolResponse>> pool({ 
+  Future<Response<Pool200Response>> pool({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -6216,14 +6162,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryPoolResponse _responseData;
+    Pool200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryPoolResponse);
+      const _responseType = FullType(Pool200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryPoolResponse;
+      ) as Pool200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6234,7 +6180,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryPoolResponse>(
+    return Response<Pool200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6246,8 +6192,8 @@ class QueryApi {
     );
   }
 
-  /// Proposal
   /// Proposal queries proposal details based on ProposalID.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -6258,9 +6204,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryProposalResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Proposal200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryProposalResponse>> proposal({ 
+  Future<Response<Proposal200Response>> proposal({ 
     required String proposalId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -6290,14 +6236,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryProposalResponse _responseData;
+    Proposal200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryProposalResponse);
+      const _responseType = FullType(Proposal200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryProposalResponse;
+      ) as Proposal200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6308,7 +6254,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryProposalResponse>(
+    return Response<Proposal200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6320,8 +6266,8 @@ class QueryApi {
     );
   }
 
-  /// Proposals
   /// Proposals queries all proposals based on given status.
+  /// 
   ///
   /// Parameters:
   /// * [proposalStatus] - proposal_status defines the status of the proposals.   - PROPOSAL_STATUS_UNSPECIFIED: PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.  - PROPOSAL_STATUS_DEPOSIT_PERIOD: PROPOSAL_STATUS_DEPOSIT_PERIOD defines a proposal status during the deposit period.  - PROPOSAL_STATUS_VOTING_PERIOD: PROPOSAL_STATUS_VOTING_PERIOD defines a proposal status during the voting period.  - PROPOSAL_STATUS_PASSED: PROPOSAL_STATUS_PASSED defines a proposal status of a proposal that has passed.  - PROPOSAL_STATUS_REJECTED: PROPOSAL_STATUS_REJECTED defines a proposal status of a proposal that has been rejected.  - PROPOSAL_STATUS_FAILED: PROPOSAL_STATUS_FAILED defines a proposal status of a proposal that has failed.
@@ -6339,10 +6285,10 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryProposalsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Proposals200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryProposalsResponse>> proposals({ 
-    ProposalStatus? proposalStatus,
+  Future<Response<Proposals200Response>> proposals({ 
+    String? proposalStatus = 'PROPOSAL_STATUS_UNSPECIFIED',
     String? voter,
     String? depositor,
     String? paginationPeriodKey,
@@ -6371,7 +6317,7 @@ class QueryApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (proposalStatus != null) r'proposal_status': encodeQueryParameter(_serializers, proposalStatus, const FullType(ProposalStatus)),
+      if (proposalStatus != null) r'proposal_status': encodeQueryParameter(_serializers, proposalStatus, const FullType(String)),
       if (voter != null) r'voter': encodeQueryParameter(_serializers, voter, const FullType(String)),
       if (depositor != null) r'depositor': encodeQueryParameter(_serializers, depositor, const FullType(String)),
       if (paginationPeriodKey != null) r'pagination.key': encodeQueryParameter(_serializers, paginationPeriodKey, const FullType(String)),
@@ -6390,14 +6336,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryProposalsResponse _responseData;
+    Proposals200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryProposalsResponse);
+      const _responseType = FullType(Proposals200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryProposalsResponse;
+      ) as Proposals200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6408,7 +6354,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryProposalsResponse>(
+    return Response<Proposals200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6420,12 +6366,12 @@ class QueryApi {
     );
   }
 
-  /// RawStore
   /// RawStore return single key from the raw store data of a contract
+  /// 
   ///
   /// Parameters:
-  /// * [contractAddress] - 
-  /// * [key] - 
+  /// * [contractAddress] 
+  /// * [key] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -6433,9 +6379,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryRawStoreResponse] as data
+  /// Returns a [Future] containing a [Response] with a [RawStore200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryRawStoreResponse>> rawStore({ 
+  Future<Response<RawStore200Response>> rawStore({ 
     required String contractAddress,
     String? key,
     CancelToken? cancelToken,
@@ -6471,14 +6417,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryRawStoreResponse _responseData;
+    RawStore200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryRawStoreResponse);
+      const _responseType = FullType(RawStore200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryRawStoreResponse;
+      ) as RawStore200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6489,7 +6435,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryRawStoreResponse>(
+    return Response<RawStore200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6501,8 +6447,8 @@ class QueryApi {
     );
   }
 
-  /// Redelegations
   /// Redelegations queries redelegations of given address.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddr] - delegator_addr defines the delegator address to query for.
@@ -6520,9 +6466,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryRedelegationsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Redelegations200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryRedelegationsResponse>> redelegations({ 
+  Future<Response<Redelegations200Response>> redelegations({ 
     required String delegatorAddr,
     String? srcValidatorAddr,
     String? dstValidatorAddr,
@@ -6570,14 +6516,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryRedelegationsResponse _responseData;
+    Redelegations200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryRedelegationsResponse);
+      const _responseType = FullType(Redelegations200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryRedelegationsResponse;
+      ) as Redelegations200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6588,7 +6534,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryRedelegationsResponse>(
+    return Response<Redelegations200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6600,8 +6546,8 @@ class QueryApi {
     );
   }
 
-  /// RewardWeight
   /// RewardWeight return the current reward weight
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -6611,9 +6557,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryRewardWeightResponse] as data
+  /// Returns a [Future] containing a [Response] with a [RewardWeight200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryRewardWeightResponse>> rewardWeight({ 
+  Future<Response<RewardWeight200Response>> rewardWeight({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -6642,14 +6588,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryRewardWeightResponse _responseData;
+    RewardWeight200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryRewardWeightResponse);
+      const _responseType = FullType(RewardWeight200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryRewardWeightResponse;
+      ) as RewardWeight200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6660,7 +6606,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryRewardWeightResponse>(
+    return Response<RewardWeight200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6672,8 +6618,8 @@ class QueryApi {
     );
   }
 
-  /// SeigniorageProceeds
   /// SeigniorageProceeds return the current seigniorage proceeds
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -6683,9 +6629,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QuerySeigniorageProceedsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [SeigniorageProceeds200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QuerySeigniorageProceedsResponse>> seigniorageProceeds({ 
+  Future<Response<SeigniorageProceeds200Response>> seigniorageProceeds({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -6714,14 +6660,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QuerySeigniorageProceedsResponse _responseData;
+    SeigniorageProceeds200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QuerySeigniorageProceedsResponse);
+      const _responseType = FullType(SeigniorageProceeds200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QuerySeigniorageProceedsResponse;
+      ) as SeigniorageProceeds200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6732,7 +6678,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QuerySeigniorageProceedsResponse>(
+    return Response<SeigniorageProceeds200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6744,8 +6690,8 @@ class QueryApi {
     );
   }
 
-  /// SigningInfo
   /// SigningInfo queries the signing info of given cons address
+  /// 
   ///
   /// Parameters:
   /// * [consAddress] - cons_address is the address to query signing info of
@@ -6756,9 +6702,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod>> signingInfo({ 
+  Future<Response<QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod>> signingInfo({ 
     required String consAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -6788,14 +6734,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod _responseData;
+    QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod);
+      const _responseType = FullType(QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod;
+      ) as QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6806,7 +6752,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod>(
+    return Response<QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6818,8 +6764,8 @@ class QueryApi {
     );
   }
 
-  /// SigningInfos
   /// SigningInfos queries signing info of all validators
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -6834,9 +6780,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod>> signingInfos({ 
+  Future<Response<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>> signingInfos({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -6879,14 +6825,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod _responseData;
+    QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod);
+      const _responseType = FullType(QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod;
+      ) as QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6897,7 +6843,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethod>(
+    return Response<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6909,8 +6855,8 @@ class QueryApi {
     );
   }
 
-  /// SlashingParams
   /// Params queries the parameters of slashing module
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -6920,9 +6866,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod>> slashingParams({ 
+  Future<Response<QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod>> slashingParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -6951,14 +6897,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod _responseData;
+    QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod);
+      const _responseType = FullType(QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod;
+      ) as QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -6969,7 +6915,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod>(
+    return Response<QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -6981,8 +6927,8 @@ class QueryApi {
     );
   }
 
-  /// StakingDelegatorValidators
   /// DelegatorValidators queries all validators info for given delegator address.
+  /// 
   ///
   /// Parameters:
   /// * [delegatorAddr] - delegator_addr defines the delegator address to query for.
@@ -6998,9 +6944,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StakingDelegatorValidatorsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [StakingDelegatorValidators200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<StakingDelegatorValidatorsResponse>> stakingDelegatorValidators({ 
+  Future<Response<StakingDelegatorValidators200Response>> stakingDelegatorValidators({ 
     required String delegatorAddr,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -7044,14 +6990,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    StakingDelegatorValidatorsResponse _responseData;
+    StakingDelegatorValidators200Response _responseData;
 
     try {
-      const _responseType = FullType(StakingDelegatorValidatorsResponse);
+      const _responseType = FullType(StakingDelegatorValidators200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StakingDelegatorValidatorsResponse;
+      ) as StakingDelegatorValidators200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7062,7 +7008,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StakingDelegatorValidatorsResponse>(
+    return Response<StakingDelegatorValidators200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7074,8 +7020,8 @@ class QueryApi {
     );
   }
 
-  /// StakingParams
   /// Parameters queries the staking parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7085,9 +7031,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [StakingParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryParamsResponse>> stakingParams({ 
+  Future<Response<StakingParams200Response>> stakingParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7116,14 +7062,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryParamsResponse _responseData;
+    StakingParams200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryParamsResponse);
+      const _responseType = FullType(StakingParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryParamsResponse;
+      ) as StakingParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7134,7 +7080,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryParamsResponse>(
+    return Response<StakingParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7146,8 +7092,8 @@ class QueryApi {
     );
   }
 
-  /// SupplyOf
   /// SupplyOf queries the supply of a single coin.
+  /// 
   ///
   /// Parameters:
   /// * [denom] - denom is the coin denom to query balances for.
@@ -7158,9 +7104,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosBankV1beta1QuerySupplyOfResponse] as data
+  /// Returns a [Future] containing a [Response] with a [SupplyOf200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosBankV1beta1QuerySupplyOfResponse>> supplyOf({ 
+  Future<Response<SupplyOf200Response>> supplyOf({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -7190,14 +7136,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosBankV1beta1QuerySupplyOfResponse _responseData;
+    SupplyOf200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosBankV1beta1QuerySupplyOfResponse);
+      const _responseType = FullType(SupplyOf200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosBankV1beta1QuerySupplyOfResponse;
+      ) as SupplyOf200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7208,7 +7154,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosBankV1beta1QuerySupplyOfResponse>(
+    return Response<SupplyOf200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7220,8 +7166,8 @@ class QueryApi {
     );
   }
 
-  /// Swap
   /// Swap returns simulated swap amount.
+  /// 
   ///
   /// Parameters:
   /// * [offerCoin] - offer_coin defines the coin being offered (i.e. 1000000uluna).
@@ -7233,9 +7179,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraMarketV1beta1QuerySwapResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Swap200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraMarketV1beta1QuerySwapResponse>> swap({ 
+  Future<Response<Swap200Response>> swap({ 
     String? offerCoin,
     String? askDenom,
     CancelToken? cancelToken,
@@ -7272,14 +7218,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraMarketV1beta1QuerySwapResponse _responseData;
+    Swap200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraMarketV1beta1QuerySwapResponse);
+      const _responseType = FullType(Swap200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraMarketV1beta1QuerySwapResponse;
+      ) as Swap200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7290,7 +7236,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraMarketV1beta1QuerySwapResponse>(
+    return Response<Swap200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7302,8 +7248,8 @@ class QueryApi {
     );
   }
 
-  /// TallyResult
   /// TallyResult queries the tally of a proposal vote.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -7314,9 +7260,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryTallyResultResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TallyResult200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryTallyResultResponse>> tallyResult({ 
+  Future<Response<TallyResult200Response>> tallyResult({ 
     required String proposalId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -7346,14 +7292,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryTallyResultResponse _responseData;
+    TallyResult200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryTallyResultResponse);
+      const _responseType = FullType(TallyResult200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryTallyResultResponse;
+      ) as TallyResult200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7364,7 +7310,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryTallyResultResponse>(
+    return Response<TallyResult200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7376,8 +7322,8 @@ class QueryApi {
     );
   }
 
-  /// TaxCap
   /// TaxCap returns the tax cap of a denom
+  /// 
   ///
   /// Parameters:
   /// * [denom] - denom defines the denomination to query for.
@@ -7388,9 +7334,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryTaxCapResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TaxCap200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryTaxCapResponse>> taxCap({ 
+  Future<Response<TaxCap200Response>> taxCap({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -7420,14 +7366,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryTaxCapResponse _responseData;
+    TaxCap200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryTaxCapResponse);
+      const _responseType = FullType(TaxCap200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryTaxCapResponse;
+      ) as TaxCap200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7438,7 +7384,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryTaxCapResponse>(
+    return Response<TaxCap200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7450,8 +7396,8 @@ class QueryApi {
     );
   }
 
-  /// TaxCaps
   /// TaxCaps returns the all tax caps
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7461,9 +7407,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryTaxCapsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TaxCaps200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryTaxCapsResponse>> taxCaps({ 
+  Future<Response<TaxCaps200Response>> taxCaps({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7492,14 +7438,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryTaxCapsResponse _responseData;
+    TaxCaps200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryTaxCapsResponse);
+      const _responseType = FullType(TaxCaps200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryTaxCapsResponse;
+      ) as TaxCaps200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7510,7 +7456,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryTaxCapsResponse>(
+    return Response<TaxCaps200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7522,8 +7468,8 @@ class QueryApi {
     );
   }
 
-  /// TaxProceeds
   /// TaxProceeds return the current tax proceeds
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7533,9 +7479,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryTaxProceedsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TaxProceeds200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryTaxProceedsResponse>> taxProceeds({ 
+  Future<Response<TaxProceeds200Response>> taxProceeds({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7564,14 +7510,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryTaxProceedsResponse _responseData;
+    TaxProceeds200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryTaxProceedsResponse);
+      const _responseType = FullType(TaxProceeds200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryTaxProceedsResponse;
+      ) as TaxProceeds200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7582,7 +7528,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryTaxProceedsResponse>(
+    return Response<TaxProceeds200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7594,8 +7540,8 @@ class QueryApi {
     );
   }
 
-  /// TaxRate
   /// TaxRate return the current tax rate
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7605,9 +7551,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryTaxRateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TaxRate200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryTaxRateResponse>> taxRate({ 
+  Future<Response<TaxRate200Response>> taxRate({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7636,14 +7582,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryTaxRateResponse _responseData;
+    TaxRate200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryTaxRateResponse);
+      const _responseType = FullType(TaxRate200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryTaxRateResponse;
+      ) as TaxRate200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7654,7 +7600,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryTaxRateResponse>(
+    return Response<TaxRate200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7666,8 +7612,8 @@ class QueryApi {
     );
   }
 
-  /// TerraPoolDelta
   /// TerraPoolDelta returns terra_pool_delta amount.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7677,9 +7623,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraMarketV1beta1QueryTerraPoolDeltaResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TerraPoolDelta200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraMarketV1beta1QueryTerraPoolDeltaResponse>> terraPoolDelta({ 
+  Future<Response<TerraPoolDelta200Response>> terraPoolDelta({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7708,14 +7654,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraMarketV1beta1QueryTerraPoolDeltaResponse _responseData;
+    TerraPoolDelta200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraMarketV1beta1QueryTerraPoolDeltaResponse);
+      const _responseType = FullType(TerraPoolDelta200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraMarketV1beta1QueryTerraPoolDeltaResponse;
+      ) as TerraPoolDelta200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7726,7 +7672,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraMarketV1beta1QueryTerraPoolDeltaResponse>(
+    return Response<TerraPoolDelta200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7738,8 +7684,8 @@ class QueryApi {
     );
   }
 
-  /// TobinTax
   /// TobinTax returns tobin tax of a denom
+  /// 
   ///
   /// Parameters:
   /// * [denom] - denom defines the denomination to query for.
@@ -7750,9 +7696,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryTobinTaxResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TobinTax200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryTobinTaxResponse>> tobinTax({ 
+  Future<Response<TobinTax200Response>> tobinTax({ 
     required String denom,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -7782,14 +7728,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryTobinTaxResponse _responseData;
+    TobinTax200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryTobinTaxResponse);
+      const _responseType = FullType(TobinTax200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryTobinTaxResponse;
+      ) as TobinTax200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7800,7 +7746,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryTobinTaxResponse>(
+    return Response<TobinTax200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7812,8 +7758,8 @@ class QueryApi {
     );
   }
 
-  /// TobinTaxes
   /// TobinTaxes returns tobin taxes of all denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7823,9 +7769,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryTobinTaxesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TobinTaxes200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryTobinTaxesResponse>> tobinTaxes({ 
+  Future<Response<TobinTaxes200Response>> tobinTaxes({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -7854,14 +7800,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryTobinTaxesResponse _responseData;
+    TobinTaxes200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryTobinTaxesResponse);
+      const _responseType = FullType(TobinTaxes200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryTobinTaxesResponse;
+      ) as TobinTaxes200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7872,7 +7818,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryTobinTaxesResponse>(
+    return Response<TobinTaxes200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7884,8 +7830,8 @@ class QueryApi {
     );
   }
 
-  /// TotalSupply
   /// TotalSupply queries the total supply of all coins.
+  /// 
   ///
   /// Parameters:
   /// * [paginationPeriodKey] - key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
@@ -7900,9 +7846,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod>> totalSupply({ 
+  Future<Response<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>> totalSupply({ 
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
     String? paginationPeriodLimit,
@@ -7945,14 +7891,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod _responseData;
+    QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod);
+      const _responseType = FullType(QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod;
+      ) as QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -7963,7 +7909,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod>(
+    return Response<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -7975,8 +7921,8 @@ class QueryApi {
     );
   }
 
-  /// TreasuryParams
   /// Params queries all parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -7986,9 +7932,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraTreasuryV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TreasuryParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraTreasuryV1beta1QueryParamsResponse>> treasuryParams({ 
+  Future<Response<TreasuryParams200Response>> treasuryParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -8017,14 +7963,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraTreasuryV1beta1QueryParamsResponse _responseData;
+    TreasuryParams200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraTreasuryV1beta1QueryParamsResponse);
+      const _responseType = FullType(TreasuryParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraTreasuryV1beta1QueryParamsResponse;
+      ) as TreasuryParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8035,7 +7981,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraTreasuryV1beta1QueryParamsResponse>(
+    return Response<TreasuryParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8047,8 +7993,8 @@ class QueryApi {
     );
   }
 
-  /// UnbondingDelegation
   /// UnbondingDelegation queries unbonding info for given validator delegator pair.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator_addr defines the validator address to query for.
@@ -8060,9 +8006,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryUnbondingDelegationResponse] as data
+  /// Returns a [Future] containing a [Response] with a [UnbondingDelegation200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryUnbondingDelegationResponse>> unbondingDelegation({ 
+  Future<Response<UnbondingDelegation200Response>> unbondingDelegation({ 
     required String validatorAddr,
     required String delegatorAddr,
     CancelToken? cancelToken,
@@ -8093,14 +8039,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryUnbondingDelegationResponse _responseData;
+    UnbondingDelegation200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryUnbondingDelegationResponse);
+      const _responseType = FullType(UnbondingDelegation200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryUnbondingDelegationResponse;
+      ) as UnbondingDelegation200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8111,7 +8057,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryUnbondingDelegationResponse>(
+    return Response<UnbondingDelegation200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8123,8 +8069,8 @@ class QueryApi {
     );
   }
 
-  /// UnreceivedAcks
   /// UnreceivedAcks returns all the unreceived IBC acknowledgements associated with a channel and sequences.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -8137,9 +8083,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod>> unreceivedAcks({ 
+  Future<Response<QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod>> unreceivedAcks({ 
     required String channelId,
     required String portId,
     required BuiltList<String> packetAckSequences,
@@ -8171,14 +8117,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod _responseData;
+    QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod);
+      const _responseType = FullType(QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod;
+      ) as QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8189,7 +8135,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryUnreceivedAcksResponseistheresponsetypefortheQueryUnreceivedAcksRPCmethod>(
+    return Response<QueryUnreceivedAcksResponseIsTheResponseTypeForTheQueryUnreceivedAcksRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8201,8 +8147,8 @@ class QueryApi {
     );
   }
 
-  /// UnreceivedPackets
   /// UnreceivedPackets returns all the unreceived IBC packets associated with a channel and sequences.
+  /// 
   ///
   /// Parameters:
   /// * [channelId] - channel unique identifier
@@ -8215,9 +8161,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod>> unreceivedPackets({ 
+  Future<Response<QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod>> unreceivedPackets({ 
     required String channelId,
     required String portId,
     required BuiltList<String> packetCommitmentSequences,
@@ -8249,14 +8195,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod _responseData;
+    QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod);
+      const _responseType = FullType(QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod;
+      ) as QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8267,7 +8213,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryUnreceivedPacketsResponseistheresponsetypefortheQueryUnreceivedPacketCommitmentsRPCmethod>(
+    return Response<QueryUnreceivedPacketsResponseIsTheResponseTypeForTheQueryUnreceivedPacketCommitmentsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8279,8 +8225,8 @@ class QueryApi {
     );
   }
 
-  /// UpgradedClientState
   /// UpgradedClientState queries an Upgraded IBC light client.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -8290,9 +8236,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IbcCoreClientV1QueryUpgradedClientStateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [UpgradedClientState200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<IbcCoreClientV1QueryUpgradedClientStateResponse>> upgradedClientState({ 
+  Future<Response<UpgradedClientState200Response>> upgradedClientState({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -8321,14 +8267,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IbcCoreClientV1QueryUpgradedClientStateResponse _responseData;
+    UpgradedClientState200Response _responseData;
 
     try {
-      const _responseType = FullType(IbcCoreClientV1QueryUpgradedClientStateResponse);
+      const _responseType = FullType(UpgradedClientState200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as IbcCoreClientV1QueryUpgradedClientStateResponse;
+      ) as UpgradedClientState200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8339,7 +8285,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<IbcCoreClientV1QueryUpgradedClientStateResponse>(
+    return Response<UpgradedClientState200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8351,8 +8297,8 @@ class QueryApi {
     );
   }
 
-  /// UpgradedConsensusState
   /// UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier This rpc is deprecated now that IBC has its own replacement (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
+  /// 
   ///
   /// Parameters:
   /// * [lastHeight] - last height of the current chain must be sent in request as this is the height under which next consensus state is stored
@@ -8363,9 +8309,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse] as data
+  /// Returns a [Future] containing a [Response] with a [UpgradedConsensusState200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse>> upgradedConsensusState({ 
+  Future<Response<UpgradedConsensusState200Response>> upgradedConsensusState({ 
     required String lastHeight,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -8395,14 +8341,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse _responseData;
+    UpgradedConsensusState200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse);
+      const _responseType = FullType(UpgradedConsensusState200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse;
+      ) as UpgradedConsensusState200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8413,7 +8359,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosUpgradeV1beta1QueryUpgradedConsensusStateResponse>(
+    return Response<UpgradedConsensusState200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8425,8 +8371,8 @@ class QueryApi {
     );
   }
 
-  /// Validator
   /// Validator queries validator info for given validator address.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator_addr defines the validator address to query for.
@@ -8437,9 +8383,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod>> validator({ 
+  Future<Response<QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod>> validator({ 
     required String validatorAddr,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -8469,14 +8415,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod _responseData;
+    QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod);
+      const _responseType = FullType(QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod;
+      ) as QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8487,7 +8433,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod>(
+    return Response<QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8499,8 +8445,8 @@ class QueryApi {
     );
   }
 
-  /// ValidatorCommission
   /// ValidatorCommission queries accumulated commission for a validator.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddress] - validator_address defines the validator address to query for.
@@ -8511,9 +8457,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod>> validatorCommission({ 
+  Future<Response<QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod>> validatorCommission({ 
     required String validatorAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -8543,14 +8489,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod _responseData;
+    QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod);
+      const _responseType = FullType(QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod;
+      ) as QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8561,7 +8507,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod>(
+    return Response<QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8573,8 +8519,8 @@ class QueryApi {
     );
   }
 
-  /// ValidatorDelegations
   /// ValidatorDelegations queries delegate info for given validator.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator_addr defines the validator address to query for.
@@ -8590,9 +8536,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod] as data
+  /// Returns a [Future] containing a [Response] with a [QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod>> validatorDelegations({ 
+  Future<Response<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>> validatorDelegations({ 
     required String validatorAddr,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -8636,14 +8582,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod _responseData;
+    QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod);
+      const _responseType = FullType(QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod;
+      ) as QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8654,7 +8600,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryValidatorDelegationsResponseisresponsetypefortheQueryValidatorDelegationsRPCmethod>(
+    return Response<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8666,8 +8612,8 @@ class QueryApi {
     );
   }
 
-  /// ValidatorOutstandingRewards
   /// ValidatorOutstandingRewards queries rewards of a validator address.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddress] - validator_address defines the validator address to query for.
@@ -8678,9 +8624,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ValidatorOutstandingRewards200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse>> validatorOutstandingRewards({ 
+  Future<Response<ValidatorOutstandingRewards200Response>> validatorOutstandingRewards({ 
     required String validatorAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -8710,14 +8656,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse _responseData;
+    ValidatorOutstandingRewards200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse);
+      const _responseType = FullType(ValidatorOutstandingRewards200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse;
+      ) as ValidatorOutstandingRewards200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8728,7 +8674,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse>(
+    return Response<ValidatorOutstandingRewards200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8740,8 +8686,8 @@ class QueryApi {
     );
   }
 
-  /// ValidatorSlashes
   /// ValidatorSlashes queries slash events of a validator.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddress] - validator_address defines the validator address to query for.
@@ -8759,9 +8705,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosDistributionV1beta1QueryValidatorSlashesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ValidatorSlashes200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosDistributionV1beta1QueryValidatorSlashesResponse>> validatorSlashes({ 
+  Future<Response<ValidatorSlashes200Response>> validatorSlashes({ 
     required String validatorAddress,
     String? startingHeight,
     String? endingHeight,
@@ -8809,14 +8755,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosDistributionV1beta1QueryValidatorSlashesResponse _responseData;
+    ValidatorSlashes200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosDistributionV1beta1QueryValidatorSlashesResponse);
+      const _responseType = FullType(ValidatorSlashes200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosDistributionV1beta1QueryValidatorSlashesResponse;
+      ) as ValidatorSlashes200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8827,7 +8773,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosDistributionV1beta1QueryValidatorSlashesResponse>(
+    return Response<ValidatorSlashes200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8839,8 +8785,8 @@ class QueryApi {
     );
   }
 
-  /// ValidatorUnbondingDelegations
   /// ValidatorUnbondingDelegations queries unbonding delegations of a validator.
+  /// 
   ///
   /// Parameters:
   /// * [validatorAddr] - validator_addr defines the validator address to query for.
@@ -8856,9 +8802,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [ValidatorUnbondingDelegations200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse>> validatorUnbondingDelegations({ 
+  Future<Response<ValidatorUnbondingDelegations200Response>> validatorUnbondingDelegations({ 
     required String validatorAddr,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -8902,14 +8848,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse _responseData;
+    ValidatorUnbondingDelegations200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse);
+      const _responseType = FullType(ValidatorUnbondingDelegations200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse;
+      ) as ValidatorUnbondingDelegations200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -8920,7 +8866,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosStakingV1beta1QueryValidatorUnbondingDelegationsResponse>(
+    return Response<ValidatorUnbondingDelegations200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -8932,8 +8878,8 @@ class QueryApi {
     );
   }
 
-  /// Validators
   /// Validators queries all validators that match the given status.
+  /// 
   ///
   /// Parameters:
   /// * [status] - status enables to query for validators matching a given status.
@@ -8949,9 +8895,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1] as data
+  /// Returns a [Future] containing a [Response] with a [QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1>> validators({ 
+  Future<Response<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>> validators({ 
     String? status,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -8996,14 +8942,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1 _responseData;
+    QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod _responseData;
 
     try {
-      const _responseType = FullType(QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1);
+      const _responseType = FullType(QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1;
+      ) as QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -9014,7 +8960,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1>(
+    return Response<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -9026,8 +8972,8 @@ class QueryApi {
     );
   }
 
-  /// Vote
   /// Vote queries voted information based on proposalID, voterAddr.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -9039,9 +8985,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryVoteResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Vote200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryVoteResponse>> vote({ 
+  Future<Response<Vote200Response>> vote({ 
     required String proposalId,
     required String voter,
     CancelToken? cancelToken,
@@ -9072,14 +9018,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryVoteResponse _responseData;
+    Vote200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryVoteResponse);
+      const _responseType = FullType(Vote200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryVoteResponse;
+      ) as Vote200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -9090,7 +9036,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryVoteResponse>(
+    return Response<Vote200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -9102,8 +9048,8 @@ class QueryApi {
     );
   }
 
-  /// VoteTargets
   /// VoteTargets returns all vote target denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -9113,9 +9059,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraOracleV1beta1QueryVoteTargetsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [VoteTargets200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraOracleV1beta1QueryVoteTargetsResponse>> voteTargets({ 
+  Future<Response<VoteTargets200Response>> voteTargets({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -9144,14 +9090,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraOracleV1beta1QueryVoteTargetsResponse _responseData;
+    VoteTargets200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraOracleV1beta1QueryVoteTargetsResponse);
+      const _responseType = FullType(VoteTargets200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraOracleV1beta1QueryVoteTargetsResponse;
+      ) as VoteTargets200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -9162,7 +9108,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraOracleV1beta1QueryVoteTargetsResponse>(
+    return Response<VoteTargets200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -9174,8 +9120,8 @@ class QueryApi {
     );
   }
 
-  /// Votes
   /// Votes queries votes of a given proposal.
+  /// 
   ///
   /// Parameters:
   /// * [proposalId] - proposal_id defines the unique id of the proposal.
@@ -9191,9 +9137,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CosmosGovV1beta1QueryVotesResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Votes200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<CosmosGovV1beta1QueryVotesResponse>> votes({ 
+  Future<Response<Votes200Response>> votes({ 
     required String proposalId,
     String? paginationPeriodKey,
     String? paginationPeriodOffset,
@@ -9237,14 +9183,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CosmosGovV1beta1QueryVotesResponse _responseData;
+    Votes200Response _responseData;
 
     try {
-      const _responseType = FullType(CosmosGovV1beta1QueryVotesResponse);
+      const _responseType = FullType(Votes200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CosmosGovV1beta1QueryVotesResponse;
+      ) as Votes200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -9255,7 +9201,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CosmosGovV1beta1QueryVotesResponse>(
+    return Response<Votes200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -9267,8 +9213,8 @@ class QueryApi {
     );
   }
 
-  /// WasmParams
   /// Params queries all parameters.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -9278,9 +9224,9 @@ class QueryApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TerraWasmV1beta1QueryParamsResponse] as data
+  /// Returns a [Future] containing a [Response] with a [WasmParams200Response] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<TerraWasmV1beta1QueryParamsResponse>> wasmParams({ 
+  Future<Response<WasmParams200Response>> wasmParams({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -9309,14 +9255,14 @@ class QueryApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TerraWasmV1beta1QueryParamsResponse _responseData;
+    WasmParams200Response _responseData;
 
     try {
-      const _responseType = FullType(TerraWasmV1beta1QueryParamsResponse);
+      const _responseType = FullType(WasmParams200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as TerraWasmV1beta1QueryParamsResponse;
+      ) as WasmParams200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -9327,7 +9273,7 @@ class QueryApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<TerraWasmV1beta1QueryParamsResponse>(
+    return Response<WasmParams200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

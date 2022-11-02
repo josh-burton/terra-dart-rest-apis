@@ -9,9 +9,9 @@ part of 'cosmos_base_tendermint_v1beta1_get_latest_block_response.dart';
 class _$CosmosBaseTendermintV1beta1GetLatestBlockResponse
     extends CosmosBaseTendermintV1beta1GetLatestBlockResponse {
   @override
-  final BlockID26? blockId;
+  final BlockID1? blockId;
   @override
-  final TendermintTypesBlock? block;
+  final GetLatestBlock200ResponseBlock? block;
 
   factory _$CosmosBaseTendermintV1beta1GetLatestBlockResponse(
           [void Function(
@@ -66,14 +66,15 @@ class CosmosBaseTendermintV1beta1GetLatestBlockResponseBuilder
             CosmosBaseTendermintV1beta1GetLatestBlockResponseBuilder> {
   _$CosmosBaseTendermintV1beta1GetLatestBlockResponse? _$v;
 
-  BlockID26Builder? _blockId;
-  BlockID26Builder get blockId => _$this._blockId ??= new BlockID26Builder();
-  set blockId(BlockID26Builder? blockId) => _$this._blockId = blockId;
+  BlockID1Builder? _blockId;
+  BlockID1Builder get blockId => _$this._blockId ??= new BlockID1Builder();
+  set blockId(BlockID1Builder? blockId) => _$this._blockId = blockId;
 
-  TendermintTypesBlockBuilder? _block;
-  TendermintTypesBlockBuilder get block =>
-      _$this._block ??= new TendermintTypesBlockBuilder();
-  set block(TendermintTypesBlockBuilder? block) => _$this._block = block;
+  GetLatestBlock200ResponseBlockBuilder? _block;
+  GetLatestBlock200ResponseBlockBuilder get block =>
+      _$this._block ??= new GetLatestBlock200ResponseBlockBuilder();
+  set block(GetLatestBlock200ResponseBlockBuilder? block) =>
+      _$this._block = block;
 
   CosmosBaseTendermintV1beta1GetLatestBlockResponseBuilder() {
     CosmosBaseTendermintV1beta1GetLatestBlockResponse._defaults(this);

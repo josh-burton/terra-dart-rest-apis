@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rewards** | [**CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards**](CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards.md) |  | [optional] 
+**rewards** | [**ValidatorOutstandingRewards200ResponseRewards**](ValidatorOutstandingRewards200ResponseRewards.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

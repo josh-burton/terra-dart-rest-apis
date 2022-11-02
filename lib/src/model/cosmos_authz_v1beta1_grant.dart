@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'cosmos_authz_v1beta1_grant.g.dart';
 /// * [expiration] 
 abstract class CosmosAuthzV1beta1Grant implements Built<CosmosAuthzV1beta1Grant, CosmosAuthzV1beta1GrantBuilder> {
     @BuiltValueField(wireName: r'authorization')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get authorization;
+    AccountsAreTheExistingAccountsInner? get authorization;
 
     @BuiltValueField(wireName: r'expiration')
     DateTime? get expiration;
@@ -46,7 +46,7 @@ class _$CosmosAuthzV1beta1GrantSerializer implements StructuredSerializer<Cosmos
             result
                 ..add(r'authorization')
                 ..add(serializers.serialize(object.authorization,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(AccountsAreTheExistingAccountsInner)));
         }
         if (object.expiration != null) {
             result
@@ -71,7 +71,7 @@ class _$CosmosAuthzV1beta1GrantSerializer implements StructuredSerializer<Cosmos
             switch (key) {
                 case r'authorization':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(AccountsAreTheExistingAccountsInner)) as AccountsAreTheExistingAccountsInner;
                     result.authorization.replace(valueDes);
                     break;
                 case r'expiration':

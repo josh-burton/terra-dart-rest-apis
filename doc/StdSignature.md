@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **signature** | **String** |  | [optional] 
-**pubKey** | [**PublicKey**](PublicKey.md) |  | [optional] 
+**pubKey** | [**TxsHashGet200ResponseTxSignaturePubKey**](TxsHashGet200ResponseTxSignaturePubKey.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

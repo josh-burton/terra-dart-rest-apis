@@ -8,7 +8,7 @@ part of 'cosmos_gov_v1beta1_deposit_params.dart';
 
 class _$CosmosGovV1beta1DepositParams extends CosmosGovV1beta1DepositParams {
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? minDeposit;
+  final BuiltList<AllBalances200ResponseBalancesInner>? minDeposit;
   @override
   final String? maxDepositPeriod;
 
@@ -56,10 +56,12 @@ class CosmosGovV1beta1DepositParamsBuilder
             CosmosGovV1beta1DepositParamsBuilder> {
   _$CosmosGovV1beta1DepositParams? _$v;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _minDeposit;
-  ListBuilder<CosmosBaseV1beta1Coin> get minDeposit =>
-      _$this._minDeposit ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set minDeposit(ListBuilder<CosmosBaseV1beta1Coin>? minDeposit) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _minDeposit;
+  ListBuilder<AllBalances200ResponseBalancesInner> get minDeposit =>
+      _$this._minDeposit ??=
+          new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set minDeposit(
+          ListBuilder<AllBalances200ResponseBalancesInner>? minDeposit) =>
       _$this._minDeposit = minDeposit;
 
   String? _maxDepositPeriod;

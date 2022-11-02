@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** |  | [optional] 
-**denomUnits** | [**BuiltList&lt;CosmosBankV1beta1DenomUnit&gt;**](CosmosBankV1beta1DenomUnit.md) |  | [optional] 
+**denomUnits** | [**BuiltList&lt;DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner&gt;**](DenomUnitsRepresentsTheListOfDenomUnitSForAGivenCoinInner.md) |  | [optional] 
 **base** | **String** | base represents the base denom (should be the DenomUnit with exponent = 0). | [optional] 
 **display** | **String** | display indicates the suggested denom that should be displayed in clients. | [optional] 
 **name** | **String** | Since: cosmos-sdk 0.43 | [optional] 

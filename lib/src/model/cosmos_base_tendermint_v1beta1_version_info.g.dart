@@ -21,7 +21,7 @@ class _$CosmosBaseTendermintV1beta1VersionInfo
   @override
   final String? goVersion;
   @override
-  final BuiltList<ModuleisthetypeforVersionInfo>? buildDeps;
+  final BuiltList<ModuleIsTheTypeForVersionInfo>? buildDeps;
   @override
   final String? cosmosSdkVersion;
 
@@ -128,10 +128,10 @@ class CosmosBaseTendermintV1beta1VersionInfoBuilder
   String? get goVersion => _$this._goVersion;
   set goVersion(String? goVersion) => _$this._goVersion = goVersion;
 
-  ListBuilder<ModuleisthetypeforVersionInfo>? _buildDeps;
-  ListBuilder<ModuleisthetypeforVersionInfo> get buildDeps =>
-      _$this._buildDeps ??= new ListBuilder<ModuleisthetypeforVersionInfo>();
-  set buildDeps(ListBuilder<ModuleisthetypeforVersionInfo>? buildDeps) =>
+  ListBuilder<ModuleIsTheTypeForVersionInfo>? _buildDeps;
+  ListBuilder<ModuleIsTheTypeForVersionInfo> get buildDeps =>
+      _$this._buildDeps ??= new ListBuilder<ModuleIsTheTypeForVersionInfo>();
+  set buildDeps(ListBuilder<ModuleIsTheTypeForVersionInfo>? buildDeps) =>
       _$this._buildDeps = buildDeps;
 
   String? _cosmosSdkVersion;

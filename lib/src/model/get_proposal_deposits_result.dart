@@ -12,9 +12,10 @@ part 'get_proposal_deposits_result.g.dart';
 /// GetProposalDepositsResult
 ///
 /// Properties:
-/// * [limit] 
+/// * [limit] - 
 /// * [deposits] - Deposit list
 abstract class GetProposalDepositsResult implements Built<GetProposalDepositsResult, GetProposalDepositsResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'limit')
     num get limit;
 

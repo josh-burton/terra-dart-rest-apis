@@ -8,7 +8,7 @@ part of 'cosmos_bank_v1beta1_params.dart';
 
 class _$CosmosBankV1beta1Params extends CosmosBankV1beta1Params {
   @override
-  final BuiltList<CosmosBankV1beta1SendEnabled>? sendEnabled;
+  final BuiltList<BankParams200ResponseParamsSendEnabledInner>? sendEnabled;
   @override
   final bool? defaultSendEnabled;
 
@@ -55,10 +55,13 @@ class CosmosBankV1beta1ParamsBuilder
         Builder<CosmosBankV1beta1Params, CosmosBankV1beta1ParamsBuilder> {
   _$CosmosBankV1beta1Params? _$v;
 
-  ListBuilder<CosmosBankV1beta1SendEnabled>? _sendEnabled;
-  ListBuilder<CosmosBankV1beta1SendEnabled> get sendEnabled =>
-      _$this._sendEnabled ??= new ListBuilder<CosmosBankV1beta1SendEnabled>();
-  set sendEnabled(ListBuilder<CosmosBankV1beta1SendEnabled>? sendEnabled) =>
+  ListBuilder<BankParams200ResponseParamsSendEnabledInner>? _sendEnabled;
+  ListBuilder<BankParams200ResponseParamsSendEnabledInner> get sendEnabled =>
+      _$this._sendEnabled ??=
+          new ListBuilder<BankParams200ResponseParamsSendEnabledInner>();
+  set sendEnabled(
+          ListBuilder<BankParams200ResponseParamsSendEnabledInner>?
+              sendEnabled) =>
       _$this._sendEnabled = sendEnabled;
 
   bool? _defaultSendEnabled;

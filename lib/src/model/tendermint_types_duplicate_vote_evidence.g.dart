@@ -9,9 +9,11 @@ part of 'tendermint_types_duplicate_vote_evidence.dart';
 class _$TendermintTypesDuplicateVoteEvidence
     extends TendermintTypesDuplicateVoteEvidence {
   @override
-  final TendermintTypesDuplicateVoteEvidenceVoteA? voteA;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA?
+      voteA;
   @override
-  final TendermintTypesDuplicateVoteEvidenceVoteA? voteB;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteA?
+      voteB;
   @override
   final String? totalVotingPower;
   @override
@@ -81,16 +83,24 @@ class TendermintTypesDuplicateVoteEvidenceBuilder
             TendermintTypesDuplicateVoteEvidenceBuilder> {
   _$TendermintTypesDuplicateVoteEvidence? _$v;
 
-  TendermintTypesDuplicateVoteEvidenceVoteABuilder? _voteA;
-  TendermintTypesDuplicateVoteEvidenceVoteABuilder get voteA =>
-      _$this._voteA ??= new TendermintTypesDuplicateVoteEvidenceVoteABuilder();
-  set voteA(TendermintTypesDuplicateVoteEvidenceVoteABuilder? voteA) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder?
+      _voteA;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder
+      get voteA => _$this._voteA ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder();
+  set voteA(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder?
+              voteA) =>
       _$this._voteA = voteA;
 
-  TendermintTypesDuplicateVoteEvidenceVoteABuilder? _voteB;
-  TendermintTypesDuplicateVoteEvidenceVoteABuilder get voteB =>
-      _$this._voteB ??= new TendermintTypesDuplicateVoteEvidenceVoteABuilder();
-  set voteB(TendermintTypesDuplicateVoteEvidenceVoteABuilder? voteB) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder?
+      _voteB;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder
+      get voteB => _$this._voteB ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder();
+  set voteB(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceVoteABuilder?
+              voteB) =>
       _$this._voteB = voteB;
 
   String? _totalVotingPower;

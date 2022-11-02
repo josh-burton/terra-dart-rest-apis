@@ -5,17 +5,15 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**gettheaccountinformationonblockchain**](AuthApi.md#gettheaccountinformationonblockchain) | **GET** /auth/accounts/{address} | Get the account information on blockchain
+[**authAccountsAddressGet**](AuthApi.md#authaccountsaddressget) | **GET** /auth/accounts/{address} | Get the account information on blockchain
 
 
-# **gettheaccountinformationonblockchain**
-> GettheaccountinformationonblockchainResponse gettheaccountinformationonblockchain(address)
-
-Get the account information on blockchain
+# **authAccountsAddressGet**
+> AuthAccountsAddressGet200Response authAccountsAddressGet(address)
 
 Get the account information on blockchain
 
@@ -27,10 +25,10 @@ final api = TerraRestApi().getAuthApi();
 final String address = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Account address
 
 try {
-    final response = api.gettheaccountinformationonblockchain(address);
+    final response = api.authAccountsAddressGet(address);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling AuthApi->gettheaccountinformationonblockchain: $e\n');
+    print('Exception when calling AuthApi->authAccountsAddressGet: $e\n');
 }
 ```
 
@@ -42,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GettheaccountinformationonblockchainResponse**](GettheaccountinformationonblockchainResponse.md)
+[**AuthAccountsAddressGet200Response**](AuthAccountsAddressGet200Response.md)
 
 ### Authorization
 

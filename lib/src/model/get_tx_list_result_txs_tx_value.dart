@@ -15,13 +15,14 @@ part 'get_tx_list_result_txs_tx_value.g.dart';
 ///
 /// Properties:
 /// * [fee] 
-/// * [memo] 
+/// * [memo] - 
 /// * [msg] - 
 /// * [signatures] - 
 abstract class GetTxListResultTxsTxValue implements Built<GetTxListResultTxsTxValue, GetTxListResultTxsTxValueBuilder> {
     @BuiltValueField(wireName: r'fee')
     GetTxListResultTxsTxValueFee get fee;
 
+    /// 
     @BuiltValueField(wireName: r'memo')
     String get memo;
 

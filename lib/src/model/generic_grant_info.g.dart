@@ -8,7 +8,7 @@ part of 'generic_grant_info.dart';
 
 class _$GenericGrantInfo extends GenericGrantInfo {
   @override
-  final GenericAuthorization? authorization;
+  final GenericGrantInfoAuthorization? authorization;
   @override
   final String? expiration;
 
@@ -52,10 +52,10 @@ class GenericGrantInfoBuilder
     implements Builder<GenericGrantInfo, GenericGrantInfoBuilder> {
   _$GenericGrantInfo? _$v;
 
-  GenericAuthorizationBuilder? _authorization;
-  GenericAuthorizationBuilder get authorization =>
-      _$this._authorization ??= new GenericAuthorizationBuilder();
-  set authorization(GenericAuthorizationBuilder? authorization) =>
+  GenericGrantInfoAuthorizationBuilder? _authorization;
+  GenericGrantInfoAuthorizationBuilder get authorization =>
+      _$this._authorization ??= new GenericGrantInfoAuthorizationBuilder();
+  set authorization(GenericGrantInfoAuthorizationBuilder? authorization) =>
       _$this._authorization = authorization;
 
   String? _expiration;

@@ -4,5 +4,11 @@ This API is generated from the official Terra swagger docs: https://fcd.terra.de
 
 This Swagger spec is a v2.0, and contains a bunch of errors, so conversion to Open API 3.0 is necessary.
 
-The spec is converted using [Apimatic Transformer](https://apimatic.io/transformer), which manages to clean and remove the errors.
+Conversion steps:
 
+- Download Terra Swagger 2.0 spec: https://fcd.terra.dev/swagger
+- Load spec into Swagger Editor: https://editor.swagger.io/
+- Manually fix and errors
+- Use Swagger Editor to convert to OpenAPI 3.0
+- Download as YAML
+- Run generation

@@ -11,16 +11,18 @@ part 'get_market_price_result_prices.g.dart';
 ///
 /// Properties:
 /// * [denom] - Coin denomination
-/// * [datetime] 
-/// * [price] 
+/// * [datetime] - 
+/// * [price] - 
 abstract class GetMarketPriceResultPrices implements Built<GetMarketPriceResultPrices, GetMarketPriceResultPricesBuilder> {
     /// Coin denomination
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'datetime')
     num get datetime;
 
+    /// 
     @BuiltValueField(wireName: r'price')
     num get price;
 

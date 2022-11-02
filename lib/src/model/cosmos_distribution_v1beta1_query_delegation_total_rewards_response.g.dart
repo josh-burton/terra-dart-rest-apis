@@ -9,9 +9,9 @@ part of 'cosmos_distribution_v1beta1_query_delegation_total_rewards_response.dar
 class _$CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse
     extends CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse {
   @override
-  final BuiltList<CosmosDistributionV1beta1DelegationDelegatorReward>? rewards;
+  final BuiltList<DelegationTotalRewards200ResponseRewardsInner>? rewards;
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? total;
+  final BuiltList<CommunityPool200ResponsePoolInner>? total;
 
   factory _$CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse(
           [void Function(
@@ -68,19 +68,19 @@ class CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseBuilder
             CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseBuilder> {
   _$CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse? _$v;
 
-  ListBuilder<CosmosDistributionV1beta1DelegationDelegatorReward>? _rewards;
-  ListBuilder<CosmosDistributionV1beta1DelegationDelegatorReward> get rewards =>
+  ListBuilder<DelegationTotalRewards200ResponseRewardsInner>? _rewards;
+  ListBuilder<DelegationTotalRewards200ResponseRewardsInner> get rewards =>
       _$this._rewards ??=
-          new ListBuilder<CosmosDistributionV1beta1DelegationDelegatorReward>();
+          new ListBuilder<DelegationTotalRewards200ResponseRewardsInner>();
   set rewards(
-          ListBuilder<CosmosDistributionV1beta1DelegationDelegatorReward>?
+          ListBuilder<DelegationTotalRewards200ResponseRewardsInner>?
               rewards) =>
       _$this._rewards = rewards;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _total;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get total =>
-      _$this._total ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set total(ListBuilder<CosmosBaseV1beta1DecCoin>? total) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _total;
+  ListBuilder<CommunityPool200ResponsePoolInner> get total =>
+      _$this._total ??= new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set total(ListBuilder<CommunityPool200ResponsePoolInner>? total) =>
       _$this._total = total;
 
   CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseBuilder() {

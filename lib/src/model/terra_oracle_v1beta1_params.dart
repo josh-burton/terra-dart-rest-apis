@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/denom_theobjecttoholdconfigurationsofeachdenom.dart';
+import 'package:terra_dart_rest_apis/src/model/denom_the_object_to_hold_configurations_of_each_denom.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'terra_oracle_v1beta1_params.g.dart';
 /// * [voteThreshold] 
 /// * [rewardBand] 
 /// * [rewardDistributionWindow] 
-/// * [whitelist] - 
+/// * [whitelist] 
 /// * [slashFraction] 
 /// * [slashWindow] 
 /// * [minValidPerWindow] 
@@ -33,9 +33,8 @@ abstract class TerraOracleV1beta1Params implements Built<TerraOracleV1beta1Param
     @BuiltValueField(wireName: r'reward_distribution_window')
     String? get rewardDistributionWindow;
 
-    /// 
     @BuiltValueField(wireName: r'whitelist')
-    BuiltList<DenomTheobjecttoholdconfigurationsofeachdenom>? get whitelist;
+    BuiltList<DenomTheObjectToHoldConfigurationsOfEachDenom>? get whitelist;
 
     @BuiltValueField(wireName: r'slash_fraction')
     String? get slashFraction;
@@ -96,7 +95,7 @@ class _$TerraOracleV1beta1ParamsSerializer implements StructuredSerializer<Terra
             result
                 ..add(r'whitelist')
                 ..add(serializers.serialize(object.whitelist,
-                    specifiedType: const FullType(BuiltList, [FullType(DenomTheobjecttoholdconfigurationsofeachdenom)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DenomTheObjectToHoldConfigurationsOfEachDenom)])));
         }
         if (object.slashFraction != null) {
             result
@@ -153,7 +152,7 @@ class _$TerraOracleV1beta1ParamsSerializer implements StructuredSerializer<Terra
                     break;
                 case r'whitelist':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(DenomTheobjecttoholdconfigurationsofeachdenom)])) as BuiltList<DenomTheobjecttoholdconfigurationsofeachdenom>;
+                        specifiedType: const FullType(BuiltList, [FullType(DenomTheObjectToHoldConfigurationsOfEachDenom)])) as BuiltList<DenomTheObjectToHoldConfigurationsOfEachDenom>;
                     result.whitelist.replace(valueDes);
                     break;
                 case r'slash_fraction':

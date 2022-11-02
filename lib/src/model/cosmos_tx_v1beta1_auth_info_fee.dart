@@ -2,25 +2,23 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/fee21.dart';
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response_balances_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'cosmos_tx_v1beta1_auth_info_fee.g.dart';
 
-/// CosmosTxV1beta1AuthInfoFee
+/// Fee is the fee and gas limit for the transaction. The first signer is the primary signer and the one which pays the fee. The fee can be calculated based on the cost of evaluating the body and doing signature verification of the signers. This can be estimated via simulation.
 ///
 /// Properties:
-/// * [amount] - 
+/// * [amount] 
 /// * [gasLimit] 
 /// * [payer] - if unset, the first signer is responsible for paying the fees. If set, the specified account must pay the fees. the payer must be a tx signer (and thus have signed this field in AuthInfo). setting this field does *not* change the ordering of required signers for the transaction.
 /// * [granter] 
 abstract class CosmosTxV1beta1AuthInfoFee implements Built<CosmosTxV1beta1AuthInfoFee, CosmosTxV1beta1AuthInfoFeeBuilder> {
-    /// 
     @BuiltValueField(wireName: r'amount')
-    BuiltList<CosmosBaseV1beta1Coin>? get amount;
+    BuiltList<AllBalances200ResponseBalancesInner>? get amount;
 
     @BuiltValueField(wireName: r'gas_limit')
     String? get gasLimit;
@@ -58,7 +56,7 @@ class _$CosmosTxV1beta1AuthInfoFeeSerializer implements StructuredSerializer<Cos
             result
                 ..add(r'amount')
                 ..add(serializers.serialize(object.amount,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])));
         }
         if (object.gasLimit != null) {
             result
@@ -95,7 +93,7 @@ class _$CosmosTxV1beta1AuthInfoFeeSerializer implements StructuredSerializer<Cos
             switch (key) {
                 case r'amount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])) as BuiltList<CosmosBaseV1beta1Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])) as BuiltList<AllBalances200ResponseBalancesInner>;
                     result.amount.replace(valueDes);
                     break;
                 case r'gas_limit':

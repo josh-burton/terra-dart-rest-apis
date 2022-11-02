@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.PublicKeydefinesthekeysavailableforusewithTendermintValidators
+# terra_dart_rest_apis.model.PublicKeyDefinesTheKeysAvailableForUseWithTendermintValidators
 
 ## Load the model package
 ```dart

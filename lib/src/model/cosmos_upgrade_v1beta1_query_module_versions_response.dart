@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_module_version.dart';
+import 'package:terra_dart_rest_apis/src/model/module_versions200_response_module_versions_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'cosmos_upgrade_v1beta1_query_module_versions_response.g.dart';
 abstract class CosmosUpgradeV1beta1QueryModuleVersionsResponse implements Built<CosmosUpgradeV1beta1QueryModuleVersionsResponse, CosmosUpgradeV1beta1QueryModuleVersionsResponseBuilder> {
     /// module_versions is a list of module names with their consensus versions.
     @BuiltValueField(wireName: r'module_versions')
-    BuiltList<CosmosUpgradeV1beta1ModuleVersion>? get moduleVersions;
+    BuiltList<ModuleVersions200ResponseModuleVersionsInner>? get moduleVersions;
 
     CosmosUpgradeV1beta1QueryModuleVersionsResponse._();
 
@@ -44,7 +44,7 @@ class _$CosmosUpgradeV1beta1QueryModuleVersionsResponseSerializer implements Str
             result
                 ..add(r'module_versions')
                 ..add(serializers.serialize(object.moduleVersions,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosUpgradeV1beta1ModuleVersion)])));
+                    specifiedType: const FullType(BuiltList, [FullType(ModuleVersions200ResponseModuleVersionsInner)])));
         }
         return result;
     }
@@ -63,7 +63,7 @@ class _$CosmosUpgradeV1beta1QueryModuleVersionsResponseSerializer implements Str
             switch (key) {
                 case r'module_versions':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosUpgradeV1beta1ModuleVersion)])) as BuiltList<CosmosUpgradeV1beta1ModuleVersion>;
+                        specifiedType: const FullType(BuiltList, [FullType(ModuleVersions200ResponseModuleVersionsInner)])) as BuiltList<ModuleVersions200ResponseModuleVersionsInner>;
                     result.moduleVersions.replace(valueDes);
                     break;
             }

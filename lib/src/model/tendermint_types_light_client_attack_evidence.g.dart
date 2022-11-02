@@ -9,11 +9,14 @@ part of 'tendermint_types_light_client_attack_evidence.dart';
 class _$TendermintTypesLightClientAttackEvidence
     extends TendermintTypesLightClientAttackEvidence {
   @override
-  final TendermintTypesLightBlock? conflictingBlock;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlock?
+      conflictingBlock;
   @override
   final String? commonHeight;
   @override
-  final BuiltList<TendermintTypesValidator>? byzantineValidators;
+  final BuiltList<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+      byzantineValidators;
   @override
   final String? totalVotingPower;
   @override
@@ -83,22 +86,31 @@ class TendermintTypesLightClientAttackEvidenceBuilder
             TendermintTypesLightClientAttackEvidenceBuilder> {
   _$TendermintTypesLightClientAttackEvidence? _$v;
 
-  TendermintTypesLightBlockBuilder? _conflictingBlock;
-  TendermintTypesLightBlockBuilder get conflictingBlock =>
-      _$this._conflictingBlock ??= new TendermintTypesLightBlockBuilder();
-  set conflictingBlock(TendermintTypesLightBlockBuilder? conflictingBlock) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockBuilder?
+      _conflictingBlock;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockBuilder
+      get conflictingBlock => _$this._conflictingBlock ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockBuilder();
+  set conflictingBlock(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockBuilder?
+              conflictingBlock) =>
       _$this._conflictingBlock = conflictingBlock;
 
   String? _commonHeight;
   String? get commonHeight => _$this._commonHeight;
   set commonHeight(String? commonHeight) => _$this._commonHeight = commonHeight;
 
-  ListBuilder<TendermintTypesValidator>? _byzantineValidators;
-  ListBuilder<TendermintTypesValidator> get byzantineValidators =>
-      _$this._byzantineValidators ??=
-          new ListBuilder<TendermintTypesValidator>();
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+      _byzantineValidators;
+  ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>
+      get byzantineValidators => _$this._byzantineValidators ??= new ListBuilder<
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>();
   set byzantineValidators(
-          ListBuilder<TendermintTypesValidator>? byzantineValidators) =>
+          ListBuilder<
+                  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSetValidatorsInner>?
+              byzantineValidators) =>
       _$this._byzantineValidators = byzantineValidators;
 
   String? _totalVotingPower;

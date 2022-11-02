@@ -8,7 +8,8 @@ part of 'cosmos_staking_v1beta1_commission.dart';
 
 class _$CosmosStakingV1beta1Commission extends CosmosStakingV1beta1Commission {
   @override
-  final CosmosStakingV1beta1CommissionCommissionRates? commissionRates;
+  final StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRates?
+      commissionRates;
   @override
   final DateTime? updateTime;
 
@@ -56,12 +57,13 @@ class CosmosStakingV1beta1CommissionBuilder
             CosmosStakingV1beta1CommissionBuilder> {
   _$CosmosStakingV1beta1Commission? _$v;
 
-  CosmosStakingV1beta1CommissionCommissionRatesBuilder? _commissionRates;
-  CosmosStakingV1beta1CommissionCommissionRatesBuilder get commissionRates =>
-      _$this._commissionRates ??=
-          new CosmosStakingV1beta1CommissionCommissionRatesBuilder();
+  StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRatesBuilder?
+      _commissionRates;
+  StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRatesBuilder
+      get commissionRates => _$this._commissionRates ??=
+          new StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRatesBuilder();
   set commissionRates(
-          CosmosStakingV1beta1CommissionCommissionRatesBuilder?
+          StakingDelegatorValidators200ResponseValidatorsInnerCommissionCommissionRatesBuilder?
               commissionRates) =>
       _$this._commissionRates = commissionRates;
 

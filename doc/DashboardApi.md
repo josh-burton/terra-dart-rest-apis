@@ -5,24 +5,24 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getaccountgrowthhistory**](DashboardApi.md#getaccountgrowthhistory) | **GET** /v1/dashboard/account_growth | Get account growth history
-[**getactiveaccountscounthistory**](DashboardApi.md#getactiveaccountscounthistory) | **GET** /v1/dashboard/active_accounts | Get active accounts count history
-[**getblockrewardhistory**](DashboardApi.md#getblockrewardhistory) | **GET** /v1/dashboard/block_rewards | Get block reward history
-[**getinformationtobeusedonthedashboard**](DashboardApi.md#getinformationtobeusedonthedashboard) | **GET** /v1/dashboard | Get information to be used on the dashboard
-[**getregisteredaccountscounthistory**](DashboardApi.md#getregisteredaccountscounthistory) | **GET** /v1/dashboard/registered_accounts | Get registered accounts count history
-[**getstakingreturnhistory**](DashboardApi.md#getstakingreturnhistory) | **GET** /v1/dashboard/staking_return | Get staking return history
-[**gettheamountofseigniorageinthestartoftheday**](DashboardApi.md#gettheamountofseigniorageinthestartoftheday) | **GET** /v1/dashboard/seigniorage_proceeds | Get the amount of seigniorage in the start of the day
-[**getthehistoricalstakingratio**](DashboardApi.md#getthehistoricalstakingratio) | **GET** /v1/dashboard/staking_ratio | Get the historical staking ratio
-[**gettxvolumehistory**](DashboardApi.md#gettxvolumehistory) | **GET** /v1/dashboard/tx_volume | Get tx volume history
-[**v1DashboardLastHourOpsTxsCountGET**](DashboardApi.md#v1dashboardlasthouropstxscountget) | **GET** /v1/dashboard/last_hour_ops_txs_count | V1DashboardLastHourOpsTxsCount_GET
+[**v1DashboardAccountGrowthGet**](DashboardApi.md#v1dashboardaccountgrowthget) | **GET** /v1/dashboard/account_growth | Get account growth history
+[**v1DashboardActiveAccountsGet**](DashboardApi.md#v1dashboardactiveaccountsget) | **GET** /v1/dashboard/active_accounts | Get active accounts count history
+[**v1DashboardBlockRewardsGet**](DashboardApi.md#v1dashboardblockrewardsget) | **GET** /v1/dashboard/block_rewards | Get block reward history
+[**v1DashboardGet**](DashboardApi.md#v1dashboardget) | **GET** /v1/dashboard | Get information to be used on the dashboard
+[**v1DashboardLastHourOpsTxsCountGet**](DashboardApi.md#v1dashboardlasthouropstxscountget) | **GET** /v1/dashboard/last_hour_ops_txs_count | 
+[**v1DashboardRegisteredAccountsGet**](DashboardApi.md#v1dashboardregisteredaccountsget) | **GET** /v1/dashboard/registered_accounts | Get registered accounts count history
+[**v1DashboardSeigniorageProceedsGet**](DashboardApi.md#v1dashboardseigniorageproceedsget) | **GET** /v1/dashboard/seigniorage_proceeds | Get the amount of seigniorage in the start of the day
+[**v1DashboardStakingRatioGet**](DashboardApi.md#v1dashboardstakingratioget) | **GET** /v1/dashboard/staking_ratio | Get the historical staking ratio
+[**v1DashboardStakingReturnGet**](DashboardApi.md#v1dashboardstakingreturnget) | **GET** /v1/dashboard/staking_return | Get staking return history
+[**v1DashboardTxVolumeGet**](DashboardApi.md#v1dashboardtxvolumeget) | **GET** /v1/dashboard/tx_volume | Get tx volume history
 
 
-# **getaccountgrowthhistory**
-> GetAccountGrowthResult getaccountgrowthhistory(contentType)
+# **v1DashboardAccountGrowthGet**
+> GetAccountGrowthResult v1DashboardAccountGrowthGet()
 
 Get account growth history
 
@@ -33,21 +33,17 @@ Get account growth history
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getaccountgrowthhistory(contentType);
+    final response = api.v1DashboardAccountGrowthGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getaccountgrowthhistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardAccountGrowthGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -64,8 +60,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getactiveaccountscounthistory**
-> GetActiveAccountsResult getactiveaccountscounthistory(contentType)
+# **v1DashboardActiveAccountsGet**
+> GetActiveAccountsResult v1DashboardActiveAccountsGet()
 
 Get active accounts count history
 
@@ -76,21 +72,17 @@ Get active accounts count history
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getactiveaccountscounthistory(contentType);
+    final response = api.v1DashboardActiveAccountsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getactiveaccountscounthistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardActiveAccountsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -107,8 +99,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getblockrewardhistory**
-> GetBlockRewardResult getblockrewardhistory(contentType)
+# **v1DashboardBlockRewardsGet**
+> GetBlockRewardResult v1DashboardBlockRewardsGet()
 
 Get block reward history
 
@@ -119,21 +111,17 @@ Get block reward history
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getblockrewardhistory(contentType);
+    final response = api.v1DashboardBlockRewardsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getblockrewardhistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardBlockRewardsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -150,8 +138,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getinformationtobeusedonthedashboard**
-> GetDashboardResult getinformationtobeusedonthedashboard(contentType)
+# **v1DashboardGet**
+> GetDashboardResult v1DashboardGet()
 
 Get information to be used on the dashboard
 
@@ -162,21 +150,17 @@ Get information to be used on the dashboard
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getinformationtobeusedonthedashboard(contentType);
+    final response = api.v1DashboardGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getinformationtobeusedonthedashboard: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -193,8 +177,45 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getregisteredaccountscounthistory**
-> GetRegisteredAccountsResult getregisteredaccountscounthistory(contentType)
+# **v1DashboardLastHourOpsTxsCountGet**
+> GetLastHourTxAndOpsCountResult v1DashboardLastHourOpsTxsCountGet()
+
+
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getDashboardApi();
+
+try {
+    final response = api.v1DashboardLastHourOpsTxsCountGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DashboardApi->v1DashboardLastHourOpsTxsCountGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetLastHourTxAndOpsCountResult**](GetLastHourTxAndOpsCountResult.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1DashboardRegisteredAccountsGet**
+> GetRegisteredAccountsResult v1DashboardRegisteredAccountsGet()
 
 Get registered accounts count history
 
@@ -205,21 +226,17 @@ Get registered accounts count history
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getregisteredaccountscounthistory(contentType);
+    final response = api.v1DashboardRegisteredAccountsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getregisteredaccountscounthistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardRegisteredAccountsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -236,33 +253,29 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstakingreturnhistory**
-> BuiltList<Seigniorage> getstakingreturnhistory(contentType)
+# **v1DashboardSeigniorageProceedsGet**
+> BuiltList<Seigniorage> v1DashboardSeigniorageProceedsGet()
 
-Get staking return history
+Get the amount of seigniorage in the start of the day
 
-Get staking return history
+Get the amount of seigniorage in the start of the day
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getstakingreturnhistory(contentType);
+    final response = api.v1DashboardSeigniorageProceedsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getstakingreturnhistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardSeigniorageProceedsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -279,51 +292,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gettheamountofseigniorageinthestartoftheday**
-> BuiltList<Seigniorage> gettheamountofseigniorageinthestartoftheday(contentType)
-
-Get the amount of seigniorage in the start of the day
-
-Get the amount of seigniorage in the start of the day
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
-
-try {
-    final response = api.gettheamountofseigniorageinthestartoftheday(contentType);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling DashboardApi->gettheamountofseigniorageinthestartoftheday: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
-
-### Return type
-
-[**BuiltList&lt;Seigniorage&gt;**](Seigniorage.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getthehistoricalstakingratio**
-> BuiltList<StakingHistory> getthehistoricalstakingratio(contentType)
+# **v1DashboardStakingRatioGet**
+> BuiltList<StakingHistory> v1DashboardStakingRatioGet()
 
 Get the historical staking ratio
 
@@ -334,21 +304,17 @@ Get the historical staking ratio
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getthehistoricalstakingratio(contentType);
+    final response = api.v1DashboardStakingRatioGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->getthehistoricalstakingratio: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardStakingRatioGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -365,37 +331,33 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gettxvolumehistory**
-> GetTxVolumeResult gettxvolumehistory(contentType)
+# **v1DashboardStakingReturnGet**
+> BuiltList<Seigniorage> v1DashboardStakingReturnGet()
 
-Get tx volume history
+Get staking return history
 
-Get tx volume history
+Get staking return history
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.gettxvolumehistory(contentType);
+    final response = api.v1DashboardStakingReturnGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->gettxvolumehistory: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardStakingReturnGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetTxVolumeResult**](GetTxVolumeResult.md)
+[**BuiltList&lt;Seigniorage&gt;**](Seigniorage.md)
 
 ### Authorization
 
@@ -408,35 +370,33 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1DashboardLastHourOpsTxsCountGET**
-> GetLastHourTxAndOpsCountResult v1DashboardLastHourOpsTxsCountGET(contentType)
+# **v1DashboardTxVolumeGet**
+> GetTxVolumeResult v1DashboardTxVolumeGet()
 
-V1DashboardLastHourOpsTxsCount_GET
+Get tx volume history
+
+Get tx volume history
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getDashboardApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.v1DashboardLastHourOpsTxsCountGET(contentType);
+    final response = api.v1DashboardTxVolumeGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DashboardApi->v1DashboardLastHourOpsTxsCountGET: $e\n');
+    print('Exception when calling DashboardApi->v1DashboardTxVolumeGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetLastHourTxAndOpsCountResult**](GetLastHourTxAndOpsCountResult.md)
+[**GetTxVolumeResult**](GetTxVolumeResult.md)
 
 ### Authorization
 

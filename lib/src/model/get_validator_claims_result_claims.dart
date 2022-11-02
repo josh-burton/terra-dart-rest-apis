@@ -12,12 +12,13 @@ part 'get_validator_claims_result_claims.g.dart';
 /// GetValidatorClaimsResultClaims
 ///
 /// Properties:
-/// * [chainId] 
+/// * [chainId] - 
 /// * [txhash] - Tx hash
 /// * [type] - Claim type
 /// * [amount] - 
 /// * [timestamp] - Tx timestamp
 abstract class GetValidatorClaimsResultClaims implements Built<GetValidatorClaimsResultClaims, GetValidatorClaimsResultClaimsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'chainId')
     String get chainId;
 

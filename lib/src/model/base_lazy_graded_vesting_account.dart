@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response_lazy_graded_vesting_account_value_base_vesting_account.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/vesting_schedule.dart';
-import 'package:terra_dart_rest_apis/src/model/base_vesting_account.dart';
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response_lazy_graded_vesting_account_value_vesting_schedules_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,14 +14,13 @@ part 'base_lazy_graded_vesting_account.g.dart';
 ///
 /// Properties:
 /// * [baseVestingAccount] 
-/// * [vestingSchedules] - 
+/// * [vestingSchedules] 
 abstract class BaseLazyGradedVestingAccount implements Built<BaseLazyGradedVestingAccount, BaseLazyGradedVestingAccountBuilder> {
     @BuiltValueField(wireName: r'BaseVestingAccount')
-    BaseVestingAccount? get baseVestingAccount;
+    AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccount? get baseVestingAccount;
 
-    /// 
     @BuiltValueField(wireName: r'vesting_schedules')
-    BuiltList<VestingSchedule>? get vestingSchedules;
+    BuiltList<AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>? get vestingSchedules;
 
     BaseLazyGradedVestingAccount._();
 
@@ -49,13 +48,13 @@ class _$BaseLazyGradedVestingAccountSerializer implements StructuredSerializer<B
             result
                 ..add(r'BaseVestingAccount')
                 ..add(serializers.serialize(object.baseVestingAccount,
-                    specifiedType: const FullType(BaseVestingAccount)));
+                    specifiedType: const FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccount)));
         }
         if (object.vestingSchedules != null) {
             result
                 ..add(r'vesting_schedules')
                 ..add(serializers.serialize(object.vestingSchedules,
-                    specifiedType: const FullType(BuiltList, [FullType(VestingSchedule)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner)])));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$BaseLazyGradedVestingAccountSerializer implements StructuredSerializer<B
             switch (key) {
                 case r'BaseVestingAccount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseVestingAccount)) as BaseVestingAccount;
+                        specifiedType: const FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccount)) as AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueBaseVestingAccount;
                     result.baseVestingAccount.replace(valueDes);
                     break;
                 case r'vesting_schedules':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(VestingSchedule)])) as BuiltList<VestingSchedule>;
+                        specifiedType: const FullType(BuiltList, [FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner)])) as BuiltList<AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInner>;
                     result.vestingSchedules.replace(valueDes);
                     break;
             }

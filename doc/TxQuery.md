@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hash** | **String** |  | [optional] 
 **height** | **num** |  | [optional] 
-**tx** | [**StdTx**](StdTx.md) |  | [optional] 
-**result** | [**Result**](Result.md) |  | [optional] 
+**tx** | [**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md) |  | [optional] 
+**result** | [**TxsHashGet200ResponseResult**](TxsHashGet200ResponseResult.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

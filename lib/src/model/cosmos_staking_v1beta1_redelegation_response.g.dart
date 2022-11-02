@@ -9,9 +9,11 @@ part of 'cosmos_staking_v1beta1_redelegation_response.dart';
 class _$CosmosStakingV1beta1RedelegationResponse
     extends CosmosStakingV1beta1RedelegationResponse {
   @override
-  final CosmosStakingV1beta1RedelegationResponseRedelegation? redelegation;
+  final Redelegations200ResponseRedelegationResponsesInnerRedelegation?
+      redelegation;
   @override
-  final BuiltList<CosmosStakingV1beta1RedelegationEntryResponse>? entries;
+  final BuiltList<
+      Redelegations200ResponseRedelegationResponsesInnerEntriesInner>? entries;
 
   factory _$CosmosStakingV1beta1RedelegationResponse(
           [void Function(CosmosStakingV1beta1RedelegationResponseBuilder)?
@@ -62,21 +64,24 @@ class CosmosStakingV1beta1RedelegationResponseBuilder
             CosmosStakingV1beta1RedelegationResponseBuilder> {
   _$CosmosStakingV1beta1RedelegationResponse? _$v;
 
-  CosmosStakingV1beta1RedelegationResponseRedelegationBuilder? _redelegation;
-  CosmosStakingV1beta1RedelegationResponseRedelegationBuilder
+  Redelegations200ResponseRedelegationResponsesInnerRedelegationBuilder?
+      _redelegation;
+  Redelegations200ResponseRedelegationResponsesInnerRedelegationBuilder
       get redelegation => _$this._redelegation ??=
-          new CosmosStakingV1beta1RedelegationResponseRedelegationBuilder();
+          new Redelegations200ResponseRedelegationResponsesInnerRedelegationBuilder();
   set redelegation(
-          CosmosStakingV1beta1RedelegationResponseRedelegationBuilder?
+          Redelegations200ResponseRedelegationResponsesInnerRedelegationBuilder?
               redelegation) =>
       _$this._redelegation = redelegation;
 
-  ListBuilder<CosmosStakingV1beta1RedelegationEntryResponse>? _entries;
-  ListBuilder<CosmosStakingV1beta1RedelegationEntryResponse> get entries =>
-      _$this._entries ??=
-          new ListBuilder<CosmosStakingV1beta1RedelegationEntryResponse>();
+  ListBuilder<Redelegations200ResponseRedelegationResponsesInnerEntriesInner>?
+      _entries;
+  ListBuilder<Redelegations200ResponseRedelegationResponsesInnerEntriesInner>
+      get entries => _$this._entries ??= new ListBuilder<
+          Redelegations200ResponseRedelegationResponsesInnerEntriesInner>();
   set entries(
-          ListBuilder<CosmosStakingV1beta1RedelegationEntryResponse>?
+          ListBuilder<
+                  Redelegations200ResponseRedelegationResponsesInnerEntriesInner>?
               entries) =>
       _$this._entries = entries;
 

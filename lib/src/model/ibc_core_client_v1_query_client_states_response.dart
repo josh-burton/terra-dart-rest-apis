@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/pagination_response.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/query_signing_infos_responseistheresponsetypeforthe_query_signing_infos_rp_cmethod_pagination.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_identified_client_state.dart';
+import 'package:terra_dart_rest_apis/src/model/client_states200_response_client_states_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'ibc_core_client_v1_query_client_states_response.g.dart';
 abstract class IbcCoreClientV1QueryClientStatesResponse implements Built<IbcCoreClientV1QueryClientStatesResponse, IbcCoreClientV1QueryClientStatesResponseBuilder> {
     /// list of stored ClientStates of the chain.
     @BuiltValueField(wireName: r'client_states')
-    BuiltList<IbcCoreClientV1IdentifiedClientState>? get clientStates;
+    BuiltList<ClientStates200ResponseClientStatesInner>? get clientStates;
 
     @BuiltValueField(wireName: r'pagination')
-    QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination? get pagination;
+    PaginationResponse? get pagination;
 
     IbcCoreClientV1QueryClientStatesResponse._();
 
@@ -49,13 +49,13 @@ class _$IbcCoreClientV1QueryClientStatesResponseSerializer implements Structured
             result
                 ..add(r'client_states')
                 ..add(serializers.serialize(object.clientStates,
-                    specifiedType: const FullType(BuiltList, [FullType(IbcCoreClientV1IdentifiedClientState)])));
+                    specifiedType: const FullType(BuiltList, [FullType(ClientStates200ResponseClientStatesInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)));
+                    specifiedType: const FullType(PaginationResponse)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$IbcCoreClientV1QueryClientStatesResponseSerializer implements Structured
             switch (key) {
                 case r'client_states':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(IbcCoreClientV1IdentifiedClientState)])) as BuiltList<IbcCoreClientV1IdentifiedClientState>;
+                        specifiedType: const FullType(BuiltList, [FullType(ClientStates200ResponseClientStatesInner)])) as BuiltList<ClientStates200ResponseClientStatesInner>;
                     result.clientStates.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)) as QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination;
+                        specifiedType: const FullType(PaginationResponse)) as PaginationResponse;
                     result.pagination.replace(valueDes);
                     break;
             }

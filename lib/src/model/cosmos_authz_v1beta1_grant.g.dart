@@ -8,7 +8,7 @@ part of 'cosmos_authz_v1beta1_grant.dart';
 
 class _$CosmosAuthzV1beta1Grant extends CosmosAuthzV1beta1Grant {
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? authorization;
+  final AccountsAreTheExistingAccountsInner? authorization;
   @override
   final DateTime? expiration;
 
@@ -55,12 +55,12 @@ class CosmosAuthzV1beta1GrantBuilder
         Builder<CosmosAuthzV1beta1Grant, CosmosAuthzV1beta1GrantBuilder> {
   _$CosmosAuthzV1beta1Grant? _$v;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _authorization;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get authorization =>
+  AccountsAreTheExistingAccountsInnerBuilder? _authorization;
+  AccountsAreTheExistingAccountsInnerBuilder get authorization =>
       _$this._authorization ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+          new AccountsAreTheExistingAccountsInnerBuilder();
   set authorization(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder? authorization) =>
+          AccountsAreTheExistingAccountsInnerBuilder? authorization) =>
       _$this._authorization = authorization;
 
   DateTime? _expiration;

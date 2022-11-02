@@ -8,9 +8,10 @@ part of 'tendermint_types_evidence.dart';
 
 class _$TendermintTypesEvidence extends TendermintTypesEvidence {
   @override
-  final TendermintTypesEvidenceDuplicateVoteEvidence? duplicateVoteEvidence;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidence?
+      duplicateVoteEvidence;
   @override
-  final TendermintTypesEvidenceLightClientAttackEvidence?
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidence?
       lightClientAttackEvidence;
 
   factory _$TendermintTypesEvidence(
@@ -58,22 +59,23 @@ class TendermintTypesEvidenceBuilder
         Builder<TendermintTypesEvidence, TendermintTypesEvidenceBuilder> {
   _$TendermintTypesEvidence? _$v;
 
-  TendermintTypesEvidenceDuplicateVoteEvidenceBuilder? _duplicateVoteEvidence;
-  TendermintTypesEvidenceDuplicateVoteEvidenceBuilder
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceBuilder?
+      _duplicateVoteEvidence;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceBuilder
       get duplicateVoteEvidence => _$this._duplicateVoteEvidence ??=
-          new TendermintTypesEvidenceDuplicateVoteEvidenceBuilder();
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceBuilder();
   set duplicateVoteEvidence(
-          TendermintTypesEvidenceDuplicateVoteEvidenceBuilder?
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerDuplicateVoteEvidenceBuilder?
               duplicateVoteEvidence) =>
       _$this._duplicateVoteEvidence = duplicateVoteEvidence;
 
-  TendermintTypesEvidenceLightClientAttackEvidenceBuilder?
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceBuilder?
       _lightClientAttackEvidence;
-  TendermintTypesEvidenceLightClientAttackEvidenceBuilder
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceBuilder
       get lightClientAttackEvidence => _$this._lightClientAttackEvidence ??=
-          new TendermintTypesEvidenceLightClientAttackEvidenceBuilder();
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceBuilder();
   set lightClientAttackEvidence(
-          TendermintTypesEvidenceLightClientAttackEvidenceBuilder?
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceBuilder?
               lightClientAttackEvidence) =>
       _$this._lightClientAttackEvidence = lightClientAttackEvidence;
 

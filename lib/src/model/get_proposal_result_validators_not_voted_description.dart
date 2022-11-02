@@ -10,24 +10,29 @@ part 'get_proposal_result_validators_not_voted_description.g.dart';
 /// GetProposalResultValidatorsNotVotedDescription
 ///
 /// Properties:
-/// * [moniker] 
-/// * [identity] 
-/// * [website] 
-/// * [details] 
-/// * [profileIcon] 
+/// * [moniker] - 
+/// * [identity] - 
+/// * [website] - 
+/// * [details] - 
+/// * [profileIcon] - 
 abstract class GetProposalResultValidatorsNotVotedDescription implements Built<GetProposalResultValidatorsNotVotedDescription, GetProposalResultValidatorsNotVotedDescriptionBuilder> {
+    /// 
     @BuiltValueField(wireName: r'moniker')
     String get moniker;
 
+    /// 
     @BuiltValueField(wireName: r'identity')
     String get identity;
 
+    /// 
     @BuiltValueField(wireName: r'website')
     String get website;
 
+    /// 
     @BuiltValueField(wireName: r'details')
     String get details;
 
+    /// 
     @BuiltValueField(wireName: r'profileIcon')
     String get profileIcon;
 

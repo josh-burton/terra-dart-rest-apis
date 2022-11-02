@@ -8,7 +8,7 @@ part of 'migrate_code_req.dart';
 
 class _$MigrateCodeReq extends MigrateCodeReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
   final String? wasmBytes;
 
@@ -51,9 +51,11 @@ class MigrateCodeReqBuilder
     implements Builder<MigrateCodeReq, MigrateCodeReqBuilder> {
   _$MigrateCodeReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   String? _wasmBytes;
   String? get wasmBytes => _$this._wasmBytes;

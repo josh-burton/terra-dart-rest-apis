@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'migrate_contract_req.g.dart';
 /// * [migrateMsg] 
 abstract class MigrateContractReq implements Built<MigrateContractReq, MigrateContractReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq? get baseReq;
+    TxsEstimateFeePostRequestBaseReq? get baseReq;
 
     @BuiltValueField(wireName: r'new_code_id')
     num? get newCodeId;
@@ -50,7 +50,7 @@ class _$MigrateContractReqSerializer implements StructuredSerializer<MigrateCont
             result
                 ..add(r'base_req')
                 ..add(serializers.serialize(object.baseReq,
-                    specifiedType: const FullType(BaseReq)));
+                    specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         }
         if (object.newCodeId != null) {
             result
@@ -81,7 +81,7 @@ class _$MigrateContractReqSerializer implements StructuredSerializer<MigrateCont
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'new_code_id':

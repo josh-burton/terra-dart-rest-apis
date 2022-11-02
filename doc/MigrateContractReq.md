@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseReq** | [**BaseReq**](BaseReq.md) |  | [optional] 
+**baseReq** | [**TxsEstimateFeePostRequestBaseReq**](TxsEstimateFeePostRequestBaseReq.md) |  | [optional] 
 **newCodeId** | **num** |  | [optional] 
 **migrateMsg** | **String** |  | [optional] 
 

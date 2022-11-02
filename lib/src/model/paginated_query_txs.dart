@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tx_query.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'paginated_query_txs.g.dart';
 /// * [pageNumber] 
 /// * [pageTotal] 
 /// * [limit] 
-/// * [txs] - 
+/// * [txs] 
 abstract class PaginatedQueryTxs implements Built<PaginatedQueryTxs, PaginatedQueryTxsBuilder> {
     @BuiltValueField(wireName: r'total_count')
     num? get totalCount;
@@ -34,9 +34,8 @@ abstract class PaginatedQueryTxs implements Built<PaginatedQueryTxs, PaginatedQu
     @BuiltValueField(wireName: r'limit')
     num? get limit;
 
-    /// 
     @BuiltValueField(wireName: r'txs')
-    BuiltList<TxQuery>? get txs;
+    BuiltList<TxsHashGet200Response>? get txs;
 
     PaginatedQueryTxs._();
 
@@ -94,7 +93,7 @@ class _$PaginatedQueryTxsSerializer implements StructuredSerializer<PaginatedQue
             result
                 ..add(r'txs')
                 ..add(serializers.serialize(object.txs,
-                    specifiedType: const FullType(BuiltList, [FullType(TxQuery)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200Response)])));
         }
         return result;
     }
@@ -138,7 +137,7 @@ class _$PaginatedQueryTxsSerializer implements StructuredSerializer<PaginatedQue
                     break;
                 case r'txs':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TxQuery)])) as BuiltList<TxQuery>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200Response)])) as BuiltList<TxsHashGet200Response>;
                     result.txs.replace(valueDes);
                     break;
             }

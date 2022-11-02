@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/gov_proposals_get200_response_inner_content.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/content.dart';
-import 'package:terra_dart_rest_apis/src/model/tally_result.dart';
+import 'package:terra_dart_rest_apis/src/model/gov_proposals_get200_response_inner_final_tally_result.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'text_proposal.g.dart';
 /// * [content] 
 /// * [status] 
 /// * [finalTallyResult] 
-/// * [totalDeposit] - 
+/// * [totalDeposit] 
 /// * [submitTime] 
 /// * [depositEndTime] 
 /// * [votingStartTime] 
@@ -28,17 +28,16 @@ abstract class TextProposal implements Built<TextProposal, TextProposalBuilder> 
     String? get id;
 
     @BuiltValueField(wireName: r'content')
-    Content? get content;
+    GovProposalsGet200ResponseInnerContent? get content;
 
     @BuiltValueField(wireName: r'status')
     num? get status;
 
     @BuiltValueField(wireName: r'final_tally_result')
-    TallyResult? get finalTallyResult;
+    GovProposalsGet200ResponseInnerFinalTallyResult? get finalTallyResult;
 
-    /// 
     @BuiltValueField(wireName: r'total_deposit')
-    BuiltList<Coin>? get totalDeposit;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get totalDeposit;
 
     @BuiltValueField(wireName: r'submit_time')
     String? get submitTime;
@@ -84,7 +83,7 @@ class _$TextProposalSerializer implements StructuredSerializer<TextProposal> {
             result
                 ..add(r'content')
                 ..add(serializers.serialize(object.content,
-                    specifiedType: const FullType(Content)));
+                    specifiedType: const FullType(GovProposalsGet200ResponseInnerContent)));
         }
         if (object.status != null) {
             result
@@ -96,13 +95,13 @@ class _$TextProposalSerializer implements StructuredSerializer<TextProposal> {
             result
                 ..add(r'final_tally_result')
                 ..add(serializers.serialize(object.finalTallyResult,
-                    specifiedType: const FullType(TallyResult)));
+                    specifiedType: const FullType(GovProposalsGet200ResponseInnerFinalTallyResult)));
         }
         if (object.totalDeposit != null) {
             result
                 ..add(r'total_deposit')
                 ..add(serializers.serialize(object.totalDeposit,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         if (object.submitTime != null) {
             result
@@ -150,7 +149,7 @@ class _$TextProposalSerializer implements StructuredSerializer<TextProposal> {
                     break;
                 case r'content':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Content)) as Content;
+                        specifiedType: const FullType(GovProposalsGet200ResponseInnerContent)) as GovProposalsGet200ResponseInnerContent;
                     result.content.replace(valueDes);
                     break;
                 case r'status':
@@ -160,12 +159,12 @@ class _$TextProposalSerializer implements StructuredSerializer<TextProposal> {
                     break;
                 case r'final_tally_result':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TallyResult)) as TallyResult;
+                        specifiedType: const FullType(GovProposalsGet200ResponseInnerFinalTallyResult)) as GovProposalsGet200ResponseInnerFinalTallyResult;
                     result.finalTallyResult.replace(valueDes);
                     break;
                 case r'total_deposit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.totalDeposit.replace(valueDes);
                     break;
                 case r'submit_time':

@@ -10,7 +10,7 @@ class _$TerraOracleV1beta1AggregateExchangeRateVote
     extends TerraOracleV1beta1AggregateExchangeRateVote {
   @override
   final BuiltList<
-          ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>?
+          ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>?
       exchangeRateTuples;
   @override
   final String? voter;
@@ -66,14 +66,14 @@ class TerraOracleV1beta1AggregateExchangeRateVoteBuilder
   _$TerraOracleV1beta1AggregateExchangeRateVote? _$v;
 
   ListBuilder<
-          ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>?
+          ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>?
       _exchangeRateTuples;
-  ListBuilder<ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>
+  ListBuilder<ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>
       get exchangeRateTuples => _$this._exchangeRateTuples ??= new ListBuilder<
-          ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>();
+          ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>();
   set exchangeRateTuples(
           ListBuilder<
-                  ExchangeRateTupleStructtostoreinterpretedexchangeratesdatatostore>?
+                  ExchangeRateTupleStructToStoreInterpretedExchangeRatesDataToStore>?
               exchangeRateTuples) =>
       _$this._exchangeRateTuples = exchangeRateTuples;
 

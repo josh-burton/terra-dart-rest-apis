@@ -8,11 +8,11 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version** | [**TendermintTypesHeaderVersion**](TendermintTypesHeaderVersion.md) |  | [optional] 
+**version** | [**BasicBlockInfo**](BasicBlockInfo.md) |  | [optional] 
 **chainId** | **String** |  | [optional] 
 **height** | **String** |  | [optional] 
 **time** | [**DateTime**](DateTime.md) |  | [optional] 
-**lastBlockId** | [**BlockID26**](BlockID26.md) |  | [optional] 
+**lastBlockId** | [**BlockID1**](BlockID1.md) |  | [optional] 
 **lastCommitHash** | **String** |  | [optional] 
 **dataHash** | **String** |  | [optional] 
 **validatorsHash** | **String** |  | [optional] 

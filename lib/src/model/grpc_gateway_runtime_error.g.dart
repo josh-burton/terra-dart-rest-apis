@@ -14,7 +14,7 @@ class _$GrpcGatewayRuntimeError extends GrpcGatewayRuntimeError {
   @override
   final String? message;
   @override
-  final BuiltList<GoogleProtobufAny>? details;
+  final BuiltList<AccountsAreTheExistingAccountsInner>? details;
 
   factory _$GrpcGatewayRuntimeError(
           [void Function(GrpcGatewayRuntimeErrorBuilder)? updates]) =>
@@ -78,10 +78,11 @@ class GrpcGatewayRuntimeErrorBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  ListBuilder<GoogleProtobufAny>? _details;
-  ListBuilder<GoogleProtobufAny> get details =>
-      _$this._details ??= new ListBuilder<GoogleProtobufAny>();
-  set details(ListBuilder<GoogleProtobufAny>? details) =>
+  ListBuilder<AccountsAreTheExistingAccountsInner>? _details;
+  ListBuilder<AccountsAreTheExistingAccountsInner> get details =>
+      _$this._details ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
+  set details(ListBuilder<AccountsAreTheExistingAccountsInner>? details) =>
       _$this._details = details;
 
   GrpcGatewayRuntimeErrorBuilder() {

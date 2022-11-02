@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/fee.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'estimate_fee_resp.g.dart';
 /// * [fee] 
 abstract class EstimateFeeResp implements Built<EstimateFeeResp, EstimateFeeRespBuilder> {
     @BuiltValueField(wireName: r'fee')
-    Fee? get fee;
+    TxsHashGet200ResponseTxFee? get fee;
 
     EstimateFeeResp._();
 
@@ -42,7 +42,7 @@ class _$EstimateFeeRespSerializer implements StructuredSerializer<EstimateFeeRes
             result
                 ..add(r'fee')
                 ..add(serializers.serialize(object.fee,
-                    specifiedType: const FullType(Fee)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTxFee)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$EstimateFeeRespSerializer implements StructuredSerializer<EstimateFeeRes
             switch (key) {
                 case r'fee':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Fee)) as Fee;
+                        specifiedType: const FullType(TxsHashGet200ResponseTxFee)) as TxsHashGet200ResponseTxFee;
                     result.fee.replace(valueDes);
                     break;
             }

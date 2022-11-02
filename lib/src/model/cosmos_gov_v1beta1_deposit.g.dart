@@ -12,7 +12,7 @@ class _$CosmosGovV1beta1Deposit extends CosmosGovV1beta1Deposit {
   @override
   final String? depositor;
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? amount;
+  final BuiltList<AllBalances200ResponseBalancesInner>? amount;
 
   factory _$CosmosGovV1beta1Deposit(
           [void Function(CosmosGovV1beta1DepositBuilder)? updates]) =>
@@ -68,10 +68,10 @@ class CosmosGovV1beta1DepositBuilder
   String? get depositor => _$this._depositor;
   set depositor(String? depositor) => _$this._depositor = depositor;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _amount;
-  ListBuilder<CosmosBaseV1beta1Coin> get amount =>
-      _$this._amount ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set amount(ListBuilder<CosmosBaseV1beta1Coin>? amount) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _amount;
+  ListBuilder<AllBalances200ResponseBalancesInner> get amount =>
+      _$this._amount ??= new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set amount(ListBuilder<AllBalances200ResponseBalancesInner>? amount) =>
       _$this._amount = amount;
 
   CosmosGovV1beta1DepositBuilder() {

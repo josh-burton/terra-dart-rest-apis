@@ -8,9 +8,10 @@ part of 'tendermint_types_signed_header.dart';
 
 class _$TendermintTypesSignedHeader extends TendermintTypesSignedHeader {
   @override
-  final TendermintTypesBlockHeader? header;
+  final GetLatestBlock200ResponseBlockHeader? header;
   @override
-  final TendermintTypesBlockLastCommit? commit;
+  final GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommit?
+      commit;
 
   factory _$TendermintTypesSignedHeader(
           [void Function(TendermintTypesSignedHeaderBuilder)? updates]) =>
@@ -55,16 +56,20 @@ class TendermintTypesSignedHeaderBuilder
             TendermintTypesSignedHeaderBuilder> {
   _$TendermintTypesSignedHeader? _$v;
 
-  TendermintTypesBlockHeaderBuilder? _header;
-  TendermintTypesBlockHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
-  set header(TendermintTypesBlockHeaderBuilder? header) =>
+  GetLatestBlock200ResponseBlockHeaderBuilder? _header;
+  GetLatestBlock200ResponseBlockHeaderBuilder get header =>
+      _$this._header ??= new GetLatestBlock200ResponseBlockHeaderBuilder();
+  set header(GetLatestBlock200ResponseBlockHeaderBuilder? header) =>
       _$this._header = header;
 
-  TendermintTypesBlockLastCommitBuilder? _commit;
-  TendermintTypesBlockLastCommitBuilder get commit =>
-      _$this._commit ??= new TendermintTypesBlockLastCommitBuilder();
-  set commit(TendermintTypesBlockLastCommitBuilder? commit) =>
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder?
+      _commit;
+  GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder
+      get commit => _$this._commit ??=
+          new GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder();
+  set commit(
+          GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitBuilder?
+              commit) =>
       _$this._commit = commit;
 
   TendermintTypesSignedHeaderBuilder() {

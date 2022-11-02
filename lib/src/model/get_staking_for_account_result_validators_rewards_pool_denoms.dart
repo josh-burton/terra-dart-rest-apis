@@ -10,12 +10,14 @@ part 'get_staking_for_account_result_validators_rewards_pool_denoms.g.dart';
 /// GetStakingForAccountResultValidatorsRewardsPoolDenoms
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class GetStakingForAccountResultValidatorsRewardsPoolDenoms implements Built<GetStakingForAccountResultValidatorsRewardsPoolDenoms, GetStakingForAccountResultValidatorsRewardsPoolDenomsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

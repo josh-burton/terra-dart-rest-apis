@@ -11,29 +11,35 @@ part 'post_txs_result_deliver_tx.g.dart';
 /// PostTxsResultDeliverTx
 ///
 /// Properties:
-/// * [code] 
-/// * [data] 
-/// * [log] 
-/// * [gasUsed] 
-/// * [gasWanted] 
-/// * [info] 
+/// * [code] - 
+/// * [data] - 
+/// * [log] - 
+/// * [gasUsed] - 
+/// * [gasWanted] - 
+/// * [info] - 
 /// * [tags] - 
 abstract class PostTxsResultDeliverTx implements Built<PostTxsResultDeliverTx, PostTxsResultDeliverTxBuilder> {
+    /// 
     @BuiltValueField(wireName: r'code')
     num get code;
 
+    /// 
     @BuiltValueField(wireName: r'data')
     String get data;
 
+    /// 
     @BuiltValueField(wireName: r'log')
     String get log;
 
+    /// 
     @BuiltValueField(wireName: r'gas_used')
     num get gasUsed;
 
+    /// 
     @BuiltValueField(wireName: r'gas_wanted')
     num get gasWanted;
 
+    /// 
     @BuiltValueField(wireName: r'info')
     String get info;
 

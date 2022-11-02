@@ -10,12 +10,14 @@ part 'get_validator_delegations_result_events_amount.g.dart';
 /// GetValidatorDelegationsResultEventsAmount
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class GetValidatorDelegationsResultEventsAmount implements Built<GetValidatorDelegationsResultEventsAmount, GetValidatorDelegationsResultEventsAmountBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

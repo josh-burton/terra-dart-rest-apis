@@ -9,8 +9,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **txs** | [**BuiltList&lt;CosmosTxV1beta1Tx&gt;**](CosmosTxV1beta1Tx.md) | txs is the list of queried transactions. | [optional] 
-**txResponses** | [**BuiltList&lt;CosmosBaseAbciV1beta1TxResponse&gt;**](CosmosBaseAbciV1beta1TxResponse.md) | tx_responses is the list of queried TxResponses. | [optional] 
-**pagination** | [**CosmosAuthzV1beta1QueryGrantsResponsePagination**](CosmosAuthzV1beta1QueryGrantsResponsePagination.md) |  | [optional] 
+**txResponses** | [**BuiltList&lt;BroadcastTx200ResponseTxResponse&gt;**](BroadcastTx200ResponseTxResponse.md) | tx_responses is the list of queried TxResponses. | [optional] 
+**pagination** | [**Grants200ResponsePagination**](Grants200ResponsePagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

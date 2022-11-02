@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/parts.dart';
+import 'package:terra_dart_rest_apis/src/model/blocks_latest_get200_response_block_meta_header_last_block_id_parts.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class BlockID implements Built<BlockID, BlockIDBuilder> {
     String? get hash;
 
     @BuiltValueField(wireName: r'parts')
-    Parts? get parts;
+    BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdParts? get parts;
 
     BlockID._();
 
@@ -52,7 +52,7 @@ class _$BlockIDSerializer implements StructuredSerializer<BlockID> {
             result
                 ..add(r'parts')
                 ..add(serializers.serialize(object.parts,
-                    specifiedType: const FullType(Parts)));
+                    specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdParts)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$BlockIDSerializer implements StructuredSerializer<BlockID> {
                     break;
                 case r'parts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Parts)) as Parts;
+                        specifiedType: const FullType(BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdParts)) as BlocksLatestGet200ResponseBlockMetaHeaderLastBlockIdParts;
                     result.parts.replace(valueDes);
                     break;
             }

@@ -6,15 +6,96 @@ part of 'cosmos_gov_v1beta1_vote.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const CosmosGovV1beta1VoteOptionEnum
+    _$cosmosGovV1beta1VoteOptionEnum_UNSPECIFIED =
+    const CosmosGovV1beta1VoteOptionEnum._('UNSPECIFIED');
+const CosmosGovV1beta1VoteOptionEnum _$cosmosGovV1beta1VoteOptionEnum_YES =
+    const CosmosGovV1beta1VoteOptionEnum._('YES');
+const CosmosGovV1beta1VoteOptionEnum _$cosmosGovV1beta1VoteOptionEnum_ABSTAIN =
+    const CosmosGovV1beta1VoteOptionEnum._('ABSTAIN');
+const CosmosGovV1beta1VoteOptionEnum _$cosmosGovV1beta1VoteOptionEnum_NO =
+    const CosmosGovV1beta1VoteOptionEnum._('NO');
+const CosmosGovV1beta1VoteOptionEnum
+    _$cosmosGovV1beta1VoteOptionEnum_NO_WITH_VETO =
+    const CosmosGovV1beta1VoteOptionEnum._('NO_WITH_VETO');
+
+CosmosGovV1beta1VoteOptionEnum _$cosmosGovV1beta1VoteOptionEnumValueOf(
+    String name) {
+  switch (name) {
+    case 'UNSPECIFIED':
+      return _$cosmosGovV1beta1VoteOptionEnum_UNSPECIFIED;
+    case 'YES':
+      return _$cosmosGovV1beta1VoteOptionEnum_YES;
+    case 'ABSTAIN':
+      return _$cosmosGovV1beta1VoteOptionEnum_ABSTAIN;
+    case 'NO':
+      return _$cosmosGovV1beta1VoteOptionEnum_NO;
+    case 'NO_WITH_VETO':
+      return _$cosmosGovV1beta1VoteOptionEnum_NO_WITH_VETO;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<CosmosGovV1beta1VoteOptionEnum>
+    _$cosmosGovV1beta1VoteOptionEnumValues = new BuiltSet<
+        CosmosGovV1beta1VoteOptionEnum>(const <CosmosGovV1beta1VoteOptionEnum>[
+  _$cosmosGovV1beta1VoteOptionEnum_UNSPECIFIED,
+  _$cosmosGovV1beta1VoteOptionEnum_YES,
+  _$cosmosGovV1beta1VoteOptionEnum_ABSTAIN,
+  _$cosmosGovV1beta1VoteOptionEnum_NO,
+  _$cosmosGovV1beta1VoteOptionEnum_NO_WITH_VETO,
+]);
+
+Serializer<CosmosGovV1beta1VoteOptionEnum>
+    _$cosmosGovV1beta1VoteOptionEnumSerializer =
+    new _$CosmosGovV1beta1VoteOptionEnumSerializer();
+
+class _$CosmosGovV1beta1VoteOptionEnumSerializer
+    implements PrimitiveSerializer<CosmosGovV1beta1VoteOptionEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNSPECIFIED': 'VOTE_OPTION_UNSPECIFIED',
+    'YES': 'VOTE_OPTION_YES',
+    'ABSTAIN': 'VOTE_OPTION_ABSTAIN',
+    'NO': 'VOTE_OPTION_NO',
+    'NO_WITH_VETO': 'VOTE_OPTION_NO_WITH_VETO',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'VOTE_OPTION_UNSPECIFIED': 'UNSPECIFIED',
+    'VOTE_OPTION_YES': 'YES',
+    'VOTE_OPTION_ABSTAIN': 'ABSTAIN',
+    'VOTE_OPTION_NO': 'NO',
+    'VOTE_OPTION_NO_WITH_VETO': 'NO_WITH_VETO',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[CosmosGovV1beta1VoteOptionEnum];
+  @override
+  final String wireName = 'CosmosGovV1beta1VoteOptionEnum';
+
+  @override
+  Object serialize(
+          Serializers serializers, CosmosGovV1beta1VoteOptionEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  CosmosGovV1beta1VoteOptionEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      CosmosGovV1beta1VoteOptionEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$CosmosGovV1beta1Vote extends CosmosGovV1beta1Vote {
   @override
   final String? proposalId;
   @override
   final String? voter;
   @override
-  final Option2? option;
+  final CosmosGovV1beta1VoteOptionEnum? option;
   @override
-  final BuiltList<CosmosGovV1beta1WeightedVoteOption>? options;
+  final BuiltList<SinceCosmosSdk043Inner>? options;
 
   factory _$CosmosGovV1beta1Vote(
           [void Function(CosmosGovV1beta1VoteBuilder)? updates]) =>
@@ -73,14 +154,14 @@ class CosmosGovV1beta1VoteBuilder
   String? get voter => _$this._voter;
   set voter(String? voter) => _$this._voter = voter;
 
-  Option2? _option;
-  Option2? get option => _$this._option;
-  set option(Option2? option) => _$this._option = option;
+  CosmosGovV1beta1VoteOptionEnum? _option;
+  CosmosGovV1beta1VoteOptionEnum? get option => _$this._option;
+  set option(CosmosGovV1beta1VoteOptionEnum? option) => _$this._option = option;
 
-  ListBuilder<CosmosGovV1beta1WeightedVoteOption>? _options;
-  ListBuilder<CosmosGovV1beta1WeightedVoteOption> get options =>
-      _$this._options ??= new ListBuilder<CosmosGovV1beta1WeightedVoteOption>();
-  set options(ListBuilder<CosmosGovV1beta1WeightedVoteOption>? options) =>
+  ListBuilder<SinceCosmosSdk043Inner>? _options;
+  ListBuilder<SinceCosmosSdk043Inner> get options =>
+      _$this._options ??= new ListBuilder<SinceCosmosSdk043Inner>();
+  set options(ListBuilder<SinceCosmosSdk043Inner>? options) =>
       _$this._options = options;
 
   CosmosGovV1beta1VoteBuilder() {

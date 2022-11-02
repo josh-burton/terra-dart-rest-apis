@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**params** | [**CosmosMintV1beta1QueryParamsResponseParams**](CosmosMintV1beta1QueryParamsResponseParams.md) |  | [optional] 
+**params** | [**MintParams200ResponseParams**](MintParams200ResponseParams.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,17 +12,20 @@ part 'get_market_price_result.g.dart';
 /// GetMarketPriceResult
 ///
 /// Properties:
-/// * [lastPrice] 
-/// * [oneDayVariation] 
-/// * [oneDayVariationRate] 
+/// * [lastPrice] - 
+/// * [oneDayVariation] - 
+/// * [oneDayVariationRate] - 
 /// * [prices] - Price history
 abstract class GetMarketPriceResult implements Built<GetMarketPriceResult, GetMarketPriceResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'lastPrice')
     num get lastPrice;
 
+    /// 
     @BuiltValueField(wireName: r'oneDayVariation')
     String get oneDayVariation;
 
+    /// 
     @BuiltValueField(wireName: r'oneDayVariationRate')
     String get oneDayVariationRate;
 

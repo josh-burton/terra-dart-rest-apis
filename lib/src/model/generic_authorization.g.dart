@@ -10,7 +10,7 @@ class _$GenericAuthorization extends GenericAuthorization {
   @override
   final String? type;
   @override
-  final Value3? value;
+  final GenericAuthorizationValue? value;
 
   factory _$GenericAuthorization(
           [void Function(GenericAuthorizationBuilder)? updates]) =>
@@ -57,9 +57,10 @@ class GenericAuthorizationBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  Value3Builder? _value;
-  Value3Builder get value => _$this._value ??= new Value3Builder();
-  set value(Value3Builder? value) => _$this._value = value;
+  GenericAuthorizationValueBuilder? _value;
+  GenericAuthorizationValueBuilder get value =>
+      _$this._value ??= new GenericAuthorizationValueBuilder();
+  set value(GenericAuthorizationValueBuilder? value) => _$this._value = value;
 
   GenericAuthorizationBuilder() {
     GenericAuthorization._defaults(this);

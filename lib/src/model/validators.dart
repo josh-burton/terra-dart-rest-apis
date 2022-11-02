@@ -14,32 +14,36 @@ part 'validators.g.dart';
 /// Validators
 ///
 /// Properties:
-/// * [operatorAddress] 
-/// * [consensusPubkey] 
+/// * [operatorAddress] - 
+/// * [consensusPubkey] - 
 /// * [description] 
-/// * [tokens] 
-/// * [delegatorShares] 
+/// * [tokens] - 
+/// * [delegatorShares] - 
 /// * [votingPower] 
 /// * [commissionInfo] 
-/// * [upTime] 
-/// * [status] 
+/// * [upTime] - 
+/// * [status] - 
 /// * [rewardsPool] 
-/// * [stakingReturn] 
+/// * [stakingReturn] - 
 /// * [myDelegation] - The amount of user delegation to this validator
 /// * [myUndelegation] - Undelegation information of user in progress in this validator
 abstract class Validators implements Built<Validators, ValidatorsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'operatorAddress')
     String get operatorAddress;
 
+    /// 
     @BuiltValueField(wireName: r'consensusPubkey')
     String get consensusPubkey;
 
     @BuiltValueField(wireName: r'description')
     ValidatorsDescription get description;
 
+    /// 
     @BuiltValueField(wireName: r'tokens')
     String get tokens;
 
+    /// 
     @BuiltValueField(wireName: r'delegatorShares')
     String get delegatorShares;
 
@@ -49,15 +53,18 @@ abstract class Validators implements Built<Validators, ValidatorsBuilder> {
     @BuiltValueField(wireName: r'commissionInfo')
     ValidatorsCommissionInfo get commissionInfo;
 
+    /// 
     @BuiltValueField(wireName: r'upTime')
     num get upTime;
 
+    /// 
     @BuiltValueField(wireName: r'status')
     String get status;
 
     @BuiltValueField(wireName: r'rewardsPool')
     ValidatorsRewardsPool get rewardsPool;
 
+    /// 
     @BuiltValueField(wireName: r'stakingReturn')
     String get stakingReturn;
 

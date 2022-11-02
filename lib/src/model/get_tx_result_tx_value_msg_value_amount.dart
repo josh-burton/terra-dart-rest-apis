@@ -10,12 +10,14 @@ part 'get_tx_result_tx_value_msg_value_amount.g.dart';
 /// GetTxResultTxValueMsgValueAmount
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class GetTxResultTxValueMsgValueAmount implements Built<GetTxResultTxValueMsgValueAmount, GetTxResultTxValueMsgValueAmountBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

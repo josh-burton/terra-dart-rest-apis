@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_node_info_response_application_version.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_p2p_default_node_info.dart';
+import 'package:terra_dart_rest_apis/src/model/get_node_info200_response_application_version.dart';
+import 'package:terra_dart_rest_apis/src/model/get_node_info200_response_default_node_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_base_tendermint_v1beta1_get_node_info_response.g.dart';
 /// * [applicationVersion] 
 abstract class CosmosBaseTendermintV1beta1GetNodeInfoResponse implements Built<CosmosBaseTendermintV1beta1GetNodeInfoResponse, CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder> {
     @BuiltValueField(wireName: r'default_node_info')
-    TendermintP2pDefaultNodeInfo? get defaultNodeInfo;
+    GetNodeInfo200ResponseDefaultNodeInfo? get defaultNodeInfo;
 
     @BuiltValueField(wireName: r'application_version')
-    CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion? get applicationVersion;
+    GetNodeInfo200ResponseApplicationVersion? get applicationVersion;
 
     CosmosBaseTendermintV1beta1GetNodeInfoResponse._();
 
@@ -47,13 +47,13 @@ class _$CosmosBaseTendermintV1beta1GetNodeInfoResponseSerializer implements Stru
             result
                 ..add(r'default_node_info')
                 ..add(serializers.serialize(object.defaultNodeInfo,
-                    specifiedType: const FullType(TendermintP2pDefaultNodeInfo)));
+                    specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfo)));
         }
         if (object.applicationVersion != null) {
             result
                 ..add(r'application_version')
                 ..add(serializers.serialize(object.applicationVersion,
-                    specifiedType: const FullType(CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion)));
+                    specifiedType: const FullType(GetNodeInfo200ResponseApplicationVersion)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosBaseTendermintV1beta1GetNodeInfoResponseSerializer implements Stru
             switch (key) {
                 case r'default_node_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintP2pDefaultNodeInfo)) as TendermintP2pDefaultNodeInfo;
+                        specifiedType: const FullType(GetNodeInfo200ResponseDefaultNodeInfo)) as GetNodeInfo200ResponseDefaultNodeInfo;
                     result.defaultNodeInfo.replace(valueDes);
                     break;
                 case r'application_version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion)) as CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion;
+                        specifiedType: const FullType(GetNodeInfo200ResponseApplicationVersion)) as GetNodeInfo200ResponseApplicationVersion;
                     result.applicationVersion.replace(valueDes);
                     break;
             }

@@ -9,9 +9,10 @@ part of 'cosmos_staking_v1beta1_query_delegator_validators_response.dart';
 class _$CosmosStakingV1beta1QueryDelegatorValidatorsResponse
     extends CosmosStakingV1beta1QueryDelegatorValidatorsResponse {
   @override
-  final BuiltList<CosmosStakingV1beta1Validator>? validators;
+  final BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>?
+      validators;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosStakingV1beta1QueryDelegatorValidatorsResponse(
           [void Function(
@@ -66,19 +67,20 @@ class CosmosStakingV1beta1QueryDelegatorValidatorsResponseBuilder
             CosmosStakingV1beta1QueryDelegatorValidatorsResponseBuilder> {
   _$CosmosStakingV1beta1QueryDelegatorValidatorsResponse? _$v;
 
-  ListBuilder<CosmosStakingV1beta1Validator>? _validators;
-  ListBuilder<CosmosStakingV1beta1Validator> get validators =>
-      _$this._validators ??= new ListBuilder<CosmosStakingV1beta1Validator>();
-  set validators(ListBuilder<CosmosStakingV1beta1Validator>? validators) =>
+  ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>?
+      _validators;
+  ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>
+      get validators => _$this._validators ??= new ListBuilder<
+          StakingDelegatorValidators200ResponseValidatorsInner>();
+  set validators(
+          ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>?
+              validators) =>
       _$this._validators = validators;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosStakingV1beta1QueryDelegatorValidatorsResponseBuilder() {

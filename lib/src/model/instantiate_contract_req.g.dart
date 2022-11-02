@@ -8,9 +8,9 @@ part of 'instantiate_contract_req.dart';
 
 class _$InstantiateContractReq extends InstantiateContractReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
-  final BuiltList<Coin>? initCoins;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? initCoins;
   @override
   final String? initMsg;
   @override
@@ -66,14 +66,19 @@ class InstantiateContractReqBuilder
     implements Builder<InstantiateContractReq, InstantiateContractReqBuilder> {
   _$InstantiateContractReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
-  ListBuilder<Coin>? _initCoins;
-  ListBuilder<Coin> get initCoins =>
-      _$this._initCoins ??= new ListBuilder<Coin>();
-  set initCoins(ListBuilder<Coin>? initCoins) => _$this._initCoins = initCoins;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _initCoins;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get initCoins =>
+      _$this._initCoins ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set initCoins(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? initCoins) =>
+      _$this._initCoins = initCoins;
 
   String? _initMsg;
   String? get initMsg => _$this._initMsg;

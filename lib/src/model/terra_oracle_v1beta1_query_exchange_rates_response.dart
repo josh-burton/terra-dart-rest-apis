@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_dec_coin.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response_pool_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'terra_oracle_v1beta1_query_exchange_rates_response.g.dart';
 abstract class TerraOracleV1beta1QueryExchangeRatesResponse implements Built<TerraOracleV1beta1QueryExchangeRatesResponse, TerraOracleV1beta1QueryExchangeRatesResponseBuilder> {
     /// exchange_rates defines a list of the exchange rate for all whitelisted denoms.
     @BuiltValueField(wireName: r'exchange_rates')
-    BuiltList<CosmosBaseV1beta1DecCoin>? get exchangeRates;
+    BuiltList<CommunityPool200ResponsePoolInner>? get exchangeRates;
 
     TerraOracleV1beta1QueryExchangeRatesResponse._();
 
@@ -44,7 +44,7 @@ class _$TerraOracleV1beta1QueryExchangeRatesResponseSerializer implements Struct
             result
                 ..add(r'exchange_rates')
                 ..add(serializers.serialize(object.exchangeRates,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])));
         }
         return result;
     }
@@ -63,7 +63,7 @@ class _$TerraOracleV1beta1QueryExchangeRatesResponseSerializer implements Struct
             switch (key) {
                 case r'exchange_rates':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])) as BuiltList<CosmosBaseV1beta1DecCoin>;
+                        specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])) as BuiltList<CommunityPool200ResponsePoolInner>;
                     result.exchangeRates.replace(valueDes);
                     break;
             }

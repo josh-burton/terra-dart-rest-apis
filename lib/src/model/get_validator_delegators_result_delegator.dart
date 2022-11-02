@@ -12,7 +12,7 @@ part 'get_validator_delegators_result_delegator.g.dart';
 /// Properties:
 /// * [address] - Delegator address
 /// * [amount] - Amount of luna delegated
-/// * [weight] 
+/// * [weight] - 
 abstract class GetValidatorDelegatorsResultDelegator implements Built<GetValidatorDelegatorsResultDelegator, GetValidatorDelegatorsResultDelegatorBuilder> {
     /// Delegator address
     @BuiltValueField(wireName: r'address')
@@ -22,6 +22,7 @@ abstract class GetValidatorDelegatorsResultDelegator implements Built<GetValidat
     @BuiltValueField(wireName: r'amount')
     String get amount;
 
+    /// 
     @BuiltValueField(wireName: r'weight')
     String get weight;
 

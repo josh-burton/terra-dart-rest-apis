@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'tendermint_types_evidence_list.g.dart';
 /// TendermintTypesEvidenceList
 ///
 /// Properties:
-/// * [evidence] - 
+/// * [evidence] 
 abstract class TendermintTypesEvidenceList implements Built<TendermintTypesEvidenceList, TendermintTypesEvidenceListBuilder> {
-    /// 
     @BuiltValueField(wireName: r'evidence')
-    BuiltList<TendermintTypesEvidence>? get evidence;
+    BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>? get evidence;
 
     TendermintTypesEvidenceList._();
 
@@ -44,7 +43,7 @@ class _$TendermintTypesEvidenceListSerializer implements StructuredSerializer<Te
             result
                 ..add(r'evidence')
                 ..add(serializers.serialize(object.evidence,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintTypesEvidence)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInner)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$TendermintTypesEvidenceListSerializer implements StructuredSerializer<Te
             switch (key) {
                 case r'evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintTypesEvidence)])) as BuiltList<TendermintTypesEvidence>;
+                        specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInner)])) as BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInner>;
                     result.evidence.replace(valueDes);
                     break;
             }

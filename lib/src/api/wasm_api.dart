@@ -8,16 +8,16 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:terra_dart_rest_apis/src/api_util.dart';
-import 'package:terra_dart_rest_apis/src/model/clear_contract_admin_req.dart';
-import 'package:terra_dart_rest_apis/src/model/code_info.dart';
-import 'package:terra_dart_rest_apis/src/model/contract_info.dart';
-import 'package:terra_dart_rest_apis/src/model/execute_contract_req.dart';
-import 'package:terra_dart_rest_apis/src/model/instantiate_contract_req.dart';
-import 'package:terra_dart_rest_apis/src/model/migrate_contract_req.dart';
-import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/store_code_req.dart';
-import 'package:terra_dart_rest_apis/src/model/update_contract_admin_req.dart';
-import 'package:terra_dart_rest_apis/src/model/wasm_params.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_delegators_delegator_addr_rewards_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_codes_code_id_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_codes_code_id_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_codes_post_request.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_contracts_contract_address_admin_update_post_request.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_contracts_contract_address_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_contracts_contract_address_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_contracts_contract_address_migrate_post_request.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_parameters_get200_response.dart';
 
 class WasmApi {
 
@@ -27,294 +27,8 @@ class WasmApi {
 
   const WasmApi(this._dio, this._serializers);
 
-  /// Clear wasm contract admin to make the contract un-migratable
-  /// Clear wasm contract admin to make the contract un-migratable
-  ///
-  /// Parameters:
-  /// * [contractAddress] - contract address you want to clear admin
-  /// * [clearContractAdminReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> clearwasmcontractadmintomakethecontractunMigratable({ 
-    required String contractAddress,
-    ClearContractAdminReq? clearContractAdminReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/contracts/{contractAddress}/admin/clear'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(ClearContractAdminReq);
-      _bodyData = clearContractAdminReq == null ? null : _serializers.serialize(clearContractAdminReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Execute wasm contract message
-  /// Execute wasm contract message
-  ///
-  /// Parameters:
-  /// * [contractAddress] - contract address you want to execute
-  /// * [executeContractReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> executewasmcontractmessage({ 
-    required String contractAddress,
-    ExecuteContractReq? executeContractReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/contracts/{contractAddress}'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(ExecuteContractReq);
-      _bodyData = executeContractReq == null ? null : _serializers.serialize(executeContractReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Generate wasm store code message
-  /// Generate wasm store code message
-  ///
-  /// Parameters:
-  /// * [storeCodeReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> generatewasmstorecodemessage({ 
-    StoreCodeReq? storeCodeReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/codes';
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(StoreCodeReq);
-      _bodyData = storeCodeReq == null ? null : _serializers.serialize(storeCodeReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Get code info of the code ID
-  /// Get code info of the code ID
+  /// 
   ///
   /// Parameters:
   /// * [codeID] - code ID you want to instantiate
@@ -325,11 +39,11 @@ class WasmApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CodeInfo] as data
+  /// Returns a [Future] containing a [Response] with a [WasmCodesCodeIDGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<CodeInfo>> getcodeinfoofthecodeID({ 
-    required double codeID,
+  Future<Response<WasmCodesCodeIDGet200Response>> wasmCodesCodeIDGet({ 
+    required num codeID,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -358,14 +72,14 @@ class WasmApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CodeInfo _responseData;
+    WasmCodesCodeIDGet200Response _responseData;
 
     try {
-      const _responseType = FullType(CodeInfo);
+      const _responseType = FullType(WasmCodesCodeIDGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CodeInfo;
+      ) as WasmCodesCodeIDGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -376,7 +90,480 @@ class WasmApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<CodeInfo>(
+    return Response<WasmCodesCodeIDGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Migrate old wasm code to new wasm code
+  /// 
+  ///
+  /// Parameters:
+  /// * [codeID] - code ID you want to migrate
+  /// * [migrateContractRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmCodesCodeIDMigratePost({ 
+    required num codeID,
+    WasmCodesPostRequest? migrateContractRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/codes/{codeID}/migrate'.replaceAll('{' r'codeID' '}', codeID.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmCodesPostRequest);
+      _bodyData = migrateContractRequestBody == null ? null : _serializers.serialize(migrateContractRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Instantiate wasm contract
+  /// 
+  ///
+  /// Parameters:
+  /// * [codeID] - code ID you want to instantiate
+  /// * [instantiateContractRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmCodesCodeIDPost({ 
+    required num codeID,
+    WasmCodesCodeIDGetRequest? instantiateContractRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/codes/{codeID}'.replaceAll('{' r'codeID' '}', codeID.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmCodesCodeIDGetRequest);
+      _bodyData = instantiateContractRequestBody == null ? null : _serializers.serialize(instantiateContractRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Generate wasm store code message
+  /// 
+  ///
+  /// Parameters:
+  /// * [storeCodeRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmCodesPost({ 
+    WasmCodesPostRequest? storeCodeRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/codes';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmCodesPostRequest);
+      _bodyData = storeCodeRequestBody == null ? null : _serializers.serialize(storeCodeRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Clear wasm contract admin to make the contract un-migratable
+  /// 
+  ///
+  /// Parameters:
+  /// * [contractAddress] - contract address you want to clear admin
+  /// * [clearContractAdminRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmContractsContractAddressAdminClearPost({ 
+    required String contractAddress,
+    DistributionDelegatorsDelegatorAddrRewardsGetRequest? clearContractAdminRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/contracts/{contractAddress}/admin/clear'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(DistributionDelegatorsDelegatorAddrRewardsGetRequest);
+      _bodyData = clearContractAdminRequestBody == null ? null : _serializers.serialize(clearContractAdminRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Update wasm contract admin to new address
+  /// 
+  ///
+  /// Parameters:
+  /// * [contractAddress] - contract address you want to update admin
+  /// * [updateContractAdminRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmContractsContractAddressAdminUpdatePost({ 
+    required String contractAddress,
+    WasmContractsContractAddressAdminUpdatePostRequest? updateContractAdminRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/contracts/{contractAddress}/admin/update'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmContractsContractAddressAdminUpdatePostRequest);
+      _bodyData = updateContractAdminRequestBody == null ? null : _serializers.serialize(updateContractAdminRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -389,7 +576,7 @@ class WasmApi {
   }
 
   /// Get contract info of the contract Address
-  /// Get contract info of the contract Address
+  /// 
   ///
   /// Parameters:
   /// * [contractAddress] - contract address you want to execute
@@ -400,10 +587,10 @@ class WasmApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ContractInfo] as data
+  /// Returns a [Future] containing a [Response] with a [WasmContractsContractAddressGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<ContractInfo>> getcontractinfoofthecontractAddress({ 
+  Future<Response<WasmContractsContractAddressGet200Response>> wasmContractsContractAddressGet({ 
     required String contractAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -433,14 +620,14 @@ class WasmApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ContractInfo _responseData;
+    WasmContractsContractAddressGet200Response _responseData;
 
     try {
-      const _responseType = FullType(ContractInfo);
+      const _responseType = FullType(WasmContractsContractAddressGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ContractInfo;
+      ) as WasmContractsContractAddressGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -451,7 +638,197 @@ class WasmApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<ContractInfo>(
+    return Response<WasmContractsContractAddressGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Migrate wasm contract to new code base
+  /// 
+  ///
+  /// Parameters:
+  /// * [contractAddress] - contract address you want to migrate
+  /// * [migrateContractRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmContractsContractAddressMigratePost({ 
+    required String contractAddress,
+    WasmContractsContractAddressMigratePostRequest? migrateContractRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/contracts/{contractAddress}/migrate'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmContractsContractAddressMigratePostRequest);
+      _bodyData = migrateContractRequestBody == null ? null : _serializers.serialize(migrateContractRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Execute wasm contract message
+  /// 
+  ///
+  /// Parameters:
+  /// * [contractAddress] - contract address you want to execute
+  /// * [executeContractRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> wasmContractsContractAddressPost({ 
+    required String contractAddress,
+    WasmContractsContractAddressGetRequest? executeContractRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/wasm/contracts/{contractAddress}'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(WasmContractsContractAddressGetRequest);
+      _bodyData = executeContractRequestBody == null ? null : _serializers.serialize(executeContractRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -464,7 +841,7 @@ class WasmApi {
   }
 
   /// Get stored information with query msg
-  /// Get stored information with query msg
+  /// 
   ///
   /// Parameters:
   /// * [contractAddress] - contract address you want to lookup
@@ -479,7 +856,7 @@ class WasmApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> getstoredinformationwithquerymsg({ 
+  Future<Response<String>> wasmContractsContractAddressStoreGet({ 
     required String contractAddress,
     required String queryMsg,
     CancelToken? cancelToken,
@@ -542,7 +919,7 @@ class WasmApi {
   }
 
   /// Get stored information with store key
-  /// Get stored information with store key
+  /// 
   ///
   /// Parameters:
   /// * [contractAddress] - contract address you want to lookup
@@ -557,7 +934,7 @@ class WasmApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> getstoredinformationwithstorekey({ 
+  Future<Response<String>> wasmContractsContractAddressStoreRawGet({ 
     required String contractAddress,
     required String key,
     CancelToken? cancelToken,
@@ -620,7 +997,7 @@ class WasmApi {
   }
 
   /// Get wasm module params
-  /// Get wasm module params
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -630,10 +1007,10 @@ class WasmApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [WasmParams] as data
+  /// Returns a [Future] containing a [Response] with a [WasmParametersGet200Response] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<WasmParams>> getwasmmoduleparams({ 
+  Future<Response<WasmParametersGet200Response>> wasmParametersGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -662,14 +1039,14 @@ class WasmApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    WasmParams _responseData;
+    WasmParametersGet200Response _responseData;
 
     try {
-      const _responseType = FullType(WasmParams);
+      const _responseType = FullType(WasmParametersGet200Response);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as WasmParams;
+      ) as WasmParametersGet200Response;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -680,391 +1057,7 @@ class WasmApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<WasmParams>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Instantiate wasm contract
-  /// Instantiate wasm contract
-  ///
-  /// Parameters:
-  /// * [codeID] - code ID you want to instantiate
-  /// * [instantiateContractReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> instantiatewasmcontract({ 
-    required double codeID,
-    InstantiateContractReq? instantiateContractReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/codes/{codeID}'.replaceAll('{' r'codeID' '}', codeID.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(InstantiateContractReq);
-      _bodyData = instantiateContractReq == null ? null : _serializers.serialize(instantiateContractReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Migrate old wasm code to new wasm code
-  /// Migrate old wasm code to new wasm code
-  ///
-  /// Parameters:
-  /// * [codeID] - code ID you want to migrate
-  /// * [storeCodeReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> migrateoldwasmcodetonewwasmcode({ 
-    required double codeID,
-    StoreCodeReq? storeCodeReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/codes/{codeID}/migrate'.replaceAll('{' r'codeID' '}', codeID.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(StoreCodeReq);
-      _bodyData = storeCodeReq == null ? null : _serializers.serialize(storeCodeReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Migrate wasm contract to new code base
-  /// Migrate wasm contract to new code base
-  ///
-  /// Parameters:
-  /// * [contractAddress] - contract address you want to migrate
-  /// * [migrateContractReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> migratewasmcontracttonewcodebase({ 
-    required String contractAddress,
-    MigrateContractReq? migrateContractReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/contracts/{contractAddress}/migrate'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(MigrateContractReq);
-      _bodyData = migrateContractReq == null ? null : _serializers.serialize(migrateContractReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Update wasm contract admin to new address
-  /// Update wasm contract admin to new address
-  ///
-  /// Parameters:
-  /// * [contractAddress] - contract address you want to update admin
-  /// * [updateContractAdminReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> updatewasmcontractadmintonewaddress({ 
-    required String contractAddress,
-    UpdateContractAdminReq? updateContractAdminReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/wasm/contracts/{contractAddress}/admin/update'.replaceAll('{' r'contractAddress' '}', contractAddress.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(UpdateContractAdminReq);
-      _bodyData = updateContractAdminReq == null ? null : _serializers.serialize(updateContractAdminReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
+    return Response<WasmParametersGet200Response>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

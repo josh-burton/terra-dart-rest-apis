@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination
+# terra_dart_rest_apis.model.QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethodPagination
 
 ## Load the model package
 ```dart

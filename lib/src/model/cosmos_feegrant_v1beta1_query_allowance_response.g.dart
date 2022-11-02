@@ -9,7 +9,7 @@ part of 'cosmos_feegrant_v1beta1_query_allowance_response.dart';
 class _$CosmosFeegrantV1beta1QueryAllowanceResponse
     extends CosmosFeegrantV1beta1QueryAllowanceResponse {
   @override
-  final CosmosFeegrantV1beta1QueryAllowanceResponseAllowance? allowance;
+  final GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext? allowance;
 
   factory _$CosmosFeegrantV1beta1QueryAllowanceResponse(
           [void Function(CosmosFeegrantV1beta1QueryAllowanceResponseBuilder)?
@@ -57,12 +57,12 @@ class CosmosFeegrantV1beta1QueryAllowanceResponseBuilder
             CosmosFeegrantV1beta1QueryAllowanceResponseBuilder> {
   _$CosmosFeegrantV1beta1QueryAllowanceResponse? _$v;
 
-  CosmosFeegrantV1beta1QueryAllowanceResponseAllowanceBuilder? _allowance;
-  CosmosFeegrantV1beta1QueryAllowanceResponseAllowanceBuilder get allowance =>
+  GrantIsStoredInTheKVStoreToRecordAGrantWithFullContextBuilder? _allowance;
+  GrantIsStoredInTheKVStoreToRecordAGrantWithFullContextBuilder get allowance =>
       _$this._allowance ??=
-          new CosmosFeegrantV1beta1QueryAllowanceResponseAllowanceBuilder();
+          new GrantIsStoredInTheKVStoreToRecordAGrantWithFullContextBuilder();
   set allowance(
-          CosmosFeegrantV1beta1QueryAllowanceResponseAllowanceBuilder?
+          GrantIsStoredInTheKVStoreToRecordAGrantWithFullContextBuilder?
               allowance) =>
       _$this._allowance = allowance;
 

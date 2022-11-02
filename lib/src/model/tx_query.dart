@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/result.dart';
-import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_result.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,10 +24,10 @@ abstract class TxQuery implements Built<TxQuery, TxQueryBuilder> {
     num? get height;
 
     @BuiltValueField(wireName: r'tx')
-    StdTx? get tx;
+    TxsHashGet200ResponseTx? get tx;
 
     @BuiltValueField(wireName: r'result')
-    Result? get result;
+    TxsHashGet200ResponseResult? get result;
 
     TxQuery._();
 
@@ -67,13 +67,13 @@ class _$TxQuerySerializer implements StructuredSerializer<TxQuery> {
             result
                 ..add(r'tx')
                 ..add(serializers.serialize(object.tx,
-                    specifiedType: const FullType(StdTx)));
+                    specifiedType: const FullType(TxsHashGet200ResponseTx)));
         }
         if (object.result != null) {
             result
                 ..add(r'result')
                 ..add(serializers.serialize(object.result,
-                    specifiedType: const FullType(Result)));
+                    specifiedType: const FullType(TxsHashGet200ResponseResult)));
         }
         return result;
     }
@@ -102,12 +102,12 @@ class _$TxQuerySerializer implements StructuredSerializer<TxQuery> {
                     break;
                 case r'tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(StdTx)) as StdTx;
+                        specifiedType: const FullType(TxsHashGet200ResponseTx)) as TxsHashGet200ResponseTx;
                     result.tx.replace(valueDes);
                     break;
                 case r'result':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Result)) as Result;
+                        specifiedType: const FullType(TxsHashGet200ResponseResult)) as TxsHashGet200ResponseResult;
                     result.result.replace(valueDes);
                     break;
             }

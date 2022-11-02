@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**blockId** | [**BlockID26**](BlockID26.md) |  | [optional] 
-**block** | [**TendermintTypesBlock**](TendermintTypesBlock.md) |  | [optional] 
+**blockId** | [**BlockID1**](BlockID1.md) |  | [optional] 
+**block** | [**GetLatestBlock200ResponseBlock**](GetLatestBlock200ResponseBlock.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

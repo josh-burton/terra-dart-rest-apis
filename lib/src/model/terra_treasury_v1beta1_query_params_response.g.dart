@@ -9,7 +9,7 @@ part of 'terra_treasury_v1beta1_query_params_response.dart';
 class _$TerraTreasuryV1beta1QueryParamsResponse
     extends TerraTreasuryV1beta1QueryParamsResponse {
   @override
-  final TerraTreasuryV1beta1QueryParamsResponseParams? params;
+  final TreasuryParams200ResponseParams? params;
 
   factory _$TerraTreasuryV1beta1QueryParamsResponse(
           [void Function(TerraTreasuryV1beta1QueryParamsResponseBuilder)?
@@ -56,11 +56,10 @@ class TerraTreasuryV1beta1QueryParamsResponseBuilder
             TerraTreasuryV1beta1QueryParamsResponseBuilder> {
   _$TerraTreasuryV1beta1QueryParamsResponse? _$v;
 
-  TerraTreasuryV1beta1QueryParamsResponseParamsBuilder? _params;
-  TerraTreasuryV1beta1QueryParamsResponseParamsBuilder get params =>
-      _$this._params ??=
-          new TerraTreasuryV1beta1QueryParamsResponseParamsBuilder();
-  set params(TerraTreasuryV1beta1QueryParamsResponseParamsBuilder? params) =>
+  TreasuryParams200ResponseParamsBuilder? _params;
+  TreasuryParams200ResponseParamsBuilder get params =>
+      _$this._params ??= new TreasuryParams200ResponseParamsBuilder();
+  set params(TreasuryParams200ResponseParamsBuilder? params) =>
       _$this._params = params;
 
   TerraTreasuryV1beta1QueryParamsResponseBuilder() {

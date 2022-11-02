@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deposits** | [**BuiltList&lt;CosmosGovV1beta1Deposit&gt;**](CosmosGovV1beta1Deposit.md) |  | [optional] 
-**pagination** | [**CosmosAuthV1beta1QueryAccountsResponsePagination**](CosmosAuthV1beta1QueryAccountsResponsePagination.md) |  | [optional] 
+**deposits** | [**BuiltList&lt;Deposits200ResponseDepositsInner&gt;**](Deposits200ResponseDepositsInner.md) |  | [optional] 
+**pagination** | [**Accounts200ResponsePagination**](Accounts200ResponsePagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

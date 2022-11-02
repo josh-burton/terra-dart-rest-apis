@@ -13,12 +13,13 @@ part 'get_tx_result_logs_events.g.dart';
 ///
 /// Properties:
 /// * [attributes] - 
-/// * [types] 
+/// * [types] - 
 abstract class GetTxResultLogsEvents implements Built<GetTxResultLogsEvents, GetTxResultLogsEventsBuilder> {
     /// 
     @BuiltValueField(wireName: r'attributes')
     BuiltList<GetTxResultLogsEventsAttributes> get attributes;
 
+    /// 
     @BuiltValueField(wireName: r'types')
     String get types;
 

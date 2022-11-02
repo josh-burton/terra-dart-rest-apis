@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **String** |  | [optional] 
-**pubKey** | [**CosmosAuthV1beta1QueryAccountResponseAccount**](CosmosAuthV1beta1QueryAccountResponseAccount.md) |  | [optional] 
+**pubKey** | [**AccountsAreTheExistingAccountsInner**](AccountsAreTheExistingAccountsInner.md) |  | [optional] 
 **votingPower** | **String** |  | [optional] 
 **proposerPriority** | **String** |  | [optional] 
 

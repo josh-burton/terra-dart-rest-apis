@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_validator_set.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_signed_header.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_signed_header.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_validator_set.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'tendermint_types_light_block.g.dart';
 /// * [validatorSet] 
 abstract class TendermintTypesLightBlock implements Built<TendermintTypesLightBlock, TendermintTypesLightBlockBuilder> {
     @BuiltValueField(wireName: r'signed_header')
-    TendermintTypesSignedHeader? get signedHeader;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeader? get signedHeader;
 
     @BuiltValueField(wireName: r'validator_set')
-    TendermintTypesValidatorSet? get validatorSet;
+    GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSet? get validatorSet;
 
     TendermintTypesLightBlock._();
 
@@ -47,13 +47,13 @@ class _$TendermintTypesLightBlockSerializer implements StructuredSerializer<Tend
             result
                 ..add(r'signed_header')
                 ..add(serializers.serialize(object.signedHeader,
-                    specifiedType: const FullType(TendermintTypesSignedHeader)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeader)));
         }
         if (object.validatorSet != null) {
             result
                 ..add(r'validator_set')
                 ..add(serializers.serialize(object.validatorSet,
-                    specifiedType: const FullType(TendermintTypesValidatorSet)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSet)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$TendermintTypesLightBlockSerializer implements StructuredSerializer<Tend
             switch (key) {
                 case r'signed_header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesSignedHeader)) as TendermintTypesSignedHeader;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeader)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeader;
                     result.signedHeader.replace(valueDes);
                     break;
                 case r'validator_set':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesValidatorSet)) as TendermintTypesValidatorSet;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSet)) as GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockValidatorSet;
                     result.validatorSet.replace(valueDes);
                     break;
             }

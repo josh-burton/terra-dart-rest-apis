@@ -10,12 +10,14 @@ part 'txs_tx_value_msg_value_outputs_coins.g.dart';
 /// TxsTxValueMsgValueOutputsCoins
 ///
 /// Properties:
-/// * [deonm] 
-/// * [amount] 
+/// * [deonm] - 
+/// * [amount] - 
 abstract class TxsTxValueMsgValueOutputsCoins implements Built<TxsTxValueMsgValueOutputsCoins, TxsTxValueMsgValueOutputsCoinsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'deonm')
     String get deonm;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_string_event.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class CosmosBaseAbciV1beta1ABCIMessageLog implements Built<CosmosBaseAb
 
     /// Events contains a slice of Event objects that were emitted during some execution.
     @BuiltValueField(wireName: r'events')
-    BuiltList<CosmosBaseAbciV1beta1StringEvent>? get events;
+    BuiltList<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>? get events;
 
     CosmosBaseAbciV1beta1ABCIMessageLog._();
 
@@ -64,7 +64,7 @@ class _$CosmosBaseAbciV1beta1ABCIMessageLogSerializer implements StructuredSeria
             result
                 ..add(r'events')
                 ..add(serializers.serialize(object.events,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1StringEvent)])));
+                    specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInnerEventsInner)])));
         }
         return result;
     }
@@ -93,7 +93,7 @@ class _$CosmosBaseAbciV1beta1ABCIMessageLogSerializer implements StructuredSeria
                     break;
                 case r'events':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1StringEvent)])) as BuiltList<CosmosBaseAbciV1beta1StringEvent>;
+                        specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInnerEventsInner)])) as BuiltList<BroadcastTx200ResponseTxResponseLogsInnerEventsInner>;
                     result.events.replace(valueDes);
                     break;
             }

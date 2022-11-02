@@ -11,9 +11,10 @@ part 'get_mempool_by_hash_result_tx.g.dart';
 /// GetMempoolByHashResultTx
 ///
 /// Properties:
-/// * [type] 
+/// * [type] - 
 /// * [value] 
 abstract class GetMempoolByHashResultTx implements Built<GetMempoolByHashResultTx, GetMempoolByHashResultTxBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 

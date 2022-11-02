@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseReq** | [**BaseReq**](BaseReq.md) |  | 
-**offerCoin** | [**Coin**](Coin.md) |  | 
+**baseReq** | [**TxsEstimateFeePostRequestBaseReq**](TxsEstimateFeePostRequestBaseReq.md) |  | 
+**offerCoin** | [**TxsHashGet200ResponseTxFeeAmountInner**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | 
 **askDenom** | **String** |  | 
 **receiver** | **String** | the `receiver` field can be skipped when the receiver is trader | [optional] 
 

@@ -8,7 +8,7 @@ part of 'execute_grant_req.dart';
 
 class _$ExecuteGrantReq extends ExecuteGrantReq {
   @override
-  final BaseReq baseReq;
+  final TxsEstimateFeePostRequestBaseReq baseReq;
   @override
   final BuiltList<String> msgs;
 
@@ -55,9 +55,11 @@ class ExecuteGrantReqBuilder
     implements Builder<ExecuteGrantReq, ExecuteGrantReqBuilder> {
   _$ExecuteGrantReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   ListBuilder<String>? _msgs;
   ListBuilder<String> get msgs => _$this._msgs ??= new ListBuilder<String>();

@@ -6,12 +6,91 @@ part of 'cosmos_tx_v1beta1_broadcast_tx_request.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const CosmosTxV1beta1BroadcastTxRequestModeEnum
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnum_UNSPECIFIED =
+    const CosmosTxV1beta1BroadcastTxRequestModeEnum._('UNSPECIFIED');
+const CosmosTxV1beta1BroadcastTxRequestModeEnum
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnum_BLOCK =
+    const CosmosTxV1beta1BroadcastTxRequestModeEnum._('BLOCK');
+const CosmosTxV1beta1BroadcastTxRequestModeEnum
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnum_SYNC =
+    const CosmosTxV1beta1BroadcastTxRequestModeEnum._('SYNC');
+const CosmosTxV1beta1BroadcastTxRequestModeEnum
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnum_ASYNC =
+    const CosmosTxV1beta1BroadcastTxRequestModeEnum._('ASYNC');
+
+CosmosTxV1beta1BroadcastTxRequestModeEnum
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnumValueOf(String name) {
+  switch (name) {
+    case 'UNSPECIFIED':
+      return _$cosmosTxV1beta1BroadcastTxRequestModeEnum_UNSPECIFIED;
+    case 'BLOCK':
+      return _$cosmosTxV1beta1BroadcastTxRequestModeEnum_BLOCK;
+    case 'SYNC':
+      return _$cosmosTxV1beta1BroadcastTxRequestModeEnum_SYNC;
+    case 'ASYNC':
+      return _$cosmosTxV1beta1BroadcastTxRequestModeEnum_ASYNC;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<CosmosTxV1beta1BroadcastTxRequestModeEnum>
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnumValues =
+    new BuiltSet<CosmosTxV1beta1BroadcastTxRequestModeEnum>(const <
+        CosmosTxV1beta1BroadcastTxRequestModeEnum>[
+  _$cosmosTxV1beta1BroadcastTxRequestModeEnum_UNSPECIFIED,
+  _$cosmosTxV1beta1BroadcastTxRequestModeEnum_BLOCK,
+  _$cosmosTxV1beta1BroadcastTxRequestModeEnum_SYNC,
+  _$cosmosTxV1beta1BroadcastTxRequestModeEnum_ASYNC,
+]);
+
+Serializer<CosmosTxV1beta1BroadcastTxRequestModeEnum>
+    _$cosmosTxV1beta1BroadcastTxRequestModeEnumSerializer =
+    new _$CosmosTxV1beta1BroadcastTxRequestModeEnumSerializer();
+
+class _$CosmosTxV1beta1BroadcastTxRequestModeEnumSerializer
+    implements PrimitiveSerializer<CosmosTxV1beta1BroadcastTxRequestModeEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'UNSPECIFIED': 'BROADCAST_MODE_UNSPECIFIED',
+    'BLOCK': 'BROADCAST_MODE_BLOCK',
+    'SYNC': 'BROADCAST_MODE_SYNC',
+    'ASYNC': 'BROADCAST_MODE_ASYNC',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'BROADCAST_MODE_UNSPECIFIED': 'UNSPECIFIED',
+    'BROADCAST_MODE_BLOCK': 'BLOCK',
+    'BROADCAST_MODE_SYNC': 'SYNC',
+    'BROADCAST_MODE_ASYNC': 'ASYNC',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[
+    CosmosTxV1beta1BroadcastTxRequestModeEnum
+  ];
+  @override
+  final String wireName = 'CosmosTxV1beta1BroadcastTxRequestModeEnum';
+
+  @override
+  Object serialize(Serializers serializers,
+          CosmosTxV1beta1BroadcastTxRequestModeEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  CosmosTxV1beta1BroadcastTxRequestModeEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      CosmosTxV1beta1BroadcastTxRequestModeEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$CosmosTxV1beta1BroadcastTxRequest
     extends CosmosTxV1beta1BroadcastTxRequest {
   @override
   final String? txBytes;
   @override
-  final CosmosTxV1beta1BroadcastMode? mode;
+  final CosmosTxV1beta1BroadcastTxRequestModeEnum? mode;
 
   factory _$CosmosTxV1beta1BroadcastTxRequest(
           [void Function(CosmosTxV1beta1BroadcastTxRequestBuilder)? updates]) =>
@@ -61,9 +140,10 @@ class CosmosTxV1beta1BroadcastTxRequestBuilder
   String? get txBytes => _$this._txBytes;
   set txBytes(String? txBytes) => _$this._txBytes = txBytes;
 
-  CosmosTxV1beta1BroadcastMode? _mode;
-  CosmosTxV1beta1BroadcastMode? get mode => _$this._mode;
-  set mode(CosmosTxV1beta1BroadcastMode? mode) => _$this._mode = mode;
+  CosmosTxV1beta1BroadcastTxRequestModeEnum? _mode;
+  CosmosTxV1beta1BroadcastTxRequestModeEnum? get mode => _$this._mode;
+  set mode(CosmosTxV1beta1BroadcastTxRequestModeEnum? mode) =>
+      _$this._mode = mode;
 
   CosmosTxV1beta1BroadcastTxRequestBuilder() {
     CosmosTxV1beta1BroadcastTxRequest._defaults(this);

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **maxContractGas** | **num** | allowed max gas usages per each contract execution | [optional] 
 **maxContractMsgSize** | **num** | allowed max contract exe msg bytes size | [optional] 
 **maxContractDataSize** | **num** | allowed max contract return data size | [optional] 
-**eventParams** | [**EventParams**](EventParams.md) |  | [optional] 
+**eventParams** | [**WasmParametersGet200ResponseEventParams**](WasmParametersGet200ResponseEventParams.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

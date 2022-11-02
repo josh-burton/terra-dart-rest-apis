@@ -12,13 +12,15 @@ part 'get_validator_claims_result.g.dart';
 /// GetValidatorClaimsResult
 ///
 /// Properties:
-/// * [page] 
-/// * [limit] 
+/// * [page] - 
+/// * [limit] - 
 /// * [claims] - Claim list
 abstract class GetValidatorClaimsResult implements Built<GetValidatorClaimsResult, GetValidatorClaimsResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'page')
     num get page;
 
+    /// 
     @BuiltValueField(wireName: r'limit')
     num get limit;
 

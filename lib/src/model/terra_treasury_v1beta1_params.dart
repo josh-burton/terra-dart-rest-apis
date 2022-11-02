@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/policy_constraints_definespolicyconstraintscanbeappliedintaxrewardpolicies.dart';
+import 'package:terra_dart_rest_apis/src/model/policy_constraints_defines_policy_constraints_can_be_applied_in_tax_reward_policies.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,10 +20,10 @@ part 'terra_treasury_v1beta1_params.g.dart';
 /// * [windowProbation] 
 abstract class TerraTreasuryV1beta1Params implements Built<TerraTreasuryV1beta1Params, TerraTreasuryV1beta1ParamsBuilder> {
     @BuiltValueField(wireName: r'tax_policy')
-    PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies? get taxPolicy;
+    PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies? get taxPolicy;
 
     @BuiltValueField(wireName: r'reward_policy')
-    PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies? get rewardPolicy;
+    PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies? get rewardPolicy;
 
     @BuiltValueField(wireName: r'seigniorage_burden_target')
     String? get seigniorageBurdenTarget;
@@ -66,13 +66,13 @@ class _$TerraTreasuryV1beta1ParamsSerializer implements StructuredSerializer<Ter
             result
                 ..add(r'tax_policy')
                 ..add(serializers.serialize(object.taxPolicy,
-                    specifiedType: const FullType(PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies)));
+                    specifiedType: const FullType(PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies)));
         }
         if (object.rewardPolicy != null) {
             result
                 ..add(r'reward_policy')
                 ..add(serializers.serialize(object.rewardPolicy,
-                    specifiedType: const FullType(PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies)));
+                    specifiedType: const FullType(PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies)));
         }
         if (object.seigniorageBurdenTarget != null) {
             result
@@ -121,12 +121,12 @@ class _$TerraTreasuryV1beta1ParamsSerializer implements StructuredSerializer<Ter
             switch (key) {
                 case r'tax_policy':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies)) as PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies;
+                        specifiedType: const FullType(PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies)) as PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies;
                     result.taxPolicy.replace(valueDes);
                     break;
                 case r'reward_policy':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies)) as PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies;
+                        specifiedType: const FullType(PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies)) as PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies;
                     result.rewardPolicy.replace(valueDes);
                     break;
                 case r'seigniorage_burden_target':

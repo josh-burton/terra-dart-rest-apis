@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/redelegations200_response_redelegation_responses_inner_entries_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_response_redelegation.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_entry_response.dart';
+import 'package:terra_dart_rest_apis/src/model/redelegations200_response_redelegation_responses_inner_redelegation.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,14 +14,13 @@ part 'cosmos_staking_v1beta1_redelegation_response.g.dart';
 ///
 /// Properties:
 /// * [redelegation] 
-/// * [entries] - 
+/// * [entries] 
 abstract class CosmosStakingV1beta1RedelegationResponse implements Built<CosmosStakingV1beta1RedelegationResponse, CosmosStakingV1beta1RedelegationResponseBuilder> {
     @BuiltValueField(wireName: r'redelegation')
-    CosmosStakingV1beta1RedelegationResponseRedelegation? get redelegation;
+    Redelegations200ResponseRedelegationResponsesInnerRedelegation? get redelegation;
 
-    /// 
     @BuiltValueField(wireName: r'entries')
-    BuiltList<CosmosStakingV1beta1RedelegationEntryResponse>? get entries;
+    BuiltList<Redelegations200ResponseRedelegationResponsesInnerEntriesInner>? get entries;
 
     CosmosStakingV1beta1RedelegationResponse._();
 
@@ -49,13 +48,13 @@ class _$CosmosStakingV1beta1RedelegationResponseSerializer implements Structured
             result
                 ..add(r'redelegation')
                 ..add(serializers.serialize(object.redelegation,
-                    specifiedType: const FullType(CosmosStakingV1beta1RedelegationResponseRedelegation)));
+                    specifiedType: const FullType(Redelegations200ResponseRedelegationResponsesInnerRedelegation)));
         }
         if (object.entries != null) {
             result
                 ..add(r'entries')
                 ..add(serializers.serialize(object.entries,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1RedelegationEntryResponse)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Redelegations200ResponseRedelegationResponsesInnerEntriesInner)])));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$CosmosStakingV1beta1RedelegationResponseSerializer implements Structured
             switch (key) {
                 case r'redelegation':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1RedelegationResponseRedelegation)) as CosmosStakingV1beta1RedelegationResponseRedelegation;
+                        specifiedType: const FullType(Redelegations200ResponseRedelegationResponsesInnerRedelegation)) as Redelegations200ResponseRedelegationResponsesInnerRedelegation;
                     result.redelegation.replace(valueDes);
                     break;
                 case r'entries':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1RedelegationEntryResponse)])) as BuiltList<CosmosStakingV1beta1RedelegationEntryResponse>;
+                        specifiedType: const FullType(BuiltList, [FullType(Redelegations200ResponseRedelegationResponsesInnerEntriesInner)])) as BuiltList<Redelegations200ResponseRedelegationResponsesInnerEntriesInner>;
                     result.entries.replace(valueDes);
                     break;
             }

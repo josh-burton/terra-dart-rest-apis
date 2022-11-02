@@ -13,7 +13,7 @@ part 'cosmos_bank_v1beta1_denom_unit.g.dart';
 /// Properties:
 /// * [denom] - denom represents the string name of the given denom unit (e.g uatom).
 /// * [exponent] - exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 1^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom).
-/// * [aliases] - 
+/// * [aliases] 
 abstract class CosmosBankV1beta1DenomUnit implements Built<CosmosBankV1beta1DenomUnit, CosmosBankV1beta1DenomUnitBuilder> {
     /// denom represents the string name of the given denom unit (e.g uatom).
     @BuiltValueField(wireName: r'denom')
@@ -23,7 +23,6 @@ abstract class CosmosBankV1beta1DenomUnit implements Built<CosmosBankV1beta1Deno
     @BuiltValueField(wireName: r'exponent')
     int? get exponent;
 
-    /// 
     @BuiltValueField(wireName: r'aliases')
     BuiltList<String>? get aliases;
 

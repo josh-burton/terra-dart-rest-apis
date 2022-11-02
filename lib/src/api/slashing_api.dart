@@ -9,10 +9,10 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
-import 'package:terra_dart_rest_apis/src/model/getthecurrentslashingparameters_response.dart';
-import 'package:terra_dart_rest_apis/src/model/signing_info.dart';
-import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/unjail_body.dart';
+import 'package:terra_dart_rest_apis/src/model/slashing_parameters_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/slashing_signing_infos_get200_response_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/slashing_validators_validator_addr_unjail_post_request.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
 
 class SlashingApi {
 
@@ -21,6 +21,79 @@ class SlashingApi {
   final Serializers _serializers;
 
   const SlashingApi(this._dio, this._serializers);
+
+  /// Get the current slashing parameters
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [SlashingParametersGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<SlashingParametersGet200Response>> slashingParametersGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/slashing/parameters';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    SlashingParametersGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(SlashingParametersGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as SlashingParametersGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<SlashingParametersGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
 
   /// Get sign info of given all validators
   /// Get sign info of all validators
@@ -35,10 +108,10 @@ class SlashingApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<SigningInfo>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SlashingSigningInfosGet200ResponseInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<SigningInfo>>> getsigninfoofgivenallvalidators({ 
+  Future<Response<BuiltList<SlashingSigningInfosGet200ResponseInner>>> slashingSigningInfosGet({ 
     required int page,
     required int limit,
     CancelToken? cancelToken,
@@ -75,14 +148,14 @@ class SlashingApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<SigningInfo> _responseData;
+    BuiltList<SlashingSigningInfosGet200ResponseInner> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(SigningInfo)]);
+      const _responseType = FullType(BuiltList, [FullType(SlashingSigningInfosGet200ResponseInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<SigningInfo>;
+      ) as BuiltList<SlashingSigningInfosGet200ResponseInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -93,80 +166,7 @@ class SlashingApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<SigningInfo>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the current slashing parameters
-  /// Get the current slashing parameters
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetthecurrentslashingparametersResponse] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<GetthecurrentslashingparametersResponse>> getthecurrentslashingparameters({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/slashing/parameters';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetthecurrentslashingparametersResponse _responseData;
-
-    try {
-      const _responseType = FullType(GetthecurrentslashingparametersResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetthecurrentslashingparametersResponse;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetthecurrentslashingparametersResponse>(
+    return Response<BuiltList<SlashingSigningInfosGet200ResponseInner>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -183,7 +183,7 @@ class SlashingApi {
   ///
   /// Parameters:
   /// * [validatorAddr] - Bech32 validator address
-  /// * [unjailBody] - 
+  /// * [unjailBody] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -191,12 +191,12 @@ class SlashingApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> unjailajailedvalidator({ 
+  Future<Response<TxsHashGet200ResponseTx>> slashingValidatorsValidatorAddrUnjailPost({ 
     required String validatorAddr,
-    required UnjailBody unjailBody,
+    required SlashingValidatorsValidatorAddrUnjailPostRequest unjailBody,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -221,7 +221,7 @@ class SlashingApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(UnjailBody);
+      const _type = FullType(SlashingValidatorsValidatorAddrUnjailPostRequest);
       _bodyData = _serializers.serialize(unjailBody, specifiedType: _type);
 
     } catch(error, stackTrace) {
@@ -244,14 +244,14 @@ class SlashingApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    StdTx _responseData;
+    TxsHashGet200ResponseTx _responseData;
 
     try {
-      const _responseType = FullType(StdTx);
+      const _responseType = FullType(TxsHashGet200ResponseTx);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as StdTx;
+      ) as TxsHashGet200ResponseTx;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -262,7 +262,7 @@ class SlashingApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<StdTx>(
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

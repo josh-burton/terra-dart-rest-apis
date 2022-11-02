@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**taxPolicy** | [**PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies**](PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies.md) |  | [optional] 
-**rewardPolicy** | [**PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies**](PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies.md) |  | [optional] 
+**taxPolicy** | [**PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies**](PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies.md) |  | [optional] 
+**rewardPolicy** | [**PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies**](PolicyConstraintsDefinesPolicyConstraintsCanBeAppliedInTaxRewardPolicies.md) |  | [optional] 
 **seigniorageBurdenTarget** | **String** |  | [optional] 
 **miningIncrement** | **String** |  | [optional] 
 **windowShort** | **String** |  | [optional] 

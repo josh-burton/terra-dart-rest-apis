@@ -13,10 +13,11 @@ part 'get_proposal_result_deposit.g.dart';
 /// GetProposalResultDeposit
 ///
 /// Properties:
-/// * [depositEndTime] 
+/// * [depositEndTime] - 
 /// * [totalDeposit] - total deposit info
 /// * [minDeposit] - Minimum deposit
 abstract class GetProposalResultDeposit implements Built<GetProposalResultDeposit, GetProposalResultDepositBuilder> {
+    /// 
     @BuiltValueField(wireName: r'depositEndTime')
     String get depositEndTime;
 

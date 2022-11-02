@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_grant.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/grants200_response_grants_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/grants200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_authz_v1beta1_query_grants_response.g.dart';
 abstract class CosmosAuthzV1beta1QueryGrantsResponse implements Built<CosmosAuthzV1beta1QueryGrantsResponse, CosmosAuthzV1beta1QueryGrantsResponseBuilder> {
     /// authorizations is a list of grants granted for grantee by granter.
     @BuiltValueField(wireName: r'grants')
-    BuiltList<CosmosAuthzV1beta1Grant>? get grants;
+    BuiltList<Grants200ResponseGrantsInner>? get grants;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthzV1beta1QueryGrantsResponsePagination? get pagination;
+    Grants200ResponsePagination? get pagination;
 
     CosmosAuthzV1beta1QueryGrantsResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosAuthzV1beta1QueryGrantsResponseSerializer implements StructuredSer
             result
                 ..add(r'grants')
                 ..add(serializers.serialize(object.grants,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosAuthzV1beta1Grant)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Grants200ResponseGrantsInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)));
+                    specifiedType: const FullType(Grants200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosAuthzV1beta1QueryGrantsResponseSerializer implements StructuredSer
             switch (key) {
                 case r'grants':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosAuthzV1beta1Grant)])) as BuiltList<CosmosAuthzV1beta1Grant>;
+                        specifiedType: const FullType(BuiltList, [FullType(Grants200ResponseGrantsInner)])) as BuiltList<Grants200ResponseGrantsInner>;
                     result.grants.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)) as CosmosAuthzV1beta1QueryGrantsResponsePagination;
+                        specifiedType: const FullType(Grants200ResponsePagination)) as Grants200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

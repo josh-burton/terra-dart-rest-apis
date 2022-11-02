@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_validator_slash_event.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_slashes200_response_slashes_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_distribution_v1beta1_query_validator_slashes_response.g.dart';
 abstract class CosmosDistributionV1beta1QueryValidatorSlashesResponse implements Built<CosmosDistributionV1beta1QueryValidatorSlashesResponse, CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder> {
     /// slashes defines the slashes the validator received.
     @BuiltValueField(wireName: r'slashes')
-    BuiltList<CosmosDistributionV1beta1ValidatorSlashEvent>? get slashes;
+    BuiltList<ValidatorSlashes200ResponseSlashesInner>? get slashes;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosDistributionV1beta1QueryValidatorSlashesResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosDistributionV1beta1QueryValidatorSlashesResponseSerializer impleme
             result
                 ..add(r'slashes')
                 ..add(serializers.serialize(object.slashes,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosDistributionV1beta1ValidatorSlashEvent)])));
+                    specifiedType: const FullType(BuiltList, [FullType(ValidatorSlashes200ResponseSlashesInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosDistributionV1beta1QueryValidatorSlashesResponseSerializer impleme
             switch (key) {
                 case r'slashes':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosDistributionV1beta1ValidatorSlashEvent)])) as BuiltList<CosmosDistributionV1beta1ValidatorSlashEvent>;
+                        specifiedType: const FullType(BuiltList, [FullType(ValidatorSlashes200ResponseSlashesInner)])) as BuiltList<ValidatorSlashes200ResponseSlashesInner>;
                     result.slashes.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

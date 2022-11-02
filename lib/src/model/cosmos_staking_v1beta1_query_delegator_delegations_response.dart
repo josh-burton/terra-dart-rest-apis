@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_delegation_response.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/delegator_delegations200_response_delegation_responses_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts200_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_staking_v1beta1_query_delegator_delegations_response.g.dart';
 abstract class CosmosStakingV1beta1QueryDelegatorDelegationsResponse implements Built<CosmosStakingV1beta1QueryDelegatorDelegationsResponse, CosmosStakingV1beta1QueryDelegatorDelegationsResponseBuilder> {
     /// delegation_responses defines all the delegations' info of a delegator.
     @BuiltValueField(wireName: r'delegation_responses')
-    BuiltList<CosmosStakingV1beta1DelegationResponse>? get delegationResponses;
+    BuiltList<DelegatorDelegations200ResponseDelegationResponsesInner>? get delegationResponses;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
+    Accounts200ResponsePagination? get pagination;
 
     CosmosStakingV1beta1QueryDelegatorDelegationsResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosStakingV1beta1QueryDelegatorDelegationsResponseSerializer implemen
             result
                 ..add(r'delegation_responses')
                 ..add(serializers.serialize(object.delegationResponses,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1DelegationResponse)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DelegatorDelegations200ResponseDelegationResponsesInner)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
+                    specifiedType: const FullType(Accounts200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosStakingV1beta1QueryDelegatorDelegationsResponseSerializer implemen
             switch (key) {
                 case r'delegation_responses':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1DelegationResponse)])) as BuiltList<CosmosStakingV1beta1DelegationResponse>;
+                        specifiedType: const FullType(BuiltList, [FullType(DelegatorDelegations200ResponseDelegationResponsesInner)])) as BuiltList<DelegatorDelegations200ResponseDelegationResponsesInner>;
                     result.delegationResponses.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
+                        specifiedType: const FullType(Accounts200ResponsePagination)) as Accounts200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

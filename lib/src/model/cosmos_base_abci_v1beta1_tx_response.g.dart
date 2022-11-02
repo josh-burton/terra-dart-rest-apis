@@ -21,7 +21,7 @@ class _$CosmosBaseAbciV1beta1TxResponse
   @override
   final String? rawLog;
   @override
-  final BuiltList<CosmosBaseAbciV1beta1ABCIMessageLog>? logs;
+  final BuiltList<BroadcastTx200ResponseTxResponseLogsInner>? logs;
   @override
   final String? info;
   @override
@@ -29,11 +29,11 @@ class _$CosmosBaseAbciV1beta1TxResponse
   @override
   final String? gasUsed;
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? tx;
+  final AccountsAreTheExistingAccountsInner? tx;
   @override
   final String? timestamp;
   @override
-  final BuiltList<TendermintAbciEvent>? events;
+  final BuiltList<Simulate200ResponseResultEventsInner>? events;
 
   factory _$CosmosBaseAbciV1beta1TxResponse(
           [void Function(CosmosBaseAbciV1beta1TxResponseBuilder)? updates]) =>
@@ -161,10 +161,11 @@ class CosmosBaseAbciV1beta1TxResponseBuilder
   String? get rawLog => _$this._rawLog;
   set rawLog(String? rawLog) => _$this._rawLog = rawLog;
 
-  ListBuilder<CosmosBaseAbciV1beta1ABCIMessageLog>? _logs;
-  ListBuilder<CosmosBaseAbciV1beta1ABCIMessageLog> get logs =>
-      _$this._logs ??= new ListBuilder<CosmosBaseAbciV1beta1ABCIMessageLog>();
-  set logs(ListBuilder<CosmosBaseAbciV1beta1ABCIMessageLog>? logs) =>
+  ListBuilder<BroadcastTx200ResponseTxResponseLogsInner>? _logs;
+  ListBuilder<BroadcastTx200ResponseTxResponseLogsInner> get logs =>
+      _$this._logs ??=
+          new ListBuilder<BroadcastTx200ResponseTxResponseLogsInner>();
+  set logs(ListBuilder<BroadcastTx200ResponseTxResponseLogsInner>? logs) =>
       _$this._logs = logs;
 
   String? _info;
@@ -179,20 +180,20 @@ class CosmosBaseAbciV1beta1TxResponseBuilder
   String? get gasUsed => _$this._gasUsed;
   set gasUsed(String? gasUsed) => _$this._gasUsed = gasUsed;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _tx;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get tx =>
-      _$this._tx ??= new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
-  set tx(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? tx) =>
-      _$this._tx = tx;
+  AccountsAreTheExistingAccountsInnerBuilder? _tx;
+  AccountsAreTheExistingAccountsInnerBuilder get tx =>
+      _$this._tx ??= new AccountsAreTheExistingAccountsInnerBuilder();
+  set tx(AccountsAreTheExistingAccountsInnerBuilder? tx) => _$this._tx = tx;
 
   String? _timestamp;
   String? get timestamp => _$this._timestamp;
   set timestamp(String? timestamp) => _$this._timestamp = timestamp;
 
-  ListBuilder<TendermintAbciEvent>? _events;
-  ListBuilder<TendermintAbciEvent> get events =>
-      _$this._events ??= new ListBuilder<TendermintAbciEvent>();
-  set events(ListBuilder<TendermintAbciEvent>? events) =>
+  ListBuilder<Simulate200ResponseResultEventsInner>? _events;
+  ListBuilder<Simulate200ResponseResultEventsInner> get events =>
+      _$this._events ??=
+          new ListBuilder<Simulate200ResponseResultEventsInner>();
+  set events(ListBuilder<Simulate200ResponseResultEventsInner>? events) =>
       _$this._events = events;
 
   CosmosBaseAbciV1beta1TxResponseBuilder() {

@@ -2,11 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/state.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_connection_end_counterparty.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_version.dart';
-import 'package:built_value/json_object.dart';
+import 'package:terra_dart_rest_apis/src/model/connections200_response_connections_inner_counterparty.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_version_which_can_be_utilised_to_determine_encodings_or_protocols_for_channels_or_packets_utilising_this_connection_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +15,7 @@ part 'ibc_core_connection_v1_connection_end.g.dart';
 /// Properties:
 /// * [clientId] - client associated with this connection.
 /// * [versions] - IBC version which can be utilised to determine encodings or protocols for channels or packets utilising this connection.
-/// * [state] 
+/// * [state] - current state of the connection end.
 /// * [counterparty] 
 /// * [delayPeriod] - delay period that must pass before a consensus state can be used for packet-verification NOTE: delay period logic is only implemented by some clients.
 abstract class IbcCoreConnectionV1ConnectionEnd implements Built<IbcCoreConnectionV1ConnectionEnd, IbcCoreConnectionV1ConnectionEndBuilder> {
@@ -27,13 +25,15 @@ abstract class IbcCoreConnectionV1ConnectionEnd implements Built<IbcCoreConnecti
 
     /// IBC version which can be utilised to determine encodings or protocols for channels or packets utilising this connection.
     @BuiltValueField(wireName: r'versions')
-    BuiltList<IbcCoreConnectionV1Version>? get versions;
+    BuiltList<IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>? get versions;
 
+    /// current state of the connection end.
     @BuiltValueField(wireName: r'state')
-    State? get state;
+    IbcCoreConnectionV1ConnectionEndStateEnum? get state;
+    // enum stateEnum {  STATE_UNINITIALIZED_UNSPECIFIED,  STATE_INIT,  STATE_TRYOPEN,  STATE_OPEN,  };
 
     @BuiltValueField(wireName: r'counterparty')
-    IbcCoreConnectionV1ConnectionEndCounterparty? get counterparty;
+    Connections200ResponseConnectionsInnerCounterparty? get counterparty;
 
     /// delay period that must pass before a consensus state can be used for packet-verification NOTE: delay period logic is only implemented by some clients.
     @BuiltValueField(wireName: r'delay_period')
@@ -42,7 +42,8 @@ abstract class IbcCoreConnectionV1ConnectionEnd implements Built<IbcCoreConnecti
     IbcCoreConnectionV1ConnectionEnd._();
 
     @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(IbcCoreConnectionV1ConnectionEndBuilder b) => b;
+    static void _defaults(IbcCoreConnectionV1ConnectionEndBuilder b) => b
+        ..state = const IbcCoreConnectionV1ConnectionEndStateEnum._('STATE_UNINITIALIZED_UNSPECIFIED');
 
     factory IbcCoreConnectionV1ConnectionEnd([void updates(IbcCoreConnectionV1ConnectionEndBuilder b)]) = _$IbcCoreConnectionV1ConnectionEnd;
 
@@ -71,19 +72,19 @@ class _$IbcCoreConnectionV1ConnectionEndSerializer implements StructuredSerializ
             result
                 ..add(r'versions')
                 ..add(serializers.serialize(object.versions,
-                    specifiedType: const FullType(BuiltList, [FullType(IbcCoreConnectionV1Version)])));
+                    specifiedType: const FullType(BuiltList, [FullType(IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner)])));
         }
         if (object.state != null) {
             result
                 ..add(r'state')
                 ..add(serializers.serialize(object.state,
-                    specifiedType: const FullType.nullable(State)));
+                    specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndStateEnum)));
         }
         if (object.counterparty != null) {
             result
                 ..add(r'counterparty')
                 ..add(serializers.serialize(object.counterparty,
-                    specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndCounterparty)));
+                    specifiedType: const FullType(Connections200ResponseConnectionsInnerCounterparty)));
         }
         if (object.delayPeriod != null) {
             result
@@ -113,18 +114,17 @@ class _$IbcCoreConnectionV1ConnectionEndSerializer implements StructuredSerializ
                     break;
                 case r'versions':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(IbcCoreConnectionV1Version)])) as BuiltList<IbcCoreConnectionV1Version>;
+                        specifiedType: const FullType(BuiltList, [FullType(IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner)])) as BuiltList<IBCVersionWhichCanBeUtilisedToDetermineEncodingsOrProtocolsForChannelsOrPacketsUtilisingThisConnectionInner>;
                     result.versions.replace(valueDes);
                     break;
                 case r'state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(State)) as State?;
-                    if (valueDes == null) continue;
-                    result.state.replace(valueDes);
+                        specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndStateEnum)) as IbcCoreConnectionV1ConnectionEndStateEnum;
+                    result.state = valueDes;
                     break;
                 case r'counterparty':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndCounterparty)) as IbcCoreConnectionV1ConnectionEndCounterparty;
+                        specifiedType: const FullType(Connections200ResponseConnectionsInnerCounterparty)) as Connections200ResponseConnectionsInnerCounterparty;
                     result.counterparty.replace(valueDes);
                     break;
                 case r'delay_period':
@@ -136,5 +136,28 @@ class _$IbcCoreConnectionV1ConnectionEndSerializer implements StructuredSerializ
         }
         return result.build();
     }
+}
+
+class IbcCoreConnectionV1ConnectionEndStateEnum extends EnumClass {
+
+  /// current state of the connection end.
+  @BuiltValueEnumConst(wireName: r'STATE_UNINITIALIZED_UNSPECIFIED')
+  static const IbcCoreConnectionV1ConnectionEndStateEnum UNINITIALIZED_UNSPECIFIED = _$ibcCoreConnectionV1ConnectionEndStateEnum_UNINITIALIZED_UNSPECIFIED;
+  /// current state of the connection end.
+  @BuiltValueEnumConst(wireName: r'STATE_INIT')
+  static const IbcCoreConnectionV1ConnectionEndStateEnum INIT = _$ibcCoreConnectionV1ConnectionEndStateEnum_INIT;
+  /// current state of the connection end.
+  @BuiltValueEnumConst(wireName: r'STATE_TRYOPEN')
+  static const IbcCoreConnectionV1ConnectionEndStateEnum TRYOPEN = _$ibcCoreConnectionV1ConnectionEndStateEnum_TRYOPEN;
+  /// current state of the connection end.
+  @BuiltValueEnumConst(wireName: r'STATE_OPEN')
+  static const IbcCoreConnectionV1ConnectionEndStateEnum OPEN = _$ibcCoreConnectionV1ConnectionEndStateEnum_OPEN;
+
+  static Serializer<IbcCoreConnectionV1ConnectionEndStateEnum> get serializer => _$ibcCoreConnectionV1ConnectionEndStateEnumSerializer;
+
+  const IbcCoreConnectionV1ConnectionEndStateEnum._(String name): super(name);
+
+  static BuiltSet<IbcCoreConnectionV1ConnectionEndStateEnum> get values => _$ibcCoreConnectionV1ConnectionEndStateEnumValues;
+  static IbcCoreConnectionV1ConnectionEndStateEnum valueOf(String name) => _$ibcCoreConnectionV1ConnectionEndStateEnumValueOf(name);
 }
 

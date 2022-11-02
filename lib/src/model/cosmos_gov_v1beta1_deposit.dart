@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response_balances_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_gov_v1beta1_deposit.g.dart';
 /// Properties:
 /// * [proposalId] 
 /// * [depositor] 
-/// * [amount] - 
+/// * [amount] 
 abstract class CosmosGovV1beta1Deposit implements Built<CosmosGovV1beta1Deposit, CosmosGovV1beta1DepositBuilder> {
     @BuiltValueField(wireName: r'proposal_id')
     String? get proposalId;
@@ -22,9 +22,8 @@ abstract class CosmosGovV1beta1Deposit implements Built<CosmosGovV1beta1Deposit,
     @BuiltValueField(wireName: r'depositor')
     String? get depositor;
 
-    /// 
     @BuiltValueField(wireName: r'amount')
-    BuiltList<CosmosBaseV1beta1Coin>? get amount;
+    BuiltList<AllBalances200ResponseBalancesInner>? get amount;
 
     CosmosGovV1beta1Deposit._();
 
@@ -64,7 +63,7 @@ class _$CosmosGovV1beta1DepositSerializer implements StructuredSerializer<Cosmos
             result
                 ..add(r'amount')
                 ..add(serializers.serialize(object.amount,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])));
         }
         return result;
     }
@@ -93,7 +92,7 @@ class _$CosmosGovV1beta1DepositSerializer implements StructuredSerializer<Cosmos
                     break;
                 case r'amount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])) as BuiltList<CosmosBaseV1beta1Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])) as BuiltList<AllBalances200ResponseBalancesInner>;
                     result.amount.replace(valueDes);
                     break;
             }

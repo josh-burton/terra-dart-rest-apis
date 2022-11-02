@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/all_balances200_response_balances_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,10 @@ part 'terra_tx_v1beta1_compute_tax_response.g.dart';
 /// ComputeTaxResponse is the response type for the Service.ComputeTax RPC method.
 ///
 /// Properties:
-/// * [taxAmount] - 
+/// * [taxAmount] 
 abstract class TerraTxV1beta1ComputeTaxResponse implements Built<TerraTxV1beta1ComputeTaxResponse, TerraTxV1beta1ComputeTaxResponseBuilder> {
-    /// 
     @BuiltValueField(wireName: r'tax_amount')
-    BuiltList<CosmosBaseV1beta1Coin>? get taxAmount;
+    BuiltList<AllBalances200ResponseBalancesInner>? get taxAmount;
 
     TerraTxV1beta1ComputeTaxResponse._();
 
@@ -44,7 +43,7 @@ class _$TerraTxV1beta1ComputeTaxResponseSerializer implements StructuredSerializ
             result
                 ..add(r'tax_amount')
                 ..add(serializers.serialize(object.taxAmount,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])));
         }
         return result;
     }
@@ -63,7 +62,7 @@ class _$TerraTxV1beta1ComputeTaxResponseSerializer implements StructuredSerializ
             switch (key) {
                 case r'tax_amount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1Coin)])) as BuiltList<CosmosBaseV1beta1Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(AllBalances200ResponseBalancesInner)])) as BuiltList<AllBalances200ResponseBalancesInner>;
                     result.taxAmount.replace(valueDes);
                     break;
             }

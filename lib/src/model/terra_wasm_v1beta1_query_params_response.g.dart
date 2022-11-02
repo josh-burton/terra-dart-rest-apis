@@ -9,7 +9,7 @@ part of 'terra_wasm_v1beta1_query_params_response.dart';
 class _$TerraWasmV1beta1QueryParamsResponse
     extends TerraWasmV1beta1QueryParamsResponse {
   @override
-  final TerraWasmV1beta1QueryParamsResponseParams? params;
+  final WasmParams200ResponseParams? params;
 
   factory _$TerraWasmV1beta1QueryParamsResponse(
           [void Function(TerraWasmV1beta1QueryParamsResponseBuilder)?
@@ -54,10 +54,10 @@ class TerraWasmV1beta1QueryParamsResponseBuilder
             TerraWasmV1beta1QueryParamsResponseBuilder> {
   _$TerraWasmV1beta1QueryParamsResponse? _$v;
 
-  TerraWasmV1beta1QueryParamsResponseParamsBuilder? _params;
-  TerraWasmV1beta1QueryParamsResponseParamsBuilder get params =>
-      _$this._params ??= new TerraWasmV1beta1QueryParamsResponseParamsBuilder();
-  set params(TerraWasmV1beta1QueryParamsResponseParamsBuilder? params) =>
+  WasmParams200ResponseParamsBuilder? _params;
+  WasmParams200ResponseParamsBuilder get params =>
+      _$this._params ??= new WasmParams200ResponseParamsBuilder();
+  set params(WasmParams200ResponseParamsBuilder? params) =>
       _$this._params = params;
 
   TerraWasmV1beta1QueryParamsResponseBuilder() {

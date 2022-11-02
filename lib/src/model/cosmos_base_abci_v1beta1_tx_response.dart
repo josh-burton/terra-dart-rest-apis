@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_abci_message_log.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response_logs_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/simulate200_response_result_events_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_abci_event.dart';
+import 'package:terra_dart_rest_apis/src/model/accounts_are_the_existing_accounts_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -52,7 +52,7 @@ abstract class CosmosBaseAbciV1beta1TxResponse implements Built<CosmosBaseAbciV1
 
     /// The output of the application's logger (typed). May be non-deterministic.
     @BuiltValueField(wireName: r'logs')
-    BuiltList<CosmosBaseAbciV1beta1ABCIMessageLog>? get logs;
+    BuiltList<BroadcastTx200ResponseTxResponseLogsInner>? get logs;
 
     /// Additional information. May be non-deterministic.
     @BuiltValueField(wireName: r'info')
@@ -67,7 +67,7 @@ abstract class CosmosBaseAbciV1beta1TxResponse implements Built<CosmosBaseAbciV1
     String? get gasUsed;
 
     @BuiltValueField(wireName: r'tx')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get tx;
+    AccountsAreTheExistingAccountsInner? get tx;
 
     /// Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.
     @BuiltValueField(wireName: r'timestamp')
@@ -75,7 +75,7 @@ abstract class CosmosBaseAbciV1beta1TxResponse implements Built<CosmosBaseAbciV1
 
     /// Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante handler. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45
     @BuiltValueField(wireName: r'events')
-    BuiltList<TendermintAbciEvent>? get events;
+    BuiltList<Simulate200ResponseResultEventsInner>? get events;
 
     CosmosBaseAbciV1beta1TxResponse._();
 
@@ -139,7 +139,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
             result
                 ..add(r'logs')
                 ..add(serializers.serialize(object.logs,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1ABCIMessageLog)])));
+                    specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInner)])));
         }
         if (object.info != null) {
             result
@@ -163,7 +163,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
             result
                 ..add(r'tx')
                 ..add(serializers.serialize(object.tx,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(AccountsAreTheExistingAccountsInner)));
         }
         if (object.timestamp != null) {
             result
@@ -175,7 +175,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
             result
                 ..add(r'events')
                 ..add(serializers.serialize(object.events,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEvent)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInner)])));
         }
         return result;
     }
@@ -224,7 +224,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
                     break;
                 case r'logs':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1ABCIMessageLog)])) as BuiltList<CosmosBaseAbciV1beta1ABCIMessageLog>;
+                        specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInner)])) as BuiltList<BroadcastTx200ResponseTxResponseLogsInner>;
                     result.logs.replace(valueDes);
                     break;
                 case r'info':
@@ -244,7 +244,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
                     break;
                 case r'tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(AccountsAreTheExistingAccountsInner)) as AccountsAreTheExistingAccountsInner;
                     result.tx.replace(valueDes);
                     break;
                 case r'timestamp':
@@ -254,7 +254,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
                     break;
                 case r'events':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEvent)])) as BuiltList<TendermintAbciEvent>;
+                        specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInner)])) as BuiltList<Simulate200ResponseResultEventsInner>;
                     result.events.replace(valueDes);
                     break;
             }

@@ -8,7 +8,7 @@ part of 'estimate_fee_resp.dart';
 
 class _$EstimateFeeResp extends EstimateFeeResp {
   @override
-  final Fee? fee;
+  final TxsHashGet200ResponseTxFee? fee;
 
   factory _$EstimateFeeResp([void Function(EstimateFeeRespBuilder)? updates]) =>
       (new EstimateFeeRespBuilder()..update(updates))._build();
@@ -45,9 +45,10 @@ class EstimateFeeRespBuilder
     implements Builder<EstimateFeeResp, EstimateFeeRespBuilder> {
   _$EstimateFeeResp? _$v;
 
-  FeeBuilder? _fee;
-  FeeBuilder get fee => _$this._fee ??= new FeeBuilder();
-  set fee(FeeBuilder? fee) => _$this._fee = fee;
+  TxsHashGet200ResponseTxFeeBuilder? _fee;
+  TxsHashGet200ResponseTxFeeBuilder get fee =>
+      _$this._fee ??= new TxsHashGet200ResponseTxFeeBuilder();
+  set fee(TxsHashGet200ResponseTxFeeBuilder? fee) => _$this._fee = fee;
 
   EstimateFeeRespBuilder() {
     EstimateFeeResp._defaults(this);

@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'clear_contract_admin_req.g.dart';
 /// * [baseReq] 
 abstract class ClearContractAdminReq implements Built<ClearContractAdminReq, ClearContractAdminReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq? get baseReq;
+    TxsEstimateFeePostRequestBaseReq? get baseReq;
 
     ClearContractAdminReq._();
 
@@ -42,7 +42,7 @@ class _$ClearContractAdminReqSerializer implements StructuredSerializer<ClearCon
             result
                 ..add(r'base_req')
                 ..add(serializers.serialize(object.baseReq,
-                    specifiedType: const FullType(BaseReq)));
+                    specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$ClearContractAdminReqSerializer implements StructuredSerializer<ClearCon
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
             }

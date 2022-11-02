@@ -8,9 +8,9 @@ part of 'swap_req.dart';
 
 class _$SwapReq extends SwapReq {
   @override
-  final BaseReq baseReq;
+  final TxsEstimateFeePostRequestBaseReq baseReq;
   @override
-  final Coin offerCoin;
+  final TxsHashGet200ResponseTxFeeAmountInner offerCoin;
   @override
   final String askDenom;
   @override
@@ -69,13 +69,17 @@ class _$SwapReq extends SwapReq {
 class SwapReqBuilder implements Builder<SwapReq, SwapReqBuilder> {
   _$SwapReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
-  CoinBuilder? _offerCoin;
-  CoinBuilder get offerCoin => _$this._offerCoin ??= new CoinBuilder();
-  set offerCoin(CoinBuilder? offerCoin) => _$this._offerCoin = offerCoin;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder? _offerCoin;
+  TxsHashGet200ResponseTxFeeAmountInnerBuilder get offerCoin =>
+      _$this._offerCoin ??= new TxsHashGet200ResponseTxFeeAmountInnerBuilder();
+  set offerCoin(TxsHashGet200ResponseTxFeeAmountInnerBuilder? offerCoin) =>
+      _$this._offerCoin = offerCoin;
 
   String? _askDenom;
   String? get askDenom => _$this._askDenom;

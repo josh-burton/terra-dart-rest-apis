@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_query_client_params_response_params.dart';
+import 'package:terra_dart_rest_apis/src/model/client_params200_response_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'ibc_core_client_v1_query_client_params_response.g.dart';
 /// * [params] 
 abstract class IbcCoreClientV1QueryClientParamsResponse implements Built<IbcCoreClientV1QueryClientParamsResponse, IbcCoreClientV1QueryClientParamsResponseBuilder> {
     @BuiltValueField(wireName: r'params')
-    IbcCoreClientV1QueryClientParamsResponseParams? get params;
+    ClientParams200ResponseParams? get params;
 
     IbcCoreClientV1QueryClientParamsResponse._();
 
@@ -42,7 +42,7 @@ class _$IbcCoreClientV1QueryClientParamsResponseSerializer implements Structured
             result
                 ..add(r'params')
                 ..add(serializers.serialize(object.params,
-                    specifiedType: const FullType(IbcCoreClientV1QueryClientParamsResponseParams)));
+                    specifiedType: const FullType(ClientParams200ResponseParams)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$IbcCoreClientV1QueryClientParamsResponseSerializer implements Structured
             switch (key) {
                 case r'params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreClientV1QueryClientParamsResponseParams)) as IbcCoreClientV1QueryClientParamsResponseParams;
+                        specifiedType: const FullType(ClientParams200ResponseParams)) as ClientParams200ResponseParams;
                     result.params.replace(valueDes);
                     break;
             }

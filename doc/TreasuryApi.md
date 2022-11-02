@@ -5,57 +5,49 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getcirculatingsupplyofcoins**](TreasuryApi.md#getcirculatingsupplyofcoins) | **GET** /v1/circulatingsupply/{denom} | Get circulating supply of coins
-[**getcurrentrewardweight**](TreasuryApi.md#getcurrentrewardweight) | **GET** /treasury/reward_weight | Get current reward weight
-[**getcurrenttaxproceeds**](TreasuryApi.md#getcurrenttaxproceeds) | **GET** /treasury/tax_proceeds | Get current tax proceeds
-[**getcurrenttaxrate**](TreasuryApi.md#getcurrenttaxrate) | **GET** /treasury/tax_rate | Get current tax rate
-[**getrichlistofcoins**](TreasuryApi.md#getrichlistofcoins) | **GET** /v1/richlist/{denom} | Get richlist of coins
-[**gettaxcapofthedenom**](TreasuryApi.md#gettaxcapofthedenom) | **GET** /treasury/tax_cap/{denom} | Get tax cap of the denom
-[**gettaxcapsfortheallwhitelisteddenoms**](TreasuryApi.md#gettaxcapsfortheallwhitelisteddenoms) | **GET** /treasury/tax_caps | Get tax caps for the all whitelisted denoms
-[**gettaxproceeds**](TreasuryApi.md#gettaxproceeds) | **GET** /v1/taxproceeds | Get taxproceeds
-[**getthecurrenttreasuryindicators**](TreasuryApi.md#getthecurrenttreasuryindicators) | **GET** /treasury/indicators | Get the current treasury indicators
-[**gettotalsupplyofcoins**](TreasuryApi.md#gettotalsupplyofcoins) | **GET** /v1/totalsupply/{denom} | Get total supply of coins
-[**gettreasurymoduleparams**](TreasuryApi.md#gettreasurymoduleparams) | **GET** /treasury/parameters | Get treasury module params
-[**retrievesthesizeoftheseignioragepool**](TreasuryApi.md#retrievesthesizeoftheseignioragepool) | **GET** /treasury/seigniorage_proceeds | retrieves the size of the seigniorage pool
+[**treasuryIndicatorsGet**](TreasuryApi.md#treasuryindicatorsget) | **GET** /treasury/indicators | Get the current treasury indicators
+[**treasuryParametersGet**](TreasuryApi.md#treasuryparametersget) | **GET** /treasury/parameters | Get treasury module params
+[**treasuryRewardWeightGet**](TreasuryApi.md#treasuryrewardweightget) | **GET** /treasury/reward_weight | Get current reward weight
+[**treasurySeigniorageProceedsGet**](TreasuryApi.md#treasuryseigniorageproceedsget) | **GET** /treasury/seigniorage_proceeds | retrieves the size of the seigniorage pool
+[**treasuryTaxCapDenomGet**](TreasuryApi.md#treasurytaxcapdenomget) | **GET** /treasury/tax_cap/{denom} | Get tax cap of the denom
+[**treasuryTaxCapsGet**](TreasuryApi.md#treasurytaxcapsget) | **GET** /treasury/tax_caps | Get tax caps for the all whitelisted denoms
+[**treasuryTaxProceedsGet**](TreasuryApi.md#treasurytaxproceedsget) | **GET** /treasury/tax_proceeds | Get current tax proceeds
+[**treasuryTaxRateGet**](TreasuryApi.md#treasurytaxrateget) | **GET** /treasury/tax_rate | Get current tax rate
+[**v1CirculatingsupplyDenomGet**](TreasuryApi.md#v1circulatingsupplydenomget) | **GET** /v1/circulatingsupply/{denom} | Get circulating supply of coins
+[**v1RichlistDenomGet**](TreasuryApi.md#v1richlistdenomget) | **GET** /v1/richlist/{denom} | Get richlist of coins
+[**v1TaxproceedsGet**](TreasuryApi.md#v1taxproceedsget) | **GET** /v1/taxproceeds | Get taxproceeds
+[**v1TotalsupplyDenomGet**](TreasuryApi.md#v1totalsupplydenomget) | **GET** /v1/totalsupply/{denom} | Get total supply of coins
 
 
-# **getcirculatingsupplyofcoins**
-> double getcirculatingsupplyofcoins(denom, contentType)
+# **treasuryIndicatorsGet**
+> JsonObject treasuryIndicatorsGet()
 
-Get circulating supply of coins
-
-Get circulating supply of coins
+Get the current treasury indicators
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTreasuryApi();
-final String denom = denom_example; // String | Coin denomination
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.getcirculatingsupplyofcoins(denom, contentType);
+    final response = api.treasuryIndicatorsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getcirculatingsupplyofcoins: $e\n');
+    print('Exception when calling TreasuryApi->treasuryIndicatorsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **denom** | **String**| Coin denomination | 
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-**double**
+[**JsonObject**](JsonObject.md)
 
 ### Authorization
 
@@ -68,13 +60,48 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getcurrentrewardweight**
-> double getcurrentrewardweight()
+# **treasuryParametersGet**
+> TreasuryParametersGet200Response treasuryParametersGet()
+
+Get treasury module params
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTreasuryApi();
+
+try {
+    final response = api.treasuryParametersGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TreasuryApi->treasuryParametersGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**TreasuryParametersGet200Response**](TreasuryParametersGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **treasuryRewardWeightGet**
+> double treasuryRewardWeightGet()
 
 Get current reward weight
 
-Get current reward weight
-
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
@@ -82,10 +109,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTreasuryApi();
 
 try {
-    final response = api.getcurrentrewardweight();
+    final response = api.treasuryRewardWeightGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getcurrentrewardweight: $e\n');
+    print('Exception when calling TreasuryApi->treasuryRewardWeightGet: $e\n');
 }
 ```
 
@@ -107,12 +134,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getcurrenttaxproceeds**
-> BuiltList<Coin> getcurrenttaxproceeds()
+# **treasurySeigniorageProceedsGet**
+> int treasurySeigniorageProceedsGet()
 
-Get current tax proceeds
-
-Get current tax proceeds
+retrieves the size of the seigniorage pool
 
 ### Example
 ```dart
@@ -121,10 +146,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTreasuryApi();
 
 try {
-    final response = api.getcurrenttaxproceeds();
+    final response = api.treasurySeigniorageProceedsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getcurrenttaxproceeds: $e\n');
+    print('Exception when calling TreasuryApi->treasurySeigniorageProceedsGet: $e\n');
 }
 ```
 
@@ -133,7 +158,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;Coin&gt;**](Coin.md)
+**int**
 
 ### Authorization
 
@@ -146,98 +171,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getcurrenttaxrate**
-> double getcurrenttaxrate()
-
-Get current tax rate
-
-Get current tax rate
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTreasuryApi();
-
-try {
-    final response = api.getcurrenttaxrate();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getcurrenttaxrate: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**double**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getrichlistofcoins**
-> BuiltList<Accounts> getrichlistofcoins(denom, contentType, page, limit)
-
-Get richlist of coins
-
-Get richlist of coins
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTreasuryApi();
-final String denom = denom_example; // String | Coin denomination
-final String contentType = contentType_example; // String | 
-final double page = 1.2; // double | Page number
-final double limit = 1.2; // double | Page size
-
-try {
-    final response = api.getrichlistofcoins(denom, contentType, page, limit);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getrichlistofcoins: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **denom** | **String**| Coin denomination | 
- **contentType** | **String**|  | 
- **page** | **double**| Page number | [optional] 
- **limit** | **double**| Page size | [optional] 
-
-### Return type
-
-[**BuiltList&lt;Accounts&gt;**](Accounts.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **gettaxcapofthedenom**
-> int gettaxcapofthedenom(denom)
-
-Get tax cap of the denom
+# **treasuryTaxCapDenomGet**
+> int treasuryTaxCapDenomGet(denom)
 
 Get tax cap of the denom
 
@@ -249,10 +184,10 @@ final api = TerraRestApi().getTreasuryApi();
 final String denom = denom_example; // String | Denom
 
 try {
-    final response = api.gettaxcapofthedenom(denom);
+    final response = api.treasuryTaxCapDenomGet(denom);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->gettaxcapofthedenom: $e\n');
+    print('Exception when calling TreasuryApi->treasuryTaxCapDenomGet: $e\n');
 }
 ```
 
@@ -277,10 +212,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gettaxcapsfortheallwhitelisteddenoms**
-> BuiltList<TaxCap> gettaxcapsfortheallwhitelisteddenoms()
-
-Get tax caps for the all whitelisted denoms
+# **treasuryTaxCapsGet**
+> BuiltList<TreasuryTaxCapsGet200ResponseInner> treasuryTaxCapsGet()
 
 Get tax caps for the all whitelisted denoms
 
@@ -291,10 +224,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getTreasuryApi();
 
 try {
-    final response = api.gettaxcapsfortheallwhitelisteddenoms();
+    final response = api.treasuryTaxCapsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->gettaxcapsfortheallwhitelisteddenoms: $e\n');
+    print('Exception when calling TreasuryApi->treasuryTaxCapsGet: $e\n');
 }
 ```
 
@@ -303,7 +236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;TaxCap&gt;**](TaxCap.md)
+[**BuiltList&lt;TreasuryTaxCapsGet200ResponseInner&gt;**](TreasuryTaxCapsGet200ResponseInner.md)
 
 ### Authorization
 
@@ -316,8 +249,172 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gettaxproceeds**
-> GetTaxProceedsResult gettaxproceeds(contentType)
+# **treasuryTaxProceedsGet**
+> BuiltList<TxsHashGet200ResponseTxFeeAmountInner> treasuryTaxProceedsGet()
+
+Get current tax proceeds
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTreasuryApi();
+
+try {
+    final response = api.treasuryTaxProceedsGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TreasuryApi->treasuryTaxProceedsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **treasuryTaxRateGet**
+> double treasuryTaxRateGet()
+
+Get current tax rate
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTreasuryApi();
+
+try {
+    final response = api.treasuryTaxRateGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TreasuryApi->treasuryTaxRateGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**double**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1CirculatingsupplyDenomGet**
+> num v1CirculatingsupplyDenomGet(denom)
+
+Get circulating supply of coins
+
+Get circulating supply of coins
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTreasuryApi();
+final String denom = denom_example; // String | Coin denomination
+
+try {
+    final response = api.v1CirculatingsupplyDenomGet(denom);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TreasuryApi->v1CirculatingsupplyDenomGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **denom** | **String**| Coin denomination | 
+
+### Return type
+
+**num**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1RichlistDenomGet**
+> BuiltList<Accounts> v1RichlistDenomGet(denom, page, limit)
+
+Get richlist of coins
+
+Get richlist of coins
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getTreasuryApi();
+final String denom = denom_example; // String | Coin denomination
+final num page = 8.14; // num | Page number
+final num limit = 8.14; // num | Page size
+
+try {
+    final response = api.v1RichlistDenomGet(denom, page, limit);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TreasuryApi->v1RichlistDenomGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **denom** | **String**| Coin denomination | 
+ **page** | **num**| Page number | [optional] 
+ **limit** | **num**| Page size | [optional] 
+
+### Return type
+
+[**BuiltList&lt;Accounts&gt;**](Accounts.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1TaxproceedsGet**
+> GetTaxProceedsResult v1TaxproceedsGet()
 
 Get taxproceeds
 
@@ -328,21 +425,17 @@ Get taxproceeds
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTreasuryApi();
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.gettaxproceeds(contentType);
+    final response = api.v1TaxproceedsGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->gettaxproceeds: $e\n');
+    print('Exception when calling TreasuryApi->v1TaxproceedsGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -359,47 +452,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getthecurrenttreasuryindicators**
-> GetthecurrenttreasuryindicatorsResponse getthecurrenttreasuryindicators()
-
-Get the current treasury indicators
-
-Get the current treasury indicators
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTreasuryApi();
-
-try {
-    final response = api.getthecurrenttreasuryindicators();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TreasuryApi->getthecurrenttreasuryindicators: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetthecurrenttreasuryindicatorsResponse**](GetthecurrenttreasuryindicatorsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **gettotalsupplyofcoins**
-> String gettotalsupplyofcoins(denom, contentType)
+# **v1TotalsupplyDenomGet**
+> String v1TotalsupplyDenomGet(denom)
 
 Get total supply of coins
 
@@ -411,13 +465,12 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTreasuryApi();
 final String denom = denom_example; // String | Coin denomination
-final String contentType = contentType_example; // String | 
 
 try {
-    final response = api.gettotalsupplyofcoins(denom, contentType);
+    final response = api.v1TotalsupplyDenomGet(denom);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling TreasuryApi->gettotalsupplyofcoins: $e\n');
+    print('Exception when calling TreasuryApi->v1TotalsupplyDenomGet: $e\n');
 }
 ```
 
@@ -426,89 +479,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **denom** | **String**| Coin denomination | 
- **contentType** | **String**|  | 
 
 ### Return type
 
 **String**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **gettreasurymoduleparams**
-> TreasuryParams gettreasurymoduleparams()
-
-Get treasury module params
-
-Get treasury module params
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTreasuryApi();
-
-try {
-    final response = api.gettreasurymoduleparams();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TreasuryApi->gettreasurymoduleparams: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**TreasuryParams**](TreasuryParams.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **retrievesthesizeoftheseignioragepool**
-> int retrievesthesizeoftheseignioragepool()
-
-retrieves the size of the seigniorage pool
-
-retrieves the size of the seigniorage pool
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTreasuryApi();
-
-try {
-    final response = api.retrievesthesizeoftheseignioragepool();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TreasuryApi->retrievesthesizeoftheseignioragepool: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**int**
 
 ### Authorization
 

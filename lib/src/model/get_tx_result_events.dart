@@ -12,9 +12,10 @@ part 'get_tx_result_events.g.dart';
 /// GetTxResultEvents
 ///
 /// Properties:
-/// * [type] 
+/// * [type] - 
 /// * [attributes] - 
 abstract class GetTxResultEvents implements Built<GetTxResultEvents, GetTxResultEventsBuilder> {
+    /// 
     @BuiltValueField(wireName: r'type')
     String get type;
 

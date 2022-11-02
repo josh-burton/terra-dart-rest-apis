@@ -8,7 +8,7 @@ part of 'aggregate_vote_req.dart';
 
 class _$AggregateVoteReq extends AggregateVoteReq {
   @override
-  final BaseReq? baseReq;
+  final TxsEstimateFeePostRequestBaseReq? baseReq;
   @override
   final String? exchangeRates;
   @override
@@ -58,9 +58,11 @@ class AggregateVoteReqBuilder
     implements Builder<AggregateVoteReq, AggregateVoteReqBuilder> {
   _$AggregateVoteReq? _$v;
 
-  BaseReqBuilder? _baseReq;
-  BaseReqBuilder get baseReq => _$this._baseReq ??= new BaseReqBuilder();
-  set baseReq(BaseReqBuilder? baseReq) => _$this._baseReq = baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder? _baseReq;
+  TxsEstimateFeePostRequestBaseReqBuilder get baseReq =>
+      _$this._baseReq ??= new TxsEstimateFeePostRequestBaseReqBuilder();
+  set baseReq(TxsEstimateFeePostRequestBaseReqBuilder? baseReq) =>
+      _$this._baseReq = baseReq;
 
   String? _exchangeRates;
   String? get exchangeRates => _$this._exchangeRates;

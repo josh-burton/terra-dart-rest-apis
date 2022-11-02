@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'aggregate_prevote_req.g.dart';
 /// * [hash] - hex string; hash of next vote; empty == skip prevote
 abstract class AggregatePrevoteReq implements Built<AggregatePrevoteReq, AggregatePrevoteReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq? get baseReq;
+    TxsEstimateFeePostRequestBaseReq? get baseReq;
 
     /// exchange rates of Luna in denom currencies are to make aggregate prevote hash; this field is required to submit prevote in case absence of hash
     @BuiltValueField(wireName: r'exchange_rates')
@@ -57,7 +57,7 @@ class _$AggregatePrevoteReqSerializer implements StructuredSerializer<AggregateP
             result
                 ..add(r'base_req')
                 ..add(serializers.serialize(object.baseReq,
-                    specifiedType: const FullType(BaseReq)));
+                    specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         }
         if (object.exchangeRates != null) {
             result
@@ -94,7 +94,7 @@ class _$AggregatePrevoteReqSerializer implements StructuredSerializer<AggregateP
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'exchange_rates':

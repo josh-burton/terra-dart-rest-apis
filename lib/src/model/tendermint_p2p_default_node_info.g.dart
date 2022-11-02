@@ -8,7 +8,7 @@ part of 'tendermint_p2p_default_node_info.dart';
 
 class _$TendermintP2pDefaultNodeInfo extends TendermintP2pDefaultNodeInfo {
   @override
-  final TendermintP2pProtocolVersion? protocolVersion;
+  final GetNodeInfo200ResponseDefaultNodeInfoProtocolVersion? protocolVersion;
   @override
   final String? defaultNodeId;
   @override
@@ -22,7 +22,7 @@ class _$TendermintP2pDefaultNodeInfo extends TendermintP2pDefaultNodeInfo {
   @override
   final String? moniker;
   @override
-  final TendermintP2pDefaultNodeInfoOther? other;
+  final GetNodeInfo200ResponseDefaultNodeInfoOther? other;
 
   factory _$TendermintP2pDefaultNodeInfo(
           [void Function(TendermintP2pDefaultNodeInfoBuilder)? updates]) =>
@@ -101,10 +101,13 @@ class TendermintP2pDefaultNodeInfoBuilder
             TendermintP2pDefaultNodeInfoBuilder> {
   _$TendermintP2pDefaultNodeInfo? _$v;
 
-  TendermintP2pProtocolVersionBuilder? _protocolVersion;
-  TendermintP2pProtocolVersionBuilder get protocolVersion =>
-      _$this._protocolVersion ??= new TendermintP2pProtocolVersionBuilder();
-  set protocolVersion(TendermintP2pProtocolVersionBuilder? protocolVersion) =>
+  GetNodeInfo200ResponseDefaultNodeInfoProtocolVersionBuilder? _protocolVersion;
+  GetNodeInfo200ResponseDefaultNodeInfoProtocolVersionBuilder
+      get protocolVersion => _$this._protocolVersion ??=
+          new GetNodeInfo200ResponseDefaultNodeInfoProtocolVersionBuilder();
+  set protocolVersion(
+          GetNodeInfo200ResponseDefaultNodeInfoProtocolVersionBuilder?
+              protocolVersion) =>
       _$this._protocolVersion = protocolVersion;
 
   String? _defaultNodeId;
@@ -132,10 +135,10 @@ class TendermintP2pDefaultNodeInfoBuilder
   String? get moniker => _$this._moniker;
   set moniker(String? moniker) => _$this._moniker = moniker;
 
-  TendermintP2pDefaultNodeInfoOtherBuilder? _other;
-  TendermintP2pDefaultNodeInfoOtherBuilder get other =>
-      _$this._other ??= new TendermintP2pDefaultNodeInfoOtherBuilder();
-  set other(TendermintP2pDefaultNodeInfoOtherBuilder? other) =>
+  GetNodeInfo200ResponseDefaultNodeInfoOtherBuilder? _other;
+  GetNodeInfo200ResponseDefaultNodeInfoOtherBuilder get other =>
+      _$this._other ??= new GetNodeInfo200ResponseDefaultNodeInfoOtherBuilder();
+  set other(GetNodeInfo200ResponseDefaultNodeInfoOtherBuilder? other) =>
       _$this._other = other;
 
   TendermintP2pDefaultNodeInfoBuilder() {

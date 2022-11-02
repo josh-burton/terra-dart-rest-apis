@@ -9,9 +9,9 @@ part of 'cosmos_bank_v1beta1_query_denoms_metadata_response.dart';
 class _$CosmosBankV1beta1QueryDenomsMetadataResponse
     extends CosmosBankV1beta1QueryDenomsMetadataResponse {
   @override
-  final BuiltList<CosmosBankV1beta1Metadata>? metadatas;
+  final BuiltList<DenomsMetadata200ResponseMetadatasInner>? metadatas;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosBankV1beta1QueryDenomsMetadataResponse(
           [void Function(CosmosBankV1beta1QueryDenomsMetadataResponseBuilder)?
@@ -63,19 +63,18 @@ class CosmosBankV1beta1QueryDenomsMetadataResponseBuilder
             CosmosBankV1beta1QueryDenomsMetadataResponseBuilder> {
   _$CosmosBankV1beta1QueryDenomsMetadataResponse? _$v;
 
-  ListBuilder<CosmosBankV1beta1Metadata>? _metadatas;
-  ListBuilder<CosmosBankV1beta1Metadata> get metadatas =>
-      _$this._metadatas ??= new ListBuilder<CosmosBankV1beta1Metadata>();
-  set metadatas(ListBuilder<CosmosBankV1beta1Metadata>? metadatas) =>
+  ListBuilder<DenomsMetadata200ResponseMetadatasInner>? _metadatas;
+  ListBuilder<DenomsMetadata200ResponseMetadatasInner> get metadatas =>
+      _$this._metadatas ??=
+          new ListBuilder<DenomsMetadata200ResponseMetadatasInner>();
+  set metadatas(
+          ListBuilder<DenomsMetadata200ResponseMetadatasInner>? metadatas) =>
       _$this._metadatas = metadatas;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosBankV1beta1QueryDenomsMetadataResponseBuilder() {

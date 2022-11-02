@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
-import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
+import 'package:terra_dart_rest_apis/src/model/consensus_state_height.dart';
+import 'package:terra_dart_rest_apis/src/model/consensus_state.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'ibc_core_client_v1_consensus_state_with_height.g.dart';
 /// * [consensusState] 
 abstract class IbcCoreClientV1ConsensusStateWithHeight implements Built<IbcCoreClientV1ConsensusStateWithHeight, IbcCoreClientV1ConsensusStateWithHeightBuilder> {
     @BuiltValueField(wireName: r'height')
-    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get height;
+    ConsensusStateHeight? get height;
 
     @BuiltValueField(wireName: r'consensus_state')
-    CosmosAuthV1beta1QueryAccountResponseAccount? get consensusState;
+    ConsensusState? get consensusState;
 
     IbcCoreClientV1ConsensusStateWithHeight._();
 
@@ -47,13 +47,13 @@ class _$IbcCoreClientV1ConsensusStateWithHeightSerializer implements StructuredS
             result
                 ..add(r'height')
                 ..add(serializers.serialize(object.height,
-                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
+                    specifiedType: const FullType(ConsensusStateHeight)));
         }
         if (object.consensusState != null) {
             result
                 ..add(r'consensus_state')
                 ..add(serializers.serialize(object.consensusState,
-                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
+                    specifiedType: const FullType(ConsensusState)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$IbcCoreClientV1ConsensusStateWithHeightSerializer implements StructuredS
             switch (key) {
                 case r'height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
+                        specifiedType: const FullType(ConsensusStateHeight)) as ConsensusStateHeight;
                     result.height.replace(valueDes);
                     break;
                 case r'consensus_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
+                        specifiedType: const FullType(ConsensusState)) as ConsensusState;
                     result.consensusState.replace(valueDes);
                     break;
             }

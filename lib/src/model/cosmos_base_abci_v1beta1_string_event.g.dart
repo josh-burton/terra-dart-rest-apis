@@ -11,7 +11,9 @@ class _$CosmosBaseAbciV1beta1StringEvent
   @override
   final String? type;
   @override
-  final BuiltList<CosmosBaseAbciV1beta1Attribute>? attributes;
+  final BuiltList<
+          BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>?
+      attributes;
 
   factory _$CosmosBaseAbciV1beta1StringEvent(
           [void Function(CosmosBaseAbciV1beta1StringEventBuilder)? updates]) =>
@@ -61,10 +63,17 @@ class CosmosBaseAbciV1beta1StringEventBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  ListBuilder<CosmosBaseAbciV1beta1Attribute>? _attributes;
-  ListBuilder<CosmosBaseAbciV1beta1Attribute> get attributes =>
-      _$this._attributes ??= new ListBuilder<CosmosBaseAbciV1beta1Attribute>();
-  set attributes(ListBuilder<CosmosBaseAbciV1beta1Attribute>? attributes) =>
+  ListBuilder<
+          BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>?
+      _attributes;
+  ListBuilder<
+          BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>
+      get attributes => _$this._attributes ??= new ListBuilder<
+          BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>();
+  set attributes(
+          ListBuilder<
+                  BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>?
+              attributes) =>
       _$this._attributes = attributes;
 
   CosmosBaseAbciV1beta1StringEventBuilder() {

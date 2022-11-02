@@ -11,9 +11,9 @@ class _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse
   @override
   final String? blockHeight;
   @override
-  final BuiltList<CosmosBaseTendermintV1beta1Validator>? validators;
+  final BuiltList<GetLatestValidatorSet200ResponseValidatorsInner>? validators;
   @override
-  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
+  final Grants200ResponsePagination? pagination;
 
   factory _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse(
           [void Function(
@@ -75,20 +75,19 @@ class CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseBuilder
   String? get blockHeight => _$this._blockHeight;
   set blockHeight(String? blockHeight) => _$this._blockHeight = blockHeight;
 
-  ListBuilder<CosmosBaseTendermintV1beta1Validator>? _validators;
-  ListBuilder<CosmosBaseTendermintV1beta1Validator> get validators =>
+  ListBuilder<GetLatestValidatorSet200ResponseValidatorsInner>? _validators;
+  ListBuilder<GetLatestValidatorSet200ResponseValidatorsInner> get validators =>
       _$this._validators ??=
-          new ListBuilder<CosmosBaseTendermintV1beta1Validator>();
+          new ListBuilder<GetLatestValidatorSet200ResponseValidatorsInner>();
   set validators(
-          ListBuilder<CosmosBaseTendermintV1beta1Validator>? validators) =>
+          ListBuilder<GetLatestValidatorSet200ResponseValidatorsInner>?
+              validators) =>
       _$this._validators = validators;
 
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
+  Grants200ResponsePaginationBuilder? _pagination;
+  Grants200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Grants200ResponsePaginationBuilder();
+  set pagination(Grants200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseBuilder() {

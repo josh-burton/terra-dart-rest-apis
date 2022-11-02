@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/base_account.dart';
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response_account_value.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ abstract class Account implements Built<Account, AccountBuilder> {
     String? get type;
 
     @BuiltValueField(wireName: r'value')
-    BaseAccount? get value;
+    AuthAccountsAddressGet200ResponseAccountValue? get value;
 
     Account._();
 
@@ -52,7 +52,7 @@ class _$AccountSerializer implements StructuredSerializer<Account> {
             result
                 ..add(r'value')
                 ..add(serializers.serialize(object.value,
-                    specifiedType: const FullType(BaseAccount)));
+                    specifiedType: const FullType(AuthAccountsAddressGet200ResponseAccountValue)));
         }
         return result;
     }
@@ -76,7 +76,7 @@ class _$AccountSerializer implements StructuredSerializer<Account> {
                     break;
                 case r'value':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseAccount)) as BaseAccount;
+                        specifiedType: const FullType(AuthAccountsAddressGet200ResponseAccountValue)) as AuthAccountsAddressGet200ResponseAccountValue;
                     result.value.replace(valueDes);
                     break;
             }

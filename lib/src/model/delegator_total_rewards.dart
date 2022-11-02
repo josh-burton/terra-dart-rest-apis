@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/delegation_delegator_reward.dart';
+import 'package:terra_dart_rest_apis/src/model/distribution_delegators_delegator_addr_rewards_get200_response_rewards_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,16 +13,14 @@ part 'delegator_total_rewards.g.dart';
 /// DelegatorTotalRewards
 ///
 /// Properties:
-/// * [rewards] - 
-/// * [total] - 
+/// * [rewards] 
+/// * [total] 
 abstract class DelegatorTotalRewards implements Built<DelegatorTotalRewards, DelegatorTotalRewardsBuilder> {
-    /// 
     @BuiltValueField(wireName: r'rewards')
-    BuiltList<DelegationDelegatorReward>? get rewards;
+    BuiltList<DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>? get rewards;
 
-    /// 
     @BuiltValueField(wireName: r'total')
-    BuiltList<Coin>? get total;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get total;
 
     DelegatorTotalRewards._();
 
@@ -50,13 +48,13 @@ class _$DelegatorTotalRewardsSerializer implements StructuredSerializer<Delegato
             result
                 ..add(r'rewards')
                 ..add(serializers.serialize(object.rewards,
-                    specifiedType: const FullType(BuiltList, [FullType(DelegationDelegatorReward)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner)])));
         }
         if (object.total != null) {
             result
                 ..add(r'total')
                 ..add(serializers.serialize(object.total,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         return result;
     }
@@ -75,12 +73,12 @@ class _$DelegatorTotalRewardsSerializer implements StructuredSerializer<Delegato
             switch (key) {
                 case r'rewards':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(DelegationDelegatorReward)])) as BuiltList<DelegationDelegatorReward>;
+                        specifiedType: const FullType(BuiltList, [FullType(DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner)])) as BuiltList<DistributionDelegatorsDelegatorAddrRewardsGet200ResponseRewardsInner>;
                     result.rewards.replace(valueDes);
                     break;
                 case r'total':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.total.replace(valueDes);
                     break;
             }

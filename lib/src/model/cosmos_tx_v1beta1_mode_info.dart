@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/singleisthemodeinfoforasinglesigner_itisstructuredasamessagetoallowforadditionalfieldssuchaslocalefor_signmodetextua_linthefuture.dart';
-import 'package:terra_dart_rest_apis/src/model/multiisthemodeinfoforamultisigpublickey.dart';
+import 'package:terra_dart_rest_apis/src/model/single_represents_a_single_signer.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_mode_info_multi.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_tx_v1beta1_mode_info.g.dart';
 /// * [multi] 
 abstract class CosmosTxV1beta1ModeInfo implements Built<CosmosTxV1beta1ModeInfo, CosmosTxV1beta1ModeInfoBuilder> {
     @BuiltValueField(wireName: r'single')
-    SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture? get single;
+    SingleRepresentsASingleSigner? get single;
 
     @BuiltValueField(wireName: r'multi')
-    Multiisthemodeinfoforamultisigpublickey? get multi;
+    CosmosTxV1beta1ModeInfoMulti? get multi;
 
     CosmosTxV1beta1ModeInfo._();
 
@@ -47,13 +47,13 @@ class _$CosmosTxV1beta1ModeInfoSerializer implements StructuredSerializer<Cosmos
             result
                 ..add(r'single')
                 ..add(serializers.serialize(object.single,
-                    specifiedType: const FullType(SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture)));
+                    specifiedType: const FullType(SingleRepresentsASingleSigner)));
         }
         if (object.multi != null) {
             result
                 ..add(r'multi')
                 ..add(serializers.serialize(object.multi,
-                    specifiedType: const FullType(Multiisthemodeinfoforamultisigpublickey)));
+                    specifiedType: const FullType(CosmosTxV1beta1ModeInfoMulti)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosTxV1beta1ModeInfoSerializer implements StructuredSerializer<Cosmos
             switch (key) {
                 case r'single':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture)) as SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture;
+                        specifiedType: const FullType(SingleRepresentsASingleSigner)) as SingleRepresentsASingleSigner;
                     result.single.replace(valueDes);
                     break;
                 case r'multi':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Multiisthemodeinfoforamultisigpublickey)) as Multiisthemodeinfoforamultisigpublickey;
+                        specifiedType: const FullType(CosmosTxV1beta1ModeInfoMulti)) as CosmosTxV1beta1ModeInfoMulti;
                     result.multi.replace(valueDes);
                     break;
             }

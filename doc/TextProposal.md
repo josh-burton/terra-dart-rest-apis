@@ -9,10 +9,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**content** | [**Content**](Content.md) |  | [optional] 
+**content** | [**GovProposalsGet200ResponseInnerContent**](GovProposalsGet200ResponseInnerContent.md) |  | [optional] 
 **status** | **num** |  | [optional] 
-**finalTallyResult** | [**TallyResult**](TallyResult.md) |  | [optional] 
-**totalDeposit** | [**BuiltList&lt;Coin&gt;**](Coin.md) |  | [optional] 
+**finalTallyResult** | [**GovProposalsGet200ResponseInnerFinalTallyResult**](GovProposalsGet200ResponseInnerFinalTallyResult.md) |  | [optional] 
+**totalDeposit** | [**BuiltList&lt;TxsHashGet200ResponseTxFeeAmountInner&gt;**](TxsHashGet200ResponseTxFeeAmountInner.md) |  | [optional] 
 **submitTime** | **String** |  | [optional] 
 **depositEndTime** | **String** |  | [optional] 
 **votingStartTime** | **String** |  | [optional] 

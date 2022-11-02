@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_commit_sig.dart';
+import 'package:terra_dart_rest_apis/src/model/block_id1.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/block_id26.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block_evidence_evidence_inner_light_client_attack_evidence_conflicting_block_signed_header_commit_signatures_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +16,7 @@ part 'tendermint_types_commit.g.dart';
 /// * [height] 
 /// * [round] 
 /// * [blockId] 
-/// * [signatures] - 
+/// * [signatures] 
 abstract class TendermintTypesCommit implements Built<TendermintTypesCommit, TendermintTypesCommitBuilder> {
     @BuiltValueField(wireName: r'height')
     String? get height;
@@ -25,11 +25,10 @@ abstract class TendermintTypesCommit implements Built<TendermintTypesCommit, Ten
     int? get round;
 
     @BuiltValueField(wireName: r'block_id')
-    BlockID26? get blockId;
+    BlockID1? get blockId;
 
-    /// 
     @BuiltValueField(wireName: r'signatures')
-    BuiltList<TendermintTypesCommitSig>? get signatures;
+    BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>? get signatures;
 
     TendermintTypesCommit._();
 
@@ -69,13 +68,13 @@ class _$TendermintTypesCommitSerializer implements StructuredSerializer<Tendermi
             result
                 ..add(r'block_id')
                 ..add(serializers.serialize(object.blockId,
-                    specifiedType: const FullType(BlockID26)));
+                    specifiedType: const FullType(BlockID1)));
         }
         if (object.signatures != null) {
             result
                 ..add(r'signatures')
                 ..add(serializers.serialize(object.signatures,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintTypesCommitSig)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner)])));
         }
         return result;
     }
@@ -104,12 +103,12 @@ class _$TendermintTypesCommitSerializer implements StructuredSerializer<Tendermi
                     break;
                 case r'block_id':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockID26)) as BlockID26;
+                        specifiedType: const FullType(BlockID1)) as BlockID1;
                     result.blockId.replace(valueDes);
                     break;
                 case r'signatures':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintTypesCommitSig)])) as BuiltList<TendermintTypesCommitSig>;
+                        specifiedType: const FullType(BuiltList, [FullType(GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner)])) as BuiltList<GetLatestBlock200ResponseBlockEvidenceEvidenceInnerLightClientAttackEvidenceConflictingBlockSignedHeaderCommitSignaturesInner>;
                     result.signatures.replace(valueDes);
                     break;
             }

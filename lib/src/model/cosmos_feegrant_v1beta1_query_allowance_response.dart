@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_feegrant_v1beta1_query_allowance_response_allowance.dart';
+import 'package:terra_dart_rest_apis/src/model/grant_is_stored_in_the_kv_store_to_record_a_grant_with_full_context.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_feegrant_v1beta1_query_allowance_response.g.dart';
 /// * [allowance] 
 abstract class CosmosFeegrantV1beta1QueryAllowanceResponse implements Built<CosmosFeegrantV1beta1QueryAllowanceResponse, CosmosFeegrantV1beta1QueryAllowanceResponseBuilder> {
     @BuiltValueField(wireName: r'allowance')
-    CosmosFeegrantV1beta1QueryAllowanceResponseAllowance? get allowance;
+    GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext? get allowance;
 
     CosmosFeegrantV1beta1QueryAllowanceResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosFeegrantV1beta1QueryAllowanceResponseSerializer implements Structu
             result
                 ..add(r'allowance')
                 ..add(serializers.serialize(object.allowance,
-                    specifiedType: const FullType(CosmosFeegrantV1beta1QueryAllowanceResponseAllowance)));
+                    specifiedType: const FullType(GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosFeegrantV1beta1QueryAllowanceResponseSerializer implements Structu
             switch (key) {
                 case r'allowance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosFeegrantV1beta1QueryAllowanceResponseAllowance)) as CosmosFeegrantV1beta1QueryAllowanceResponseAllowance;
+                        specifiedType: const FullType(GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext)) as GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext;
                     result.allowance.replace(valueDes);
                     break;
             }

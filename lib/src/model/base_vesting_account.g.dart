@@ -8,13 +8,13 @@ part of 'base_vesting_account.dart';
 
 class _$BaseVestingAccount extends BaseVestingAccount {
   @override
-  final BaseAccount? baseAccount;
+  final AuthAccountsAddressGet200ResponseAccountValue? baseAccount;
   @override
-  final BuiltList<Coin>? originalVesting;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? originalVesting;
   @override
-  final BuiltList<Coin>? delegatedFree;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? delegatedFree;
   @override
-  final BuiltList<Coin>? delegatedVesting;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? delegatedVesting;
   @override
   final String? endTime;
 
@@ -76,28 +76,38 @@ class BaseVestingAccountBuilder
     implements Builder<BaseVestingAccount, BaseVestingAccountBuilder> {
   _$BaseVestingAccount? _$v;
 
-  BaseAccountBuilder? _baseAccount;
-  BaseAccountBuilder get baseAccount =>
-      _$this._baseAccount ??= new BaseAccountBuilder();
-  set baseAccount(BaseAccountBuilder? baseAccount) =>
+  AuthAccountsAddressGet200ResponseAccountValueBuilder? _baseAccount;
+  AuthAccountsAddressGet200ResponseAccountValueBuilder get baseAccount =>
+      _$this._baseAccount ??=
+          new AuthAccountsAddressGet200ResponseAccountValueBuilder();
+  set baseAccount(
+          AuthAccountsAddressGet200ResponseAccountValueBuilder? baseAccount) =>
       _$this._baseAccount = baseAccount;
 
-  ListBuilder<Coin>? _originalVesting;
-  ListBuilder<Coin> get originalVesting =>
-      _$this._originalVesting ??= new ListBuilder<Coin>();
-  set originalVesting(ListBuilder<Coin>? originalVesting) =>
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _originalVesting;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get originalVesting =>
+      _$this._originalVesting ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set originalVesting(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>?
+              originalVesting) =>
       _$this._originalVesting = originalVesting;
 
-  ListBuilder<Coin>? _delegatedFree;
-  ListBuilder<Coin> get delegatedFree =>
-      _$this._delegatedFree ??= new ListBuilder<Coin>();
-  set delegatedFree(ListBuilder<Coin>? delegatedFree) =>
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _delegatedFree;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get delegatedFree =>
+      _$this._delegatedFree ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set delegatedFree(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? delegatedFree) =>
       _$this._delegatedFree = delegatedFree;
 
-  ListBuilder<Coin>? _delegatedVesting;
-  ListBuilder<Coin> get delegatedVesting =>
-      _$this._delegatedVesting ??= new ListBuilder<Coin>();
-  set delegatedVesting(ListBuilder<Coin>? delegatedVesting) =>
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _delegatedVesting;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get delegatedVesting =>
+      _$this._delegatedVesting ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set delegatedVesting(
+          ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>?
+              delegatedVesting) =>
       _$this._delegatedVesting = delegatedVesting;
 
   String? _endTime;

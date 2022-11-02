@@ -12,9 +12,9 @@ class _$TxQuery extends TxQuery {
   @override
   final num? height;
   @override
-  final StdTx? tx;
+  final TxsHashGet200ResponseTx? tx;
   @override
-  final Result? result;
+  final TxsHashGet200ResponseResult? result;
 
   factory _$TxQuery([void Function(TxQueryBuilder)? updates]) =>
       (new TxQueryBuilder()..update(updates))._build();
@@ -67,13 +67,16 @@ class TxQueryBuilder implements Builder<TxQuery, TxQueryBuilder> {
   num? get height => _$this._height;
   set height(num? height) => _$this._height = height;
 
-  StdTxBuilder? _tx;
-  StdTxBuilder get tx => _$this._tx ??= new StdTxBuilder();
-  set tx(StdTxBuilder? tx) => _$this._tx = tx;
+  TxsHashGet200ResponseTxBuilder? _tx;
+  TxsHashGet200ResponseTxBuilder get tx =>
+      _$this._tx ??= new TxsHashGet200ResponseTxBuilder();
+  set tx(TxsHashGet200ResponseTxBuilder? tx) => _$this._tx = tx;
 
-  ResultBuilder? _result;
-  ResultBuilder get result => _$this._result ??= new ResultBuilder();
-  set result(ResultBuilder? result) => _$this._result = result;
+  TxsHashGet200ResponseResultBuilder? _result;
+  TxsHashGet200ResponseResultBuilder get result =>
+      _$this._result ??= new TxsHashGet200ResponseResultBuilder();
+  set result(TxsHashGet200ResponseResultBuilder? result) =>
+      _$this._result = result;
 
   TxQueryBuilder() {
     TxQuery._defaults(this);

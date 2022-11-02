@@ -9,7 +9,7 @@ part of 'terra_treasury_v1beta1_query_tax_proceeds_response.dart';
 class _$TerraTreasuryV1beta1QueryTaxProceedsResponse
     extends TerraTreasuryV1beta1QueryTaxProceedsResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? taxProceeds;
+  final BuiltList<AllBalances200ResponseBalancesInner>? taxProceeds;
 
   factory _$TerraTreasuryV1beta1QueryTaxProceedsResponse(
           [void Function(TerraTreasuryV1beta1QueryTaxProceedsResponseBuilder)?
@@ -58,10 +58,12 @@ class TerraTreasuryV1beta1QueryTaxProceedsResponseBuilder
             TerraTreasuryV1beta1QueryTaxProceedsResponseBuilder> {
   _$TerraTreasuryV1beta1QueryTaxProceedsResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _taxProceeds;
-  ListBuilder<CosmosBaseV1beta1Coin> get taxProceeds =>
-      _$this._taxProceeds ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set taxProceeds(ListBuilder<CosmosBaseV1beta1Coin>? taxProceeds) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _taxProceeds;
+  ListBuilder<AllBalances200ResponseBalancesInner> get taxProceeds =>
+      _$this._taxProceeds ??=
+          new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set taxProceeds(
+          ListBuilder<AllBalances200ResponseBalancesInner>? taxProceeds) =>
       _$this._taxProceeds = taxProceeds;
 
   TerraTreasuryV1beta1QueryTaxProceedsResponseBuilder() {

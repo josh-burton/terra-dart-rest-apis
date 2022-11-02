@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_proposal_final_tally_result.dart';
+import 'package:terra_dart_rest_apis/src/model/proposals200_response_proposals_inner_final_tally_result.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_gov_v1beta1_query_tally_result_response.g.dart';
 /// * [tally] 
 abstract class CosmosGovV1beta1QueryTallyResultResponse implements Built<CosmosGovV1beta1QueryTallyResultResponse, CosmosGovV1beta1QueryTallyResultResponseBuilder> {
     @BuiltValueField(wireName: r'tally')
-    CosmosGovV1beta1ProposalFinalTallyResult? get tally;
+    Proposals200ResponseProposalsInnerFinalTallyResult? get tally;
 
     CosmosGovV1beta1QueryTallyResultResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosGovV1beta1QueryTallyResultResponseSerializer implements Structured
             result
                 ..add(r'tally')
                 ..add(serializers.serialize(object.tally,
-                    specifiedType: const FullType(CosmosGovV1beta1ProposalFinalTallyResult)));
+                    specifiedType: const FullType(Proposals200ResponseProposalsInnerFinalTallyResult)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosGovV1beta1QueryTallyResultResponseSerializer implements Structured
             switch (key) {
                 case r'tally':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1ProposalFinalTallyResult)) as CosmosGovV1beta1ProposalFinalTallyResult;
+                        specifiedType: const FullType(Proposals200ResponseProposalsInnerFinalTallyResult)) as Proposals200ResponseProposalsInnerFinalTallyResult;
                     result.tally.replace(valueDes);
                     break;
             }

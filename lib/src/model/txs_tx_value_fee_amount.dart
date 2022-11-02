@@ -10,12 +10,14 @@ part 'txs_tx_value_fee_amount.g.dart';
 /// TxsTxValueFeeAmount
 ///
 /// Properties:
-/// * [denom] 
-/// * [amount] 
+/// * [denom] - 
+/// * [amount] - 
 abstract class TxsTxValueFeeAmount implements Built<TxsTxValueFeeAmount, TxsTxValueFeeAmountBuilder> {
+    /// 
     @BuiltValueField(wireName: r'denom')
     String get denom;
 
+    /// 
     @BuiltValueField(wireName: r'amount')
     String get amount;
 

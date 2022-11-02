@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,16 +14,15 @@ part 'instantiate_contract_req.g.dart';
 ///
 /// Properties:
 /// * [baseReq] 
-/// * [initCoins] - 
+/// * [initCoins] 
 /// * [initMsg] - json formatted string
 /// * [admin] - bech32 encoded address
 abstract class InstantiateContractReq implements Built<InstantiateContractReq, InstantiateContractReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq? get baseReq;
+    TxsEstimateFeePostRequestBaseReq? get baseReq;
 
-    /// 
     @BuiltValueField(wireName: r'init_coins')
-    BuiltList<Coin>? get initCoins;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get initCoins;
 
     /// json formatted string
     @BuiltValueField(wireName: r'init_msg')
@@ -59,13 +58,13 @@ class _$InstantiateContractReqSerializer implements StructuredSerializer<Instant
             result
                 ..add(r'base_req')
                 ..add(serializers.serialize(object.baseReq,
-                    specifiedType: const FullType(BaseReq)));
+                    specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         }
         if (object.initCoins != null) {
             result
                 ..add(r'init_coins')
                 ..add(serializers.serialize(object.initCoins,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         if (object.initMsg != null) {
             result
@@ -96,12 +95,12 @@ class _$InstantiateContractReqSerializer implements StructuredSerializer<Instant
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'init_coins':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.initCoins.replace(valueDes);
                     break;
                 case r'init_msg':

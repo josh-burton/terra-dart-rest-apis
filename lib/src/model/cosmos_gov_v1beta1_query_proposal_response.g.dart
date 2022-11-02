@@ -9,7 +9,7 @@ part of 'cosmos_gov_v1beta1_query_proposal_response.dart';
 class _$CosmosGovV1beta1QueryProposalResponse
     extends CosmosGovV1beta1QueryProposalResponse {
   @override
-  final CosmosGovV1beta1QueryProposalResponseProposal? proposal;
+  final Proposals200ResponseProposalsInner? proposal;
 
   factory _$CosmosGovV1beta1QueryProposalResponse(
           [void Function(CosmosGovV1beta1QueryProposalResponseBuilder)?
@@ -56,12 +56,10 @@ class CosmosGovV1beta1QueryProposalResponseBuilder
             CosmosGovV1beta1QueryProposalResponseBuilder> {
   _$CosmosGovV1beta1QueryProposalResponse? _$v;
 
-  CosmosGovV1beta1QueryProposalResponseProposalBuilder? _proposal;
-  CosmosGovV1beta1QueryProposalResponseProposalBuilder get proposal =>
-      _$this._proposal ??=
-          new CosmosGovV1beta1QueryProposalResponseProposalBuilder();
-  set proposal(
-          CosmosGovV1beta1QueryProposalResponseProposalBuilder? proposal) =>
+  Proposals200ResponseProposalsInnerBuilder? _proposal;
+  Proposals200ResponseProposalsInnerBuilder get proposal =>
+      _$this._proposal ??= new Proposals200ResponseProposalsInnerBuilder();
+  set proposal(Proposals200ResponseProposalsInnerBuilder? proposal) =>
       _$this._proposal = proposal;
 
   CosmosGovV1beta1QueryProposalResponseBuilder() {

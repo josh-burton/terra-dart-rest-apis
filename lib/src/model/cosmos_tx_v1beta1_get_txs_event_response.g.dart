@@ -11,9 +11,9 @@ class _$CosmosTxV1beta1GetTxsEventResponse
   @override
   final BuiltList<CosmosTxV1beta1Tx>? txs;
   @override
-  final BuiltList<CosmosBaseAbciV1beta1TxResponse>? txResponses;
+  final BuiltList<BroadcastTx200ResponseTxResponse>? txResponses;
   @override
-  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
+  final Grants200ResponsePagination? pagination;
 
   factory _$CosmosTxV1beta1GetTxsEventResponse(
           [void Function(CosmosTxV1beta1GetTxsEventResponseBuilder)?
@@ -70,19 +70,17 @@ class CosmosTxV1beta1GetTxsEventResponseBuilder
       _$this._txs ??= new ListBuilder<CosmosTxV1beta1Tx>();
   set txs(ListBuilder<CosmosTxV1beta1Tx>? txs) => _$this._txs = txs;
 
-  ListBuilder<CosmosBaseAbciV1beta1TxResponse>? _txResponses;
-  ListBuilder<CosmosBaseAbciV1beta1TxResponse> get txResponses =>
+  ListBuilder<BroadcastTx200ResponseTxResponse>? _txResponses;
+  ListBuilder<BroadcastTx200ResponseTxResponse> get txResponses =>
       _$this._txResponses ??=
-          new ListBuilder<CosmosBaseAbciV1beta1TxResponse>();
-  set txResponses(ListBuilder<CosmosBaseAbciV1beta1TxResponse>? txResponses) =>
+          new ListBuilder<BroadcastTx200ResponseTxResponse>();
+  set txResponses(ListBuilder<BroadcastTx200ResponseTxResponse>? txResponses) =>
       _$this._txResponses = txResponses;
 
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
-  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
+  Grants200ResponsePaginationBuilder? _pagination;
+  Grants200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Grants200ResponsePaginationBuilder();
+  set pagination(Grants200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosTxV1beta1GetTxsEventResponseBuilder() {

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_abci_event_attribute.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/simulate200_response_result_events_inner_attributes_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,14 +13,13 @@ part 'tendermint_abci_event.g.dart';
 ///
 /// Properties:
 /// * [type] 
-/// * [attributes] - 
+/// * [attributes] 
 abstract class TendermintAbciEvent implements Built<TendermintAbciEvent, TendermintAbciEventBuilder> {
     @BuiltValueField(wireName: r'type')
     String? get type;
 
-    /// 
     @BuiltValueField(wireName: r'attributes')
-    BuiltList<TendermintAbciEventAttribute>? get attributes;
+    BuiltList<Simulate200ResponseResultEventsInnerAttributesInner>? get attributes;
 
     TendermintAbciEvent._();
 
@@ -54,7 +53,7 @@ class _$TendermintAbciEventSerializer implements StructuredSerializer<Tendermint
             result
                 ..add(r'attributes')
                 ..add(serializers.serialize(object.attributes,
-                    specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEventAttribute)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInnerAttributesInner)])));
         }
         return result;
     }
@@ -78,7 +77,7 @@ class _$TendermintAbciEventSerializer implements StructuredSerializer<Tendermint
                     break;
                 case r'attributes':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TendermintAbciEventAttribute)])) as BuiltList<TendermintAbciEventAttribute>;
+                        specifiedType: const FullType(BuiltList, [FullType(Simulate200ResponseResultEventsInnerAttributesInner)])) as BuiltList<Simulate200ResponseResultEventsInnerAttributesInner>;
                     result.attributes.replace(valueDes);
                     break;
             }

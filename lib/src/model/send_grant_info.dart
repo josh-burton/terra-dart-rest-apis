@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/send_authorization.dart';
+import 'package:terra_dart_rest_apis/src/model/send_grant_info_authorization.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'send_grant_info.g.dart';
 /// * [expiration] 
 abstract class SendGrantInfo implements Built<SendGrantInfo, SendGrantInfoBuilder> {
     @BuiltValueField(wireName: r'authorization')
-    SendAuthorization? get authorization;
+    SendGrantInfoAuthorization? get authorization;
 
     @BuiltValueField(wireName: r'expiration')
     String? get expiration;
@@ -46,7 +46,7 @@ class _$SendGrantInfoSerializer implements StructuredSerializer<SendGrantInfo> {
             result
                 ..add(r'authorization')
                 ..add(serializers.serialize(object.authorization,
-                    specifiedType: const FullType(SendAuthorization)));
+                    specifiedType: const FullType(SendGrantInfoAuthorization)));
         }
         if (object.expiration != null) {
             result
@@ -71,7 +71,7 @@ class _$SendGrantInfoSerializer implements StructuredSerializer<SendGrantInfo> {
             switch (key) {
                 case r'authorization':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(SendAuthorization)) as SendAuthorization;
+                        specifiedType: const FullType(SendGrantInfoAuthorization)) as SendGrantInfoAuthorization;
                     result.authorization.replace(valueDes);
                     break;
                 case r'expiration':

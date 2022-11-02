@@ -5,162 +5,25 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generateoracleaggregateexchangerateprevotemessagecontainingahash**](OracleApi.md#generateoracleaggregateexchangerateprevotemessagecontainingahash) | **POST** /oracle/voters/{validator}/aggregate_prevote | Generate oracle aggregate exchange rate prevote message containing a hash
-[**generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote**](OracleApi.md#generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote) | **POST** /oracle/voters/{validator}/aggregate_vote | Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
-[**generateoraclefeederrightdelegationmessage**](OracleApi.md#generateoraclefeederrightdelegationmessage) | **POST** /oracle/voters/{validator}/feeder | Generate oracle feeder right delegation message
-[**getallactivateddenoms**](OracleApi.md#getallactivateddenoms) | **GET** /oracle/denoms/actives | Get all activated denoms
-[**getallactivatedexchangerates**](OracleApi.md#getallactivatedexchangerates) | **GET** /oracle/denoms/exchange_rates | Get all activated exchange rates
-[**getdelegatedoraclefeederofavalidator**](OracleApi.md#getdelegatedoraclefeederofavalidator) | **GET** /oracle/voters/{validator}/feeder | Get delegated oracle feeder of a validator
-[**getoracleparams**](OracleApi.md#getoracleparams) | **GET** /oracle/parameters | Get oracle params
-[**getthecurrenteffectiveexchangerateinLunafortheasset**](OracleApi.md#getthecurrenteffectiveexchangerateinlunafortheasset) | **GET** /oracle/denoms/{denom}/exchange_rate | Get the current effective exchange rate in Luna for the asset
-[**getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator**](OracleApi.md#getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator) | **GET** /oracle/voters/{validator}/aggregate_prevote | Get the currently outstanding aggregate exchange rate oracle prevote of a validator
-[**getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator**](OracleApi.md#getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator) | **GET** /oracle/voters/{validator}/aggregate_vote | Get the currently outstanding aggregate exchange rate oracle vote of a validator
-[**getthenumberofvoteperiodsmissedinthisoracleslashwindow**](OracleApi.md#getthenumberofvoteperiodsmissedinthisoracleslashwindow) | **GET** /oracle/voters/{validator}/miss | Get the number of vote periods missed in this oracle slash window.
+[**oracleDenomsActivesGet**](OracleApi.md#oracledenomsactivesget) | **GET** /oracle/denoms/actives | Get all activated denoms
+[**oracleDenomsDenomExchangeRateGet**](OracleApi.md#oracledenomsdenomexchangerateget) | **GET** /oracle/denoms/{denom}/exchange_rate | Get the current effective exchange rate in Luna for the asset
+[**oracleDenomsExchangeRatesGet**](OracleApi.md#oracledenomsexchangeratesget) | **GET** /oracle/denoms/exchange_rates | Get all activated exchange rates
+[**oracleParametersGet**](OracleApi.md#oracleparametersget) | **GET** /oracle/parameters | Get oracle params
+[**oracleVotersValidatorAggregatePrevoteGet**](OracleApi.md#oraclevotersvalidatoraggregateprevoteget) | **GET** /oracle/voters/{validator}/aggregate_prevote | Get the currently outstanding aggregate exchange rate oracle prevote of a validator
+[**oracleVotersValidatorAggregatePrevotePost**](OracleApi.md#oraclevotersvalidatoraggregateprevotepost) | **POST** /oracle/voters/{validator}/aggregate_prevote | Generate oracle aggregate exchange rate prevote message containing a hash
+[**oracleVotersValidatorAggregateVoteGet**](OracleApi.md#oraclevotersvalidatoraggregatevoteget) | **GET** /oracle/voters/{validator}/aggregate_vote | Get the currently outstanding aggregate exchange rate oracle vote of a validator
+[**oracleVotersValidatorAggregateVotePost**](OracleApi.md#oraclevotersvalidatoraggregatevotepost) | **POST** /oracle/voters/{validator}/aggregate_vote | Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
+[**oracleVotersValidatorFeederGet**](OracleApi.md#oraclevotersvalidatorfeederget) | **GET** /oracle/voters/{validator}/feeder | Get delegated oracle feeder of a validator
+[**oracleVotersValidatorFeederPost**](OracleApi.md#oraclevotersvalidatorfeederpost) | **POST** /oracle/voters/{validator}/feeder | Generate oracle feeder right delegation message
+[**oracleVotersValidatorMissGet**](OracleApi.md#oraclevotersvalidatormissget) | **GET** /oracle/voters/{validator}/miss | Get the number of vote periods missed in this oracle slash window.
 
 
-# **generateoracleaggregateexchangerateprevotemessagecontainingahash**
-> StdTx generateoracleaggregateexchangerateprevotemessagecontainingahash(validator, aggregatePrevoteReq)
-
-Generate oracle aggregate exchange rate prevote message containing a hash
-
-Generate oracle aggregate exchange rate prevote message containing a hash
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String validator = validator_example; // String | oracle operator
-final AggregatePrevoteReq aggregatePrevoteReq = ; // AggregatePrevoteReq | 
-
-try {
-    final response = api.generateoracleaggregateexchangerateprevotemessagecontainingahash(validator, aggregatePrevoteReq);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->generateoracleaggregateexchangerateprevotemessagecontainingahash: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validator** | **String**| oracle operator | 
- **aggregatePrevoteReq** | [**AggregatePrevoteReq**](AggregatePrevoteReq.md)|  | [optional] 
-
-### Return type
-
-[**StdTx**](StdTx.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote**
-> StdTx generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote(validator, aggregateVoteReq)
-
-Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
-
-Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String validator = validator_example; // String | oracle operator
-final AggregateVoteReq aggregateVoteReq = ; // AggregateVoteReq | 
-
-try {
-    final response = api.generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote(validator, aggregateVoteReq);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validator** | **String**| oracle operator | 
- **aggregateVoteReq** | [**AggregateVoteReq**](AggregateVoteReq.md)|  | [optional] 
-
-### Return type
-
-[**StdTx**](StdTx.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **generateoraclefeederrightdelegationmessage**
-> StdTx generateoraclefeederrightdelegationmessage(validator, delegateReq)
-
-Generate oracle feeder right delegation message
-
-Generate oracle feeder right delegation message
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String validator = validator_example; // String | Feeder right delegator
-final DelegateReq delegateReq = ; // DelegateReq | 
-
-try {
-    final response = api.generateoraclefeederrightdelegationmessage(validator, delegateReq);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->generateoraclefeederrightdelegationmessage: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validator** | **String**| Feeder right delegator | 
- **delegateReq** | [**DelegateReq**](DelegateReq.md)|  | [optional] 
-
-### Return type
-
-[**StdTx**](StdTx.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getallactivateddenoms**
-> BuiltList<String> getallactivateddenoms()
-
-Get all activated denoms
+# **oracleDenomsActivesGet**
+> BuiltList<String> oracleDenomsActivesGet()
 
 Get all activated denoms
 
@@ -171,10 +34,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 final api = TerraRestApi().getOracleApi();
 
 try {
-    final response = api.getallactivateddenoms();
+    final response = api.oracleDenomsActivesGet();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling OracleApi->getallactivateddenoms: $e\n');
+    print('Exception when calling OracleApi->oracleDenomsActivesGet: $e\n');
 }
 ```
 
@@ -196,33 +59,35 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getallactivatedexchangerates**
-> BuiltList<Coin> getallactivatedexchangerates()
+# **oracleDenomsDenomExchangeRateGet**
+> num oracleDenomsDenomExchangeRateGet(denom)
 
-Get all activated exchange rates
-
-Get all activated exchange rates
+Get the current effective exchange rate in Luna for the asset
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getOracleApi();
+final String denom = denom_example; // String | The coin denom to get
 
 try {
-    final response = api.getallactivatedexchangerates();
+    final response = api.oracleDenomsDenomExchangeRateGet(denom);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling OracleApi->getallactivatedexchangerates: $e\n');
+    print('Exception when calling OracleApi->oracleDenomsDenomExchangeRateGet: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **denom** | **String**| The coin denom to get | 
 
 ### Return type
 
-[**BuiltList&lt;Coin&gt;**](Coin.md)
+**num**
 
 ### Authorization
 
@@ -235,10 +100,250 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getdelegatedoraclefeederofavalidator**
-> String getdelegatedoraclefeederofavalidator(validator)
+# **oracleDenomsExchangeRatesGet**
+> BuiltList<OracleDenomsExchangeRatesGet200ResponseInner> oracleDenomsExchangeRatesGet()
 
-Get delegated oracle feeder of a validator
+Get all activated exchange rates
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+
+try {
+    final response = api.oracleDenomsExchangeRatesGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleDenomsExchangeRatesGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;OracleDenomsExchangeRatesGet200ResponseInner&gt;**](OracleDenomsExchangeRatesGet200ResponseInner.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleParametersGet**
+> OracleParametersGet200Response oracleParametersGet()
+
+Get oracle params
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+
+try {
+    final response = api.oracleParametersGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleParametersGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**OracleParametersGet200Response**](OracleParametersGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleVotersValidatorAggregatePrevoteGet**
+> OracleVotersValidatorAggregatePrevoteGet200Response oracleVotersValidatorAggregatePrevoteGet(validator)
+
+Get the currently outstanding aggregate exchange rate oracle prevote of a validator
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+final String validator = validator_example; // String | oracle operator
+
+try {
+    final response = api.oracleVotersValidatorAggregatePrevoteGet(validator);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleVotersValidatorAggregatePrevoteGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validator** | **String**| oracle operator | 
+
+### Return type
+
+[**OracleVotersValidatorAggregatePrevoteGet200Response**](OracleVotersValidatorAggregatePrevoteGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleVotersValidatorAggregatePrevotePost**
+> TxsHashGet200ResponseTx oracleVotersValidatorAggregatePrevotePost(validator, aggregatePrevoteRequestBody)
+
+Generate oracle aggregate exchange rate prevote message containing a hash
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+final String validator = validator_example; // String | oracle operator
+final OracleVotersValidatorAggregatePrevoteGetRequest aggregatePrevoteRequestBody = ; // OracleVotersValidatorAggregatePrevoteGetRequest | 
+
+try {
+    final response = api.oracleVotersValidatorAggregatePrevotePost(validator, aggregatePrevoteRequestBody);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleVotersValidatorAggregatePrevotePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validator** | **String**| oracle operator | 
+ **aggregatePrevoteRequestBody** | [**OracleVotersValidatorAggregatePrevoteGetRequest**](OracleVotersValidatorAggregatePrevoteGetRequest.md)|  | [optional] 
+
+### Return type
+
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleVotersValidatorAggregateVoteGet**
+> OracleVotersValidatorAggregateVoteGet200Response oracleVotersValidatorAggregateVoteGet(validator)
+
+Get the currently outstanding aggregate exchange rate oracle vote of a validator
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+final String validator = validator_example; // String | oracle operator
+
+try {
+    final response = api.oracleVotersValidatorAggregateVoteGet(validator);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleVotersValidatorAggregateVoteGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validator** | **String**| oracle operator | 
+
+### Return type
+
+[**OracleVotersValidatorAggregateVoteGet200Response**](OracleVotersValidatorAggregateVoteGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleVotersValidatorAggregateVotePost**
+> TxsHashGet200ResponseTx oracleVotersValidatorAggregateVotePost(validator, aggregateVoteRequestBody)
+
+Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getOracleApi();
+final String validator = validator_example; // String | oracle operator
+final OracleVotersValidatorAggregateVoteGetRequest aggregateVoteRequestBody = ; // OracleVotersValidatorAggregateVoteGetRequest | 
+
+try {
+    final response = api.oracleVotersValidatorAggregateVotePost(validator, aggregateVoteRequestBody);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OracleApi->oracleVotersValidatorAggregateVotePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validator** | **String**| oracle operator | 
+ **aggregateVoteRequestBody** | [**OracleVotersValidatorAggregateVoteGetRequest**](OracleVotersValidatorAggregateVoteGetRequest.md)|  | [optional] 
+
+### Return type
+
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **oracleVotersValidatorFeederGet**
+> String oracleVotersValidatorFeederGet(validator)
 
 Get delegated oracle feeder of a validator
 
@@ -250,10 +355,10 @@ final api = TerraRestApi().getOracleApi();
 final String validator = validator_example; // String | Feeder right delegator
 
 try {
-    final response = api.getdelegatedoraclefeederofavalidator(validator);
+    final response = api.oracleVotersValidatorFeederGet(validator);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling OracleApi->getdelegatedoraclefeederofavalidator: $e\n');
+    print('Exception when calling OracleApi->oracleVotersValidatorFeederGet: $e\n');
 }
 ```
 
@@ -278,64 +383,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getoracleparams**
-> OracleParams getoracleparams()
+# **oracleVotersValidatorFeederPost**
+> TxsHashGet200ResponseTx oracleVotersValidatorFeederPost(validator, feederRightDelegationRequestBody)
 
-Get oracle params
-
-Get oracle params
+Generate oracle feeder right delegation message
 
 ### Example
 ```dart
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getOracleApi();
+final String validator = validator_example; // String | Feeder right delegator
+final OracleVotersValidatorFeederGetRequest feederRightDelegationRequestBody = ; // OracleVotersValidatorFeederGetRequest | 
 
 try {
-    final response = api.getoracleparams();
+    final response = api.oracleVotersValidatorFeederPost(validator, feederRightDelegationRequestBody);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling OracleApi->getoracleparams: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**OracleParams**](OracleParams.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getthecurrenteffectiveexchangerateinLunafortheasset**
-> double getthecurrenteffectiveexchangerateinLunafortheasset(denom)
-
-Get the current effective exchange rate in Luna for the asset
-
-Get the current effective exchange rate in Luna for the asset
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String denom = denom_example; // String | The coin denom to get
-
-try {
-    final response = api.getthecurrenteffectiveexchangerateinLunafortheasset(denom);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->getthecurrenteffectiveexchangerateinLunafortheasset: $e\n');
+    print('Exception when calling OracleApi->oracleVotersValidatorFeederPost: $e\n');
 }
 ```
 
@@ -343,11 +408,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **denom** | **String**| The coin denom to get | 
+ **validator** | **String**| Feeder right delegator | 
+ **feederRightDelegationRequestBody** | [**OracleVotersValidatorFeederGetRequest**](OracleVotersValidatorFeederGetRequest.md)|  | [optional] 
 
 ### Return type
 
-**double**
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
 
 ### Authorization
 
@@ -360,96 +426,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator**
-> AggregateExchangeRatePrevote getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator(validator)
-
-Get the currently outstanding aggregate exchange rate oracle prevote of a validator
-
-Get the currently outstanding aggregate exchange rate oracle prevote of a validator
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String validator = validator_example; // String | oracle operator
-
-try {
-    final response = api.getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator(validator);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validator** | **String**| oracle operator | 
-
-### Return type
-
-[**AggregateExchangeRatePrevote**](AggregateExchangeRatePrevote.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator**
-> AggregateExchangeRateVote getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator(validator)
-
-Get the currently outstanding aggregate exchange rate oracle vote of a validator
-
-Get the currently outstanding aggregate exchange rate oracle vote of a validator
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getOracleApi();
-final String validator = validator_example; // String | oracle operator
-
-try {
-    final response = api.getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator(validator);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling OracleApi->getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validator** | **String**| oracle operator | 
-
-### Return type
-
-[**AggregateExchangeRateVote**](AggregateExchangeRateVote.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getthenumberofvoteperiodsmissedinthisoracleslashwindow**
-> double getthenumberofvoteperiodsmissedinthisoracleslashwindow(validator)
-
-Get the number of vote periods missed in this oracle slash window.
+# **oracleVotersValidatorMissGet**
+> num oracleVotersValidatorMissGet(validator)
 
 Get the number of vote periods missed in this oracle slash window.
 
@@ -461,10 +439,10 @@ final api = TerraRestApi().getOracleApi();
 final String validator = validator_example; // String | oracle operator
 
 try {
-    final response = api.getthenumberofvoteperiodsmissedinthisoracleslashwindow(validator);
+    final response = api.oracleVotersValidatorMissGet(validator);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling OracleApi->getthenumberofvoteperiodsmissedinthisoracleslashwindow: $e\n');
+    print('Exception when calling OracleApi->oracleVotersValidatorMissGet: $e\n');
 }
 ```
 
@@ -476,7 +454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**double**
+**num**
 
 ### Authorization
 

@@ -9,11 +9,11 @@ part of 'cosmos_gov_v1beta1_query_params_response.dart';
 class _$CosmosGovV1beta1QueryParamsResponse
     extends CosmosGovV1beta1QueryParamsResponse {
   @override
-  final CosmosGovV1beta1QueryParamsResponseVotingParams? votingParams;
+  final GovParams200ResponseVotingParams? votingParams;
   @override
-  final CosmosGovV1beta1QueryParamsResponseDepositParams? depositParams;
+  final GovParams200ResponseDepositParams? depositParams;
   @override
-  final CosmosGovV1beta1QueryParamsResponseTallyParams? tallyParams;
+  final GovParams200ResponseTallyParams? tallyParams;
 
   factory _$CosmosGovV1beta1QueryParamsResponse(
           [void Function(CosmosGovV1beta1QueryParamsResponseBuilder)?
@@ -65,30 +65,22 @@ class CosmosGovV1beta1QueryParamsResponseBuilder
             CosmosGovV1beta1QueryParamsResponseBuilder> {
   _$CosmosGovV1beta1QueryParamsResponse? _$v;
 
-  CosmosGovV1beta1QueryParamsResponseVotingParamsBuilder? _votingParams;
-  CosmosGovV1beta1QueryParamsResponseVotingParamsBuilder get votingParams =>
-      _$this._votingParams ??=
-          new CosmosGovV1beta1QueryParamsResponseVotingParamsBuilder();
-  set votingParams(
-          CosmosGovV1beta1QueryParamsResponseVotingParamsBuilder?
-              votingParams) =>
+  GovParams200ResponseVotingParamsBuilder? _votingParams;
+  GovParams200ResponseVotingParamsBuilder get votingParams =>
+      _$this._votingParams ??= new GovParams200ResponseVotingParamsBuilder();
+  set votingParams(GovParams200ResponseVotingParamsBuilder? votingParams) =>
       _$this._votingParams = votingParams;
 
-  CosmosGovV1beta1QueryParamsResponseDepositParamsBuilder? _depositParams;
-  CosmosGovV1beta1QueryParamsResponseDepositParamsBuilder get depositParams =>
-      _$this._depositParams ??=
-          new CosmosGovV1beta1QueryParamsResponseDepositParamsBuilder();
-  set depositParams(
-          CosmosGovV1beta1QueryParamsResponseDepositParamsBuilder?
-              depositParams) =>
+  GovParams200ResponseDepositParamsBuilder? _depositParams;
+  GovParams200ResponseDepositParamsBuilder get depositParams =>
+      _$this._depositParams ??= new GovParams200ResponseDepositParamsBuilder();
+  set depositParams(GovParams200ResponseDepositParamsBuilder? depositParams) =>
       _$this._depositParams = depositParams;
 
-  CosmosGovV1beta1QueryParamsResponseTallyParamsBuilder? _tallyParams;
-  CosmosGovV1beta1QueryParamsResponseTallyParamsBuilder get tallyParams =>
-      _$this._tallyParams ??=
-          new CosmosGovV1beta1QueryParamsResponseTallyParamsBuilder();
-  set tallyParams(
-          CosmosGovV1beta1QueryParamsResponseTallyParamsBuilder? tallyParams) =>
+  GovParams200ResponseTallyParamsBuilder? _tallyParams;
+  GovParams200ResponseTallyParamsBuilder get tallyParams =>
+      _$this._tallyParams ??= new GovParams200ResponseTallyParamsBuilder();
+  set tallyParams(GovParams200ResponseTallyParamsBuilder? tallyParams) =>
       _$this._tallyParams = tallyParams;
 
   CosmosGovV1beta1QueryParamsResponseBuilder() {

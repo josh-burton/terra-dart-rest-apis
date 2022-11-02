@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,12 +13,11 @@ part 'execute_grant_req.g.dart';
 ///
 /// Properties:
 /// * [baseReq] 
-/// * [msgs] - 
+/// * [msgs] 
 abstract class ExecuteGrantReq implements Built<ExecuteGrantReq, ExecuteGrantReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq get baseReq;
+    TxsEstimateFeePostRequestBaseReq get baseReq;
 
-    /// 
     @BuiltValueField(wireName: r'msgs')
     BuiltList<String> get msgs;
 
@@ -47,7 +46,7 @@ class _$ExecuteGrantReqSerializer implements StructuredSerializer<ExecuteGrantRe
         result
             ..add(r'base_req')
             ..add(serializers.serialize(object.baseReq,
-                specifiedType: const FullType(BaseReq)));
+                specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         result
             ..add(r'msgs')
             ..add(serializers.serialize(object.msgs,
@@ -69,7 +68,7 @@ class _$ExecuteGrantReqSerializer implements StructuredSerializer<ExecuteGrantRe
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'msgs':

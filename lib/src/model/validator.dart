@@ -2,9 +2,11 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/description.dart';
-import 'package:terra_dart_rest_apis/src/model/public_key.dart';
-import 'package:terra_dart_rest_apis/src/model/commission.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_commission_info.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_description.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_self_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_voting_power.dart';
+import 'package:terra_dart_rest_apis/src/model/validator_rewards_pool.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,55 +15,66 @@ part 'validator.g.dart';
 /// Validator
 ///
 /// Properties:
-/// * [operatorAddress] - bech32 encoded address
-/// * [consensusPubkey] 
-/// * [jailed] 
-/// * [status] 
-/// * [tokens] 
-/// * [delegatorShares] 
+/// * [operatorAddress] - 
+/// * [consensusPubkey] - 
 /// * [description] 
-/// * [bondHeight] 
-/// * [bondIntraTxCounter] 
-/// * [unbondingHeight] 
-/// * [unbondingTime] 
-/// * [commission] 
+/// * [tokens] - 
+/// * [delegatorShares] - 
+/// * [votingPower] 
+/// * [commissionInfo] 
+/// * [upTime] - 
+/// * [status] - 
+/// * [rewardsPool] 
+/// * [stakingReturn] - 
+/// * [accountAddress] - 
+/// * [selfDelegation] 
 abstract class Validator implements Built<Validator, ValidatorBuilder> {
-    /// bech32 encoded address
-    @BuiltValueField(wireName: r'operator_address')
-    String? get operatorAddress;
+    /// 
+    @BuiltValueField(wireName: r'operatorAddress')
+    String get operatorAddress;
 
-    @BuiltValueField(wireName: r'consensus_pubkey')
-    PublicKey? get consensusPubkey;
-
-    @BuiltValueField(wireName: r'jailed')
-    bool? get jailed;
-
-    @BuiltValueField(wireName: r'status')
-    int? get status;
-
-    @BuiltValueField(wireName: r'tokens')
-    String? get tokens;
-
-    @BuiltValueField(wireName: r'delegator_shares')
-    String? get delegatorShares;
+    /// 
+    @BuiltValueField(wireName: r'consensusPubkey')
+    String get consensusPubkey;
 
     @BuiltValueField(wireName: r'description')
-    Description? get description;
+    ValidatorDescription get description;
 
-    @BuiltValueField(wireName: r'bond_height')
-    String? get bondHeight;
+    /// 
+    @BuiltValueField(wireName: r'tokens')
+    String get tokens;
 
-    @BuiltValueField(wireName: r'bond_intra_tx_counter')
-    int? get bondIntraTxCounter;
+    /// 
+    @BuiltValueField(wireName: r'delegatorShares')
+    String get delegatorShares;
 
-    @BuiltValueField(wireName: r'unbonding_height')
-    String? get unbondingHeight;
+    @BuiltValueField(wireName: r'votingPower')
+    ValidatorVotingPower get votingPower;
 
-    @BuiltValueField(wireName: r'unbonding_time')
-    String? get unbondingTime;
+    @BuiltValueField(wireName: r'commissionInfo')
+    ValidatorCommissionInfo get commissionInfo;
 
-    @BuiltValueField(wireName: r'commission')
-    Commission? get commission;
+    /// 
+    @BuiltValueField(wireName: r'upTime')
+    num get upTime;
+
+    /// 
+    @BuiltValueField(wireName: r'status')
+    String get status;
+
+    @BuiltValueField(wireName: r'rewardsPool')
+    ValidatorRewardsPool get rewardsPool;
+
+    /// 
+    @BuiltValueField(wireName: r'stakingReturn')
+    String get stakingReturn;
+
+    /// 
+    @BuiltValueField(wireName: r'accountAddress')
+    String get accountAddress;
+
+    @BuiltValueField(wireName: r'selfDelegation')
+    ValidatorSelfDelegation get selfDelegation;
 
     Validator._();
 
@@ -85,78 +98,58 @@ class _$ValidatorSerializer implements StructuredSerializer<Validator> {
     Iterable<Object?> serialize(Serializers serializers, Validator object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.operatorAddress != null) {
-            result
-                ..add(r'operator_address')
-                ..add(serializers.serialize(object.operatorAddress,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.consensusPubkey != null) {
-            result
-                ..add(r'consensus_pubkey')
-                ..add(serializers.serialize(object.consensusPubkey,
-                    specifiedType: const FullType(PublicKey)));
-        }
-        if (object.jailed != null) {
-            result
-                ..add(r'jailed')
-                ..add(serializers.serialize(object.jailed,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.status != null) {
-            result
-                ..add(r'status')
-                ..add(serializers.serialize(object.status,
-                    specifiedType: const FullType(int)));
-        }
-        if (object.tokens != null) {
-            result
-                ..add(r'tokens')
-                ..add(serializers.serialize(object.tokens,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.delegatorShares != null) {
-            result
-                ..add(r'delegator_shares')
-                ..add(serializers.serialize(object.delegatorShares,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.description != null) {
-            result
-                ..add(r'description')
-                ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(Description)));
-        }
-        if (object.bondHeight != null) {
-            result
-                ..add(r'bond_height')
-                ..add(serializers.serialize(object.bondHeight,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.bondIntraTxCounter != null) {
-            result
-                ..add(r'bond_intra_tx_counter')
-                ..add(serializers.serialize(object.bondIntraTxCounter,
-                    specifiedType: const FullType(int)));
-        }
-        if (object.unbondingHeight != null) {
-            result
-                ..add(r'unbonding_height')
-                ..add(serializers.serialize(object.unbondingHeight,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.unbondingTime != null) {
-            result
-                ..add(r'unbonding_time')
-                ..add(serializers.serialize(object.unbondingTime,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.commission != null) {
-            result
-                ..add(r'commission')
-                ..add(serializers.serialize(object.commission,
-                    specifiedType: const FullType(Commission)));
-        }
+        result
+            ..add(r'operatorAddress')
+            ..add(serializers.serialize(object.operatorAddress,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'consensusPubkey')
+            ..add(serializers.serialize(object.consensusPubkey,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'description')
+            ..add(serializers.serialize(object.description,
+                specifiedType: const FullType(ValidatorDescription)));
+        result
+            ..add(r'tokens')
+            ..add(serializers.serialize(object.tokens,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'delegatorShares')
+            ..add(serializers.serialize(object.delegatorShares,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'votingPower')
+            ..add(serializers.serialize(object.votingPower,
+                specifiedType: const FullType(ValidatorVotingPower)));
+        result
+            ..add(r'commissionInfo')
+            ..add(serializers.serialize(object.commissionInfo,
+                specifiedType: const FullType(ValidatorCommissionInfo)));
+        result
+            ..add(r'upTime')
+            ..add(serializers.serialize(object.upTime,
+                specifiedType: const FullType(num)));
+        result
+            ..add(r'status')
+            ..add(serializers.serialize(object.status,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'rewardsPool')
+            ..add(serializers.serialize(object.rewardsPool,
+                specifiedType: const FullType(ValidatorRewardsPool)));
+        result
+            ..add(r'stakingReturn')
+            ..add(serializers.serialize(object.stakingReturn,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'accountAddress')
+            ..add(serializers.serialize(object.accountAddress,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'selfDelegation')
+            ..add(serializers.serialize(object.selfDelegation,
+                specifiedType: const FullType(ValidatorSelfDelegation)));
         return result;
     }
 
@@ -172,65 +165,70 @@ class _$ValidatorSerializer implements StructuredSerializer<Validator> {
             final Object? value = iterator.current;
             
             switch (key) {
-                case r'operator_address':
+                case r'operatorAddress':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.operatorAddress = valueDes;
                     break;
-                case r'consensus_pubkey':
+                case r'consensusPubkey':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(PublicKey)) as PublicKey;
-                    result.consensusPubkey.replace(valueDes);
+                        specifiedType: const FullType(String)) as String;
+                    result.consensusPubkey = valueDes;
                     break;
-                case r'jailed':
+                case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.jailed = valueDes;
-                    break;
-                case r'status':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.status = valueDes;
+                        specifiedType: const FullType(ValidatorDescription)) as ValidatorDescription;
+                    result.description.replace(valueDes);
                     break;
                 case r'tokens':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.tokens = valueDes;
                     break;
-                case r'delegator_shares':
+                case r'delegatorShares':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.delegatorShares = valueDes;
                     break;
-                case r'description':
+                case r'votingPower':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Description)) as Description;
-                    result.description.replace(valueDes);
+                        specifiedType: const FullType(ValidatorVotingPower)) as ValidatorVotingPower;
+                    result.votingPower.replace(valueDes);
                     break;
-                case r'bond_height':
+                case r'commissionInfo':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(ValidatorCommissionInfo)) as ValidatorCommissionInfo;
+                    result.commissionInfo.replace(valueDes);
+                    break;
+                case r'upTime':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(num)) as num;
+                    result.upTime = valueDes;
+                    break;
+                case r'status':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
-                    result.bondHeight = valueDes;
+                    result.status = valueDes;
                     break;
-                case r'bond_intra_tx_counter':
+                case r'rewardsPool':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.bondIntraTxCounter = valueDes;
+                        specifiedType: const FullType(ValidatorRewardsPool)) as ValidatorRewardsPool;
+                    result.rewardsPool.replace(valueDes);
                     break;
-                case r'unbonding_height':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.unbondingHeight = valueDes;
-                    break;
-                case r'unbonding_time':
+                case r'stakingReturn':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
-                    result.unbondingTime = valueDes;
+                    result.stakingReturn = valueDes;
                     break;
-                case r'commission':
+                case r'accountAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Commission)) as Commission;
-                    result.commission.replace(valueDes);
+                        specifiedType: const FullType(String)) as String;
+                    result.accountAddress = valueDes;
+                    break;
+                case r'selfDelegation':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(ValidatorSelfDelegation)) as ValidatorSelfDelegation;
+                    result.selfDelegation.replace(valueDes);
                     break;
             }
         }

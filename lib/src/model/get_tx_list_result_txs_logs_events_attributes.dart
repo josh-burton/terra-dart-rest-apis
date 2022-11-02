@@ -10,12 +10,14 @@ part 'get_tx_list_result_txs_logs_events_attributes.g.dart';
 /// GetTxListResultTxsLogsEventsAttributes
 ///
 /// Properties:
-/// * [key] 
-/// * [value] 
+/// * [key] - 
+/// * [value] - 
 abstract class GetTxListResultTxsLogsEventsAttributes implements Built<GetTxListResultTxsLogsEventsAttributes, GetTxListResultTxsLogsEventsAttributesBuilder> {
+    /// 
     @BuiltValueField(wireName: r'key')
     String get key;
 
+    /// 
     @BuiltValueField(wireName: r'value')
     String get value;
 

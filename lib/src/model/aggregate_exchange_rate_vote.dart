@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_denoms_exchange_rates_get200_response_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,12 +12,11 @@ part 'aggregate_exchange_rate_vote.g.dart';
 /// AggregateExchangeRateVote
 ///
 /// Properties:
-/// * [exchangeRates] - 
+/// * [exchangeRates] 
 /// * [voter] - bech32 encoded address
 abstract class AggregateExchangeRateVote implements Built<AggregateExchangeRateVote, AggregateExchangeRateVoteBuilder> {
-    /// 
     @BuiltValueField(wireName: r'exchange_rates')
-    BuiltList<Coin>? get exchangeRates;
+    BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>? get exchangeRates;
 
     /// bech32 encoded address
     @BuiltValueField(wireName: r'voter')
@@ -49,7 +48,7 @@ class _$AggregateExchangeRateVoteSerializer implements StructuredSerializer<Aggr
             result
                 ..add(r'exchange_rates')
                 ..add(serializers.serialize(object.exchangeRates,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(OracleDenomsExchangeRatesGet200ResponseInner)])));
         }
         if (object.voter != null) {
             result
@@ -74,7 +73,7 @@ class _$AggregateExchangeRateVoteSerializer implements StructuredSerializer<Aggr
             switch (key) {
                 case r'exchange_rates':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(OracleDenomsExchangeRatesGet200ResponseInner)])) as BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>;
                     result.exchangeRates.replace(valueDes);
                     break;
                 case r'voter':

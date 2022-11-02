@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_attribute.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner_attributes_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,14 +13,13 @@ part 'cosmos_base_abci_v1beta1_string_event.g.dart';
 ///
 /// Properties:
 /// * [type] 
-/// * [attributes] - 
+/// * [attributes] 
 abstract class CosmosBaseAbciV1beta1StringEvent implements Built<CosmosBaseAbciV1beta1StringEvent, CosmosBaseAbciV1beta1StringEventBuilder> {
     @BuiltValueField(wireName: r'type')
     String? get type;
 
-    /// 
     @BuiltValueField(wireName: r'attributes')
-    BuiltList<CosmosBaseAbciV1beta1Attribute>? get attributes;
+    BuiltList<BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>? get attributes;
 
     CosmosBaseAbciV1beta1StringEvent._();
 
@@ -54,7 +53,7 @@ class _$CosmosBaseAbciV1beta1StringEventSerializer implements StructuredSerializ
             result
                 ..add(r'attributes')
                 ..add(serializers.serialize(object.attributes,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1Attribute)])));
+                    specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner)])));
         }
         return result;
     }
@@ -78,7 +77,7 @@ class _$CosmosBaseAbciV1beta1StringEventSerializer implements StructuredSerializ
                     break;
                 case r'attributes':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseAbciV1beta1Attribute)])) as BuiltList<CosmosBaseAbciV1beta1Attribute>;
+                        specifiedType: const FullType(BuiltList, [FullType(BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner)])) as BuiltList<BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner>;
                     result.attributes.replace(valueDes);
                     break;
             }

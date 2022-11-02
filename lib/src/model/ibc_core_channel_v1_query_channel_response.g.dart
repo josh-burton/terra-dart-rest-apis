@@ -9,12 +9,11 @@ part of 'ibc_core_channel_v1_query_channel_response.dart';
 class _$IbcCoreChannelV1QueryChannelResponse
     extends IbcCoreChannelV1QueryChannelResponse {
   @override
-  final IbcCoreChannelV1QueryChannelResponseChannel? channel;
+  final ChannelAssociatedWithTheRequestIdentifiers? channel;
   @override
   final String? proof;
   @override
-  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
-      proofHeight;
+  final HeightAtWhichTheProofWasRetrieved? proofHeight;
 
   factory _$IbcCoreChannelV1QueryChannelResponse(
           [void Function(IbcCoreChannelV1QueryChannelResponseBuilder)?
@@ -66,25 +65,21 @@ class IbcCoreChannelV1QueryChannelResponseBuilder
             IbcCoreChannelV1QueryChannelResponseBuilder> {
   _$IbcCoreChannelV1QueryChannelResponse? _$v;
 
-  IbcCoreChannelV1QueryChannelResponseChannelBuilder? _channel;
-  IbcCoreChannelV1QueryChannelResponseChannelBuilder get channel =>
+  ChannelAssociatedWithTheRequestIdentifiersBuilder? _channel;
+  ChannelAssociatedWithTheRequestIdentifiersBuilder get channel =>
       _$this._channel ??=
-          new IbcCoreChannelV1QueryChannelResponseChannelBuilder();
-  set channel(IbcCoreChannelV1QueryChannelResponseChannelBuilder? channel) =>
+          new ChannelAssociatedWithTheRequestIdentifiersBuilder();
+  set channel(ChannelAssociatedWithTheRequestIdentifiersBuilder? channel) =>
       _$this._channel = channel;
 
   String? _proof;
   String? get proof => _$this._proof;
   set proof(String? proof) => _$this._proof = proof;
 
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-      _proofHeight;
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
-      get proofHeight => _$this._proofHeight ??=
-          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
-  set proofHeight(
-          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-              proofHeight) =>
+  HeightAtWhichTheProofWasRetrievedBuilder? _proofHeight;
+  HeightAtWhichTheProofWasRetrievedBuilder get proofHeight =>
+      _$this._proofHeight ??= new HeightAtWhichTheProofWasRetrievedBuilder();
+  set proofHeight(HeightAtWhichTheProofWasRetrievedBuilder? proofHeight) =>
       _$this._proofHeight = proofHeight;
 
   IbcCoreChannelV1QueryChannelResponseBuilder() {

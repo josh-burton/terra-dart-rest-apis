@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination
+# terra_dart_rest_apis.model.QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethodPagination
 
 ## Load the model package
 ```dart

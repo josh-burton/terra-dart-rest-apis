@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block.dart';
-import 'package:terra_dart_rest_apis/src/model/block_id26.dart';
+import 'package:terra_dart_rest_apis/src/model/block_id1.dart';
+import 'package:terra_dart_rest_apis/src/model/get_latest_block200_response_block.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_base_tendermint_v1beta1_get_latest_block_response.g.dart';
 /// * [block] 
 abstract class CosmosBaseTendermintV1beta1GetLatestBlockResponse implements Built<CosmosBaseTendermintV1beta1GetLatestBlockResponse, CosmosBaseTendermintV1beta1GetLatestBlockResponseBuilder> {
     @BuiltValueField(wireName: r'block_id')
-    BlockID26? get blockId;
+    BlockID1? get blockId;
 
     @BuiltValueField(wireName: r'block')
-    TendermintTypesBlock? get block;
+    GetLatestBlock200ResponseBlock? get block;
 
     CosmosBaseTendermintV1beta1GetLatestBlockResponse._();
 
@@ -47,13 +47,13 @@ class _$CosmosBaseTendermintV1beta1GetLatestBlockResponseSerializer implements S
             result
                 ..add(r'block_id')
                 ..add(serializers.serialize(object.blockId,
-                    specifiedType: const FullType(BlockID26)));
+                    specifiedType: const FullType(BlockID1)));
         }
         if (object.block != null) {
             result
                 ..add(r'block')
                 ..add(serializers.serialize(object.block,
-                    specifiedType: const FullType(TendermintTypesBlock)));
+                    specifiedType: const FullType(GetLatestBlock200ResponseBlock)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosBaseTendermintV1beta1GetLatestBlockResponseSerializer implements S
             switch (key) {
                 case r'block_id':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BlockID26)) as BlockID26;
+                        specifiedType: const FullType(BlockID1)) as BlockID1;
                     result.blockId.replace(valueDes);
                     break;
                 case r'block':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlock)) as TendermintTypesBlock;
+                        specifiedType: const FullType(GetLatestBlock200ResponseBlock)) as GetLatestBlock200ResponseBlock;
                     result.block.replace(valueDes);
                     break;
             }

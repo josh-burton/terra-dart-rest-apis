@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/staking_delegator_validators200_response_validators_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/historical_info200_response_hist_header.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,14 +14,13 @@ part 'cosmos_staking_v1beta1_historical_info.g.dart';
 ///
 /// Properties:
 /// * [header] 
-/// * [valset] - 
+/// * [valset] 
 abstract class CosmosStakingV1beta1HistoricalInfo implements Built<CosmosStakingV1beta1HistoricalInfo, CosmosStakingV1beta1HistoricalInfoBuilder> {
     @BuiltValueField(wireName: r'header')
-    TendermintTypesBlockHeader? get header;
+    HistoricalInfo200ResponseHistHeader? get header;
 
-    /// 
     @BuiltValueField(wireName: r'valset')
-    BuiltList<CosmosStakingV1beta1Validator>? get valset;
+    BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>? get valset;
 
     CosmosStakingV1beta1HistoricalInfo._();
 
@@ -49,13 +48,13 @@ class _$CosmosStakingV1beta1HistoricalInfoSerializer implements StructuredSerial
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(TendermintTypesBlockHeader)));
+                    specifiedType: const FullType(HistoricalInfo200ResponseHistHeader)));
         }
         if (object.valset != null) {
             result
                 ..add(r'valset')
                 ..add(serializers.serialize(object.valset,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1Validator)])));
+                    specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorValidators200ResponseValidatorsInner)])));
         }
         return result;
     }
@@ -74,12 +73,12 @@ class _$CosmosStakingV1beta1HistoricalInfoSerializer implements StructuredSerial
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesBlockHeader)) as TendermintTypesBlockHeader;
+                        specifiedType: const FullType(HistoricalInfo200ResponseHistHeader)) as HistoricalInfo200ResponseHistHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'valset':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosStakingV1beta1Validator)])) as BuiltList<CosmosStakingV1beta1Validator>;
+                        specifiedType: const FullType(BuiltList, [FullType(StakingDelegatorValidators200ResponseValidatorsInner)])) as BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>;
                     result.valset.replace(valueDes);
                     break;
             }

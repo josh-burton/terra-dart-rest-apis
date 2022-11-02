@@ -8,15 +8,16 @@ part of 'cosmos_tx_v1beta1_tx_body.dart';
 
 class _$CosmosTxV1beta1TxBody extends CosmosTxV1beta1TxBody {
   @override
-  final BuiltList<GoogleProtobufAny>? messages;
+  final BuiltList<AccountsAreTheExistingAccountsInner>? messages;
   @override
   final String? memo;
   @override
   final String? timeoutHeight;
   @override
-  final BuiltList<GoogleProtobufAny>? extensionOptions;
+  final BuiltList<AccountsAreTheExistingAccountsInner>? extensionOptions;
   @override
-  final BuiltList<GoogleProtobufAny>? nonCriticalExtensionOptions;
+  final BuiltList<AccountsAreTheExistingAccountsInner>?
+      nonCriticalExtensionOptions;
 
   factory _$CosmosTxV1beta1TxBody(
           [void Function(CosmosTxV1beta1TxBodyBuilder)? updates]) =>
@@ -76,10 +77,11 @@ class CosmosTxV1beta1TxBodyBuilder
     implements Builder<CosmosTxV1beta1TxBody, CosmosTxV1beta1TxBodyBuilder> {
   _$CosmosTxV1beta1TxBody? _$v;
 
-  ListBuilder<GoogleProtobufAny>? _messages;
-  ListBuilder<GoogleProtobufAny> get messages =>
-      _$this._messages ??= new ListBuilder<GoogleProtobufAny>();
-  set messages(ListBuilder<GoogleProtobufAny>? messages) =>
+  ListBuilder<AccountsAreTheExistingAccountsInner>? _messages;
+  ListBuilder<AccountsAreTheExistingAccountsInner> get messages =>
+      _$this._messages ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
+  set messages(ListBuilder<AccountsAreTheExistingAccountsInner>? messages) =>
       _$this._messages = messages;
 
   String? _memo;
@@ -91,18 +93,22 @@ class CosmosTxV1beta1TxBodyBuilder
   set timeoutHeight(String? timeoutHeight) =>
       _$this._timeoutHeight = timeoutHeight;
 
-  ListBuilder<GoogleProtobufAny>? _extensionOptions;
-  ListBuilder<GoogleProtobufAny> get extensionOptions =>
-      _$this._extensionOptions ??= new ListBuilder<GoogleProtobufAny>();
-  set extensionOptions(ListBuilder<GoogleProtobufAny>? extensionOptions) =>
+  ListBuilder<AccountsAreTheExistingAccountsInner>? _extensionOptions;
+  ListBuilder<AccountsAreTheExistingAccountsInner> get extensionOptions =>
+      _$this._extensionOptions ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
+  set extensionOptions(
+          ListBuilder<AccountsAreTheExistingAccountsInner>? extensionOptions) =>
       _$this._extensionOptions = extensionOptions;
 
-  ListBuilder<GoogleProtobufAny>? _nonCriticalExtensionOptions;
-  ListBuilder<GoogleProtobufAny> get nonCriticalExtensionOptions =>
-      _$this._nonCriticalExtensionOptions ??=
-          new ListBuilder<GoogleProtobufAny>();
+  ListBuilder<AccountsAreTheExistingAccountsInner>?
+      _nonCriticalExtensionOptions;
+  ListBuilder<AccountsAreTheExistingAccountsInner>
+      get nonCriticalExtensionOptions => _$this._nonCriticalExtensionOptions ??=
+          new ListBuilder<AccountsAreTheExistingAccountsInner>();
   set nonCriticalExtensionOptions(
-          ListBuilder<GoogleProtobufAny>? nonCriticalExtensionOptions) =>
+          ListBuilder<AccountsAreTheExistingAccountsInner>?
+              nonCriticalExtensionOptions) =>
       _$this._nonCriticalExtensionOptions = nonCriticalExtensionOptions;
 
   CosmosTxV1beta1TxBodyBuilder() {

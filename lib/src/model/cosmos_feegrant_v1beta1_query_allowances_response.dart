@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/grantisstoredinthe_kv_storetorecordagrantwithfullcontext.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/grants200_response_pagination.dart';
+import 'package:terra_dart_rest_apis/src/model/grant_is_stored_in_the_kv_store_to_record_a_grant_with_full_context1.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'cosmos_feegrant_v1beta1_query_allowances_response.g.dart';
 abstract class CosmosFeegrantV1beta1QueryAllowancesResponse implements Built<CosmosFeegrantV1beta1QueryAllowancesResponse, CosmosFeegrantV1beta1QueryAllowancesResponseBuilder> {
     /// allowances are allowance's granted for grantee by granter.
     @BuiltValueField(wireName: r'allowances')
-    BuiltList<GrantisstoredintheKVStoretorecordagrantwithfullcontext>? get allowances;
+    BuiltList<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>? get allowances;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosAuthzV1beta1QueryGrantsResponsePagination? get pagination;
+    Grants200ResponsePagination? get pagination;
 
     CosmosFeegrantV1beta1QueryAllowancesResponse._();
 
@@ -49,13 +49,13 @@ class _$CosmosFeegrantV1beta1QueryAllowancesResponseSerializer implements Struct
             result
                 ..add(r'allowances')
                 ..add(serializers.serialize(object.allowances,
-                    specifiedType: const FullType(BuiltList, [FullType(GrantisstoredintheKVStoretorecordagrantwithfullcontext)])));
+                    specifiedType: const FullType(BuiltList, [FullType(GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1)])));
         }
         if (object.pagination != null) {
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)));
+                    specifiedType: const FullType(Grants200ResponsePagination)));
         }
         return result;
     }
@@ -74,12 +74,12 @@ class _$CosmosFeegrantV1beta1QueryAllowancesResponseSerializer implements Struct
             switch (key) {
                 case r'allowances':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GrantisstoredintheKVStoretorecordagrantwithfullcontext)])) as BuiltList<GrantisstoredintheKVStoretorecordagrantwithfullcontext>;
+                        specifiedType: const FullType(BuiltList, [FullType(GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1)])) as BuiltList<GrantIsStoredInTheKVStoreToRecordAGrantWithFullContext1>;
                     result.allowances.replace(valueDes);
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)) as CosmosAuthzV1beta1QueryGrantsResponsePagination;
+                        specifiedType: const FullType(Grants200ResponsePagination)) as Grants200ResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

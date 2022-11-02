@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/auth_accounts_address_get200_response_lazy_graded_vesting_account_value_vesting_schedules_inner_lazy_schedules_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/schedule.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,14 +13,13 @@ part 'vesting_schedule.g.dart';
 ///
 /// Properties:
 /// * [denom] 
-/// * [lazySchedules] - 
+/// * [lazySchedules] 
 abstract class VestingSchedule implements Built<VestingSchedule, VestingScheduleBuilder> {
     @BuiltValueField(wireName: r'denom')
     String? get denom;
 
-    /// 
     @BuiltValueField(wireName: r'lazy_schedules')
-    BuiltList<Schedule>? get lazySchedules;
+    BuiltList<AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>? get lazySchedules;
 
     VestingSchedule._();
 
@@ -54,7 +53,7 @@ class _$VestingScheduleSerializer implements StructuredSerializer<VestingSchedul
             result
                 ..add(r'lazy_schedules')
                 ..add(serializers.serialize(object.lazySchedules,
-                    specifiedType: const FullType(BuiltList, [FullType(Schedule)])));
+                    specifiedType: const FullType(BuiltList, [FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner)])));
         }
         return result;
     }
@@ -78,7 +77,7 @@ class _$VestingScheduleSerializer implements StructuredSerializer<VestingSchedul
                     break;
                 case r'lazy_schedules':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Schedule)])) as BuiltList<Schedule>;
+                        specifiedType: const FullType(BuiltList, [FullType(AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner)])) as BuiltList<AuthAccountsAddressGet200ResponseLazyGradedVestingAccountValueVestingSchedulesInnerLazySchedulesInner>;
                     result.lazySchedules.replace(valueDes);
                     break;
             }

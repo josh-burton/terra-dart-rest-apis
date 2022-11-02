@@ -8,7 +8,7 @@ part of 'aggregate_exchange_rate_vote.dart';
 
 class _$AggregateExchangeRateVote extends AggregateExchangeRateVote {
   @override
-  final BuiltList<Coin>? exchangeRates;
+  final BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>? exchangeRates;
   @override
   final String? voter;
 
@@ -54,10 +54,13 @@ class AggregateExchangeRateVoteBuilder
         Builder<AggregateExchangeRateVote, AggregateExchangeRateVoteBuilder> {
   _$AggregateExchangeRateVote? _$v;
 
-  ListBuilder<Coin>? _exchangeRates;
-  ListBuilder<Coin> get exchangeRates =>
-      _$this._exchangeRates ??= new ListBuilder<Coin>();
-  set exchangeRates(ListBuilder<Coin>? exchangeRates) =>
+  ListBuilder<OracleDenomsExchangeRatesGet200ResponseInner>? _exchangeRates;
+  ListBuilder<OracleDenomsExchangeRatesGet200ResponseInner> get exchangeRates =>
+      _$this._exchangeRates ??=
+          new ListBuilder<OracleDenomsExchangeRatesGet200ResponseInner>();
+  set exchangeRates(
+          ListBuilder<OracleDenomsExchangeRatesGet200ResponseInner>?
+              exchangeRates) =>
       _$this._exchangeRates = exchangeRates;
 
   String? _voter;

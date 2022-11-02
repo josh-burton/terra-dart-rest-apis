@@ -3,8 +3,8 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'grant_req.g.dart';
 /// * [limit] - required when grant MsgType == send
 abstract class GrantReq implements Built<GrantReq, GrantReqBuilder> {
     @BuiltValueField(wireName: r'base_req')
-    BaseReq get baseReq;
+    TxsEstimateFeePostRequestBaseReq get baseReq;
 
     /// nano second of time duration
     @BuiltValueField(wireName: r'period')
@@ -26,7 +26,7 @@ abstract class GrantReq implements Built<GrantReq, GrantReqBuilder> {
 
     /// required when grant MsgType == send
     @BuiltValueField(wireName: r'limit')
-    BuiltList<Coin>? get limit;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get limit;
 
     GrantReq._();
 
@@ -53,7 +53,7 @@ class _$GrantReqSerializer implements StructuredSerializer<GrantReq> {
         result
             ..add(r'base_req')
             ..add(serializers.serialize(object.baseReq,
-                specifiedType: const FullType(BaseReq)));
+                specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)));
         result
             ..add(r'period')
             ..add(serializers.serialize(object.period,
@@ -62,7 +62,7 @@ class _$GrantReqSerializer implements StructuredSerializer<GrantReq> {
             result
                 ..add(r'limit')
                 ..add(serializers.serialize(object.limit,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         return result;
     }
@@ -81,7 +81,7 @@ class _$GrantReqSerializer implements StructuredSerializer<GrantReq> {
             switch (key) {
                 case r'base_req':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BaseReq)) as BaseReq;
+                        specifiedType: const FullType(TxsEstimateFeePostRequestBaseReq)) as TxsEstimateFeePostRequestBaseReq;
                     result.baseReq.replace(valueDes);
                     break;
                 case r'period':
@@ -91,7 +91,7 @@ class _$GrantReqSerializer implements StructuredSerializer<GrantReq> {
                     break;
                 case r'limit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.limit.replace(valueDes);
                     break;
             }

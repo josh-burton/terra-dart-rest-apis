@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/code_infoisdatafortheuploadedcontract_was_mcode.dart';
+import 'package:terra_dart_rest_apis/src/model/code_info_is_data_for_the_uploaded_contract_wasm_code.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_wasm_v1beta1_query_code_info_response.g.dart';
 /// * [codeInfo] 
 abstract class TerraWasmV1beta1QueryCodeInfoResponse implements Built<TerraWasmV1beta1QueryCodeInfoResponse, TerraWasmV1beta1QueryCodeInfoResponseBuilder> {
     @BuiltValueField(wireName: r'code_info')
-    CodeInfoisdatafortheuploadedcontractWASMcode? get codeInfo;
+    CodeInfoIsDataForTheUploadedContractWASMCode? get codeInfo;
 
     TerraWasmV1beta1QueryCodeInfoResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraWasmV1beta1QueryCodeInfoResponseSerializer implements StructuredSer
             result
                 ..add(r'code_info')
                 ..add(serializers.serialize(object.codeInfo,
-                    specifiedType: const FullType(CodeInfoisdatafortheuploadedcontractWASMcode)));
+                    specifiedType: const FullType(CodeInfoIsDataForTheUploadedContractWASMCode)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraWasmV1beta1QueryCodeInfoResponseSerializer implements StructuredSer
             switch (key) {
                 case r'code_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CodeInfoisdatafortheuploadedcontractWASMcode)) as CodeInfoisdatafortheuploadedcontractWASMcode;
+                        specifiedType: const FullType(CodeInfoIsDataForTheUploadedContractWASMCode)) as CodeInfoIsDataForTheUploadedContractWASMCode;
                     result.codeInfo.replace(valueDes);
                     break;
             }

@@ -8,7 +8,7 @@ part of 'supply.dart';
 
 class _$Supply extends Supply {
   @override
-  final BuiltList<Coin>? total;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? total;
 
   factory _$Supply([void Function(SupplyBuilder)? updates]) =>
       (new SupplyBuilder()..update(updates))._build();
@@ -43,9 +43,12 @@ class _$Supply extends Supply {
 class SupplyBuilder implements Builder<Supply, SupplyBuilder> {
   _$Supply? _$v;
 
-  ListBuilder<Coin>? _total;
-  ListBuilder<Coin> get total => _$this._total ??= new ListBuilder<Coin>();
-  set total(ListBuilder<Coin>? total) => _$this._total = total;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _total;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get total =>
+      _$this._total ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set total(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? total) =>
+      _$this._total = total;
 
   SupplyBuilder() {
     Supply._defaults(this);

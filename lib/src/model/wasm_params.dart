@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/event_params.dart';
+import 'package:terra_dart_rest_apis/src/model/wasm_parameters_get200_response_event_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -34,7 +34,7 @@ abstract class WasmParams implements Built<WasmParams, WasmParamsBuilder> {
     num? get maxContractDataSize;
 
     @BuiltValueField(wireName: r'event_params')
-    EventParams? get eventParams;
+    WasmParametersGet200ResponseEventParams? get eventParams;
 
     WasmParams._();
 
@@ -86,7 +86,7 @@ class _$WasmParamsSerializer implements StructuredSerializer<WasmParams> {
             result
                 ..add(r'event_params')
                 ..add(serializers.serialize(object.eventParams,
-                    specifiedType: const FullType(EventParams)));
+                    specifiedType: const FullType(WasmParametersGet200ResponseEventParams)));
         }
         return result;
     }
@@ -125,7 +125,7 @@ class _$WasmParamsSerializer implements StructuredSerializer<WasmParams> {
                     break;
                 case r'event_params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(EventParams)) as EventParams;
+                        specifiedType: const FullType(WasmParametersGet200ResponseEventParams)) as WasmParametersGet200ResponseEventParams;
                     result.eventParams.replace(valueDes);
                     break;
             }

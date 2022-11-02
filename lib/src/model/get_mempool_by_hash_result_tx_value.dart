@@ -15,13 +15,14 @@ part 'get_mempool_by_hash_result_tx_value.g.dart';
 ///
 /// Properties:
 /// * [fee] 
-/// * [memo] 
+/// * [memo] - 
 /// * [msg] - 
 /// * [signatures] - 
 abstract class GetMempoolByHashResultTxValue implements Built<GetMempoolByHashResultTxValue, GetMempoolByHashResultTxValueBuilder> {
     @BuiltValueField(wireName: r'fee')
     GetMempoolByHashResultTxValueFee get fee;
 
+    /// 
     @BuiltValueField(wireName: r'memo')
     String get memo;
 

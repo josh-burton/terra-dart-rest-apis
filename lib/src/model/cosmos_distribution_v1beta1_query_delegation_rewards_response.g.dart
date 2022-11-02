@@ -9,7 +9,7 @@ part of 'cosmos_distribution_v1beta1_query_delegation_rewards_response.dart';
 class _$CosmosDistributionV1beta1QueryDelegationRewardsResponse
     extends CosmosDistributionV1beta1QueryDelegationRewardsResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1DecCoin>? rewards;
+  final BuiltList<CommunityPool200ResponsePoolInner>? rewards;
 
   factory _$CosmosDistributionV1beta1QueryDelegationRewardsResponse(
           [void Function(
@@ -61,10 +61,10 @@ class CosmosDistributionV1beta1QueryDelegationRewardsResponseBuilder
             CosmosDistributionV1beta1QueryDelegationRewardsResponseBuilder> {
   _$CosmosDistributionV1beta1QueryDelegationRewardsResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1DecCoin>? _rewards;
-  ListBuilder<CosmosBaseV1beta1DecCoin> get rewards =>
-      _$this._rewards ??= new ListBuilder<CosmosBaseV1beta1DecCoin>();
-  set rewards(ListBuilder<CosmosBaseV1beta1DecCoin>? rewards) =>
+  ListBuilder<CommunityPool200ResponsePoolInner>? _rewards;
+  ListBuilder<CommunityPool200ResponsePoolInner> get rewards =>
+      _$this._rewards ??= new ListBuilder<CommunityPool200ResponsePoolInner>();
+  set rewards(ListBuilder<CommunityPool200ResponsePoolInner>? rewards) =>
       _$this._rewards = rewards;
 
   CosmosDistributionV1beta1QueryDelegationRewardsResponseBuilder() {

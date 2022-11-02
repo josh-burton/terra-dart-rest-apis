@@ -8,9 +8,9 @@ part of 'cosmos_tx_v1beta1_signer_info.dart';
 
 class _$CosmosTxV1beta1SignerInfo extends CosmosTxV1beta1SignerInfo {
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? publicKey;
+  final AccountsAreTheExistingAccountsInner? publicKey;
   @override
-  final CosmosTxV1beta1SignerInfoModeInfo? modeInfo;
+  final CosmosTxV1beta1ModeInfo? modeInfo;
   @override
   final String? sequence;
 
@@ -60,18 +60,16 @@ class CosmosTxV1beta1SignerInfoBuilder
         Builder<CosmosTxV1beta1SignerInfo, CosmosTxV1beta1SignerInfoBuilder> {
   _$CosmosTxV1beta1SignerInfo? _$v;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _publicKey;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get publicKey =>
-      _$this._publicKey ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
-  set publicKey(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder? publicKey) =>
+  AccountsAreTheExistingAccountsInnerBuilder? _publicKey;
+  AccountsAreTheExistingAccountsInnerBuilder get publicKey =>
+      _$this._publicKey ??= new AccountsAreTheExistingAccountsInnerBuilder();
+  set publicKey(AccountsAreTheExistingAccountsInnerBuilder? publicKey) =>
       _$this._publicKey = publicKey;
 
-  CosmosTxV1beta1SignerInfoModeInfoBuilder? _modeInfo;
-  CosmosTxV1beta1SignerInfoModeInfoBuilder get modeInfo =>
-      _$this._modeInfo ??= new CosmosTxV1beta1SignerInfoModeInfoBuilder();
-  set modeInfo(CosmosTxV1beta1SignerInfoModeInfoBuilder? modeInfo) =>
+  CosmosTxV1beta1ModeInfoBuilder? _modeInfo;
+  CosmosTxV1beta1ModeInfoBuilder get modeInfo =>
+      _$this._modeInfo ??= new CosmosTxV1beta1ModeInfoBuilder();
+  set modeInfo(CosmosTxV1beta1ModeInfoBuilder? modeInfo) =>
       _$this._modeInfo = modeInfo;
 
   String? _sequence;

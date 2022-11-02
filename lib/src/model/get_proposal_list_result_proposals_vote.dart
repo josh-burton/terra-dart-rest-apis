@@ -12,13 +12,14 @@ part 'get_proposal_list_result_proposals_vote.g.dart';
 /// GetProposalListResultProposalsVote
 ///
 /// Properties:
-/// * [id] 
+/// * [id] - 
 /// * [distribution] 
 /// * [count] 
 /// * [total] - Total voted luna
-/// * [votingEndTime] 
+/// * [votingEndTime] - 
 /// * [stakedLuna] - Total staked luna
 abstract class GetProposalListResultProposalsVote implements Built<GetProposalListResultProposalsVote, GetProposalListResultProposalsVoteBuilder> {
+    /// 
     @BuiltValueField(wireName: r'id')
     String get id;
 
@@ -32,6 +33,7 @@ abstract class GetProposalListResultProposalsVote implements Built<GetProposalLi
     @BuiltValueField(wireName: r'total')
     String get total;
 
+    /// 
     @BuiltValueField(wireName: r'votingEndTime')
     String get votingEndTime;
 

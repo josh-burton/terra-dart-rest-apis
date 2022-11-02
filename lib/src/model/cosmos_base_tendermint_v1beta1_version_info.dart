@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/moduleisthetypefor_version_info.dart';
+import 'package:terra_dart_rest_apis/src/model/module_is_the_type_for_version_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'cosmos_base_tendermint_v1beta1_version_info.g.dart';
 /// * [gitCommit] 
 /// * [buildTags] 
 /// * [goVersion] 
-/// * [buildDeps] - 
+/// * [buildDeps] 
 /// * [cosmosSdkVersion] 
 abstract class CosmosBaseTendermintV1beta1VersionInfo implements Built<CosmosBaseTendermintV1beta1VersionInfo, CosmosBaseTendermintV1beta1VersionInfoBuilder> {
     @BuiltValueField(wireName: r'name')
@@ -39,9 +39,8 @@ abstract class CosmosBaseTendermintV1beta1VersionInfo implements Built<CosmosBas
     @BuiltValueField(wireName: r'go_version')
     String? get goVersion;
 
-    /// 
     @BuiltValueField(wireName: r'build_deps')
-    BuiltList<ModuleisthetypeforVersionInfo>? get buildDeps;
+    BuiltList<ModuleIsTheTypeForVersionInfo>? get buildDeps;
 
     @BuiltValueField(wireName: r'cosmos_sdk_version')
     String? get cosmosSdkVersion;
@@ -108,7 +107,7 @@ class _$CosmosBaseTendermintV1beta1VersionInfoSerializer implements StructuredSe
             result
                 ..add(r'build_deps')
                 ..add(serializers.serialize(object.buildDeps,
-                    specifiedType: const FullType(BuiltList, [FullType(ModuleisthetypeforVersionInfo)])));
+                    specifiedType: const FullType(BuiltList, [FullType(ModuleIsTheTypeForVersionInfo)])));
         }
         if (object.cosmosSdkVersion != null) {
             result
@@ -163,7 +162,7 @@ class _$CosmosBaseTendermintV1beta1VersionInfoSerializer implements StructuredSe
                     break;
                 case r'build_deps':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(ModuleisthetypeforVersionInfo)])) as BuiltList<ModuleisthetypeforVersionInfo>;
+                        specifiedType: const FullType(BuiltList, [FullType(ModuleIsTheTypeForVersionInfo)])) as BuiltList<ModuleIsTheTypeForVersionInfo>;
                     result.buildDeps.replace(valueDes);
                     break;
                 case r'cosmos_sdk_version':

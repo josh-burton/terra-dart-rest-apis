@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:terra_dart_rest_apis/src/model/mintingmoduleparameters_response.dart';
+import 'package:built_value/json_object.dart';
 
 class MintApi {
 
@@ -18,7 +18,7 @@ class MintApi {
   const MintApi(this._dio, this._serializers);
 
   /// Current minting annual provisions value
-  /// Current minting annual provisions value
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -31,7 +31,7 @@ class MintApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> currentmintingannualprovisionsvalue({ 
+  Future<Response<String>> mintingAnnualProvisionsGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -87,7 +87,7 @@ class MintApi {
   }
 
   /// Current minting inflation value
-  /// Current minting inflation value
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -100,7 +100,7 @@ class MintApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> currentmintinginflationvalue({ 
+  Future<Response<String>> mintingInflationGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -156,7 +156,7 @@ class MintApi {
   }
 
   /// Minting module parameters
-  /// Minting module parameters
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -166,10 +166,10 @@ class MintApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [MintingmoduleparametersResponse] as data
+  /// Returns a [Future] containing a [Response] with a [JsonObject] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<MintingmoduleparametersResponse>> mintingmoduleparameters({ 
+  Future<Response<JsonObject>> mintingParametersGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -198,14 +198,14 @@ class MintApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    MintingmoduleparametersResponse _responseData;
+    JsonObject _responseData;
 
     try {
-      const _responseType = FullType(MintingmoduleparametersResponse);
+      const _responseType = FullType(JsonObject);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as MintingmoduleparametersResponse;
+      ) as JsonObject;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -216,7 +216,7 @@ class MintApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<MintingmoduleparametersResponse>(
+    return Response<JsonObject>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

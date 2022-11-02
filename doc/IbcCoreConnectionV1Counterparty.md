@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientId** | **String** | identifies the client on the counterparty chain associated with a given connection. | [optional] 
 **connectionId** | **String** | identifies the connection end on the counterparty chain associated with a given connection. | [optional] 
-**prefix** | [**IbcCoreConnectionV1CounterpartyPrefix**](IbcCoreConnectionV1CounterpartyPrefix.md) |  | [optional] 
+**prefix** | [**MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey**](MerklePrefixIsMerklePathPrefixedToTheKeyTheConstructedKeyFromThePathAndTheKeyWillBeAppendPathKeyPathAppendPathKeyPrefixKey.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

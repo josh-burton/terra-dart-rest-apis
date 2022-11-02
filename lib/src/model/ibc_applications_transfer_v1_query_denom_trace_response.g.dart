@@ -9,7 +9,7 @@ part of 'ibc_applications_transfer_v1_query_denom_trace_response.dart';
 class _$IbcApplicationsTransferV1QueryDenomTraceResponse
     extends IbcApplicationsTransferV1QueryDenomTraceResponse {
   @override
-  final IbcApplicationsTransferV1QueryDenomTraceResponseDenomTrace? denomTrace;
+  final DenomTraces200ResponseDenomTracesInner? denomTrace;
 
   factory _$IbcApplicationsTransferV1QueryDenomTraceResponse(
           [void Function(
@@ -60,14 +60,11 @@ class IbcApplicationsTransferV1QueryDenomTraceResponseBuilder
             IbcApplicationsTransferV1QueryDenomTraceResponseBuilder> {
   _$IbcApplicationsTransferV1QueryDenomTraceResponse? _$v;
 
-  IbcApplicationsTransferV1QueryDenomTraceResponseDenomTraceBuilder?
-      _denomTrace;
-  IbcApplicationsTransferV1QueryDenomTraceResponseDenomTraceBuilder
-      get denomTrace => _$this._denomTrace ??=
-          new IbcApplicationsTransferV1QueryDenomTraceResponseDenomTraceBuilder();
-  set denomTrace(
-          IbcApplicationsTransferV1QueryDenomTraceResponseDenomTraceBuilder?
-              denomTrace) =>
+  DenomTraces200ResponseDenomTracesInnerBuilder? _denomTrace;
+  DenomTraces200ResponseDenomTracesInnerBuilder get denomTrace =>
+      _$this._denomTrace ??=
+          new DenomTraces200ResponseDenomTracesInnerBuilder();
+  set denomTrace(DenomTraces200ResponseDenomTracesInnerBuilder? denomTrace) =>
       _$this._denomTrace = denomTrace;
 
   IbcApplicationsTransferV1QueryDenomTraceResponseBuilder() {

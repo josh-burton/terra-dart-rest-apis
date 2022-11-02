@@ -9,9 +9,9 @@ part of 'cosmos_distribution_v1beta1_query_validator_slashes_response.dart';
 class _$CosmosDistributionV1beta1QueryValidatorSlashesResponse
     extends CosmosDistributionV1beta1QueryValidatorSlashesResponse {
   @override
-  final BuiltList<CosmosDistributionV1beta1ValidatorSlashEvent>? slashes;
+  final BuiltList<ValidatorSlashes200ResponseSlashesInner>? slashes;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosDistributionV1beta1QueryValidatorSlashesResponse(
           [void Function(
@@ -66,21 +66,17 @@ class CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder
             CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder> {
   _$CosmosDistributionV1beta1QueryValidatorSlashesResponse? _$v;
 
-  ListBuilder<CosmosDistributionV1beta1ValidatorSlashEvent>? _slashes;
-  ListBuilder<CosmosDistributionV1beta1ValidatorSlashEvent> get slashes =>
+  ListBuilder<ValidatorSlashes200ResponseSlashesInner>? _slashes;
+  ListBuilder<ValidatorSlashes200ResponseSlashesInner> get slashes =>
       _$this._slashes ??=
-          new ListBuilder<CosmosDistributionV1beta1ValidatorSlashEvent>();
-  set slashes(
-          ListBuilder<CosmosDistributionV1beta1ValidatorSlashEvent>? slashes) =>
+          new ListBuilder<ValidatorSlashes200ResponseSlashesInner>();
+  set slashes(ListBuilder<ValidatorSlashes200ResponseSlashesInner>? slashes) =>
       _$this._slashes = slashes;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder() {

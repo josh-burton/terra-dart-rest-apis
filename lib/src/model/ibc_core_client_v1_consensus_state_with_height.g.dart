@@ -9,10 +9,9 @@ part of 'ibc_core_client_v1_consensus_state_with_height.dart';
 class _$IbcCoreClientV1ConsensusStateWithHeight
     extends IbcCoreClientV1ConsensusStateWithHeight {
   @override
-  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
-      height;
+  final ConsensusStateHeight? height;
   @override
-  final CosmosAuthV1beta1QueryAccountResponseAccount? consensusState;
+  final ConsensusState? consensusState;
 
   factory _$IbcCoreClientV1ConsensusStateWithHeight(
           [void Function(IbcCoreClientV1ConsensusStateWithHeightBuilder)?
@@ -63,23 +62,15 @@ class IbcCoreClientV1ConsensusStateWithHeightBuilder
             IbcCoreClientV1ConsensusStateWithHeightBuilder> {
   _$IbcCoreClientV1ConsensusStateWithHeight? _$v;
 
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-      _height;
-  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
-      get height => _$this._height ??=
-          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
-  set height(
-          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
-              height) =>
-      _$this._height = height;
+  ConsensusStateHeightBuilder? _height;
+  ConsensusStateHeightBuilder get height =>
+      _$this._height ??= new ConsensusStateHeightBuilder();
+  set height(ConsensusStateHeightBuilder? height) => _$this._height = height;
 
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _consensusState;
-  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get consensusState =>
-      _$this._consensusState ??=
-          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
-  set consensusState(
-          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
-              consensusState) =>
+  ConsensusStateBuilder? _consensusState;
+  ConsensusStateBuilder get consensusState =>
+      _$this._consensusState ??= new ConsensusStateBuilder();
+  set consensusState(ConsensusStateBuilder? consensusState) =>
       _$this._consensusState = consensusState;
 
   IbcCoreClientV1ConsensusStateWithHeightBuilder() {

@@ -9,9 +9,9 @@ part of 'cosmos_staking_v1beta1_historical_info.dart';
 class _$CosmosStakingV1beta1HistoricalInfo
     extends CosmosStakingV1beta1HistoricalInfo {
   @override
-  final TendermintTypesBlockHeader? header;
+  final HistoricalInfo200ResponseHistHeader? header;
   @override
-  final BuiltList<CosmosStakingV1beta1Validator>? valset;
+  final BuiltList<StakingDelegatorValidators200ResponseValidatorsInner>? valset;
 
   factory _$CosmosStakingV1beta1HistoricalInfo(
           [void Function(CosmosStakingV1beta1HistoricalInfoBuilder)?
@@ -59,16 +59,20 @@ class CosmosStakingV1beta1HistoricalInfoBuilder
             CosmosStakingV1beta1HistoricalInfoBuilder> {
   _$CosmosStakingV1beta1HistoricalInfo? _$v;
 
-  TendermintTypesBlockHeaderBuilder? _header;
-  TendermintTypesBlockHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
-  set header(TendermintTypesBlockHeaderBuilder? header) =>
+  HistoricalInfo200ResponseHistHeaderBuilder? _header;
+  HistoricalInfo200ResponseHistHeaderBuilder get header =>
+      _$this._header ??= new HistoricalInfo200ResponseHistHeaderBuilder();
+  set header(HistoricalInfo200ResponseHistHeaderBuilder? header) =>
       _$this._header = header;
 
-  ListBuilder<CosmosStakingV1beta1Validator>? _valset;
-  ListBuilder<CosmosStakingV1beta1Validator> get valset =>
-      _$this._valset ??= new ListBuilder<CosmosStakingV1beta1Validator>();
-  set valset(ListBuilder<CosmosStakingV1beta1Validator>? valset) =>
+  ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>? _valset;
+  ListBuilder<
+      StakingDelegatorValidators200ResponseValidatorsInner> get valset => _$this
+          ._valset ??=
+      new ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>();
+  set valset(
+          ListBuilder<StakingDelegatorValidators200ResponseValidatorsInner>?
+              valset) =>
       _$this._valset = valset;
 
   CosmosStakingV1beta1HistoricalInfoBuilder() {

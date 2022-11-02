@@ -9,7 +9,7 @@ part of 'terra_tx_v1beta1_compute_tax_response.dart';
 class _$TerraTxV1beta1ComputeTaxResponse
     extends TerraTxV1beta1ComputeTaxResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? taxAmount;
+  final BuiltList<AllBalances200ResponseBalancesInner>? taxAmount;
 
   factory _$TerraTxV1beta1ComputeTaxResponse(
           [void Function(TerraTxV1beta1ComputeTaxResponseBuilder)? updates]) =>
@@ -52,10 +52,11 @@ class TerraTxV1beta1ComputeTaxResponseBuilder
             TerraTxV1beta1ComputeTaxResponseBuilder> {
   _$TerraTxV1beta1ComputeTaxResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _taxAmount;
-  ListBuilder<CosmosBaseV1beta1Coin> get taxAmount =>
-      _$this._taxAmount ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set taxAmount(ListBuilder<CosmosBaseV1beta1Coin>? taxAmount) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _taxAmount;
+  ListBuilder<AllBalances200ResponseBalancesInner> get taxAmount =>
+      _$this._taxAmount ??=
+          new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set taxAmount(ListBuilder<AllBalances200ResponseBalancesInner>? taxAmount) =>
       _$this._taxAmount = taxAmount;
 
   TerraTxV1beta1ComputeTaxResponseBuilder() {

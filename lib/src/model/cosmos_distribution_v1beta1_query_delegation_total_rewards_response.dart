@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_dec_coin.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_delegation_delegator_reward.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/delegation_total_rewards200_response_rewards_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/community_pool200_response_pool_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,11 +18,11 @@ part 'cosmos_distribution_v1beta1_query_delegation_total_rewards_response.g.dart
 abstract class CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse implements Built<CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse, CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseBuilder> {
     /// rewards defines all the rewards accrued by a delegator.
     @BuiltValueField(wireName: r'rewards')
-    BuiltList<CosmosDistributionV1beta1DelegationDelegatorReward>? get rewards;
+    BuiltList<DelegationTotalRewards200ResponseRewardsInner>? get rewards;
 
     /// total defines the sum of all the rewards.
     @BuiltValueField(wireName: r'total')
-    BuiltList<CosmosBaseV1beta1DecCoin>? get total;
+    BuiltList<CommunityPool200ResponsePoolInner>? get total;
 
     CosmosDistributionV1beta1QueryDelegationTotalRewardsResponse._();
 
@@ -50,13 +50,13 @@ class _$CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseSerializer i
             result
                 ..add(r'rewards')
                 ..add(serializers.serialize(object.rewards,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosDistributionV1beta1DelegationDelegatorReward)])));
+                    specifiedType: const FullType(BuiltList, [FullType(DelegationTotalRewards200ResponseRewardsInner)])));
         }
         if (object.total != null) {
             result
                 ..add(r'total')
                 ..add(serializers.serialize(object.total,
-                    specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])));
         }
         return result;
     }
@@ -75,12 +75,12 @@ class _$CosmosDistributionV1beta1QueryDelegationTotalRewardsResponseSerializer i
             switch (key) {
                 case r'rewards':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosDistributionV1beta1DelegationDelegatorReward)])) as BuiltList<CosmosDistributionV1beta1DelegationDelegatorReward>;
+                        specifiedType: const FullType(BuiltList, [FullType(DelegationTotalRewards200ResponseRewardsInner)])) as BuiltList<DelegationTotalRewards200ResponseRewardsInner>;
                     result.rewards.replace(valueDes);
                     break;
                 case r'total':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CosmosBaseV1beta1DecCoin)])) as BuiltList<CosmosBaseV1beta1DecCoin>;
+                        specifiedType: const FullType(BuiltList, [FullType(CommunityPool200ResponsePoolInner)])) as BuiltList<CommunityPool200ResponsePoolInner>;
                     result.total.replace(valueDes);
                     break;
             }

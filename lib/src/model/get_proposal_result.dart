@@ -15,17 +15,18 @@ part 'get_proposal_result.g.dart';
 /// GetProposalResult
 ///
 /// Properties:
-/// * [id] 
+/// * [id] - 
 /// * [proposer] 
 /// * [type] - Proposal type
 /// * [status] - Proposal status
-/// * [submitTime] 
-/// * [title] 
-/// * [description] 
+/// * [submitTime] - 
+/// * [title] - 
+/// * [description] - 
 /// * [deposit] 
 /// * [vote] 
 /// * [validatorsNotVoted] - 
 abstract class GetProposalResult implements Built<GetProposalResult, GetProposalResultBuilder> {
+    /// 
     @BuiltValueField(wireName: r'id')
     String get id;
 
@@ -40,12 +41,15 @@ abstract class GetProposalResult implements Built<GetProposalResult, GetProposal
     @BuiltValueField(wireName: r'status')
     String get status;
 
+    /// 
     @BuiltValueField(wireName: r'submitTime')
     String get submitTime;
 
+    /// 
     @BuiltValueField(wireName: r'title')
     String get title;
 
+    /// 
     @BuiltValueField(wireName: r'description')
     String get description;
 

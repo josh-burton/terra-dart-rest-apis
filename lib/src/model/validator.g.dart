@@ -8,47 +8,74 @@ part of 'validator.dart';
 
 class _$Validator extends Validator {
   @override
-  final String? operatorAddress;
+  final String operatorAddress;
   @override
-  final PublicKey? consensusPubkey;
+  final String consensusPubkey;
   @override
-  final bool? jailed;
+  final ValidatorDescription description;
   @override
-  final int? status;
+  final String tokens;
   @override
-  final String? tokens;
+  final String delegatorShares;
   @override
-  final String? delegatorShares;
+  final ValidatorVotingPower votingPower;
   @override
-  final Description? description;
+  final ValidatorCommissionInfo commissionInfo;
   @override
-  final String? bondHeight;
+  final num upTime;
   @override
-  final int? bondIntraTxCounter;
+  final String status;
   @override
-  final String? unbondingHeight;
+  final ValidatorRewardsPool rewardsPool;
   @override
-  final String? unbondingTime;
+  final String stakingReturn;
   @override
-  final Commission? commission;
+  final String accountAddress;
+  @override
+  final ValidatorSelfDelegation selfDelegation;
 
   factory _$Validator([void Function(ValidatorBuilder)? updates]) =>
       (new ValidatorBuilder()..update(updates))._build();
 
   _$Validator._(
-      {this.operatorAddress,
-      this.consensusPubkey,
-      this.jailed,
-      this.status,
-      this.tokens,
-      this.delegatorShares,
-      this.description,
-      this.bondHeight,
-      this.bondIntraTxCounter,
-      this.unbondingHeight,
-      this.unbondingTime,
-      this.commission})
-      : super._();
+      {required this.operatorAddress,
+      required this.consensusPubkey,
+      required this.description,
+      required this.tokens,
+      required this.delegatorShares,
+      required this.votingPower,
+      required this.commissionInfo,
+      required this.upTime,
+      required this.status,
+      required this.rewardsPool,
+      required this.stakingReturn,
+      required this.accountAddress,
+      required this.selfDelegation})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        operatorAddress, r'Validator', 'operatorAddress');
+    BuiltValueNullFieldError.checkNotNull(
+        consensusPubkey, r'Validator', 'consensusPubkey');
+    BuiltValueNullFieldError.checkNotNull(
+        description, r'Validator', 'description');
+    BuiltValueNullFieldError.checkNotNull(tokens, r'Validator', 'tokens');
+    BuiltValueNullFieldError.checkNotNull(
+        delegatorShares, r'Validator', 'delegatorShares');
+    BuiltValueNullFieldError.checkNotNull(
+        votingPower, r'Validator', 'votingPower');
+    BuiltValueNullFieldError.checkNotNull(
+        commissionInfo, r'Validator', 'commissionInfo');
+    BuiltValueNullFieldError.checkNotNull(upTime, r'Validator', 'upTime');
+    BuiltValueNullFieldError.checkNotNull(status, r'Validator', 'status');
+    BuiltValueNullFieldError.checkNotNull(
+        rewardsPool, r'Validator', 'rewardsPool');
+    BuiltValueNullFieldError.checkNotNull(
+        stakingReturn, r'Validator', 'stakingReturn');
+    BuiltValueNullFieldError.checkNotNull(
+        accountAddress, r'Validator', 'accountAddress');
+    BuiltValueNullFieldError.checkNotNull(
+        selfDelegation, r'Validator', 'selfDelegation');
+  }
 
   @override
   Validator rebuild(void Function(ValidatorBuilder) updates) =>
@@ -63,16 +90,17 @@ class _$Validator extends Validator {
     return other is Validator &&
         operatorAddress == other.operatorAddress &&
         consensusPubkey == other.consensusPubkey &&
-        jailed == other.jailed &&
-        status == other.status &&
+        description == other.description &&
         tokens == other.tokens &&
         delegatorShares == other.delegatorShares &&
-        description == other.description &&
-        bondHeight == other.bondHeight &&
-        bondIntraTxCounter == other.bondIntraTxCounter &&
-        unbondingHeight == other.unbondingHeight &&
-        unbondingTime == other.unbondingTime &&
-        commission == other.commission;
+        votingPower == other.votingPower &&
+        commissionInfo == other.commissionInfo &&
+        upTime == other.upTime &&
+        status == other.status &&
+        rewardsPool == other.rewardsPool &&
+        stakingReturn == other.stakingReturn &&
+        accountAddress == other.accountAddress &&
+        selfDelegation == other.selfDelegation;
   }
 
   @override
@@ -88,19 +116,23 @@ class _$Validator extends Validator {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc(0,
-                                                    operatorAddress.hashCode),
-                                                consensusPubkey.hashCode),
-                                            jailed.hashCode),
-                                        status.hashCode),
-                                    tokens.hashCode),
-                                delegatorShares.hashCode),
-                            description.hashCode),
-                        bondHeight.hashCode),
-                    bondIntraTxCounter.hashCode),
-                unbondingHeight.hashCode),
-            unbondingTime.hashCode),
-        commission.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        0,
+                                                        operatorAddress
+                                                            .hashCode),
+                                                    consensusPubkey.hashCode),
+                                                description.hashCode),
+                                            tokens.hashCode),
+                                        delegatorShares.hashCode),
+                                    votingPower.hashCode),
+                                commissionInfo.hashCode),
+                            upTime.hashCode),
+                        status.hashCode),
+                    rewardsPool.hashCode),
+                stakingReturn.hashCode),
+            accountAddress.hashCode),
+        selfDelegation.hashCode));
   }
 
   @override
@@ -108,16 +140,17 @@ class _$Validator extends Validator {
     return (newBuiltValueToStringHelper(r'Validator')
           ..add('operatorAddress', operatorAddress)
           ..add('consensusPubkey', consensusPubkey)
-          ..add('jailed', jailed)
-          ..add('status', status)
+          ..add('description', description)
           ..add('tokens', tokens)
           ..add('delegatorShares', delegatorShares)
-          ..add('description', description)
-          ..add('bondHeight', bondHeight)
-          ..add('bondIntraTxCounter', bondIntraTxCounter)
-          ..add('unbondingHeight', unbondingHeight)
-          ..add('unbondingTime', unbondingTime)
-          ..add('commission', commission))
+          ..add('votingPower', votingPower)
+          ..add('commissionInfo', commissionInfo)
+          ..add('upTime', upTime)
+          ..add('status', status)
+          ..add('rewardsPool', rewardsPool)
+          ..add('stakingReturn', stakingReturn)
+          ..add('accountAddress', accountAddress)
+          ..add('selfDelegation', selfDelegation))
         .toString();
   }
 }
@@ -130,19 +163,16 @@ class ValidatorBuilder implements Builder<Validator, ValidatorBuilder> {
   set operatorAddress(String? operatorAddress) =>
       _$this._operatorAddress = operatorAddress;
 
-  PublicKeyBuilder? _consensusPubkey;
-  PublicKeyBuilder get consensusPubkey =>
-      _$this._consensusPubkey ??= new PublicKeyBuilder();
-  set consensusPubkey(PublicKeyBuilder? consensusPubkey) =>
+  String? _consensusPubkey;
+  String? get consensusPubkey => _$this._consensusPubkey;
+  set consensusPubkey(String? consensusPubkey) =>
       _$this._consensusPubkey = consensusPubkey;
 
-  bool? _jailed;
-  bool? get jailed => _$this._jailed;
-  set jailed(bool? jailed) => _$this._jailed = jailed;
-
-  int? _status;
-  int? get status => _$this._status;
-  set status(int? status) => _$this._status = status;
+  ValidatorDescriptionBuilder? _description;
+  ValidatorDescriptionBuilder get description =>
+      _$this._description ??= new ValidatorDescriptionBuilder();
+  set description(ValidatorDescriptionBuilder? description) =>
+      _$this._description = description;
 
   String? _tokens;
   String? get tokens => _$this._tokens;
@@ -153,36 +183,47 @@ class ValidatorBuilder implements Builder<Validator, ValidatorBuilder> {
   set delegatorShares(String? delegatorShares) =>
       _$this._delegatorShares = delegatorShares;
 
-  DescriptionBuilder? _description;
-  DescriptionBuilder get description =>
-      _$this._description ??= new DescriptionBuilder();
-  set description(DescriptionBuilder? description) =>
-      _$this._description = description;
+  ValidatorVotingPowerBuilder? _votingPower;
+  ValidatorVotingPowerBuilder get votingPower =>
+      _$this._votingPower ??= new ValidatorVotingPowerBuilder();
+  set votingPower(ValidatorVotingPowerBuilder? votingPower) =>
+      _$this._votingPower = votingPower;
 
-  String? _bondHeight;
-  String? get bondHeight => _$this._bondHeight;
-  set bondHeight(String? bondHeight) => _$this._bondHeight = bondHeight;
+  ValidatorCommissionInfoBuilder? _commissionInfo;
+  ValidatorCommissionInfoBuilder get commissionInfo =>
+      _$this._commissionInfo ??= new ValidatorCommissionInfoBuilder();
+  set commissionInfo(ValidatorCommissionInfoBuilder? commissionInfo) =>
+      _$this._commissionInfo = commissionInfo;
 
-  int? _bondIntraTxCounter;
-  int? get bondIntraTxCounter => _$this._bondIntraTxCounter;
-  set bondIntraTxCounter(int? bondIntraTxCounter) =>
-      _$this._bondIntraTxCounter = bondIntraTxCounter;
+  num? _upTime;
+  num? get upTime => _$this._upTime;
+  set upTime(num? upTime) => _$this._upTime = upTime;
 
-  String? _unbondingHeight;
-  String? get unbondingHeight => _$this._unbondingHeight;
-  set unbondingHeight(String? unbondingHeight) =>
-      _$this._unbondingHeight = unbondingHeight;
+  String? _status;
+  String? get status => _$this._status;
+  set status(String? status) => _$this._status = status;
 
-  String? _unbondingTime;
-  String? get unbondingTime => _$this._unbondingTime;
-  set unbondingTime(String? unbondingTime) =>
-      _$this._unbondingTime = unbondingTime;
+  ValidatorRewardsPoolBuilder? _rewardsPool;
+  ValidatorRewardsPoolBuilder get rewardsPool =>
+      _$this._rewardsPool ??= new ValidatorRewardsPoolBuilder();
+  set rewardsPool(ValidatorRewardsPoolBuilder? rewardsPool) =>
+      _$this._rewardsPool = rewardsPool;
 
-  CommissionBuilder? _commission;
-  CommissionBuilder get commission =>
-      _$this._commission ??= new CommissionBuilder();
-  set commission(CommissionBuilder? commission) =>
-      _$this._commission = commission;
+  String? _stakingReturn;
+  String? get stakingReturn => _$this._stakingReturn;
+  set stakingReturn(String? stakingReturn) =>
+      _$this._stakingReturn = stakingReturn;
+
+  String? _accountAddress;
+  String? get accountAddress => _$this._accountAddress;
+  set accountAddress(String? accountAddress) =>
+      _$this._accountAddress = accountAddress;
+
+  ValidatorSelfDelegationBuilder? _selfDelegation;
+  ValidatorSelfDelegationBuilder get selfDelegation =>
+      _$this._selfDelegation ??= new ValidatorSelfDelegationBuilder();
+  set selfDelegation(ValidatorSelfDelegationBuilder? selfDelegation) =>
+      _$this._selfDelegation = selfDelegation;
 
   ValidatorBuilder() {
     Validator._defaults(this);
@@ -192,17 +233,18 @@ class ValidatorBuilder implements Builder<Validator, ValidatorBuilder> {
     final $v = _$v;
     if ($v != null) {
       _operatorAddress = $v.operatorAddress;
-      _consensusPubkey = $v.consensusPubkey?.toBuilder();
-      _jailed = $v.jailed;
-      _status = $v.status;
+      _consensusPubkey = $v.consensusPubkey;
+      _description = $v.description.toBuilder();
       _tokens = $v.tokens;
       _delegatorShares = $v.delegatorShares;
-      _description = $v.description?.toBuilder();
-      _bondHeight = $v.bondHeight;
-      _bondIntraTxCounter = $v.bondIntraTxCounter;
-      _unbondingHeight = $v.unbondingHeight;
-      _unbondingTime = $v.unbondingTime;
-      _commission = $v.commission?.toBuilder();
+      _votingPower = $v.votingPower.toBuilder();
+      _commissionInfo = $v.commissionInfo.toBuilder();
+      _upTime = $v.upTime;
+      _status = $v.status;
+      _rewardsPool = $v.rewardsPool.toBuilder();
+      _stakingReturn = $v.stakingReturn;
+      _accountAddress = $v.accountAddress;
+      _selfDelegation = $v.selfDelegation.toBuilder();
       _$v = null;
     }
     return this;
@@ -227,29 +269,43 @@ class ValidatorBuilder implements Builder<Validator, ValidatorBuilder> {
     try {
       _$result = _$v ??
           new _$Validator._(
-              operatorAddress: operatorAddress,
-              consensusPubkey: _consensusPubkey?.build(),
-              jailed: jailed,
-              status: status,
-              tokens: tokens,
-              delegatorShares: delegatorShares,
-              description: _description?.build(),
-              bondHeight: bondHeight,
-              bondIntraTxCounter: bondIntraTxCounter,
-              unbondingHeight: unbondingHeight,
-              unbondingTime: unbondingTime,
-              commission: _commission?.build());
+              operatorAddress: BuiltValueNullFieldError.checkNotNull(
+                  operatorAddress, r'Validator', 'operatorAddress'),
+              consensusPubkey: BuiltValueNullFieldError.checkNotNull(
+                  consensusPubkey, r'Validator', 'consensusPubkey'),
+              description: description.build(),
+              tokens: BuiltValueNullFieldError.checkNotNull(
+                  tokens, r'Validator', 'tokens'),
+              delegatorShares: BuiltValueNullFieldError.checkNotNull(
+                  delegatorShares, r'Validator', 'delegatorShares'),
+              votingPower: votingPower.build(),
+              commissionInfo: commissionInfo.build(),
+              upTime: BuiltValueNullFieldError.checkNotNull(
+                  upTime, r'Validator', 'upTime'),
+              status: BuiltValueNullFieldError.checkNotNull(
+                  status, r'Validator', 'status'),
+              rewardsPool: rewardsPool.build(),
+              stakingReturn: BuiltValueNullFieldError.checkNotNull(
+                  stakingReturn, r'Validator', 'stakingReturn'),
+              accountAddress: BuiltValueNullFieldError.checkNotNull(
+                  accountAddress, r'Validator', 'accountAddress'),
+              selfDelegation: selfDelegation.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'consensusPubkey';
-        _consensusPubkey?.build();
-
         _$failedField = 'description';
-        _description?.build();
+        description.build();
 
-        _$failedField = 'commission';
-        _commission?.build();
+        _$failedField = 'votingPower';
+        votingPower.build();
+        _$failedField = 'commissionInfo';
+        commissionInfo.build();
+
+        _$failedField = 'rewardsPool';
+        rewardsPool.build();
+
+        _$failedField = 'selfDelegation';
+        selfDelegation.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Validator', _$failedField, e.toString());

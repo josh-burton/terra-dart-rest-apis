@@ -5,17 +5,54 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://www.example.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getsigninfoofgivenallvalidators**](SlashingApi.md#getsigninfoofgivenallvalidators) | **GET** /slashing/signing_infos | Get sign info of given all validators
-[**getthecurrentslashingparameters**](SlashingApi.md#getthecurrentslashingparameters) | **GET** /slashing/parameters | Get the current slashing parameters
-[**unjailajailedvalidator**](SlashingApi.md#unjailajailedvalidator) | **POST** /slashing/validators/{validatorAddr}/unjail | Unjail a jailed validator
+[**slashingParametersGet**](SlashingApi.md#slashingparametersget) | **GET** /slashing/parameters | Get the current slashing parameters
+[**slashingSigningInfosGet**](SlashingApi.md#slashingsigninginfosget) | **GET** /slashing/signing_infos | Get sign info of given all validators
+[**slashingValidatorsValidatorAddrUnjailPost**](SlashingApi.md#slashingvalidatorsvalidatoraddrunjailpost) | **POST** /slashing/validators/{validatorAddr}/unjail | Unjail a jailed validator
 
 
-# **getsigninfoofgivenallvalidators**
-> BuiltList<SigningInfo> getsigninfoofgivenallvalidators(page, limit)
+# **slashingParametersGet**
+> SlashingParametersGet200Response slashingParametersGet()
+
+Get the current slashing parameters
+
+### Example
+```dart
+import 'package:terra_dart_rest_apis/api.dart';
+
+final api = TerraRestApi().getSlashingApi();
+
+try {
+    final response = api.slashingParametersGet();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SlashingApi->slashingParametersGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SlashingParametersGet200Response**](SlashingParametersGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **slashingSigningInfosGet**
+> BuiltList<SlashingSigningInfosGet200ResponseInner> slashingSigningInfosGet(page, limit)
 
 Get sign info of given all validators
 
@@ -30,10 +67,10 @@ final int page = 1; // int | Page number
 final int limit = 5; // int | Maximum number of items per page
 
 try {
-    final response = api.getsigninfoofgivenallvalidators(page, limit);
+    final response = api.slashingSigningInfosGet(page, limit);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling SlashingApi->getsigninfoofgivenallvalidators: $e\n');
+    print('Exception when calling SlashingApi->slashingSigningInfosGet: $e\n');
 }
 ```
 
@@ -46,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;SigningInfo&gt;**](SigningInfo.md)
+[**BuiltList&lt;SlashingSigningInfosGet200ResponseInner&gt;**](SlashingSigningInfosGet200ResponseInner.md)
 
 ### Authorization
 
@@ -59,47 +96,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getthecurrentslashingparameters**
-> GetthecurrentslashingparametersResponse getthecurrentslashingparameters()
-
-Get the current slashing parameters
-
-Get the current slashing parameters
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getSlashingApi();
-
-try {
-    final response = api.getthecurrentslashingparameters();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SlashingApi->getthecurrentslashingparameters: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetthecurrentslashingparametersResponse**](GetthecurrentslashingparametersResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **unjailajailedvalidator**
-> StdTx unjailajailedvalidator(validatorAddr, unjailBody)
+# **slashingValidatorsValidatorAddrUnjailPost**
+> TxsHashGet200ResponseTx slashingValidatorsValidatorAddrUnjailPost(validatorAddr, unjailBody)
 
 Unjail a jailed validator
 
@@ -111,13 +109,13 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getSlashingApi();
 final String validatorAddr = terravaloper1wg2mlrxdmnnkkykgqg4znky86nyrtc45q7a85l; // String | Bech32 validator address
-final UnjailBody unjailBody = ; // UnjailBody | 
+final SlashingValidatorsValidatorAddrUnjailPostRequest unjailBody = ; // SlashingValidatorsValidatorAddrUnjailPostRequest | 
 
 try {
-    final response = api.unjailajailedvalidator(validatorAddr, unjailBody);
+    final response = api.slashingValidatorsValidatorAddrUnjailPost(validatorAddr, unjailBody);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling SlashingApi->unjailajailedvalidator: $e\n');
+    print('Exception when calling SlashingApi->slashingValidatorsValidatorAddrUnjailPost: $e\n');
 }
 ```
 
@@ -126,11 +124,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **validatorAddr** | **String**| Bech32 validator address | 
- **unjailBody** | [**UnjailBody**](UnjailBody.md)|  | 
+ **unjailBody** | [**SlashingValidatorsValidatorAddrUnjailPostRequest**](SlashingValidatorsValidatorAddrUnjailPostRequest.md)|  | 
 
 ### Return type
 
-[**StdTx**](StdTx.md)
+[**TxsHashGet200ResponseTx**](TxsHashGet200ResponseTx.md)
 
 ### Authorization
 

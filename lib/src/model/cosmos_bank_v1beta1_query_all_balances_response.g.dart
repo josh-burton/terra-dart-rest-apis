@@ -9,9 +9,9 @@ part of 'cosmos_bank_v1beta1_query_all_balances_response.dart';
 class _$CosmosBankV1beta1QueryAllBalancesResponse
     extends CosmosBankV1beta1QueryAllBalancesResponse {
   @override
-  final BuiltList<CosmosBaseV1beta1Coin>? balances;
+  final BuiltList<AllBalances200ResponseBalancesInner>? balances;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosBankV1beta1QueryAllBalancesResponse(
           [void Function(CosmosBankV1beta1QueryAllBalancesResponseBuilder)?
@@ -62,19 +62,17 @@ class CosmosBankV1beta1QueryAllBalancesResponseBuilder
             CosmosBankV1beta1QueryAllBalancesResponseBuilder> {
   _$CosmosBankV1beta1QueryAllBalancesResponse? _$v;
 
-  ListBuilder<CosmosBaseV1beta1Coin>? _balances;
-  ListBuilder<CosmosBaseV1beta1Coin> get balances =>
-      _$this._balances ??= new ListBuilder<CosmosBaseV1beta1Coin>();
-  set balances(ListBuilder<CosmosBaseV1beta1Coin>? balances) =>
+  ListBuilder<AllBalances200ResponseBalancesInner>? _balances;
+  ListBuilder<AllBalances200ResponseBalancesInner> get balances =>
+      _$this._balances ??=
+          new ListBuilder<AllBalances200ResponseBalancesInner>();
+  set balances(ListBuilder<AllBalances200ResponseBalancesInner>? balances) =>
       _$this._balances = balances;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosBankV1beta1QueryAllBalancesResponseBuilder() {

@@ -9,9 +9,9 @@ part of 'cosmos_gov_v1beta1_query_deposits_response.dart';
 class _$CosmosGovV1beta1QueryDepositsResponse
     extends CosmosGovV1beta1QueryDepositsResponse {
   @override
-  final BuiltList<CosmosGovV1beta1Deposit>? deposits;
+  final BuiltList<Deposits200ResponseDepositsInner>? deposits;
   @override
-  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
+  final Accounts200ResponsePagination? pagination;
 
   factory _$CosmosGovV1beta1QueryDepositsResponse(
           [void Function(CosmosGovV1beta1QueryDepositsResponseBuilder)?
@@ -61,19 +61,16 @@ class CosmosGovV1beta1QueryDepositsResponseBuilder
             CosmosGovV1beta1QueryDepositsResponseBuilder> {
   _$CosmosGovV1beta1QueryDepositsResponse? _$v;
 
-  ListBuilder<CosmosGovV1beta1Deposit>? _deposits;
-  ListBuilder<CosmosGovV1beta1Deposit> get deposits =>
-      _$this._deposits ??= new ListBuilder<CosmosGovV1beta1Deposit>();
-  set deposits(ListBuilder<CosmosGovV1beta1Deposit>? deposits) =>
+  ListBuilder<Deposits200ResponseDepositsInner>? _deposits;
+  ListBuilder<Deposits200ResponseDepositsInner> get deposits =>
+      _$this._deposits ??= new ListBuilder<Deposits200ResponseDepositsInner>();
+  set deposits(ListBuilder<Deposits200ResponseDepositsInner>? deposits) =>
       _$this._deposits = deposits;
 
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
-  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
-      _$this._pagination ??=
-          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
-  set pagination(
-          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
-              pagination) =>
+  Accounts200ResponsePaginationBuilder? _pagination;
+  Accounts200ResponsePaginationBuilder get pagination =>
+      _$this._pagination ??= new Accounts200ResponsePaginationBuilder();
+  set pagination(Accounts200ResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosGovV1beta1QueryDepositsResponseBuilder() {

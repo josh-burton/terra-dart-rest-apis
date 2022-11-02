@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee_amount_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -19,7 +19,7 @@ part 'base_req.g.dart';
 /// * [sequence] 
 /// * [gas] 
 /// * [gasAdjustment] 
-/// * [fees] - 
+/// * [fees] 
 /// * [simulate] - Estimate gas for a transaction (cannot be used in conjunction with generate_only)
 abstract class BaseReq implements Built<BaseReq, BaseReqBuilder> {
     /// Sender address or Keybase name to generate a transaction
@@ -44,9 +44,8 @@ abstract class BaseReq implements Built<BaseReq, BaseReqBuilder> {
     @BuiltValueField(wireName: r'gas_adjustment')
     String? get gasAdjustment;
 
-    /// 
     @BuiltValueField(wireName: r'fees')
-    BuiltList<Coin>? get fees;
+    BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? get fees;
 
     /// Estimate gas for a transaction (cannot be used in conjunction with generate_only)
     @BuiltValueField(wireName: r'simulate')
@@ -120,7 +119,7 @@ class _$BaseReqSerializer implements StructuredSerializer<BaseReq> {
             result
                 ..add(r'fees')
                 ..add(serializers.serialize(object.fees,
-                    specifiedType: const FullType(BuiltList, [FullType(Coin)])));
+                    specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])));
         }
         if (object.simulate != null) {
             result
@@ -180,7 +179,7 @@ class _$BaseReqSerializer implements StructuredSerializer<BaseReq> {
                     break;
                 case r'fees':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Coin)])) as BuiltList<Coin>;
+                        specifiedType: const FullType(BuiltList, [FullType(TxsHashGet200ResponseTxFeeAmountInner)])) as BuiltList<TxsHashGet200ResponseTxFeeAmountInner>;
                     result.fees.replace(valueDes);
                     break;
                 case r'simulate':

@@ -12,9 +12,10 @@ part 'txs_tx_value_fee.g.dart';
 /// TxsTxValueFee
 ///
 /// Properties:
-/// * [gas] 
+/// * [gas] - 
 /// * [amount] - 
 abstract class TxsTxValueFee implements Built<TxsTxValueFee, TxsTxValueFeeBuilder> {
+    /// 
     @BuiltValueField(wireName: r'gas')
     String get gas;
 

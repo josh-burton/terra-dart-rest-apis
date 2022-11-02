@@ -8,7 +8,7 @@ part of 'deposit.dart';
 
 class _$Deposit extends Deposit {
   @override
-  final BuiltList<Coin>? amount;
+  final BuiltList<TxsHashGet200ResponseTxFeeAmountInner>? amount;
   @override
   final String? proposalId;
   @override
@@ -54,9 +54,12 @@ class _$Deposit extends Deposit {
 class DepositBuilder implements Builder<Deposit, DepositBuilder> {
   _$Deposit? _$v;
 
-  ListBuilder<Coin>? _amount;
-  ListBuilder<Coin> get amount => _$this._amount ??= new ListBuilder<Coin>();
-  set amount(ListBuilder<Coin>? amount) => _$this._amount = amount;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? _amount;
+  ListBuilder<TxsHashGet200ResponseTxFeeAmountInner> get amount =>
+      _$this._amount ??=
+          new ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>();
+  set amount(ListBuilder<TxsHashGet200ResponseTxFeeAmountInner>? amount) =>
+      _$this._amount = amount;
 
   String? _proposalId;
   String? get proposalId => _$this._proposalId;

@@ -8,14 +8,14 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_exchange_rate_prevote.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_exchange_rate_vote.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_prevote_req.dart';
-import 'package:terra_dart_rest_apis/src/model/aggregate_vote_req.dart';
-import 'package:terra_dart_rest_apis/src/model/coin.dart';
-import 'package:terra_dart_rest_apis/src/model/delegate_req.dart';
-import 'package:terra_dart_rest_apis/src/model/oracle_params.dart';
-import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_denoms_exchange_rates_get200_response_inner.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_parameters_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_voters_validator_aggregate_prevote_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_voters_validator_aggregate_prevote_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_voters_validator_aggregate_vote_get200_response.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_voters_validator_aggregate_vote_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/oracle_voters_validator_feeder_get_request.dart';
+import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
 
 class OracleApi {
 
@@ -25,296 +25,8 @@ class OracleApi {
 
   const OracleApi(this._dio, this._serializers);
 
-  /// Generate oracle aggregate exchange rate prevote message containing a hash
-  /// Generate oracle aggregate exchange rate prevote message containing a hash
-  ///
-  /// Parameters:
-  /// * [validator] - oracle operator
-  /// * [aggregatePrevoteReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> generateoracleaggregateexchangerateprevotemessagecontainingahash({ 
-    required String validator,
-    AggregatePrevoteReq? aggregatePrevoteReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/voters/{validator}/aggregate_prevote'.replaceAll('{' r'validator' '}', validator.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(AggregatePrevoteReq);
-      _bodyData = aggregatePrevoteReq == null ? null : _serializers.serialize(aggregatePrevoteReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
-  /// Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
-  ///
-  /// Parameters:
-  /// * [validator] - oracle operator
-  /// * [aggregateVoteReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> generateoracleaggregateexchangeratevotemessagecontainingexchangeratesandsalttoprovetheaggregateprevote({ 
-    required String validator,
-    AggregateVoteReq? aggregateVoteReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/voters/{validator}/aggregate_vote'.replaceAll('{' r'validator' '}', validator.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(AggregateVoteReq);
-      _bodyData = aggregateVoteReq == null ? null : _serializers.serialize(aggregateVoteReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Generate oracle feeder right delegation message
-  /// Generate oracle feeder right delegation message
-  ///
-  /// Parameters:
-  /// * [validator] - Feeder right delegator
-  /// * [delegateReq] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [StdTx] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<StdTx>> generateoraclefeederrightdelegationmessage({ 
-    required String validator,
-    DelegateReq? delegateReq,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/voters/{validator}/feeder'.replaceAll('{' r'validator' '}', validator.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(DelegateReq);
-      _bodyData = delegateReq == null ? null : _serializers.serialize(delegateReq, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    StdTx _responseData;
-
-    try {
-      const _responseType = FullType(StdTx);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as StdTx;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<StdTx>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Get all activated denoms
-  /// Get all activated denoms
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -327,7 +39,7 @@ class OracleApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<String>>> getallactivateddenoms({ 
+  Future<Response<BuiltList<String>>> oracleDenomsActivesGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -386,8 +98,79 @@ class OracleApi {
     );
   }
 
+  /// Get the current effective exchange rate in Luna for the asset
+  /// 
+  ///
+  /// Parameters:
+  /// * [denom] - The coin denom to get
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [num] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<num>> oracleDenomsDenomExchangeRateGet({ 
+    required String denom,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/denoms/{denom}/exchange_rate'.replaceAll('{' r'denom' '}', denom.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    num _responseData;
+
+    try {
+      _responseData = _response.data as num;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<num>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// Get all activated exchange rates
-  /// Get all activated exchange rates
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -397,10 +180,10 @@ class OracleApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<Coin>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<BuiltList<Coin>>> getallactivatedexchangerates({ 
+  Future<Response<BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>>> oracleDenomsExchangeRatesGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -429,14 +212,14 @@ class OracleApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<Coin> _responseData;
+    BuiltList<OracleDenomsExchangeRatesGet200ResponseInner> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(Coin)]);
+      const _responseType = FullType(BuiltList, [FullType(OracleDenomsExchangeRatesGet200ResponseInner)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<Coin>;
+      ) as BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -447,7 +230,420 @@ class OracleApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<Coin>>(
+    return Response<BuiltList<OracleDenomsExchangeRatesGet200ResponseInner>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get oracle params
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [OracleParametersGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<OracleParametersGet200Response>> oracleParametersGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/parameters';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    OracleParametersGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(OracleParametersGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as OracleParametersGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<OracleParametersGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get the currently outstanding aggregate exchange rate oracle prevote of a validator
+  /// 
+  ///
+  /// Parameters:
+  /// * [validator] - oracle operator
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [OracleVotersValidatorAggregatePrevoteGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<OracleVotersValidatorAggregatePrevoteGet200Response>> oracleVotersValidatorAggregatePrevoteGet({ 
+    required String validator,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/voters/{validator}/aggregate_prevote'.replaceAll('{' r'validator' '}', validator.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    OracleVotersValidatorAggregatePrevoteGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(OracleVotersValidatorAggregatePrevoteGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as OracleVotersValidatorAggregatePrevoteGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<OracleVotersValidatorAggregatePrevoteGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Generate oracle aggregate exchange rate prevote message containing a hash
+  /// 
+  ///
+  /// Parameters:
+  /// * [validator] - oracle operator
+  /// * [aggregatePrevoteRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> oracleVotersValidatorAggregatePrevotePost({ 
+    required String validator,
+    OracleVotersValidatorAggregatePrevoteGetRequest? aggregatePrevoteRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/voters/{validator}/aggregate_prevote'.replaceAll('{' r'validator' '}', validator.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(OracleVotersValidatorAggregatePrevoteGetRequest);
+      _bodyData = aggregatePrevoteRequestBody == null ? null : _serializers.serialize(aggregatePrevoteRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get the currently outstanding aggregate exchange rate oracle vote of a validator
+  /// 
+  ///
+  /// Parameters:
+  /// * [validator] - oracle operator
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [OracleVotersValidatorAggregateVoteGet200Response] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<OracleVotersValidatorAggregateVoteGet200Response>> oracleVotersValidatorAggregateVoteGet({ 
+    required String validator,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/voters/{validator}/aggregate_vote'.replaceAll('{' r'validator' '}', validator.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    OracleVotersValidatorAggregateVoteGet200Response _responseData;
+
+    try {
+      const _responseType = FullType(OracleVotersValidatorAggregateVoteGet200Response);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as OracleVotersValidatorAggregateVoteGet200Response;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<OracleVotersValidatorAggregateVoteGet200Response>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Generate oracle aggregate exchange rate vote message containing exchange rates and salt to prove the aggregate prevote
+  /// 
+  ///
+  /// Parameters:
+  /// * [validator] - oracle operator
+  /// * [aggregateVoteRequestBody] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
+  Future<Response<TxsHashGet200ResponseTx>> oracleVotersValidatorAggregateVotePost({ 
+    required String validator,
+    OracleVotersValidatorAggregateVoteGetRequest? aggregateVoteRequestBody,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/oracle/voters/{validator}/aggregate_vote'.replaceAll('{' r'validator' '}', validator.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(OracleVotersValidatorAggregateVoteGetRequest);
+      _bodyData = aggregateVoteRequestBody == null ? null : _serializers.serialize(aggregateVoteRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TxsHashGet200ResponseTx _responseData;
+
+    try {
+      const _responseType = FullType(TxsHashGet200ResponseTx);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TxsHashGet200ResponseTx;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -460,7 +656,7 @@ class OracleApi {
   }
 
   /// Get delegated oracle feeder of a validator
-  /// Get delegated oracle feeder of a validator
+  /// 
   ///
   /// Parameters:
   /// * [validator] - Feeder right delegator
@@ -474,7 +670,7 @@ class OracleApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<String>> getdelegatedoraclefeederofavalidator({ 
+  Future<Response<String>> oracleVotersValidatorFeederGet({ 
     required String validator,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -530,10 +726,12 @@ class OracleApi {
     );
   }
 
-  /// Get oracle params
-  /// Get oracle params
+  /// Generate oracle feeder right delegation message
+  /// 
   ///
   /// Parameters:
+  /// * [validator] - Feeder right delegator
+  /// * [feederRightDelegationRequestBody] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -541,156 +739,12 @@ class OracleApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [OracleParams] as data
+  /// Returns a [Future] containing a [Response] with a [TxsHashGet200ResponseTx] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<OracleParams>> getoracleparams({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/parameters';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    OracleParams _responseData;
-
-    try {
-      const _responseType = FullType(OracleParams);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as OracleParams;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<OracleParams>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the current effective exchange rate in Luna for the asset
-  /// Get the current effective exchange rate in Luna for the asset
-  ///
-  /// Parameters:
-  /// * [denom] - The coin denom to get
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [double] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<double>> getthecurrenteffectiveexchangerateinLunafortheasset({ 
-    required String denom,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/denoms/{denom}/exchange_rate'.replaceAll('{' r'denom' '}', denom.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    double _responseData;
-
-    try {
-      _responseData = _response.data as double;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<double>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the currently outstanding aggregate exchange rate oracle prevote of a validator
-  /// Get the currently outstanding aggregate exchange rate oracle prevote of a validator
-  ///
-  /// Parameters:
-  /// * [validator] - oracle operator
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [AggregateExchangeRatePrevote] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<AggregateExchangeRatePrevote>> getthecurrentlyoutstandingaggregateexchangerateoracleprevoteofavalidator({ 
+  Future<Response<TxsHashGet200ResponseTx>> oracleVotersValidatorFeederPost({ 
     required String validator,
+    OracleVotersValidatorFeederGetRequest? feederRightDelegationRequestBody,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -698,9 +752,9 @@ class OracleApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/oracle/voters/{validator}/aggregate_prevote'.replaceAll('{' r'validator' '}', validator.toString());
+    final _path = r'/oracle/voters/{validator}/feeder'.replaceAll('{' r'validator' '}', validator.toString());
     final _options = Options(
-      method: r'GET',
+      method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
@@ -711,22 +765,40 @@ class OracleApi {
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(OracleVotersValidatorFeederGetRequest);
+      _bodyData = feederRightDelegationRequestBody == null ? null : _serializers.serialize(feederRightDelegationRequestBody, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    AggregateExchangeRatePrevote _responseData;
+    TxsHashGet200ResponseTx _responseData;
 
     try {
-      const _responseType = FullType(AggregateExchangeRatePrevote);
+      const _responseType = FullType(TxsHashGet200ResponseTx);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as AggregateExchangeRatePrevote;
+      ) as TxsHashGet200ResponseTx;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -737,82 +809,7 @@ class OracleApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<AggregateExchangeRatePrevote>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get the currently outstanding aggregate exchange rate oracle vote of a validator
-  /// Get the currently outstanding aggregate exchange rate oracle vote of a validator
-  ///
-  /// Parameters:
-  /// * [validator] - oracle operator
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [AggregateExchangeRateVote] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<AggregateExchangeRateVote>> getthecurrentlyoutstandingaggregateexchangerateoraclevoteofavalidator({ 
-    required String validator,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/oracle/voters/{validator}/aggregate_vote'.replaceAll('{' r'validator' '}', validator.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    AggregateExchangeRateVote _responseData;
-
-    try {
-      const _responseType = FullType(AggregateExchangeRateVote);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as AggregateExchangeRateVote;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<AggregateExchangeRateVote>(
+    return Response<TxsHashGet200ResponseTx>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -825,7 +822,7 @@ class OracleApi {
   }
 
   /// Get the number of vote periods missed in this oracle slash window.
-  /// Get the number of vote periods missed in this oracle slash window.
+  /// 
   ///
   /// Parameters:
   /// * [validator] - oracle operator
@@ -836,10 +833,10 @@ class OracleApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [double] as data
+  /// Returns a [Future] containing a [Response] with a [num] as data
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
-  Future<Response<double>> getthenumberofvoteperiodsmissedinthisoracleslashwindow({ 
+  Future<Response<num>> oracleVotersValidatorMissGet({ 
     required String validator,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -869,10 +866,10 @@ class OracleApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    double _responseData;
+    num _responseData;
 
     try {
-      _responseData = _response.data as double;
+      _responseData = _response.data as num;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -883,7 +880,7 @@ class OracleApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<double>(
+    return Response<num>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

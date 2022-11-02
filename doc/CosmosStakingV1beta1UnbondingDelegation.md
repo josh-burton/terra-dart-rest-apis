@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **delegatorAddress** | **String** | delegator_address is the bech32-encoded address of the delegator. | [optional] 
 **validatorAddress** | **String** | validator_address is the bech32-encoded address of the validator. | [optional] 
-**entries** | [**BuiltList&lt;CosmosStakingV1beta1UnbondingDelegationEntry&gt;**](CosmosStakingV1beta1UnbondingDelegationEntry.md) | entries are the unbonding delegation entries. | [optional] 
+**entries** | [**BuiltList&lt;DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner&gt;**](DelegatorUnbondingDelegations200ResponseUnbondingResponsesInnerEntriesInner.md) | entries are the unbonding delegation entries. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

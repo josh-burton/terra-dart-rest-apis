@@ -15,8 +15,8 @@ part 'get_tx_result_logs.g.dart';
 /// Properties:
 /// * [events] - 
 /// * [log] 
-/// * [msgIndex] 
-/// * [success] 
+/// * [msgIndex] - 
+/// * [success] - 
 abstract class GetTxResultLogs implements Built<GetTxResultLogs, GetTxResultLogsBuilder> {
     /// 
     @BuiltValueField(wireName: r'events')
@@ -25,9 +25,11 @@ abstract class GetTxResultLogs implements Built<GetTxResultLogs, GetTxResultLogs
     @BuiltValueField(wireName: r'log')
     GetTxResultLogsLog get log;
 
+    /// 
     @BuiltValueField(wireName: r'msg_index')
     num get msgIndex;
 
+    /// 
     @BuiltValueField(wireName: r'success')
     bool get success;
 

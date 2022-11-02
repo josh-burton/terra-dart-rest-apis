@@ -12,13 +12,14 @@ part 'get_mempool_by_hash_result.g.dart';
 ///
 /// Properties:
 /// * [timestamp] - Last seen
-/// * [txhash] 
+/// * [txhash] - 
 /// * [tx] 
 abstract class GetMempoolByHashResult implements Built<GetMempoolByHashResult, GetMempoolByHashResultBuilder> {
     /// Last seen
     @BuiltValueField(wireName: r'timestamp')
     String get timestamp;
 
+    /// 
     @BuiltValueField(wireName: r'txhash')
     String get txhash;
 
