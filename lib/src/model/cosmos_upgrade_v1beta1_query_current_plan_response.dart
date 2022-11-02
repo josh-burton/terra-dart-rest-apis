@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/plan.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_upgrade_v1beta1_query_current_plan_response_plan.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_upgrade_v1beta1_query_current_plan_response.g.dart';
 /// * [plan] 
 abstract class CosmosUpgradeV1beta1QueryCurrentPlanResponse implements Built<CosmosUpgradeV1beta1QueryCurrentPlanResponse, CosmosUpgradeV1beta1QueryCurrentPlanResponseBuilder> {
     @BuiltValueField(wireName: r'plan')
-    Plan? get plan;
+    CosmosUpgradeV1beta1QueryCurrentPlanResponsePlan? get plan;
 
     CosmosUpgradeV1beta1QueryCurrentPlanResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosUpgradeV1beta1QueryCurrentPlanResponseSerializer implements Struct
             result
                 ..add(r'plan')
                 ..add(serializers.serialize(object.plan,
-                    specifiedType: const FullType(Plan)));
+                    specifiedType: const FullType(CosmosUpgradeV1beta1QueryCurrentPlanResponsePlan)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosUpgradeV1beta1QueryCurrentPlanResponseSerializer implements Struct
             switch (key) {
                 case r'plan':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Plan)) as Plan;
+                        specifiedType: const FullType(CosmosUpgradeV1beta1QueryCurrentPlanResponsePlan)) as CosmosUpgradeV1beta1QueryCurrentPlanResponsePlan;
                     result.plan.replace(valueDes);
                     break;
             }

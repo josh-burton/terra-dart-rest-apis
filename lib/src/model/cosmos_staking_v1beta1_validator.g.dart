@@ -10,7 +10,7 @@ class _$CosmosStakingV1beta1Validator extends CosmosStakingV1beta1Validator {
   @override
   final String? operatorAddress;
   @override
-  final GoogleProtobufAny? consensusPubkey;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? consensusPubkey;
   @override
   final bool? jailed;
   @override
@@ -20,13 +20,13 @@ class _$CosmosStakingV1beta1Validator extends CosmosStakingV1beta1Validator {
   @override
   final String? delegatorShares;
   @override
-  final Description1? description;
+  final CosmosStakingV1beta1ValidatorDescription? description;
   @override
   final String? unbondingHeight;
   @override
   final DateTime? unbondingTime;
   @override
-  final Commission5? commission;
+  final CosmosStakingV1beta1ValidatorCommission? commission;
   @override
   final String? minSelfDelegation;
 
@@ -127,10 +127,13 @@ class CosmosStakingV1beta1ValidatorBuilder
   set operatorAddress(String? operatorAddress) =>
       _$this._operatorAddress = operatorAddress;
 
-  GoogleProtobufAnyBuilder? _consensusPubkey;
-  GoogleProtobufAnyBuilder get consensusPubkey =>
-      _$this._consensusPubkey ??= new GoogleProtobufAnyBuilder();
-  set consensusPubkey(GoogleProtobufAnyBuilder? consensusPubkey) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _consensusPubkey;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get consensusPubkey =>
+      _$this._consensusPubkey ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set consensusPubkey(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+              consensusPubkey) =>
       _$this._consensusPubkey = consensusPubkey;
 
   bool? _jailed;
@@ -150,10 +153,12 @@ class CosmosStakingV1beta1ValidatorBuilder
   set delegatorShares(String? delegatorShares) =>
       _$this._delegatorShares = delegatorShares;
 
-  Description1Builder? _description;
-  Description1Builder get description =>
-      _$this._description ??= new Description1Builder();
-  set description(Description1Builder? description) =>
+  CosmosStakingV1beta1ValidatorDescriptionBuilder? _description;
+  CosmosStakingV1beta1ValidatorDescriptionBuilder get description =>
+      _$this._description ??=
+          new CosmosStakingV1beta1ValidatorDescriptionBuilder();
+  set description(
+          CosmosStakingV1beta1ValidatorDescriptionBuilder? description) =>
       _$this._description = description;
 
   String? _unbondingHeight;
@@ -166,10 +171,11 @@ class CosmosStakingV1beta1ValidatorBuilder
   set unbondingTime(DateTime? unbondingTime) =>
       _$this._unbondingTime = unbondingTime;
 
-  Commission5Builder? _commission;
-  Commission5Builder get commission =>
-      _$this._commission ??= new Commission5Builder();
-  set commission(Commission5Builder? commission) =>
+  CosmosStakingV1beta1ValidatorCommissionBuilder? _commission;
+  CosmosStakingV1beta1ValidatorCommissionBuilder get commission =>
+      _$this._commission ??=
+          new CosmosStakingV1beta1ValidatorCommissionBuilder();
+  set commission(CosmosStakingV1beta1ValidatorCommissionBuilder? commission) =>
       _$this._commission = commission;
 
   String? _minSelfDelegation;

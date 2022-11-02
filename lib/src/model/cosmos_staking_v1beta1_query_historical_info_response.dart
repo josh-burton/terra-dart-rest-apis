@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/hist.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_historical_info_response_hist.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_staking_v1beta1_query_historical_info_response.g.dart';
 /// * [hist] 
 abstract class CosmosStakingV1beta1QueryHistoricalInfoResponse implements Built<CosmosStakingV1beta1QueryHistoricalInfoResponse, CosmosStakingV1beta1QueryHistoricalInfoResponseBuilder> {
     @BuiltValueField(wireName: r'hist')
-    Hist? get hist;
+    CosmosStakingV1beta1QueryHistoricalInfoResponseHist? get hist;
 
     CosmosStakingV1beta1QueryHistoricalInfoResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosStakingV1beta1QueryHistoricalInfoResponseSerializer implements Str
             result
                 ..add(r'hist')
                 ..add(serializers.serialize(object.hist,
-                    specifiedType: const FullType(Hist)));
+                    specifiedType: const FullType(CosmosStakingV1beta1QueryHistoricalInfoResponseHist)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosStakingV1beta1QueryHistoricalInfoResponseSerializer implements Str
             switch (key) {
                 case r'hist':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Hist)) as Hist;
+                        specifiedType: const FullType(CosmosStakingV1beta1QueryHistoricalInfoResponseHist)) as CosmosStakingV1beta1QueryHistoricalInfoResponseHist;
                     result.hist.replace(valueDes);
                     break;
             }

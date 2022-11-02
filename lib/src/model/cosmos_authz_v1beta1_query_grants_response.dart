@@ -4,7 +4,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_grant.dart';
-import 'package:terra_dart_rest_apis/src/model/pagination1.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class CosmosAuthzV1beta1QueryGrantsResponse implements Built<CosmosAuth
     BuiltList<CosmosAuthzV1beta1Grant>? get grants;
 
     @BuiltValueField(wireName: r'pagination')
-    Pagination1? get pagination;
+    CosmosAuthzV1beta1QueryGrantsResponsePagination? get pagination;
 
     CosmosAuthzV1beta1QueryGrantsResponse._();
 
@@ -55,7 +55,7 @@ class _$CosmosAuthzV1beta1QueryGrantsResponseSerializer implements StructuredSer
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(Pagination1)));
+                    specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$CosmosAuthzV1beta1QueryGrantsResponseSerializer implements StructuredSer
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pagination1)) as Pagination1;
+                        specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)) as CosmosAuthzV1beta1QueryGrantsResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

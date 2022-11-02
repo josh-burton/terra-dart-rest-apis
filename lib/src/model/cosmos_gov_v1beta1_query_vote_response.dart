@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_vote.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_vote_response_vote.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_gov_v1beta1_query_vote_response.g.dart';
 /// * [vote] 
 abstract class CosmosGovV1beta1QueryVoteResponse implements Built<CosmosGovV1beta1QueryVoteResponse, CosmosGovV1beta1QueryVoteResponseBuilder> {
     @BuiltValueField(wireName: r'vote')
-    CosmosGovV1beta1Vote? get vote;
+    CosmosGovV1beta1QueryVoteResponseVote? get vote;
 
     CosmosGovV1beta1QueryVoteResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosGovV1beta1QueryVoteResponseSerializer implements StructuredSeriali
             result
                 ..add(r'vote')
                 ..add(serializers.serialize(object.vote,
-                    specifiedType: const FullType(CosmosGovV1beta1Vote)));
+                    specifiedType: const FullType(CosmosGovV1beta1QueryVoteResponseVote)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosGovV1beta1QueryVoteResponseSerializer implements StructuredSeriali
             switch (key) {
                 case r'vote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1Vote)) as CosmosGovV1beta1Vote;
+                        specifiedType: const FullType(CosmosGovV1beta1QueryVoteResponseVote)) as CosmosGovV1beta1QueryVoteResponseVote;
                     result.vote.replace(valueDes);
                     break;
             }

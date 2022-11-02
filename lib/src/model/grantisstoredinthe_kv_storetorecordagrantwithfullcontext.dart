@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/allowance.dart';
+import 'package:terra_dart_rest_apis/src/model/grantisstoredinthe_kv_storetorecordagrantwithfullcontext_allowance.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class GrantisstoredintheKVStoretorecordagrantwithfullcontext implements
     String? get grantee;
 
     @BuiltValueField(wireName: r'allowance')
-    Allowance? get allowance;
+    GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance? get allowance;
 
     GrantisstoredintheKVStoretorecordagrantwithfullcontext._();
 
@@ -64,7 +64,7 @@ class _$GrantisstoredintheKVStoretorecordagrantwithfullcontextSerializer impleme
             result
                 ..add(r'allowance')
                 ..add(serializers.serialize(object.allowance,
-                    specifiedType: const FullType(Allowance)));
+                    specifiedType: const FullType(GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance)));
         }
         return result;
     }
@@ -93,7 +93,7 @@ class _$GrantisstoredintheKVStoretorecordagrantwithfullcontextSerializer impleme
                     break;
                 case r'allowance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Allowance)) as Allowance;
+                        specifiedType: const FullType(GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance)) as GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance;
                     result.allowance.replace(valueDes);
                     break;
             }

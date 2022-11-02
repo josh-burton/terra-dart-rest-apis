@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_auth_info.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx_auth_info.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx_body.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -21,7 +21,7 @@ abstract class CosmosTxV1beta1Tx implements Built<CosmosTxV1beta1Tx, CosmosTxV1b
     CosmosTxV1beta1TxBody? get body;
 
     @BuiltValueField(wireName: r'auth_info')
-    CosmosTxV1beta1AuthInfo? get authInfo;
+    CosmosTxV1beta1TxAuthInfo? get authInfo;
 
     /// signatures is a list of signatures that matches the length and order of AuthInfo's signer_infos to allow connecting signature meta information like public key and signing mode by position.
     @BuiltValueField(wireName: r'signatures')
@@ -59,7 +59,7 @@ class _$CosmosTxV1beta1TxSerializer implements StructuredSerializer<CosmosTxV1be
             result
                 ..add(r'auth_info')
                 ..add(serializers.serialize(object.authInfo,
-                    specifiedType: const FullType(CosmosTxV1beta1AuthInfo)));
+                    specifiedType: const FullType(CosmosTxV1beta1TxAuthInfo)));
         }
         if (object.signatures != null) {
             result
@@ -89,7 +89,7 @@ class _$CosmosTxV1beta1TxSerializer implements StructuredSerializer<CosmosTxV1be
                     break;
                 case r'auth_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1AuthInfo)) as CosmosTxV1beta1AuthInfo;
+                        specifiedType: const FullType(CosmosTxV1beta1TxAuthInfo)) as CosmosTxV1beta1TxAuthInfo;
                     result.authInfo.replace(valueDes);
                     break;
                 case r'signatures':

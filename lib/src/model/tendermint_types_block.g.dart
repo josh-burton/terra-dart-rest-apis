@@ -8,13 +8,13 @@ part of 'tendermint_types_block.dart';
 
 class _$TendermintTypesBlock extends TendermintTypesBlock {
   @override
-  final TendermintTypesHeader? header;
+  final TendermintTypesBlockHeader? header;
   @override
   final Datacontainsthesetoftransactionsincludedintheblock? data;
   @override
   final TendermintTypesEvidenceList? evidence;
   @override
-  final TendermintTypesCommit? lastCommit;
+  final TendermintTypesBlockLastCommit? lastCommit;
 
   factory _$TendermintTypesBlock(
           [void Function(TendermintTypesBlockBuilder)? updates]) =>
@@ -65,10 +65,11 @@ class TendermintTypesBlockBuilder
     implements Builder<TendermintTypesBlock, TendermintTypesBlockBuilder> {
   _$TendermintTypesBlock? _$v;
 
-  TendermintTypesHeaderBuilder? _header;
-  TendermintTypesHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesHeaderBuilder();
-  set header(TendermintTypesHeaderBuilder? header) => _$this._header = header;
+  TendermintTypesBlockHeaderBuilder? _header;
+  TendermintTypesBlockHeaderBuilder get header =>
+      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
+  set header(TendermintTypesBlockHeaderBuilder? header) =>
+      _$this._header = header;
 
   DatacontainsthesetoftransactionsincludedintheblockBuilder? _data;
   DatacontainsthesetoftransactionsincludedintheblockBuilder get data =>
@@ -83,10 +84,10 @@ class TendermintTypesBlockBuilder
   set evidence(TendermintTypesEvidenceListBuilder? evidence) =>
       _$this._evidence = evidence;
 
-  TendermintTypesCommitBuilder? _lastCommit;
-  TendermintTypesCommitBuilder get lastCommit =>
-      _$this._lastCommit ??= new TendermintTypesCommitBuilder();
-  set lastCommit(TendermintTypesCommitBuilder? lastCommit) =>
+  TendermintTypesBlockLastCommitBuilder? _lastCommit;
+  TendermintTypesBlockLastCommitBuilder get lastCommit =>
+      _$this._lastCommit ??= new TendermintTypesBlockLastCommitBuilder();
+  set lastCommit(TendermintTypesBlockLastCommitBuilder? lastCommit) =>
       _$this._lastCommit = lastCommit;
 
   TendermintTypesBlockBuilder() {

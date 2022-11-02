@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegator_validator_response_validator.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'query_validator_responseisresponsetypeforthe_query_validator_rp_cmethod.g.
 /// * [validator] 
 abstract class QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod implements Built<QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod, QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodBuilder> {
     @BuiltValueField(wireName: r'validator')
-    CosmosStakingV1beta1Validator? get validator;
+    CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator? get validator;
 
     QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod._();
 
@@ -42,7 +42,7 @@ class _$QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodSeriali
             result
                 ..add(r'validator')
                 ..add(serializers.serialize(object.validator,
-                    specifiedType: const FullType(CosmosStakingV1beta1Validator)));
+                    specifiedType: const FullType(CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodSeriali
             switch (key) {
                 case r'validator':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1Validator)) as CosmosStakingV1beta1Validator;
+                        specifiedType: const FullType(CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator)) as CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator;
                     result.validator.replace(valueDes);
                     break;
             }

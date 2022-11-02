@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_query_delegator_validator_response.dart';
 class _$CosmosStakingV1beta1QueryDelegatorValidatorResponse
     extends CosmosStakingV1beta1QueryDelegatorValidatorResponse {
   @override
-  final CosmosStakingV1beta1Validator? validator;
+  final CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator? validator;
 
   factory _$CosmosStakingV1beta1QueryDelegatorValidatorResponse(
           [void Function(
@@ -61,10 +61,14 @@ class CosmosStakingV1beta1QueryDelegatorValidatorResponseBuilder
             CosmosStakingV1beta1QueryDelegatorValidatorResponseBuilder> {
   _$CosmosStakingV1beta1QueryDelegatorValidatorResponse? _$v;
 
-  CosmosStakingV1beta1ValidatorBuilder? _validator;
-  CosmosStakingV1beta1ValidatorBuilder get validator =>
-      _$this._validator ??= new CosmosStakingV1beta1ValidatorBuilder();
-  set validator(CosmosStakingV1beta1ValidatorBuilder? validator) =>
+  CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder?
+      _validator;
+  CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder
+      get validator => _$this._validator ??=
+          new CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder();
+  set validator(
+          CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder?
+              validator) =>
       _$this._validator = validator;
 
   CosmosStakingV1beta1QueryDelegatorValidatorResponseBuilder() {

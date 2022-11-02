@@ -8,9 +8,9 @@ part of 'cosmos_tx_v1beta1_get_tx_response.dart';
 
 class _$CosmosTxV1beta1GetTxResponse extends CosmosTxV1beta1GetTxResponse {
   @override
-  final CosmosTxV1beta1Tx? tx;
+  final CosmosTxV1beta1GetTxResponseTx? tx;
   @override
-  final CosmosBaseAbciV1beta1TxResponse? txResponse;
+  final CosmosTxV1beta1BroadcastTxResponseTxResponse? txResponse;
 
   factory _$CosmosTxV1beta1GetTxResponse(
           [void Function(CosmosTxV1beta1GetTxResponseBuilder)? updates]) =>
@@ -55,15 +55,17 @@ class CosmosTxV1beta1GetTxResponseBuilder
             CosmosTxV1beta1GetTxResponseBuilder> {
   _$CosmosTxV1beta1GetTxResponse? _$v;
 
-  CosmosTxV1beta1TxBuilder? _tx;
-  CosmosTxV1beta1TxBuilder get tx =>
-      _$this._tx ??= new CosmosTxV1beta1TxBuilder();
-  set tx(CosmosTxV1beta1TxBuilder? tx) => _$this._tx = tx;
+  CosmosTxV1beta1GetTxResponseTxBuilder? _tx;
+  CosmosTxV1beta1GetTxResponseTxBuilder get tx =>
+      _$this._tx ??= new CosmosTxV1beta1GetTxResponseTxBuilder();
+  set tx(CosmosTxV1beta1GetTxResponseTxBuilder? tx) => _$this._tx = tx;
 
-  CosmosBaseAbciV1beta1TxResponseBuilder? _txResponse;
-  CosmosBaseAbciV1beta1TxResponseBuilder get txResponse =>
-      _$this._txResponse ??= new CosmosBaseAbciV1beta1TxResponseBuilder();
-  set txResponse(CosmosBaseAbciV1beta1TxResponseBuilder? txResponse) =>
+  CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder? _txResponse;
+  CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder get txResponse =>
+      _$this._txResponse ??=
+          new CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder();
+  set txResponse(
+          CosmosTxV1beta1BroadcastTxResponseTxResponseBuilder? txResponse) =>
       _$this._txResponse = txResponse;
 
   CosmosTxV1beta1GetTxResponseBuilder() {

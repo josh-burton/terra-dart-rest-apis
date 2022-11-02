@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_denom_trace.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_query_denom_trace_response_denom_trace.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'ibc_applications_transfer_v1_query_denom_trace_response.g.dart';
 /// * [denomTrace] 
 abstract class IbcApplicationsTransferV1QueryDenomTraceResponse implements Built<IbcApplicationsTransferV1QueryDenomTraceResponse, IbcApplicationsTransferV1QueryDenomTraceResponseBuilder> {
     @BuiltValueField(wireName: r'denom_trace')
-    IbcApplicationsTransferV1DenomTrace? get denomTrace;
+    IbcApplicationsTransferV1QueryDenomTraceResponseDenomTrace? get denomTrace;
 
     IbcApplicationsTransferV1QueryDenomTraceResponse._();
 
@@ -42,7 +42,7 @@ class _$IbcApplicationsTransferV1QueryDenomTraceResponseSerializer implements St
             result
                 ..add(r'denom_trace')
                 ..add(serializers.serialize(object.denomTrace,
-                    specifiedType: const FullType(IbcApplicationsTransferV1DenomTrace)));
+                    specifiedType: const FullType(IbcApplicationsTransferV1QueryDenomTraceResponseDenomTrace)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$IbcApplicationsTransferV1QueryDenomTraceResponseSerializer implements St
             switch (key) {
                 case r'denom_trace':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcApplicationsTransferV1DenomTrace)) as IbcApplicationsTransferV1DenomTrace;
+                        specifiedType: const FullType(IbcApplicationsTransferV1QueryDenomTraceResponseDenomTrace)) as IbcApplicationsTransferV1QueryDenomTraceResponseDenomTrace;
                     result.denomTrace.replace(valueDes);
                     break;
             }

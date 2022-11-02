@@ -9,7 +9,8 @@ part of 'query_validator_commission_responseistheresponsetypeforthe_query_valida
 class _$QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod
     extends QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod {
   @override
-  final Commission2? commission;
+  final QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommission?
+      commission;
 
   factory _$QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod(
           [void Function(
@@ -67,10 +68,14 @@ class QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommi
   _$QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod?
       _$v;
 
-  Commission2Builder? _commission;
-  Commission2Builder get commission =>
-      _$this._commission ??= new Commission2Builder();
-  set commission(Commission2Builder? commission) =>
+  QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommissionBuilder?
+      _commission;
+  QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommissionBuilder
+      get commission => _$this._commission ??=
+          new QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommissionBuilder();
+  set commission(
+          QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommissionBuilder?
+              commission) =>
       _$this._commission = commission;
 
   QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodBuilder() {

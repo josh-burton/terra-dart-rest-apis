@@ -13,8 +13,7 @@ class _$IbcCoreConnectionV1Counterparty
   @override
   final String? connectionId;
   @override
-  final MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1?
-      prefix;
+  final IbcCoreConnectionV1CounterpartyPrefix? prefix;
 
   factory _$IbcCoreConnectionV1Counterparty(
           [void Function(IbcCoreConnectionV1CounterpartyBuilder)? updates]) =>
@@ -72,14 +71,10 @@ class IbcCoreConnectionV1CounterpartyBuilder
   String? get connectionId => _$this._connectionId;
   set connectionId(String? connectionId) => _$this._connectionId = connectionId;
 
-  MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1Builder?
-      _prefix;
-  MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1Builder
-      get prefix => _$this._prefix ??=
-          new MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1Builder();
-  set prefix(
-          MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1Builder?
-              prefix) =>
+  IbcCoreConnectionV1CounterpartyPrefixBuilder? _prefix;
+  IbcCoreConnectionV1CounterpartyPrefixBuilder get prefix =>
+      _$this._prefix ??= new IbcCoreConnectionV1CounterpartyPrefixBuilder();
+  set prefix(IbcCoreConnectionV1CounterpartyPrefixBuilder? prefix) =>
       _$this._prefix = prefix;
 
   IbcCoreConnectionV1CounterpartyBuilder() {

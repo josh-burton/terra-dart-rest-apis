@@ -9,11 +9,12 @@ part of 'query_connection_client_state_responseistheresponsetypeforthe_query_con
 class _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod
     extends QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod {
   @override
-  final IbcCoreClientV1IdentifiedClientState? identifiedClientState;
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientState?
+      identifiedClientState;
   @override
   final String? proof;
   @override
-  final HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients?
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
       proofHeight;
 
   factory _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod(
@@ -77,25 +78,27 @@ class QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionCl
   _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod?
       _$v;
 
-  IbcCoreClientV1IdentifiedClientStateBuilder? _identifiedClientState;
-  IbcCoreClientV1IdentifiedClientStateBuilder get identifiedClientState =>
-      _$this._identifiedClientState ??=
-          new IbcCoreClientV1IdentifiedClientStateBuilder();
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientStateBuilder?
+      _identifiedClientState;
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientStateBuilder
+      get identifiedClientState => _$this._identifiedClientState ??=
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientStateBuilder();
   set identifiedClientState(
-          IbcCoreClientV1IdentifiedClientStateBuilder? identifiedClientState) =>
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientStateBuilder?
+              identifiedClientState) =>
       _$this._identifiedClientState = identifiedClientState;
 
   String? _proof;
   String? get proof => _$this._proof;
   set proof(String? proof) => _$this._proof = proof;
 
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
       _proofHeight;
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
       get proofHeight => _$this._proofHeight ??=
-          new HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder();
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
   set proofHeight(
-          HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
               proofHeight) =>
       _$this._proofHeight = proofHeight;
 

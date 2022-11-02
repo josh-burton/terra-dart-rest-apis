@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/commission_rates.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_commission_commission_rates.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'commission5.g.dart';
 /// * [updateTime] - update_time is the last time the commission rate was changed.
 abstract class Commission5 implements Built<Commission5, Commission5Builder> {
     @BuiltValueField(wireName: r'commission_rates')
-    CommissionRates? get commissionRates;
+    CosmosStakingV1beta1CommissionCommissionRates? get commissionRates;
 
     /// update_time is the last time the commission rate was changed.
     @BuiltValueField(wireName: r'update_time')
@@ -47,7 +47,7 @@ class _$Commission5Serializer implements StructuredSerializer<Commission5> {
             result
                 ..add(r'commission_rates')
                 ..add(serializers.serialize(object.commissionRates,
-                    specifiedType: const FullType(CommissionRates)));
+                    specifiedType: const FullType(CosmosStakingV1beta1CommissionCommissionRates)));
         }
         if (object.updateTime != null) {
             result
@@ -72,7 +72,7 @@ class _$Commission5Serializer implements StructuredSerializer<Commission5> {
             switch (key) {
                 case r'commission_rates':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CommissionRates)) as CommissionRates;
+                        specifiedType: const FullType(CosmosStakingV1beta1CommissionCommissionRates)) as CosmosStakingV1beta1CommissionCommissionRates;
                     result.commissionRates.replace(valueDes);
                     break;
                 case r'update_time':

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_balance_response_balance.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_delegation_response_delegation.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'cosmos_staking_v1beta1_delegation_response.g.dart';
 /// * [balance] 
 abstract class CosmosStakingV1beta1DelegationResponse implements Built<CosmosStakingV1beta1DelegationResponse, CosmosStakingV1beta1DelegationResponseBuilder> {
     @BuiltValueField(wireName: r'delegation')
-    CosmosStakingV1beta1Delegation? get delegation;
+    CosmosStakingV1beta1DelegationResponseDelegation? get delegation;
 
     @BuiltValueField(wireName: r'balance')
-    CosmosBaseV1beta1Coin? get balance;
+    CosmosBankV1beta1QueryBalanceResponseBalance? get balance;
 
     CosmosStakingV1beta1DelegationResponse._();
 
@@ -47,13 +47,13 @@ class _$CosmosStakingV1beta1DelegationResponseSerializer implements StructuredSe
             result
                 ..add(r'delegation')
                 ..add(serializers.serialize(object.delegation,
-                    specifiedType: const FullType(CosmosStakingV1beta1Delegation)));
+                    specifiedType: const FullType(CosmosStakingV1beta1DelegationResponseDelegation)));
         }
         if (object.balance != null) {
             result
                 ..add(r'balance')
                 ..add(serializers.serialize(object.balance,
-                    specifiedType: const FullType(CosmosBaseV1beta1Coin)));
+                    specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$CosmosStakingV1beta1DelegationResponseSerializer implements StructuredSe
             switch (key) {
                 case r'delegation':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1Delegation)) as CosmosStakingV1beta1Delegation;
+                        specifiedType: const FullType(CosmosStakingV1beta1DelegationResponseDelegation)) as CosmosStakingV1beta1DelegationResponseDelegation;
                     result.delegation.replace(valueDes);
                     break;
                 case r'balance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseV1beta1Coin)) as CosmosBaseV1beta1Coin;
+                        specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)) as CosmosBankV1beta1QueryBalanceResponseBalance;
                     result.balance.replace(valueDes);
                     break;
             }

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_duplicate_vote_evidence.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_light_client_attack_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_duplicate_vote_evidence.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_light_client_attack_evidence.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,10 +16,10 @@ part 'tendermint_types_evidence.g.dart';
 /// * [lightClientAttackEvidence] 
 abstract class TendermintTypesEvidence implements Built<TendermintTypesEvidence, TendermintTypesEvidenceBuilder> {
     @BuiltValueField(wireName: r'duplicate_vote_evidence')
-    TendermintTypesDuplicateVoteEvidence? get duplicateVoteEvidence;
+    TendermintTypesEvidenceDuplicateVoteEvidence? get duplicateVoteEvidence;
 
     @BuiltValueField(wireName: r'light_client_attack_evidence')
-    TendermintTypesLightClientAttackEvidence? get lightClientAttackEvidence;
+    TendermintTypesEvidenceLightClientAttackEvidence? get lightClientAttackEvidence;
 
     TendermintTypesEvidence._();
 
@@ -47,13 +47,13 @@ class _$TendermintTypesEvidenceSerializer implements StructuredSerializer<Tender
             result
                 ..add(r'duplicate_vote_evidence')
                 ..add(serializers.serialize(object.duplicateVoteEvidence,
-                    specifiedType: const FullType(TendermintTypesDuplicateVoteEvidence)));
+                    specifiedType: const FullType(TendermintTypesEvidenceDuplicateVoteEvidence)));
         }
         if (object.lightClientAttackEvidence != null) {
             result
                 ..add(r'light_client_attack_evidence')
                 ..add(serializers.serialize(object.lightClientAttackEvidence,
-                    specifiedType: const FullType(TendermintTypesLightClientAttackEvidence)));
+                    specifiedType: const FullType(TendermintTypesEvidenceLightClientAttackEvidence)));
         }
         return result;
     }
@@ -72,12 +72,12 @@ class _$TendermintTypesEvidenceSerializer implements StructuredSerializer<Tender
             switch (key) {
                 case r'duplicate_vote_evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesDuplicateVoteEvidence)) as TendermintTypesDuplicateVoteEvidence;
+                        specifiedType: const FullType(TendermintTypesEvidenceDuplicateVoteEvidence)) as TendermintTypesEvidenceDuplicateVoteEvidence;
                     result.duplicateVoteEvidence.replace(valueDes);
                     break;
                 case r'light_client_attack_evidence':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesLightClientAttackEvidence)) as TendermintTypesLightClientAttackEvidence;
+                        specifiedType: const FullType(TendermintTypesEvidenceLightClientAttackEvidence)) as TendermintTypesEvidenceLightClientAttackEvidence;
                     result.lightClientAttackEvidence.replace(valueDes);
                     break;
             }

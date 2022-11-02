@@ -9,7 +9,8 @@ part of 'query_signing_info_responseistheresponsetypeforthe_query_signing_info_r
 class _$QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod
     extends QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod {
   @override
-  final CosmosSlashingV1beta1ValidatorSigningInfo? valSigningInfo;
+  final QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfo?
+      valSigningInfo;
 
   factory _$QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod(
           [void Function(
@@ -66,12 +67,14 @@ class QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodBu
   _$QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod?
       _$v;
 
-  CosmosSlashingV1beta1ValidatorSigningInfoBuilder? _valSigningInfo;
-  CosmosSlashingV1beta1ValidatorSigningInfoBuilder get valSigningInfo =>
-      _$this._valSigningInfo ??=
-          new CosmosSlashingV1beta1ValidatorSigningInfoBuilder();
+  QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfoBuilder?
+      _valSigningInfo;
+  QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfoBuilder
+      get valSigningInfo => _$this._valSigningInfo ??=
+          new QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfoBuilder();
   set valSigningInfo(
-          CosmosSlashingV1beta1ValidatorSigningInfoBuilder? valSigningInfo) =>
+          QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfoBuilder?
+              valSigningInfo) =>
       _$this._valSigningInfo = valSigningInfo;
 
   QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodBuilder() {

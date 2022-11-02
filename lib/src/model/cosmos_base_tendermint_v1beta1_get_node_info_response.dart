@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_get_node_info_response_application_version.dart';
 import 'package:terra_dart_rest_apis/src/model/tendermint_p2p_default_node_info.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_version_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -19,7 +19,7 @@ abstract class CosmosBaseTendermintV1beta1GetNodeInfoResponse implements Built<C
     TendermintP2pDefaultNodeInfo? get defaultNodeInfo;
 
     @BuiltValueField(wireName: r'application_version')
-    CosmosBaseTendermintV1beta1VersionInfo? get applicationVersion;
+    CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion? get applicationVersion;
 
     CosmosBaseTendermintV1beta1GetNodeInfoResponse._();
 
@@ -53,7 +53,7 @@ class _$CosmosBaseTendermintV1beta1GetNodeInfoResponseSerializer implements Stru
             result
                 ..add(r'application_version')
                 ..add(serializers.serialize(object.applicationVersion,
-                    specifiedType: const FullType(CosmosBaseTendermintV1beta1VersionInfo)));
+                    specifiedType: const FullType(CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion)));
         }
         return result;
     }
@@ -77,7 +77,7 @@ class _$CosmosBaseTendermintV1beta1GetNodeInfoResponseSerializer implements Stru
                     break;
                 case r'application_version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseTendermintV1beta1VersionInfo)) as CosmosBaseTendermintV1beta1VersionInfo;
+                        specifiedType: const FullType(CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion)) as CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion;
                     result.applicationVersion.replace(valueDes);
                     break;
             }

@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hist** | [**Hist**](Hist.md) |  | [optional] 
+**hist** | [**CosmosStakingV1beta1QueryHistoricalInfoResponseHist**](CosmosStakingV1beta1QueryHistoricalInfoResponseHist.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

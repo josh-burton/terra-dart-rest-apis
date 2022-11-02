@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version** | [**TendermintVersionConsensus**](TendermintVersionConsensus.md) |  | [optional] 
+**version** | [**TendermintTypesHeaderVersion**](TendermintTypesHeaderVersion.md) |  | [optional] 
 **chainId** | **String** |  | [optional] 
 **height** | **String** |  | [optional] 
 **time** | [**DateTime**](DateTime.md) |  | [optional] 

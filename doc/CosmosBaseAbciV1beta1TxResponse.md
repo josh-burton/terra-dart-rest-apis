@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **info** | **String** | Additional information. May be non-deterministic. | [optional] 
 **gasWanted** | **String** | Amount of gas requested for transaction. | [optional] 
 **gasUsed** | **String** | Amount of gas consumed by transaction. | [optional] 
-**tx** | [**GoogleProtobufAny**](GoogleProtobufAny.md) |  | [optional] 
+**tx** | [**CosmosAuthV1beta1QueryAccountResponseAccount**](CosmosAuthV1beta1QueryAccountResponseAccount.md) |  | [optional] 
 **timestamp** | **String** | Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time. | [optional] 
 **events** | [**BuiltList&lt;TendermintAbciEvent&gt;**](TendermintAbciEvent.md) | Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante handler. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45 | [optional] 
 

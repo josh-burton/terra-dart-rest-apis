@@ -9,7 +9,7 @@ part of 'cosmos_bank_v1beta1_query_supply_of_response.dart';
 class _$CosmosBankV1beta1QuerySupplyOfResponse
     extends CosmosBankV1beta1QuerySupplyOfResponse {
   @override
-  final CosmosBaseV1beta1Coin? amount;
+  final CosmosBankV1beta1QueryBalanceResponseBalance? amount;
 
   factory _$CosmosBankV1beta1QuerySupplyOfResponse(
           [void Function(CosmosBankV1beta1QuerySupplyOfResponseBuilder)?
@@ -56,10 +56,12 @@ class CosmosBankV1beta1QuerySupplyOfResponseBuilder
             CosmosBankV1beta1QuerySupplyOfResponseBuilder> {
   _$CosmosBankV1beta1QuerySupplyOfResponse? _$v;
 
-  CosmosBaseV1beta1CoinBuilder? _amount;
-  CosmosBaseV1beta1CoinBuilder get amount =>
-      _$this._amount ??= new CosmosBaseV1beta1CoinBuilder();
-  set amount(CosmosBaseV1beta1CoinBuilder? amount) => _$this._amount = amount;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? _amount;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder get amount =>
+      _$this._amount ??=
+          new CosmosBankV1beta1QueryBalanceResponseBalanceBuilder();
+  set amount(CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? amount) =>
+      _$this._amount = amount;
 
   CosmosBankV1beta1QuerySupplyOfResponseBuilder() {
     CosmosBankV1beta1QuerySupplyOfResponse._defaults(this);

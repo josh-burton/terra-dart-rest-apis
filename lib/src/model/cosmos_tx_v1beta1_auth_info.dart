@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/fee21.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_signer_info.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_auth_info_fee.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class CosmosTxV1beta1AuthInfo implements Built<CosmosTxV1beta1AuthInfo,
     BuiltList<CosmosTxV1beta1SignerInfo>? get signerInfos;
 
     @BuiltValueField(wireName: r'fee')
-    Fee21? get fee;
+    CosmosTxV1beta1AuthInfoFee? get fee;
 
     CosmosTxV1beta1AuthInfo._();
 
@@ -55,7 +55,7 @@ class _$CosmosTxV1beta1AuthInfoSerializer implements StructuredSerializer<Cosmos
             result
                 ..add(r'fee')
                 ..add(serializers.serialize(object.fee,
-                    specifiedType: const FullType(Fee21)));
+                    specifiedType: const FullType(CosmosTxV1beta1AuthInfoFee)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$CosmosTxV1beta1AuthInfoSerializer implements StructuredSerializer<Cosmos
                     break;
                 case r'fee':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Fee21)) as Fee21;
+                        specifiedType: const FullType(CosmosTxV1beta1AuthInfoFee)) as CosmosTxV1beta1AuthInfoFee;
                     result.fee.replace(valueDes);
                     break;
             }

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_mode_info.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_signer_info_mode_info.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,10 +17,10 @@ part 'cosmos_tx_v1beta1_signer_info.g.dart';
 /// * [sequence] - sequence is the sequence of the account, which describes the number of committed transactions signed by a given address. It is used to prevent replay attacks.
 abstract class CosmosTxV1beta1SignerInfo implements Built<CosmosTxV1beta1SignerInfo, CosmosTxV1beta1SignerInfoBuilder> {
     @BuiltValueField(wireName: r'public_key')
-    GoogleProtobufAny? get publicKey;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get publicKey;
 
     @BuiltValueField(wireName: r'mode_info')
-    CosmosTxV1beta1ModeInfo? get modeInfo;
+    CosmosTxV1beta1SignerInfoModeInfo? get modeInfo;
 
     /// sequence is the sequence of the account, which describes the number of committed transactions signed by a given address. It is used to prevent replay attacks.
     @BuiltValueField(wireName: r'sequence')
@@ -52,13 +52,13 @@ class _$CosmosTxV1beta1SignerInfoSerializer implements StructuredSerializer<Cosm
             result
                 ..add(r'public_key')
                 ..add(serializers.serialize(object.publicKey,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.modeInfo != null) {
             result
                 ..add(r'mode_info')
                 ..add(serializers.serialize(object.modeInfo,
-                    specifiedType: const FullType(CosmosTxV1beta1ModeInfo)));
+                    specifiedType: const FullType(CosmosTxV1beta1SignerInfoModeInfo)));
         }
         if (object.sequence != null) {
             result
@@ -83,12 +83,12 @@ class _$CosmosTxV1beta1SignerInfoSerializer implements StructuredSerializer<Cosm
             switch (key) {
                 case r'public_key':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.publicKey.replace(valueDes);
                     break;
                 case r'mode_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1ModeInfo)) as CosmosTxV1beta1ModeInfo;
+                        specifiedType: const FullType(CosmosTxV1beta1SignerInfoModeInfo)) as CosmosTxV1beta1SignerInfoModeInfo;
                     result.modeInfo.replace(valueDes);
                     break;
                 case r'sequence':

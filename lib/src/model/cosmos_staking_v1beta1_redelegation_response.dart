@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_response_redelegation.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_entry_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -17,7 +17,7 @@ part 'cosmos_staking_v1beta1_redelegation_response.g.dart';
 /// * [entries] - 
 abstract class CosmosStakingV1beta1RedelegationResponse implements Built<CosmosStakingV1beta1RedelegationResponse, CosmosStakingV1beta1RedelegationResponseBuilder> {
     @BuiltValueField(wireName: r'redelegation')
-    CosmosStakingV1beta1Redelegation? get redelegation;
+    CosmosStakingV1beta1RedelegationResponseRedelegation? get redelegation;
 
     /// 
     @BuiltValueField(wireName: r'entries')
@@ -49,7 +49,7 @@ class _$CosmosStakingV1beta1RedelegationResponseSerializer implements Structured
             result
                 ..add(r'redelegation')
                 ..add(serializers.serialize(object.redelegation,
-                    specifiedType: const FullType(CosmosStakingV1beta1Redelegation)));
+                    specifiedType: const FullType(CosmosStakingV1beta1RedelegationResponseRedelegation)));
         }
         if (object.entries != null) {
             result
@@ -74,7 +74,7 @@ class _$CosmosStakingV1beta1RedelegationResponseSerializer implements Structured
             switch (key) {
                 case r'redelegation':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1Redelegation)) as CosmosStakingV1beta1Redelegation;
+                        specifiedType: const FullType(CosmosStakingV1beta1RedelegationResponseRedelegation)) as CosmosStakingV1beta1RedelegationResponseRedelegation;
                     result.redelegation.replace(valueDes);
                     break;
                 case r'entries':

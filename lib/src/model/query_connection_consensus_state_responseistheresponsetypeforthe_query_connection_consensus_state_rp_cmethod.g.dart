@@ -9,13 +9,13 @@ part of 'query_connection_consensus_state_responseistheresponsetypeforthe_query_
 class _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod
     extends QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod {
   @override
-  final GoogleProtobufAny? consensusState;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? consensusState;
   @override
   final String? clientId;
   @override
   final String? proof;
   @override
-  final HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients?
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
       proofHeight;
 
   factory _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod(
@@ -83,10 +83,13 @@ class QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectio
   _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod?
       _$v;
 
-  GoogleProtobufAnyBuilder? _consensusState;
-  GoogleProtobufAnyBuilder get consensusState =>
-      _$this._consensusState ??= new GoogleProtobufAnyBuilder();
-  set consensusState(GoogleProtobufAnyBuilder? consensusState) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _consensusState;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get consensusState =>
+      _$this._consensusState ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set consensusState(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+              consensusState) =>
       _$this._consensusState = consensusState;
 
   String? _clientId;
@@ -97,13 +100,13 @@ class QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectio
   String? get proof => _$this._proof;
   set proof(String? proof) => _$this._proof = proof;
 
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
       _proofHeight;
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
       get proofHeight => _$this._proofHeight ??=
-          new HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder();
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
   set proofHeight(
-          HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
               proofHeight) =>
       _$this._proofHeight = proofHeight;
 

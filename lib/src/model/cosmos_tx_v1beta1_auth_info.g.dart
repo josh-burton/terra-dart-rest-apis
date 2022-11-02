@@ -10,7 +10,7 @@ class _$CosmosTxV1beta1AuthInfo extends CosmosTxV1beta1AuthInfo {
   @override
   final BuiltList<CosmosTxV1beta1SignerInfo>? signerInfos;
   @override
-  final Fee21? fee;
+  final CosmosTxV1beta1AuthInfoFee? fee;
 
   factory _$CosmosTxV1beta1AuthInfo(
           [void Function(CosmosTxV1beta1AuthInfoBuilder)? updates]) =>
@@ -60,9 +60,10 @@ class CosmosTxV1beta1AuthInfoBuilder
   set signerInfos(ListBuilder<CosmosTxV1beta1SignerInfo>? signerInfos) =>
       _$this._signerInfos = signerInfos;
 
-  Fee21Builder? _fee;
-  Fee21Builder get fee => _$this._fee ??= new Fee21Builder();
-  set fee(Fee21Builder? fee) => _$this._fee = fee;
+  CosmosTxV1beta1AuthInfoFeeBuilder? _fee;
+  CosmosTxV1beta1AuthInfoFeeBuilder get fee =>
+      _$this._fee ??= new CosmosTxV1beta1AuthInfoFeeBuilder();
+  set fee(CosmosTxV1beta1AuthInfoFeeBuilder? fee) => _$this._fee = fee;
 
   CosmosTxV1beta1AuthInfoBuilder() {
     CosmosTxV1beta1AuthInfo._defaults(this);

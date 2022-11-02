@@ -13,7 +13,7 @@ class _$CosmosTxV1beta1GetTxsEventResponse
   @override
   final BuiltList<CosmosBaseAbciV1beta1TxResponse>? txResponses;
   @override
-  final Pagination1? pagination;
+  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
 
   factory _$CosmosTxV1beta1GetTxsEventResponse(
           [void Function(CosmosTxV1beta1GetTxsEventResponseBuilder)?
@@ -77,10 +77,12 @@ class CosmosTxV1beta1GetTxsEventResponseBuilder
   set txResponses(ListBuilder<CosmosBaseAbciV1beta1TxResponse>? txResponses) =>
       _$this._txResponses = txResponses;
 
-  Pagination1Builder? _pagination;
-  Pagination1Builder get pagination =>
-      _$this._pagination ??= new Pagination1Builder();
-  set pagination(Pagination1Builder? pagination) =>
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosTxV1beta1GetTxsEventResponseBuilder() {

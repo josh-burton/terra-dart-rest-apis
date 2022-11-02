@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -1015,7 +1015,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **submitanunbondingdelegation**
-> StdTx submitanunbondingdelegation(delegatorAddr, delegation7)
+> StdTx submitanunbondingdelegation(delegatorAddr, submitanunbondingdelegationRequest)
 
 Submit an unbonding delegation
 
@@ -1027,10 +1027,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getStakingApi();
 final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final Delegation7 delegation7 = ; // Delegation7 | Unbond an amount of bonded shares from a validator
+final SubmitanunbondingdelegationRequest submitanunbondingdelegationRequest = ; // SubmitanunbondingdelegationRequest | Unbond an amount of bonded shares from a validator
 
 try {
-    final response = api.submitanunbondingdelegation(delegatorAddr, delegation7);
+    final response = api.submitanunbondingdelegation(delegatorAddr, submitanunbondingdelegationRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling StakingApi->submitanunbondingdelegation: $e\n');
@@ -1042,7 +1042,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **delegation7** | [**Delegation7**](Delegation7.md)| Unbond an amount of bonded shares from a validator | [optional] 
+ **submitanunbondingdelegationRequest** | [**SubmitanunbondingdelegationRequest**](SubmitanunbondingdelegationRequest.md)| Unbond an amount of bonded shares from a validator | [optional] 
 
 ### Return type
 
@@ -1060,7 +1060,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **submitaredelegation**
-> StdTx submitaredelegation(delegatorAddr, delegation10)
+> StdTx submitaredelegation(delegatorAddr, submitaredelegationRequest)
 
 Submit a redelegation
 
@@ -1072,10 +1072,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getStakingApi();
 final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final Delegation10 delegation10 = ; // Delegation10 | The sender and tx information
+final SubmitaredelegationRequest submitaredelegationRequest = ; // SubmitaredelegationRequest | The sender and tx information
 
 try {
-    final response = api.submitaredelegation(delegatorAddr, delegation10);
+    final response = api.submitaredelegation(delegatorAddr, submitaredelegationRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling StakingApi->submitaredelegation: $e\n');
@@ -1087,7 +1087,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **delegation10** | [**Delegation10**](Delegation10.md)| The sender and tx information | [optional] 
+ **submitaredelegationRequest** | [**SubmitaredelegationRequest**](SubmitaredelegationRequest.md)| The sender and tx information | [optional] 
 
 ### Return type
 
@@ -1105,7 +1105,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **submitdelegation**
-> StdTx submitdelegation(delegatorAddr, delegation7)
+> StdTx submitdelegation(delegatorAddr, submitdelegationRequest)
 
 Submit delegation
 
@@ -1117,10 +1117,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getStakingApi();
 final String delegatorAddr = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Bech32 AccAddress of Delegator
-final Delegation7 delegation7 = ; // Delegation7 | Delegate an amount of liquid coins to a validator
+final SubmitdelegationRequest submitdelegationRequest = ; // SubmitdelegationRequest | Delegate an amount of liquid coins to a validator
 
 try {
-    final response = api.submitdelegation(delegatorAddr, delegation7);
+    final response = api.submitdelegation(delegatorAddr, submitdelegationRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling StakingApi->submitdelegation: $e\n');
@@ -1132,7 +1132,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delegatorAddr** | **String**| Bech32 AccAddress of Delegator | 
- **delegation7** | [**Delegation7**](Delegation7.md)| Delegate an amount of liquid coins to a validator | [optional] 
+ **submitdelegationRequest** | [**SubmitdelegationRequest**](SubmitdelegationRequest.md)| Delegate an amount of liquid coins to a validator | [optional] 
 
 ### Return type
 

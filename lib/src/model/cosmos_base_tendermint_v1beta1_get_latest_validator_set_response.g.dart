@@ -13,7 +13,7 @@ class _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse
   @override
   final BuiltList<CosmosBaseTendermintV1beta1Validator>? validators;
   @override
-  final Pagination1? pagination;
+  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
 
   factory _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse(
           [void Function(
@@ -83,10 +83,12 @@ class CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseBuilder
           ListBuilder<CosmosBaseTendermintV1beta1Validator>? validators) =>
       _$this._validators = validators;
 
-  Pagination1Builder? _pagination;
-  Pagination1Builder get pagination =>
-      _$this._pagination ??= new Pagination1Builder();
-  set pagination(Pagination1Builder? pagination) =>
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseBuilder() {

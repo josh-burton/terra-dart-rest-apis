@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_deposit.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_deposit_response_deposit.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_gov_v1beta1_query_deposit_response.g.dart';
 /// * [deposit] 
 abstract class CosmosGovV1beta1QueryDepositResponse implements Built<CosmosGovV1beta1QueryDepositResponse, CosmosGovV1beta1QueryDepositResponseBuilder> {
     @BuiltValueField(wireName: r'deposit')
-    CosmosGovV1beta1Deposit? get deposit;
+    CosmosGovV1beta1QueryDepositResponseDeposit? get deposit;
 
     CosmosGovV1beta1QueryDepositResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosGovV1beta1QueryDepositResponseSerializer implements StructuredSeri
             result
                 ..add(r'deposit')
                 ..add(serializers.serialize(object.deposit,
-                    specifiedType: const FullType(CosmosGovV1beta1Deposit)));
+                    specifiedType: const FullType(CosmosGovV1beta1QueryDepositResponseDeposit)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosGovV1beta1QueryDepositResponseSerializer implements StructuredSeri
             switch (key) {
                 case r'deposit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1Deposit)) as CosmosGovV1beta1Deposit;
+                        specifiedType: const FullType(CosmosGovV1beta1QueryDepositResponseDeposit)) as CosmosGovV1beta1QueryDepositResponseDeposit;
                     result.deposit.replace(valueDes);
                     break;
             }

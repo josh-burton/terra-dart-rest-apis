@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'ibc_core_client_v1_query_upgraded_consensus_state_response.g.dart';
 /// * [upgradedConsensusState] 
 abstract class IbcCoreClientV1QueryUpgradedConsensusStateResponse implements Built<IbcCoreClientV1QueryUpgradedConsensusStateResponse, IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder> {
     @BuiltValueField(wireName: r'upgraded_consensus_state')
-    GoogleProtobufAny? get upgradedConsensusState;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get upgradedConsensusState;
 
     IbcCoreClientV1QueryUpgradedConsensusStateResponse._();
 
@@ -42,7 +42,7 @@ class _$IbcCoreClientV1QueryUpgradedConsensusStateResponseSerializer implements 
             result
                 ..add(r'upgraded_consensus_state')
                 ..add(serializers.serialize(object.upgradedConsensusState,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$IbcCoreClientV1QueryUpgradedConsensusStateResponseSerializer implements 
             switch (key) {
                 case r'upgraded_consensus_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.upgradedConsensusState.replace(valueDes);
                     break;
             }

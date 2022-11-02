@@ -4,7 +4,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_consensus_state_with_height.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_query_v1beta1_page_response.dart';
+import 'package:terra_dart_rest_apis/src/model/query_signing_infos_responseistheresponsetypeforthe_query_signing_infos_rp_cmethod_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class QueryConsensusStatesResponseistheresponsetypefortheQueryConsensus
     BuiltList<IbcCoreClientV1ConsensusStateWithHeight>? get consensusStates;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosBaseQueryV1beta1PageResponse? get pagination;
+    QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination? get pagination;
 
     QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesRPCmethod._();
 
@@ -55,7 +55,7 @@ class _$QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesR
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosBaseQueryV1beta1PageResponse)));
+                    specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$QueryConsensusStatesResponseistheresponsetypefortheQueryConsensusStatesR
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseQueryV1beta1PageResponse)) as CosmosBaseQueryV1beta1PageResponse;
+                        specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)) as QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination;
                     result.pagination.replace(valueDes);
                     break;
             }

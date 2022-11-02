@@ -9,7 +9,8 @@ part of 'cosmos_staking_v1beta1_query_delegation_response.dart';
 class _$CosmosStakingV1beta1QueryDelegationResponse
     extends CosmosStakingV1beta1QueryDelegationResponse {
   @override
-  final CosmosStakingV1beta1DelegationResponse? delegationResponse;
+  final CosmosStakingV1beta1QueryDelegationResponseDelegationResponse?
+      delegationResponse;
 
   factory _$CosmosStakingV1beta1QueryDelegationResponse(
           [void Function(CosmosStakingV1beta1QueryDelegationResponseBuilder)?
@@ -58,12 +59,14 @@ class CosmosStakingV1beta1QueryDelegationResponseBuilder
             CosmosStakingV1beta1QueryDelegationResponseBuilder> {
   _$CosmosStakingV1beta1QueryDelegationResponse? _$v;
 
-  CosmosStakingV1beta1DelegationResponseBuilder? _delegationResponse;
-  CosmosStakingV1beta1DelegationResponseBuilder get delegationResponse =>
-      _$this._delegationResponse ??=
-          new CosmosStakingV1beta1DelegationResponseBuilder();
+  CosmosStakingV1beta1QueryDelegationResponseDelegationResponseBuilder?
+      _delegationResponse;
+  CosmosStakingV1beta1QueryDelegationResponseDelegationResponseBuilder
+      get delegationResponse => _$this._delegationResponse ??=
+          new CosmosStakingV1beta1QueryDelegationResponseDelegationResponseBuilder();
   set delegationResponse(
-          CosmosStakingV1beta1DelegationResponseBuilder? delegationResponse) =>
+          CosmosStakingV1beta1QueryDelegationResponseDelegationResponseBuilder?
+              delegationResponse) =>
       _$this._delegationResponse = delegationResponse;
 
   CosmosStakingV1beta1QueryDelegationResponseBuilder() {

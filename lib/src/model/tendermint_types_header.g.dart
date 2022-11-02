@@ -8,7 +8,7 @@ part of 'tendermint_types_header.dart';
 
 class _$TendermintTypesHeader extends TendermintTypesHeader {
   @override
-  final TendermintVersionConsensus? version;
+  final TendermintTypesHeaderVersion? version;
   @override
   final String? chainId;
   @override
@@ -143,10 +143,10 @@ class TendermintTypesHeaderBuilder
     implements Builder<TendermintTypesHeader, TendermintTypesHeaderBuilder> {
   _$TendermintTypesHeader? _$v;
 
-  TendermintVersionConsensusBuilder? _version;
-  TendermintVersionConsensusBuilder get version =>
-      _$this._version ??= new TendermintVersionConsensusBuilder();
-  set version(TendermintVersionConsensusBuilder? version) =>
+  TendermintTypesHeaderVersionBuilder? _version;
+  TendermintTypesHeaderVersionBuilder get version =>
+      _$this._version ??= new TendermintTypesHeaderVersionBuilder();
+  set version(TendermintTypesHeaderVersionBuilder? version) =>
       _$this._version = version;
 
   String? _chainId;

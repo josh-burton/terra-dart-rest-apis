@@ -11,7 +11,7 @@ class _$CosmosAuthV1beta1QueryAccountsResponse
   @override
   final BuiltList<GoogleProtobufAny>? accounts;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosAuthV1beta1QueryAccountsResponse(
           [void Function(CosmosAuthV1beta1QueryAccountsResponseBuilder)?
@@ -67,10 +67,13 @@ class CosmosAuthV1beta1QueryAccountsResponseBuilder
   set accounts(ListBuilder<GoogleProtobufAny>? accounts) =>
       _$this._accounts = accounts;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosAuthV1beta1QueryAccountsResponseBuilder() {

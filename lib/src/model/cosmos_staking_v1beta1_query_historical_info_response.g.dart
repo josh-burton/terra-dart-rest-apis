@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_query_historical_info_response.dart';
 class _$CosmosStakingV1beta1QueryHistoricalInfoResponse
     extends CosmosStakingV1beta1QueryHistoricalInfoResponse {
   @override
-  final Hist? hist;
+  final CosmosStakingV1beta1QueryHistoricalInfoResponseHist? hist;
 
   factory _$CosmosStakingV1beta1QueryHistoricalInfoResponse(
           [void Function(
@@ -59,9 +59,12 @@ class CosmosStakingV1beta1QueryHistoricalInfoResponseBuilder
             CosmosStakingV1beta1QueryHistoricalInfoResponseBuilder> {
   _$CosmosStakingV1beta1QueryHistoricalInfoResponse? _$v;
 
-  HistBuilder? _hist;
-  HistBuilder get hist => _$this._hist ??= new HistBuilder();
-  set hist(HistBuilder? hist) => _$this._hist = hist;
+  CosmosStakingV1beta1QueryHistoricalInfoResponseHistBuilder? _hist;
+  CosmosStakingV1beta1QueryHistoricalInfoResponseHistBuilder get hist =>
+      _$this._hist ??=
+          new CosmosStakingV1beta1QueryHistoricalInfoResponseHistBuilder();
+  set hist(CosmosStakingV1beta1QueryHistoricalInfoResponseHistBuilder? hist) =>
+      _$this._hist = hist;
 
   CosmosStakingV1beta1QueryHistoricalInfoResponseBuilder() {
     CosmosStakingV1beta1QueryHistoricalInfoResponse._defaults(this);

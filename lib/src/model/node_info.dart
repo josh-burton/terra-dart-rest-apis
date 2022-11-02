@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/other2.dart';
+import 'package:terra_dart_rest_apis/src/model/node_info_other.dart';
 import 'package:terra_dart_rest_apis/src/model/tendermint_p2p_protocol_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -44,7 +44,7 @@ abstract class NodeInfo implements Built<NodeInfo, NodeInfoBuilder> {
     String? get version;
 
     @BuiltValueField(wireName: r'other')
-    Other2? get other;
+    NodeInfoOther? get other;
 
     NodeInfo._();
 
@@ -114,7 +114,7 @@ class _$NodeInfoSerializer implements StructuredSerializer<NodeInfo> {
             result
                 ..add(r'other')
                 ..add(serializers.serialize(object.other,
-                    specifiedType: const FullType(Other2)));
+                    specifiedType: const FullType(NodeInfoOther)));
         }
         return result;
     }
@@ -168,7 +168,7 @@ class _$NodeInfoSerializer implements StructuredSerializer<NodeInfo> {
                     break;
                 case r'other':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Other2)) as Other2;
+                        specifiedType: const FullType(NodeInfoOther)) as NodeInfoOther;
                     result.other.replace(valueDes);
                     break;
             }

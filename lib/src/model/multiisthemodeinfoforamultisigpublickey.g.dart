@@ -9,7 +9,7 @@ part of 'multiisthemodeinfoforamultisigpublickey.dart';
 class _$Multiisthemodeinfoforamultisigpublickey
     extends Multiisthemodeinfoforamultisigpublickey {
   @override
-  final CosmosCryptoMultisigV1beta1CompactBitArray? bitarray;
+  final MultiisthemodeinfoforamultisigpublickeyBitarray? bitarray;
   @override
   final BuiltList<CosmosTxV1beta1ModeInfo>? modeInfos;
 
@@ -61,11 +61,12 @@ class MultiisthemodeinfoforamultisigpublickeyBuilder
             MultiisthemodeinfoforamultisigpublickeyBuilder> {
   _$Multiisthemodeinfoforamultisigpublickey? _$v;
 
-  CosmosCryptoMultisigV1beta1CompactBitArrayBuilder? _bitarray;
-  CosmosCryptoMultisigV1beta1CompactBitArrayBuilder get bitarray =>
+  MultiisthemodeinfoforamultisigpublickeyBitarrayBuilder? _bitarray;
+  MultiisthemodeinfoforamultisigpublickeyBitarrayBuilder get bitarray =>
       _$this._bitarray ??=
-          new CosmosCryptoMultisigV1beta1CompactBitArrayBuilder();
-  set bitarray(CosmosCryptoMultisigV1beta1CompactBitArrayBuilder? bitarray) =>
+          new MultiisthemodeinfoforamultisigpublickeyBitarrayBuilder();
+  set bitarray(
+          MultiisthemodeinfoforamultisigpublickeyBitarrayBuilder? bitarray) =>
       _$this._bitarray = bitarray;
 
   ListBuilder<CosmosTxV1beta1ModeInfo>? _modeInfos;

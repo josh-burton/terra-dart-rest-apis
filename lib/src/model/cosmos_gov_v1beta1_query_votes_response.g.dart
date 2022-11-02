@@ -11,7 +11,7 @@ class _$CosmosGovV1beta1QueryVotesResponse
   @override
   final BuiltList<CosmosGovV1beta1Vote>? votes;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosGovV1beta1QueryVotesResponse(
           [void Function(CosmosGovV1beta1QueryVotesResponseBuilder)?
@@ -64,10 +64,13 @@ class CosmosGovV1beta1QueryVotesResponseBuilder
       _$this._votes ??= new ListBuilder<CosmosGovV1beta1Vote>();
   set votes(ListBuilder<CosmosGovV1beta1Vote>? votes) => _$this._votes = votes;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosGovV1beta1QueryVotesResponseBuilder() {

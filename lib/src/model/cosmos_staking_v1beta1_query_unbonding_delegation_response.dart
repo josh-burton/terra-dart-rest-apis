@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_unbonding_delegation.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_unbonding_delegation_response_unbond.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_staking_v1beta1_query_unbonding_delegation_response.g.dart';
 /// * [unbond] 
 abstract class CosmosStakingV1beta1QueryUnbondingDelegationResponse implements Built<CosmosStakingV1beta1QueryUnbondingDelegationResponse, CosmosStakingV1beta1QueryUnbondingDelegationResponseBuilder> {
     @BuiltValueField(wireName: r'unbond')
-    CosmosStakingV1beta1UnbondingDelegation? get unbond;
+    CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbond? get unbond;
 
     CosmosStakingV1beta1QueryUnbondingDelegationResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosStakingV1beta1QueryUnbondingDelegationResponseSerializer implement
             result
                 ..add(r'unbond')
                 ..add(serializers.serialize(object.unbond,
-                    specifiedType: const FullType(CosmosStakingV1beta1UnbondingDelegation)));
+                    specifiedType: const FullType(CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbond)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosStakingV1beta1QueryUnbondingDelegationResponseSerializer implement
             switch (key) {
                 case r'unbond':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1UnbondingDelegation)) as CosmosStakingV1beta1UnbondingDelegation;
+                        specifiedType: const FullType(CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbond)) as CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbond;
                     result.unbond.replace(valueDes);
                     break;
             }

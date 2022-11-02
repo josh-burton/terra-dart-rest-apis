@@ -9,9 +9,9 @@ part of 'cosmos_staking_v1beta1_delegation_response.dart';
 class _$CosmosStakingV1beta1DelegationResponse
     extends CosmosStakingV1beta1DelegationResponse {
   @override
-  final CosmosStakingV1beta1Delegation? delegation;
+  final CosmosStakingV1beta1DelegationResponseDelegation? delegation;
   @override
-  final CosmosBaseV1beta1Coin? balance;
+  final CosmosBankV1beta1QueryBalanceResponseBalance? balance;
 
   factory _$CosmosStakingV1beta1DelegationResponse(
           [void Function(CosmosStakingV1beta1DelegationResponseBuilder)?
@@ -61,16 +61,20 @@ class CosmosStakingV1beta1DelegationResponseBuilder
             CosmosStakingV1beta1DelegationResponseBuilder> {
   _$CosmosStakingV1beta1DelegationResponse? _$v;
 
-  CosmosStakingV1beta1DelegationBuilder? _delegation;
-  CosmosStakingV1beta1DelegationBuilder get delegation =>
-      _$this._delegation ??= new CosmosStakingV1beta1DelegationBuilder();
-  set delegation(CosmosStakingV1beta1DelegationBuilder? delegation) =>
+  CosmosStakingV1beta1DelegationResponseDelegationBuilder? _delegation;
+  CosmosStakingV1beta1DelegationResponseDelegationBuilder get delegation =>
+      _$this._delegation ??=
+          new CosmosStakingV1beta1DelegationResponseDelegationBuilder();
+  set delegation(
+          CosmosStakingV1beta1DelegationResponseDelegationBuilder?
+              delegation) =>
       _$this._delegation = delegation;
 
-  CosmosBaseV1beta1CoinBuilder? _balance;
-  CosmosBaseV1beta1CoinBuilder get balance =>
-      _$this._balance ??= new CosmosBaseV1beta1CoinBuilder();
-  set balance(CosmosBaseV1beta1CoinBuilder? balance) =>
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? _balance;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder get balance =>
+      _$this._balance ??=
+          new CosmosBankV1beta1QueryBalanceResponseBalanceBuilder();
+  set balance(CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? balance) =>
       _$this._balance = balance;
 
   CosmosStakingV1beta1DelegationResponseBuilder() {

@@ -12,7 +12,7 @@ class _$CosmosFeegrantV1beta1QueryAllowancesResponse
   final BuiltList<GrantisstoredintheKVStoretorecordagrantwithfullcontext>?
       allowances;
   @override
-  final Pagination1? pagination;
+  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
 
   factory _$CosmosFeegrantV1beta1QueryAllowancesResponse(
           [void Function(CosmosFeegrantV1beta1QueryAllowancesResponseBuilder)?
@@ -74,10 +74,12 @@ class CosmosFeegrantV1beta1QueryAllowancesResponseBuilder
               allowances) =>
       _$this._allowances = allowances;
 
-  Pagination1Builder? _pagination;
-  Pagination1Builder get pagination =>
-      _$this._pagination ??= new Pagination1Builder();
-  set pagination(Pagination1Builder? pagination) =>
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosFeegrantV1beta1QueryAllowancesResponseBuilder() {

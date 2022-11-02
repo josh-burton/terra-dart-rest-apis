@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/merkle_prefixismerklepathprefixedtothekey_theconstructedkeyfromthe_pathandthekeywillbeappend_path_key_pathappend_path_key_prefixkey1.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_counterparty_prefix.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class Counterparty implements Built<Counterparty, CounterpartyBuilder> 
     String? get connectionId;
 
     @BuiltValueField(wireName: r'prefix')
-    MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1? get prefix;
+    IbcCoreConnectionV1CounterpartyPrefix? get prefix;
 
     Counterparty._();
 
@@ -64,7 +64,7 @@ class _$CounterpartySerializer implements StructuredSerializer<Counterparty> {
             result
                 ..add(r'prefix')
                 ..add(serializers.serialize(object.prefix,
-                    specifiedType: const FullType(MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1)));
+                    specifiedType: const FullType(IbcCoreConnectionV1CounterpartyPrefix)));
         }
         return result;
     }
@@ -93,7 +93,7 @@ class _$CounterpartySerializer implements StructuredSerializer<Counterparty> {
                     break;
                 case r'prefix':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1)) as MerklePrefixismerklepathprefixedtothekeyTheconstructedkeyfromthePathandthekeywillbeappendPathKeyPathappendPathKeyPrefixkey1;
+                        specifiedType: const FullType(IbcCoreConnectionV1CounterpartyPrefix)) as IbcCoreConnectionV1CounterpartyPrefix;
                     result.prefix.replace(valueDes);
                     break;
             }

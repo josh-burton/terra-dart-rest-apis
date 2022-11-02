@@ -9,7 +9,7 @@ part of 'query_validator_responseisresponsetypeforthe_query_validator_rp_cmethod
 class _$QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod
     extends QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod {
   @override
-  final CosmosStakingV1beta1Validator? validator;
+  final CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator? validator;
 
   factory _$QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod(
           [void Function(
@@ -65,10 +65,14 @@ class QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodBuilder
             QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodBuilder> {
   _$QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethod? _$v;
 
-  CosmosStakingV1beta1ValidatorBuilder? _validator;
-  CosmosStakingV1beta1ValidatorBuilder get validator =>
-      _$this._validator ??= new CosmosStakingV1beta1ValidatorBuilder();
-  set validator(CosmosStakingV1beta1ValidatorBuilder? validator) =>
+  CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder?
+      _validator;
+  CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder
+      get validator => _$this._validator ??=
+          new CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder();
+  set validator(
+          CosmosStakingV1beta1QueryDelegatorValidatorResponseValidatorBuilder?
+              validator) =>
       _$this._validator = validator;
 
   QueryValidatorResponseisresponsetypefortheQueryValidatorRPCmethodBuilder() {

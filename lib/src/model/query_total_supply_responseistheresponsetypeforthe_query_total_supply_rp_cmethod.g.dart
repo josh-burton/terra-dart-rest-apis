@@ -11,7 +11,8 @@ class _$QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod
   @override
   final BuiltList<CosmosBaseV1beta1Coin>? supply;
   @override
-  final Pagination4? pagination;
+  final QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination?
+      pagination;
 
   factory _$QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod(
           [void Function(
@@ -76,10 +77,14 @@ class QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodBu
   set supply(ListBuilder<CosmosBaseV1beta1Coin>? supply) =>
       _$this._supply = supply;
 
-  Pagination4Builder? _pagination;
-  Pagination4Builder get pagination =>
-      _$this._pagination ??= new Pagination4Builder();
-  set pagination(Pagination4Builder? pagination) =>
+  QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPaginationBuilder?
+      _pagination;
+  QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPaginationBuilder
+      get pagination => _$this._pagination ??=
+          new QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPaginationBuilder();
+  set pagination(
+          QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodBuilder() {

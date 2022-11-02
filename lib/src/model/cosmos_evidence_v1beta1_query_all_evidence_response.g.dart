@@ -11,7 +11,7 @@ class _$CosmosEvidenceV1beta1QueryAllEvidenceResponse
   @override
   final BuiltList<GoogleProtobufAny>? evidence;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosEvidenceV1beta1QueryAllEvidenceResponse(
           [void Function(CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder)?
@@ -69,10 +69,13 @@ class CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder
   set evidence(ListBuilder<GoogleProtobufAny>? evidence) =>
       _$this._evidence = evidence;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosEvidenceV1beta1QueryAllEvidenceResponseBuilder() {

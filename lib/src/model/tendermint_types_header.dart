@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_version_consensus.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_header_version.dart';
 import 'package:terra_dart_rest_apis/src/model/block_id26.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -28,7 +28,7 @@ part 'tendermint_types_header.g.dart';
 /// * [proposerAddress] 
 abstract class TendermintTypesHeader implements Built<TendermintTypesHeader, TendermintTypesHeaderBuilder> {
     @BuiltValueField(wireName: r'version')
-    TendermintVersionConsensus? get version;
+    TendermintTypesHeaderVersion? get version;
 
     @BuiltValueField(wireName: r'chain_id')
     String? get chainId;
@@ -95,7 +95,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
             result
                 ..add(r'version')
                 ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(TendermintVersionConsensus)));
+                    specifiedType: const FullType(TendermintTypesHeaderVersion)));
         }
         if (object.chainId != null) {
             result
@@ -192,7 +192,7 @@ class _$TendermintTypesHeaderSerializer implements StructuredSerializer<Tendermi
             switch (key) {
                 case r'version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintVersionConsensus)) as TendermintVersionConsensus;
+                        specifiedType: const FullType(TendermintTypesHeaderVersion)) as TendermintTypesHeaderVersion;
                     result.version.replace(valueDes);
                     break;
                 case r'chain_id':

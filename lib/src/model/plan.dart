@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -33,7 +33,7 @@ abstract class Plan implements Built<Plan, PlanBuilder> {
     String? get info;
 
     @BuiltValueField(wireName: r'upgraded_client_state')
-    GoogleProtobufAny? get upgradedClientState;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get upgradedClientState;
 
     Plan._();
 
@@ -85,7 +85,7 @@ class _$PlanSerializer implements StructuredSerializer<Plan> {
             result
                 ..add(r'upgraded_client_state')
                 ..add(serializers.serialize(object.upgradedClientState,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         return result;
     }
@@ -124,7 +124,7 @@ class _$PlanSerializer implements StructuredSerializer<Plan> {
                     break;
                 case r'upgraded_client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.upgradedClientState.replace(valueDes);
                     break;
             }

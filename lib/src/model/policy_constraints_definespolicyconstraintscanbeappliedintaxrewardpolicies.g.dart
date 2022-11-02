@@ -13,7 +13,7 @@ class _$PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies
   @override
   final String? rateMax;
   @override
-  final CosmosBaseV1beta1Coin? cap;
+  final CosmosBankV1beta1QueryBalanceResponseBalance? cap;
   @override
   final String? changeRateMax;
 
@@ -88,10 +88,11 @@ class PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpoliciesBu
   String? get rateMax => _$this._rateMax;
   set rateMax(String? rateMax) => _$this._rateMax = rateMax;
 
-  CosmosBaseV1beta1CoinBuilder? _cap;
-  CosmosBaseV1beta1CoinBuilder get cap =>
-      _$this._cap ??= new CosmosBaseV1beta1CoinBuilder();
-  set cap(CosmosBaseV1beta1CoinBuilder? cap) => _$this._cap = cap;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? _cap;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder get cap =>
+      _$this._cap ??= new CosmosBankV1beta1QueryBalanceResponseBalanceBuilder();
+  set cap(CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? cap) =>
+      _$this._cap = cap;
 
   String? _changeRateMax;
   String? get changeRateMax => _$this._changeRateMax;

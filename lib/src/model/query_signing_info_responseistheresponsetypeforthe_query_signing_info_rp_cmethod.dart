@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_slashing_v1beta1_validator_signing_info.dart';
+import 'package:terra_dart_rest_apis/src/model/query_signing_info_responseistheresponsetypeforthe_query_signing_info_rp_cmethod_val_signing_info.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'query_signing_info_responseistheresponsetypeforthe_query_signing_info_rp_c
 /// * [valSigningInfo] 
 abstract class QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod implements Built<QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod, QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodBuilder> {
     @BuiltValueField(wireName: r'val_signing_info')
-    CosmosSlashingV1beta1ValidatorSigningInfo? get valSigningInfo;
+    QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfo? get valSigningInfo;
 
     QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod._();
 
@@ -42,7 +42,7 @@ class _$QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod
             result
                 ..add(r'val_signing_info')
                 ..add(serializers.serialize(object.valSigningInfo,
-                    specifiedType: const FullType(CosmosSlashingV1beta1ValidatorSigningInfo)));
+                    specifiedType: const FullType(QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfo)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethod
             switch (key) {
                 case r'val_signing_info':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosSlashingV1beta1ValidatorSigningInfo)) as CosmosSlashingV1beta1ValidatorSigningInfo;
+                        specifiedType: const FullType(QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfo)) as QuerySigningInfoResponseistheresponsetypefortheQuerySigningInfoRPCmethodValSigningInfo;
                     result.valSigningInfo.replace(valueDes);
                     break;
             }

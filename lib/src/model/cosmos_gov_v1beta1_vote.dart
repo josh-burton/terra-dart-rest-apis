@@ -5,6 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/option2.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_weighted_vote_option.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -26,7 +27,6 @@ abstract class CosmosGovV1beta1Vote implements Built<CosmosGovV1beta1Vote, Cosmo
 
     @BuiltValueField(wireName: r'option')
     Option2? get option;
-    // enum optionEnum {  VOTE_OPTION_UNSPECIFIED,  VOTE_OPTION_YES,  VOTE_OPTION_ABSTAIN,  VOTE_OPTION_NO,  VOTE_OPTION_NO_WITH_VETO,  };
 
     /// 
     @BuiltValueField(wireName: r'options')
@@ -70,7 +70,7 @@ class _$CosmosGovV1beta1VoteSerializer implements StructuredSerializer<CosmosGov
             result
                 ..add(r'option')
                 ..add(serializers.serialize(object.option,
-                    specifiedType: const FullType(Option2)));
+                    specifiedType: const FullType.nullable(Option2)));
         }
         if (object.options != null) {
             result
@@ -105,8 +105,9 @@ class _$CosmosGovV1beta1VoteSerializer implements StructuredSerializer<CosmosGov
                     break;
                 case r'option':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Option2)) as Option2;
-                    result.option = valueDes;
+                        specifiedType: const FullType.nullable(Option2)) as Option2?;
+                    if (valueDes == null) continue;
+                    result.option.replace(valueDes);
                     break;
                 case r'options':
                     final valueDes = serializers.deserialize(value,

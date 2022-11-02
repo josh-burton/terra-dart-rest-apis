@@ -8,9 +8,9 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/account2.dart';
 import 'package:terra_dart_rest_apis/src/model/coin.dart';
 import 'package:terra_dart_rest_apis/src/model/get_bank_result.dart';
+import 'package:terra_dart_rest_apis/src/model/sendcoinsfromoneaccounttoanother_request.dart';
 import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
 import 'package:terra_dart_rest_apis/src/model/supply.dart';
 
@@ -179,7 +179,7 @@ class BankApi {
   ///
   /// Parameters:
   /// * [address] - Account address in bech32 format
-  /// * [account2] - The sender and tx information
+  /// * [sendcoinsfromoneaccounttoanotherRequest] - The sender and tx information
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -192,7 +192,7 @@ class BankApi {
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> sendcoinsfromoneaccounttoanother({ 
     required String address,
-    required Account2 account2,
+    required SendcoinsfromoneaccounttoanotherRequest sendcoinsfromoneaccounttoanotherRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -217,8 +217,8 @@ class BankApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Account2);
-      _bodyData = _serializers.serialize(account2, specifiedType: _type);
+      const _type = FullType(SendcoinsfromoneaccounttoanotherRequest);
+      _bodyData = _serializers.serialize(sendcoinsfromoneaccounttoanotherRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_query_v1beta1_page_response.dart';
+import 'package:terra_dart_rest_apis/src/model/query_signing_infos_responseistheresponsetypeforthe_query_signing_infos_rp_cmethod_pagination.dart';
 import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_identified_client_state.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -21,7 +21,7 @@ abstract class IbcCoreClientV1QueryClientStatesResponse implements Built<IbcCore
     BuiltList<IbcCoreClientV1IdentifiedClientState>? get clientStates;
 
     @BuiltValueField(wireName: r'pagination')
-    CosmosBaseQueryV1beta1PageResponse? get pagination;
+    QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination? get pagination;
 
     IbcCoreClientV1QueryClientStatesResponse._();
 
@@ -55,7 +55,7 @@ class _$IbcCoreClientV1QueryClientStatesResponseSerializer implements Structured
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(CosmosBaseQueryV1beta1PageResponse)));
+                    specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$IbcCoreClientV1QueryClientStatesResponseSerializer implements Structured
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseQueryV1beta1PageResponse)) as CosmosBaseQueryV1beta1PageResponse;
+                        specifiedType: const FullType(QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination)) as QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination;
                     result.pagination.replace(valueDes);
                     break;
             }

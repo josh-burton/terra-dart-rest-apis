@@ -9,11 +9,11 @@ part of 'ibc_core_channel_v1_query_channel_response.dart';
 class _$IbcCoreChannelV1QueryChannelResponse
     extends IbcCoreChannelV1QueryChannelResponse {
   @override
-  final IbcCoreChannelV1Channel? channel;
+  final IbcCoreChannelV1QueryChannelResponseChannel? channel;
   @override
   final String? proof;
   @override
-  final HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients?
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
       proofHeight;
 
   factory _$IbcCoreChannelV1QueryChannelResponse(
@@ -66,23 +66,24 @@ class IbcCoreChannelV1QueryChannelResponseBuilder
             IbcCoreChannelV1QueryChannelResponseBuilder> {
   _$IbcCoreChannelV1QueryChannelResponse? _$v;
 
-  IbcCoreChannelV1ChannelBuilder? _channel;
-  IbcCoreChannelV1ChannelBuilder get channel =>
-      _$this._channel ??= new IbcCoreChannelV1ChannelBuilder();
-  set channel(IbcCoreChannelV1ChannelBuilder? channel) =>
+  IbcCoreChannelV1QueryChannelResponseChannelBuilder? _channel;
+  IbcCoreChannelV1QueryChannelResponseChannelBuilder get channel =>
+      _$this._channel ??=
+          new IbcCoreChannelV1QueryChannelResponseChannelBuilder();
+  set channel(IbcCoreChannelV1QueryChannelResponseChannelBuilder? channel) =>
       _$this._channel = channel;
 
   String? _proof;
   String? get proof => _$this._proof;
   set proof(String? proof) => _$this._proof = proof;
 
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
       _proofHeight;
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
       get proofHeight => _$this._proofHeight ??=
-          new HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder();
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
   set proofHeight(
-          HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
               proofHeight) =>
       _$this._proofHeight = proofHeight;
 

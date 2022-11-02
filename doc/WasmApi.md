@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -255,7 +255,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getWasmApi();
 final String contractAddress = contractAddress_example; // String | contract address you want to lookup
-final String queryMsg = queryMsg_example; // String | json formatted query msg
+final String queryMsg = {}; // String | json formatted query msg
 
 try {
     final response = api.getstoredinformationwithquerymsg(contractAddress, queryMsg);

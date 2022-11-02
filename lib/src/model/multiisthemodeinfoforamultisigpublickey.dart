@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/multiisthemodeinfoforamultisigpublickey_bitarray.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_mode_info.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_crypto_multisig_v1beta1_compact_bit_array.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'multiisthemodeinfoforamultisigpublickey.g.dart';
 /// * [modeInfos] - 
 abstract class Multiisthemodeinfoforamultisigpublickey implements Built<Multiisthemodeinfoforamultisigpublickey, MultiisthemodeinfoforamultisigpublickeyBuilder> {
     @BuiltValueField(wireName: r'bitarray')
-    CosmosCryptoMultisigV1beta1CompactBitArray? get bitarray;
+    MultiisthemodeinfoforamultisigpublickeyBitarray? get bitarray;
 
     /// 
     @BuiltValueField(wireName: r'mode_infos')
@@ -49,7 +49,7 @@ class _$MultiisthemodeinfoforamultisigpublickeySerializer implements StructuredS
             result
                 ..add(r'bitarray')
                 ..add(serializers.serialize(object.bitarray,
-                    specifiedType: const FullType(CosmosCryptoMultisigV1beta1CompactBitArray)));
+                    specifiedType: const FullType(MultiisthemodeinfoforamultisigpublickeyBitarray)));
         }
         if (object.modeInfos != null) {
             result
@@ -74,7 +74,7 @@ class _$MultiisthemodeinfoforamultisigpublickeySerializer implements StructuredS
             switch (key) {
                 case r'bitarray':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosCryptoMultisigV1beta1CompactBitArray)) as CosmosCryptoMultisigV1beta1CompactBitArray;
+                        specifiedType: const FullType(MultiisthemodeinfoforamultisigpublickeyBitarray)) as MultiisthemodeinfoforamultisigpublickeyBitarray;
                     result.bitarray.replace(valueDes);
                     break;
                 case r'mode_infos':

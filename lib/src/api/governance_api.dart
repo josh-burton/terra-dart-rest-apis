@@ -10,22 +10,22 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
 import 'package:terra_dart_rest_apis/src/model/deposit.dart';
+import 'package:terra_dart_rest_apis/src/model/generateaparameterchangeproposaltransaction_request.dart';
 import 'package:terra_dart_rest_apis/src/model/get_proposal_deposits_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_proposal_list_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_proposal_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_proposal_votes_result.dart';
 import 'package:terra_dart_rest_apis/src/model/post_deposit_body.dart';
-import 'package:terra_dart_rest_apis/src/model/post_proposal_body.dart';
-import 'package:terra_dart_rest_apis/src/model/post_proposal_body1.dart';
-import 'package:terra_dart_rest_apis/src/model/post_vote_body.dart';
 import 'package:terra_dart_rest_apis/src/model/proposer.dart';
 import 'package:terra_dart_rest_apis/src/model/querygovernancedepositparameters_response.dart';
 import 'package:terra_dart_rest_apis/src/model/querygovernancetallyparameters_response.dart';
 import 'package:terra_dart_rest_apis/src/model/querygovernancevotingparameters_response.dart';
 import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/submitaproposal_request.dart';
 import 'package:terra_dart_rest_apis/src/model/tally_result.dart';
 import 'package:terra_dart_rest_apis/src/model/text_proposal.dart';
 import 'package:terra_dart_rest_apis/src/model/vote.dart';
+import 'package:terra_dart_rest_apis/src/model/voteaproposal_request.dart';
 
 class GovernanceApi {
 
@@ -135,7 +135,7 @@ class GovernanceApi {
   /// Generate a parameter change proposal transaction
   ///
   /// Parameters:
-  /// * [postProposalBody1] - The parameter change proposal body that contains all parameter changes
+  /// * [generateaparameterchangeproposaltransactionRequest] - The parameter change proposal body that contains all parameter changes
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -147,7 +147,7 @@ class GovernanceApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> generateaparameterchangeproposaltransaction({ 
-    required PostProposalBody1 postProposalBody1,
+    required GenerateaparameterchangeproposaltransactionRequest generateaparameterchangeproposaltransactionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -172,8 +172,8 @@ class GovernanceApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(PostProposalBody1);
-      _bodyData = _serializers.serialize(postProposalBody1, specifiedType: _type);
+      const _type = FullType(GenerateaparameterchangeproposaltransactionRequest);
+      _bodyData = _serializers.serialize(generateaparameterchangeproposaltransactionRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1406,7 +1406,7 @@ class GovernanceApi {
   /// Send transaction to submit a proposal
   ///
   /// Parameters:
-  /// * [postProposalBody] - valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
+  /// * [submitaproposalRequest] - valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1418,7 +1418,7 @@ class GovernanceApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> submitaproposal({ 
-    required PostProposalBody postProposalBody,
+    required SubmitaproposalRequest submitaproposalRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1443,8 +1443,8 @@ class GovernanceApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(PostProposalBody);
-      _bodyData = _serializers.serialize(postProposalBody, specifiedType: _type);
+      const _type = FullType(SubmitaproposalRequest);
+      _bodyData = _serializers.serialize(submitaproposalRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1501,7 +1501,7 @@ class GovernanceApi {
   ///
   /// Parameters:
   /// * [proposalId] - proposal id
-  /// * [postVoteBody] - valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
+  /// * [voteaproposalRequest] - valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1514,7 +1514,7 @@ class GovernanceApi {
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> voteaproposal({ 
     required String proposalId,
-    required PostVoteBody postVoteBody,
+    required VoteaproposalRequest voteaproposalRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1539,8 +1539,8 @@ class GovernanceApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(PostVoteBody);
-      _bodyData = _serializers.serialize(postVoteBody, specifiedType: _type);
+      const _type = FullType(VoteaproposalRequest);
+      _bodyData = _serializers.serialize(voteaproposalRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

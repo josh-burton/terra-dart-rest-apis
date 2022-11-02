@@ -17,7 +17,7 @@ class _$IbcCoreConnectionV1IdentifiedConnection
   @override
   final State? state;
   @override
-  final Counterparty? counterparty;
+  final IbcCoreConnectionV1ConnectionEndCounterparty? counterparty;
   @override
   final String? delayPeriod;
 
@@ -108,10 +108,12 @@ class IbcCoreConnectionV1IdentifiedConnectionBuilder
   State? get state => _$this._state;
   set state(State? state) => _$this._state = state;
 
-  CounterpartyBuilder? _counterparty;
-  CounterpartyBuilder get counterparty =>
-      _$this._counterparty ??= new CounterpartyBuilder();
-  set counterparty(CounterpartyBuilder? counterparty) =>
+  IbcCoreConnectionV1ConnectionEndCounterpartyBuilder? _counterparty;
+  IbcCoreConnectionV1ConnectionEndCounterpartyBuilder get counterparty =>
+      _$this._counterparty ??=
+          new IbcCoreConnectionV1ConnectionEndCounterpartyBuilder();
+  set counterparty(
+          IbcCoreConnectionV1ConnectionEndCounterpartyBuilder? counterparty) =>
       _$this._counterparty = counterparty;
 
   String? _delayPeriod;

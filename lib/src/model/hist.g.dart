@@ -8,7 +8,7 @@ part of 'hist.dart';
 
 class _$Hist extends Hist {
   @override
-  final TendermintTypesHeader? header;
+  final TendermintTypesBlockHeader? header;
   @override
   final BuiltList<CosmosStakingV1beta1Validator>? valset;
 
@@ -47,10 +47,11 @@ class _$Hist extends Hist {
 class HistBuilder implements Builder<Hist, HistBuilder> {
   _$Hist? _$v;
 
-  TendermintTypesHeaderBuilder? _header;
-  TendermintTypesHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesHeaderBuilder();
-  set header(TendermintTypesHeaderBuilder? header) => _$this._header = header;
+  TendermintTypesBlockHeaderBuilder? _header;
+  TendermintTypesBlockHeaderBuilder get header =>
+      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
+  set header(TendermintTypesBlockHeaderBuilder? header) =>
+      _$this._header = header;
 
   ListBuilder<CosmosStakingV1beta1Validator>? _valset;
   ListBuilder<CosmosStakingV1beta1Validator> get valset =>

@@ -9,7 +9,7 @@ part of 'ibc_core_client_v1_query_upgraded_consensus_state_response.dart';
 class _$IbcCoreClientV1QueryUpgradedConsensusStateResponse
     extends IbcCoreClientV1QueryUpgradedConsensusStateResponse {
   @override
-  final GoogleProtobufAny? upgradedConsensusState;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? upgradedConsensusState;
 
   factory _$IbcCoreClientV1QueryUpgradedConsensusStateResponse(
           [void Function(
@@ -62,11 +62,13 @@ class IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder
             IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder> {
   _$IbcCoreClientV1QueryUpgradedConsensusStateResponse? _$v;
 
-  GoogleProtobufAnyBuilder? _upgradedConsensusState;
-  GoogleProtobufAnyBuilder get upgradedConsensusState =>
-      _$this._upgradedConsensusState ??= new GoogleProtobufAnyBuilder();
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _upgradedConsensusState;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder
+      get upgradedConsensusState => _$this._upgradedConsensusState ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
   set upgradedConsensusState(
-          GoogleProtobufAnyBuilder? upgradedConsensusState) =>
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+              upgradedConsensusState) =>
       _$this._upgradedConsensusState = upgradedConsensusState;
 
   IbcCoreClientV1QueryUpgradedConsensusStateResponseBuilder() {

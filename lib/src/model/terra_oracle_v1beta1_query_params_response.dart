@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/params7.dart';
+import 'package:terra_dart_rest_apis/src/model/terra_oracle_v1beta1_query_params_response_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_oracle_v1beta1_query_params_response.g.dart';
 /// * [params] 
 abstract class TerraOracleV1beta1QueryParamsResponse implements Built<TerraOracleV1beta1QueryParamsResponse, TerraOracleV1beta1QueryParamsResponseBuilder> {
     @BuiltValueField(wireName: r'params')
-    Params7? get params;
+    TerraOracleV1beta1QueryParamsResponseParams? get params;
 
     TerraOracleV1beta1QueryParamsResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraOracleV1beta1QueryParamsResponseSerializer implements StructuredSer
             result
                 ..add(r'params')
                 ..add(serializers.serialize(object.params,
-                    specifiedType: const FullType(Params7)));
+                    specifiedType: const FullType(TerraOracleV1beta1QueryParamsResponseParams)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraOracleV1beta1QueryParamsResponseSerializer implements StructuredSer
             switch (key) {
                 case r'params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Params7)) as Params7;
+                        specifiedType: const FullType(TerraOracleV1beta1QueryParamsResponseParams)) as TerraOracleV1beta1QueryParamsResponseParams;
                     result.params.replace(valueDes);
                     break;
             }

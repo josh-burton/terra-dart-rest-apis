@@ -9,7 +9,7 @@ part of 'cosmos_auth_v1beta1_query_account_response.dart';
 class _$CosmosAuthV1beta1QueryAccountResponse
     extends CosmosAuthV1beta1QueryAccountResponse {
   @override
-  final GoogleProtobufAny? account;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? account;
 
   factory _$CosmosAuthV1beta1QueryAccountResponse(
           [void Function(CosmosAuthV1beta1QueryAccountResponseBuilder)?
@@ -56,10 +56,12 @@ class CosmosAuthV1beta1QueryAccountResponseBuilder
             CosmosAuthV1beta1QueryAccountResponseBuilder> {
   _$CosmosAuthV1beta1QueryAccountResponse? _$v;
 
-  GoogleProtobufAnyBuilder? _account;
-  GoogleProtobufAnyBuilder get account =>
-      _$this._account ??= new GoogleProtobufAnyBuilder();
-  set account(GoogleProtobufAnyBuilder? account) => _$this._account = account;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _account;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get account =>
+      _$this._account ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set account(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? account) =>
+      _$this._account = account;
 
   CosmosAuthV1beta1QueryAccountResponseBuilder() {
     CosmosAuthV1beta1QueryAccountResponse._defaults(this);

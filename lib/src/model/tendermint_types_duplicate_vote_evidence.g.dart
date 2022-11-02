@@ -9,9 +9,9 @@ part of 'tendermint_types_duplicate_vote_evidence.dart';
 class _$TendermintTypesDuplicateVoteEvidence
     extends TendermintTypesDuplicateVoteEvidence {
   @override
-  final TendermintTypesVote? voteA;
+  final TendermintTypesDuplicateVoteEvidenceVoteA? voteA;
   @override
-  final TendermintTypesVote? voteB;
+  final TendermintTypesDuplicateVoteEvidenceVoteA? voteB;
   @override
   final String? totalVotingPower;
   @override
@@ -81,15 +81,17 @@ class TendermintTypesDuplicateVoteEvidenceBuilder
             TendermintTypesDuplicateVoteEvidenceBuilder> {
   _$TendermintTypesDuplicateVoteEvidence? _$v;
 
-  TendermintTypesVoteBuilder? _voteA;
-  TendermintTypesVoteBuilder get voteA =>
-      _$this._voteA ??= new TendermintTypesVoteBuilder();
-  set voteA(TendermintTypesVoteBuilder? voteA) => _$this._voteA = voteA;
+  TendermintTypesDuplicateVoteEvidenceVoteABuilder? _voteA;
+  TendermintTypesDuplicateVoteEvidenceVoteABuilder get voteA =>
+      _$this._voteA ??= new TendermintTypesDuplicateVoteEvidenceVoteABuilder();
+  set voteA(TendermintTypesDuplicateVoteEvidenceVoteABuilder? voteA) =>
+      _$this._voteA = voteA;
 
-  TendermintTypesVoteBuilder? _voteB;
-  TendermintTypesVoteBuilder get voteB =>
-      _$this._voteB ??= new TendermintTypesVoteBuilder();
-  set voteB(TendermintTypesVoteBuilder? voteB) => _$this._voteB = voteB;
+  TendermintTypesDuplicateVoteEvidenceVoteABuilder? _voteB;
+  TendermintTypesDuplicateVoteEvidenceVoteABuilder get voteB =>
+      _$this._voteB ??= new TendermintTypesDuplicateVoteEvidenceVoteABuilder();
+  set voteB(TendermintTypesDuplicateVoteEvidenceVoteABuilder? voteB) =>
+      _$this._voteB = voteB;
 
   String? _totalVotingPower;
   String? get totalVotingPower => _$this._totalVotingPower;

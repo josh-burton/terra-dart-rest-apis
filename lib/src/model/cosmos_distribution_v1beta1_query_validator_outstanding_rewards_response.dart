@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_validator_outstanding_rewards.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_distribution_v1beta1_query_validator_outstanding_rewards_response_rewards.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_distribution_v1beta1_query_validator_outstanding_rewards_response.g
 /// * [rewards] 
 abstract class CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse implements Built<CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse, CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseBuilder> {
     @BuiltValueField(wireName: r'rewards')
-    CosmosDistributionV1beta1ValidatorOutstandingRewards? get rewards;
+    CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards? get rewards;
 
     CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseSeriali
             result
                 ..add(r'rewards')
                 ..add(serializers.serialize(object.rewards,
-                    specifiedType: const FullType(CosmosDistributionV1beta1ValidatorOutstandingRewards)));
+                    specifiedType: const FullType(CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseSeriali
             switch (key) {
                 case r'rewards':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosDistributionV1beta1ValidatorOutstandingRewards)) as CosmosDistributionV1beta1ValidatorOutstandingRewards;
+                        specifiedType: const FullType(CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards)) as CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards;
                     result.rewards.replace(valueDes);
                     break;
             }

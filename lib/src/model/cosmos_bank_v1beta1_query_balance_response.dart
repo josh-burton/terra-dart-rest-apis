@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_balance_response_balance.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_bank_v1beta1_query_balance_response.g.dart';
 /// * [balance] 
 abstract class CosmosBankV1beta1QueryBalanceResponse implements Built<CosmosBankV1beta1QueryBalanceResponse, CosmosBankV1beta1QueryBalanceResponseBuilder> {
     @BuiltValueField(wireName: r'balance')
-    CosmosBaseV1beta1Coin? get balance;
+    CosmosBankV1beta1QueryBalanceResponseBalance? get balance;
 
     CosmosBankV1beta1QueryBalanceResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosBankV1beta1QueryBalanceResponseSerializer implements StructuredSer
             result
                 ..add(r'balance')
                 ..add(serializers.serialize(object.balance,
-                    specifiedType: const FullType(CosmosBaseV1beta1Coin)));
+                    specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosBankV1beta1QueryBalanceResponseSerializer implements StructuredSer
             switch (key) {
                 case r'balance':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseV1beta1Coin)) as CosmosBaseV1beta1Coin;
+                        specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)) as CosmosBankV1beta1QueryBalanceResponseBalance;
                     result.balance.replace(valueDes);
                     break;
             }

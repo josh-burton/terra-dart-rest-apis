@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_redelegation_response.dart';
 class _$CosmosStakingV1beta1RedelegationResponse
     extends CosmosStakingV1beta1RedelegationResponse {
   @override
-  final CosmosStakingV1beta1Redelegation? redelegation;
+  final CosmosStakingV1beta1RedelegationResponseRedelegation? redelegation;
   @override
   final BuiltList<CosmosStakingV1beta1RedelegationEntryResponse>? entries;
 
@@ -62,10 +62,13 @@ class CosmosStakingV1beta1RedelegationResponseBuilder
             CosmosStakingV1beta1RedelegationResponseBuilder> {
   _$CosmosStakingV1beta1RedelegationResponse? _$v;
 
-  CosmosStakingV1beta1RedelegationBuilder? _redelegation;
-  CosmosStakingV1beta1RedelegationBuilder get redelegation =>
-      _$this._redelegation ??= new CosmosStakingV1beta1RedelegationBuilder();
-  set redelegation(CosmosStakingV1beta1RedelegationBuilder? redelegation) =>
+  CosmosStakingV1beta1RedelegationResponseRedelegationBuilder? _redelegation;
+  CosmosStakingV1beta1RedelegationResponseRedelegationBuilder
+      get redelegation => _$this._redelegation ??=
+          new CosmosStakingV1beta1RedelegationResponseRedelegationBuilder();
+  set redelegation(
+          CosmosStakingV1beta1RedelegationResponseRedelegationBuilder?
+              redelegation) =>
       _$this._redelegation = redelegation;
 
   ListBuilder<CosmosStakingV1beta1RedelegationEntryResponse>? _entries;

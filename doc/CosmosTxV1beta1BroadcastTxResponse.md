@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**txResponse** | [**CosmosBaseAbciV1beta1TxResponse**](CosmosBaseAbciV1beta1TxResponse.md) |  | [optional] 
+**txResponse** | [**CosmosTxV1beta1BroadcastTxResponseTxResponse**](CosmosTxV1beta1BroadcastTxResponseTxResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

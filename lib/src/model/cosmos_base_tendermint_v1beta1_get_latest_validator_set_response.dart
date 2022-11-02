@@ -4,7 +4,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_base_tendermint_v1beta1_validator.dart';
-import 'package:terra_dart_rest_apis/src/model/pagination1.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_authz_v1beta1_query_grants_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -25,7 +25,7 @@ abstract class CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse implemen
     BuiltList<CosmosBaseTendermintV1beta1Validator>? get validators;
 
     @BuiltValueField(wireName: r'pagination')
-    Pagination1? get pagination;
+    CosmosAuthzV1beta1QueryGrantsResponsePagination? get pagination;
 
     CosmosBaseTendermintV1beta1GetLatestValidatorSetResponse._();
 
@@ -65,7 +65,7 @@ class _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseSerializer imple
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(Pagination1)));
+                    specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)));
         }
         return result;
     }
@@ -94,7 +94,7 @@ class _$CosmosBaseTendermintV1beta1GetLatestValidatorSetResponseSerializer imple
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pagination1)) as Pagination1;
+                        specifiedType: const FullType(CosmosAuthzV1beta1QueryGrantsResponsePagination)) as CosmosAuthzV1beta1QueryGrantsResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

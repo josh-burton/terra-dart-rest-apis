@@ -10,8 +10,6 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
 import 'package:terra_dart_rest_apis/src/model/delegation.dart';
-import 'package:terra_dart_rest_apis/src/model/delegation10.dart';
-import 'package:terra_dart_rest_apis/src/model/delegation7.dart';
 import 'package:terra_dart_rest_apis/src/model/get_staking_for_account_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_validator_claims_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_validator_delegations_result.dart';
@@ -21,6 +19,9 @@ import 'package:terra_dart_rest_apis/src/model/getthecurrentstakingparametervalu
 import 'package:terra_dart_rest_apis/src/model/getthecurrentstateofthestakingpool_response.dart';
 import 'package:terra_dart_rest_apis/src/model/redelegation.dart';
 import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/submitanunbondingdelegation_request.dart';
+import 'package:terra_dart_rest_apis/src/model/submitaredelegation_request.dart';
+import 'package:terra_dart_rest_apis/src/model/submitdelegation_request.dart';
 import 'package:terra_dart_rest_apis/src/model/unbonding_delegation.dart';
 import 'package:terra_dart_rest_apis/src/model/validator.dart';
 import 'package:terra_dart_rest_apis/src/model/validator15.dart';
@@ -1754,7 +1755,7 @@ class StakingApi {
   ///
   /// Parameters:
   /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [delegation7] - Unbond an amount of bonded shares from a validator
+  /// * [submitanunbondingdelegationRequest] - Unbond an amount of bonded shares from a validator
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1767,7 +1768,7 @@ class StakingApi {
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> submitanunbondingdelegation({ 
     required String delegatorAddr,
-    Delegation7? delegation7,
+    SubmitanunbondingdelegationRequest? submitanunbondingdelegationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1792,8 +1793,8 @@ class StakingApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Delegation7);
-      _bodyData = delegation7 == null ? null : _serializers.serialize(delegation7, specifiedType: _type);
+      const _type = FullType(SubmitanunbondingdelegationRequest);
+      _bodyData = submitanunbondingdelegationRequest == null ? null : _serializers.serialize(submitanunbondingdelegationRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1850,7 +1851,7 @@ class StakingApi {
   ///
   /// Parameters:
   /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [delegation10] - The sender and tx information
+  /// * [submitaredelegationRequest] - The sender and tx information
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1863,7 +1864,7 @@ class StakingApi {
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> submitaredelegation({ 
     required String delegatorAddr,
-    Delegation10? delegation10,
+    SubmitaredelegationRequest? submitaredelegationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1888,8 +1889,8 @@ class StakingApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Delegation10);
-      _bodyData = delegation10 == null ? null : _serializers.serialize(delegation10, specifiedType: _type);
+      const _type = FullType(SubmitaredelegationRequest);
+      _bodyData = submitaredelegationRequest == null ? null : _serializers.serialize(submitaredelegationRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1946,7 +1947,7 @@ class StakingApi {
   ///
   /// Parameters:
   /// * [delegatorAddr] - Bech32 AccAddress of Delegator
-  /// * [delegation7] - Delegate an amount of liquid coins to a validator
+  /// * [submitdelegationRequest] - Delegate an amount of liquid coins to a validator
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1959,7 +1960,7 @@ class StakingApi {
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> submitdelegation({ 
     required String delegatorAddr,
-    Delegation7? delegation7,
+    SubmitdelegationRequest? submitdelegationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1984,8 +1985,8 @@ class StakingApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Delegation7);
-      _bodyData = delegation7 == null ? null : _serializers.serialize(delegation7, specifiedType: _type);
+      const _type = FullType(SubmitdelegationRequest);
+      _bodyData = submitdelegationRequest == null ? null : _serializers.serialize(submitdelegationRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

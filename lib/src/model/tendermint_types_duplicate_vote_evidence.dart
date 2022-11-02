@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_vote.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_duplicate_vote_evidence_vote_a.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'tendermint_types_duplicate_vote_evidence.g.dart';
 /// * [timestamp] 
 abstract class TendermintTypesDuplicateVoteEvidence implements Built<TendermintTypesDuplicateVoteEvidence, TendermintTypesDuplicateVoteEvidenceBuilder> {
     @BuiltValueField(wireName: r'vote_a')
-    TendermintTypesVote? get voteA;
+    TendermintTypesDuplicateVoteEvidenceVoteA? get voteA;
 
     @BuiltValueField(wireName: r'vote_b')
-    TendermintTypesVote? get voteB;
+    TendermintTypesDuplicateVoteEvidenceVoteA? get voteB;
 
     @BuiltValueField(wireName: r'total_voting_power')
     String? get totalVotingPower;
@@ -58,13 +58,13 @@ class _$TendermintTypesDuplicateVoteEvidenceSerializer implements StructuredSeri
             result
                 ..add(r'vote_a')
                 ..add(serializers.serialize(object.voteA,
-                    specifiedType: const FullType(TendermintTypesVote)));
+                    specifiedType: const FullType(TendermintTypesDuplicateVoteEvidenceVoteA)));
         }
         if (object.voteB != null) {
             result
                 ..add(r'vote_b')
                 ..add(serializers.serialize(object.voteB,
-                    specifiedType: const FullType(TendermintTypesVote)));
+                    specifiedType: const FullType(TendermintTypesDuplicateVoteEvidenceVoteA)));
         }
         if (object.totalVotingPower != null) {
             result
@@ -101,12 +101,12 @@ class _$TendermintTypesDuplicateVoteEvidenceSerializer implements StructuredSeri
             switch (key) {
                 case r'vote_a':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesVote)) as TendermintTypesVote;
+                        specifiedType: const FullType(TendermintTypesDuplicateVoteEvidenceVoteA)) as TendermintTypesDuplicateVoteEvidenceVoteA;
                     result.voteA.replace(valueDes);
                     break;
                 case r'vote_b':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesVote)) as TendermintTypesVote;
+                        specifiedType: const FullType(TendermintTypesDuplicateVoteEvidenceVoteA)) as TendermintTypesDuplicateVoteEvidenceVoteA;
                     result.voteB.replace(valueDes);
                     break;
                 case r'total_voting_power':

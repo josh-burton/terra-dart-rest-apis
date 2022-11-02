@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/heightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanother_heightforthepurposesofupdatingandfreezingclients.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'query_connection_consensus_state_responseistheresponsetypeforthe_query_con
 /// * [proofHeight] 
 abstract class QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod implements Built<QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod, QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethodBuilder> {
     @BuiltValueField(wireName: r'consensus_state')
-    GoogleProtobufAny? get consensusState;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get consensusState;
 
     @BuiltValueField(wireName: r'client_id')
     String? get clientId;
@@ -27,7 +27,7 @@ abstract class QueryConnectionConsensusStateResponseistheresponsetypefortheQuery
     String? get proof;
 
     @BuiltValueField(wireName: r'proof_height')
-    HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients? get proofHeight;
+    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get proofHeight;
 
     QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnectionConsensusStateRPCmethod._();
 
@@ -55,7 +55,7 @@ class _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnect
             result
                 ..add(r'consensus_state')
                 ..add(serializers.serialize(object.consensusState,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.clientId != null) {
             result
@@ -73,7 +73,7 @@ class _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnect
             result
                 ..add(r'proof_height')
                 ..add(serializers.serialize(object.proofHeight,
-                    specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)));
+                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
         }
         return result;
     }
@@ -92,7 +92,7 @@ class _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnect
             switch (key) {
                 case r'consensus_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.consensusState.replace(valueDes);
                     break;
                 case r'client_id':
@@ -107,7 +107,7 @@ class _$QueryConnectionConsensusStateResponseistheresponsetypefortheQueryConnect
                     break;
                 case r'proof_height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)) as HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients;
+                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
                     result.proofHeight.replace(valueDes);
                     break;
             }

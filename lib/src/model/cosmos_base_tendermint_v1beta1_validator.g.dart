@@ -11,7 +11,7 @@ class _$CosmosBaseTendermintV1beta1Validator
   @override
   final String? address;
   @override
-  final GoogleProtobufAny? pubKey;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? pubKey;
   @override
   final String? votingPower;
   @override
@@ -75,10 +75,12 @@ class CosmosBaseTendermintV1beta1ValidatorBuilder
   String? get address => _$this._address;
   set address(String? address) => _$this._address = address;
 
-  GoogleProtobufAnyBuilder? _pubKey;
-  GoogleProtobufAnyBuilder get pubKey =>
-      _$this._pubKey ??= new GoogleProtobufAnyBuilder();
-  set pubKey(GoogleProtobufAnyBuilder? pubKey) => _$this._pubKey = pubKey;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _pubKey;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get pubKey =>
+      _$this._pubKey ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set pubKey(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? pubKey) =>
+      _$this._pubKey = pubKey;
 
   String? _votingPower;
   String? get votingPower => _$this._votingPower;

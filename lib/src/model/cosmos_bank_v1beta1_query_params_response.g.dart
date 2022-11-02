@@ -9,7 +9,7 @@ part of 'cosmos_bank_v1beta1_query_params_response.dart';
 class _$CosmosBankV1beta1QueryParamsResponse
     extends CosmosBankV1beta1QueryParamsResponse {
   @override
-  final CosmosBankV1beta1Params? params;
+  final CosmosBankV1beta1QueryParamsResponseParams? params;
 
   factory _$CosmosBankV1beta1QueryParamsResponse(
           [void Function(CosmosBankV1beta1QueryParamsResponseBuilder)?
@@ -54,10 +54,12 @@ class CosmosBankV1beta1QueryParamsResponseBuilder
             CosmosBankV1beta1QueryParamsResponseBuilder> {
   _$CosmosBankV1beta1QueryParamsResponse? _$v;
 
-  CosmosBankV1beta1ParamsBuilder? _params;
-  CosmosBankV1beta1ParamsBuilder get params =>
-      _$this._params ??= new CosmosBankV1beta1ParamsBuilder();
-  set params(CosmosBankV1beta1ParamsBuilder? params) => _$this._params = params;
+  CosmosBankV1beta1QueryParamsResponseParamsBuilder? _params;
+  CosmosBankV1beta1QueryParamsResponseParamsBuilder get params =>
+      _$this._params ??=
+          new CosmosBankV1beta1QueryParamsResponseParamsBuilder();
+  set params(CosmosBankV1beta1QueryParamsResponseParamsBuilder? params) =>
+      _$this._params = params;
 
   CosmosBankV1beta1QueryParamsResponseBuilder() {
     CosmosBankV1beta1QueryParamsResponse._defaults(this);

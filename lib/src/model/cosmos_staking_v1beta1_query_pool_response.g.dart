@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_query_pool_response.dart';
 class _$CosmosStakingV1beta1QueryPoolResponse
     extends CosmosStakingV1beta1QueryPoolResponse {
   @override
-  final Pool1? pool;
+  final CosmosStakingV1beta1QueryPoolResponsePool? pool;
 
   factory _$CosmosStakingV1beta1QueryPoolResponse(
           [void Function(CosmosStakingV1beta1QueryPoolResponseBuilder)?
@@ -55,9 +55,11 @@ class CosmosStakingV1beta1QueryPoolResponseBuilder
             CosmosStakingV1beta1QueryPoolResponseBuilder> {
   _$CosmosStakingV1beta1QueryPoolResponse? _$v;
 
-  Pool1Builder? _pool;
-  Pool1Builder get pool => _$this._pool ??= new Pool1Builder();
-  set pool(Pool1Builder? pool) => _$this._pool = pool;
+  CosmosStakingV1beta1QueryPoolResponsePoolBuilder? _pool;
+  CosmosStakingV1beta1QueryPoolResponsePoolBuilder get pool =>
+      _$this._pool ??= new CosmosStakingV1beta1QueryPoolResponsePoolBuilder();
+  set pool(CosmosStakingV1beta1QueryPoolResponsePoolBuilder? pool) =>
+      _$this._pool = pool;
 
   CosmosStakingV1beta1QueryPoolResponseBuilder() {
     CosmosStakingV1beta1QueryPoolResponse._defaults(this);

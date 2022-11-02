@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_proposal.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_query_proposal_response_proposal.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_gov_v1beta1_query_proposal_response.g.dart';
 /// * [proposal] 
 abstract class CosmosGovV1beta1QueryProposalResponse implements Built<CosmosGovV1beta1QueryProposalResponse, CosmosGovV1beta1QueryProposalResponseBuilder> {
     @BuiltValueField(wireName: r'proposal')
-    CosmosGovV1beta1Proposal? get proposal;
+    CosmosGovV1beta1QueryProposalResponseProposal? get proposal;
 
     CosmosGovV1beta1QueryProposalResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosGovV1beta1QueryProposalResponseSerializer implements StructuredSer
             result
                 ..add(r'proposal')
                 ..add(serializers.serialize(object.proposal,
-                    specifiedType: const FullType(CosmosGovV1beta1Proposal)));
+                    specifiedType: const FullType(CosmosGovV1beta1QueryProposalResponseProposal)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosGovV1beta1QueryProposalResponseSerializer implements StructuredSer
             switch (key) {
                 case r'proposal':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1Proposal)) as CosmosGovV1beta1Proposal;
+                        specifiedType: const FullType(CosmosGovV1beta1QueryProposalResponseProposal)) as CosmosGovV1beta1QueryProposalResponseProposal;
                     result.proposal.replace(valueDes);
                     break;
             }

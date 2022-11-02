@@ -22,7 +22,7 @@ class _$NodeInfo extends NodeInfo {
   @override
   final String? version;
   @override
-  final Other2? other;
+  final NodeInfoOther? other;
 
   factory _$NodeInfo([void Function(NodeInfoBuilder)? updates]) =>
       (new NodeInfoBuilder()..update(updates))._build();
@@ -123,9 +123,10 @@ class NodeInfoBuilder implements Builder<NodeInfo, NodeInfoBuilder> {
   String? get version => _$this._version;
   set version(String? version) => _$this._version = version;
 
-  Other2Builder? _other;
-  Other2Builder get other => _$this._other ??= new Other2Builder();
-  set other(Other2Builder? other) => _$this._other = other;
+  NodeInfoOtherBuilder? _other;
+  NodeInfoOtherBuilder get other =>
+      _$this._other ??= new NodeInfoOtherBuilder();
+  set other(NodeInfoOtherBuilder? other) => _$this._other = other;
 
   NodeInfoBuilder() {
     NodeInfo._defaults(this);

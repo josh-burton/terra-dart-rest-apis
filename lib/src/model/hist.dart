@@ -4,7 +4,7 @@
 
 import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_header.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ part 'hist.g.dart';
 /// * [valset] - 
 abstract class Hist implements Built<Hist, HistBuilder> {
     @BuiltValueField(wireName: r'header')
-    TendermintTypesHeader? get header;
+    TendermintTypesBlockHeader? get header;
 
     /// 
     @BuiltValueField(wireName: r'valset')
@@ -49,7 +49,7 @@ class _$HistSerializer implements StructuredSerializer<Hist> {
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(TendermintTypesHeader)));
+                    specifiedType: const FullType(TendermintTypesBlockHeader)));
         }
         if (object.valset != null) {
             result
@@ -74,7 +74,7 @@ class _$HistSerializer implements StructuredSerializer<Hist> {
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesHeader)) as TendermintTypesHeader;
+                        specifiedType: const FullType(TendermintTypesBlockHeader)) as TendermintTypesBlockHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'valset':

@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/heightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanother_heightforthepurposesofupdatingandfreezingclients.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_client_v1_identified_client_state.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_identified_client_state.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,13 +17,13 @@ part 'query_connection_client_state_responseistheresponsetypeforthe_query_connec
 /// * [proofHeight] 
 abstract class QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod implements Built<QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod, QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethodBuilder> {
     @BuiltValueField(wireName: r'identified_client_state')
-    IbcCoreClientV1IdentifiedClientState? get identifiedClientState;
+    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientState? get identifiedClientState;
 
     @BuiltValueField(wireName: r'proof')
     String? get proof;
 
     @BuiltValueField(wireName: r'proof_height')
-    HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients? get proofHeight;
+    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get proofHeight;
 
     QueryConnectionClientStateResponseistheresponsetypefortheQueryConnectionClientStateRPCmethod._();
 
@@ -51,7 +51,7 @@ class _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnection
             result
                 ..add(r'identified_client_state')
                 ..add(serializers.serialize(object.identifiedClientState,
-                    specifiedType: const FullType(IbcCoreClientV1IdentifiedClientState)));
+                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientState)));
         }
         if (object.proof != null) {
             result
@@ -63,7 +63,7 @@ class _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnection
             result
                 ..add(r'proof_height')
                 ..add(serializers.serialize(object.proofHeight,
-                    specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)));
+                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
         }
         return result;
     }
@@ -82,7 +82,7 @@ class _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnection
             switch (key) {
                 case r'identified_client_state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreClientV1IdentifiedClientState)) as IbcCoreClientV1IdentifiedClientState;
+                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientState)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodIdentifiedClientState;
                     result.identifiedClientState.replace(valueDes);
                     break;
                 case r'proof':
@@ -92,7 +92,7 @@ class _$QueryConnectionClientStateResponseistheresponsetypefortheQueryConnection
                     break;
                 case r'proof_height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)) as HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients;
+                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
                     result.proofHeight.replace(valueDes);
                     break;
             }

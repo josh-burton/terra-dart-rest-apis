@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -67,7 +67,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **broadcastasignedtx**
-> BroadcastTxCommitResult broadcastasignedtx(txBroadcast)
+> BroadcastTxCommitResult broadcastasignedtx(broadcastasignedtxRequest)
 
 Broadcast a signed tx
 
@@ -78,10 +78,10 @@ Broadcast a signed tx to a full node
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTransactionsApi();
-final TxBroadcast txBroadcast = ; // TxBroadcast | The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
+final BroadcastasignedtxRequest broadcastasignedtxRequest = ; // BroadcastasignedtxRequest | The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
 
 try {
-    final response = api.broadcastasignedtx(txBroadcast);
+    final response = api.broadcastasignedtx(broadcastasignedtxRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TransactionsApi->broadcastasignedtx: $e\n');
@@ -92,7 +92,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **txBroadcast** | [**TxBroadcast**](TxBroadcast.md)| The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away). | 
+ **broadcastasignedtxRequest** | [**BroadcastasignedtxRequest**](BroadcastasignedtxRequest.md)| The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away). | 
 
 ### Return type
 
@@ -110,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **decodeatransactionfromtheAminowireformat**
-> StdTx decodeatransactionfromtheAminowireformat(tx12)
+> StdTx decodeatransactionfromtheAminowireformat(decodeatransactionfromtheAminowireformatRequest)
 
 Decode a transaction from the Amino wire format
 
@@ -121,10 +121,10 @@ Decode a transaction (signed or not) from base64-encoded Amino serialized bytes 
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTransactionsApi();
-final Tx12 tx12 = ; // Tx12 | The tx to decode
+final DecodeatransactionfromtheAminowireformatRequest decodeatransactionfromtheAminowireformatRequest = ; // DecodeatransactionfromtheAminowireformatRequest | The tx to decode
 
 try {
-    final response = api.decodeatransactionfromtheAminowireformat(tx12);
+    final response = api.decodeatransactionfromtheAminowireformat(decodeatransactionfromtheAminowireformatRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TransactionsApi->decodeatransactionfromtheAminowireformat: $e\n');
@@ -135,7 +135,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tx12** | [**Tx12**](Tx12.md)| The tx to decode | 
+ **decodeatransactionfromtheAminowireformatRequest** | [**DecodeatransactionfromtheAminowireformatRequest**](DecodeatransactionfromtheAminowireformatRequest.md)| The tx to decode | 
 
 ### Return type
 
@@ -153,7 +153,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **encodealegacytransactiontotheProtowireformat**
-> EncodealegacytransactiontotheProtowireformatResponse encodealegacytransactiontotheProtowireformat(tx10)
+> EncodealegacytransactiontotheProtowireformatResponse encodealegacytransactiontotheProtowireformat(encodealegacytransactiontotheProtowireformatRequest)
 
 Encode a legacy transaction to the Proto wire format
 
@@ -164,10 +164,10 @@ Encode a legacy transaction (signed or not) from JSON to base64-encoded Proto se
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTransactionsApi();
-final Tx10 tx10 = ; // Tx10 | The tx to encode
+final EncodealegacytransactiontotheProtowireformatRequest encodealegacytransactiontotheProtowireformatRequest = ; // EncodealegacytransactiontotheProtowireformatRequest | The tx to encode
 
 try {
-    final response = api.encodealegacytransactiontotheProtowireformat(tx10);
+    final response = api.encodealegacytransactiontotheProtowireformat(encodealegacytransactiontotheProtowireformatRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TransactionsApi->encodealegacytransactiontotheProtowireformat: $e\n');
@@ -178,7 +178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tx10** | [**Tx10**](Tx10.md)| The tx to encode | 
+ **encodealegacytransactiontotheProtowireformatRequest** | [**EncodealegacytransactiontotheProtowireformatRequest**](EncodealegacytransactiontotheProtowireformatRequest.md)| The tx to encode | 
 
 ### Return type
 
@@ -196,7 +196,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **estimatefeeandgasofatransaction**
-> EstimatefeeandgasofatransactionResponse estimatefeeandgasofatransaction(transaction)
+> EstimatefeeandgasofatransactionResponse estimatefeeandgasofatransaction(estimatefeeandgasofatransactionRequest)
 
 Estimate fee and gas of a transaction
 
@@ -207,10 +207,10 @@ Estimate fee and gas of a transaction according to given parameters
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTransactionsApi();
-final Transaction transaction = ; // Transaction | The sender and tx information
+final EstimatefeeandgasofatransactionRequest estimatefeeandgasofatransactionRequest = ; // EstimatefeeandgasofatransactionRequest | The sender and tx information
 
 try {
-    final response = api.estimatefeeandgasofatransaction(transaction);
+    final response = api.estimatefeeandgasofatransaction(estimatefeeandgasofatransactionRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TransactionsApi->estimatefeeandgasofatransaction: $e\n');
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction** | [**Transaction**](Transaction.md)| The sender and tx information | 
+ **estimatefeeandgasofatransactionRequest** | [**EstimatefeeandgasofatransactionRequest**](EstimatefeeandgasofatransactionRequest.md)| The sender and tx information | 
 
 ### Return type
 

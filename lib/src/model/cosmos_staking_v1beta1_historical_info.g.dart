@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_historical_info.dart';
 class _$CosmosStakingV1beta1HistoricalInfo
     extends CosmosStakingV1beta1HistoricalInfo {
   @override
-  final TendermintTypesHeader? header;
+  final TendermintTypesBlockHeader? header;
   @override
   final BuiltList<CosmosStakingV1beta1Validator>? valset;
 
@@ -59,10 +59,11 @@ class CosmosStakingV1beta1HistoricalInfoBuilder
             CosmosStakingV1beta1HistoricalInfoBuilder> {
   _$CosmosStakingV1beta1HistoricalInfo? _$v;
 
-  TendermintTypesHeaderBuilder? _header;
-  TendermintTypesHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesHeaderBuilder();
-  set header(TendermintTypesHeaderBuilder? header) => _$this._header = header;
+  TendermintTypesBlockHeaderBuilder? _header;
+  TendermintTypesBlockHeaderBuilder get header =>
+      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
+  set header(TendermintTypesBlockHeaderBuilder? header) =>
+      _$this._header = header;
 
   ListBuilder<CosmosStakingV1beta1Validator>? _valset;
   ListBuilder<CosmosStakingV1beta1Validator> get valset =>

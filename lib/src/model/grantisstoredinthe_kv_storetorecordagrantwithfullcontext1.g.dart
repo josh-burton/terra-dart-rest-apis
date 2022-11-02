@@ -13,7 +13,8 @@ class _$GrantisstoredintheKVStoretorecordagrantwithfullcontext1
   @override
   final String? grantee;
   @override
-  final Allowance? allowance;
+  final GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowance?
+      allowance;
 
   factory _$GrantisstoredintheKVStoretorecordagrantwithfullcontext1(
           [void Function(
@@ -79,10 +80,15 @@ class GrantisstoredintheKVStoretorecordagrantwithfullcontext1Builder
   String? get grantee => _$this._grantee;
   set grantee(String? grantee) => _$this._grantee = grantee;
 
-  AllowanceBuilder? _allowance;
-  AllowanceBuilder get allowance =>
-      _$this._allowance ??= new AllowanceBuilder();
-  set allowance(AllowanceBuilder? allowance) => _$this._allowance = allowance;
+  GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowanceBuilder?
+      _allowance;
+  GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowanceBuilder
+      get allowance => _$this._allowance ??=
+          new GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowanceBuilder();
+  set allowance(
+          GrantisstoredintheKVStoretorecordagrantwithfullcontextAllowanceBuilder?
+              allowance) =>
+      _$this._allowance = allowance;
 
   GrantisstoredintheKVStoretorecordagrantwithfullcontext1Builder() {
     GrantisstoredintheKVStoretorecordagrantwithfullcontext1._defaults(this);

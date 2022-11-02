@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_slashing_v1beta1_params.dart';
+import 'package:terra_dart_rest_apis/src/model/query_params_responseistheresponsetypeforthe_query_params_rp_cmethod_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'query_params_responseistheresponsetypeforthe_query_params_rp_cmethod.g.dar
 /// * [params] 
 abstract class QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod implements Built<QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod, QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodBuilder> {
     @BuiltValueField(wireName: r'params')
-    CosmosSlashingV1beta1Params? get params;
+    QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams? get params;
 
     QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod._();
 
@@ -42,7 +42,7 @@ class _$QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodSerializer
             result
                 ..add(r'params')
                 ..add(serializers.serialize(object.params,
-                    specifiedType: const FullType(CosmosSlashingV1beta1Params)));
+                    specifiedType: const FullType(QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodSerializer
             switch (key) {
                 case r'params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosSlashingV1beta1Params)) as CosmosSlashingV1beta1Params;
+                        specifiedType: const FullType(QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams)) as QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams;
                     result.params.replace(valueDes);
                     break;
             }

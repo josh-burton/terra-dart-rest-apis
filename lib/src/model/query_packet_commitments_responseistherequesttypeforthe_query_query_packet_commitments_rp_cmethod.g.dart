@@ -11,9 +11,10 @@ class _$QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketComm
   @override
   final BuiltList<IbcCoreChannelV1PacketState>? commitments;
   @override
-  final CosmosBaseQueryV1beta1PageResponse? pagination;
+  final QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination?
+      pagination;
   @override
-  final HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients?
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
       height;
 
   factory _$QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommitmentsRPCmethod(
@@ -83,19 +84,23 @@ class QueryPacketCommitmentsResponseistherequesttypefortheQueryQueryPacketCommit
   set commitments(ListBuilder<IbcCoreChannelV1PacketState>? commitments) =>
       _$this._commitments = commitments;
 
-  CosmosBaseQueryV1beta1PageResponseBuilder? _pagination;
-  CosmosBaseQueryV1beta1PageResponseBuilder get pagination =>
-      _$this._pagination ??= new CosmosBaseQueryV1beta1PageResponseBuilder();
-  set pagination(CosmosBaseQueryV1beta1PageResponseBuilder? pagination) =>
+  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
+      _pagination;
+  QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder
+      get pagination => _$this._pagination ??=
+          new QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder();
+  set pagination(
+          QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
       _height;
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
       get height => _$this._height ??=
-          new HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder();
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
   set height(
-          HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
               height) =>
       _$this._height = height;
 

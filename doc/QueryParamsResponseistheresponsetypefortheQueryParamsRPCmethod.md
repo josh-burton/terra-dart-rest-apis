@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**params** | [**CosmosSlashingV1beta1Params**](CosmosSlashingV1beta1Params.md) |  | [optional] 
+**params** | [**QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams**](QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

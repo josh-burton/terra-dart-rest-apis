@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_entry.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_redelegation_entry_response_redelegation_entry.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +15,7 @@ part 'cosmos_staking_v1beta1_redelegation_entry_response.g.dart';
 /// * [balance] 
 abstract class CosmosStakingV1beta1RedelegationEntryResponse implements Built<CosmosStakingV1beta1RedelegationEntryResponse, CosmosStakingV1beta1RedelegationEntryResponseBuilder> {
     @BuiltValueField(wireName: r'redelegation_entry')
-    CosmosStakingV1beta1RedelegationEntry? get redelegationEntry;
+    CosmosStakingV1beta1RedelegationEntryResponseRedelegationEntry? get redelegationEntry;
 
     @BuiltValueField(wireName: r'balance')
     String? get balance;
@@ -46,7 +46,7 @@ class _$CosmosStakingV1beta1RedelegationEntryResponseSerializer implements Struc
             result
                 ..add(r'redelegation_entry')
                 ..add(serializers.serialize(object.redelegationEntry,
-                    specifiedType: const FullType(CosmosStakingV1beta1RedelegationEntry)));
+                    specifiedType: const FullType(CosmosStakingV1beta1RedelegationEntryResponseRedelegationEntry)));
         }
         if (object.balance != null) {
             result
@@ -71,7 +71,7 @@ class _$CosmosStakingV1beta1RedelegationEntryResponseSerializer implements Struc
             switch (key) {
                 case r'redelegation_entry':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1RedelegationEntry)) as CosmosStakingV1beta1RedelegationEntry;
+                        specifiedType: const FullType(CosmosStakingV1beta1RedelegationEntryResponseRedelegationEntry)) as CosmosStakingV1beta1RedelegationEntryResponseRedelegationEntry;
                     result.redelegationEntry.replace(valueDes);
                     break;
                 case r'balance':

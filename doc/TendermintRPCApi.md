@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -11,7 +11,7 @@ class _$CosmosBankV1beta1QueryDenomsMetadataResponse
   @override
   final BuiltList<CosmosBankV1beta1Metadata>? metadatas;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosBankV1beta1QueryDenomsMetadataResponse(
           [void Function(CosmosBankV1beta1QueryDenomsMetadataResponseBuilder)?
@@ -69,10 +69,13 @@ class CosmosBankV1beta1QueryDenomsMetadataResponseBuilder
   set metadatas(ListBuilder<CosmosBankV1beta1Metadata>? metadatas) =>
       _$this._metadatas = metadatas;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosBankV1beta1QueryDenomsMetadataResponseBuilder() {

@@ -9,7 +9,7 @@ part of 'terra_oracle_v1beta1_query_params_response.dart';
 class _$TerraOracleV1beta1QueryParamsResponse
     extends TerraOracleV1beta1QueryParamsResponse {
   @override
-  final Params7? params;
+  final TerraOracleV1beta1QueryParamsResponseParams? params;
 
   factory _$TerraOracleV1beta1QueryParamsResponse(
           [void Function(TerraOracleV1beta1QueryParamsResponseBuilder)?
@@ -56,9 +56,12 @@ class TerraOracleV1beta1QueryParamsResponseBuilder
             TerraOracleV1beta1QueryParamsResponseBuilder> {
   _$TerraOracleV1beta1QueryParamsResponse? _$v;
 
-  Params7Builder? _params;
-  Params7Builder get params => _$this._params ??= new Params7Builder();
-  set params(Params7Builder? params) => _$this._params = params;
+  TerraOracleV1beta1QueryParamsResponseParamsBuilder? _params;
+  TerraOracleV1beta1QueryParamsResponseParamsBuilder get params =>
+      _$this._params ??=
+          new TerraOracleV1beta1QueryParamsResponseParamsBuilder();
+  set params(TerraOracleV1beta1QueryParamsResponseParamsBuilder? params) =>
+      _$this._params = params;
 
   TerraOracleV1beta1QueryParamsResponseBuilder() {
     TerraOracleV1beta1QueryParamsResponse._defaults(this);

@@ -12,7 +12,7 @@ class _$CosmosStakingV1beta1QueryRedelegationsResponse
   final BuiltList<CosmosStakingV1beta1RedelegationResponse>?
       redelegationResponses;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosStakingV1beta1QueryRedelegationsResponse(
           [void Function(CosmosStakingV1beta1QueryRedelegationsResponseBuilder)?
@@ -75,10 +75,13 @@ class CosmosStakingV1beta1QueryRedelegationsResponseBuilder
               redelegationResponses) =>
       _$this._redelegationResponses = redelegationResponses;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosStakingV1beta1QueryRedelegationsResponseBuilder() {

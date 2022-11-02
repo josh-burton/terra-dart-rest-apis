@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**duplicateVoteEvidence** | [**TendermintTypesDuplicateVoteEvidence**](TendermintTypesDuplicateVoteEvidence.md) |  | [optional] 
-**lightClientAttackEvidence** | [**TendermintTypesLightClientAttackEvidence**](TendermintTypesLightClientAttackEvidence.md) |  | [optional] 
+**duplicateVoteEvidence** | [**TendermintTypesEvidenceDuplicateVoteEvidence**](TendermintTypesEvidenceDuplicateVoteEvidence.md) |  | [optional] 
+**lightClientAttackEvidence** | [**TendermintTypesEvidenceLightClientAttackEvidence**](TendermintTypesEvidenceLightClientAttackEvidence.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

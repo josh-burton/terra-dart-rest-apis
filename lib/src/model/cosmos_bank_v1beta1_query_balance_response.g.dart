@@ -9,7 +9,7 @@ part of 'cosmos_bank_v1beta1_query_balance_response.dart';
 class _$CosmosBankV1beta1QueryBalanceResponse
     extends CosmosBankV1beta1QueryBalanceResponse {
   @override
-  final CosmosBaseV1beta1Coin? balance;
+  final CosmosBankV1beta1QueryBalanceResponseBalance? balance;
 
   factory _$CosmosBankV1beta1QueryBalanceResponse(
           [void Function(CosmosBankV1beta1QueryBalanceResponseBuilder)?
@@ -56,10 +56,11 @@ class CosmosBankV1beta1QueryBalanceResponseBuilder
             CosmosBankV1beta1QueryBalanceResponseBuilder> {
   _$CosmosBankV1beta1QueryBalanceResponse? _$v;
 
-  CosmosBaseV1beta1CoinBuilder? _balance;
-  CosmosBaseV1beta1CoinBuilder get balance =>
-      _$this._balance ??= new CosmosBaseV1beta1CoinBuilder();
-  set balance(CosmosBaseV1beta1CoinBuilder? balance) =>
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? _balance;
+  CosmosBankV1beta1QueryBalanceResponseBalanceBuilder get balance =>
+      _$this._balance ??=
+          new CosmosBankV1beta1QueryBalanceResponseBalanceBuilder();
+  set balance(CosmosBankV1beta1QueryBalanceResponseBalanceBuilder? balance) =>
       _$this._balance = balance;
 
   CosmosBankV1beta1QueryBalanceResponseBuilder() {

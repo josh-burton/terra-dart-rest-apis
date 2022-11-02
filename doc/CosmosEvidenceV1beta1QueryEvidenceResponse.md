@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**evidence** | [**GoogleProtobufAny**](GoogleProtobufAny.md) |  | [optional] 
+**evidence** | [**CosmosAuthV1beta1QueryAccountResponseAccount**](CosmosAuthV1beta1QueryAccountResponseAccount.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

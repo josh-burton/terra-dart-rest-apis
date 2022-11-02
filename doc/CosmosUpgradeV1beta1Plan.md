@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **time** | [**DateTime**](DateTime.md) | Deprecated: Time based upgrades have been deprecated. Time based upgrade logic has been removed from the SDK. If this field is not empty, an error will be thrown. | [optional] 
 **height** | **String** | The height at which the upgrade must be performed. Only used if Time is not set. | [optional] 
 **info** | **String** |  | [optional] 
-**upgradedClientState** | [**GoogleProtobufAny**](GoogleProtobufAny.md) |  | [optional] 
+**upgradedClientState** | [**CosmosAuthV1beta1QueryAccountResponseAccount**](CosmosAuthV1beta1QueryAccountResponseAccount.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

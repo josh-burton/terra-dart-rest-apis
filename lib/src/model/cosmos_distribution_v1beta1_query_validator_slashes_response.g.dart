@@ -11,7 +11,7 @@ class _$CosmosDistributionV1beta1QueryValidatorSlashesResponse
   @override
   final BuiltList<CosmosDistributionV1beta1ValidatorSlashEvent>? slashes;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosDistributionV1beta1QueryValidatorSlashesResponse(
           [void Function(
@@ -74,10 +74,13 @@ class CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder
           ListBuilder<CosmosDistributionV1beta1ValidatorSlashEvent>? slashes) =>
       _$this._slashes = slashes;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosDistributionV1beta1QueryValidatorSlashesResponseBuilder() {

@@ -9,10 +9,10 @@ part of 'ibc_core_client_v1_consensus_state_with_height.dart';
 class _$IbcCoreClientV1ConsensusStateWithHeight
     extends IbcCoreClientV1ConsensusStateWithHeight {
   @override
-  final HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients?
+  final QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight?
       height;
   @override
-  final GoogleProtobufAny? consensusState;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? consensusState;
 
   factory _$IbcCoreClientV1ConsensusStateWithHeight(
           [void Function(IbcCoreClientV1ConsensusStateWithHeightBuilder)?
@@ -63,20 +63,23 @@ class IbcCoreClientV1ConsensusStateWithHeightBuilder
             IbcCoreClientV1ConsensusStateWithHeightBuilder> {
   _$IbcCoreClientV1ConsensusStateWithHeight? _$v;
 
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
       _height;
-  HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder
+  QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder
       get height => _$this._height ??=
-          new HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder();
+          new QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder();
   set height(
-          HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclientsBuilder?
+          QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeightBuilder?
               height) =>
       _$this._height = height;
 
-  GoogleProtobufAnyBuilder? _consensusState;
-  GoogleProtobufAnyBuilder get consensusState =>
-      _$this._consensusState ??= new GoogleProtobufAnyBuilder();
-  set consensusState(GoogleProtobufAnyBuilder? consensusState) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _consensusState;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get consensusState =>
+      _$this._consensusState ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set consensusState(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+              consensusState) =>
       _$this._consensusState = consensusState;
 
   IbcCoreClientV1ConsensusStateWithHeightBuilder() {

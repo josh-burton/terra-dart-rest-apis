@@ -11,7 +11,7 @@ class _$CosmosBankV1beta1QueryAllBalancesResponse
   @override
   final BuiltList<CosmosBaseV1beta1Coin>? balances;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosBankV1beta1QueryAllBalancesResponse(
           [void Function(CosmosBankV1beta1QueryAllBalancesResponseBuilder)?
@@ -68,10 +68,13 @@ class CosmosBankV1beta1QueryAllBalancesResponseBuilder
   set balances(ListBuilder<CosmosBaseV1beta1Coin>? balances) =>
       _$this._balances = balances;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosBankV1beta1QueryAllBalancesResponseBuilder() {

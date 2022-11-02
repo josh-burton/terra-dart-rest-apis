@@ -11,7 +11,7 @@ class _$IbcCoreClientV1IdentifiedClientState
   @override
   final String? clientId;
   @override
-  final GoogleProtobufAny? clientState;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? clientState;
 
   factory _$IbcCoreClientV1IdentifiedClientState(
           [void Function(IbcCoreClientV1IdentifiedClientStateBuilder)?
@@ -63,10 +63,12 @@ class IbcCoreClientV1IdentifiedClientStateBuilder
   String? get clientId => _$this._clientId;
   set clientId(String? clientId) => _$this._clientId = clientId;
 
-  GoogleProtobufAnyBuilder? _clientState;
-  GoogleProtobufAnyBuilder get clientState =>
-      _$this._clientState ??= new GoogleProtobufAnyBuilder();
-  set clientState(GoogleProtobufAnyBuilder? clientState) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _clientState;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get clientState =>
+      _$this._clientState ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set clientState(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder? clientState) =>
       _$this._clientState = clientState;
 
   IbcCoreClientV1IdentifiedClientStateBuilder() {

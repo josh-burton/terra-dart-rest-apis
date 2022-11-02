@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_bank_v1beta1_query_balance_response_balance.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -23,7 +23,7 @@ abstract class PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardp
     String? get rateMax;
 
     @BuiltValueField(wireName: r'cap')
-    CosmosBaseV1beta1Coin? get cap;
+    CosmosBankV1beta1QueryBalanceResponseBalance? get cap;
 
     @BuiltValueField(wireName: r'change_rate_max')
     String? get changeRateMax;
@@ -66,7 +66,7 @@ class _$PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies
             result
                 ..add(r'cap')
                 ..add(serializers.serialize(object.cap,
-                    specifiedType: const FullType(CosmosBaseV1beta1Coin)));
+                    specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)));
         }
         if (object.changeRateMax != null) {
             result
@@ -101,7 +101,7 @@ class _$PolicyConstraintsDefinespolicyconstraintscanbeappliedintaxrewardpolicies
                     break;
                 case r'cap':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseV1beta1Coin)) as CosmosBaseV1beta1Coin;
+                        specifiedType: const FullType(CosmosBankV1beta1QueryBalanceResponseBalance)) as CosmosBankV1beta1QueryBalanceResponseBalance;
                     result.cap.replace(valueDes);
                     break;
                 case r'change_rate_max':

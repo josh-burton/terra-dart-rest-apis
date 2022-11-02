@@ -9,7 +9,7 @@ part of 'cosmos_auth_v1beta1_query_params_response.dart';
 class _$CosmosAuthV1beta1QueryParamsResponse
     extends CosmosAuthV1beta1QueryParamsResponse {
   @override
-  final Params? params;
+  final CosmosAuthV1beta1QueryParamsResponseParams? params;
 
   factory _$CosmosAuthV1beta1QueryParamsResponse(
           [void Function(CosmosAuthV1beta1QueryParamsResponseBuilder)?
@@ -54,9 +54,12 @@ class CosmosAuthV1beta1QueryParamsResponseBuilder
             CosmosAuthV1beta1QueryParamsResponseBuilder> {
   _$CosmosAuthV1beta1QueryParamsResponse? _$v;
 
-  ParamsBuilder? _params;
-  ParamsBuilder get params => _$this._params ??= new ParamsBuilder();
-  set params(ParamsBuilder? params) => _$this._params = params;
+  CosmosAuthV1beta1QueryParamsResponseParamsBuilder? _params;
+  CosmosAuthV1beta1QueryParamsResponseParamsBuilder get params =>
+      _$this._params ??=
+          new CosmosAuthV1beta1QueryParamsResponseParamsBuilder();
+  set params(CosmosAuthV1beta1QueryParamsResponseParamsBuilder? params) =>
+      _$this._params = params;
 
   CosmosAuthV1beta1QueryParamsResponseBuilder() {
     CosmosAuthV1beta1QueryParamsResponse._defaults(this);

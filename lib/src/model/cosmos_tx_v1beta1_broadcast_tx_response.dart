@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_tx_response.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_broadcast_tx_response_tx_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_tx_v1beta1_broadcast_tx_response.g.dart';
 /// * [txResponse] 
 abstract class CosmosTxV1beta1BroadcastTxResponse implements Built<CosmosTxV1beta1BroadcastTxResponse, CosmosTxV1beta1BroadcastTxResponseBuilder> {
     @BuiltValueField(wireName: r'tx_response')
-    CosmosBaseAbciV1beta1TxResponse? get txResponse;
+    CosmosTxV1beta1BroadcastTxResponseTxResponse? get txResponse;
 
     CosmosTxV1beta1BroadcastTxResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosTxV1beta1BroadcastTxResponseSerializer implements StructuredSerial
             result
                 ..add(r'tx_response')
                 ..add(serializers.serialize(object.txResponse,
-                    specifiedType: const FullType(CosmosBaseAbciV1beta1TxResponse)));
+                    specifiedType: const FullType(CosmosTxV1beta1BroadcastTxResponseTxResponse)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosTxV1beta1BroadcastTxResponseSerializer implements StructuredSerial
             switch (key) {
                 case r'tx_response':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosBaseAbciV1beta1TxResponse)) as CosmosBaseAbciV1beta1TxResponse;
+                        specifiedType: const FullType(CosmosTxV1beta1BroadcastTxResponseTxResponse)) as CosmosTxV1beta1BroadcastTxResponseTxResponse;
                     result.txResponse.replace(valueDes);
                     break;
             }

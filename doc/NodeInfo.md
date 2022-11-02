@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **channels** | **String** |  | [optional] 
 **listenAddr** | **String** |  | [optional] 
 **version** | **String** | Tendermint version | [optional] 
-**other** | [**Other2**](Other2.md) |  | [optional] 
+**other** | [**NodeInfoOther**](NodeInfoOther.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

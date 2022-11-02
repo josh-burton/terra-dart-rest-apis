@@ -10,7 +10,11 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/api_util.dart';
 import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcastasignedtx_request.dart';
+import 'package:terra_dart_rest_apis/src/model/decodeatransactionfromthe_aminowireformat_request.dart';
+import 'package:terra_dart_rest_apis/src/model/encodealegacytransactiontothe_protowireformat_request.dart';
 import 'package:terra_dart_rest_apis/src/model/encodealegacytransactiontothe_protowireformat_response.dart';
+import 'package:terra_dart_rest_apis/src/model/estimatefeeandgasofatransaction_request.dart';
 import 'package:terra_dart_rest_apis/src/model/estimatefeeandgasofatransaction_response.dart';
 import 'package:terra_dart_rest_apis/src/model/get_gas_prices_result.dart';
 import 'package:terra_dart_rest_apis/src/model/get_mempool_by_hash_result.dart';
@@ -20,10 +24,6 @@ import 'package:terra_dart_rest_apis/src/model/paginated_query_txs.dart';
 import 'package:terra_dart_rest_apis/src/model/post_txs_body.dart';
 import 'package:terra_dart_rest_apis/src/model/post_txs_result.dart';
 import 'package:terra_dart_rest_apis/src/model/std_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/transaction.dart';
-import 'package:terra_dart_rest_apis/src/model/tx10.dart';
-import 'package:terra_dart_rest_apis/src/model/tx12.dart';
-import 'package:terra_dart_rest_apis/src/model/tx_broadcast.dart';
 import 'package:terra_dart_rest_apis/src/model/tx_query.dart';
 import 'package:terra_dart_rest_apis/src/model/txs.dart';
 
@@ -132,7 +132,7 @@ class TransactionsApi {
   /// Broadcast a signed tx to a full node
   ///
   /// Parameters:
-  /// * [txBroadcast] - The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
+  /// * [broadcastasignedtxRequest] - The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -144,7 +144,7 @@ class TransactionsApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<BroadcastTxCommitResult>> broadcastasignedtx({ 
-    required TxBroadcast txBroadcast,
+    required BroadcastasignedtxRequest broadcastasignedtxRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -169,8 +169,8 @@ class TransactionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(TxBroadcast);
-      _bodyData = _serializers.serialize(txBroadcast, specifiedType: _type);
+      const _type = FullType(BroadcastasignedtxRequest);
+      _bodyData = _serializers.serialize(broadcastasignedtxRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -226,7 +226,7 @@ class TransactionsApi {
   /// Decode a transaction (signed or not) from base64-encoded Amino serialized bytes to JSON
   ///
   /// Parameters:
-  /// * [tx12] - The tx to decode
+  /// * [decodeatransactionfromtheAminowireformatRequest] - The tx to decode
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -238,7 +238,7 @@ class TransactionsApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<StdTx>> decodeatransactionfromtheAminowireformat({ 
-    required Tx12 tx12,
+    required DecodeatransactionfromtheAminowireformatRequest decodeatransactionfromtheAminowireformatRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -263,8 +263,8 @@ class TransactionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Tx12);
-      _bodyData = _serializers.serialize(tx12, specifiedType: _type);
+      const _type = FullType(DecodeatransactionfromtheAminowireformatRequest);
+      _bodyData = _serializers.serialize(decodeatransactionfromtheAminowireformatRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -320,7 +320,7 @@ class TransactionsApi {
   /// Encode a legacy transaction (signed or not) from JSON to base64-encoded Proto serialized bytes
   ///
   /// Parameters:
-  /// * [tx10] - The tx to encode
+  /// * [encodealegacytransactiontotheProtowireformatRequest] - The tx to encode
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -332,7 +332,7 @@ class TransactionsApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<EncodealegacytransactiontotheProtowireformatResponse>> encodealegacytransactiontotheProtowireformat({ 
-    required Tx10 tx10,
+    required EncodealegacytransactiontotheProtowireformatRequest encodealegacytransactiontotheProtowireformatRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -357,8 +357,8 @@ class TransactionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Tx10);
-      _bodyData = _serializers.serialize(tx10, specifiedType: _type);
+      const _type = FullType(EncodealegacytransactiontotheProtowireformatRequest);
+      _bodyData = _serializers.serialize(encodealegacytransactiontotheProtowireformatRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -414,7 +414,7 @@ class TransactionsApi {
   /// Estimate fee and gas of a transaction according to given parameters
   ///
   /// Parameters:
-  /// * [transaction] - The sender and tx information
+  /// * [estimatefeeandgasofatransactionRequest] - The sender and tx information
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -426,7 +426,7 @@ class TransactionsApi {
   /// Throws [DioError] if API call or serialization fails
   @Deprecated('This operation has been deprecated')
   Future<Response<EstimatefeeandgasofatransactionResponse>> estimatefeeandgasofatransaction({ 
-    required Transaction transaction,
+    required EstimatefeeandgasofatransactionRequest estimatefeeandgasofatransactionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -451,8 +451,8 @@ class TransactionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Transaction);
-      _bodyData = _serializers.serialize(transaction, specifiedType: _type);
+      const _type = FullType(EstimatefeeandgasofatransactionRequest);
+      _bodyData = _serializers.serialize(estimatefeeandgasofatransactionRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

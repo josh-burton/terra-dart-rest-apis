@@ -9,7 +9,7 @@ part of 'cosmos_evidence_v1beta1_query_evidence_response.dart';
 class _$CosmosEvidenceV1beta1QueryEvidenceResponse
     extends CosmosEvidenceV1beta1QueryEvidenceResponse {
   @override
-  final GoogleProtobufAny? evidence;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? evidence;
 
   factory _$CosmosEvidenceV1beta1QueryEvidenceResponse(
           [void Function(CosmosEvidenceV1beta1QueryEvidenceResponseBuilder)?
@@ -56,10 +56,11 @@ class CosmosEvidenceV1beta1QueryEvidenceResponseBuilder
             CosmosEvidenceV1beta1QueryEvidenceResponseBuilder> {
   _$CosmosEvidenceV1beta1QueryEvidenceResponse? _$v;
 
-  GoogleProtobufAnyBuilder? _evidence;
-  GoogleProtobufAnyBuilder get evidence =>
-      _$this._evidence ??= new GoogleProtobufAnyBuilder();
-  set evidence(GoogleProtobufAnyBuilder? evidence) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _evidence;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get evidence =>
+      _$this._evidence ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set evidence(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? evidence) =>
       _$this._evidence = evidence;
 
   CosmosEvidenceV1beta1QueryEvidenceResponseBuilder() {

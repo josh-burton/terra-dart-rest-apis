@@ -11,7 +11,7 @@ class _$QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1
   @override
   final BuiltList<CosmosStakingV1beta1Validator>? validators;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1(
           [void Function(
@@ -75,10 +75,13 @@ class QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1Builde
   set validators(ListBuilder<CosmosStakingV1beta1Validator>? validators) =>
       _$this._validators = validators;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   QueryValidatorsResponseisresponsetypefortheQueryValidatorsRPCmethod1Builder() {

@@ -2,11 +2,12 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_proposal_status.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
-import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_tally_result.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_proposal_final_tally_result.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -29,14 +30,13 @@ abstract class CosmosGovV1beta1Proposal implements Built<CosmosGovV1beta1Proposa
     String? get proposalId;
 
     @BuiltValueField(wireName: r'content')
-    GoogleProtobufAny? get content;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get content;
 
     @BuiltValueField(wireName: r'status')
     CosmosGovV1beta1ProposalStatus? get status;
-    // enum statusEnum {  PROPOSAL_STATUS_UNSPECIFIED,  PROPOSAL_STATUS_DEPOSIT_PERIOD,  PROPOSAL_STATUS_VOTING_PERIOD,  PROPOSAL_STATUS_PASSED,  PROPOSAL_STATUS_REJECTED,  PROPOSAL_STATUS_FAILED,  };
 
     @BuiltValueField(wireName: r'final_tally_result')
-    CosmosGovV1beta1TallyResult? get finalTallyResult;
+    CosmosGovV1beta1ProposalFinalTallyResult? get finalTallyResult;
 
     @BuiltValueField(wireName: r'submit_time')
     DateTime? get submitTime;
@@ -86,19 +86,19 @@ class _$CosmosGovV1beta1ProposalSerializer implements StructuredSerializer<Cosmo
             result
                 ..add(r'content')
                 ..add(serializers.serialize(object.content,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.status != null) {
             result
                 ..add(r'status')
                 ..add(serializers.serialize(object.status,
-                    specifiedType: const FullType(CosmosGovV1beta1ProposalStatus)));
+                    specifiedType: const FullType.nullable(CosmosGovV1beta1ProposalStatus)));
         }
         if (object.finalTallyResult != null) {
             result
                 ..add(r'final_tally_result')
                 ..add(serializers.serialize(object.finalTallyResult,
-                    specifiedType: const FullType(CosmosGovV1beta1TallyResult)));
+                    specifiedType: const FullType(CosmosGovV1beta1ProposalFinalTallyResult)));
         }
         if (object.submitTime != null) {
             result
@@ -152,17 +152,18 @@ class _$CosmosGovV1beta1ProposalSerializer implements StructuredSerializer<Cosmo
                     break;
                 case r'content':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.content.replace(valueDes);
                     break;
                 case r'status':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1ProposalStatus)) as CosmosGovV1beta1ProposalStatus;
-                    result.status = valueDes;
+                        specifiedType: const FullType.nullable(CosmosGovV1beta1ProposalStatus)) as CosmosGovV1beta1ProposalStatus?;
+                    if (valueDes == null) continue;
+                    result.status.replace(valueDes);
                     break;
                 case r'final_tally_result':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosGovV1beta1TallyResult)) as CosmosGovV1beta1TallyResult;
+                        specifiedType: const FullType(CosmosGovV1beta1ProposalFinalTallyResult)) as CosmosGovV1beta1ProposalFinalTallyResult;
                     result.finalTallyResult.replace(valueDes);
                     break;
                 case r'submit_time':

@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_auth_v1beta1_query_account_response.g.dart';
 /// * [account] 
 abstract class CosmosAuthV1beta1QueryAccountResponse implements Built<CosmosAuthV1beta1QueryAccountResponse, CosmosAuthV1beta1QueryAccountResponseBuilder> {
     @BuiltValueField(wireName: r'account')
-    GoogleProtobufAny? get account;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get account;
 
     CosmosAuthV1beta1QueryAccountResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosAuthV1beta1QueryAccountResponseSerializer implements StructuredSer
             result
                 ..add(r'account')
                 ..add(serializers.serialize(object.account,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosAuthV1beta1QueryAccountResponseSerializer implements StructuredSer
             switch (key) {
                 case r'account':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.account.replace(valueDes);
                     break;
             }

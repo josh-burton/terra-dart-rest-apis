@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/heightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanother_heightforthepurposesofupdatingandfreezingclients.dart';
-import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_connection_end.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_query_connection_response_connection.dart';
+import 'package:terra_dart_rest_apis/src/model/query_channel_client_state_responseisthe_responsetypeforthe_query_query_channel_client_state_rp_cmethod_proof_height.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,13 +17,13 @@ part 'ibc_core_connection_v1_query_connection_response.g.dart';
 /// * [proofHeight] 
 abstract class IbcCoreConnectionV1QueryConnectionResponse implements Built<IbcCoreConnectionV1QueryConnectionResponse, IbcCoreConnectionV1QueryConnectionResponseBuilder> {
     @BuiltValueField(wireName: r'connection')
-    IbcCoreConnectionV1ConnectionEnd? get connection;
+    IbcCoreConnectionV1QueryConnectionResponseConnection? get connection;
 
     @BuiltValueField(wireName: r'proof')
     String? get proof;
 
     @BuiltValueField(wireName: r'proof_height')
-    HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients? get proofHeight;
+    QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight? get proofHeight;
 
     IbcCoreConnectionV1QueryConnectionResponse._();
 
@@ -51,7 +51,7 @@ class _$IbcCoreConnectionV1QueryConnectionResponseSerializer implements Structur
             result
                 ..add(r'connection')
                 ..add(serializers.serialize(object.connection,
-                    specifiedType: const FullType(IbcCoreConnectionV1ConnectionEnd)));
+                    specifiedType: const FullType(IbcCoreConnectionV1QueryConnectionResponseConnection)));
         }
         if (object.proof != null) {
             result
@@ -63,7 +63,7 @@ class _$IbcCoreConnectionV1QueryConnectionResponseSerializer implements Structur
             result
                 ..add(r'proof_height')
                 ..add(serializers.serialize(object.proofHeight,
-                    specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)));
+                    specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)));
         }
         return result;
     }
@@ -82,7 +82,7 @@ class _$IbcCoreConnectionV1QueryConnectionResponseSerializer implements Structur
             switch (key) {
                 case r'connection':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(IbcCoreConnectionV1ConnectionEnd)) as IbcCoreConnectionV1ConnectionEnd;
+                        specifiedType: const FullType(IbcCoreConnectionV1QueryConnectionResponseConnection)) as IbcCoreConnectionV1QueryConnectionResponseConnection;
                     result.connection.replace(valueDes);
                     break;
                 case r'proof':
@@ -92,7 +92,7 @@ class _$IbcCoreConnectionV1QueryConnectionResponseSerializer implements Structur
                     break;
                 case r'proof_height':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients)) as HeightisamonotonicallyincreasingdatatypethatcanbecomparedagainstanotherHeightforthepurposesofupdatingandfreezingclients;
+                        specifiedType: const FullType(QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight)) as QueryChannelClientStateResponseistheResponsetypefortheQueryQueryChannelClientStateRPCmethodProofHeight;
                     result.proofHeight.replace(valueDes);
                     break;
             }

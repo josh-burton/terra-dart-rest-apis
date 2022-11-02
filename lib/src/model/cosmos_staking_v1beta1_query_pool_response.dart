@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/pool1.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_pool_response_pool.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_staking_v1beta1_query_pool_response.g.dart';
 /// * [pool] 
 abstract class CosmosStakingV1beta1QueryPoolResponse implements Built<CosmosStakingV1beta1QueryPoolResponse, CosmosStakingV1beta1QueryPoolResponseBuilder> {
     @BuiltValueField(wireName: r'pool')
-    Pool1? get pool;
+    CosmosStakingV1beta1QueryPoolResponsePool? get pool;
 
     CosmosStakingV1beta1QueryPoolResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosStakingV1beta1QueryPoolResponseSerializer implements StructuredSer
             result
                 ..add(r'pool')
                 ..add(serializers.serialize(object.pool,
-                    specifiedType: const FullType(Pool1)));
+                    specifiedType: const FullType(CosmosStakingV1beta1QueryPoolResponsePool)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosStakingV1beta1QueryPoolResponseSerializer implements StructuredSer
             switch (key) {
                 case r'pool':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pool1)) as Pool1;
+                        specifiedType: const FullType(CosmosStakingV1beta1QueryPoolResponsePool)) as CosmosStakingV1beta1QueryPoolResponsePool;
                     result.pool.replace(valueDes);
                     break;
             }

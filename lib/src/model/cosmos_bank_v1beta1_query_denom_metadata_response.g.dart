@@ -9,7 +9,7 @@ part of 'cosmos_bank_v1beta1_query_denom_metadata_response.dart';
 class _$CosmosBankV1beta1QueryDenomMetadataResponse
     extends CosmosBankV1beta1QueryDenomMetadataResponse {
   @override
-  final CosmosBankV1beta1Metadata? metadata;
+  final CosmosBankV1beta1QueryDenomMetadataResponseMetadata? metadata;
 
   factory _$CosmosBankV1beta1QueryDenomMetadataResponse(
           [void Function(CosmosBankV1beta1QueryDenomMetadataResponseBuilder)?
@@ -57,10 +57,13 @@ class CosmosBankV1beta1QueryDenomMetadataResponseBuilder
             CosmosBankV1beta1QueryDenomMetadataResponseBuilder> {
   _$CosmosBankV1beta1QueryDenomMetadataResponse? _$v;
 
-  CosmosBankV1beta1MetadataBuilder? _metadata;
-  CosmosBankV1beta1MetadataBuilder get metadata =>
-      _$this._metadata ??= new CosmosBankV1beta1MetadataBuilder();
-  set metadata(CosmosBankV1beta1MetadataBuilder? metadata) =>
+  CosmosBankV1beta1QueryDenomMetadataResponseMetadataBuilder? _metadata;
+  CosmosBankV1beta1QueryDenomMetadataResponseMetadataBuilder get metadata =>
+      _$this._metadata ??=
+          new CosmosBankV1beta1QueryDenomMetadataResponseMetadataBuilder();
+  set metadata(
+          CosmosBankV1beta1QueryDenomMetadataResponseMetadataBuilder?
+              metadata) =>
       _$this._metadata = metadata;
 
   CosmosBankV1beta1QueryDenomMetadataResponseBuilder() {

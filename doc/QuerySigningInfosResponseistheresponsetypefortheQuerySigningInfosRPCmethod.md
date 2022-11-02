@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **info** | [**BuiltList&lt;CosmosSlashingV1beta1ValidatorSigningInfo&gt;**](CosmosSlashingV1beta1ValidatorSigningInfo.md) |  | [optional] 
-**pagination** | [**CosmosBaseQueryV1beta1PageResponse**](CosmosBaseQueryV1beta1PageResponse.md) |  | [optional] 
+**pagination** | [**QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination**](QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

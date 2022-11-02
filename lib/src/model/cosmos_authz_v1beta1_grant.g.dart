@@ -8,7 +8,7 @@ part of 'cosmos_authz_v1beta1_grant.dart';
 
 class _$CosmosAuthzV1beta1Grant extends CosmosAuthzV1beta1Grant {
   @override
-  final GoogleProtobufAny? authorization;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? authorization;
   @override
   final DateTime? expiration;
 
@@ -55,10 +55,12 @@ class CosmosAuthzV1beta1GrantBuilder
         Builder<CosmosAuthzV1beta1Grant, CosmosAuthzV1beta1GrantBuilder> {
   _$CosmosAuthzV1beta1Grant? _$v;
 
-  GoogleProtobufAnyBuilder? _authorization;
-  GoogleProtobufAnyBuilder get authorization =>
-      _$this._authorization ??= new GoogleProtobufAnyBuilder();
-  set authorization(GoogleProtobufAnyBuilder? authorization) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _authorization;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get authorization =>
+      _$this._authorization ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set authorization(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder? authorization) =>
       _$this._authorization = authorization;
 
   DateTime? _expiration;

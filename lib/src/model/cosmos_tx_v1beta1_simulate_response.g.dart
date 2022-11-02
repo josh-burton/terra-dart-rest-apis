@@ -9,9 +9,9 @@ part of 'cosmos_tx_v1beta1_simulate_response.dart';
 class _$CosmosTxV1beta1SimulateResponse
     extends CosmosTxV1beta1SimulateResponse {
   @override
-  final GasInfo? gasInfo;
+  final CosmosTxV1beta1SimulateResponseGasInfo? gasInfo;
   @override
-  final Result2? result;
+  final CosmosTxV1beta1SimulateResponseResult? result;
 
   factory _$CosmosTxV1beta1SimulateResponse(
           [void Function(CosmosTxV1beta1SimulateResponseBuilder)? updates]) =>
@@ -56,13 +56,17 @@ class CosmosTxV1beta1SimulateResponseBuilder
             CosmosTxV1beta1SimulateResponseBuilder> {
   _$CosmosTxV1beta1SimulateResponse? _$v;
 
-  GasInfoBuilder? _gasInfo;
-  GasInfoBuilder get gasInfo => _$this._gasInfo ??= new GasInfoBuilder();
-  set gasInfo(GasInfoBuilder? gasInfo) => _$this._gasInfo = gasInfo;
+  CosmosTxV1beta1SimulateResponseGasInfoBuilder? _gasInfo;
+  CosmosTxV1beta1SimulateResponseGasInfoBuilder get gasInfo =>
+      _$this._gasInfo ??= new CosmosTxV1beta1SimulateResponseGasInfoBuilder();
+  set gasInfo(CosmosTxV1beta1SimulateResponseGasInfoBuilder? gasInfo) =>
+      _$this._gasInfo = gasInfo;
 
-  Result2Builder? _result;
-  Result2Builder get result => _$this._result ??= new Result2Builder();
-  set result(Result2Builder? result) => _$this._result = result;
+  CosmosTxV1beta1SimulateResponseResultBuilder? _result;
+  CosmosTxV1beta1SimulateResponseResultBuilder get result =>
+      _$this._result ??= new CosmosTxV1beta1SimulateResponseResultBuilder();
+  set result(CosmosTxV1beta1SimulateResponseResultBuilder? result) =>
+      _$this._result = result;
 
   CosmosTxV1beta1SimulateResponseBuilder() {
     CosmosTxV1beta1SimulateResponse._defaults(this);

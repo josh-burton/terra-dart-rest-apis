@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -105,7 +105,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sendcoinsfromoneaccounttoanother**
-> StdTx sendcoinsfromoneaccounttoanother(address, account2)
+> StdTx sendcoinsfromoneaccounttoanother(address, sendcoinsfromoneaccounttoanotherRequest)
 
 Send coins from one account to another
 
@@ -117,10 +117,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getBankApi();
 final String address = terra1wg2mlrxdmnnkkykgqg4znky86nyrtc45q336yv; // String | Account address in bech32 format
-final Account2 account2 = ; // Account2 | The sender and tx information
+final SendcoinsfromoneaccounttoanotherRequest sendcoinsfromoneaccounttoanotherRequest = ; // SendcoinsfromoneaccounttoanotherRequest | The sender and tx information
 
 try {
-    final response = api.sendcoinsfromoneaccounttoanother(address, account2);
+    final response = api.sendcoinsfromoneaccounttoanother(address, sendcoinsfromoneaccounttoanotherRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling BankApi->sendcoinsfromoneaccounttoanother: $e\n');
@@ -132,7 +132,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| Account address in bech32 format | 
- **account2** | [**Account2**](Account2.md)| The sender and tx information | 
+ **sendcoinsfromoneaccounttoanotherRequest** | [**SendcoinsfromoneaccounttoanotherRequest**](SendcoinsfromoneaccounttoanotherRequest.md)| The sender and tx information | 
 
 ### Return type
 

@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/params8.dart';
+import 'package:terra_dart_rest_apis/src/model/terra_treasury_v1beta1_query_params_response_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'terra_treasury_v1beta1_query_params_response.g.dart';
 /// * [params] 
 abstract class TerraTreasuryV1beta1QueryParamsResponse implements Built<TerraTreasuryV1beta1QueryParamsResponse, TerraTreasuryV1beta1QueryParamsResponseBuilder> {
     @BuiltValueField(wireName: r'params')
-    Params8? get params;
+    TerraTreasuryV1beta1QueryParamsResponseParams? get params;
 
     TerraTreasuryV1beta1QueryParamsResponse._();
 
@@ -42,7 +42,7 @@ class _$TerraTreasuryV1beta1QueryParamsResponseSerializer implements StructuredS
             result
                 ..add(r'params')
                 ..add(serializers.serialize(object.params,
-                    specifiedType: const FullType(Params8)));
+                    specifiedType: const FullType(TerraTreasuryV1beta1QueryParamsResponseParams)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$TerraTreasuryV1beta1QueryParamsResponseSerializer implements StructuredS
             switch (key) {
                 case r'params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Params8)) as Params8;
+                        specifiedType: const FullType(TerraTreasuryV1beta1QueryParamsResponseParams)) as TerraTreasuryV1beta1QueryParamsResponseParams;
                     result.params.replace(valueDes);
                     break;
             }

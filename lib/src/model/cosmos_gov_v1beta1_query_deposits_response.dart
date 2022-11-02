@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/pagination.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_gov_v1beta1_deposit.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class CosmosGovV1beta1QueryDepositsResponse implements Built<CosmosGovV
     BuiltList<CosmosGovV1beta1Deposit>? get deposits;
 
     @BuiltValueField(wireName: r'pagination')
-    Pagination? get pagination;
+    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
 
     CosmosGovV1beta1QueryDepositsResponse._();
 
@@ -55,7 +55,7 @@ class _$CosmosGovV1beta1QueryDepositsResponseSerializer implements StructuredSer
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(Pagination)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$CosmosGovV1beta1QueryDepositsResponseSerializer implements StructuredSer
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pagination)) as Pagination;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

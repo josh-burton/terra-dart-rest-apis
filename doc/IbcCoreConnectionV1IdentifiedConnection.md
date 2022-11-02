@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **clientId** | **String** | client associated with this connection. | [optional] 
 **versions** | [**BuiltList&lt;IbcCoreConnectionV1Version&gt;**](IbcCoreConnectionV1Version.md) |  | [optional] 
 **state** | [**State**](State.md) |  | [optional] 
-**counterparty** | [**Counterparty**](Counterparty.md) |  | [optional] 
+**counterparty** | [**IbcCoreConnectionV1ConnectionEndCounterparty**](IbcCoreConnectionV1ConnectionEndCounterparty.md) |  | [optional] 
 **delayPeriod** | **String** | delay period associated with this connection. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

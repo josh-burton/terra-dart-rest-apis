@@ -28,7 +28,7 @@ import 'package:terra_dart_rest_apis/src/api/treasury_api.dart';
 import 'package:terra_dart_rest_apis/src/api/wasm_api.dart';
 
 class TerraRestApi {
-  static const String basePath = r'https://phoenix-lcd.terra.dev';
+  static const String basePath = r'https://www.example.com';
 
   final Dio dio;
   final Serializers serializers;

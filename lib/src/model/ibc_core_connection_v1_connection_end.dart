@@ -3,9 +3,10 @@
 //
 
 import 'package:terra_dart_rest_apis/src/model/state.dart';
-import 'package:terra_dart_rest_apis/src/model/counterparty.dart';
+import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_connection_end_counterparty.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/ibc_core_connection_v1_version.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -30,10 +31,9 @@ abstract class IbcCoreConnectionV1ConnectionEnd implements Built<IbcCoreConnecti
 
     @BuiltValueField(wireName: r'state')
     State? get state;
-    // enum stateEnum {  STATE_UNINITIALIZED_UNSPECIFIED,  STATE_INIT,  STATE_TRYOPEN,  STATE_OPEN,  };
 
     @BuiltValueField(wireName: r'counterparty')
-    Counterparty? get counterparty;
+    IbcCoreConnectionV1ConnectionEndCounterparty? get counterparty;
 
     /// delay period that must pass before a consensus state can be used for packet-verification NOTE: delay period logic is only implemented by some clients.
     @BuiltValueField(wireName: r'delay_period')
@@ -77,13 +77,13 @@ class _$IbcCoreConnectionV1ConnectionEndSerializer implements StructuredSerializ
             result
                 ..add(r'state')
                 ..add(serializers.serialize(object.state,
-                    specifiedType: const FullType(State)));
+                    specifiedType: const FullType.nullable(State)));
         }
         if (object.counterparty != null) {
             result
                 ..add(r'counterparty')
                 ..add(serializers.serialize(object.counterparty,
-                    specifiedType: const FullType(Counterparty)));
+                    specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndCounterparty)));
         }
         if (object.delayPeriod != null) {
             result
@@ -118,12 +118,13 @@ class _$IbcCoreConnectionV1ConnectionEndSerializer implements StructuredSerializ
                     break;
                 case r'state':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(State)) as State;
-                    result.state = valueDes;
+                        specifiedType: const FullType.nullable(State)) as State?;
+                    if (valueDes == null) continue;
+                    result.state.replace(valueDes);
                     break;
                 case r'counterparty':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Counterparty)) as Counterparty;
+                        specifiedType: const FullType(IbcCoreConnectionV1ConnectionEndCounterparty)) as IbcCoreConnectionV1ConnectionEndCounterparty;
                     result.counterparty.replace(valueDes);
                     break;
                 case r'delay_period':

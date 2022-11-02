@@ -2,10 +2,11 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator_commission.dart';
 import 'package:terra_dart_rest_apis/src/model/status3.dart';
-import 'package:terra_dart_rest_apis/src/model/commission5.dart';
-import 'package:terra_dart_rest_apis/src/model/description1.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator_description.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -31,7 +32,7 @@ abstract class CosmosStakingV1beta1Validator implements Built<CosmosStakingV1bet
     String? get operatorAddress;
 
     @BuiltValueField(wireName: r'consensus_pubkey')
-    GoogleProtobufAny? get consensusPubkey;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get consensusPubkey;
 
     /// jailed defined whether the validator has been jailed from bonded status or not.
     @BuiltValueField(wireName: r'jailed')
@@ -39,7 +40,6 @@ abstract class CosmosStakingV1beta1Validator implements Built<CosmosStakingV1bet
 
     @BuiltValueField(wireName: r'status')
     Status3? get status;
-    // enum statusEnum {  BOND_STATUS_UNSPECIFIED,  BOND_STATUS_UNBONDED,  BOND_STATUS_UNBONDING,  BOND_STATUS_BONDED,  };
 
     /// tokens define the delegated tokens (incl. self-delegation).
     @BuiltValueField(wireName: r'tokens')
@@ -50,7 +50,7 @@ abstract class CosmosStakingV1beta1Validator implements Built<CosmosStakingV1bet
     String? get delegatorShares;
 
     @BuiltValueField(wireName: r'description')
-    Description1? get description;
+    CosmosStakingV1beta1ValidatorDescription? get description;
 
     /// unbonding_height defines, if unbonding, the height at which this validator has begun unbonding.
     @BuiltValueField(wireName: r'unbonding_height')
@@ -61,7 +61,7 @@ abstract class CosmosStakingV1beta1Validator implements Built<CosmosStakingV1bet
     DateTime? get unbondingTime;
 
     @BuiltValueField(wireName: r'commission')
-    Commission5? get commission;
+    CosmosStakingV1beta1ValidatorCommission? get commission;
 
     /// min_self_delegation is the validator's self declared minimum self delegation.
     @BuiltValueField(wireName: r'min_self_delegation')
@@ -99,7 +99,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
             result
                 ..add(r'consensus_pubkey')
                 ..add(serializers.serialize(object.consensusPubkey,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.jailed != null) {
             result
@@ -111,7 +111,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
             result
                 ..add(r'status')
                 ..add(serializers.serialize(object.status,
-                    specifiedType: const FullType(Status3)));
+                    specifiedType: const FullType.nullable(Status3)));
         }
         if (object.tokens != null) {
             result
@@ -129,7 +129,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(Description1)));
+                    specifiedType: const FullType(CosmosStakingV1beta1ValidatorDescription)));
         }
         if (object.unbondingHeight != null) {
             result
@@ -147,7 +147,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
             result
                 ..add(r'commission')
                 ..add(serializers.serialize(object.commission,
-                    specifiedType: const FullType(Commission5)));
+                    specifiedType: const FullType(CosmosStakingV1beta1ValidatorCommission)));
         }
         if (object.minSelfDelegation != null) {
             result
@@ -177,7 +177,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
                     break;
                 case r'consensus_pubkey':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.consensusPubkey.replace(valueDes);
                     break;
                 case r'jailed':
@@ -187,8 +187,9 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
                     break;
                 case r'status':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Status3)) as Status3;
-                    result.status = valueDes;
+                        specifiedType: const FullType.nullable(Status3)) as Status3?;
+                    if (valueDes == null) continue;
+                    result.status.replace(valueDes);
                     break;
                 case r'tokens':
                     final valueDes = serializers.deserialize(value,
@@ -202,7 +203,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
                     break;
                 case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Description1)) as Description1;
+                        specifiedType: const FullType(CosmosStakingV1beta1ValidatorDescription)) as CosmosStakingV1beta1ValidatorDescription;
                     result.description.replace(valueDes);
                     break;
                 case r'unbonding_height':
@@ -217,7 +218,7 @@ class _$CosmosStakingV1beta1ValidatorSerializer implements StructuredSerializer<
                     break;
                 case r'commission':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Commission5)) as Commission5;
+                        specifiedType: const FullType(CosmosStakingV1beta1ValidatorCommission)) as CosmosStakingV1beta1ValidatorCommission;
                     result.commission.replace(valueDes);
                     break;
                 case r'min_self_delegation':

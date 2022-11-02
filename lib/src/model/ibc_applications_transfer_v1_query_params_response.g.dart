@@ -9,7 +9,7 @@ part of 'ibc_applications_transfer_v1_query_params_response.dart';
 class _$IbcApplicationsTransferV1QueryParamsResponse
     extends IbcApplicationsTransferV1QueryParamsResponse {
   @override
-  final Params11? params;
+  final IbcApplicationsTransferV1QueryParamsResponseParams? params;
 
   factory _$IbcApplicationsTransferV1QueryParamsResponse(
           [void Function(IbcApplicationsTransferV1QueryParamsResponseBuilder)?
@@ -57,9 +57,13 @@ class IbcApplicationsTransferV1QueryParamsResponseBuilder
             IbcApplicationsTransferV1QueryParamsResponseBuilder> {
   _$IbcApplicationsTransferV1QueryParamsResponse? _$v;
 
-  Params11Builder? _params;
-  Params11Builder get params => _$this._params ??= new Params11Builder();
-  set params(Params11Builder? params) => _$this._params = params;
+  IbcApplicationsTransferV1QueryParamsResponseParamsBuilder? _params;
+  IbcApplicationsTransferV1QueryParamsResponseParamsBuilder get params =>
+      _$this._params ??=
+          new IbcApplicationsTransferV1QueryParamsResponseParamsBuilder();
+  set params(
+          IbcApplicationsTransferV1QueryParamsResponseParamsBuilder? params) =>
+      _$this._params = params;
 
   IbcApplicationsTransferV1QueryParamsResponseBuilder() {
     IbcApplicationsTransferV1QueryParamsResponse._defaults(this);

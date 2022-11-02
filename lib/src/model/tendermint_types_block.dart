@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_commit.dart';
 import 'package:terra_dart_rest_apis/src/model/datacontainsthesetoftransactionsincludedintheblock.dart';
 import 'package:terra_dart_rest_apis/src/model/tendermint_types_evidence_list.dart';
-import 'package:terra_dart_rest_apis/src/model/tendermint_types_header.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_last_commit.dart';
+import 'package:terra_dart_rest_apis/src/model/tendermint_types_block_header.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +20,7 @@ part 'tendermint_types_block.g.dart';
 /// * [lastCommit] 
 abstract class TendermintTypesBlock implements Built<TendermintTypesBlock, TendermintTypesBlockBuilder> {
     @BuiltValueField(wireName: r'header')
-    TendermintTypesHeader? get header;
+    TendermintTypesBlockHeader? get header;
 
     @BuiltValueField(wireName: r'data')
     Datacontainsthesetoftransactionsincludedintheblock? get data;
@@ -29,7 +29,7 @@ abstract class TendermintTypesBlock implements Built<TendermintTypesBlock, Tende
     TendermintTypesEvidenceList? get evidence;
 
     @BuiltValueField(wireName: r'last_commit')
-    TendermintTypesCommit? get lastCommit;
+    TendermintTypesBlockLastCommit? get lastCommit;
 
     TendermintTypesBlock._();
 
@@ -57,7 +57,7 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
             result
                 ..add(r'header')
                 ..add(serializers.serialize(object.header,
-                    specifiedType: const FullType(TendermintTypesHeader)));
+                    specifiedType: const FullType(TendermintTypesBlockHeader)));
         }
         if (object.data != null) {
             result
@@ -75,7 +75,7 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
             result
                 ..add(r'last_commit')
                 ..add(serializers.serialize(object.lastCommit,
-                    specifiedType: const FullType(TendermintTypesCommit)));
+                    specifiedType: const FullType(TendermintTypesBlockLastCommit)));
         }
         return result;
     }
@@ -94,7 +94,7 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
             switch (key) {
                 case r'header':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesHeader)) as TendermintTypesHeader;
+                        specifiedType: const FullType(TendermintTypesBlockHeader)) as TendermintTypesBlockHeader;
                     result.header.replace(valueDes);
                     break;
                 case r'data':
@@ -109,7 +109,7 @@ class _$TendermintTypesBlockSerializer implements StructuredSerializer<Tendermin
                     break;
                 case r'last_commit':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesCommit)) as TendermintTypesCommit;
+                        specifiedType: const FullType(TendermintTypesBlockLastCommit)) as TendermintTypesBlockLastCommit;
                     result.lastCommit.replace(valueDes);
                     break;
             }

@@ -9,7 +9,7 @@ part of 'terra_market_v1beta1_query_swap_response.dart';
 class _$TerraMarketV1beta1QuerySwapResponse
     extends TerraMarketV1beta1QuerySwapResponse {
   @override
-  final ReturnCoin? returnCoin;
+  final TerraMarketV1beta1QuerySwapResponseReturnCoin? returnCoin;
 
   factory _$TerraMarketV1beta1QuerySwapResponse(
           [void Function(TerraMarketV1beta1QuerySwapResponseBuilder)?
@@ -54,10 +54,12 @@ class TerraMarketV1beta1QuerySwapResponseBuilder
             TerraMarketV1beta1QuerySwapResponseBuilder> {
   _$TerraMarketV1beta1QuerySwapResponse? _$v;
 
-  ReturnCoinBuilder? _returnCoin;
-  ReturnCoinBuilder get returnCoin =>
-      _$this._returnCoin ??= new ReturnCoinBuilder();
-  set returnCoin(ReturnCoinBuilder? returnCoin) =>
+  TerraMarketV1beta1QuerySwapResponseReturnCoinBuilder? _returnCoin;
+  TerraMarketV1beta1QuerySwapResponseReturnCoinBuilder get returnCoin =>
+      _$this._returnCoin ??=
+          new TerraMarketV1beta1QuerySwapResponseReturnCoinBuilder();
+  set returnCoin(
+          TerraMarketV1beta1QuerySwapResponseReturnCoinBuilder? returnCoin) =>
       _$this._returnCoin = returnCoin;
 
   TerraMarketV1beta1QuerySwapResponseBuilder() {

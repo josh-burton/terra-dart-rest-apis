@@ -9,7 +9,7 @@ part of 'cosmos_params_v1beta1_query_params_response.dart';
 class _$CosmosParamsV1beta1QueryParamsResponse
     extends CosmosParamsV1beta1QueryParamsResponse {
   @override
-  final Param? param;
+  final CosmosParamsV1beta1QueryParamsResponseParam? param;
 
   factory _$CosmosParamsV1beta1QueryParamsResponse(
           [void Function(CosmosParamsV1beta1QueryParamsResponseBuilder)?
@@ -56,9 +56,12 @@ class CosmosParamsV1beta1QueryParamsResponseBuilder
             CosmosParamsV1beta1QueryParamsResponseBuilder> {
   _$CosmosParamsV1beta1QueryParamsResponse? _$v;
 
-  ParamBuilder? _param;
-  ParamBuilder get param => _$this._param ??= new ParamBuilder();
-  set param(ParamBuilder? param) => _$this._param = param;
+  CosmosParamsV1beta1QueryParamsResponseParamBuilder? _param;
+  CosmosParamsV1beta1QueryParamsResponseParamBuilder get param =>
+      _$this._param ??=
+          new CosmosParamsV1beta1QueryParamsResponseParamBuilder();
+  set param(CosmosParamsV1beta1QueryParamsResponseParamBuilder? param) =>
+      _$this._param = param;
 
   CosmosParamsV1beta1QueryParamsResponseBuilder() {
     CosmosParamsV1beta1QueryParamsResponse._defaults(this);

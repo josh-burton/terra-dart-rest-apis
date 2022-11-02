@@ -10,7 +10,7 @@ class _$CosmosTxV1beta1Tx extends CosmosTxV1beta1Tx {
   @override
   final CosmosTxV1beta1TxBody? body;
   @override
-  final CosmosTxV1beta1AuthInfo? authInfo;
+  final CosmosTxV1beta1TxAuthInfo? authInfo;
   @override
   final BuiltList<String>? signatures;
 
@@ -63,10 +63,10 @@ class CosmosTxV1beta1TxBuilder
       _$this._body ??= new CosmosTxV1beta1TxBodyBuilder();
   set body(CosmosTxV1beta1TxBodyBuilder? body) => _$this._body = body;
 
-  CosmosTxV1beta1AuthInfoBuilder? _authInfo;
-  CosmosTxV1beta1AuthInfoBuilder get authInfo =>
-      _$this._authInfo ??= new CosmosTxV1beta1AuthInfoBuilder();
-  set authInfo(CosmosTxV1beta1AuthInfoBuilder? authInfo) =>
+  CosmosTxV1beta1TxAuthInfoBuilder? _authInfo;
+  CosmosTxV1beta1TxAuthInfoBuilder get authInfo =>
+      _$this._authInfo ??= new CosmosTxV1beta1TxAuthInfoBuilder();
+  set authInfo(CosmosTxV1beta1TxAuthInfoBuilder? authInfo) =>
       _$this._authInfo = authInfo;
 
   ListBuilder<String>? _signatures;

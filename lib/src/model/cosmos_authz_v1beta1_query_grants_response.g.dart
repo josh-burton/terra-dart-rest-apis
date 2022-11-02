@@ -11,7 +11,7 @@ class _$CosmosAuthzV1beta1QueryGrantsResponse
   @override
   final BuiltList<CosmosAuthzV1beta1Grant>? grants;
   @override
-  final Pagination1? pagination;
+  final CosmosAuthzV1beta1QueryGrantsResponsePagination? pagination;
 
   factory _$CosmosAuthzV1beta1QueryGrantsResponse(
           [void Function(CosmosAuthzV1beta1QueryGrantsResponseBuilder)?
@@ -67,10 +67,12 @@ class CosmosAuthzV1beta1QueryGrantsResponseBuilder
   set grants(ListBuilder<CosmosAuthzV1beta1Grant>? grants) =>
       _$this._grants = grants;
 
-  Pagination1Builder? _pagination;
-  Pagination1Builder get pagination =>
-      _$this._pagination ??= new Pagination1Builder();
-  set pagination(Pagination1Builder? pagination) =>
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? _pagination;
+  CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthzV1beta1QueryGrantsResponsePaginationBuilder? pagination) =>
       _$this._pagination = pagination;
 
   CosmosAuthzV1beta1QueryGrantsResponseBuilder() {

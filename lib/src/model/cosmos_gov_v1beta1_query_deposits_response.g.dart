@@ -11,7 +11,7 @@ class _$CosmosGovV1beta1QueryDepositsResponse
   @override
   final BuiltList<CosmosGovV1beta1Deposit>? deposits;
   @override
-  final Pagination? pagination;
+  final CosmosAuthV1beta1QueryAccountsResponsePagination? pagination;
 
   factory _$CosmosGovV1beta1QueryDepositsResponse(
           [void Function(CosmosGovV1beta1QueryDepositsResponseBuilder)?
@@ -67,10 +67,13 @@ class CosmosGovV1beta1QueryDepositsResponseBuilder
   set deposits(ListBuilder<CosmosGovV1beta1Deposit>? deposits) =>
       _$this._deposits = deposits;
 
-  PaginationBuilder? _pagination;
-  PaginationBuilder get pagination =>
-      _$this._pagination ??= new PaginationBuilder();
-  set pagination(PaginationBuilder? pagination) =>
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder? _pagination;
+  CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder get pagination =>
+      _$this._pagination ??=
+          new CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder();
+  set pagination(
+          CosmosAuthV1beta1QueryAccountsResponsePaginationBuilder?
+              pagination) =>
       _$this._pagination = pagination;
 
   CosmosGovV1beta1QueryDepositsResponseBuilder() {

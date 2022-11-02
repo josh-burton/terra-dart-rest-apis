@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **proposals** | [**BuiltList&lt;CosmosGovV1beta1Proposal&gt;**](CosmosGovV1beta1Proposal.md) |  | [optional] 
-**pagination** | [**Pagination**](Pagination.md) |  | [optional] 
+**pagination** | [**CosmosAuthV1beta1QueryAccountsResponsePagination**](CosmosAuthV1beta1QueryAccountsResponsePagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

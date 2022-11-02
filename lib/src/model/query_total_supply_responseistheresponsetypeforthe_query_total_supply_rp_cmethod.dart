@@ -4,7 +4,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/cosmos_base_v1beta1_coin.dart';
-import 'package:terra_dart_rest_apis/src/model/pagination4.dart';
+import 'package:terra_dart_rest_apis/src/model/query_total_supply_responseistheresponsetypeforthe_query_total_supply_rp_cmethod_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRP
     BuiltList<CosmosBaseV1beta1Coin>? get supply;
 
     @BuiltValueField(wireName: r'pagination')
-    Pagination4? get pagination;
+    QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination? get pagination;
 
     QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod._();
 
@@ -55,7 +55,7 @@ class _$QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(Pagination4)));
+                    specifiedType: const FullType(QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethod
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pagination4)) as Pagination4;
+                        specifiedType: const FullType(QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination)) as QueryTotalSupplyResponseistheresponsetypefortheQueryTotalSupplyRPCmethodPagination;
                     result.pagination.replace(valueDes);
                     break;
             }

@@ -3,6 +3,7 @@
 //
 
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_signing_v1beta1_sign_mode.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +16,6 @@ part 'singleisthemodeinfoforasinglesigner_itisstructuredasamessagetoallowforaddi
 abstract class SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture implements Built<SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture, SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefutureBuilder> {
     @BuiltValueField(wireName: r'mode')
     CosmosTxSigningV1beta1SignMode? get mode;
-    // enum modeEnum {  SIGN_MODE_UNSPECIFIED,  SIGN_MODE_DIRECT,  SIGN_MODE_TEXTUAL,  SIGN_MODE_LEGACY_AMINO_JSON,  };
 
     SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadditionalfieldssuchaslocaleforSIGNMODETEXTUALinthefuture._();
 
@@ -43,7 +43,7 @@ class _$SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadd
             result
                 ..add(r'mode')
                 ..add(serializers.serialize(object.mode,
-                    specifiedType: const FullType(CosmosTxSigningV1beta1SignMode)));
+                    specifiedType: const FullType.nullable(CosmosTxSigningV1beta1SignMode)));
         }
         return result;
     }
@@ -62,8 +62,9 @@ class _$SingleisthemodeinfoforasinglesignerItisstructuredasamessagetoallowforadd
             switch (key) {
                 case r'mode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxSigningV1beta1SignMode)) as CosmosTxSigningV1beta1SignMode;
-                    result.mode = valueDes;
+                        specifiedType: const FullType.nullable(CosmosTxSigningV1beta1SignMode)) as CosmosTxSigningV1beta1SignMode?;
+                    if (valueDes == null) continue;
+                    result.mode.replace(valueDes);
                     break;
             }
         }

@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/params3.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_mint_v1beta1_query_params_response_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_mint_v1beta1_query_params_response.g.dart';
 /// * [params] 
 abstract class CosmosMintV1beta1QueryParamsResponse implements Built<CosmosMintV1beta1QueryParamsResponse, CosmosMintV1beta1QueryParamsResponseBuilder> {
     @BuiltValueField(wireName: r'params')
-    Params3? get params;
+    CosmosMintV1beta1QueryParamsResponseParams? get params;
 
     CosmosMintV1beta1QueryParamsResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosMintV1beta1QueryParamsResponseSerializer implements StructuredSeri
             result
                 ..add(r'params')
                 ..add(serializers.serialize(object.params,
-                    specifiedType: const FullType(Params3)));
+                    specifiedType: const FullType(CosmosMintV1beta1QueryParamsResponseParams)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosMintV1beta1QueryParamsResponseSerializer implements StructuredSeri
             switch (key) {
                 case r'params':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Params3)) as Params3;
+                        specifiedType: const FullType(CosmosMintV1beta1QueryParamsResponseParams)) as CosmosMintV1beta1QueryParamsResponseParams;
                     result.params.replace(valueDes);
                     break;
             }

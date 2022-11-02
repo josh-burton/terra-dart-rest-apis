@@ -9,7 +9,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientStates** | [**BuiltList&lt;IbcCoreClientV1IdentifiedClientState&gt;**](IbcCoreClientV1IdentifiedClientState.md) | list of stored ClientStates of the chain. | [optional] 
-**pagination** | [**CosmosBaseQueryV1beta1PageResponse**](CosmosBaseQueryV1beta1PageResponse.md) |  | [optional] 
+**pagination** | [**QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination**](QuerySigningInfosResponseistheresponsetypefortheQuerySigningInfosRPCmethodPagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

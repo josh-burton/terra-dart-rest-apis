@@ -8,7 +8,7 @@ part of 'commission5.dart';
 
 class _$Commission5 extends Commission5 {
   @override
-  final CommissionRates? commissionRates;
+  final CosmosStakingV1beta1CommissionCommissionRates? commissionRates;
   @override
   final DateTime? updateTime;
 
@@ -49,10 +49,13 @@ class _$Commission5 extends Commission5 {
 class Commission5Builder implements Builder<Commission5, Commission5Builder> {
   _$Commission5? _$v;
 
-  CommissionRatesBuilder? _commissionRates;
-  CommissionRatesBuilder get commissionRates =>
-      _$this._commissionRates ??= new CommissionRatesBuilder();
-  set commissionRates(CommissionRatesBuilder? commissionRates) =>
+  CosmosStakingV1beta1CommissionCommissionRatesBuilder? _commissionRates;
+  CosmosStakingV1beta1CommissionCommissionRatesBuilder get commissionRates =>
+      _$this._commissionRates ??=
+          new CosmosStakingV1beta1CommissionCommissionRatesBuilder();
+  set commissionRates(
+          CosmosStakingV1beta1CommissionCommissionRatesBuilder?
+              commissionRates) =>
       _$this._commissionRates = commissionRates;
 
   DateTime? _updateTime;

@@ -8,9 +8,9 @@ part of 'tendermint_types_signed_header.dart';
 
 class _$TendermintTypesSignedHeader extends TendermintTypesSignedHeader {
   @override
-  final TendermintTypesHeader? header;
+  final TendermintTypesBlockHeader? header;
   @override
-  final TendermintTypesCommit? commit;
+  final TendermintTypesBlockLastCommit? commit;
 
   factory _$TendermintTypesSignedHeader(
           [void Function(TendermintTypesSignedHeaderBuilder)? updates]) =>
@@ -55,15 +55,17 @@ class TendermintTypesSignedHeaderBuilder
             TendermintTypesSignedHeaderBuilder> {
   _$TendermintTypesSignedHeader? _$v;
 
-  TendermintTypesHeaderBuilder? _header;
-  TendermintTypesHeaderBuilder get header =>
-      _$this._header ??= new TendermintTypesHeaderBuilder();
-  set header(TendermintTypesHeaderBuilder? header) => _$this._header = header;
+  TendermintTypesBlockHeaderBuilder? _header;
+  TendermintTypesBlockHeaderBuilder get header =>
+      _$this._header ??= new TendermintTypesBlockHeaderBuilder();
+  set header(TendermintTypesBlockHeaderBuilder? header) =>
+      _$this._header = header;
 
-  TendermintTypesCommitBuilder? _commit;
-  TendermintTypesCommitBuilder get commit =>
-      _$this._commit ??= new TendermintTypesCommitBuilder();
-  set commit(TendermintTypesCommitBuilder? commit) => _$this._commit = commit;
+  TendermintTypesBlockLastCommitBuilder? _commit;
+  TendermintTypesBlockLastCommitBuilder get commit =>
+      _$this._commit ??= new TendermintTypesBlockLastCommitBuilder();
+  set commit(TendermintTypesBlockLastCommitBuilder? commit) =>
+      _$this._commit = commit;
 
   TendermintTypesSignedHeaderBuilder() {
     TendermintTypesSignedHeader._defaults(this);

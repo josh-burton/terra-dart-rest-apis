@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blockHeight** | **String** |  | [optional] 
 **validators** | [**BuiltList&lt;CosmosBaseTendermintV1beta1Validator&gt;**](CosmosBaseTendermintV1beta1Validator.md) |  | [optional] 
-**pagination** | [**Pagination1**](Pagination1.md) |  | [optional] 
+**pagination** | [**CosmosAuthzV1beta1QueryGrantsResponsePagination**](CosmosAuthzV1beta1QueryGrantsResponsePagination.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

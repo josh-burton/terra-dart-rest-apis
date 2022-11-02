@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_validator.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_staking_v1beta1_query_delegator_validator_response_validator.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'cosmos_staking_v1beta1_query_delegator_validator_response.g.dart';
 /// * [validator] 
 abstract class CosmosStakingV1beta1QueryDelegatorValidatorResponse implements Built<CosmosStakingV1beta1QueryDelegatorValidatorResponse, CosmosStakingV1beta1QueryDelegatorValidatorResponseBuilder> {
     @BuiltValueField(wireName: r'validator')
-    CosmosStakingV1beta1Validator? get validator;
+    CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator? get validator;
 
     CosmosStakingV1beta1QueryDelegatorValidatorResponse._();
 
@@ -42,7 +42,7 @@ class _$CosmosStakingV1beta1QueryDelegatorValidatorResponseSerializer implements
             result
                 ..add(r'validator')
                 ..add(serializers.serialize(object.validator,
-                    specifiedType: const FullType(CosmosStakingV1beta1Validator)));
+                    specifiedType: const FullType(CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$CosmosStakingV1beta1QueryDelegatorValidatorResponseSerializer implements
             switch (key) {
                 case r'validator':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosStakingV1beta1Validator)) as CosmosStakingV1beta1Validator;
+                        specifiedType: const FullType(CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator)) as CosmosStakingV1beta1QueryDelegatorValidatorResponseValidator;
                     result.validator.replace(valueDes);
                     break;
             }

@@ -11,7 +11,8 @@ class _$CosmosBaseTendermintV1beta1GetNodeInfoResponse
   @override
   final TendermintP2pDefaultNodeInfo? defaultNodeInfo;
   @override
-  final CosmosBaseTendermintV1beta1VersionInfo? applicationVersion;
+  final CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersion?
+      applicationVersion;
 
   factory _$CosmosBaseTendermintV1beta1GetNodeInfoResponse(
           [void Function(CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder)?
@@ -71,12 +72,14 @@ class CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder
   set defaultNodeInfo(TendermintP2pDefaultNodeInfoBuilder? defaultNodeInfo) =>
       _$this._defaultNodeInfo = defaultNodeInfo;
 
-  CosmosBaseTendermintV1beta1VersionInfoBuilder? _applicationVersion;
-  CosmosBaseTendermintV1beta1VersionInfoBuilder get applicationVersion =>
-      _$this._applicationVersion ??=
-          new CosmosBaseTendermintV1beta1VersionInfoBuilder();
+  CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder?
+      _applicationVersion;
+  CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder
+      get applicationVersion => _$this._applicationVersion ??=
+          new CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder();
   set applicationVersion(
-          CosmosBaseTendermintV1beta1VersionInfoBuilder? applicationVersion) =>
+          CosmosBaseTendermintV1beta1GetNodeInfoResponseApplicationVersionBuilder?
+              applicationVersion) =>
       _$this._applicationVersion = applicationVersion;
 
   CosmosBaseTendermintV1beta1GetNodeInfoResponseBuilder() {

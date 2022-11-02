@@ -9,7 +9,7 @@ part of 'terra_tx_v1beta1_compute_tax_request.dart';
 class _$TerraTxV1beta1ComputeTaxRequest
     extends TerraTxV1beta1ComputeTaxRequest {
   @override
-  final CosmosTxV1beta1Tx? tx;
+  final CosmosTxV1beta1GetTxResponseTx? tx;
   @override
   final String? txBytes;
 
@@ -56,10 +56,10 @@ class TerraTxV1beta1ComputeTaxRequestBuilder
             TerraTxV1beta1ComputeTaxRequestBuilder> {
   _$TerraTxV1beta1ComputeTaxRequest? _$v;
 
-  CosmosTxV1beta1TxBuilder? _tx;
-  CosmosTxV1beta1TxBuilder get tx =>
-      _$this._tx ??= new CosmosTxV1beta1TxBuilder();
-  set tx(CosmosTxV1beta1TxBuilder? tx) => _$this._tx = tx;
+  CosmosTxV1beta1GetTxResponseTxBuilder? _tx;
+  CosmosTxV1beta1GetTxResponseTxBuilder get tx =>
+      _$this._tx ??= new CosmosTxV1beta1GetTxResponseTxBuilder();
+  set tx(CosmosTxV1beta1GetTxResponseTxBuilder? tx) => _$this._tx = tx;
 
   String? _txBytes;
   String? get txBytes => _$this._txBytes;

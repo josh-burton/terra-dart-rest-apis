@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/commission2.dart';
+import 'package:terra_dart_rest_apis/src/model/query_validator_commission_responseistheresponsetypeforthe_query_validator_commission_rp_cmethod_commission.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,7 +14,7 @@ part 'query_validator_commission_responseistheresponsetypeforthe_query_validator
 /// * [commission] 
 abstract class QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod implements Built<QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod, QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodBuilder> {
     @BuiltValueField(wireName: r'commission')
-    Commission2? get commission;
+    QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommission? get commission;
 
     QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethod._();
 
@@ -42,7 +42,7 @@ class _$QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCom
             result
                 ..add(r'commission')
                 ..add(serializers.serialize(object.commission,
-                    specifiedType: const FullType(Commission2)));
+                    specifiedType: const FullType(QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommission)));
         }
         return result;
     }
@@ -61,7 +61,7 @@ class _$QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCom
             switch (key) {
                 case r'commission':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Commission2)) as Commission2;
+                        specifiedType: const FullType(QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommission)) as QueryValidatorCommissionResponseistheresponsetypefortheQueryValidatorCommissionRPCmethodCommission;
                     result.commission.replace(valueDes);
                     break;
             }

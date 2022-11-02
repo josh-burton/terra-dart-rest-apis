@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/pagination.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/ibc_applications_transfer_v1_denom_trace.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_accounts_response_pagination.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ abstract class IbcApplicationsTransferV1QueryDenomTracesResponse implements Buil
     BuiltList<IbcApplicationsTransferV1DenomTrace>? get denomTraces;
 
     @BuiltValueField(wireName: r'pagination')
-    Pagination? get pagination;
+    CosmosAuthV1beta1QueryAccountsResponsePagination? get pagination;
 
     IbcApplicationsTransferV1QueryDenomTracesResponse._();
 
@@ -55,7 +55,7 @@ class _$IbcApplicationsTransferV1QueryDenomTracesResponseSerializer implements S
             result
                 ..add(r'pagination')
                 ..add(serializers.serialize(object.pagination,
-                    specifiedType: const FullType(Pagination)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)));
         }
         return result;
     }
@@ -79,7 +79,7 @@ class _$IbcApplicationsTransferV1QueryDenomTracesResponseSerializer implements S
                     break;
                 case r'pagination':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Pagination)) as Pagination;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountsResponsePagination)) as CosmosAuthV1beta1QueryAccountsResponsePagination;
                     result.pagination.replace(valueDes);
                     break;
             }

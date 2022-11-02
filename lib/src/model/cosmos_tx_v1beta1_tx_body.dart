@@ -3,13 +3,14 @@
 //
 
 import 'package:built_collection/built_collection.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_tx_body.dart';
 import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'cosmos_tx_v1beta1_tx_body.g.dart';
 
-/// TxBody is the body of a transaction that all signers sign over.
+/// CosmosTxV1beta1TxBody
 ///
 /// Properties:
 /// * [messages] - messages is a list of messages to be executed. The required signers of those messages define the number and order of elements in AuthInfo's signer_infos and Tx's signatures. Each required signer address is added to the list only the first time it occurs. By convention, the first required signer (usually from the first message) is referred to as the primary signer and pays the fee for the whole transaction.

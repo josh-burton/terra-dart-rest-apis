@@ -3,6 +3,7 @@
 //
 
 import 'package:terra_dart_rest_apis/src/model/cosmos_tx_v1beta1_broadcast_mode.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +21,6 @@ abstract class CosmosTxV1beta1BroadcastTxRequest implements Built<CosmosTxV1beta
 
     @BuiltValueField(wireName: r'mode')
     CosmosTxV1beta1BroadcastMode? get mode;
-    // enum modeEnum {  BROADCAST_MODE_UNSPECIFIED,  BROADCAST_MODE_BLOCK,  BROADCAST_MODE_SYNC,  BROADCAST_MODE_ASYNC,  };
 
     CosmosTxV1beta1BroadcastTxRequest._();
 
@@ -54,7 +54,7 @@ class _$CosmosTxV1beta1BroadcastTxRequestSerializer implements StructuredSeriali
             result
                 ..add(r'mode')
                 ..add(serializers.serialize(object.mode,
-                    specifiedType: const FullType(CosmosTxV1beta1BroadcastMode)));
+                    specifiedType: const FullType.nullable(CosmosTxV1beta1BroadcastMode)));
         }
         return result;
     }
@@ -78,8 +78,9 @@ class _$CosmosTxV1beta1BroadcastTxRequestSerializer implements StructuredSeriali
                     break;
                 case r'mode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CosmosTxV1beta1BroadcastMode)) as CosmosTxV1beta1BroadcastMode;
-                    result.mode = valueDes;
+                        specifiedType: const FullType.nullable(CosmosTxV1beta1BroadcastMode)) as CosmosTxV1beta1BroadcastMode?;
+                    if (valueDes == null) continue;
+                    result.mode.replace(valueDes);
                     break;
             }
         }

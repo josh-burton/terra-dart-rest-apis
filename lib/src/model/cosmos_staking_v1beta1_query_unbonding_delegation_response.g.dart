@@ -9,7 +9,7 @@ part of 'cosmos_staking_v1beta1_query_unbonding_delegation_response.dart';
 class _$CosmosStakingV1beta1QueryUnbondingDelegationResponse
     extends CosmosStakingV1beta1QueryUnbondingDelegationResponse {
   @override
-  final CosmosStakingV1beta1UnbondingDelegation? unbond;
+  final CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbond? unbond;
 
   factory _$CosmosStakingV1beta1QueryUnbondingDelegationResponse(
           [void Function(
@@ -61,10 +61,13 @@ class CosmosStakingV1beta1QueryUnbondingDelegationResponseBuilder
             CosmosStakingV1beta1QueryUnbondingDelegationResponseBuilder> {
   _$CosmosStakingV1beta1QueryUnbondingDelegationResponse? _$v;
 
-  CosmosStakingV1beta1UnbondingDelegationBuilder? _unbond;
-  CosmosStakingV1beta1UnbondingDelegationBuilder get unbond =>
-      _$this._unbond ??= new CosmosStakingV1beta1UnbondingDelegationBuilder();
-  set unbond(CosmosStakingV1beta1UnbondingDelegationBuilder? unbond) =>
+  CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbondBuilder? _unbond;
+  CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbondBuilder
+      get unbond => _$this._unbond ??=
+          new CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbondBuilder();
+  set unbond(
+          CosmosStakingV1beta1QueryUnbondingDelegationResponseUnbondBuilder?
+              unbond) =>
       _$this._unbond = unbond;
 
   CosmosStakingV1beta1QueryUnbondingDelegationResponseBuilder() {

@@ -16,7 +16,7 @@ class _$Plan extends Plan {
   @override
   final String? info;
   @override
-  final GoogleProtobufAny? upgradedClientState;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? upgradedClientState;
 
   factory _$Plan([void Function(PlanBuilder)? updates]) =>
       (new PlanBuilder()..update(updates))._build();
@@ -82,10 +82,13 @@ class PlanBuilder implements Builder<Plan, PlanBuilder> {
   String? get info => _$this._info;
   set info(String? info) => _$this._info = info;
 
-  GoogleProtobufAnyBuilder? _upgradedClientState;
-  GoogleProtobufAnyBuilder get upgradedClientState =>
-      _$this._upgradedClientState ??= new GoogleProtobufAnyBuilder();
-  set upgradedClientState(GoogleProtobufAnyBuilder? upgradedClientState) =>
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _upgradedClientState;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get upgradedClientState =>
+      _$this._upgradedClientState ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set upgradedClientState(
+          CosmosAuthV1beta1QueryAccountResponseAccountBuilder?
+              upgradedClientState) =>
       _$this._upgradedClientState = upgradedClientState;
 
   PlanBuilder() {

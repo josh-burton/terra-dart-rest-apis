@@ -9,7 +9,8 @@ part of 'query_params_responseistheresponsetypeforthe_query_params_rp_cmethod.da
 class _$QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod
     extends QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod {
   @override
-  final CosmosSlashingV1beta1Params? params;
+  final QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParams?
+      params;
 
   factory _$QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod(
           [void Function(
@@ -64,10 +65,14 @@ class QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodBuilder
             QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodBuilder> {
   _$QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethod? _$v;
 
-  CosmosSlashingV1beta1ParamsBuilder? _params;
-  CosmosSlashingV1beta1ParamsBuilder get params =>
-      _$this._params ??= new CosmosSlashingV1beta1ParamsBuilder();
-  set params(CosmosSlashingV1beta1ParamsBuilder? params) =>
+  QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParamsBuilder?
+      _params;
+  QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParamsBuilder
+      get params => _$this._params ??=
+          new QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParamsBuilder();
+  set params(
+          QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodParamsBuilder?
+              params) =>
       _$this._params = params;
 
   QueryParamsResponseistheresponsetypefortheQueryParamsRPCmethodBuilder() {

@@ -5,7 +5,7 @@
 import 'package:terra_dart_rest_apis/api.dart';
 ```
 
-All URIs are relative to *https://phoenix-lcd.terra.dev*
+All URIs are relative to *https://www.example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -76,7 +76,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **generateaparameterchangeproposaltransaction**
-> StdTx generateaparameterchangeproposaltransaction(postProposalBody1)
+> StdTx generateaparameterchangeproposaltransaction(generateaparameterchangeproposaltransactionRequest)
 
 Generate a parameter change proposal transaction
 
@@ -87,10 +87,10 @@ Generate a parameter change proposal transaction
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getGovernanceApi();
-final PostProposalBody1 postProposalBody1 = ; // PostProposalBody1 | The parameter change proposal body that contains all parameter changes
+final GenerateaparameterchangeproposaltransactionRequest generateaparameterchangeproposaltransactionRequest = ; // GenerateaparameterchangeproposaltransactionRequest | The parameter change proposal body that contains all parameter changes
 
 try {
-    final response = api.generateaparameterchangeproposaltransaction(postProposalBody1);
+    final response = api.generateaparameterchangeproposaltransaction(generateaparameterchangeproposaltransactionRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling GovernanceApi->generateaparameterchangeproposaltransaction: $e\n');
@@ -101,7 +101,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postProposalBody1** | [**PostProposalBody1**](PostProposalBody1.md)| The parameter change proposal body that contains all parameter changes | 
+ **generateaparameterchangeproposaltransactionRequest** | [**GenerateaparameterchangeproposaltransactionRequest**](GenerateaparameterchangeproposaltransactionRequest.md)| The parameter change proposal body that contains all parameter changes | 
 
 ### Return type
 
@@ -780,7 +780,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **submitaproposal**
-> StdTx submitaproposal(postProposalBody)
+> StdTx submitaproposal(submitaproposalRequest)
 
 Submit a proposal
 
@@ -791,10 +791,10 @@ Send transaction to submit a proposal
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getGovernanceApi();
-final PostProposalBody postProposalBody = ; // PostProposalBody | valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
+final SubmitaproposalRequest submitaproposalRequest = ; // SubmitaproposalRequest | valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
 
 try {
-    final response = api.submitaproposal(postProposalBody);
+    final response = api.submitaproposal(submitaproposalRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling GovernanceApi->submitaproposal: $e\n');
@@ -805,7 +805,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postProposalBody** | [**PostProposalBody**](PostProposalBody.md)| valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"` | 
+ **submitaproposalRequest** | [**SubmitaproposalRequest**](SubmitaproposalRequest.md)| valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"` | 
 
 ### Return type
 
@@ -823,7 +823,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **voteaproposal**
-> StdTx voteaproposal(proposalId, postVoteBody)
+> StdTx voteaproposal(proposalId, voteaproposalRequest)
 
 Vote a proposal
 
@@ -835,10 +835,10 @@ import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getGovernanceApi();
 final String proposalId = 2; // String | proposal id
-final PostVoteBody postVoteBody = ; // PostVoteBody | valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
+final VoteaproposalRequest voteaproposalRequest = ; // VoteaproposalRequest | valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
 
 try {
-    final response = api.voteaproposal(proposalId, postVoteBody);
+    final response = api.voteaproposal(proposalId, voteaproposalRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling GovernanceApi->voteaproposal: $e\n');
@@ -850,7 +850,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **proposalId** | **String**| proposal id | 
- **postVoteBody** | [**PostVoteBody**](PostVoteBody.md)| valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"` | 
+ **voteaproposalRequest** | [**VoteaproposalRequest**](VoteaproposalRequest.md)| valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"` | 
 
 ### Return type
 

@@ -9,7 +9,7 @@ part of 'terra_market_v1beta1_query_params_response.dart';
 class _$TerraMarketV1beta1QueryParamsResponse
     extends TerraMarketV1beta1QueryParamsResponse {
   @override
-  final Params6? params;
+  final TerraMarketV1beta1QueryParamsResponseParams? params;
 
   factory _$TerraMarketV1beta1QueryParamsResponse(
           [void Function(TerraMarketV1beta1QueryParamsResponseBuilder)?
@@ -56,9 +56,12 @@ class TerraMarketV1beta1QueryParamsResponseBuilder
             TerraMarketV1beta1QueryParamsResponseBuilder> {
   _$TerraMarketV1beta1QueryParamsResponse? _$v;
 
-  Params6Builder? _params;
-  Params6Builder get params => _$this._params ??= new Params6Builder();
-  set params(Params6Builder? params) => _$this._params = params;
+  TerraMarketV1beta1QueryParamsResponseParamsBuilder? _params;
+  TerraMarketV1beta1QueryParamsResponseParamsBuilder get params =>
+      _$this._params ??=
+          new TerraMarketV1beta1QueryParamsResponseParamsBuilder();
+  set params(TerraMarketV1beta1QueryParamsResponseParamsBuilder? params) =>
+      _$this._params = params;
 
   TerraMarketV1beta1QueryParamsResponseBuilder() {
     TerraMarketV1beta1QueryParamsResponse._defaults(this);

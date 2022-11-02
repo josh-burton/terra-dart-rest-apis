@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **rateMin** | **String** |  | [optional] 
 **rateMax** | **String** |  | [optional] 
-**cap** | [**CosmosBaseV1beta1Coin**](CosmosBaseV1beta1Coin.md) |  | [optional] 
+**cap** | [**CosmosBankV1beta1QueryBalanceResponseBalance**](CosmosBankV1beta1QueryBalanceResponseBalance.md) |  | [optional] 
 **changeRateMax** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -29,7 +29,7 @@ class _$CosmosBaseAbciV1beta1TxResponse
   @override
   final String? gasUsed;
   @override
-  final GoogleProtobufAny? tx;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? tx;
   @override
   final String? timestamp;
   @override
@@ -179,10 +179,11 @@ class CosmosBaseAbciV1beta1TxResponseBuilder
   String? get gasUsed => _$this._gasUsed;
   set gasUsed(String? gasUsed) => _$this._gasUsed = gasUsed;
 
-  GoogleProtobufAnyBuilder? _tx;
-  GoogleProtobufAnyBuilder get tx =>
-      _$this._tx ??= new GoogleProtobufAnyBuilder();
-  set tx(GoogleProtobufAnyBuilder? tx) => _$this._tx = tx;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _tx;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get tx =>
+      _$this._tx ??= new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set tx(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? tx) =>
+      _$this._tx = tx;
 
   String? _timestamp;
   String? get timestamp => _$this._timestamp;

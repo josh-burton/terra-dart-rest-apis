@@ -4,6 +4,7 @@
 
 import 'package:terra_dart_rest_apis/src/model/tendermint_types_signed_msg_type.dart';
 import 'package:terra_dart_rest_apis/src/model/block_id26.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -23,7 +24,6 @@ part 'tendermint_types_vote.g.dart';
 abstract class TendermintTypesVote implements Built<TendermintTypesVote, TendermintTypesVoteBuilder> {
     @BuiltValueField(wireName: r'type')
     TendermintTypesSignedMsgType? get type;
-    // enum typeEnum {  SIGNED_MSG_TYPE_UNKNOWN,  SIGNED_MSG_TYPE_PREVOTE,  SIGNED_MSG_TYPE_PRECOMMIT,  SIGNED_MSG_TYPE_PROPOSAL,  };
 
     @BuiltValueField(wireName: r'height')
     String? get height;
@@ -72,7 +72,7 @@ class _$TendermintTypesVoteSerializer implements StructuredSerializer<Tendermint
             result
                 ..add(r'type')
                 ..add(serializers.serialize(object.type,
-                    specifiedType: const FullType(TendermintTypesSignedMsgType)));
+                    specifiedType: const FullType.nullable(TendermintTypesSignedMsgType)));
         }
         if (object.height != null) {
             result
@@ -133,8 +133,9 @@ class _$TendermintTypesVoteSerializer implements StructuredSerializer<Tendermint
             switch (key) {
                 case r'type':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TendermintTypesSignedMsgType)) as TendermintTypesSignedMsgType;
-                    result.type = valueDes;
+                        specifiedType: const FullType.nullable(TendermintTypesSignedMsgType)) as TendermintTypesSignedMsgType?;
+                    if (valueDes == null) continue;
+                    result.type.replace(valueDes);
                     break;
                 case r'height':
                     final valueDes = serializers.deserialize(value,

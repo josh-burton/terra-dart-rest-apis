@@ -9,7 +9,8 @@ part of 'cosmos_distribution_v1beta1_query_validator_outstanding_rewards_respons
 class _$CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse
     extends CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse {
   @override
-  final CosmosDistributionV1beta1ValidatorOutstandingRewards? rewards;
+  final CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewards?
+      rewards;
 
   factory _$CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse(
           [void Function(
@@ -65,12 +66,13 @@ class CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseBuilder
             CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseBuilder> {
   _$CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponse? _$v;
 
-  CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder? _rewards;
-  CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder get rewards =>
-      _$this._rewards ??=
-          new CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder();
+  CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewardsBuilder?
+      _rewards;
+  CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewardsBuilder
+      get rewards => _$this._rewards ??=
+          new CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewardsBuilder();
   set rewards(
-          CosmosDistributionV1beta1ValidatorOutstandingRewardsBuilder?
+          CosmosDistributionV1beta1QueryValidatorOutstandingRewardsResponseRewardsBuilder?
               rewards) =>
       _$this._rewards = rewards;
 

@@ -8,7 +8,7 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pool** | [**Pool1**](Pool1.md) |  | [optional] 
+**pool** | [**CosmosStakingV1beta1QueryPoolResponsePool**](CosmosStakingV1beta1QueryPoolResponsePool.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

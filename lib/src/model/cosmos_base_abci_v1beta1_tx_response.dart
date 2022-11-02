@@ -3,9 +3,9 @@
 //
 
 import 'package:terra_dart_rest_apis/src/model/cosmos_base_abci_v1beta1_abci_message_log.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:terra_dart_rest_apis/src/model/tendermint_abci_event.dart';
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -67,7 +67,7 @@ abstract class CosmosBaseAbciV1beta1TxResponse implements Built<CosmosBaseAbciV1
     String? get gasUsed;
 
     @BuiltValueField(wireName: r'tx')
-    GoogleProtobufAny? get tx;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get tx;
 
     /// Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.
     @BuiltValueField(wireName: r'timestamp')
@@ -163,7 +163,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
             result
                 ..add(r'tx')
                 ..add(serializers.serialize(object.tx,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.timestamp != null) {
             result
@@ -244,7 +244,7 @@ class _$CosmosBaseAbciV1beta1TxResponseSerializer implements StructuredSerialize
                     break;
                 case r'tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.tx.replace(valueDes);
                     break;
                 case r'timestamp':

@@ -9,7 +9,8 @@ part of 'terra_oracle_v1beta1_query_aggregate_vote_response.dart';
 class _$TerraOracleV1beta1QueryAggregateVoteResponse
     extends TerraOracleV1beta1QueryAggregateVoteResponse {
   @override
-  final TerraOracleV1beta1AggregateExchangeRateVote? aggregateVote;
+  final TerraOracleV1beta1QueryAggregateVoteResponseAggregateVote?
+      aggregateVote;
 
   factory _$TerraOracleV1beta1QueryAggregateVoteResponse(
           [void Function(TerraOracleV1beta1QueryAggregateVoteResponseBuilder)?
@@ -58,12 +59,14 @@ class TerraOracleV1beta1QueryAggregateVoteResponseBuilder
             TerraOracleV1beta1QueryAggregateVoteResponseBuilder> {
   _$TerraOracleV1beta1QueryAggregateVoteResponse? _$v;
 
-  TerraOracleV1beta1AggregateExchangeRateVoteBuilder? _aggregateVote;
-  TerraOracleV1beta1AggregateExchangeRateVoteBuilder get aggregateVote =>
-      _$this._aggregateVote ??=
-          new TerraOracleV1beta1AggregateExchangeRateVoteBuilder();
+  TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder?
+      _aggregateVote;
+  TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder
+      get aggregateVote => _$this._aggregateVote ??=
+          new TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder();
   set aggregateVote(
-          TerraOracleV1beta1AggregateExchangeRateVoteBuilder? aggregateVote) =>
+          TerraOracleV1beta1QueryAggregateVoteResponseAggregateVoteBuilder?
+              aggregateVote) =>
       _$this._aggregateVote = aggregateVote;
 
   TerraOracleV1beta1QueryAggregateVoteResponseBuilder() {

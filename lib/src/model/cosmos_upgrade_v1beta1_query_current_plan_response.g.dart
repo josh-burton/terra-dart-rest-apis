@@ -9,7 +9,7 @@ part of 'cosmos_upgrade_v1beta1_query_current_plan_response.dart';
 class _$CosmosUpgradeV1beta1QueryCurrentPlanResponse
     extends CosmosUpgradeV1beta1QueryCurrentPlanResponse {
   @override
-  final Plan? plan;
+  final CosmosUpgradeV1beta1QueryCurrentPlanResponsePlan? plan;
 
   factory _$CosmosUpgradeV1beta1QueryCurrentPlanResponse(
           [void Function(CosmosUpgradeV1beta1QueryCurrentPlanResponseBuilder)?
@@ -57,9 +57,12 @@ class CosmosUpgradeV1beta1QueryCurrentPlanResponseBuilder
             CosmosUpgradeV1beta1QueryCurrentPlanResponseBuilder> {
   _$CosmosUpgradeV1beta1QueryCurrentPlanResponse? _$v;
 
-  PlanBuilder? _plan;
-  PlanBuilder get plan => _$this._plan ??= new PlanBuilder();
-  set plan(PlanBuilder? plan) => _$this._plan = plan;
+  CosmosUpgradeV1beta1QueryCurrentPlanResponsePlanBuilder? _plan;
+  CosmosUpgradeV1beta1QueryCurrentPlanResponsePlanBuilder get plan =>
+      _$this._plan ??=
+          new CosmosUpgradeV1beta1QueryCurrentPlanResponsePlanBuilder();
+  set plan(CosmosUpgradeV1beta1QueryCurrentPlanResponsePlanBuilder? plan) =>
+      _$this._plan = plan;
 
   CosmosUpgradeV1beta1QueryCurrentPlanResponseBuilder() {
     CosmosUpgradeV1beta1QueryCurrentPlanResponse._defaults(this);

@@ -3,6 +3,7 @@
 //
 
 import 'package:terra_dart_rest_apis/src/model/option1.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,7 +17,6 @@ part 'option.g.dart';
 abstract class Option implements Built<Option, OptionBuilder> {
     @BuiltValueField(wireName: r'option')
     Option1? get option;
-    // enum optionEnum {  VOTE_OPTION_UNSPECIFIED,  VOTE_OPTION_YES,  VOTE_OPTION_ABSTAIN,  VOTE_OPTION_NO,  VOTE_OPTION_NO_WITH_VETO,  };
 
     @BuiltValueField(wireName: r'weight')
     String? get weight;
@@ -47,7 +47,7 @@ class _$OptionSerializer implements StructuredSerializer<Option> {
             result
                 ..add(r'option')
                 ..add(serializers.serialize(object.option,
-                    specifiedType: const FullType(Option1)));
+                    specifiedType: const FullType.nullable(Option1)));
         }
         if (object.weight != null) {
             result
@@ -72,8 +72,9 @@ class _$OptionSerializer implements StructuredSerializer<Option> {
             switch (key) {
                 case r'option':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(Option1)) as Option1;
-                    result.option = valueDes;
+                        specifiedType: const FullType.nullable(Option1)) as Option1?;
+                    if (valueDes == null) continue;
+                    result.option.replace(valueDes);
                     break;
                 case r'weight':
                     final valueDes = serializers.deserialize(value,

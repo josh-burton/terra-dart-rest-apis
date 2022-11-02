@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/google_protobuf_any.dart';
+import 'package:terra_dart_rest_apis/src/model/cosmos_auth_v1beta1_query_account_response_account.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +20,7 @@ abstract class CosmosBaseTendermintV1beta1Validator implements Built<CosmosBaseT
     String? get address;
 
     @BuiltValueField(wireName: r'pub_key')
-    GoogleProtobufAny? get pubKey;
+    CosmosAuthV1beta1QueryAccountResponseAccount? get pubKey;
 
     @BuiltValueField(wireName: r'voting_power')
     String? get votingPower;
@@ -60,7 +60,7 @@ class _$CosmosBaseTendermintV1beta1ValidatorSerializer implements StructuredSeri
             result
                 ..add(r'pub_key')
                 ..add(serializers.serialize(object.pubKey,
-                    specifiedType: const FullType(GoogleProtobufAny)));
+                    specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)));
         }
         if (object.votingPower != null) {
             result
@@ -96,7 +96,7 @@ class _$CosmosBaseTendermintV1beta1ValidatorSerializer implements StructuredSeri
                     break;
                 case r'pub_key':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(GoogleProtobufAny)) as GoogleProtobufAny;
+                        specifiedType: const FullType(CosmosAuthV1beta1QueryAccountResponseAccount)) as CosmosAuthV1beta1QueryAccountResponseAccount;
                     result.pubKey.replace(valueDes);
                     break;
                 case r'voting_power':

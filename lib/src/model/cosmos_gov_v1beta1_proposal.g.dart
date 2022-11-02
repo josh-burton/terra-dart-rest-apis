@@ -10,11 +10,11 @@ class _$CosmosGovV1beta1Proposal extends CosmosGovV1beta1Proposal {
   @override
   final String? proposalId;
   @override
-  final GoogleProtobufAny? content;
+  final CosmosAuthV1beta1QueryAccountResponseAccount? content;
   @override
   final CosmosGovV1beta1ProposalStatus? status;
   @override
-  final CosmosGovV1beta1TallyResult? finalTallyResult;
+  final CosmosGovV1beta1ProposalFinalTallyResult? finalTallyResult;
   @override
   final DateTime? submitTime;
   @override
@@ -111,19 +111,23 @@ class CosmosGovV1beta1ProposalBuilder
   String? get proposalId => _$this._proposalId;
   set proposalId(String? proposalId) => _$this._proposalId = proposalId;
 
-  GoogleProtobufAnyBuilder? _content;
-  GoogleProtobufAnyBuilder get content =>
-      _$this._content ??= new GoogleProtobufAnyBuilder();
-  set content(GoogleProtobufAnyBuilder? content) => _$this._content = content;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder? _content;
+  CosmosAuthV1beta1QueryAccountResponseAccountBuilder get content =>
+      _$this._content ??=
+          new CosmosAuthV1beta1QueryAccountResponseAccountBuilder();
+  set content(CosmosAuthV1beta1QueryAccountResponseAccountBuilder? content) =>
+      _$this._content = content;
 
   CosmosGovV1beta1ProposalStatus? _status;
   CosmosGovV1beta1ProposalStatus? get status => _$this._status;
   set status(CosmosGovV1beta1ProposalStatus? status) => _$this._status = status;
 
-  CosmosGovV1beta1TallyResultBuilder? _finalTallyResult;
-  CosmosGovV1beta1TallyResultBuilder get finalTallyResult =>
-      _$this._finalTallyResult ??= new CosmosGovV1beta1TallyResultBuilder();
-  set finalTallyResult(CosmosGovV1beta1TallyResultBuilder? finalTallyResult) =>
+  CosmosGovV1beta1ProposalFinalTallyResultBuilder? _finalTallyResult;
+  CosmosGovV1beta1ProposalFinalTallyResultBuilder get finalTallyResult =>
+      _$this._finalTallyResult ??=
+          new CosmosGovV1beta1ProposalFinalTallyResultBuilder();
+  set finalTallyResult(
+          CosmosGovV1beta1ProposalFinalTallyResultBuilder? finalTallyResult) =>
       _$this._finalTallyResult = finalTallyResult;
 
   DateTime? _submitTime;
