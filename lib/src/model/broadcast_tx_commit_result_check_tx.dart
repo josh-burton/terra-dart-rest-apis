@@ -7,9 +7,9 @@ import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_result_t
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'txs_get200_response1_deliver_tx.g.dart';
+part 'broadcast_tx_commit_result_check_tx.g.dart';
 
-/// TxsGet200Response1DeliverTx
+/// BroadcastTxCommitResultCheckTx
 ///
 /// Properties:
 /// * [code] 
@@ -19,7 +19,7 @@ part 'txs_get200_response1_deliver_tx.g.dart';
 /// * [info] 
 /// * [log] 
 /// * [tags] 
-abstract class TxsGet200Response1DeliverTx implements Built<TxsGet200Response1DeliverTx, TxsGet200Response1DeliverTxBuilder> {
+abstract class BroadcastTxCommitResultCheckTx implements Built<BroadcastTxCommitResultCheckTx, BroadcastTxCommitResultCheckTxBuilder> {
     @BuiltValueField(wireName: r'code')
     int? get code;
 
@@ -41,26 +41,26 @@ abstract class TxsGet200Response1DeliverTx implements Built<TxsGet200Response1De
     @BuiltValueField(wireName: r'tags')
     BuiltList<TxsHashGet200ResponseResultTagsInner>? get tags;
 
-    TxsGet200Response1DeliverTx._();
+    BroadcastTxCommitResultCheckTx._();
 
     @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(TxsGet200Response1DeliverTxBuilder b) => b;
+    static void _defaults(BroadcastTxCommitResultCheckTxBuilder b) => b;
 
-    factory TxsGet200Response1DeliverTx([void updates(TxsGet200Response1DeliverTxBuilder b)]) = _$TxsGet200Response1DeliverTx;
+    factory BroadcastTxCommitResultCheckTx([void updates(BroadcastTxCommitResultCheckTxBuilder b)]) = _$BroadcastTxCommitResultCheckTx;
 
     @BuiltValueSerializer(custom: true)
-    static Serializer<TxsGet200Response1DeliverTx> get serializer => _$TxsGet200Response1DeliverTxSerializer();
+    static Serializer<BroadcastTxCommitResultCheckTx> get serializer => _$BroadcastTxCommitResultCheckTxSerializer();
 }
 
-class _$TxsGet200Response1DeliverTxSerializer implements StructuredSerializer<TxsGet200Response1DeliverTx> {
+class _$BroadcastTxCommitResultCheckTxSerializer implements StructuredSerializer<BroadcastTxCommitResultCheckTx> {
     @override
-    final Iterable<Type> types = const [TxsGet200Response1DeliverTx, _$TxsGet200Response1DeliverTx];
+    final Iterable<Type> types = const [BroadcastTxCommitResultCheckTx, _$BroadcastTxCommitResultCheckTx];
 
     @override
-    final String wireName = r'TxsGet200Response1DeliverTx';
+    final String wireName = r'BroadcastTxCommitResultCheckTx';
 
     @override
-    Iterable<Object?> serialize(Serializers serializers, TxsGet200Response1DeliverTx object,
+    Iterable<Object?> serialize(Serializers serializers, BroadcastTxCommitResultCheckTx object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
         if (object.code != null) {
@@ -109,9 +109,9 @@ class _$TxsGet200Response1DeliverTxSerializer implements StructuredSerializer<Tx
     }
 
     @override
-    TxsGet200Response1DeliverTx deserialize(Serializers serializers, Iterable<Object?> serialized,
+    BroadcastTxCommitResultCheckTx deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = TxsGet200Response1DeliverTxBuilder();
+        final result = BroadcastTxCommitResultCheckTxBuilder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {

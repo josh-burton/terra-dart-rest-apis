@@ -17,11 +17,11 @@ part 'get_proposal_list_result_proposals_vote_count.g.dart';
 abstract class GetProposalListResultProposalsVoteCount implements Built<GetProposalListResultProposalsVoteCount, GetProposalListResultProposalsVoteCountBuilder> {
     /// vote count
     @BuiltValueField(wireName: r'Yes')
-    String? get yes;
+    String get yes;
 
     /// vote count
     @BuiltValueField(wireName: r'No')
-    String? get no;
+    String get no;
 
     /// vote count
     @BuiltValueField(wireName: r'NoWithVeto')
@@ -53,18 +53,14 @@ class _$GetProposalListResultProposalsVoteCountSerializer implements StructuredS
     Iterable<Object?> serialize(Serializers serializers, GetProposalListResultProposalsVoteCount object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.yes != null) {
-            result
-                ..add(r'Yes')
-                ..add(serializers.serialize(object.yes,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.no != null) {
-            result
-                ..add(r'No')
-                ..add(serializers.serialize(object.no,
-                    specifiedType: const FullType(String)));
-        }
+        result
+            ..add(r'Yes')
+            ..add(serializers.serialize(object.yes,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'No')
+            ..add(serializers.serialize(object.no,
+                specifiedType: const FullType(String)));
         result
             ..add(r'NoWithVeto')
             ..add(serializers.serialize(object.noWithVeto,

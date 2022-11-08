@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**txsEstimateFeePost**](TransactionsApi.md#txsestimatefeepost) | **POST** /txs/estimate_fee | Estimate fee and gas of a transaction
 [**txsGet**](TransactionsApi.md#txsget) | **GET** /txs | Search transactions
 [**txsHashGet**](TransactionsApi.md#txshashget) | **GET** /txs/{hash} | Get a Tx by hash
-[**txsPost**](TransactionsApi.md#txspost) | **POST** /txs | Broadcast a signed tx
 [**v1MempoolGet**](TransactionsApi.md#v1mempoolget) | **GET** /v1/mempool | Get transactions in mempool
 [**v1MempoolTxhashGet**](TransactionsApi.md#v1mempooltxhashget) | **GET** /v1/mempool/{txhash} | Get transaction in mempool
 [**v1TxTxhashGet**](TransactionsApi.md#v1txtxhashget) | **GET** /v1/tx/{txhash} | Get Tx
@@ -248,49 +247,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **txsPost**
-> TxsGet200Response1 txsPost(txBroadcast)
-
-Broadcast a signed tx
-
-Broadcast a signed tx to a full node
-
-### Example
-```dart
-import 'package:terra_dart_rest_apis/api.dart';
-
-final api = TerraRestApi().getTransactionsApi();
-final TxsGetRequest txBroadcast = ; // TxsGetRequest | The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
-
-try {
-    final response = api.txsPost(txBroadcast);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling TransactionsApi->txsPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **txBroadcast** | [**TxsGetRequest**](TxsGetRequest.md)| The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away). | 
-
-### Return type
-
-[**TxsGet200Response1**](TxsGet200Response1.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **v1MempoolGet**
 > BuiltList<Txs> v1MempoolGet(account)
 
@@ -335,7 +291,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1MempoolTxhashGet**
-> GetMempoolByHashResult v1MempoolTxhashGet(txhash)
+> GetMempoolByHashResult v1MempoolTxhashGet()
 
 Get transaction in mempool
 
@@ -346,10 +302,9 @@ Get transaction in mempool
 import 'package:terra_dart_rest_apis/api.dart';
 
 final api = TerraRestApi().getTransactionsApi();
-final String txhash = txhash_example; // String | Tx Hash
 
 try {
-    final response = api.v1MempoolTxhashGet(txhash);
+    final response = api.v1MempoolTxhashGet();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TransactionsApi->v1MempoolTxhashGet: $e\n');
@@ -357,10 +312,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **txhash** | **String**| Tx Hash | 
+This endpoint does not need any parameter.
 
 ### Return type
 

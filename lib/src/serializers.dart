@@ -82,6 +82,8 @@ import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_respo
 import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner.dart';
 import 'package:terra_dart_rest_apis/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner_attributes_inner.dart';
 import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result_check_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result_deliver_tx.dart';
 import 'package:terra_dart_rest_apis/src/model/broadcast_tx_request.dart';
 import 'package:terra_dart_rest_apis/src/model/byte_code200_response.dart';
 import 'package:terra_dart_rest_apis/src/model/channel200_response.dart';
@@ -811,10 +813,6 @@ import 'package:terra_dart_rest_apis/src/model/txs_encode_post_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request_base_req.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_get200_response.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1_check_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1_deliver_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_result.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_result_tags_inner.dart';
@@ -957,6 +955,8 @@ part 'serializers.g.dart';
   BroadcastTx200ResponseTxResponseLogsInnerEventsInner,
   BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner,
   BroadcastTxCommitResult,
+  BroadcastTxCommitResultCheckTx,
+  BroadcastTxCommitResultDeliverTx,
   BroadcastTxRequest,
   ByteCode200Response,
   Channel200Response,
@@ -1686,10 +1686,6 @@ part 'serializers.g.dart';
   TxsEstimateFeePostRequest,
   TxsEstimateFeePostRequestBaseReq,
   TxsGet200Response,
-  TxsGet200Response1,
-  TxsGet200Response1CheckTx,
-  TxsGet200Response1DeliverTx,
-  TxsGetRequest,
   TxsHashGet200Response,
   TxsHashGet200ResponseResult,
   TxsHashGet200ResponseResultTagsInner,

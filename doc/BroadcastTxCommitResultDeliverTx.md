@@ -1,4 +1,4 @@
-# terra_dart_rest_apis.model.TxsGet200Response1DeliverTx
+# terra_dart_rest_apis.model.BroadcastTxCommitResultDeliverTx
 
 ## Load the model package
 ```dart

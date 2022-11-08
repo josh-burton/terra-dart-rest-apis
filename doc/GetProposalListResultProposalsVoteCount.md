@@ -8,8 +8,8 @@ import 'package:terra_dart_rest_apis/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**yes** | **String** | vote count | [optional] 
-**no** | **String** | vote count | [optional] 
+**yes** | **String** | vote count | 
+**no** | **String** | vote count | 
 **noWithVeto** | **String** | vote count | 
 **abstain** | **String** | vote count | 
 

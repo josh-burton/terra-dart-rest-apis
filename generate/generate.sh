@@ -10,7 +10,7 @@ rm -rf ./docs
 rm -rf ./test
 
 #npx @openapitools/openapi-generator-cli generate -i api.json -g dart-dio -o . -c ./generate/config.json --enable-post-process-file --skip-validate-spec
-npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o . -c ./generate/config.json --enable-post-process-file --skip-validate-spec
+npx @openapitools/openapi-generator-cli generate -i api.json -g dart-dio -o . -c ./generate/config.json --enable-post-process-file --skip-validate-spec
 
 fvm flutter pub get
 fvm flutter pub upgrade

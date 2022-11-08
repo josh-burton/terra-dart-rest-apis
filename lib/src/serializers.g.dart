@@ -91,6 +91,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner
           .serializer)
       ..add(BroadcastTxCommitResult.serializer)
+      ..add(BroadcastTxCommitResultCheckTx.serializer)
+      ..add(BroadcastTxCommitResultDeliverTx.serializer)
       ..add(BroadcastTxRequest.serializer)
       ..add(BroadcastTxRequestModeEnum.serializer)
       ..add(ByteCode200Response.serializer)
@@ -976,10 +978,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TxsEstimateFeePostRequest.serializer)
       ..add(TxsEstimateFeePostRequestBaseReq.serializer)
       ..add(TxsGet200Response.serializer)
-      ..add(TxsGet200Response1.serializer)
-      ..add(TxsGet200Response1CheckTx.serializer)
-      ..add(TxsGet200Response1DeliverTx.serializer)
-      ..add(TxsGetRequest.serializer)
       ..add(TxsHashGet200Response.serializer)
       ..add(TxsHashGet200ResponseResult.serializer)
       ..add(TxsHashGet200ResponseResultTagsInner.serializer)
@@ -2217,9 +2215,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               StakingRedelegationsGet200ResponseInnerEntriesInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

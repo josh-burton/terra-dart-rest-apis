@@ -21,8 +21,6 @@ import 'package:terra_dart_rest_apis/src/model/txs_encode_post200_response.dart'
 import 'package:terra_dart_rest_apis/src/model/txs_encode_post_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_estimate_fee_post_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_get200_response.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get_request.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx.dart';
 import 'package:terra_dart_rest_apis/src/model/txs_hash_get200_response_tx_fee.dart';
@@ -487,100 +485,6 @@ class TransactionsApi {
     );
   }
 
-  /// Broadcast a signed tx
-  /// Broadcast a signed tx to a full node
-  ///
-  /// Parameters:
-  /// * [txBroadcast] - The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [TxsGet200Response1] as data
-  /// Throws [DioError] if API call or serialization fails
-  @Deprecated('This operation has been deprecated')
-  Future<Response<TxsGet200Response1>> txsPost({ 
-    required TxsGetRequest txBroadcast,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/txs';
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(TxsGetRequest);
-      _bodyData = _serializers.serialize(txBroadcast, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    TxsGet200Response1 _responseData;
-
-    try {
-      const _responseType = FullType(TxsGet200Response1);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as TxsGet200Response1;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<TxsGet200Response1>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Get transactions in mempool
   /// Get transactions in mempool
   ///
@@ -664,7 +568,6 @@ class TransactionsApi {
   /// Get transaction in mempool
   ///
   /// Parameters:
-  /// * [txhash] - Tx Hash
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -675,7 +578,6 @@ class TransactionsApi {
   /// Returns a [Future] containing a [Response] with a [GetMempoolByHashResult] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetMempoolByHashResult>> v1MempoolTxhashGet({ 
-    required String txhash,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -683,7 +585,7 @@ class TransactionsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/v1/mempool/{txhash}'.replaceAll('{' r'txhash' '}', txhash.toString());
+    final _path = r'/v1/mempool/{txhash}';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

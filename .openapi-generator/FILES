@@ -72,6 +72,8 @@ doc/BroadcastTx200ResponseTxResponseLogsInner.md
 doc/BroadcastTx200ResponseTxResponseLogsInnerEventsInner.md
 doc/BroadcastTx200ResponseTxResponseLogsInnerEventsInnerAttributesInner.md
 doc/BroadcastTxCommitResult.md
+doc/BroadcastTxCommitResultCheckTx.md
+doc/BroadcastTxCommitResultDeliverTx.md
 doc/BroadcastTxRequest.md
 doc/ByteCode200Response.md
 doc/Channel200Response.md
@@ -815,10 +817,6 @@ doc/TxsEncodePostRequest.md
 doc/TxsEstimateFeePostRequest.md
 doc/TxsEstimateFeePostRequestBaseReq.md
 doc/TxsGet200Response.md
-doc/TxsGet200Response1.md
-doc/TxsGet200Response1CheckTx.md
-doc/TxsGet200Response1DeliverTx.md
-doc/TxsGetRequest.md
 doc/TxsHashGet200Response.md
 doc/TxsHashGet200ResponseResult.md
 doc/TxsHashGet200ResponseResultTagsInner.md
@@ -983,6 +981,8 @@ lib/src/model/broadcast_tx200_response_tx_response_logs_inner.dart
 lib/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner.dart
 lib/src/model/broadcast_tx200_response_tx_response_logs_inner_events_inner_attributes_inner.dart
 lib/src/model/broadcast_tx_commit_result.dart
+lib/src/model/broadcast_tx_commit_result_check_tx.dart
+lib/src/model/broadcast_tx_commit_result_deliver_tx.dart
 lib/src/model/broadcast_tx_request.dart
 lib/src/model/byte_code200_response.dart
 lib/src/model/channel200_response.dart
@@ -1713,10 +1713,6 @@ lib/src/model/txs_encode_post_request.dart
 lib/src/model/txs_estimate_fee_post_request.dart
 lib/src/model/txs_estimate_fee_post_request_base_req.dart
 lib/src/model/txs_get200_response.dart
-lib/src/model/txs_get200_response1.dart
-lib/src/model/txs_get200_response1_check_tx.dart
-lib/src/model/txs_get200_response1_deliver_tx.dart
-lib/src/model/txs_get_request.dart
 lib/src/model/txs_hash_get200_response.dart
 lib/src/model/txs_hash_get200_response_result.dart
 lib/src/model/txs_hash_get200_response_result_tags_inner.dart

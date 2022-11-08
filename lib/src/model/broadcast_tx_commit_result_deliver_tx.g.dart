@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'txs_get200_response1_check_tx.dart';
+part of 'broadcast_tx_commit_result_deliver_tx.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$TxsGet200Response1CheckTx extends TxsGet200Response1CheckTx {
+class _$BroadcastTxCommitResultDeliverTx
+    extends BroadcastTxCommitResultDeliverTx {
   @override
   final int? code;
   @override
@@ -22,11 +23,11 @@ class _$TxsGet200Response1CheckTx extends TxsGet200Response1CheckTx {
   @override
   final BuiltList<TxsHashGet200ResponseResultTagsInner>? tags;
 
-  factory _$TxsGet200Response1CheckTx(
-          [void Function(TxsGet200Response1CheckTxBuilder)? updates]) =>
-      (new TxsGet200Response1CheckTxBuilder()..update(updates))._build();
+  factory _$BroadcastTxCommitResultDeliverTx(
+          [void Function(BroadcastTxCommitResultDeliverTxBuilder)? updates]) =>
+      (new BroadcastTxCommitResultDeliverTxBuilder()..update(updates))._build();
 
-  _$TxsGet200Response1CheckTx._(
+  _$BroadcastTxCommitResultDeliverTx._(
       {this.code,
       this.data,
       this.gasUsed,
@@ -37,18 +38,18 @@ class _$TxsGet200Response1CheckTx extends TxsGet200Response1CheckTx {
       : super._();
 
   @override
-  TxsGet200Response1CheckTx rebuild(
-          void Function(TxsGet200Response1CheckTxBuilder) updates) =>
+  BroadcastTxCommitResultDeliverTx rebuild(
+          void Function(BroadcastTxCommitResultDeliverTxBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  TxsGet200Response1CheckTxBuilder toBuilder() =>
-      new TxsGet200Response1CheckTxBuilder()..replace(this);
+  BroadcastTxCommitResultDeliverTxBuilder toBuilder() =>
+      new BroadcastTxCommitResultDeliverTxBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is TxsGet200Response1CheckTx &&
+    return other is BroadcastTxCommitResultDeliverTx &&
         code == other.code &&
         data == other.data &&
         gasUsed == other.gasUsed &&
@@ -74,7 +75,7 @@ class _$TxsGet200Response1CheckTx extends TxsGet200Response1CheckTx {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'TxsGet200Response1CheckTx')
+    return (newBuiltValueToStringHelper(r'BroadcastTxCommitResultDeliverTx')
           ..add('code', code)
           ..add('data', data)
           ..add('gasUsed', gasUsed)
@@ -86,10 +87,11 @@ class _$TxsGet200Response1CheckTx extends TxsGet200Response1CheckTx {
   }
 }
 
-class TxsGet200Response1CheckTxBuilder
+class BroadcastTxCommitResultDeliverTxBuilder
     implements
-        Builder<TxsGet200Response1CheckTx, TxsGet200Response1CheckTxBuilder> {
-  _$TxsGet200Response1CheckTx? _$v;
+        Builder<BroadcastTxCommitResultDeliverTx,
+            BroadcastTxCommitResultDeliverTxBuilder> {
+  _$BroadcastTxCommitResultDeliverTx? _$v;
 
   int? _code;
   int? get code => _$this._code;
@@ -121,11 +123,11 @@ class TxsGet200Response1CheckTxBuilder
   set tags(ListBuilder<TxsHashGet200ResponseResultTagsInner>? tags) =>
       _$this._tags = tags;
 
-  TxsGet200Response1CheckTxBuilder() {
-    TxsGet200Response1CheckTx._defaults(this);
+  BroadcastTxCommitResultDeliverTxBuilder() {
+    BroadcastTxCommitResultDeliverTx._defaults(this);
   }
 
-  TxsGet200Response1CheckTxBuilder get _$this {
+  BroadcastTxCommitResultDeliverTxBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _code = $v.code;
@@ -141,24 +143,24 @@ class TxsGet200Response1CheckTxBuilder
   }
 
   @override
-  void replace(TxsGet200Response1CheckTx other) {
+  void replace(BroadcastTxCommitResultDeliverTx other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$TxsGet200Response1CheckTx;
+    _$v = other as _$BroadcastTxCommitResultDeliverTx;
   }
 
   @override
-  void update(void Function(TxsGet200Response1CheckTxBuilder)? updates) {
+  void update(void Function(BroadcastTxCommitResultDeliverTxBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  TxsGet200Response1CheckTx build() => _build();
+  BroadcastTxCommitResultDeliverTx build() => _build();
 
-  _$TxsGet200Response1CheckTx _build() {
-    _$TxsGet200Response1CheckTx _$result;
+  _$BroadcastTxCommitResultDeliverTx _build() {
+    _$BroadcastTxCommitResultDeliverTx _$result;
     try {
       _$result = _$v ??
-          new _$TxsGet200Response1CheckTx._(
+          new _$BroadcastTxCommitResultDeliverTx._(
               code: code,
               data: data,
               gasUsed: gasUsed,
@@ -173,7 +175,7 @@ class TxsGet200Response1CheckTxBuilder
         _tags?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'TxsGet200Response1CheckTx', _$failedField, e.toString());
+            r'BroadcastTxCommitResultDeliverTx', _$failedField, e.toString());
       }
       rethrow;
     }

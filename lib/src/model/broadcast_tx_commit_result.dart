@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1_check_tx.dart';
-import 'package:terra_dart_rest_apis/src/model/txs_get200_response1_deliver_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result_check_tx.dart';
+import 'package:terra_dart_rest_apis/src/model/broadcast_tx_commit_result_deliver_tx.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'broadcast_tx_commit_result.g.dart';
 /// * [height] 
 abstract class BroadcastTxCommitResult implements Built<BroadcastTxCommitResult, BroadcastTxCommitResultBuilder> {
     @BuiltValueField(wireName: r'check_tx')
-    TxsGet200Response1CheckTx? get checkTx;
+    BroadcastTxCommitResultCheckTx? get checkTx;
 
     @BuiltValueField(wireName: r'deliver_tx')
-    TxsGet200Response1DeliverTx? get deliverTx;
+    BroadcastTxCommitResultDeliverTx? get deliverTx;
 
     @BuiltValueField(wireName: r'hash')
     String? get hash;
@@ -55,13 +55,13 @@ class _$BroadcastTxCommitResultSerializer implements StructuredSerializer<Broadc
             result
                 ..add(r'check_tx')
                 ..add(serializers.serialize(object.checkTx,
-                    specifiedType: const FullType(TxsGet200Response1CheckTx)));
+                    specifiedType: const FullType(BroadcastTxCommitResultCheckTx)));
         }
         if (object.deliverTx != null) {
             result
                 ..add(r'deliver_tx')
                 ..add(serializers.serialize(object.deliverTx,
-                    specifiedType: const FullType(TxsGet200Response1DeliverTx)));
+                    specifiedType: const FullType(BroadcastTxCommitResultDeliverTx)));
         }
         if (object.hash != null) {
             result
@@ -92,12 +92,12 @@ class _$BroadcastTxCommitResultSerializer implements StructuredSerializer<Broadc
             switch (key) {
                 case r'check_tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TxsGet200Response1CheckTx)) as TxsGet200Response1CheckTx;
+                        specifiedType: const FullType(BroadcastTxCommitResultCheckTx)) as BroadcastTxCommitResultCheckTx;
                     result.checkTx.replace(valueDes);
                     break;
                 case r'deliver_tx':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TxsGet200Response1DeliverTx)) as TxsGet200Response1DeliverTx;
+                        specifiedType: const FullType(BroadcastTxCommitResultDeliverTx)) as BroadcastTxCommitResultDeliverTx;
                     result.deliverTx.replace(valueDes);
                     break;
                 case r'hash':
